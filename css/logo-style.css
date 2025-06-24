@@ -1,0 +1,18 @@
+/* Logo styling */
+.logo span {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 1.4rem;
+  background: black; /* Violet to pink gradient */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: 0.5px;
+}
+
+/* Mobile optimization */
+@media (max-width: 640px) {
+  .logo span {
+    font-size: 1.2rem;
+  }
+}

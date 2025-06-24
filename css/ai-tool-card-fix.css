@@ -1,0 +1,68 @@
+/* Fix for tool cards to properly center content */
+.tool-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 1.25rem !important;
+  padding-bottom: 1.25rem !important;
+  height: 125px !important; /* Fixed height for consistency */
+  /*box-shadow: 0 1px 12px 4px rgba(0, 0, 0, 0.15) !important;  Reduced bottom shadow, kept sides stronger */
+}
+
+/* Increased spacing for larger screens */
+@media (min-width: 768px) {
+  .tool-card {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+  }
+  
+  .tool-card .icon-container {
+    margin-top: 0.5rem !important; /* Move icon down slightly on larger screens */
+  }
+  
+  .tool-card span {
+    margin-top: -0.4rem !important; /* Move text up slightly on larger screens */
+    font-weight: 680 !important; /* Increased text weight */
+  }
+}
+
+.tool-card .icon-container {
+  margin: 0 auto 0.9rem auto;
+}
+
+.tool-card span {
+  text-align: center;
+  font-weight: 680 !important; /* Increased text weight */
+  overflow: visible !important;
+  max-height: none !important;
+}
+
+/* Mobile specific fixes for multi-line text */
+@media (max-width: 640px) {
+  .tool-card {
+    min-height: 120px; /* Maintain minimum height */
+    height: 122px !important; /* Fixed height for consistency */
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+  }
+  
+  .tool-card .icon-container {
+    width: 42px !important; /* Increased icon container size */
+    height: 42px !important; /* Increased icon container size */
+  }
+  
+  .tool-card .icon-container i {
+    width: 20px !important; /* Increased icon size */
+    height: 20px !important; /* Increased icon size */
+  }
+  
+  .tool-card span {
+    margin-top: auto !important;
+    margin-bottom: auto !important;
+    font-weight: 680 !important; /* Increased text weight */
+    font-size: 1.1rem !important; /* Increased text size for mobile */
+  }
+}
