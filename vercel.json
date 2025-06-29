@@ -24,8 +24,8 @@
   ],
   "redirects": [
     {
-      "source": "/us",
-      "destination": "/about.html",
+      "source": "/privacy",
+      "destination": "/privacy.html",
       "permanent": true
     }
   ]
