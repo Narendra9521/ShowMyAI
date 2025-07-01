@@ -407,12 +407,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const href = item.getAttribute('href');
                 if (href === '#') {
                     e.preventDefault();
-                    const text = item.querySelector('span').textContent;
-                    if (text.includes('About')) {
-                        window.location.href = 'about.html';
-                    } else if (text.includes('Privacy Policy')) {
-                        window.location.href = 'privacy.html';
-                    }
+
                 }
                 // Close menu after clicking
                 toggleMobileMenu();
