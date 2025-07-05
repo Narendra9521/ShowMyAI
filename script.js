@@ -844,13 +844,12 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 'meme-generators', 
             icon: 'image', 
             name: 'Meme Generators',
-            description: 'AI-powered meme creation tools',
             websites: [
                 { name: 'Imgflip', logo: 'https://imgflip.com/favicon.ico', url: 'https://imgflip.com', status: 'Free' },
                 { name: 'Kapwing', logo: 'https://www.kapwing.com/favicon.ico', url: 'https://www.kapwing.com', status: 'Free' },
-                        { name: 'Canva', logo: 'https://www.canva.com/favicon.ico', url: 'https://www.canva.com', status: 'Free' }
-                    ]
-                },
+                { name: 'Canva', logo: 'https://www.canva.com/favicon.ico', url: 'https://www.canva.com', status: 'Free' }
+            ]
+        },
         { id: 'web-hosting', icon: 'server', name: 'Web Hosting', websites: [
             { name: 'Vercel', logo: 'https://vercel.com/favicon.ico', url: 'https://vercel.com', status: 'Free' },
             { name: 'Netlify', logo: 'https://www.netlify.com/favicon.ico', url: 'https://www.netlify.com', status: 'Free' },
@@ -1399,6 +1398,15 @@ document.addEventListener('DOMContentLoaded', () => {
         mainContent.classList.add('hidden');
         toolPage.classList.remove('hidden');
         
+        // Reset tool page sections to show websites list
+        const websitesList = document.getElementById('websitesList');
+        const toolAboutSection = document.getElementById('toolAboutSection');
+        const toolPrivacySection = document.getElementById('toolPrivacySection');
+        
+        if (websitesList) websitesList.style.display = 'block';
+        if (toolAboutSection) toolAboutSection.classList.add('hidden');
+        if (toolPrivacySection) toolPrivacySection.classList.add('hidden');
+        
         // Reset scroll position to top when opening a tool page
         window.scrollTo(0, 0);
         
@@ -1407,7 +1415,6 @@ document.addEventListener('DOMContentLoaded', () => {
             toolTitle.textContent = tool.name;
         }
         
-        const websitesList = document.getElementById('websitesList');
         if (websitesList) {
             websitesList.innerHTML = tool.websites.map(website => `
                 <div class="website-card">

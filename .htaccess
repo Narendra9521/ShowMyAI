@@ -1,0 +1,11 @@
+# Redirect old about and privacy pages to main page
+RewriteEngine On
+RewriteRule ^about\.html$ / [R=301,L]
+RewriteRule ^privacy\.html$ / [R=301,L]
+RewriteRule ^about/?$ / [R=301,L]
+RewriteRule ^privacy/?$ / [R=301,L]
+
+# Security headers
+Header always set X-Content-Type-Options nosniff
+Header always set X-Frame-Options DENY
+Header always set Referrer-Policy strict-origin-when-cross-origin

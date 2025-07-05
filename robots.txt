@@ -2,4 +2,10 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://showmyai.com/sitemap.xml
+Sitemap: https://www.showmyai.com/sitemap.xml
+
+# Disallow removed pages (if they still exist in cache)
+Disallow: /about.html
+Disallow: /privacy.html
+Disallow: /about
+Disallow: /privacy

@@ -64,12 +64,12 @@
     <!-- Header -->
     <header class="header">
       <div class="container header-content">
-        <div class="logo">
+        <div class="logo" onclick="showSection('home')" style="cursor: pointer;">
           <img src="/assets/logo-new.png" alt="Show My AI Logo" id="siteLogo" class="site-logo" />
           <span>ShowMyAI</span>
         </div>
         <nav class="desktop-nav">
-          <a href="index.html" class="nav-link"><button><i data-lucide="home" class="icon"></i><span>Home</span></button></a>
+          <button class="nav-link" onclick="showSection('home')"><i data-lucide="home" class="icon"></i><span>Home</span></button>
           <button class="nav-link" onclick="showSection('about')"><i data-lucide="info" class="icon"></i><span>About Us</span></button>
           <button class="nav-link" onclick="showSection('privacy')"><i data-lucide="shield" class="icon"></i><span>Privacy Policy</span></button>
           <button id="theme-toggle" class="theme-toggle">
@@ -96,7 +96,7 @@
       </div>
       <div class="mobile-menu-content">
         <div class="menu-items">
-          <a href="index.html" class="menu-item"><i data-lucide="home" class="icon"></i><span>Home</span></a>
+          <a class="menu-item" onclick="showSection('home')"><i data-lucide="home" class="icon"></i><span>Home</span></a>
           <a class="menu-item" onclick="showSection('about')"><i data-lucide="info" class="icon"></i><span>About Us</span></a>
           <a class="menu-item" onclick="showSection('privacy')"><i data-lucide="shield" class="icon"></i><span>Privacy Policy</span></a>
           <div class="menu-item theme-toggle-mobile">
@@ -141,6 +141,75 @@
         </div>
         <div id="websitesList" class="websites-list"></div>
       </main>
+      
+      <!-- About Section for Tool Page -->
+      <div id="toolAboutSection" class="about-container hidden" style="padding: 2rem; max-width: 800px; margin: 0 auto; padding-top: 90px;">
+        <h1>About Show My AI</h1>
+        
+        <section class="about-section">
+          <p>Show My AI is your one-stop destination to explore and access the world's most useful and innovative AI tools. Whether you're a developer, student, content creator, entrepreneur, or just curious about artificial intelligence — our platform helps you find the right AI tools faster and easier.</p>
+        </section>
+
+        <section class="about-section">
+          <h2>What We Offer</h2>
+          <ul>
+            <li>Curated AI tools categorized for productivity, creativity, development, and more.</li>
+            <li>Workflow support to complete complex tasks using multiple tools.</li>
+            <li>Regular updates on the latest in AI trends and technologies.</li>
+          </ul>
+        </section>
+
+        <section class="about-section">
+          <h2>Our Goal</h2>
+          <p>To make AI accessible and useful for everyone—from students and creators to developers and startups.</p>
+        </section>
+
+        <section class="about-section">
+          <h2>Contact</h2>
+          <p>For inquiries or feedback, contact us at: <a href="mailto:showmyai999@gmail.com">showmyai999@gmail.com</a></p>
+        </section>
+      </div>
+
+      <!-- Privacy Section for Tool Page -->
+      <div id="toolPrivacySection" class="about-container hidden" style="padding: 2rem; max-width: 800px; margin: 0 auto; padding-top: 90px;">
+        <h1>Privacy Policy – Show My AI</h1>
+
+        <section class="about-section">
+          <p>At Show My AI, we value your privacy. This Privacy Policy outlines how we collect, use, and protect your information when you use our platform.</p>
+        </section>
+
+        <section class="about-section">
+          <h2>1. Data We Collect</h2>
+          <ul>
+            <li>Usage Data: Tool visits, clicks, and basic analytics.</li>
+          </ul>
+        </section>
+
+        <section class="about-section">
+          <h2>2. How We Use Your Data</h2>
+          <ul>
+            <li>To improve platform functionality and user experience.</li>
+            <li>To enhance tool recommendations.</li>
+          </ul>
+        </section>
+
+        <section class="about-section">
+          <h2>3. Data Sharing</h2>
+          <ul>
+            <li>We do not sell or share your data with third-party marketers.</li>
+          </ul>
+        </section>
+
+        <section class="about-section">
+          <h2>4. Cookies</h2>
+          <p>We use minimal cookies to maintain site performance.</p>
+        </section>
+
+        <section class="about-section">
+          <h2>Contact</h2>
+          <p>For privacy-related inquiries, contact us at: <a href="mailto:showmyai999@gmail.com">showmyai999@gmail.com</a></p>
+        </section>
+      </div>
     </div>
   </div>
 
@@ -252,26 +321,55 @@
   <!-- Scripts -->
   <script>
     function showSection(section) {
-      // Hide all sections
-      document.querySelector('.main-content').style.display = 'none';
-      document.getElementById('aboutSection').classList.add('hidden');
-      document.getElementById('privacySection').classList.add('hidden');
-      document.getElementById('siteFooter').style.display = 'none';
+      // Check if we're on tool page
+      const toolPage = document.getElementById('toolPage');
+      const isOnToolPage = !toolPage.classList.contains('hidden');
       
-      // Show selected section and scroll to top
-      if (section === 'about') {
-        document.getElementById('aboutSection').classList.remove('hidden');
-        window.scrollTo(0, 0);
-        history.pushState({section: 'about'}, 'About - Show My AI', '/about');
-      } else if (section === 'privacy') {
-        document.getElementById('privacySection').classList.remove('hidden');
-        window.scrollTo(0, 0);
-        history.pushState({section: 'privacy'}, 'Privacy Policy - Show My AI', '/privacy');
+      if (isOnToolPage) {
+        // Hide tool page sections
+        document.getElementById('websitesList').style.display = 'none';
+        document.getElementById('toolAboutSection').classList.add('hidden');
+        document.getElementById('toolPrivacySection').classList.add('hidden');
+        
+        // Show selected section on tool page
+        if (section === 'about') {
+          document.getElementById('toolAboutSection').classList.remove('hidden');
+          window.scrollTo(0, 0);
+        } else if (section === 'privacy') {
+          document.getElementById('toolPrivacySection').classList.remove('hidden');
+          window.scrollTo(0, 0);
+        } else if (section === 'home') {
+          // Navigate back to homepage from tool page
+          toolPage.classList.add('hidden');
+          document.querySelector('.main-content').style.display = 'block';
+          document.getElementById('siteFooter').style.display = 'block';
+          window.scrollTo(0, 0);
+          history.pushState({section: 'home'}, 'Show My AI - Find Best AI Tools', '/');
+        } else {
+          document.getElementById('websitesList').style.display = 'block';
+        }
       } else {
-        document.querySelector('.main-content').style.display = 'block';
-        document.getElementById('siteFooter').style.display = 'block';
-        window.scrollTo(0, 0);
-        history.pushState({section: 'home'}, 'Show My AI - Find Best AI Tools', '/');
+        // Hide all sections
+        document.querySelector('.main-content').style.display = 'none';
+        document.getElementById('aboutSection').classList.add('hidden');
+        document.getElementById('privacySection').classList.add('hidden');
+        document.getElementById('siteFooter').style.display = 'none';
+        
+        // Show selected section and scroll to top
+        if (section === 'about') {
+          document.getElementById('aboutSection').classList.remove('hidden');
+          window.scrollTo(0, 0);
+          history.pushState({section: 'about'}, 'About - Show My AI', '/about');
+        } else if (section === 'privacy') {
+          document.getElementById('privacySection').classList.remove('hidden');
+          window.scrollTo(0, 0);
+          history.pushState({section: 'privacy'}, 'Privacy Policy - Show My AI', '/privacy');
+        } else {
+          document.querySelector('.main-content').style.display = 'block';
+          document.getElementById('siteFooter').style.display = 'block';
+          window.scrollTo(0, 0);
+          history.pushState({section: 'home'}, 'Show My AI - Find Best AI Tools', '/');
+        }
       }
       
       // Close mobile menu if open
