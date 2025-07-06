@@ -56,7 +56,7 @@
   }
   </script>
 
-  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" crossorigin="anonymous" defer></script>
 </head>
 
 <body>
@@ -406,14 +406,9 @@
       }
     }
     
-    // Add back button functionality
-    document.addEventListener('click', function(e) {
-      if (e.target.closest('.back-button') || e.target.closest('.logo')) {
-        showSection('home');
-      }
-    });
+    // Back button functionality is handled in script.js
   </script>
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
   
 </body>
 </html>

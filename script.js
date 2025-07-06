@@ -1195,10 +1195,7 @@ document.addEventListener('DOMContentLoaded', () => {
         lucide.createIcons();
         setTimeout(() => applyLogoErrorHandling(), 100);
         
-        // Add click handlers
-        document.querySelectorAll('.tool-card').forEach(card => {
-            card.addEventListener('click', () => showToolPage(card.dataset.toolId));
-        });
+        // Click handlers are now handled by global event delegation
     }
 
     function renderWorkflows(searchQuery) {
@@ -1331,32 +1328,32 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         ];
 
-        workflows.forEach((workflow, index) => {
-            if (searchQuery && !workflow.name.toLowerCase().includes(searchQuery.toLowerCase())) {
-                return;
-            }
-            
+        const filteredWorkflows = workflows.filter(workflow => 
+            !searchQuery || workflow.name.toLowerCase().includes(searchQuery.toLowerCase())
+        );
+        
+        workflowToolsGrid.innerHTML = filteredWorkflows.map((workflow, index) => {
             // Calculate color indices for each workflow (cycling through available colors)
             const colorIndex1 = ((index % 6) + 2); // Start from 2 to avoid orange (1)
             const colorIndex2 = ((index + 2) % 6) + 2; // Offset by 2 for complementary colors
             
-            const workflowCard = document.createElement('div');
-            workflowCard.className = 'workflow-card';
-            workflowCard.innerHTML = `
-                <div class="workflow-label">Workflow</div>
-                <div class="workflow-icon" style="
-                    --icon-color-1: var(--tool-icon-${colorIndex1}); 
-                    --icon-color-2: var(--tool-icon-${colorIndex2});
-                    --icon-color-1-rgb: var(--tool-icon-${colorIndex1}-rgb);
-                    --icon-color-2-rgb: var(--tool-icon-${colorIndex2}-rgb);">
-                    <i data-lucide="${workflow.icon}"></i>
+            return `
+                <div class="workflow-card" data-workflow-id="${workflow.id}">
+                    <div class="workflow-label">Workflow</div>
+                    <div class="workflow-icon" style="
+                        --icon-color-1: var(--tool-icon-${colorIndex1}); 
+                        --icon-color-2: var(--tool-icon-${colorIndex2});
+                        --icon-color-1-rgb: var(--tool-icon-${colorIndex1}-rgb);
+                        --icon-color-2-rgb: var(--tool-icon-${colorIndex2}-rgb);">
+                        <i data-lucide="${workflow.icon}"></i>
+                    </div>
+                    <h3 class="workflow-title">${workflow.name}</h3>
+                    <p class="workflow-description">${workflow.description}</p>
                 </div>
-                <h3 class="workflow-title">${workflow.name}</h3>
-                <p class="workflow-description">${workflow.description}</p>
             `;
-            workflowCard.addEventListener('click', () => showWorkflowPage(workflow.id));
-            workflowToolsGrid.appendChild(workflowCard);
-        });
+        }).join('');
+        
+        // Click handlers are now handled by global event delegation
 
         // Initialize Lucide icons for the new elements
         lucide.createIcons();
@@ -3789,6 +3786,24 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Global event delegation for all tool and workflow cards
+    document.addEventListener('click', (e) => {
+        const toolCard = e.target.closest('.tool-card[data-tool-id]');
+        const workflowCard = e.target.closest('.workflow-card[data-workflow-id]');
+        
+        if (toolCard && toolCard.dataset.toolId) {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log('Tool card clicked via delegation:', toolCard.dataset.toolId);
+            showToolPage(toolCard.dataset.toolId);
+        } else if (workflowCard && workflowCard.dataset.workflowId) {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log('Workflow card clicked via delegation:', workflowCard.dataset.workflowId);
+            showWorkflowPage(workflowCard.dataset.workflowId);
+        }
+    });
+
     // Initial Render
     renderTools('');
     renderWorkflows('');
@@ -3874,4 +3889,15 @@ function handleLogoError(img) {
     img.src = `https://via.placeholder.com/32/${bgColor}/ffffff?text=${initial}`;
     img.classList.add('fallback-logo');
     img.style.borderRadius = '4px';
+
+
 }
+
+
+
+
+
+
+
+
+
