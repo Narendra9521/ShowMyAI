@@ -460,7 +460,6 @@ document.addEventListener('DOMContentLoaded', () => {
         ]},
 
          { id: 'presentation', icon: 'presentation', name: 'PPT Generators', websites: [
-            { name: 'Tome', logo: 'https://tome.app/favicon.ico', url: 'https://tome.app', status: 'Free' },
             { name: 'Beautiful.ai', logo: 'https://www.beautiful.ai/favicon.ico', url: 'https://www.beautiful.ai', status: 'Free' },
             { name: 'SlidesAI', logo: 'https://slidesai.io/favicon.ico', url: 'https://slidesai.io', status: 'Freemium' },
             { name: 'Visme', logo: 'https://www.visme.co/favicon.ico', url: 'https://www.visme.co', status: 'Free' },

@@ -56,6 +56,8 @@
   }
   </script>
 
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="dns-prefetch" href="https://unpkg.com">
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" crossorigin="anonymous" defer></script>
 </head>
 
@@ -65,22 +67,22 @@
     <header class="header">
       <div class="container header-content">
         <div class="logo" onclick="showSection('home')" style="cursor: pointer;">
-          <img src="/assets/logo-new.png" alt="Show My AI Logo" id="siteLogo" class="site-logo" />
+          <img src="/assets/logo-new.png" alt="Show My AI Logo" id="siteLogo" class="site-logo" width="32" height="32" />
           <span>ShowMyAI</span>
         </div>
         <nav class="desktop-nav">
           <button class="nav-link" onclick="showSection('home')"><i data-lucide="home" class="icon"></i><span>Home</span></button>
           <button class="nav-link" onclick="showSection('about')"><i data-lucide="info" class="icon"></i><span>About Us</span></button>
           <button class="nav-link" onclick="showSection('privacy')"><i data-lucide="shield" class="icon"></i><span>Privacy Policy</span></button>
-          <button id="theme-toggle" class="theme-toggle">
+          <div id="theme-toggle" class="theme-toggle">
             <span>Dark Mode</span>
             <label class="toggle-switch">
-              <input type="checkbox" />
+              <input type="checkbox" aria-label="Toggle dark mode" />
               <span class="toggle-slider"></span>
             </label>
-          </button>
+          </div>
         </nav>
-        <button class="mobile-menu-button">
+        <button class="mobile-menu-button" aria-label="Open menu">
           <i data-lucide="menu" class="icon"></i>
         </button>
       </div>
@@ -92,7 +94,7 @@
     <!-- Mobile Menu -->
     <div class="mobile-menu">
       <div class="mobile-menu-header">
-        <button class="close-menu-button"><i data-lucide="x" class="icon"></i></button>
+        <button class="close-menu-button" aria-label="Close menu"><i data-lucide="x" class="icon"></i></button>
       </div>
       <div class="mobile-menu-content">
         <div class="menu-items">
@@ -103,7 +105,7 @@
             <i data-lucide="moon" class="icon"></i>
             <span>Dark Mode</span>
             <label class="toggle-switch">
-              <input type="checkbox" />
+              <input type="checkbox" aria-label="Toggle dark mode" />
               <span class="toggle-slider"></span>
             </label>
           </div>
@@ -125,7 +127,32 @@
         <i data-lucide="search" class="search-icon icon"></i>
       </div>
 
-      <div id="toolsGrid" class="tools-grid"></div>
+      <div id="toolsGrid" class="tools-grid">
+        <div class="tool-card ai-tool-card" data-tool-id="code-gen" onclick="showToolPage('code-gen')">
+          <div class="icon-container" style="--icon-color-1: var(--tool-icon-1); --icon-color-2: var(--tool-icon-2);">
+            <i data-lucide="code"></i>
+          </div>
+          <span>Code Generators</span>
+        </div>
+        <div class="tool-card ai-tool-card" data-tool-id="video" onclick="showToolPage('video')">
+          <div class="icon-container" style="--icon-color-1: var(--tool-icon-2); --icon-color-2: var(--tool-icon-3);">
+            <i data-lucide="video"></i>
+          </div>
+          <span>Video Generators</span>
+        </div>
+        <div class="tool-card ai-tool-card" data-tool-id="graphic" onclick="showToolPage('graphic')">
+          <div class="icon-container" style="--icon-color-1: var(--tool-icon-3); --icon-color-2: var(--tool-icon-4);">
+            <i data-lucide="palette"></i>
+          </div>
+          <span>Graphic Design</span>
+        </div>
+        <div class="tool-card ai-tool-card" data-tool-id="chatbot" onclick="showToolPage('chatbot')">
+          <div class="icon-container" style="--icon-color-1: var(--tool-icon-4); --icon-color-2: var(--tool-icon-5);">
+            <i data-lucide="message-square-text"></i>
+          </div>
+          <span>AI Chatbots</span>
+        </div>
+      </div>
       <div id="workflowsGrid" class="workflows-grid hidden">
         <div class="workflow-tools-grid"></div>
       </div>
@@ -135,7 +162,7 @@
     <div id="toolPage" class="tool-page hidden">
       <main class="container main-content">
         <div class="page-header">
-          <button class="back-button"><i data-lucide="arrow-left" class="icon"></i></button>
+          <button class="back-button" aria-label="Go back"><i data-lucide="arrow-left" class="icon"></i></button>
           <h1 id="toolTitle" class="tool-title"></h1>
           <div class="header-spacer"></div>
         </div>
@@ -218,7 +245,7 @@
     <div class="container footer-content">
       <div class="footer-section">
         <div class="footer-logo">
-          <img src="/assets/logo-new.png" alt="Show My AI Full Logo" class="footer-logo-img" />
+          <img src="/assets/logo-new.png" alt="Show My AI Full Logo" class="footer-logo-img" width="32" height="32" />
           <h3>ShowMyAI</h3>
         </div>
         <p class="footer-description">Your one-stop directory for discovering and using the best AI tools for your needs.</p>
