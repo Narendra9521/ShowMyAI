@@ -1,15 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- Homepage -->
   <url>
-    <loc>https://showmyai.com/</loc>
+    <loc>https://www.showmyai.com/</loc>
     <lastmod>2024-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://showmyai.com/assets/logo-new.png</image:loc>
+      <image:loc>https://www.showmyai.com/assets/logo-new.png</image:loc>
       <image:title>Show My AI Logo</image:title>
     </image:image>
+  </url>
+
+  <!-- About Section -->
+  <url>
+    <loc>https://www.showmyai.com/about</loc>
+    <lastmod>2024-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Privacy Policy Section -->
+  <url>
+    <loc>https://www.showmyai.com/privacy</loc>
+    <lastmod>2024-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 
 </urlset>
