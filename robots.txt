@@ -2,6 +2,11 @@ User-agent: *
 Allow: /
 Crawl-delay: 1
 
+# Security
+Disallow: /admin/
+Disallow: /config/
+Disallow: /private/
+
 # Sitemap
 Sitemap: https://showmyai.com/sitemap.xml
 
