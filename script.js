@@ -223,6 +223,42 @@ function switchTab(tabName, updateHistory = true) {
 
 // Comprehensive AI Tools data with 10 tools per category
 const aiToolsData = {
+    '3d-generators': [
+        { name: 'Spline', description: 'Create and publish 3D web experiences', logo: 'https://spline.design/favicon.ico', category: '3D Generation', link: 'https://spline.design/' },
+        { name: 'Meshy', description: 'AI-powered 3D asset generation', logo: 'https://www.meshy.ai/favicon.ico', category: '3D Generation', link: 'https://www.meshy.ai/' },
+        { name: 'Kaedim', description: 'Turn 2D images into 3D models', logo: 'https://www.kaedim3d.com/favicon.ico', category: '3D Generation', link: 'https://www.kaedim3d.com/' },
+        { name: 'Leonardo.AI', description: '3D model generation with AI', logo: 'https://leonardo.ai/favicon.ico', category: '3D Generation', link: 'https://leonardo.ai/' },
+        { name: 'Luma AI', description: 'Create 3D objects from text', logo: 'https://lumalabs.ai/favicon.ico', category: '3D Generation', link: 'https://lumalabs.ai/' },
+        { name: 'Masterpiece Studio', description: 'AI-powered 3D creation', logo: 'https://masterpiecestudio.com/favicon.ico', category: '3D Generation', link: 'https://masterpiecestudio.com/' },
+        { name: 'Poly', description: '3D modeling with AI assistance', logo: 'https://withpoly.com/favicon.ico', category: '3D Generation', link: 'https://withpoly.com/' },
+        { name: 'Skybox Lab', description: 'AI-generated 3D environments', logo: 'https://skyboxlabs.com/favicon.ico', category: '3D Generation', link: 'https://skyboxlabs.com/' },
+        { name: 'Mirageml', description: 'AI-powered 3D asset creation', logo: 'https://mirageml.com/favicon.ico', category: '3D Generation', link: 'https://mirageml.com/' },
+        { name: 'Scenario', description: 'AI-generated game assets', logo: 'https://www.scenario.com/favicon.ico', category: '3D Generation', link: 'https://www.scenario.com/' }
+    ],
+    'ai-assistants': [
+        { name: 'Claude', description: 'Advanced AI assistant by Anthropic', logo: 'https://claude.ai/favicon.ico', category: 'AI Assistant', link: 'https://claude.ai/' },
+        { name: 'Perplexity', description: 'AI-powered answer engine', logo: 'https://www.perplexity.ai/favicon.ico', category: 'AI Assistant', link: 'https://www.perplexity.ai/' },
+        { name: 'Copilot', description: 'Microsoft AI companion', logo: 'https://copilot.microsoft.com/favicon.ico', category: 'AI Assistant', link: 'https://copilot.microsoft.com/' },
+        { name: 'Gemini', description: 'Google AI assistant', logo: 'https://gemini.google.com/favicon.ico', category: 'AI Assistant', link: 'https://gemini.google.com/' },
+        { name: 'Pi', description: 'Personal AI assistant', logo: 'https://heypi.com/favicon.ico', category: 'AI Assistant', link: 'https://heypi.com/' },
+        { name: 'Poe', description: 'AI chat platform with multiple models', logo: 'https://poe.com/favicon.ico', category: 'AI Assistant', link: 'https://poe.com/' },
+        { name: 'Bing Chat', description: 'Microsoft AI search assistant', logo: 'https://www.bing.com/favicon.ico', category: 'AI Assistant', link: 'https://www.bing.com/chat' },
+        { name: 'Jasper', description: 'AI assistant for marketing teams', logo: 'https://www.jasper.ai/favicon.ico', category: 'AI Assistant', link: 'https://www.jasper.ai/' },
+        { name: 'YouChat', description: 'AI search assistant', logo: 'https://you.com/favicon.ico', category: 'AI Assistant', link: 'https://you.com/' },
+        { name: 'Character.AI', description: 'Conversational AI characters', logo: 'https://character.ai/favicon.ico', category: 'AI Assistant', link: 'https://character.ai/' }
+    ],
+    'ai-detectors': [
+        { name: 'GPTZero', description: 'Detect AI-generated text', logo: 'https://gptzero.me/favicon.ico', category: 'AI Detection', link: 'https://gptzero.me/' },
+        { name: 'Content at Scale', description: 'AI content detector', logo: 'https://contentatscale.ai/favicon.ico', category: 'AI Detection', link: 'https://contentatscale.ai/ai-content-detector/' },
+        { name: 'Originality.ai', description: 'AI content detection for businesses', logo: 'https://originality.ai/favicon.ico', category: 'AI Detection', link: 'https://originality.ai/' },
+        { name: 'Copyleaks', description: 'AI content detector and plagiarism checker', logo: 'https://copyleaks.com/favicon.ico', category: 'AI Detection', link: 'https://copyleaks.com/' },
+        { name: 'Winston AI', description: 'AI content detection tool', logo: 'https://gowinston.ai/favicon.ico', category: 'AI Detection', link: 'https://gowinston.ai/' },
+        { name: 'Sapling', description: 'AI writing assistant with detection', logo: 'https://sapling.ai/favicon.ico', category: 'AI Detection', link: 'https://sapling.ai/' },
+        { name: 'Writer', description: 'AI content detector for teams', logo: 'https://writer.com/favicon.ico', category: 'AI Detection', link: 'https://writer.com/' },
+        { name: 'HiveModeration', description: 'AI content moderation platform', logo: 'https://www.hivemoderation.com/favicon.ico', category: 'AI Detection', link: 'https://www.hivemoderation.com/' },
+        { name: 'Undetectable.ai', description: 'AI humanizer for content', logo: 'https://undetectable.ai/favicon.ico', category: 'AI Detection', link: 'https://undetectable.ai/' },
+        { name: 'ZeroGPT', description: 'Free AI content detector', logo: 'https://zerogpt.com/favicon.ico', category: 'AI Detection', link: 'https://zerogpt.com/' }
+    ],
     'image-generators': [
         { name: 'DALL-E 2', description: 'Create realistic images from text descriptions', logo: 'https://openai.com/favicon.ico', category: 'Image Generation', link: 'https://openai.com/dall-e-2/' },
         { name: 'Midjourney', description: 'AI art generator creating stunning artwork', logo: 'https://www.midjourney.com/favicon.ico', category: 'Image Generation', link: 'https://www.midjourney.com' },
@@ -230,7 +266,6 @@ const aiToolsData = {
         { name: 'Adobe Firefly', description: 'Creative generative AI for images and text effects', logo: 'https://www.adobe.com/favicon.ico', category: 'Image Generation', link: 'https://firefly.adobe.com' },
         { name: 'Canva AI', description: 'AI-powered design and image generation', logo: 'https://www.canva.com/favicon.ico', category: 'Image Generation', link: 'https://www.canva.com' },
         { name: 'Leonardo AI', description: 'AI art generator for creative projects', logo: 'https://leonardo.ai/favicon.ico', category: 'Image Generation', link: 'https://leonardo.ai' },
-        { name: 'Artbreeder', description: 'Collaborative AI art creation platform', logo: 'https://www.artbreeder.com/favicon.ico', category: 'Image Generation', link: 'https://www.artbreeder.com' },
         { name: 'RunwayML', description: 'AI tools for creative content generation', logo: 'https://runwayml.com/favicon.ico', category: 'Image Generation', link: 'https://runwayml.com' },
         { name: 'DeepAI', description: 'AI image generation and enhancement tools', logo: 'https://deepai.org/favicon.ico', category: 'Image Generation', link: 'https://deepai.org' },
         { name: 'NightCafe', description: 'AI art generator with multiple algorithms', logo: 'https://creator.nightcafe.studio/favicon.ico', category: 'Image Generation', link: 'https://creator.nightcafe.studio' }
@@ -347,6 +382,42 @@ const aiToolsData = {
 
 // Add more categories with 10 tools each
 Object.assign(aiToolsData, {
+    'ai-avatars': [
+        { name: 'Ready Player Me', description: 'Cross-platform avatar creator', logo: 'https://readyplayer.me/favicon.ico', category: 'AI Avatars', link: 'https://readyplayer.me/' },
+        { name: 'Avatar AI', description: 'AI-powered avatar generation', logo: 'https://avatarai.me/favicon.ico', category: 'AI Avatars', link: 'https://avatarai.me/' },
+        { name: 'Midjourney', description: 'AI image generation for avatars', logo: 'https://www.midjourney.com/favicon.ico', category: 'AI Avatars', link: 'https://www.midjourney.com/' },
+        { name: 'HeyGen', description: 'AI video avatars for business', logo: 'https://www.heygen.com/favicon.ico', category: 'AI Avatars', link: 'https://www.heygen.com/' },
+        { name: 'Synthesia', description: 'AI video generation with avatars', logo: 'https://www.synthesia.io/favicon.ico', category: 'AI Avatars', link: 'https://www.synthesia.io/' },
+        { name: 'D-ID', description: 'AI-generated digital humans', logo: 'https://www.d-id.com/favicon.ico', category: 'AI Avatars', link: 'https://www.d-id.com/' },
+        { name: 'Lensa', description: 'AI avatar creator app', logo: 'https://prisma-ai.com/favicon.ico', category: 'AI Avatars', link: 'https://prisma-ai.com/lensa' },
+        { name: 'Reface', description: 'Face swap app for videos and GIFs', logo: 'https://reface.ai/favicon.ico', category: 'AI Avatars', link: 'https://reface.ai/' },
+        { name: 'Picter', description: 'AI profile picture generator', logo: 'https://picterai.com/favicon.ico', category: 'AI Avatars', link: 'https://picterai.com/' },
+        { name: 'Photosonic', description: 'AI image generation for avatars', logo: 'https://writesonic.com/favicon.ico', category: 'AI Avatars', link: 'https://writesonic.com/photosonic' }
+    ],
+    'ai-search': [
+        { name: 'Perplexity', description: 'AI-powered answer engine', logo: 'https://www.perplexity.ai/favicon.ico', category: 'AI Search', link: 'https://www.perplexity.ai/' },
+        { name: 'You.com', description: 'AI search engine', logo: 'https://you.com/favicon.ico', category: 'AI Search', link: 'https://you.com/' },
+        { name: 'Bing AI', description: 'Microsoft AI-powered search', logo: 'https://www.bing.com/favicon.ico', category: 'AI Search', link: 'https://www.bing.com/' },
+        { name: 'Google AI Overview', description: 'AI-powered search summaries', logo: 'https://www.google.com/favicon.ico', category: 'AI Search', link: 'https://www.google.com/' },
+        { name: 'Kagi', description: 'Premium AI search engine', logo: 'https://kagi.com/favicon.ico', category: 'AI Search', link: 'https://kagi.com/' },
+        { name: 'Phind', description: 'AI search for developers', logo: 'https://www.phind.com/favicon.ico', category: 'AI Search', link: 'https://www.phind.com/' },
+        { name: 'Consensus', description: 'AI search for research papers', logo: 'https://consensus.app/favicon.ico', category: 'AI Search', link: 'https://consensus.app/' },
+        { name: 'Metaphor', description: 'AI search engine for the internet', logo: 'https://metaphor.systems/favicon.ico', category: 'AI Search', link: 'https://metaphor.systems/' },
+        { name: 'Neeva', description: 'Ad-free search with AI', logo: 'https://neeva.com/favicon.ico', category: 'AI Search', link: 'https://neeva.com/' },
+        { name: 'Brave Search', description: 'Private search with AI summaries', logo: 'https://search.brave.com/favicon.ico', category: 'AI Search', link: 'https://search.brave.com/' }
+    ],
+    'ai-audio-enhancers': [
+        { name: 'Descript', description: 'Audio editing with AI', logo: 'https://www.descript.com/favicon.ico', category: 'Audio Enhancement', link: 'https://www.descript.com/' },
+        { name: 'Adobe Podcast', description: 'AI-powered audio enhancement', logo: 'https://podcast.adobe.com/favicon.ico', category: 'Audio Enhancement', link: 'https://podcast.adobe.com/' },
+        { name: 'Auphonic', description: 'Automated audio post-production', logo: 'https://auphonic.com/favicon.ico', category: 'Audio Enhancement', link: 'https://auphonic.com/' },
+        { name: 'Krisp', description: 'AI noise cancellation for calls', logo: 'https://krisp.ai/favicon.ico', category: 'Audio Enhancement', link: 'https://krisp.ai/' },
+        { name: 'iZotope RX', description: 'Audio repair and enhancement', logo: 'https://www.izotope.com/favicon.ico', category: 'Audio Enhancement', link: 'https://www.izotope.com/en/products/rx.html' },
+        { name: 'Accusonus', description: 'AI-powered audio repair', logo: 'https://accusonus.com/favicon.ico', category: 'Audio Enhancement', link: 'https://accusonus.com/' },
+        { name: 'Lalal.ai', description: 'AI-powered stem separation', logo: 'https://www.lalal.ai/favicon.ico', category: 'Audio Enhancement', link: 'https://www.lalal.ai/' },
+        { name: 'Audionamix', description: 'Professional audio separation', logo: 'https://audionamix.com/favicon.ico', category: 'Audio Enhancement', link: 'https://audionamix.com/' },
+        { name: 'Podcastle', description: 'AI-powered podcast creation', logo: 'https://podcastle.ai/favicon.ico', category: 'Audio Enhancement', link: 'https://podcastle.ai/' },
+        { name: 'Cleanvoice', description: 'Remove filler words from audio', logo: 'https://cleanvoice.ai/favicon.ico', category: 'Audio Enhancement', link: 'https://cleanvoice.ai/' }
+    ],
     'translation-tools': [
         { name: 'Google Translate', description: 'Free multilingual translation service', logo: 'https://translate.google.com/favicon.ico', category: 'Translation', link: 'https://translate.google.com' },
         { name: 'DeepL', description: 'AI-powered translation service', logo: 'https://www.deepl.com/favicon.ico', category: 'Translation', link: 'https://www.deepl.com' },
@@ -694,6 +765,90 @@ Object.assign(aiToolsData, {
         { name: 'Kickresume', description: 'AI resume builder with ATS optimization', logo: 'https://www.kickresume.com/favicon.ico', category: 'Resume Builders', link: 'https://www.kickresume.com' },
         { name: 'Enhancv', description: 'Modern resume builder with AI insights', logo: 'https://enhancv.com/favicon.ico', category: 'Resume Builders', link: 'https://enhancv.com' },
         { name: 'VisualCV', description: 'Professional resume builder with AI features', logo: 'https://www.visualcv.com/favicon.ico', category: 'Resume Builders', link: 'https://www.visualcv.com' }
+    ],
+    'ai-summarizers': [
+        { name: 'TLDR This', description: 'Summarize any article or webpage', logo: 'https://tldrthis.com/favicon.ico', category: 'AI Summarization', link: 'https://tldrthis.com/' },
+        { name: 'Summari', description: 'AI article summarization', logo: 'https://www.summari.com/favicon.ico', category: 'AI Summarization', link: 'https://www.summari.com/' },
+        { name: 'Scholarcy', description: 'Research paper summarization', logo: 'https://www.scholarcy.com/favicon.ico', category: 'AI Summarization', link: 'https://www.scholarcy.com/' },
+        { name: 'Wordtune Read', description: 'AI document summarization', logo: 'https://www.wordtune.com/favicon.ico', category: 'AI Summarization', link: 'https://www.wordtune.com/read' },
+        { name: 'Quillbot Summarizer', description: 'Free text summarization tool', logo: 'https://quillbot.com/favicon.ico', category: 'AI Summarization', link: 'https://quillbot.com/summarize' },
+        { name: 'Resoomer', description: 'Online automatic text summarizer', logo: 'https://resoomer.com/favicon.ico', category: 'AI Summarization', link: 'https://resoomer.com/' },
+        { name: 'Genei', description: 'AI research summarization', logo: 'https://www.genei.io/favicon.ico', category: 'AI Summarization', link: 'https://www.genei.io/' },
+        { name: 'Summify', description: 'AI document summarization', logo: 'https://summify.io/favicon.ico', category: 'AI Summarization', link: 'https://summify.io/' },
+        { name: 'Summarize.tech', description: 'YouTube video summarization', logo: 'https://www.summarize.tech/favicon.ico', category: 'AI Summarization', link: 'https://www.summarize.tech/' },
+        { name: 'Summate', description: 'AI-powered text summarization', logo: 'https://summate.it/favicon.ico', category: 'AI Summarization', link: 'https://summate.it/' }
+    ],
+    'ai-video-editors': [
+        { name: 'Runway', description: 'AI-powered video editing', logo: 'https://runwayml.com/favicon.ico', category: 'Video Editing', link: 'https://runwayml.com/' },
+        { name: 'Descript', description: 'All-in-one video editing', logo: 'https://www.descript.com/favicon.ico', category: 'Video Editing', link: 'https://www.descript.com/' },
+        { name: 'Pictory', description: 'Video creation from text', logo: 'https://pictory.ai/favicon.ico', category: 'Video Editing', link: 'https://pictory.ai/' },
+        { name: 'Synthesia', description: 'AI video generation', logo: 'https://www.synthesia.io/favicon.ico', category: 'Video Editing', link: 'https://www.synthesia.io/' },
+        { name: 'Fliki', description: 'Turn text into videos with AI', logo: 'https://fliki.ai/favicon.ico', category: 'Video Editing', link: 'https://fliki.ai/' },
+        { name: 'Kapwing', description: 'Online video editor with AI', logo: 'https://www.kapwing.com/favicon.ico', category: 'Video Editing', link: 'https://www.kapwing.com/' },
+        { name: 'InVideo', description: 'Online video creation platform', logo: 'https://invideo.io/favicon.ico', category: 'Video Editing', link: 'https://invideo.io/' },
+        { name: 'Elai', description: 'AI video generation platform', logo: 'https://elai.io/favicon.ico', category: 'Video Editing', link: 'https://elai.io/' },
+        { name: 'Opus Clip', description: 'AI video clip generator', logo: 'https://www.opus.pro/favicon.ico', category: 'Video Editing', link: 'https://www.opus.pro/' },
+        { name: 'Topaz Video AI', description: 'Video enhancement with AI', logo: 'https://www.topazlabs.com/favicon.ico', category: 'Video Editing', link: 'https://www.topazlabs.com/topaz-video-ai' }
+    ],
+    'ai-language-learning': [
+        { name: 'Duolingo', description: 'AI-powered language learning', logo: 'https://www.duolingo.com/favicon.ico', category: 'Language Learning', link: 'https://www.duolingo.com/' },
+        { name: 'Babbel', description: 'Language learning with AI assistance', logo: 'https://www.babbel.com/favicon.ico', category: 'Language Learning', link: 'https://www.babbel.com/' },
+        { name: 'Rosetta Stone', description: 'Immersive language learning', logo: 'https://www.rosettastone.com/favicon.ico', category: 'Language Learning', link: 'https://www.rosettastone.com/' },
+        { name: 'Lingvist', description: 'AI-powered vocabulary learning', logo: 'https://lingvist.com/favicon.ico', category: 'Language Learning', link: 'https://lingvist.com/' },
+        { name: 'Memrise', description: 'Language learning with videos', logo: 'https://www.memrise.com/favicon.ico', category: 'Language Learning', link: 'https://www.memrise.com/' },
+        { name: 'Busuu', description: 'Social language learning', logo: 'https://www.busuu.com/favicon.ico', category: 'Language Learning', link: 'https://www.busuu.com/' },
+        { name: 'HelloTalk', description: 'Language exchange with natives', logo: 'https://www.hellotalk.com/favicon.ico', category: 'Language Learning', link: 'https://www.hellotalk.com/' },
+        { name: 'Tandem', description: 'Language exchange community', logo: 'https://www.tandem.net/favicon.ico', category: 'Language Learning', link: 'https://www.tandem.net/' },
+        { name: 'Speechling', description: 'AI pronunciation feedback', logo: 'https://speechling.com/favicon.ico', category: 'Language Learning', link: 'https://speechling.com/' },
+        { name: 'Pimsleur', description: 'Audio-based language learning', logo: 'https://www.pimsleur.com/favicon.ico', category: 'Language Learning', link: 'https://www.pimsleur.com/' }
+    ],
+    'ai-fitness': [
+        { name: 'Future', description: 'Personal training with AI coaching', logo: 'https://www.future.co/favicon.ico', category: 'AI Fitness', link: 'https://www.future.co/' },
+        { name: 'Fitbod', description: 'AI workout planning', logo: 'https://www.fitbod.me/favicon.ico', category: 'AI Fitness', link: 'https://www.fitbod.me/' },
+        { name: 'Aaptiv', description: 'Audio-based fitness coaching', logo: 'https://aaptiv.com/favicon.ico', category: 'AI Fitness', link: 'https://aaptiv.com/' },
+        { name: 'Freeletics', description: 'AI personal trainer', logo: 'https://www.freeletics.com/favicon.ico', category: 'AI Fitness', link: 'https://www.freeletics.com/' },
+        { name: 'Tonal', description: 'Smart home gym with AI', logo: 'https://www.tonal.com/favicon.ico', category: 'AI Fitness', link: 'https://www.tonal.com/' },
+        { name: 'Mirror', description: 'Interactive home fitness system', logo: 'https://www.mirror.co/favicon.ico', category: 'AI Fitness', link: 'https://www.mirror.co/' },
+        { name: 'Tempo', description: 'AI-powered home gym', logo: 'https://tempo.fit/favicon.ico', category: 'AI Fitness', link: 'https://tempo.fit/' },
+        { name: 'FitnessAI', description: 'AI workout planner', logo: 'https://www.fitnessai.com/favicon.ico', category: 'AI Fitness', link: 'https://www.fitnessai.com/' },
+        { name: 'Whoop', description: 'AI fitness and recovery tracking', logo: 'https://www.whoop.com/favicon.ico', category: 'AI Fitness', link: 'https://www.whoop.com/' },
+        { name: 'Oura Ring', description: 'AI sleep and activity tracking', logo: 'https://ouraring.com/favicon.ico', category: 'AI Fitness', link: 'https://ouraring.com/' }
+    ],
+    'ai-gaming': [
+        { name: 'AI Dungeon', description: 'AI-generated text adventure game', logo: 'https://play.aidungeon.io/favicon.ico', category: 'AI Gaming', link: 'https://play.aidungeon.io/' },
+        { name: 'NVIDIA GameGAN', description: 'AI game generation technology', logo: 'https://www.nvidia.com/favicon.ico', category: 'AI Gaming', link: 'https://www.nvidia.com/en-us/research/ai-playground/' },
+        { name: 'Chess.com', description: 'AI chess opponents', logo: 'https://www.chess.com/favicon.ico', category: 'AI Gaming', link: 'https://www.chess.com/' },
+        { name: 'Replika', description: 'AI companion and chat game', logo: 'https://replika.ai/favicon.ico', category: 'AI Gaming', link: 'https://replika.ai/' },
+        { name: 'Latitude', description: 'AI-powered game creation', logo: 'https://latitude.io/favicon.ico', category: 'AI Gaming', link: 'https://latitude.io/' },
+        { name: 'Scenario', description: 'AI-generated game assets', logo: 'https://www.scenario.com/favicon.ico', category: 'AI Gaming', link: 'https://www.scenario.com/' },
+        { name: 'Inworld AI', description: 'AI characters for games', logo: 'https://inworld.ai/favicon.ico', category: 'AI Gaming', link: 'https://inworld.ai/' },
+        { name: 'Charisma.ai', description: 'Interactive AI characters', logo: 'https://charisma.ai/favicon.ico', category: 'AI Gaming', link: 'https://charisma.ai/' },
+        { name: 'Hidden Door', description: 'AI narrative game worlds', logo: 'https://www.hiddendoor.co/favicon.ico', category: 'AI Gaming', link: 'https://www.hiddendoor.co/' },
+        { name: 'Convai', description: 'AI NPCs for games', logo: 'https://www.convai.com/favicon.ico', category: 'AI Gaming', link: 'https://www.convai.com/' }
+    ],
+    'ai-dating': [
+        { name: 'Replika', description: 'AI companion and romantic partner', logo: 'https://replika.ai/favicon.ico', category: 'AI Dating', link: 'https://replika.ai/' },
+        { name: 'Blush', description: 'AI dating coach', logo: 'https://blush.ai/favicon.ico', category: 'AI Dating', link: 'https://blush.ai/' },
+        { name: 'Hinge', description: 'Dating app with AI matching', logo: 'https://hinge.co/favicon.ico', category: 'AI Dating', link: 'https://hinge.co/' },
+        { name: 'eHarmony', description: 'AI matchmaking algorithm', logo: 'https://www.eharmony.com/favicon.ico', category: 'AI Dating', link: 'https://www.eharmony.com/' },
+        { name: 'Match', description: 'Dating with AI recommendations', logo: 'https://match.com/favicon.ico', category: 'AI Dating', link: 'https://match.com/' },
+        { name: 'OkCupid', description: 'AI-powered compatibility matching', logo: 'https://www.okcupid.com/favicon.ico', category: 'AI Dating', link: 'https://www.okcupid.com/' },
+        { name: 'Bumble', description: 'Dating app with AI features', logo: 'https://bumble.com/favicon.ico', category: 'AI Dating', link: 'https://bumble.com/' },
+        { name: 'Tinder', description: 'Dating app with AI matching', logo: 'https://tinder.com/favicon.ico', category: 'AI Dating', link: 'https://tinder.com/' },
+        { name: 'Iris', description: 'AI matchmaking app', logo: 'https://www.iris.ai/favicon.ico', category: 'AI Dating', link: 'https://www.iris.ai/' },
+        { name: 'Loveflutter', description: 'Personality-based dating with AI', logo: 'https://loveflutter.com/favicon.ico', category: 'AI Dating', link: 'https://loveflutter.com/' }
+    ],
+    'ai-cooking': [
+        { name: 'Plant Jammer', description: 'AI-powered recipe creation', logo: 'https://www.plantjammer.com/favicon.ico', category: 'AI Cooking', link: 'https://www.plantjammer.com/' },
+        { name: 'Whisk', description: 'AI meal planning and recipes', logo: 'https://whisk.com/favicon.ico', category: 'AI Cooking', link: 'https://whisk.com/' },
+        { name: 'Chefling', description: 'AI kitchen assistant app', logo: 'https://www.chefling.net/favicon.ico', category: 'AI Cooking', link: 'https://www.chefling.net/' },
+        { name: 'Cookpad', description: 'Recipe sharing with AI recommendations', logo: 'https://cookpad.com/favicon.ico', category: 'AI Cooking', link: 'https://cookpad.com/' },
+        { name: 'Yummly', description: 'Personalized recipe recommendations', logo: 'https://www.yummly.com/favicon.ico', category: 'AI Cooking', link: 'https://www.yummly.com/' },
+        { name: 'Innit', description: 'Smart cooking platform', logo: 'https://www.innit.com/favicon.ico', category: 'AI Cooking', link: 'https://www.innit.com/' },
+        { name: 'SideChef', description: 'Step-by-step cooking app', logo: 'https://www.sidechef.com/favicon.ico', category: 'AI Cooking', link: 'https://www.sidechef.com/' },
+        { name: 'Cooklist', description: 'Recipe app based on your groceries', logo: 'https://cooklist.com/favicon.ico', category: 'AI Cooking', link: 'https://cooklist.com/' },
+        { name: 'Kitchenful', description: 'AI meal planning and grocery shopping', logo: 'https://www.kitchenful.com/favicon.ico', category: 'AI Cooking', link: 'https://www.kitchenful.com/' },
+        { name: 'Foodpairing', description: 'AI flavor pairing suggestions', logo: 'https://www.foodpairing.com/favicon.ico', category: 'AI Cooking', link: 'https://www.foodpairing.com/' }
     ],
     'ats-resume-checkers': [
         { name: 'Jobscan', description: 'AI-powered ATS resume optimization tool', logo: 'https://www.jobscan.co/favicon.ico', category: 'ATS Resume Checkers', link: 'https://www.jobscan.co' },

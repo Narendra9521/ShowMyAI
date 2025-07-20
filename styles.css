@@ -43,15 +43,14 @@ body {
 .container {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 2px;
 }
 
 /* Header */
 .header {
     background: var(--bg-primary);
     box-shadow: var(--shadow-sm);
-    position: sticky;
-    top: 0;
+    position: relative;
     z-index: 1000;
     border-bottom: 1px solid var(--border-color);
 }
@@ -155,8 +154,14 @@ body {
 .nav-tabs {
     display: flex;
     justify-content: center;
-    padding: 5px 0 0;
+    padding: 15px 0 0;
     border-bottom: 1px solid var(--border-color);
+}
+
+@media (max-width: 768px) {
+    .nav-tabs {
+        padding: 5px 0 0;
+    }
 }
 
 .tab-btn {
@@ -353,12 +358,10 @@ body {
 
 /* Tools Section */
 .tools-section {
-    padding: 70px 0 0;
+    padding: 0;
     background: var(--bg-secondary);
     min-height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
     width: 100%;
     z-index: 100;
 }
@@ -368,7 +371,7 @@ body {
     align-items: center;
     justify-content: space-between;
     margin: 40px 0;
-    padding: 0 20px;
+    padding: 0;
     position: relative;
 }
 
@@ -407,15 +410,15 @@ body {
 .tools-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
-    padding: 0 20px 60px;
+    gap: 10px;
+    padding: 0 0 60px;
 }
 
 .tool-card {
     background: var(--bg-primary);
     border: 1px solid var(--border-color);
     border-radius: 16px;
-    padding: 24px;
+    padding: 15px;
     box-shadow: var(--shadow-sm);
     transition: all 0.3s;
 }
@@ -877,7 +880,8 @@ body {
     
     .tools-grid {
         grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
+        gap: 8px;
+        padding: 0 0 60px;
     }
 }
 
@@ -885,6 +889,11 @@ body {
     .header {
         border-bottom: none;
         box-shadow: none;
+        padding-top: 5px;
+    }
+    
+    .tools-header {
+        padding-left: 10px;
     }
     
     .header-content {
@@ -984,11 +993,12 @@ body {
     
     .tools-grid {
         grid-template-columns: 1fr;
-        gap: 16px;
+        gap: 6px;
+        padding: 0 0 60px;
     }
     
     .tool-card {
-        padding: 20px;
+        padding: 10px;
     }
     
     .tool-logo {
@@ -1036,6 +1046,10 @@ body {
 @media (max-width: 480px) {
     .container {
         padding: 0 15px;
+    }
+    
+    .tools-header {
+        padding-left: 15px;
     }
     
     .search-box {
