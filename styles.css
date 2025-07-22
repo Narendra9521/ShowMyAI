@@ -374,6 +374,7 @@ body {
 .security-icon { background: linear-gradient(135deg, #ef4444, #dc2626); }
 .logistics-icon { background: linear-gradient(135deg, #84cc16, #65a30d); }
 .agriculture-icon { background: linear-gradient(135deg, #10b981, #059669); }
+.document-icon { background: linear-gradient(135deg, #6366f1, #4f46e5); }
 
 .youtube-icon { background: linear-gradient(135deg, #ef4444, #dc2626); }
 .website-icon { background: linear-gradient(135deg, #10b981, #059669); }
@@ -389,6 +390,9 @@ body {
 .content-icon { background: linear-gradient(135deg, #f59e0b, #d97706); }
 .lead-icon { background: linear-gradient(135deg, #ef4444, #dc2626); }
 .market-icon { background: linear-gradient(135deg, #06b6d4, #0891b2); }
+.blog-icon { background: linear-gradient(135deg, #f59e0b, #d97706); }
+.event-icon { background: linear-gradient(135deg, #8b5cf6, #a855f7); }
+.team-icon { background: linear-gradient(135deg, #3b82f6, #2563eb); }
 
 .ai-badge {
     position: absolute;
