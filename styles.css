@@ -427,7 +427,7 @@ body {
 
 /* Tools Section */
 .tools-section {
-    padding: 0;
+    padding: 55px 0 0 0;
     background: var(--bg-secondary);
     min-height: 100vh;
     position: relative;
@@ -1301,3 +1301,14 @@ body {
 * {
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
+/* Additional icon classes for new categories */
+.sports-icon { background: linear-gradient(135deg, #3b82f6, #2563eb); }
+.journalism-icon { background: linear-gradient(135deg, #10b981, #059669); }
+.water-icon { background: linear-gradient(135deg, #06b6d4, #0891b2); }
+.space-icon { background: linear-gradient(135deg, #8b5cf6, #a855f7); }
+.archaeology-icon { background: linear-gradient(135deg, #f59e0b, #d97706); }
+.wildlife-icon { background: linear-gradient(135deg, #84cc16, #65a30d); }
+.transportation-icon { background: linear-gradient(135deg, #f97316, #ea580c); }
+.insurance-icon { background: linear-gradient(135deg, #10b981, #059669); }
+.mental-health-icon { background: linear-gradient(135deg, #ef4444, #dc2626); }
+.construction-icon { background: linear-gradient(135deg, #f59e0b, #d97706); }
