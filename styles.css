@@ -398,6 +398,150 @@ body {
 .blog-icon { background: linear-gradient(135deg, #f59e0b, #d97706); }
 .event-icon { background: linear-gradient(135deg, #8b5cf6, #a855f7); }
 .team-icon { background: linear-gradient(135deg, #3b82f6, #2563eb); }
+.tech-icon { background: linear-gradient(135deg, #6366f1, #4f46e5); }
+.audio-icon { background: linear-gradient(135deg, #f97316, #ea580c); }
+.coaching-icon { background: linear-gradient(135deg, #10b981, #059669); }
+.agency-icon { background: linear-gradient(135deg, #ec4899, #db2777); }
+.affiliate-icon { background: linear-gradient(135deg, #f59e0b, #d97706); }
+.creator-icon { background: linear-gradient(135deg, #10b981, #059669); }
+.shipping-icon { background: linear-gradient(135deg, #06b6d4, #0891b2); }
+.consulting-icon { background: linear-gradient(135deg, #f59e0b, #d97706); }
+.assistant-icon { background: linear-gradient(135deg, #8b5cf6, #a855f7); }
+.print-icon { background: linear-gradient(135deg, #ef4444, #dc2626); }
+.writing-icon { background: linear-gradient(135deg, #3b82f6, #2563eb); }
+.trading-icon { background: linear-gradient(135deg, #10b981, #059669); }
+.crypto-icon { background: linear-gradient(135deg, #f97316, #ea580c); }
+.influencer-icon { background: linear-gradient(135deg, #ec4899, #db2777); }
+.saas-icon { background: linear-gradient(135deg, #06b6d4, #0891b2); }
+.mobile-icon { background: linear-gradient(135deg, #8b5cf6, #a855f7); }
+.blockchain-icon { background: linear-gradient(135deg, #f59e0b, #d97706); }
+.fitness-icon { background: linear-gradient(135deg, #ef4444, #dc2626); }
+.tutoring-icon { background: linear-gradient(135deg, #3b82f6, #2563eb); }
+.food-icon { background: linear-gradient(135deg, #f97316, #ea580c); }
+.travel-icon { background: linear-gradient(135deg, #10b981, #059669); }
+.photography-icon { background: linear-gradient(135deg, #ec4899, #db2777); }
+.voice-icon { background: linear-gradient(135deg, #f97316, #ea580c); }
+.art-icon { background: linear-gradient(135deg, #8b5cf6, #a855f7); }
+.box-icon { background: linear-gradient(135deg, #06b6d4, #0891b2); }
+.wedding-icon { background: linear-gradient(135deg, #ec4899, #db2777); }
+.pet-icon { background: linear-gradient(135deg, #f97316, #ea580c); }
+.equipment-icon { background: linear-gradient(135deg, #ef4444, #dc2626); }
+.book-icon { background: linear-gradient(135deg, #3b82f6, #2563eb); }
+.camera-icon { background: linear-gradient(135deg, #8b5cf6, #a855f7); }
+.testing-icon { background: linear-gradient(135deg, #10b981, #059669); }
+.therapy-icon { background: linear-gradient(135deg, #f59e0b, #d97706); }
+.realestate-icon { background: linear-gradient(135deg, #059669, #047857); }
+.crypto-trading-icon { background: linear-gradient(135deg, #f59e0b, #d97706); }
+.stock-icon { background: linear-gradient(135deg, #3b82f6, #2563eb); }
+.finance-icon { background: linear-gradient(135deg, #10b981, #059669); }
+.insurance-icon { background: linear-gradient(135deg, #6366f1, #4f46e5); }
+.tax-icon { background: linear-gradient(135deg, #ef4444, #dc2626); }
+.accounting-icon { background: linear-gradient(135deg, #8b5cf6, #7c3aed); }
+.business-consulting-icon { background: linear-gradient(135deg, #06b6d4, #0891b2); }
+.research-icon { background: linear-gradient(135deg, #f97316, #ea580c); }
+.brand-icon { background: linear-gradient(135deg, #ec4899, #db2777); }
+.digital-icon { background: linear-gradient(135deg, #3b82f6, #2563eb); }
+.course-icon { background: linear-gradient(135deg, #10b981, #059669); }
+.membership-icon { background: linear-gradient(135deg, #8b5cf6, #7c3aed); }
+.affiliate-network-icon { background: linear-gradient(135deg, #f59e0b, #d97706); }
+.influencer-mgmt-icon { background: linear-gradient(135deg, #ec4899, #db2777); }
+.social-agency-icon { background: linear-gradient(135deg, #06b6d4, #0891b2); }
+.email-icon { background: linear-gradient(135deg, #ef4444, #dc2626); }
+.seo-icon { background: linear-gradient(135deg, #059669, #047857); }
+.webdev-icon { background: linear-gradient(135deg, #6366f1, #4f46e5); }
+.appdev-icon { background: linear-gradient(135deg, #f97316, #ea580c); }
+.va-icon { background: linear-gradient(135deg, #10b981, #059669); }
+.dataentry-icon { background: linear-gradient(135deg, #3b82f6, #2563eb); }
+.translation-icon { background: linear-gradient(135deg, #8b5cf6, #7c3aed); }
+.transcription-icon { background: linear-gradient(135deg, #f59e0b, #d97706); }
+.graphicdesign-icon { background: linear-gradient(135deg, #ec4899, #db2777); }
+.videoediting-icon { background: linear-gradient(135deg, #ef4444, #dc2626); }
+.podcastprod-icon { background: linear-gradient(135deg, #06b6d4, #0891b2); }
+.contentwriting-icon { background: linear-gradient(135deg, #059669, #047857); }
+.copywriting-icon { background: linear-gradient(135deg, #6366f1, #4f46e5); }
+.virtualbookkeeping-icon {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.tutoring-icon {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.language-icon {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.musiclessons-icon {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+}
+
+.artclasses-icon {
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+}
+
+.cookingclasses-icon {
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+}
+
+.fitnesscoaching-icon {
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+}
+
+.lifecoaching-icon {
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+}
+
+.careercoaching-icon {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.relationshipcoaching-icon {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.healthcoaching-icon {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.meditationcoaching-icon {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+}
+
+.productivitycoaching-icon {
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+}
+
+.financialadvisory-icon {
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+}
+
+.investmentconsulting-icon {
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+}
+
+.retirementplanning-icon {
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+}
+
+.estateplanning-icon {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.businessvaluation-icon {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.maconsulting-icon {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.venturecapital-icon {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+}
+
+.angelinvestment-icon {
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+}
 
 .ai-badge {
     position: absolute;
