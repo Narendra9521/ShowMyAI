@@ -34,7 +34,7 @@
                 <div class="header-right">
                     <nav class="nav-desktop">
                         <a href="#" class="nav-link" data-page="home" title="Home - Discover AI Tools">Home</a>
-                        <a href="#" class="nav-link" data-page="categories" title="Browse All AI Categories">Categories</a>
+                        <a href="#" class="nav-link" data-page="privacy" title="Privacy Policy">Privacy</a>
                         <a href="#" class="nav-link" data-page="about" title="About ShowMyAI">About</a>
                         <a href="#" class="nav-link" data-page="contact" title="Contact Us">Contact</a>
                     </nav>
@@ -49,8 +49,11 @@
                 </div>
             </div>
             <nav class="nav-mobile" id="mobileNav">
+                <button class="close-mobile-menu" onclick="toggleMobileMenu()" style="position:absolute;top:16px;right:20px;background:none;border:none;font-size:28px;color:var(--text-secondary);z-index:2100;" aria-label="Close Menu">
+                    <i class="fas fa-times"></i>
+                </button>
                 <a href="#" class="nav-link" data-page="home">Home</a>
-                <a href="#" class="nav-link" data-page="categories">Categories</a>
+                <a href="#" class="nav-link" data-page="privacy">Privacy</a>
                 <a href="#" class="nav-link" data-page="about">About</a>
                 <a href="#" class="nav-link" data-page="contact">Contact</a>
             </nav>
@@ -107,14 +110,14 @@
                         <h3 class="category-title">Text Generators</h3>
                         <p class="category-description">Generate high-quality content, articles, and copy with AI</p>
                     </div>
-                      <div class="category-card" onclick="showTools('ats-resume-checkers')">
+                      <!-- <div class="category-card" onclick="showTools('ats-resume-checkers')">
                         <div class="category-icon hr-icon">
                             <i class="fas fa-search-plus"></i>
                         </div>
                         <div class="ai-badge">AI</div>
                         <h3 class="category-title">ATS Resume Checkers</h3>
                         <p class="category-description">AI tools to optimize resumes for ATS systems</p>
-                    </div>
+                    </div> -->
                     <div class="category-card" onclick="showTools('video-generators')">
                         <div class="category-icon video-icon">
                             <i class="fas fa-video"></i>
@@ -195,6 +198,14 @@
                         <h3 class="category-title">3D Generators</h3>
                         <p class="category-description">Create 3D models and environments with AI assistance</p>
                     </div>
+                     <div class="category-card" onclick="showTools('ats-resume-checkers')">
+                        <div class="category-icon hr-icon">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                        <div class="ai-badge">AI</div>
+                        <h3 class="category-title">ATS Resume Checkers</h3>
+                        <p class="category-description">AI tools to optimize resumes for ATS systems</p>
+                    </div>
                     <div class="category-card" onclick="showTools('ai-assistants')">
                         <div class="category-icon productivity-icon">
                             <i class="fas fa-user-astronaut"></i>
@@ -203,6 +214,7 @@
                         <h3 class="category-title">AI Assistants</h3>
                         <p class="category-description">Personal and professional AI assistants for various tasks</p>
                     </div>
+                    
                     <div class="category-card" onclick="showTools('ai-detectors')">
                         <div class="category-icon security-icon">
                             <i class="fas fa-shield-alt"></i>
@@ -2012,10 +2024,16 @@
                     <div class="about-section">
                         <h2>Our Mission</h2>
                         <p>ShowMyAI is dedicated to democratizing access to artificial intelligence tools. We believe that AI should be accessible to everyone, from individual creators to large enterprises. Our mission is to curate, organize, and present the world's best AI tools in a way that makes it easy for anyone to find the perfect solution for their needs.</p>
+                        <p>With 100+ AI tool categories and over 1000+ AI tools, plus 100+ workflow tasks powered by 1000+ AI tools, we empower users to discover, compare, and implement AI solutions for any need. Our platform is designed to help you stay ahead in the fast-evolving world of artificial intelligence.</p>
                     </div>
                     <div class="about-section">
                         <h2>What We Do</h2>
                         <p>We carefully curate and categorize hundreds of AI tools across various industries and use cases. Our team of experts tests and reviews each tool to ensure quality and relevance. We provide detailed information, user reviews, and practical workflows to help you make informed decisions about which AI tools to use.</p>
+                        <p><strong>ShowMyAI features:</strong></p>
+                        <ul>
+                            <li>100+ AI tool categories with over 1000+ AI tools</li>
+                            <li>100+ workflow tasks powered by 1000+ AI tools</li>
+                        </ul>
                     </div>
                     <div class="about-section">
                         <h2>Our Values</h2>

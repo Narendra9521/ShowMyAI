@@ -613,11 +613,10 @@ body {
     color: var(--text-primary);
     margin: 0;
     text-align: center;
-    padding: 8px 20px;
-    background-image: radial-gradient(circle, rgba(99, 102, 241, 0.1) 1px, transparent 1px);
-    background-size: 10px 10px;
+    padding: 18px 20px 8px 20px;
+    background: var(--bg-primary);
     border-radius: 8px;
-    box-shadow: 0 0 8px rgba(99, 102, 241, 0.15);
+    box-shadow: none;
 }
 
 .back-btn {
@@ -715,6 +714,15 @@ body {
     font-weight: 700;
     color: var(--text-primary);
     margin-bottom: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    .tool-info h3 {
+        font-size: 0.9rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
 }
 
 .tool-info p {
@@ -774,7 +782,7 @@ body {
 .page-section {
     background: var(--bg-primary);
     min-height: 100vh;
-    padding: 40px 0;
+    padding: 50px 0 40px 0;
 }
 
 .page-header {
@@ -1145,15 +1153,17 @@ body {
     .nav-mobile.active {
         display: flex;
         position: fixed;
-        top: 50px;
+        top: 0;
         right: 0;
-        width: 250px;
-        height: calc(100vh - 50px);
+        width: 320px;
+        height: 100vh;
+        max-width: 90vw;
         background: var(--bg-primary);
         border-left: 1px solid var(--border-color);
-        padding: 30px 20px;
+        border-bottom: none;
+        padding: 50px 20px 20px 20px;
         box-shadow: var(--shadow-lg);
-        z-index: 999;
+        z-index: 2001;
     }
     
     .nav-mobile .nav-link {
@@ -1163,7 +1173,7 @@ body {
     }
     
     .nav-tabs {
-        padding: 8px 0;
+        padding: 4px 0;
         position: fixed;
         bottom: 0;
         left: 0;
@@ -1177,10 +1187,16 @@ body {
     .tab-btn {
         padding: 6px 0;
         margin: 0;
-        font-size: 14px;
+        font-size: 11px;
         flex: 1;
         border-radius: 0;
         justify-content: center;
+        flex-direction: column;
+        gap: 2px;
+    }
+    
+    .tab-btn i {
+        font-size: 16px;
     }
     
     .search-container {
@@ -1246,7 +1262,10 @@ body {
     }
     
     .tools-page-title {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
+        padding-top: 18px;
+        background: var(--bg-primary);
+        box-shadow: none;
     }
     
     .footer-content {

@@ -3656,303 +3656,92 @@ function showWorkflow(workflow, updateHistory = true) {
 // Get fallback icon based on category
 function getFallbackIcon(category) {
     const iconMap = {
-        'Image Generators': 'fa-image',
-        'Photo Editing Tools': 'fa-camera',
-        'Code Generators': 'fa-code',
-        'Text Generators': 'fa-file-alt',
-        'Writing Assistants': 'fa-pen',
-        'Video Generators': 'fa-video',
-        'Voice Generators': 'fa-microphone',
-        'Music Generators': 'fa-music',
+        'Image Generation': 'fa-image',
+        'Photo Editing': 'fa-camera',
+        'Code Generation': 'fa-code',
+        'Text Generation': 'fa-file-alt',
+        'Writing Assistant': 'fa-pen',
+        'Video Generation': 'fa-video',
+        'Voice Generation': 'fa-microphone',
+        'Music Generation': 'fa-music',
         'Chatbots': 'fa-comments',
         'Design Tools': 'fa-palette',
         'Data Analysis': 'fa-chart-bar',
-        'Analytics Tools': 'fa-chart-bar',
-        'Automation Tools': 'fa-cogs',
-        'Translation Tools': 'fa-language',
+        'Analytics': 'fa-chart-bar',
+        'Automation': 'fa-cogs',
+        'Translation': 'fa-language',
         'SEO Tools': 'fa-search-plus',
         'Email Tools': 'fa-envelope',
         'Presentation Tools': 'fa-chalkboard-teacher',
         'Research Tools': 'fa-search',
-        'Productivity Tools': 'fa-tasks',
+        'Research': 'fa-search',
+        'Productivity': 'fa-tasks',
         'Finance Tools': 'fa-dollar-sign',
         'Health Tools': 'fa-heartbeat',
         'Education Tools': 'fa-graduation-cap',
         'Gaming Tools': 'fa-gamepad',
-        'Social Media Tools': 'fa-share-alt',
+        'Social Media': 'fa-share-alt',
         'Legal Tools': 'fa-gavel',
         'HR Tools': 'fa-users',
-        'Recruitment Tools': 'fa-user-tie',
-        'Real Estate Tools': 'fa-home',
+        'Recruitment': 'fa-user-tie',
+        'Real Estate': 'fa-home',
         'Sales Tools': 'fa-handshake',
-        'Customer Service Tools': 'fa-headset',
-        'Cybersecurity Tools': 'fa-shield-alt',
+        'Customer Service': 'fa-headset',
+        'Cybersecurity': 'fa-shield-alt',
         'Content Moderation': 'fa-shield-alt',
-        'Logistics Tools': 'fa-truck',
-        'Inventory Management': 'fa-boxes',
-        'Agriculture Tools': 'fa-seedling',
+        'Logistics': 'fa-truck',
+        'Inventory': 'fa-boxes',
+        'Agriculture': 'fa-seedling',
         'Survey Tools': 'fa-poll',
         'Meeting Tools': 'fa-video',
         'API Tools': 'fa-plug',
         'Resume Builders': 'fa-file-alt',
         'ATS Resume Checkers': 'fa-search-plus',
         'Document Processing': 'fa-file-invoice',
-        '3D Generators': 'fa-cube',
-        'AI Assistants': 'fa-user-astronaut',
-        'AI Detectors': 'fa-shield-alt',
-        'AI Avatars': 'fa-user-circle',
-        'AI Search Engines': 'fa-search',
-        'Audio Enhancers': 'fa-volume-up',
-        'AI Summarizers': 'fa-compress',
-        'Video Editors': 'fa-edit',
-        'Language Learning': 'fa-graduation-cap',
-        'AI Fitness': 'fa-running',
-        'AI Gaming': 'fa-gamepad',
-        'AI Dating': 'fa-heart',
-        'AI Cooking': 'fa-utensils',
-        'AI Document Processing': 'fa-file-invoice',
-        'Healthcare AI': 'fa-medkit',
-        'Music Creation': 'fa-music',
-        'Interior Design': 'fa-couch',
-        'Translation AI': 'fa-language',
-        'Speech Recognition': 'fa-microphone-alt',
-        'Data Visualization': 'fa-chart-line',
-        'Customer Insights': 'fa-comments-dollar',
-        'Legal Tech': 'fa-balance-scale',
-        'Blockchain AI': 'fa-link',
-        'Scientific Research': 'fa-flask',
-        'IoT & Smart Home': 'fa-network-wired',
-        'Accessibility Tools': 'fa-universal-access',
-        'Education AI': 'fa-book-reader',
-        'Cybersecurity AI': 'fa-lock',
-        'Robotics AI': 'fa-robot',
-        'AI Art Tools': 'fa-paint-brush',
-        'Agriculture AI': 'fa-tractor',
-        'Manufacturing AI': 'fa-industry',
-        'Energy AI': 'fa-bolt',
-        'Retail AI': 'fa-shopping-bag',
-        'Finance AI': 'fa-chart-line',
-        'Real Estate AI': 'fa-building',
-        'Travel AI': 'fa-plane',
-        'Weather AI': 'fa-cloud-sun',
-        'Sports AI': 'fa-basketball-ball',
-        'Music Analysis AI': 'fa-headphones',
-        'Fashion AI': 'fa-tshirt',
-        'Game Design AI': 'fa-dice-d20',
-        'Ocean AI': 'fa-water',
-        'Construction AI': 'fa-hard-hat',
-        'Legal AI': 'fa-balance-scale-right',
-        'Astronomy AI': 'fa-star',
-        'Archaeology AI': 'fa-landmark',
-        'Wildlife AI': 'fa-paw',
-        'Transportation AI': 'fa-bus',
-        'Insurance AI': 'fa-file-invoice-dollar',
-        'Mental Health AI': 'fa-brain',
-        'Journalism AI': 'fa-newspaper',
-        'Water Management AI': 'fa-tint',
-        'Space AI': 'fa-satellite',
-        // Add more mappings as needed for all slide categories
+        'Content Creation': 'fa-pen-fancy',
+        'Design': 'fa-palette',
+        'Video Production': 'fa-video',
+        'Marketing': 'fa-bullhorn',
+        'Development': 'fa-code',
+        'Content': 'fa-file-alt',
+        'Strategy': 'fa-chess',
+        'Creation': 'fa-plus-circle',
+        'Distribution': 'fa-share',
+        'Analysis': 'fa-chart-pie',
+        'Production': 'fa-microphone',
+        'Post-Production': 'fa-edit',
+        'Visual': 'fa-image',
+        'Support': 'fa-life-ring',
+        'Management': 'fa-users-cog',
+        'SEO Research': 'fa-search-plus',
+        'Content SEO': 'fa-file-alt',
+        'Technical SEO': 'fa-cogs',
+        'SEO Monitoring': 'fa-chart-line',
+        'Influencer Search': 'fa-star',
+        'Campaign Management': 'fa-tasks',
+        'Video Creation': 'fa-video',
+        'Video Editing': 'fa-cut',
+        'Network Management': 'fa-network-wired',
+        'Tracking': 'fa-chart-line',
+        'Recruitment': 'fa-user-plus',
+        'Optimization': 'fa-chart-up',
+        'Configuration': 'fa-cogs',
+        'Data Migration': 'fa-database',
+        'Integration': 'fa-plug',
+        'List Management': 'fa-list',
+        'Event Management': 'fa-calendar-alt',
+        'Venue Selection': 'fa-map-marker-alt',
+        'Registration': 'fa-clipboard-list',
+        'Market Intelligence': 'fa-chart-pie',
+        'Price Monitoring': 'fa-dollar-sign',
+        'Client Management': 'fa-handshake',
+        'Project Management': 'fa-project-diagram',
+        'Invoicing': 'fa-file-invoice',
+        'Time Tracking': 'fa-clock',
+        'Resume Building': 'fa-file-alt',
+        'ATS Optimization': 'fa-search-plus'
     };
-    // Normalize category names to improve matching
-    const normalized = category.trim().toLowerCase()
-        .replace(/ai /g, '')
-        .replace(/ tools?$/g, '')
-        .replace(/ generators?$/g, '')
-        .replace(/ assistants?$/g, '')
-        .replace(/ editors?$/g, '')
-        .replace(/ checkers?$/g, '')
-        .replace(/ managers?$/g, '')
-        .replace(/ analysis$/g, '')
-        .replace(/ creation$/g, '')
-        .replace(/ processing$/g, '')
-        .replace(/ management$/g, '')
-        .replace(/ detection$/g, '')
-        .replace(/ enhancement$/g, '')
-        .replace(/ visualization$/g, '')
-        .replace(/ learning$/g, '')
-        .replace(/ moderation$/g, '')
-        .replace(/ research$/g, '')
-        .replace(/ production$/g, '')
-        .replace(/ tech$/g, '')
-        .replace(/ insights$/g, '')
-        .replace(/ analysis$/g, '')
-        .replace(/ workflow$/g, '')
-        .replace(/ pipeline$/g, '')
-        .replace(/ intelligence$/g, '')
-        .replace(/ enhancement$/g, '')
-        .replace(/ optimization$/g, '')
-        .replace(/ detection$/g, '')
-        .replace(/ enhancement$/g, '')
-        .replace(/ creation$/g, '')
-        .replace(/ summarizers?$/g, '')
-        .replace(/ avatars?$/g, '')
-        .replace(/ engines?$/g, '')
-        .replace(/ editors?$/g, '')
-        .replace(/ assistants?$/g, '')
-        .replace(/ detectors?$/g, '')
-        .replace(/ managers?$/g, '')
-        .replace(/ checkers?$/g, '')
-        .replace(/ builders?$/g, '')
-        .replace(/ enhancers?$/g, '')
-        .replace(/ creators?$/g, '')
-        .replace(/ planners?$/g, '')
-        .replace(/ trackers?$/g, '')
-        .replace(/ mappers?$/g, '')
-        .replace(/ finders?$/g, '')
-        .replace(/ translators?$/g, '')
-        .replace(/ composers?$/g, '')
-        .replace(/ synthesizers?$/g, '')
-        .replace(/ companions?$/g, '')
-        .replace(/ platforms?$/g, '')
-        .replace(/ suites?$/g, '')
-        .replace(/ pipelines?$/g, '')
-        .replace(/ solutions?$/g, '')
-        .replace(/ systems?$/g, '')
-        .replace(/ applications?$/g, '')
-        .replace(/ services?$/g, '')
-        .replace(/ apis?$/g, '')
-        .replace(/ engines?$/g, '')
-        .replace(/ networks?$/g, '')
-        .replace(/ environments?$/g, '')
-        .replace(/ experiences?$/g, '')
-        .replace(/ platforms?$/g, '')
-        .replace(/ labs?$/g, '')
-        .replace(/ studio$/g, '')
-        .replace(/ ai$/g, '')
-        .replace(/ tools$/g, '')
-        .replace(/ tool$/g, '')
-        .replace(/ app$/g, '')
-        .replace(/ apps$/g, '')
-        .replace(/ assistant$/g, '')
-        .replace(/ assistants$/g, '')
-        .replace(/ generator$/g, '')
-        .replace(/ generators$/g, '')
-        .replace(/ editor$/g, '')
-        .replace(/ editors$/g, '')
-        .replace(/ checker$/g, '')
-        .replace(/ checkers$/g, '')
-        .replace(/ builder$/g, '')
-        .replace(/ builders$/g, '')
-        .replace(/ enhancer$/g, '')
-        .replace(/ enhancers$/g, '')
-        .replace(/ creator$/g, '')
-        .replace(/ creators$/g, '')
-        .replace(/ planner$/g, '')
-        .replace(/ planners$/g, '')
-        .replace(/ tracker$/g, '')
-        .replace(/ trackers$/g, '')
-        .replace(/ mapper$/g, '')
-        .replace(/ mappers$/g, '')
-        .replace(/ finder$/g, '')
-        .replace(/ finders$/g, '')
-        .replace(/ translator$/g, '')
-        .replace(/ translators$/g, '')
-        .replace(/ composer$/g, '')
-        .replace(/ composers$/g, '')
-        .replace(/ synthesizer$/g, '')
-        .replace(/ synthesizers$/g, '')
-        .replace(/ companion$/g, '')
-        .replace(/ companions$/g, '')
-        .replace(/ platform$/g, '')
-        .replace(/ platforms$/g, '')
-        .replace(/ suite$/g, '')
-        .replace(/ suites$/g, '')
-        .replace(/ pipeline$/g, '')
-        .replace(/ pipelines$/g, '')
-        .replace(/ solution$/g, '')
-        .replace(/ solutions$/g, '')
-        .replace(/ system$/g, '')
-        .replace(/ systems$/g, '')
-        .replace(/ application$/g, '')
-        .replace(/ applications$/g, '')
-        .replace(/ service$/g, '')
-        .replace(/ services$/g, '')
-        .replace(/ api$/g, '')
-        .replace(/ apis$/g, '')
-        .replace(/ engine$/g, '')
-        .replace(/ engines$/g, '')
-        .replace(/ network$/g, '')
-        .replace(/ networks$/g, '')
-        .replace(/ environment$/g, '')
-        .replace(/ environments$/g, '')
-        .replace(/ experience$/g, '')
-        .replace(/ experiences$/g, '')
-        .replace(/ platform$/g, '')
-        .replace(/ platforms$/g, '')
-        .replace(/ lab$/g, '')
-        .replace(/ labs$/g, '')
-        .replace(/ studio$/g, '')
-        .replace(/ ai$/g, '')
-        .replace(/ tools$/g, '')
-        .replace(/ tool$/g, '')
-        .replace(/ app$/g, '')
-        .replace(/ apps$/g, '')
-        .replace(/ assistant$/g, '')
-        .replace(/ assistants$/g, '')
-        .replace(/ generator$/g, '')
-        .replace(/ generators$/g, '')
-        .replace(/ editor$/g, '')
-        .replace(/ editors$/g, '')
-        .replace(/ checker$/g, '')
-        .replace(/ checkers$/g, '')
-        .replace(/ builder$/g, '')
-        .replace(/ builders$/g, '')
-        .replace(/ enhancer$/g, '')
-        .replace(/ enhancers$/g, '')
-        .replace(/ creator$/g, '')
-        .replace(/ creators$/g, '')
-        .replace(/ planner$/g, '')
-        .replace(/ planners$/g, '')
-        .replace(/ tracker$/g, '')
-        .replace(/ trackers$/g, '')
-        .replace(/ mapper$/g, '')
-        .replace(/ mappers$/g, '')
-        .replace(/ finder$/g, '')
-        .replace(/ finders$/g, '')
-        .replace(/ translator$/g, '')
-        .replace(/ translators$/g, '')
-        .replace(/ composer$/g, '')
-        .replace(/ composers$/g, '')
-        .replace(/ synthesizer$/g, '')
-        .replace(/ synthesizers$/g, '')
-        .replace(/ companion$/g, '')
-        .replace(/ companions$/g, '')
-        .replace(/ platform$/g, '')
-        .replace(/ platforms$/g, '')
-        .replace(/ suite$/g, '')
-        .replace(/ suites$/g, '')
-        .replace(/ pipeline$/g, '')
-        .replace(/ pipelines$/g, '')
-        .replace(/ solution$/g, '')
-        .replace(/ solutions$/g, '')
-        .replace(/ system$/g, '')
-        .replace(/ systems$/g, '')
-        .replace(/ application$/g, '')
-        .replace(/ applications$/g, '')
-        .replace(/ service$/g, '')
-        .replace(/ services$/g, '')
-        .replace(/ api$/g, '')
-        .replace(/ apis$/g, '')
-        .replace(/ engine$/g, '')
-        .replace(/ engines$/g, '')
-        .replace(/ network$/g, '')
-        .replace(/ networks$/g, '')
-        .replace(/ environment$/g, '')
-        .replace(/ environments$/g, '')
-        .replace(/ experience$/g, '')
-        .replace(/ experiences$/g, '')
-        .replace(/ platform$/g, '')
-        .replace(/ platforms$/g, '')
-        .replace(/ lab$/g, '')
-        .replace(/ labs$/g, '')
-        .replace(/ studio$/g, '')
-        .replace(/ ai$/g, '');
-    // Try direct match, then normalized match
-    for (const key in iconMap) {
-        if (key.toLowerCase() === category.trim().toLowerCase()) return iconMap[key];
-        if (key.toLowerCase().replace(/ tools?$/g, '').replace(/ ai$/g, '') === normalized) return iconMap[key];
-    }
-    return 'fa-project-diagram';
+    return iconMap[category] || 'fa-project-diagram';
 }
 
 // Create tool card element with fallback for broken images
@@ -3960,57 +3749,12 @@ function createToolCard(tool) {
     const card = document.createElement('div');
     card.className = 'tool-card';
     const fallbackIcon = getFallbackIcon(tool.category);
-    const iconBgMap = {
-        'Image Generation': 'linear-gradient(135deg, #ec4899, #db2777)',
-        'Photo Editing': 'linear-gradient(135deg, #ec4899, #db2777)',
-        'Code Generation': 'linear-gradient(135deg, #8b5cf6, #a855f7)',
-        'Text Generation': 'linear-gradient(135deg, #10b981, #059669)',
-        'Writing Assistant': 'linear-gradient(135deg, #10b981, #059669)',
-        'Video Generation': 'linear-gradient(135deg, #06b6d4, #0891b2)',
-        'Voice Generation': 'linear-gradient(135deg, #f97316, #ea580c)',
-        'Music Generation': 'linear-gradient(135deg, #84cc16, #65a30d)',
-        'Chatbots': 'linear-gradient(135deg, #3b82f6, #2563eb)',
-        'Design Tools': 'linear-gradient(135deg, #ec4899, #db2777)',
-        'Data Analysis': 'linear-gradient(135deg, #f59e0b, #d97706)',
-        'Analytics': 'linear-gradient(135deg, #f59e0b, #d97706)',
-        'Automation': 'linear-gradient(135deg, #ef4444, #dc2626)',
-        'Translation': 'linear-gradient(135deg, #6366f1, #4f46e5)',
-        'SEO Tools': 'linear-gradient(135deg, #10b981, #059669)',
-        'Email Tools': 'linear-gradient(135deg, #84cc16, #65a30d)',
-        'Presentation Tools': 'linear-gradient(135deg, #f59e0b, #d97706)',
-        'Research Tools': 'linear-gradient(135deg, #8b5cf6, #a855f7)',
-        'Research': 'linear-gradient(135deg, #8b5cf6, #a855f7)',
-        'Productivity': 'linear-gradient(135deg, #06b6d4, #0891b2)',
-        'Finance Tools': 'linear-gradient(135deg, #10b981, #059669)',
-        'Health Tools': 'linear-gradient(135deg, #ef4444, #dc2626)',
-        'Education Tools': 'linear-gradient(135deg, #3b82f6, #2563eb)',
-        'Gaming Tools': 'linear-gradient(135deg, #8b5cf6, #a855f7)',
-        'Social Media': 'linear-gradient(135deg, #ec4899, #db2777)',
-        'Legal Tools': 'linear-gradient(135deg, #6366f1, #4f46e5)',
-        'HR Tools': 'linear-gradient(135deg, #f97316, #ea580c)',
-        'Recruitment': 'linear-gradient(135deg, #f97316, #ea580c)',
-        'Real Estate': 'linear-gradient(135deg, #10b981, #059669)',
-        'Sales Tools': 'linear-gradient(135deg, #f59e0b, #d97706)',
-        'Customer Service': 'linear-gradient(135deg, #06b6d4, #0891b2)',
-        'Cybersecurity': 'linear-gradient(135deg, #ef4444, #dc2626)',
-        'Content Moderation': 'linear-gradient(135deg, #ef4444, #dc2626)',
-        'Logistics': 'linear-gradient(135deg, #84cc16, #65a30d)',
-        'Inventory': 'linear-gradient(135deg, #84cc16, #65a30d)',
-        'Agriculture': 'linear-gradient(135deg, #10b981, #059669)',
-        'Survey Tools': 'linear-gradient(135deg, #8b5cf6, #a855f7)',
-        'Meeting Tools': 'linear-gradient(135deg, #06b6d4, #0891b2)',
-        'API Tools': 'linear-gradient(135deg, #8b5cf6, #a855f7)',
-        'Resume Builders': 'linear-gradient(135deg, #f97316, #ea580c)',
-        'ATS Resume Checkers': 'linear-gradient(135deg, #f97316, #ea580c)',
-        'Document Processing': 'linear-gradient(135deg, #6366f1, #4f46e5)',
-        // Add more mappings as needed
-    };
-    const iconBg = iconBgMap[tool.category] || 'linear-gradient(135deg, #6366f1, #4f46e5)';
+    
     card.innerHTML = `
         <div class="tool-header">
             <div class="tool-logo">
                 <img src="${tool.logo}" alt="${tool.name}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                <i class="fas ${fallbackIcon}" style="display: none; background: ${iconBg}; color: white; width: 100%; height: 100%; border-radius: 12px; align-items: center; justify-content: center; font-size: 20px;"></i>
+                <i class="fas ${fallbackIcon}" style="display: none;"></i>
             </div>
             <div class="tool-info">
                 <h3>${tool.name}</h3>
