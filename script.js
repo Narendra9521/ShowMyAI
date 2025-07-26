@@ -3453,6 +3453,96 @@ const workflowData = {
         { name: 'Google Forms', description: 'Free startup screening and application forms', logo: 'https://forms.google.com/favicon.ico', category: 'Deal Screening', link: 'https://forms.google.com' },
         { name: 'Wave', description: 'Free invoicing for angel network services', logo: 'https://www.waveapps.com/favicon.ico', category: 'Business Operations', link: 'https://www.waveapps.com' },
         { name: 'Mailchimp', description: 'Free angel investment opportunities newsletter', logo: 'https://mailchimp.com/favicon.ico', category: 'Deal Flow Communication', link: 'https://mailchimp.com' }
+    ],
+
+    'ai-blockchain': [
+        { name: 'Ethereum', description: 'Free blockchain development platform', logo: 'https://ethereum.org/favicon.ico', category: 'Blockchain Platforms', link: 'https://ethereum.org' },
+        { name: 'Solidity', description: 'Free smart contract programming language', logo: 'https://soliditylang.org/favicon.ico', category: 'Development Tools', link: 'https://soliditylang.org' },
+        { name: 'Remix IDE', description: 'Free online Solidity IDE for smart contracts', logo: 'https://remix.ethereum.org/favicon.ico', category: 'Development Tools', link: 'https://remix.ethereum.org' },
+        { name: 'MetaMask', description: 'Free blockchain wallet and browser extension', logo: 'https://metamask.io/favicon.ico', category: 'Blockchain Tools', link: 'https://metamask.io' },
+        { name: 'OpenZeppelin', description: 'Free secure smart contract library', logo: 'https://openzeppelin.com/favicon.ico', category: 'Security Libraries', link: 'https://openzeppelin.com' },
+        { name: 'Truffle Suite', description: 'Free blockchain development framework', logo: 'https://trufflesuite.com/favicon.ico', category: 'Development Framework', link: 'https://trufflesuite.com' },
+        { name: 'Ganache', description: 'Free personal blockchain for development', logo: 'https://trufflesuite.com/favicon.ico', category: 'Testing Tools', link: 'https://trufflesuite.com/ganache' },
+        { name: 'Web3.js', description: 'Free JavaScript library for blockchain interaction', logo: 'https://web3js.readthedocs.io/favicon.ico', category: 'JavaScript Libraries', link: 'https://web3js.readthedocs.io' },
+        { name: 'IPFS', description: 'Free decentralized storage protocol', logo: 'https://ipfs.io/favicon.ico', category: 'Decentralized Storage', link: 'https://ipfs.io' },
+        { name: 'GitHub', description: 'Free blockchain project repository and collaboration', logo: 'https://github.com/favicon.ico', category: 'Version Control', link: 'https://github.com' },
+        { name: 'ChatGPT', description: 'Free AI assistance for blockchain development', logo: 'https://openai.com/favicon.ico', category: 'AI Development Assistant', link: 'https://chat.openai.com' },
+        { name: 'Etherscan', description: 'Free Ethereum blockchain explorer and analytics', logo: 'https://etherscan.io/favicon.ico', category: 'Blockchain Analytics', link: 'https://etherscan.io' },
+        { name: 'CoinGecko', description: 'Free cryptocurrency market data and analysis', logo: 'https://www.coingecko.com/favicon.ico', category: 'Market Data', link: 'https://www.coingecko.com' },
+        { name: 'Hardhat', description: 'Free Ethereum development environment', logo: 'https://hardhat.org/favicon.ico', category: 'Development Environment', link: 'https://hardhat.org' },
+        { name: 'Polygon', description: 'Free Layer 2 scaling solution for Ethereum', logo: 'https://polygon.technology/favicon.ico', category: 'Scaling Solutions', link: 'https://polygon.technology' }
+    ],
+
+    'ai-cybersecurity': [
+        { name: 'Nmap', description: 'Free network security scanner and discovery tool', logo: 'https://nmap.org/favicon.ico', category: 'Network Security', link: 'https://nmap.org' },
+        { name: 'Wireshark', description: 'Free network protocol analyzer and packet capture', logo: 'https://www.wireshark.org/favicon.ico', category: 'Network Analysis', link: 'https://www.wireshark.org' },
+        { name: 'OWASP ZAP', description: 'Free web application security scanner', logo: 'https://www.zaproxy.org/favicon.ico', category: 'Web Security', link: 'https://www.zaproxy.org' },
+        { name: 'Metasploit Community', description: 'Free penetration testing framework', logo: 'https://www.metasploit.com/favicon.ico', category: 'Penetration Testing', link: 'https://www.metasploit.com' },
+        { name: 'Burp Suite Community', description: 'Free web vulnerability scanner', logo: 'https://portswigger.net/favicon.ico', category: 'Web Security', link: 'https://portswigger.net/burp/communitydownload' },
+        { name: 'Nikto', description: 'Free web server vulnerability scanner', logo: 'https://cirt.net/favicon.ico', category: 'Web Security', link: 'https://cirt.net/Nikto2' },
+        { name: 'OpenVAS', description: 'Free vulnerability assessment and management', logo: 'https://www.openvas.org/favicon.ico', category: 'Vulnerability Management', link: 'https://www.openvas.org' },
+        { name: 'Snort', description: 'Free intrusion detection and prevention system', logo: 'https://www.snort.org/favicon.ico', category: 'Intrusion Detection', link: 'https://www.snort.org' },
+        { name: 'YARA', description: 'Free malware identification and classification tool', logo: 'https://virustotal.github.io/yara/favicon.ico', category: 'Malware Analysis', link: 'https://virustotal.github.io/yara' },
+        { name: 'ChatGPT', description: 'Free AI security analysis and threat intelligence', logo: 'https://openai.com/favicon.ico', category: 'AI Security Assistant', link: 'https://chat.openai.com' },
+        { name: 'VirusTotal', description: 'Free malware analysis and threat intelligence', logo: 'https://www.virustotal.com/favicon.ico', category: 'Threat Intelligence', link: 'https://www.virustotal.com' },
+        { name: 'Shodan', description: 'Free internet-connected device search engine', logo: 'https://www.shodan.io/favicon.ico', category: 'Reconnaissance', link: 'https://www.shodan.io' },
+        { name: 'Maltego Community', description: 'Free link analysis and data mining tool', logo: 'https://www.maltego.com/favicon.ico', category: 'OSINT', link: 'https://www.maltego.com' },
+        { name: 'John the Ripper', description: 'Free password cracking tool', logo: 'https://www.openwall.com/favicon.ico', category: 'Password Security', link: 'https://www.openwall.com/john' },
+        { name: 'Hashcat', description: 'Free advanced password recovery tool', logo: 'https://hashcat.net/favicon.ico', category: 'Password Security', link: 'https://hashcat.net/hashcat' }
+    ],
+
+    'ai-robotics': [
+        { name: 'ROS (Robot Operating System)', description: 'Free robotics development framework', logo: 'https://www.ros.org/favicon.ico', category: 'Robotics Framework', link: 'https://www.ros.org' },
+        { name: 'Gazebo', description: 'Free robot simulation environment', logo: 'http://gazebosim.org/favicon.ico', category: 'Simulation', link: 'http://gazebosim.org' },
+        { name: 'Arduino IDE', description: 'Free microcontroller programming environment', logo: 'https://www.arduino.cc/favicon.ico', category: 'Hardware Programming', link: 'https://www.arduino.cc' },
+        { name: 'OpenCV', description: 'Free computer vision and machine learning library', logo: 'https://opencv.org/favicon.ico', category: 'Computer Vision', link: 'https://opencv.org' },
+        { name: 'TensorFlow', description: 'Free machine learning framework for robotics AI', logo: 'https://www.tensorflow.org/favicon.ico', category: 'Machine Learning', link: 'https://www.tensorflow.org' },
+        { name: 'PyTorch', description: 'Free deep learning framework for robotics', logo: 'https://pytorch.org/favicon.ico', category: 'Deep Learning', link: 'https://pytorch.org' },
+        { name: 'MoveIt', description: 'Free motion planning framework for ROS', logo: 'https://moveit.ros.org/favicon.ico', category: 'Motion Planning', link: 'https://moveit.ros.org' },
+        { name: 'V-REP (CoppeliaSim)', description: 'Free robot simulation platform', logo: 'https://www.coppeliarobotics.com/favicon.ico', category: 'Simulation', link: 'https://www.coppeliarobotics.com' },
+        { name: 'FreeCAD', description: 'Free 3D CAD modeler for robot design', logo: 'https://www.freecadweb.org/favicon.ico', category: '3D Design', link: 'https://www.freecadweb.org' },
+        { name: 'Blender', description: 'Free 3D modeling and animation for robotics', logo: 'https://www.blender.org/favicon.ico', category: '3D Modeling', link: 'https://www.blender.org' },
+        { name: 'ChatGPT', description: 'Free AI assistance for robotics programming', logo: 'https://openai.com/favicon.ico', category: 'AI Programming Assistant', link: 'https://chat.openai.com' },
+        { name: 'GitHub', description: 'Free robotics project repository and collaboration', logo: 'https://github.com/favicon.ico', category: 'Version Control', link: 'https://github.com' },
+        { name: 'Jupyter Notebook', description: 'Free interactive robotics development environment', logo: 'https://jupyter.org/favicon.ico', category: 'Development Environment', link: 'https://jupyter.org' },
+        { name: 'MATLAB Online', description: 'Free robotics toolbox and simulation (limited)', logo: 'https://www.mathworks.com/favicon.ico', category: 'Robotics Toolbox', link: 'https://www.mathworks.com/products/matlab-online.html' },
+        { name: 'RigidBodyDynamics.jl', description: 'Free robotics dynamics library in Julia', logo: 'https://julialang.org/favicon.ico', category: 'Dynamics Simulation', link: 'https://github.com/JuliaRobotics/RigidBodyDynamics.jl' }
+    ],
+
+    'ai-agriculture': [
+        { name: 'QGIS', description: 'Free geographic information system for precision agriculture', logo: 'https://qgis.org/favicon.ico', category: 'GIS Mapping', link: 'https://qgis.org' },
+        { name: 'Google Earth Engine', description: 'Free satellite imagery and geospatial analysis', logo: 'https://earthengine.google.com/favicon.ico', category: 'Satellite Imagery', link: 'https://earthengine.google.com' },
+        { name: 'OpenDroneMap', description: 'Free drone mapping and photogrammetry software', logo: 'https://www.opendronemap.org/favicon.ico', category: 'Drone Mapping', link: 'https://www.opendronemap.org' },
+        { name: 'R for Agriculture', description: 'Free statistical computing for agricultural data', logo: 'https://www.r-project.org/favicon.ico', category: 'Data Analysis', link: 'https://www.r-project.org' },
+        { name: 'Python AgriTech', description: 'Free programming language for agricultural AI', logo: 'https://www.python.org/favicon.ico', category: 'Programming Tools', link: 'https://www.python.org' },
+        { name: 'TensorFlow', description: 'Free machine learning for crop disease detection', logo: 'https://www.tensorflow.org/favicon.ico', category: 'Machine Learning', link: 'https://www.tensorflow.org' },
+        { name: 'OpenCV', description: 'Free computer vision for crop monitoring', logo: 'https://opencv.org/favicon.ico', category: 'Computer Vision', link: 'https://opencv.org' },
+        { name: 'Sentinel Hub', description: 'Free satellite data access for agriculture', logo: 'https://www.sentinel-hub.com/favicon.ico', category: 'Satellite Data', link: 'https://www.sentinel-hub.com' },
+        { name: 'NASA GISS', description: 'Free climate data for agricultural planning', logo: 'https://data.giss.nasa.gov/favicon.ico', category: 'Climate Data', link: 'https://data.giss.nasa.gov' },
+        { name: 'ChatGPT', description: 'Free AI assistance for agricultural optimization', logo: 'https://openai.com/favicon.ico', category: 'AI Agriculture Assistant', link: 'https://chat.openai.com' },
+        { name: 'PlantNet', description: 'Free plant identification and botanical database', logo: 'https://plantnet.org/favicon.ico', category: 'Plant Identification', link: 'https://plantnet.org' },
+        { name: 'iNaturalist', description: 'Free biodiversity observation and species identification', logo: 'https://www.inaturalist.org/favicon.ico', category: 'Biodiversity Monitoring', link: 'https://www.inaturalist.org' },
+        { name: 'Weather Underground', description: 'Free weather data and forecasting for farms', logo: 'https://www.wunderground.com/favicon.ico', category: 'Weather Data', link: 'https://www.wunderground.com' },
+        { name: 'Jupyter Notebook', description: 'Free agricultural data analysis environment', logo: 'https://jupyter.org/favicon.ico', category: 'Data Analysis', link: 'https://jupyter.org' },
+        { name: 'GitHub', description: 'Free agricultural AI project repository', logo: 'https://github.com/favicon.ico', category: 'Version Control', link: 'https://github.com' }
+    ],
+
+    'ai-energy': [
+        { name: 'OpenEI', description: 'Free energy data and analysis platform', logo: 'https://openei.org/favicon.ico', category: 'Energy Data', link: 'https://openei.org' },
+        { name: 'NREL SAM', description: 'Free renewable energy system modeling', logo: 'https://sam.nrel.gov/favicon.ico', category: 'Energy Modeling', link: 'https://sam.nrel.gov' },
+        { name: 'PVLib Python', description: 'Free solar photovoltaic modeling library', logo: 'https://pvlib-python.readthedocs.io/favicon.ico', category: 'Solar Energy', link: 'https://pvlib-python.readthedocs.io' },
+        { name: 'WindPowerLib', description: 'Free wind power modeling and analysis', logo: 'https://windpowerlib.readthedocs.io/favicon.ico', category: 'Wind Energy', link: 'https://windpowerlib.readthedocs.io' },
+        { name: 'EnergyPLAN', description: 'Free energy system analysis tool', logo: 'https://www.energyplan.eu/favicon.ico', category: 'Energy Planning', link: 'https://www.energyplan.eu' },
+        { name: 'OpenDSS', description: 'Free electric power distribution system simulator', logo: 'https://www.epri.com/favicon.ico', category: 'Grid Simulation', link: 'https://www.epri.com/pages/sa/opendss' },
+        { name: 'TensorFlow', description: 'Free machine learning for energy optimization', logo: 'https://www.tensorflow.org/favicon.ico', category: 'Machine Learning', link: 'https://www.tensorflow.org' },
+        { name: 'Python Energy', description: 'Free programming for energy management systems', logo: 'https://www.python.org/favicon.ico', category: 'Programming Tools', link: 'https://www.python.org' },
+        { name: 'HOMER Grid', description: 'Free microgrid and distributed energy modeling', logo: 'https://www.homerenergy.com/favicon.ico', category: 'Microgrid Design', link: 'https://www.homerenergy.com' },
+        { name: 'ChatGPT', description: 'Free AI assistance for energy optimization', logo: 'https://openai.com/favicon.ico', category: 'AI Energy Assistant', link: 'https://chat.openai.com' },
+        { name: 'EIA Data', description: 'Free US energy information and statistics', logo: 'https://www.eia.gov/favicon.ico', category: 'Energy Statistics', link: 'https://www.eia.gov' },
+        { name: 'IEA Data', description: 'Free international energy data and analysis', logo: 'https://www.iea.org/favicon.ico', category: 'Global Energy Data', link: 'https://www.iea.org' },
+        { name: 'Jupyter Notebook', description: 'Free energy data analysis environment', logo: 'https://jupyter.org/favicon.ico', category: 'Data Analysis', link: 'https://jupyter.org' },
+        { name: 'GitHub', description: 'Free energy management project repository', logo: 'https://github.com/favicon.ico', category: 'Version Control', link: 'https://github.com' },
+        { name: 'MATLAB Online', description: 'Free energy system modeling (limited access)', logo: 'https://www.mathworks.com/favicon.ico', category: 'Energy Modeling', link: 'https://www.mathworks.com/products/matlab-online.html' }
     ]
 };
 
@@ -3566,92 +3656,303 @@ function showWorkflow(workflow, updateHistory = true) {
 // Get fallback icon based on category
 function getFallbackIcon(category) {
     const iconMap = {
-        'Image Generation': 'fa-image',
-        'Photo Editing': 'fa-camera',
-        'Code Generation': 'fa-code',
-        'Text Generation': 'fa-file-alt',
-        'Writing Assistant': 'fa-pen',
-        'Video Generation': 'fa-video',
-        'Voice Generation': 'fa-microphone',
-        'Music Generation': 'fa-music',
+        'Image Generators': 'fa-image',
+        'Photo Editing Tools': 'fa-camera',
+        'Code Generators': 'fa-code',
+        'Text Generators': 'fa-file-alt',
+        'Writing Assistants': 'fa-pen',
+        'Video Generators': 'fa-video',
+        'Voice Generators': 'fa-microphone',
+        'Music Generators': 'fa-music',
         'Chatbots': 'fa-comments',
         'Design Tools': 'fa-palette',
         'Data Analysis': 'fa-chart-bar',
-        'Analytics': 'fa-chart-bar',
-        'Automation': 'fa-cogs',
-        'Translation': 'fa-language',
+        'Analytics Tools': 'fa-chart-bar',
+        'Automation Tools': 'fa-cogs',
+        'Translation Tools': 'fa-language',
         'SEO Tools': 'fa-search-plus',
         'Email Tools': 'fa-envelope',
         'Presentation Tools': 'fa-chalkboard-teacher',
         'Research Tools': 'fa-search',
-        'Research': 'fa-search',
-        'Productivity': 'fa-tasks',
+        'Productivity Tools': 'fa-tasks',
         'Finance Tools': 'fa-dollar-sign',
         'Health Tools': 'fa-heartbeat',
         'Education Tools': 'fa-graduation-cap',
         'Gaming Tools': 'fa-gamepad',
-        'Social Media': 'fa-share-alt',
+        'Social Media Tools': 'fa-share-alt',
         'Legal Tools': 'fa-gavel',
         'HR Tools': 'fa-users',
-        'Recruitment': 'fa-user-tie',
-        'Real Estate': 'fa-home',
+        'Recruitment Tools': 'fa-user-tie',
+        'Real Estate Tools': 'fa-home',
         'Sales Tools': 'fa-handshake',
-        'Customer Service': 'fa-headset',
-        'Cybersecurity': 'fa-shield-alt',
+        'Customer Service Tools': 'fa-headset',
+        'Cybersecurity Tools': 'fa-shield-alt',
         'Content Moderation': 'fa-shield-alt',
-        'Logistics': 'fa-truck',
-        'Inventory': 'fa-boxes',
-        'Agriculture': 'fa-seedling',
+        'Logistics Tools': 'fa-truck',
+        'Inventory Management': 'fa-boxes',
+        'Agriculture Tools': 'fa-seedling',
         'Survey Tools': 'fa-poll',
         'Meeting Tools': 'fa-video',
         'API Tools': 'fa-plug',
         'Resume Builders': 'fa-file-alt',
         'ATS Resume Checkers': 'fa-search-plus',
         'Document Processing': 'fa-file-invoice',
-        'Content Creation': 'fa-pen-fancy',
-        'Design': 'fa-palette',
-        'Video Production': 'fa-video',
-        'Marketing': 'fa-bullhorn',
-        'Development': 'fa-code',
-        'Content': 'fa-file-alt',
-        'Strategy': 'fa-chess',
-        'Creation': 'fa-plus-circle',
-        'Distribution': 'fa-share',
-        'Analysis': 'fa-chart-pie',
-        'Production': 'fa-microphone',
-        'Post-Production': 'fa-edit',
-        'Visual': 'fa-image',
-        'Support': 'fa-life-ring',
-        'Management': 'fa-users-cog',
-        'SEO Research': 'fa-search-plus',
-        'Content SEO': 'fa-file-alt',
-        'Technical SEO': 'fa-cogs',
-        'SEO Monitoring': 'fa-chart-line',
-        'Influencer Search': 'fa-star',
-        'Campaign Management': 'fa-tasks',
-        'Video Creation': 'fa-video',
-        'Video Editing': 'fa-cut',
-        'Network Management': 'fa-network-wired',
-        'Tracking': 'fa-chart-line',
-        'Recruitment': 'fa-user-plus',
-        'Optimization': 'fa-chart-up',
-        'Configuration': 'fa-cogs',
-        'Data Migration': 'fa-database',
-        'Integration': 'fa-plug',
-        'List Management': 'fa-list',
-        'Event Management': 'fa-calendar-alt',
-        'Venue Selection': 'fa-map-marker-alt',
-        'Registration': 'fa-clipboard-list',
-        'Market Intelligence': 'fa-chart-pie',
-        'Price Monitoring': 'fa-dollar-sign',
-        'Client Management': 'fa-handshake',
-        'Project Management': 'fa-project-diagram',
-        'Invoicing': 'fa-file-invoice',
-        'Time Tracking': 'fa-clock',
-        'Resume Building': 'fa-file-alt',
-        'ATS Optimization': 'fa-search-plus'
+        '3D Generators': 'fa-cube',
+        'AI Assistants': 'fa-user-astronaut',
+        'AI Detectors': 'fa-shield-alt',
+        'AI Avatars': 'fa-user-circle',
+        'AI Search Engines': 'fa-search',
+        'Audio Enhancers': 'fa-volume-up',
+        'AI Summarizers': 'fa-compress',
+        'Video Editors': 'fa-edit',
+        'Language Learning': 'fa-graduation-cap',
+        'AI Fitness': 'fa-running',
+        'AI Gaming': 'fa-gamepad',
+        'AI Dating': 'fa-heart',
+        'AI Cooking': 'fa-utensils',
+        'AI Document Processing': 'fa-file-invoice',
+        'Healthcare AI': 'fa-medkit',
+        'Music Creation': 'fa-music',
+        'Interior Design': 'fa-couch',
+        'Translation AI': 'fa-language',
+        'Speech Recognition': 'fa-microphone-alt',
+        'Data Visualization': 'fa-chart-line',
+        'Customer Insights': 'fa-comments-dollar',
+        'Legal Tech': 'fa-balance-scale',
+        'Blockchain AI': 'fa-link',
+        'Scientific Research': 'fa-flask',
+        'IoT & Smart Home': 'fa-network-wired',
+        'Accessibility Tools': 'fa-universal-access',
+        'Education AI': 'fa-book-reader',
+        'Cybersecurity AI': 'fa-lock',
+        'Robotics AI': 'fa-robot',
+        'AI Art Tools': 'fa-paint-brush',
+        'Agriculture AI': 'fa-tractor',
+        'Manufacturing AI': 'fa-industry',
+        'Energy AI': 'fa-bolt',
+        'Retail AI': 'fa-shopping-bag',
+        'Finance AI': 'fa-chart-line',
+        'Real Estate AI': 'fa-building',
+        'Travel AI': 'fa-plane',
+        'Weather AI': 'fa-cloud-sun',
+        'Sports AI': 'fa-basketball-ball',
+        'Music Analysis AI': 'fa-headphones',
+        'Fashion AI': 'fa-tshirt',
+        'Game Design AI': 'fa-dice-d20',
+        'Ocean AI': 'fa-water',
+        'Construction AI': 'fa-hard-hat',
+        'Legal AI': 'fa-balance-scale-right',
+        'Astronomy AI': 'fa-star',
+        'Archaeology AI': 'fa-landmark',
+        'Wildlife AI': 'fa-paw',
+        'Transportation AI': 'fa-bus',
+        'Insurance AI': 'fa-file-invoice-dollar',
+        'Mental Health AI': 'fa-brain',
+        'Journalism AI': 'fa-newspaper',
+        'Water Management AI': 'fa-tint',
+        'Space AI': 'fa-satellite',
+        // Add more mappings as needed for all slide categories
     };
-    return iconMap[category] || 'fa-project-diagram';
+    // Normalize category names to improve matching
+    const normalized = category.trim().toLowerCase()
+        .replace(/ai /g, '')
+        .replace(/ tools?$/g, '')
+        .replace(/ generators?$/g, '')
+        .replace(/ assistants?$/g, '')
+        .replace(/ editors?$/g, '')
+        .replace(/ checkers?$/g, '')
+        .replace(/ managers?$/g, '')
+        .replace(/ analysis$/g, '')
+        .replace(/ creation$/g, '')
+        .replace(/ processing$/g, '')
+        .replace(/ management$/g, '')
+        .replace(/ detection$/g, '')
+        .replace(/ enhancement$/g, '')
+        .replace(/ visualization$/g, '')
+        .replace(/ learning$/g, '')
+        .replace(/ moderation$/g, '')
+        .replace(/ research$/g, '')
+        .replace(/ production$/g, '')
+        .replace(/ tech$/g, '')
+        .replace(/ insights$/g, '')
+        .replace(/ analysis$/g, '')
+        .replace(/ workflow$/g, '')
+        .replace(/ pipeline$/g, '')
+        .replace(/ intelligence$/g, '')
+        .replace(/ enhancement$/g, '')
+        .replace(/ optimization$/g, '')
+        .replace(/ detection$/g, '')
+        .replace(/ enhancement$/g, '')
+        .replace(/ creation$/g, '')
+        .replace(/ summarizers?$/g, '')
+        .replace(/ avatars?$/g, '')
+        .replace(/ engines?$/g, '')
+        .replace(/ editors?$/g, '')
+        .replace(/ assistants?$/g, '')
+        .replace(/ detectors?$/g, '')
+        .replace(/ managers?$/g, '')
+        .replace(/ checkers?$/g, '')
+        .replace(/ builders?$/g, '')
+        .replace(/ enhancers?$/g, '')
+        .replace(/ creators?$/g, '')
+        .replace(/ planners?$/g, '')
+        .replace(/ trackers?$/g, '')
+        .replace(/ mappers?$/g, '')
+        .replace(/ finders?$/g, '')
+        .replace(/ translators?$/g, '')
+        .replace(/ composers?$/g, '')
+        .replace(/ synthesizers?$/g, '')
+        .replace(/ companions?$/g, '')
+        .replace(/ platforms?$/g, '')
+        .replace(/ suites?$/g, '')
+        .replace(/ pipelines?$/g, '')
+        .replace(/ solutions?$/g, '')
+        .replace(/ systems?$/g, '')
+        .replace(/ applications?$/g, '')
+        .replace(/ services?$/g, '')
+        .replace(/ apis?$/g, '')
+        .replace(/ engines?$/g, '')
+        .replace(/ networks?$/g, '')
+        .replace(/ environments?$/g, '')
+        .replace(/ experiences?$/g, '')
+        .replace(/ platforms?$/g, '')
+        .replace(/ labs?$/g, '')
+        .replace(/ studio$/g, '')
+        .replace(/ ai$/g, '')
+        .replace(/ tools$/g, '')
+        .replace(/ tool$/g, '')
+        .replace(/ app$/g, '')
+        .replace(/ apps$/g, '')
+        .replace(/ assistant$/g, '')
+        .replace(/ assistants$/g, '')
+        .replace(/ generator$/g, '')
+        .replace(/ generators$/g, '')
+        .replace(/ editor$/g, '')
+        .replace(/ editors$/g, '')
+        .replace(/ checker$/g, '')
+        .replace(/ checkers$/g, '')
+        .replace(/ builder$/g, '')
+        .replace(/ builders$/g, '')
+        .replace(/ enhancer$/g, '')
+        .replace(/ enhancers$/g, '')
+        .replace(/ creator$/g, '')
+        .replace(/ creators$/g, '')
+        .replace(/ planner$/g, '')
+        .replace(/ planners$/g, '')
+        .replace(/ tracker$/g, '')
+        .replace(/ trackers$/g, '')
+        .replace(/ mapper$/g, '')
+        .replace(/ mappers$/g, '')
+        .replace(/ finder$/g, '')
+        .replace(/ finders$/g, '')
+        .replace(/ translator$/g, '')
+        .replace(/ translators$/g, '')
+        .replace(/ composer$/g, '')
+        .replace(/ composers$/g, '')
+        .replace(/ synthesizer$/g, '')
+        .replace(/ synthesizers$/g, '')
+        .replace(/ companion$/g, '')
+        .replace(/ companions$/g, '')
+        .replace(/ platform$/g, '')
+        .replace(/ platforms$/g, '')
+        .replace(/ suite$/g, '')
+        .replace(/ suites$/g, '')
+        .replace(/ pipeline$/g, '')
+        .replace(/ pipelines$/g, '')
+        .replace(/ solution$/g, '')
+        .replace(/ solutions$/g, '')
+        .replace(/ system$/g, '')
+        .replace(/ systems$/g, '')
+        .replace(/ application$/g, '')
+        .replace(/ applications$/g, '')
+        .replace(/ service$/g, '')
+        .replace(/ services$/g, '')
+        .replace(/ api$/g, '')
+        .replace(/ apis$/g, '')
+        .replace(/ engine$/g, '')
+        .replace(/ engines$/g, '')
+        .replace(/ network$/g, '')
+        .replace(/ networks$/g, '')
+        .replace(/ environment$/g, '')
+        .replace(/ environments$/g, '')
+        .replace(/ experience$/g, '')
+        .replace(/ experiences$/g, '')
+        .replace(/ platform$/g, '')
+        .replace(/ platforms$/g, '')
+        .replace(/ lab$/g, '')
+        .replace(/ labs$/g, '')
+        .replace(/ studio$/g, '')
+        .replace(/ ai$/g, '')
+        .replace(/ tools$/g, '')
+        .replace(/ tool$/g, '')
+        .replace(/ app$/g, '')
+        .replace(/ apps$/g, '')
+        .replace(/ assistant$/g, '')
+        .replace(/ assistants$/g, '')
+        .replace(/ generator$/g, '')
+        .replace(/ generators$/g, '')
+        .replace(/ editor$/g, '')
+        .replace(/ editors$/g, '')
+        .replace(/ checker$/g, '')
+        .replace(/ checkers$/g, '')
+        .replace(/ builder$/g, '')
+        .replace(/ builders$/g, '')
+        .replace(/ enhancer$/g, '')
+        .replace(/ enhancers$/g, '')
+        .replace(/ creator$/g, '')
+        .replace(/ creators$/g, '')
+        .replace(/ planner$/g, '')
+        .replace(/ planners$/g, '')
+        .replace(/ tracker$/g, '')
+        .replace(/ trackers$/g, '')
+        .replace(/ mapper$/g, '')
+        .replace(/ mappers$/g, '')
+        .replace(/ finder$/g, '')
+        .replace(/ finders$/g, '')
+        .replace(/ translator$/g, '')
+        .replace(/ translators$/g, '')
+        .replace(/ composer$/g, '')
+        .replace(/ composers$/g, '')
+        .replace(/ synthesizer$/g, '')
+        .replace(/ synthesizers$/g, '')
+        .replace(/ companion$/g, '')
+        .replace(/ companions$/g, '')
+        .replace(/ platform$/g, '')
+        .replace(/ platforms$/g, '')
+        .replace(/ suite$/g, '')
+        .replace(/ suites$/g, '')
+        .replace(/ pipeline$/g, '')
+        .replace(/ pipelines$/g, '')
+        .replace(/ solution$/g, '')
+        .replace(/ solutions$/g, '')
+        .replace(/ system$/g, '')
+        .replace(/ systems$/g, '')
+        .replace(/ application$/g, '')
+        .replace(/ applications$/g, '')
+        .replace(/ service$/g, '')
+        .replace(/ services$/g, '')
+        .replace(/ api$/g, '')
+        .replace(/ apis$/g, '')
+        .replace(/ engine$/g, '')
+        .replace(/ engines$/g, '')
+        .replace(/ network$/g, '')
+        .replace(/ networks$/g, '')
+        .replace(/ environment$/g, '')
+        .replace(/ environments$/g, '')
+        .replace(/ experience$/g, '')
+        .replace(/ experiences$/g, '')
+        .replace(/ platform$/g, '')
+        .replace(/ platforms$/g, '')
+        .replace(/ lab$/g, '')
+        .replace(/ labs$/g, '')
+        .replace(/ studio$/g, '')
+        .replace(/ ai$/g, '');
+    // Try direct match, then normalized match
+    for (const key in iconMap) {
+        if (key.toLowerCase() === category.trim().toLowerCase()) return iconMap[key];
+        if (key.toLowerCase().replace(/ tools?$/g, '').replace(/ ai$/g, '') === normalized) return iconMap[key];
+    }
+    return 'fa-project-diagram';
 }
 
 // Create tool card element with fallback for broken images
@@ -3659,12 +3960,57 @@ function createToolCard(tool) {
     const card = document.createElement('div');
     card.className = 'tool-card';
     const fallbackIcon = getFallbackIcon(tool.category);
-    
+    const iconBgMap = {
+        'Image Generation': 'linear-gradient(135deg, #ec4899, #db2777)',
+        'Photo Editing': 'linear-gradient(135deg, #ec4899, #db2777)',
+        'Code Generation': 'linear-gradient(135deg, #8b5cf6, #a855f7)',
+        'Text Generation': 'linear-gradient(135deg, #10b981, #059669)',
+        'Writing Assistant': 'linear-gradient(135deg, #10b981, #059669)',
+        'Video Generation': 'linear-gradient(135deg, #06b6d4, #0891b2)',
+        'Voice Generation': 'linear-gradient(135deg, #f97316, #ea580c)',
+        'Music Generation': 'linear-gradient(135deg, #84cc16, #65a30d)',
+        'Chatbots': 'linear-gradient(135deg, #3b82f6, #2563eb)',
+        'Design Tools': 'linear-gradient(135deg, #ec4899, #db2777)',
+        'Data Analysis': 'linear-gradient(135deg, #f59e0b, #d97706)',
+        'Analytics': 'linear-gradient(135deg, #f59e0b, #d97706)',
+        'Automation': 'linear-gradient(135deg, #ef4444, #dc2626)',
+        'Translation': 'linear-gradient(135deg, #6366f1, #4f46e5)',
+        'SEO Tools': 'linear-gradient(135deg, #10b981, #059669)',
+        'Email Tools': 'linear-gradient(135deg, #84cc16, #65a30d)',
+        'Presentation Tools': 'linear-gradient(135deg, #f59e0b, #d97706)',
+        'Research Tools': 'linear-gradient(135deg, #8b5cf6, #a855f7)',
+        'Research': 'linear-gradient(135deg, #8b5cf6, #a855f7)',
+        'Productivity': 'linear-gradient(135deg, #06b6d4, #0891b2)',
+        'Finance Tools': 'linear-gradient(135deg, #10b981, #059669)',
+        'Health Tools': 'linear-gradient(135deg, #ef4444, #dc2626)',
+        'Education Tools': 'linear-gradient(135deg, #3b82f6, #2563eb)',
+        'Gaming Tools': 'linear-gradient(135deg, #8b5cf6, #a855f7)',
+        'Social Media': 'linear-gradient(135deg, #ec4899, #db2777)',
+        'Legal Tools': 'linear-gradient(135deg, #6366f1, #4f46e5)',
+        'HR Tools': 'linear-gradient(135deg, #f97316, #ea580c)',
+        'Recruitment': 'linear-gradient(135deg, #f97316, #ea580c)',
+        'Real Estate': 'linear-gradient(135deg, #10b981, #059669)',
+        'Sales Tools': 'linear-gradient(135deg, #f59e0b, #d97706)',
+        'Customer Service': 'linear-gradient(135deg, #06b6d4, #0891b2)',
+        'Cybersecurity': 'linear-gradient(135deg, #ef4444, #dc2626)',
+        'Content Moderation': 'linear-gradient(135deg, #ef4444, #dc2626)',
+        'Logistics': 'linear-gradient(135deg, #84cc16, #65a30d)',
+        'Inventory': 'linear-gradient(135deg, #84cc16, #65a30d)',
+        'Agriculture': 'linear-gradient(135deg, #10b981, #059669)',
+        'Survey Tools': 'linear-gradient(135deg, #8b5cf6, #a855f7)',
+        'Meeting Tools': 'linear-gradient(135deg, #06b6d4, #0891b2)',
+        'API Tools': 'linear-gradient(135deg, #8b5cf6, #a855f7)',
+        'Resume Builders': 'linear-gradient(135deg, #f97316, #ea580c)',
+        'ATS Resume Checkers': 'linear-gradient(135deg, #f97316, #ea580c)',
+        'Document Processing': 'linear-gradient(135deg, #6366f1, #4f46e5)',
+        // Add more mappings as needed
+    };
+    const iconBg = iconBgMap[tool.category] || 'linear-gradient(135deg, #6366f1, #4f46e5)';
     card.innerHTML = `
         <div class="tool-header">
             <div class="tool-logo">
                 <img src="${tool.logo}" alt="${tool.name}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                <i class="fas ${fallbackIcon}" style="display: none;"></i>
+                <i class="fas ${fallbackIcon}" style="display: none; background: ${iconBg}; color: white; width: 100%; height: 100%; border-radius: 12px; align-items: center; justify-content: center; font-size: 20px;"></i>
             </div>
             <div class="tool-info">
                 <h3>${tool.name}</h3>
