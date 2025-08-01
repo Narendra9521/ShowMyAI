@@ -99,6 +99,21 @@ function toggleDarkMode() {
     }
 }
 
+// Scroll to top functionality
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// Show/hide scroll to top button
+window.addEventListener('scroll', function() {
+    const scrollBtn = document.getElementById('scrollToTop');
+    if (window.pageYOffset > 300) {
+        scrollBtn.classList.add('visible');
+    } else {
+        scrollBtn.classList.remove('visible');
+    }
+});
+
 // Initialize theme on page load
 document.addEventListener('DOMContentLoaded', function() {
     const savedTheme = localStorage.getItem('theme');
@@ -3656,6 +3671,10 @@ function showWorkflow(workflow, updateHistory = true) {
 // Get fallback icon based on category
 function getFallbackIcon(category) {
     const iconMap = {
+        // AI Tools Categories
+        '3D Generation': 'fa-cube',
+        'AI Assistant': 'fa-robot',
+        'AI Detection': 'fa-search',
         'Image Generation': 'fa-image',
         'Photo Editing': 'fa-camera',
         'Code Generation': 'fa-code',
@@ -3698,6 +3717,60 @@ function getFallbackIcon(category) {
         'Resume Builders': 'fa-file-alt',
         'ATS Resume Checkers': 'fa-search-plus',
         'Document Processing': 'fa-file-invoice',
+        
+        // Extended AI Categories
+        'Education AI': 'fa-graduation-cap',
+        'Cybersecurity AI': 'fa-shield-alt',
+        'Robotics AI': 'fa-robot',
+        'AI Art Tools': 'fa-palette',
+        'Agriculture AI': 'fa-seedling',
+        'Manufacturing AI': 'fa-industry',
+        'Energy AI': 'fa-bolt',
+        'Retail AI': 'fa-shopping-cart',
+        'Finance AI': 'fa-dollar-sign',
+        'Real Estate AI': 'fa-home',
+        'Travel AI': 'fa-plane',
+        'Weather AI': 'fa-cloud',
+        'Sports AI': 'fa-futbol',
+        'Music Analysis AI': 'fa-music',
+        'Fashion AI': 'fa-tshirt',
+        'Game Design AI': 'fa-gamepad',
+        'Ocean AI': 'fa-water',
+        'Construction AI': 'fa-hard-hat',
+        'Legal AI': 'fa-gavel',
+        'Astronomy AI': 'fa-star',
+        'Archaeology AI': 'fa-search',
+        'Wildlife AI': 'fa-paw',
+        'Transportation AI': 'fa-car',
+        'Insurance AI': 'fa-shield-alt',
+        'Mental Health AI': 'fa-brain',
+        'Journalism AI': 'fa-newspaper',
+        'Water Management AI': 'fa-tint',
+        'Space AI': 'fa-rocket',
+        'Blockchain AI': 'fa-link',
+        'Scientific Research': 'fa-flask',
+        'IoT & Smart Home': 'fa-home',
+        'Accessibility Tools': 'fa-universal-access',
+        'Healthcare': 'fa-heartbeat',
+        'Music Creation': 'fa-music',
+        'Interior Design': 'fa-couch',
+        'Speech Recognition': 'fa-microphone',
+        'Data Visualization': 'fa-chart-pie',
+        'Customer Insights': 'fa-users',
+        'Legal Tech': 'fa-gavel',
+        'AI Avatars': 'fa-user-circle',
+        'AI Search': 'fa-search',
+        'Audio Enhancement': 'fa-volume-up',
+        'AI Summarization': 'fa-compress-alt',
+        'Video Editing': 'fa-cut',
+        'Language Learning': 'fa-language',
+        'AI Fitness': 'fa-dumbbell',
+        'AI Gaming': 'fa-gamepad',
+        'AI Dating': 'fa-heart',
+        'AI Cooking': 'fa-utensils',
+        
+        // Workflow Categories
+        'Content Planning': 'fa-calendar-alt',
         'Content Creation': 'fa-pen-fancy',
         'Design': 'fa-palette',
         'Video Production': 'fa-video',
@@ -3720,10 +3793,8 @@ function getFallbackIcon(category) {
         'Influencer Search': 'fa-star',
         'Campaign Management': 'fa-tasks',
         'Video Creation': 'fa-video',
-        'Video Editing': 'fa-cut',
         'Network Management': 'fa-network-wired',
         'Tracking': 'fa-chart-line',
-        'Recruitment': 'fa-user-plus',
         'Optimization': 'fa-chart-up',
         'Configuration': 'fa-cogs',
         'Data Migration': 'fa-database',
@@ -3739,9 +3810,34 @@ function getFallbackIcon(category) {
         'Invoicing': 'fa-file-invoice',
         'Time Tracking': 'fa-clock',
         'Resume Building': 'fa-file-alt',
-        'ATS Optimization': 'fa-search-plus'
+        'ATS Optimization': 'fa-search-plus',
+        'Graphics Creation': 'fa-image',
+        'Content Writing': 'fa-pen',
+        'Hosting & Deployment': 'fa-server',
+        'SEO & Analytics': 'fa-chart-line',
+        'Content Calendar': 'fa-calendar',
+        'Visual Content': 'fa-image',
+        'Analytics & Optimization': 'fa-chart-bar',
+        'Scheduling & Publishing': 'fa-clock',
+        'Analytics & Monitoring': 'fa-chart-line',
+        'Script Writing': 'fa-file-text',
+        'Recording & Editing': 'fa-microphone',
+        'Branding & Design': 'fa-palette',
+        'Publishing & Distribution': 'fa-share',
+        'Analytics & Promotion': 'fa-chart-bar',
+        'Market Research': 'fa-search',
+        'Platform Setup': 'fa-cogs',
+        'Product Content': 'fa-box',
+        'Visual Design': 'fa-palette',
+        'Payment & Shipping': 'fa-credit-card',
+        'Planning & Research': 'fa-clipboard-list',
+        'Design & Prototyping': 'fa-drafting-compass',
+        'Backend & Database': 'fa-database',
+        'Version Control': 'fa-code-branch',
+        'Testing & Deployment': 'fa-rocket',
+        'Lead Generation': 'fa-magnet'
     };
-    return iconMap[category] || 'fa-project-diagram';
+    return iconMap[category] || 'fa-cog';
 }
 
 // Create tool card element with fallback for broken images
