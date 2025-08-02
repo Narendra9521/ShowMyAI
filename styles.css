@@ -1603,35 +1603,7 @@ body {
     border-radius: var(--border-radius);
 }
 
-/* Floating action button */
-.fab {
-    position: fixed;
-    bottom: 100px;
-    right: 20px;
-    width: 56px;
-    height: 56px;
-    background: var(--primary-gradient);
-    border: none;
-    border-radius: 50%;
-    color: white;
-    font-size: 20px;
-    cursor: pointer;
-    box-shadow: var(--shadow-lg);
-    transition: var(--transition);
-    z-index: 999;
-    display: none;
-}
 
-.fab:hover {
-    transform: scale(1.1);
-    box-shadow: var(--shadow-glow);
-}
-
-.fab.visible {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 /* Dark mode transitions */
 * {

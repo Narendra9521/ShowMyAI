@@ -99,20 +99,7 @@ function toggleDarkMode() {
     }
 }
 
-// Scroll to top functionality
-function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-}
 
-// Show/hide scroll to top button
-window.addEventListener('scroll', function() {
-    const scrollBtn = document.getElementById('scrollToTop');
-    if (window.pageYOffset > 300) {
-        scrollBtn.classList.add('visible');
-    } else {
-        scrollBtn.classList.remove('visible');
-    }
-});
 
 // Initialize theme on page load
 document.addEventListener('DOMContentLoaded', function() {
