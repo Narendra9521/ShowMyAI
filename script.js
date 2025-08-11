@@ -101,6 +101,30 @@ function toggleDarkMode() {
 
 
 
+// Touch/swipe handling for mobile
+let touchStartX = 0;
+let touchEndX = 0;
+let touchStartY = 0;
+let touchEndY = 0;
+
+function handleSwipe() {
+    const deltaX = touchEndX - touchStartX;
+    const deltaY = touchEndY - touchStartY;
+    
+    // Only handle horizontal swipes if they're more significant than vertical
+    if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 50) {
+        const currentSection = document.querySelector('.tab-btn.active').getAttribute('data-section');
+        
+        if (deltaX > 0 && currentSection === 'workflows') {
+            // Swipe right: workflows -> ai-tools
+            switchTab('ai-tools', true);
+        } else if (deltaX < 0 && currentSection === 'ai-tools') {
+            // Swipe left: ai-tools -> workflows
+            switchTab('workflows', true);
+        }
+    }
+}
+
 // Initialize theme on page load
 document.addEventListener('DOMContentLoaded', function() {
     const savedTheme = localStorage.getItem('theme');
@@ -114,6 +138,21 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Set default active tab
     document.getElementById('ai-tools').classList.add('active');
+    
+    // Add swipe listeners for mobile
+    const mainContent = document.querySelector('.main-content');
+    if (mainContent) {
+        mainContent.addEventListener('touchstart', function(e) {
+            touchStartX = e.changedTouches[0].screenX;
+            touchStartY = e.changedTouches[0].screenY;
+        }, { passive: true });
+        
+        mainContent.addEventListener('touchend', function(e) {
+            touchEndX = e.changedTouches[0].screenX;
+            touchEndY = e.changedTouches[0].screenY;
+            handleSwipe();
+        }, { passive: true });
+    }
     
     // Add event listeners for navigation
     document.querySelectorAll('.nav-link').forEach(link => {
