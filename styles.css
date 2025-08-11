@@ -1128,6 +1128,14 @@ body {
     border-radius: 50%;
 }
 
+.footer-logo img {
+    margin-right: 10px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
 .footer-description {
     color: var(--text-secondary);
     margin-bottom: 20px;
