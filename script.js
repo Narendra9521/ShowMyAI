@@ -5,6 +5,18 @@ let currentState = {
     category: null
 };
 
+// Category icon mappings
+const categoryIconMap = {
+    'logo-generators': 'logo-icon',
+    'ai-avatars': 'avatar-icon',
+    'photo-editing-tools': 'photo-icon',
+    '3d-generators': '3d-icon',
+    'job-finder': 'job-finder-icon',
+    'job-applier': 'job-applier-icon',
+    'ai-parenting': 'parenting-icon',
+    'ai-sustainability': 'sustainability-icon'
+};
+
 // Initialize page state
 function initializePage() {
     const urlParams = new URLSearchParams(window.location.search);
@@ -423,6 +435,22 @@ const aiToolsData = {
 
 // Add more categories with 10 tools each
 Object.assign(aiToolsData, {
+  
+   
+    'ai-sustainability': [
+        { name: 'ClimateAI', description: 'AI climate risk analytics', logo: 'https://climate.ai/favicon.ico', category: 'AI Sustainability', link: 'https://climate.ai' },
+        { name: 'Persefoni', description: 'AI carbon management', logo: 'https://persefoni.com/favicon.ico', category: 'AI Sustainability', link: 'https://persefoni.com' },
+        { name: 'Watershed', description: 'AI sustainability platform', logo: 'https://watershed.com/favicon.ico', category: 'AI Sustainability', link: 'https://watershed.com' },
+        { name: 'Plan A', description: 'AI ESG platform', logo: 'https://plana.earth/favicon.ico', category: 'AI Sustainability', link: 'https://plana.earth' },
+        { name: 'CarbonChain', description: 'AI carbon tracking', logo: 'https://carbonchain.com/favicon.ico', category: 'AI Sustainability', link: 'https://carbonchain.com' }
+    ,{ name: 'Enablon', description: 'AI-powered sustainability management', logo: 'https://enablon.com/favicon.ico', category: 'AI Sustainability', link: 'https://enablon.com' }
+    ,{ name: 'Sustainalytics', description: 'AI ESG risk ratings and analytics', logo: 'https://www.sustainalytics.com/favicon.ico', category: 'AI Sustainability', link: 'https://www.sustainalytics.com' }
+    ,{ name: 'EcoVadis', description: 'AI sustainability ratings platform', logo: 'https://www.ecovadis.com/favicon.ico', category: 'AI Sustainability', link: 'https://www.ecovadis.com' }
+    ,{ name: 'GHG Platform India', description: 'AI greenhouse gas data and analytics', logo: 'https://ghgplatform-india.org/favicon.ico', category: 'AI Sustainability', link: 'https://ghgplatform-india.org' }
+    ,{ name: 'OpenClimate', description: 'AI open climate data platform', logo: 'https://openclimate.network/favicon.ico', category: 'AI Sustainability', link: 'https://openclimate.network' }
+    ],
+   
+   
     'ai-education': [
         { name: 'Duolingo', description: 'AI-powered language learning platform', logo: 'https://www.duolingo.com/favicon.ico', category: 'Education AI', link: 'https://www.duolingo.com/' },
         { name: 'Coursera', description: 'AI-enhanced online learning platform', logo: 'https://www.coursera.org/favicon.ico', category: 'Education AI', link: 'https://www.coursera.org/' },
@@ -435,6 +463,66 @@ Object.assign(aiToolsData, {
         { name: 'Querium', description: 'AI tutoring for STEM subjects', logo: 'https://querium.com/favicon.ico', category: 'Education AI', link: 'https://querium.com/' },
         { name: 'Thinkster Math', description: 'AI math tutoring platform', logo: 'https://hellothinkster.com/favicon.ico', category: 'Education AI', link: 'https://hellothinkster.com/' }
     ],
+        'logo-generators': [
+            { name: 'Looka', description: 'AI logo maker and brand identity', logo: 'https://looka.com/favicon.ico', category: 'Logo Generators', link: 'https://looka.com' },
+            { name: 'Brandmark', description: 'AI-powered logo design tool', logo: 'https://brandmark.io/favicon.ico', category: 'Logo Generators', link: 'https://brandmark.io' },
+            { name: 'Canva Logo Maker', description: 'Create logos with AI-powered design', logo: 'https://www.canva.com/favicon.ico', category: 'Logo Generators', link: 'https://www.canva.com' },
+            { name: 'LogoAI', description: 'AI logo generator for businesses', logo: 'https://logoai.com/favicon.ico', category: 'Logo Generators', link: 'https://logoai.com' },
+            { name: 'Hatchful', description: 'Free AI logo maker by Shopify', logo: 'https://hatchful.shopify.com/favicon.ico', category: 'Logo Generators', link: 'https://hatchful.shopify.com' }
+            ,{ name: 'LogoMakr', description: 'Simple AI logo design tool', logo: 'https://logomakr.com/favicon.ico', category: 'Logo Generators', link: 'https://logomakr.com' }
+            ,{ name: 'Tailor Brands', description: 'AI-powered branding and logo creation', logo: 'https://www.tailorbrands.com/favicon.ico', category: 'Logo Generators', link: 'https://www.tailorbrands.com' }
+            ,{ name: 'DesignEvo', description: 'Free AI logo maker', logo: 'https://www.designevo.com/favicon.ico', category: 'Logo Generators', link: 'https://www.designevo.com' }
+            ,{ name: 'Logo Genie', description: 'AI logo creation for businesses', logo: 'https://www.logogenie.net/favicon.ico', category: 'Logo Generators', link: 'https://www.logogenie.net' }
+            ,{ name: 'Turbologo', description: 'Fast AI logo generator', logo: 'https://turbologo.com/favicon.ico', category: 'Logo Generators', link: 'https://turbologo.com' }
+        ],
+        'job-finder': [
+            { name: 'Jobscan', description: 'AI-powered job search and resume optimization', logo: 'https://www.jobscan.co/favicon.ico', category: 'Job Finder', link: 'https://www.jobscan.co' },
+            { name: 'LinkedIn AI Jobs', description: 'AI job recommendations on LinkedIn', logo: 'https://www.linkedin.com/favicon.ico', category: 'Job Finder', link: 'https://www.linkedin.com/jobs/' },
+            { name: 'Indeed AI', description: 'AI-powered job search platform', logo: 'https://www.indeed.com/favicon.ico', category: 'Job Finder', link: 'https://www.indeed.com' },
+            { name: 'ZipRecruiter AI', description: 'AI job matching and alerts', logo: 'https://www.ziprecruiter.com/favicon.ico', category: 'Job Finder', link: 'https://www.ziprecruiter.com' },
+            { name: 'Glassdoor AI', description: 'AI-driven job search and company reviews', logo: 'https://www.glassdoor.com/favicon.ico', category: 'Job Finder', link: 'https://www.glassdoor.com' }
+            ,{ name: 'Monster AI', description: 'AI job search and career advice', logo: 'https://www.monster.com/favicon.ico', category: 'Job Finder', link: 'https://www.monster.com' }
+            ,{ name: 'CareerBuilder AI', description: 'AI-powered job matching', logo: 'https://www.careerbuilder.com/favicon.ico', category: 'Job Finder', link: 'https://www.careerbuilder.com' }
+            ,{ name: 'Adzuna AI', description: 'Smart job search engine', logo: 'https://www.adzuna.com/favicon.ico', category: 'Job Finder', link: 'https://www.adzuna.com' }
+            ,{ name: 'JobHero', description: 'AI job tracking and search', logo: 'https://www.jobhero.com/favicon.ico', category: 'Job Finder', link: 'https://www.jobhero.com' }
+            ,{ name: 'Jobvite', description: 'AI recruiting and job search', logo: 'https://www.jobvite.com/favicon.ico', category: 'Job Finder', link: 'https://www.jobvite.com' }
+        ],
+        'job-applier': [
+            { name: 'Simplify Jobs', description: 'AI-powered job application automation', logo: 'https://simplify.jobs/favicon.ico', category: 'Job Applier', link: 'https://simplify.jobs' },
+            { name: 'JobApplyBot', description: 'Automate job applications with AI', logo: 'https://jobapplybot.com/favicon.ico', category: 'Job Applier', link: 'https://jobapplybot.com' },
+            { name: 'LoopCV', description: 'Automated job application platform', logo: 'https://loopcv.pro/favicon.ico', category: 'Job Applier', link: 'https://loopcv.pro' },
+            { name: 'Careerflow', description: 'AI job application tracker and automation', logo: 'https://careerflow.ai/favicon.ico', category: 'Job Applier', link: 'https://careerflow.ai' },
+            { name: 'JobSeeker', description: 'AI-powered job application assistant', logo: 'https://jobseeker.com/favicon.ico', category: 'Job Applier', link: 'https://jobseeker.com' }
+            ,{ name: 'JobPal', description: 'AI chatbot for job applications', logo: 'https://jobpal.ai/favicon.ico', category: 'Job Applier', link: 'https://jobpal.ai' }
+            ,{ name: 'Applyya', description: 'Automated job application platform', logo: 'https://applyya.com/favicon.ico', category: 'Job Applier', link: 'https://applyya.com' }
+            ,{ name: 'JobBot', description: 'AI job application assistant', logo: 'https://jobbot.me/favicon.ico', category: 'Job Applier', link: 'https://jobbot.me' }
+            ,{ name: 'JobWizard', description: 'AI-powered job application tracker', logo: 'https://jobwizard.io/favicon.ico', category: 'Job Applier', link: 'https://jobwizard.io' }
+            ,{ name: 'JobAutomator', description: 'Automate job applications with AI', logo: 'https://jobautomator.com/favicon.ico', category: 'Job Applier', link: 'https://jobautomator.com' }
+        ],
+        'ai-sports-analytics': [
+            { name: 'Sportradar', description: 'AI-powered sports data analytics', logo: 'https://sportradar.com/favicon.ico', category: 'AI Sports Analytics', link: 'https://sportradar.com' },
+            { name: 'Stats Perform', description: 'AI-driven sports performance analytics', logo: 'https://www.statsperform.com/favicon.ico', category: 'AI Sports Analytics', link: 'https://www.statsperform.com' },
+            { name: 'Catapult Sports', description: 'AI athlete tracking and analytics', logo: 'https://catapultsports.com/favicon.ico', category: 'AI Sports Analytics', link: 'https://catapultsports.com' },
+            { name: 'Hudl', description: 'AI video analysis for sports teams', logo: 'https://www.hudl.com/favicon.ico', category: 'AI Sports Analytics', link: 'https://www.hudl.com' },
+            { name: 'Zone7', description: 'AI injury prevention and performance analytics', logo: 'https://zone7.ai/favicon.ico', category: 'AI Sports Analytics', link: 'https://zone7.ai' }
+            ,{ name: 'Sportlogiq', description: 'AI-powered sports analytics', logo: 'https://sportlogiq.com/favicon.ico', category: 'AI Sports Analytics', link: 'https://sportlogiq.com' }
+            ,{ name: 'Playermaker', description: 'AI wearable for sports analytics', logo: 'https://www.playermaker.com/favicon.ico', category: 'AI Sports Analytics', link: 'https://www.playermaker.com' }
+            ,{ name: 'Second Spectrum', description: 'AI video analysis for sports', logo: 'https://secondspectrum.com/favicon.ico', category: 'AI Sports Analytics', link: 'https://secondspectrum.com' }
+            ,{ name: 'SportsTrace', description: 'AI performance analytics', logo: 'https://www.sportstrace.com/favicon.ico', category: 'AI Sports Analytics', link: 'https://www.sportstrace.com' }
+            ,{ name: 'Edge10', description: 'AI athlete management platform', logo: 'https://edge10.com/favicon.ico', category: 'AI Sports Analytics', link: 'https://edge10.com' }
+        ],
+        'ai-parenting': [
+            { name: 'ParentPal', description: 'AI-powered parenting tips and child development', logo: 'https://parentpal.com/favicon.ico', category: 'AI Parenting', link: 'https://parentpal.com' },
+            { name: 'Kinedu', description: 'AI-driven child development activities', logo: 'https://www.kinedu.com/favicon.ico', category: 'AI Parenting', link: 'https://www.kinedu.com' },
+            { name: 'Winnie', description: 'AI parenting community and resources', logo: 'https://winnie.com/favicon.ico', category: 'AI Parenting', link: 'https://winnie.com' },
+            { name: 'BabyCenter AI', description: 'AI-powered parenting advice and tracking', logo: 'https://www.babycenter.com/favicon.ico', category: 'AI Parenting', link: 'https://www.babycenter.com' },
+            { name: 'Parenting Hero', description: 'AI parenting assistant and tips', logo: 'https://parentinghero.com/favicon.ico', category: 'AI Parenting', link: 'https://parentinghero.com' }
+            ,{ name: 'BabySparks', description: 'AI-powered child development app', logo: 'https://babysparks.com/favicon.ico', category: 'AI Parenting', link: 'https://babysparks.com' }
+            ,{ name: 'Tinybeans', description: 'AI parenting journal and tips', logo: 'https://tinybeans.com/favicon.ico', category: 'AI Parenting', link: 'https://tinybeans.com' }
+            ,{ name: 'Sproutling', description: 'AI baby monitor and insights', logo: 'https://sproutling.com/favicon.ico', category: 'AI Parenting', link: 'https://sproutling.com' }
+            ,{ name: 'Cubo AI', description: 'Smart baby monitor with AI', logo: 'https://us.getcubo.com/favicon.ico', category: 'AI Parenting', link: 'https://us.getcubo.com' }
+            ,{ name: 'Huckleberry', description: 'AI sleep and parenting advice', logo: 'https://huckleberrycare.com/favicon.ico', category: 'AI Parenting', link: 'https://huckleberrycare.com' }
+        ],
     'ai-cybersecurity': [
         { name: 'Darktrace', description: 'AI-powered cyber defense platform', logo: 'https://www.darktrace.com/favicon.ico', category: 'Cybersecurity AI', link: 'https://www.darktrace.com/' },
         { name: 'CrowdStrike', description: 'AI endpoint protection platform', logo: 'https://www.crowdstrike.com/favicon.ico', category: 'Cybersecurity AI', link: 'https://www.crowdstrike.com/' },
@@ -3702,6 +3790,7 @@ function getFallbackIcon(category) {
         'AI Assistant': 'fa-robot',
         'AI Detection': 'fa-search',
         'Image Generation': 'fa-image',
+
         'Photo Editing': 'fa-camera',
         'Code Generation': 'fa-code',
         'Text Generation': 'fa-file-alt',
@@ -3794,6 +3883,13 @@ function getFallbackIcon(category) {
         'AI Gaming': 'fa-gamepad',
         'AI Dating': 'fa-heart',
         'AI Cooking': 'fa-utensils',
+        'AI Parenting': 'fa-baby',
+         'AI Cooking': 'fa-utensils',
+         'AI Sustainability': 'fa-leaf',
+         'Logo Generators': 'fa-paint-brush',
+         'AI Sports Analytics':'fa-football-ball',
+         'Job Finder': 'fa-briefcase',
+         'Job Applier': 'fa-paper-plane',
         
         // Workflow Categories
         'Content Planning': 'fa-calendar-alt',
