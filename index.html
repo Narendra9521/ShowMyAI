@@ -87,6 +87,86 @@
             <!-- AI Tools Section -->
             <section id="ai-tools" class="content-section active">
                 <div class="categories-grid">
+                    <div class="category-card" onclick="showTools('supply-chain-management')">
+                        <div class="category-icon supplychain-icon"><i class="fas fa-truck"></i></div>
+                        <div class="ai-badge">AI</div>
+                        <h3 class="category-title">Supply Chain Management</h3>
+                        <p class="category-description">Optimize, track, and analyze supply chains with AI-powered tools</p>
+                    </div>
+                    <div class="category-card" onclick="showTools('quality-assurance')">
+                        <div class="category-icon qualityassurance-icon"><i class="fas fa-check-double"></i></div>
+                        <div class="ai-badge">AI</div>
+                        <h3 class="category-title">Quality Assurance</h3>
+                        <p class="category-description">Automate and enhance QA processes with AI-driven solutions</p>
+                    </div>
+                    <div class="category-card" onclick="showTools('compliance-and-audit')">
+                        <div class="category-icon compliance-icon"><i class="fas fa-balance-scale"></i></div>
+                        <div class="ai-badge">AI</div>
+                        <h3 class="category-title">Compliance & Audit</h3>
+                        <p class="category-description">AI tools for compliance management, auditing, and regulatory checks</p>
+                    </div>
+                    <div class="category-card" onclick="showTools('risk-management')">
+                        <div class="category-icon riskmanagement-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                        <div class="ai-badge">AI</div>
+                        <h3 class="category-title">Risk Management</h3>
+                        <p class="category-description">Identify, assess, and mitigate risks with AI-powered platforms</p>
+                    </div>
+                    <div class="category-card" onclick="showTools('ai-procurement')">
+                        <div class="category-icon aiprocurement-icon"><i class="fas fa-shopping-cart"></i></div>
+                        <div class="ai-badge">AI</div>
+                        <h3 class="category-title">AI Procurement</h3>
+                        <p class="category-description">Streamline procurement and sourcing with advanced AI tools</p>
+                    </div>
+                    <div class="category-card" onclick="showTools('ai-pet-care')">
+                        <div class="category-icon pet-icon">
+                            <i class="fas fa-paw"></i>
+                        </div>
+                        <div class="ai-badge">AI</div>
+                        <h3 class="category-title">AI Pet Care</h3>
+                        <p class="category-description">AI-powered tools for pet health, safety, and monitoring</p>
+                    </div>
+                   
+                  
+                    <div class="category-card" onclick="showTools('ai-podcasting')">
+                        <div class="category-icon podcast-icon">
+                            <i class="fas fa-podcast"></i>
+                        </div>
+                        <div class="ai-badge">AI</div>
+                        <h3 class="category-title">AI Podcasting</h3>
+                        <p class="category-description">AI tools for podcast creation, editing, and distribution</p>
+                    </div>
+                    <div class="category-card" onclick="showTools('ai-event-planning')">
+                        <div class="category-icon event-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <div class="ai-badge">AI</div>
+                        <h3 class="category-title">AI Event Planning</h3>
+                        <p class="category-description">Plan and manage events efficiently with AI</p>
+                    </div>
+                    <div class="category-card" onclick="showTools('ai-personal-finance')">
+                        <div class="category-icon finance-icon">
+                            <i class="fas fa-wallet"></i>
+                        </div>
+                        <div class="ai-badge">AI</div>
+                        <h3 class="category-title">AI Personal Finance</h3>
+                        <p class="category-description">AI-powered tools for budgeting and financial planning</p>
+                    </div>
+                    <div class="category-card" onclick="showTools('ai-gardening')">
+                        <div class="category-icon gardening-icon">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <div class="ai-badge">AI</div>
+                        <h3 class="category-title">AI Gardening</h3>
+                        <p class="category-description">AI solutions for smart gardening and plant care</p>
+                    </div>
+                    <div class="category-card" onclick="showTools('ai-language-translation')">
+                        <div class="category-icon translation-icon">
+                            <i class="fas fa-language"></i>
+                        </div>
+                        <div class="ai-badge">AI</div>
+                        <h3 class="category-title">AI Language Translation</h3>
+                        <p class="category-description">Advanced AI for real-time language translation</p>
+                    </div>
                     <div class="category-card" onclick="showTools('image-generators')">
                         <div class="category-icon image-icon">
                             <i class="fas fa-image"></i>
@@ -217,6 +297,56 @@
                         <div class="ai-badge">AI</div>
                         <h3 class="category-title">Chatbots</h3>
                         <p class="category-description">Intelligent conversational AI and customer service bots</p>
+                    </div>
+
+                    <!-- New Categories -->
+                    <div class="category-card" onclick="showTools('animation')">
+                        <div class="category-icon animation-icon"><i class="fas fa-film"></i></div>
+                        <div class="ai-badge">AI</div>
+                        <h3 class="category-title">Animation</h3>
+                        <p class="category-description">Create, edit, and automate animations with AI tools</p>
+                    </div>
+                    <div class="category-card" onclick="showTools('storyboarding')">
+                        <div class="category-icon storyboarding-icon"><i class="fas fa-th-large"></i></div>
+                        <div class="ai-badge">AI</div>
+                        <h3 class="category-title">Storyboarding</h3>
+                        <p class="category-description">AI-powered tools for visual story planning and boards</p>
+                    </div>
+                    <div class="category-card" onclick="showTools('sound-effects')">
+                        <div class="category-icon soundeffects-icon"><i class="fas fa-bolt"></i></div>
+                        <div class="ai-badge">AI</div>
+                        <h3 class="category-title">Sound Effects</h3>
+                        <p class="category-description">Generate and enhance sound effects with AI</p>
+                    </div>
+                    <div class="category-card" onclick="showTools('ai-mining')">
+                        <div class="category-icon aimining-icon"><i class="fas fa-gem"></i></div>
+                        <div class="ai-badge">AI</div>
+                        <h3 class="category-title">AI Mining</h3>
+                        <p class="category-description">AI-driven solutions for mining and resource extraction</p>
+                    </div>
+                    <div class="category-card" onclick="showTools('telecommunications')">
+                        <div class="category-icon telecommunications-icon"><i class="fas fa-broadcast-tower"></i></div>
+                        <div class="ai-badge">AI</div>
+                        <h3 class="category-title">Telecommunications</h3>
+                        <p class="category-description">Optimize telecom networks and services with AI</p>
+                    </div>
+                    <div class="category-card" onclick="showTools('aerospace')">
+                        <div class="category-icon aerospace-icon"><i class="fas fa-space-shuttle"></i></div>
+                        <div class="ai-badge">AI</div>
+                        <h3 class="category-title">Aerospace</h3>
+                        <p class="category-description">AI-powered tools for aviation and space industries</p>
+                    </div>
+                    <div class="category-card" onclick="showTools('maritime')">
+                        <div class="category-icon maritime-icon"><i class="fas fa-ship"></i></div>
+                        <div class="ai-badge">AI</div>
+                        <h3 class="category-title">Maritime</h3>
+                        <p class="category-description">AI solutions for shipping, navigation, and marine analytics</p>
+                    </div>
+                    <div class="category-card" onclick="showTools('waste-management')">
+                        <div class="category-icon wastemanagement-icon"><i class="fas fa-recycle"></i></div>
+                        <div class="ai-badge">AI</div>
+                        <h3 class="category-title">Waste Management</h3>
+                        <p class="category-description">AI-powered waste sorting, recycling, and logistics</p>
                     </div>
                     <div class="category-card" onclick="showTools('design-tools')">
                         <div class="category-icon design-icon">
@@ -867,7 +997,48 @@
                         <h3 class="category-title">Wildlife AI</h3>
                         <p class="category-description">AI tools for wildlife monitoring and conservation</p>
                     </div>
-                    <div class="category-card" onclick="showTools('ai-transportation')">
+                  
+                        <div class="category-card" onclick="showTools('quantum-computing')">
+                            <div class="category-icon quantumcomputing-icon">
+                                <i class="fas fa-atom"></i>
+                            </div>
+                            <div class="ai-badge">AI</div>
+                            <h3 class="category-title">Quantum Computing</h3>
+                            <p class="category-description">AI tools for quantum computing and simulation</p>
+                        </div>
+                        <div class="category-card" onclick="showTools('augmented-reality')">
+                            <div class="category-icon augmentedreality-icon">
+                                <i class="fas fa-glasses"></i>
+                            </div>
+                            <div class="ai-badge">AI</div>
+                            <h3 class="category-title">Augmented Reality</h3>
+                            <p class="category-description">AI-powered augmented reality experiences and tools</p>
+                        </div>
+                        <div class="category-card" onclick="showTools('virtual-reality')">
+                            <div class="category-icon virtualreality-icon">
+                                <i class="fas fa-vr-cardboard"></i>
+                            </div>
+                            <div class="ai-badge">AI</div>
+                            <h3 class="category-title">Virtual Reality</h3>
+                            <p class="category-description">AI-driven virtual reality platforms and solutions</p>
+                        </div>
+                        <div class="category-card" onclick="showTools('metaverse-tools')">
+                            <div class="category-icon metaverse-icon">
+                                <i class="fas fa-cube"></i>
+                            </div>
+                            <div class="ai-badge">AI</div>
+                            <h3 class="category-title">Metaverse Tools</h3>
+                            <p class="category-description">AI tools for metaverse creation and interaction</p>
+                        </div>
+                        <div class="category-card" onclick="showTools('web-blockchain-integration')">
+                            <div class="category-icon webblockchain-icon">
+                                <i class="fas fa-link"></i>
+                            </div>
+                            <div class="ai-badge">AI</div>
+                            <h3 class="category-title">Web/Blockchain Integration</h3>
+                            <p class="category-description">AI solutions for integrating web and blockchain</p>
+                        </div>
+                        <div class="category-card" onclick="showTools('ai-transportation')">
                         <div class="category-icon transportation-icon">
                             <i class="fas fa-bus"></i>
                         </div>

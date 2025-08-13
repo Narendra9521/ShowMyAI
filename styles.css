@@ -63,7 +63,7 @@ body {
 .header {
     background: var(--bg-primary);
     box-shadow: var(--shadow-sm);
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     right: 0;
@@ -192,7 +192,7 @@ body {
 .main-content {
     background: var(--bg-primary);
     min-height: 100vh;
-    padding-top: 55px;
+    padding-top: 0;
 }
 
 /* Navigation Tabs */
@@ -474,6 +474,9 @@ body {
 .agriculture-icon { background: linear-gradient(135deg, #10b981, #059669); }
 .document-icon { background: linear-gradient(135deg, #6366f1, #4f46e5); }
 
+/* Gardening icon for AI Gardening category */
+.gardening-icon { background: linear-gradient(135deg, #4ade80, #16a34a); }
+
 .youtube-icon { background: linear-gradient(135deg, #ef4444, #dc2626); }
 .website-icon { background: linear-gradient(135deg, #10b981, #059669); }
 .marketing-icon { background: linear-gradient(135deg, #f59e0b, #d97706); }
@@ -556,6 +559,48 @@ body {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
+/* New icon classes for additional categories */
+.animation-icon {
+    background: linear-gradient(135deg, #f59e0b 0%, #f43f5e 100%);
+}
+.storyboarding-icon {
+    background: linear-gradient(135deg, #6366f1 0%, #22d3ee 100%);
+}
+.soundeffects-icon {
+    background: linear-gradient(135deg, #a855f7 0%, #f59e0b 100%);
+}
+.aimining-icon {
+    background: linear-gradient(135deg, #059669 0%, #fbbf24 100%);
+}
+.telecommunications-icon {
+    background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);
+}
+.aerospace-icon {
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+}
+.maritime-icon {
+    background: linear-gradient(135deg, #06b6d4 0%, #0ea5e9 100%);
+}
+.wastemanagement-icon {
+    background: linear-gradient(135deg, #84cc16 0%, #f59e0b 100%);
+}
+
+.quantumcomputing-icon {
+    background: linear-gradient(135deg, #0f2027 0%, #2c5364 100%);
+}
+.augmentedreality-icon {
+    background: linear-gradient(135deg, #f7971e 0%, #ffd200 100%);
+}
+.virtualreality-icon {
+    background: linear-gradient(135deg, #00c3ff 0%, #ffff1c 100%);
+}
+.metaverse-icon {
+    background: linear-gradient(135deg, #fc466b 0%, #3f5efb 100%);
+}
+.webblockchain-icon {
+    background: linear-gradient(135deg, #43cea2 0%, #185a9d 100%);
+}
+
 .tutoring-icon {
     background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
 }
@@ -574,6 +619,23 @@ body {
 
 .cookingclasses-icon {
     background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+}
+
+/* New icon classes for additional categories */
+.supplychain-icon {
+    background: linear-gradient(135deg, #0ea5e9 0%, #6366f1 100%);
+}
+.qualityassurance-icon {
+    background: linear-gradient(135deg, #22d3ee 0%, #f59e0b 100%);
+}
+.compliance-icon {
+    background: linear-gradient(135deg, #6366f1 0%, #f43f5e 100%);
+}
+.riskmanagement-icon {
+    background: linear-gradient(135deg, #f43f5e 0%, #f59e0b 100%);
+}
+.aiprocurement-icon {
+    background: linear-gradient(135deg, #10b981 0%, #6366f1 100%);
 }
 
 .fitnesscoaching-icon {
@@ -680,7 +742,7 @@ body {
 
 /* Tools Section */
 .tools-section {
-    padding: 55px 0 0 0;
+    padding: 0;
     background: var(--bg-secondary);
     min-height: 100vh;
     position: relative;
