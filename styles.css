@@ -43,6 +43,13 @@
     box-sizing: border-box;
 }
 
+html {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     line-height: 1.6;
@@ -51,6 +58,9 @@ body {
     background-attachment: fixed;
     transition: var(--transition);
     overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
 }
 
 .container {
