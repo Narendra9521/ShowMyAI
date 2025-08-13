@@ -171,7 +171,11 @@ document.addEventListener('DOMContentLoaded', function() {
         link.addEventListener('click', function(e) {
             e.preventDefault();
             const page = this.getAttribute('data-page');
-            if (page) {
+            if (page === 'home') {
+                history.replaceState({ page: 'home', section: 'ai-tools', category: null }, '', '?page=home&section=ai-tools');
+                currentState = { page: 'home', section: 'ai-tools', category: null };
+                renderCurrentState();
+            } else if (page) {
                 updateState({ page, section: null, category: null }, true);
                 renderCurrentState();
             }
@@ -183,23 +187,41 @@ document.addEventListener('DOMContentLoaded', function() {
         link.addEventListener('click', function(e) {
             e.preventDefault();
             const page = this.getAttribute('data-page');
-            if (page) {
+            if (page === 'home') {
+                history.replaceState({ page: 'home', section: 'ai-tools', category: null }, '', '?page=home&section=ai-tools');
+                currentState = { page: 'home', section: 'ai-tools', category: null };
+                renderCurrentState();
+            } else if (page) {
                 updateState({ page, section: null, category: null }, true);
                 renderCurrentState();
             }
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     });
     
-    // Logo click handler
-    document.querySelector('.logo').addEventListener('click', function() {
-        updateState({ page: 'home', section: 'ai-tools', category: null }, false);
-        renderCurrentState();
-    });
+    // Logo click handlers - ensure AI tools homepage is final history state
+    const headerLogo = document.querySelector('.logo');
+    const footerLogo = document.querySelector('.footer-logo');
     
-    document.querySelector('.footer-logo').addEventListener('click', function() {
-        updateState({ page: 'home', section: 'ai-tools', category: null }, false);
-        renderCurrentState();
-    });
+    if (headerLogo) {
+        headerLogo.addEventListener('click', function(e) {
+            e.preventDefault();
+            history.replaceState({ page: 'home', section: 'ai-tools', category: null }, '', '?page=home&section=ai-tools');
+            currentState = { page: 'home', section: 'ai-tools', category: null };
+            renderCurrentState();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+    
+    if (footerLogo) {
+        footerLogo.addEventListener('click', function(e) {
+            e.preventDefault();
+            history.replaceState({ page: 'home', section: 'ai-tools', category: null }, '', '?page=home&section=ai-tools');
+            currentState = { page: 'home', section: 'ai-tools', category: null };
+            renderCurrentState();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
     
     // Add enter key support for search
     document.getElementById('searchInput').addEventListener('keypress', function(e) {
@@ -986,6 +1008,21 @@ Object.assign(aiToolsData, {
         { name: 'Inworld AI', description: 'AI characters for games', logo: 'https://inworld.ai/favicon.ico', category: 'Game Design AI', link: 'https://inworld.ai/' },
         { name: 'Scenario', description: 'AI-generated game assets', logo: 'https://www.scenario.com/favicon.ico', category: 'Game Design AI', link: 'https://www.scenario.com/' }
     ],
+
+        'code-debuggers': [
+            { name: 'Sentry', description: 'Real-time error tracking and debugging for code', logo: 'https://sentry.io/_assets/favicon.ico', category: 'Code Debuggers', link: 'https://sentry.io/' },
+            { name: 'Airbrake', description: 'Error monitoring and debugging for developers', logo: 'https://airbrake.io/favicon.ico', category: 'Code Debuggers', link: 'https://airbrake.io/' },
+            { name: 'Rollbar', description: 'Continuous code improvement and debugging', logo: 'https://rollbar.com/favicon.ico', category: 'Code Debuggers', link: 'https://rollbar.com/' },
+            { name: 'Raygun', description: 'Error, crash, and performance monitoring', logo: 'https://raygun.com/favicon.ico', category: 'Code Debuggers', link: 'https://raygun.com/' },
+            { name: 'BugSnag', description: 'Error monitoring and reporting for apps', logo: 'https://www.bugsnag.com/favicon.ico', category: 'Code Debuggers', link: 'https://www.bugsnag.com/' },
+            { name: 'Instabug', description: 'Bug reporting and in-app debugging', logo: 'https://instabug.com/favicon.ico', category: 'Code Debuggers', link: 'https://instabug.com/' },
+            { name: 'LogRocket', description: 'Session replay and debugging for web apps', logo: 'https://logrocket.com/favicon.ico', category: 'Code Debuggers', link: 'https://logrocket.com/' },
+            { name: 'Rookout', description: 'Live debugging for cloud-native apps', logo: 'https://www.rookout.com/favicon.ico', category: 'Code Debuggers', link: 'https://www.rookout.com/' },
+            { name: 'AppSignal', description: 'Error tracking and performance monitoring', logo: 'https://appsignal.com/favicon.ico', category: 'Code Debuggers', link: 'https://appsignal.com/' },
+            { name: 'Honeybadger', description: 'Exception, uptime, and error monitoring', logo: 'https://www.honeybadger.io/favicon.ico', category: 'Code Debuggers', link: 'https://www.honeybadger.io/' },
+            { name: 'GlitchTip', description: 'Open-source error tracking and debugging', logo: 'https://glitchtip.com/favicon.ico', category: 'Code Debuggers', link: 'https://glitchtip.com/' },
+            { name: 'Codecov', description: 'Code coverage and debugging insights', logo: 'https://about.codecov.io/wp-content/uploads/2021/06/favicon.png', category: 'Code Debuggers', link: 'https://about.codecov.io/' }
+        ],
     'ai-ocean': [
         { name: 'Sofar Ocean', description: 'Ocean data platform with AI', logo: 'https://www.sofarocean.com/favicon.ico', category: 'Ocean AI', link: 'https://www.sofarocean.com/' },
         { name: 'Saildrone', description: 'Autonomous ocean data collection', logo: 'https://www.saildrone.com/favicon.ico', category: 'Ocean AI', link: 'https://www.saildrone.com/' },
@@ -998,6 +1035,21 @@ Object.assign(aiToolsData, {
         { name: 'Whale Seeker', description: 'AI whale detection from imagery', logo: 'https://www.whaleseeker.com/favicon.ico', category: 'Ocean AI', link: 'https://www.whaleseeker.com/' },
         { name: 'NVIDIA AI for Ocean Science', description: 'AI solutions for oceanography', logo: 'https://www.nvidia.com/favicon.ico', category: 'Ocean AI', link: 'https://www.nvidia.com/en-us/industries/science/' }
     ],
+
+        'animation': [
+            { name: 'Runway ML', description: 'AI-powered video and animation creation', logo: 'https://runwayml.com/favicon.ico', category: 'Animation', link: 'https://runwayml.com/' },
+            { name: 'DeepMotion', description: 'AI motion capture and animation', logo: 'https://www.deepmotion.com/favicon.ico', category: 'Animation', link: 'https://www.deepmotion.com/' },
+            { name: 'Kaiber', description: 'AI video and animation generator', logo: 'https://www.kaiber.ai/favicon.ico', category: 'Animation', link: 'https://www.kaiber.ai/' },
+            { name: 'Animaker', description: 'DIY animation video maker with AI', logo: 'https://www.animaker.com/favicon.ico', category: 'Animation', link: 'https://www.animaker.com/' },
+            { name: 'Powtoon', description: 'AI-powered animated video creation', logo: 'https://www.powtoon.com/favicon.ico', category: 'Animation', link: 'https://www.powtoon.com/' },
+            { name: 'Vyond', description: 'AI-driven animation for business', logo: 'https://www.vyond.com/favicon.ico', category: 'Animation', link: 'https://www.vyond.com/' },
+            { name: 'Toonly', description: 'Drag-and-drop animation software', logo: 'https://www.toonly.com/favicon.ico', category: 'Animation', link: 'https://www.toonly.com/' },
+            { name: 'Animatron', description: 'Online animation maker with AI', logo: 'https://www.animatron.com/favicon.ico', category: 'Animation', link: 'https://www.animatron.com/' },
+            { name: 'Moovly', description: 'AI-powered video and animation platform', logo: 'https://www.moovly.com/favicon.ico', category: 'Animation', link: 'https://www.moovly.com/' },
+            { name: 'Renderforest', description: 'AI animation and video maker', logo: 'https://www.renderforest.com/favicon.ico', category: 'Animation', link: 'https://www.renderforest.com/' },
+            { name: 'Synthesia', description: 'AI video and avatar animation', logo: 'https://www.synthesia.io/favicon.ico', category: 'Animation', link: 'https://www.synthesia.io/' },
+            { name: 'LottieFiles', description: 'AI-powered animation for web and apps', logo: 'https://lottiefiles.com/favicon.ico', category: 'Animation', link: 'https://lottiefiles.com/' }
+        ],
     'ai-construction': [
         { name: 'Buildots', description: 'AI construction site monitoring', logo: 'https://buildots.com/favicon.ico', category: 'Construction AI', link: 'https://buildots.com/' },
         { name: 'Doxel', description: 'AI-powered construction monitoring', logo: 'https://www.doxel.ai/favicon.ico', category: 'Construction AI', link: 'https://www.doxel.ai/' },
@@ -1659,7 +1711,7 @@ Object.assign(aiToolsData, {
         { name: 'AI21 Labs API', description: 'Language model APIs', logo: 'https://www.ai21.com/favicon.ico', category: 'API Tools', link: 'https://www.ai21.com' }
     ],
     'resume-builders': [
-        { name: 'Resume.io', description: 'AI-powered resume builder with professional templates', logo: 'https://resume.io/favicon.ico', category: 'Resume Builders', link: 'https://resume.io' },
+        { name: 'Overleaf', description: 'AI-powered resume builder with professional templates', logo: 'https://overleaf.com/favicon.ico', category: 'Resume Builders', link: 'https://overleaf.com' },
         { name: 'Zety', description: 'Smart resume builder with AI suggestions', logo: 'https://zety.com/favicon.ico', category: 'Resume Builders', link: 'https://zety.com' },
         { name: 'Novoresume', description: 'Modern resume builder with AI optimization', logo: 'https://novoresume.com/favicon.ico', category: 'Resume Builders', link: 'https://novoresume.com' },
         { name: 'Canva Resume', description: 'AI-enhanced resume design platform', logo: 'https://www.canva.com/favicon.ico', category: 'Resume Builders', link: 'https://www.canva.com/resumes' },
@@ -4196,6 +4248,7 @@ function getFallbackIcon(category) {
          'Virtual Reality': 'fa-vr-cardboard',
          'Metaverse Tools': 'fa-globe',
          'Web Blockchain Integration': 'fa-link',
+         'Code Debuggers': 'fa-bug',
         
         // Workflow Categories
         'Content Planning': 'fa-calendar-alt',
@@ -4265,7 +4318,7 @@ function getFallbackIcon(category) {
         'Testing & Deployment': 'fa-rocket',
         'Lead Generation': 'fa-magnet'
     };
-    return iconMap[category] || 'fa-cog';
+    return iconMap[category] || 'fa-laptop-code';
 }
 
 // Create tool card element with fallback for broken images
