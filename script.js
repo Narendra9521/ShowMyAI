@@ -334,6 +334,32 @@ const aiToolsData = {
         { name: 'Undetectable.ai', description: 'AI humanizer for content', logo: 'https://undetectable.ai/favicon.ico', category: 'AI Detection', link: 'https://undetectable.ai/' },
         { name: 'ZeroGPT', description: 'Free AI content detector', logo: 'https://zerogpt.com/favicon.ico', category: 'AI Detection', link: 'https://zerogpt.com/' }
     ],
+     'qr-code-generators': [
+            { name: 'QR Code Monkey', description: 'Free custom QR code generator', logo: 'https://www.qrcode-monkey.com/favicon.ico', category: 'QR Code Generators', link: 'https://www.qrcode-monkey.com/' },
+            { name: 'QRCode Tiger', description: 'Dynamic QR code generator', logo: 'https://www.qrcode-tiger.com/favicon.ico', category: 'QR Code Generators', link: 'https://www.qrcode-tiger.com/' },
+            { name: 'Unitag QR Code', description: 'Custom QR code design', logo: 'https://www.unitag.io/favicon.ico', category: 'QR Code Generators', link: 'https://www.unitag.io/qrcode' },
+            { name: 'GoQR.me', description: 'Simple QR code generator', logo: 'https://goqr.me/favicon.ico', category: 'QR Code Generators', link: 'https://goqr.me/' },
+            { name: 'QRStuff', description: 'Create QR codes for free', logo: 'https://www.qrstuff.com/favicon.ico', category: 'QR Code Generators', link: 'https://www.qrstuff.com/' },
+            { name: 'Visualead', description: 'Visual QR code generator', logo: 'https://www.visualead.com/favicon.ico', category: 'QR Code Generators', link: 'https://www.visualead.com/' },
+            { name: 'Beaconstac', description: 'Dynamic QR code platform', logo: 'https://www.beaconstac.com/favicon.ico', category: 'QR Code Generators', link: 'https://www.beaconstac.com/' },
+            { name: 'Scanova', description: 'Professional QR code solutions', logo: 'https://scanova.io/favicon.ico', category: 'QR Code Generators', link: 'https://scanova.io/' },
+            { name: 'Kaywa', description: 'QR code management platform', logo: 'https://www.qr-code-generator.com/favicon.ico', category: 'QR Code Generators', link: 'https://www.qr-code-generator.com/' },
+            { name: 'QRickit', description: 'Free QR code generator', logo: 'https://qrickit.com/favicon.ico', category: 'QR Code Generators', link: 'https://qrickit.com/' },
+            { name: 'QR Code Generator', description: 'Create QR codes instantly', logo: 'https://www.the-qrcode-generator.com/favicon.ico', category: 'QR Code Generators', link: 'https://www.the-qrcode-generator.com/' }
+    ],
+    'app-website-developers': [
+            { name: 'Wix', description: 'Website builder with AI design', logo: 'https://www.wix.com/favicon.ico', category: 'App/Website Developers', link: 'https://www.wix.com/' },
+            { name: 'Webflow', description: 'No-code website builder', logo: 'https://webflow.com/favicon.ico', category: 'App/Website Developers', link: 'https://webflow.com/' },
+            { name: 'Squarespace', description: 'Website and e-commerce builder', logo: 'https://www.squarespace.com/favicon.ico', category: 'App/Website Developers', link: 'https://www.squarespace.com/' },
+            { name: 'Bubble', description: 'No-code app development platform', logo: 'https://bubble.io/favicon.ico', category: 'App/Website Developers', link: 'https://bubble.io/' },
+            { name: 'Appy Pie', description: 'App builder for non-coders', logo: 'https://www.appypie.com/favicon.ico', category: 'App/Website Developers', link: 'https://www.appypie.com/' },
+            { name: 'Zyro', description: 'AI-powered website builder', logo: 'https://zyro.com/favicon.ico', category: 'App/Website Developers', link: 'https://zyro.com/' },
+            { name: 'Weebly', description: 'Drag-and-drop website builder', logo: 'https://www.weebly.com/favicon.ico', category: 'App/Website Developers', link: 'https://www.weebly.com/' },
+            { name: 'Shopify', description: 'E-commerce website builder', logo: 'https://www.shopify.com/favicon.ico', category: 'App/Website Developers', link: 'https://www.shopify.com/' },
+            { name: 'WordPress.com', description: 'Website and blog platform', logo: 'https://wordpress.com/favicon.ico', category: 'App/Website Developers', link: 'https://wordpress.com/' },
+            { name: 'Glide', description: 'No-code app builder for mobile', logo: 'https://www.glideapps.com/favicon.ico', category: 'App/Website Developers', link: 'https://www.glideapps.com/' },
+            { name: 'Thunkable', description: 'No-code mobile app builder', logo: 'https://thunkable.com/favicon.ico', category: 'App/Website Developers', link: 'https://thunkable.com/' }
+    ],
     'image-generators': [
         { name: 'DALL-E 2', description: 'Create realistic images from text descriptions', logo: 'https://openai.com/favicon.ico', category: 'Image Generation', link: 'https://openai.com/dall-e-2/' },
         { name: 'Midjourney', description: 'AI art generator creating stunning artwork', logo: 'https://www.midjourney.com/favicon.ico', category: 'Image Generation', link: 'https://www.midjourney.com' },
@@ -457,6 +483,58 @@ const aiToolsData = {
 
 // Add more categories with 10 tools each
 Object.assign(aiToolsData, {
+    'productivity-tools': [
+        { name: 'Notion', description: 'All-in-one workspace for notes, tasks, and wikis', logo: 'https://www.notion.so/favicon.ico', category: 'PD Tools', link: 'https://www.notion.so/' },
+        { name: 'Evernote', description: 'Note-taking and organization app', logo: 'https://evernote.com/favicon.ico', category: 'PD Tools', link: 'https://evernote.com/' },
+        { name: 'Todoist', description: 'Task manager and to-do list', logo: 'https://todoist.com/favicon.ico', category: 'PD Tools', link: 'https://todoist.com/' },
+        { name: 'Trello', description: 'Visual project management tool', logo: 'https://trello.com/favicon.ico', category: 'PD Tools', link: 'https://trello.com/' },
+        { name: 'ClickUp', description: 'Productivity platform for teams', logo: 'https://clickup.com/favicon.ico', category: 'PD Tools', link: 'https://clickup.com/' },
+        { name: 'Asana', description: 'Work management platform', logo: 'https://asana.com/favicon.ico', category: 'PD Tools', link: 'https://asana.com/' },
+        { name: 'RescueTime', description: 'Time tracking and productivity analytics', logo: 'https://www.rescuetime.com/favicon.ico', category: 'PD Tools', link: 'https://www.rescuetime.com/' },
+        { name: 'Forest', description: 'Focus app to beat phone addiction', logo: 'https://www.forestapp.cc/favicon.ico', category: 'PD Tools', link: 'https://www.forestapp.cc/' },
+        { name: 'Focus@Will', description: 'Productivity music for focus', logo: 'https://www.focusatwill.com/favicon.ico', category: 'PD Tools', link: 'https://www.focusatwill.com/' },
+        { name: 'MindMeister', description: 'Mind mapping and brainstorming tool', logo: 'https://www.mindmeister.com/favicon.ico', category: 'PD Tools', link: 'https://www.mindmeister.com/' },
+        { name: 'Freedom', description: 'Distraction blocker for productivity', logo: 'https://freedom.to/favicon.ico', category: 'PD Tools', link: 'https://freedom.to/' }
+    ],
+    'marketing': [
+        { name: 'HubSpot', description: 'Inbound marketing, sales, and CRM suite', logo: 'https://www.hubspot.com/favicon.ico', category: 'Marketing', link: 'https://www.hubspot.com/' },
+        { name: 'Mailchimp', description: 'Email marketing and automation', logo: 'https://mailchimp.com/favicon.ico', category: 'Marketing', link: 'https://mailchimp.com/' },
+        { name: 'Buffer', description: 'Social media management platform', logo: 'https://buffer.com/favicon.ico', category: 'Marketing', link: 'https://buffer.com/' },
+        { name: 'Hootsuite', description: 'Social media scheduling and analytics', logo: 'https://hootsuite.com/favicon.ico', category: 'Marketing', link: 'https://hootsuite.com/' },
+        { name: 'Canva', description: 'Design and content creation for marketing', logo: 'https://www.canva.com/favicon.ico', category: 'Marketing', link: 'https://www.canva.com/' },
+        { name: 'Sprout Social', description: 'Social media management and analytics', logo: 'https://sproutsocial.com/favicon.ico', category: 'Marketing', link: 'https://sproutsocial.com/' },
+        { name: 'SEMrush', description: 'SEO and online visibility management', logo: 'https://www.semrush.com/favicon.ico', category: 'Marketing', link: 'https://www.semrush.com/' },
+        { name: 'Moz', description: 'SEO software and tools', logo: 'https://moz.com/favicon.ico', category: 'Marketing', link: 'https://moz.com/' },
+        { name: 'AdEspresso', description: 'Facebook and Instagram ads management', logo: 'https://adespresso.com/favicon.ico', category: 'Marketing', link: 'https://adespresso.com/' },
+        { name: 'Unbounce', description: 'Landing page builder for marketers', logo: 'https://unbounce.com/favicon.ico', category: 'Marketing', link: 'https://unbounce.com/' },
+        { name: 'Mailerlite', description: 'Email marketing and automation', logo: 'https://www.mailerlite.com/favicon.ico', category: 'Marketing', link: 'https://www.mailerlite.com/' }
+    ],
+    'noise-remover': [
+        { name: 'Krisp', description: 'AI noise cancellation for calls', logo: 'https://krisp.ai/favicon.ico', category: 'Noise Remover', link: 'https://krisp.ai/' },
+        { name: 'NVIDIA RTX Voice', description: 'Real-time voice noise removal', logo: 'https://www.nvidia.com/favicon.ico', category: 'Noise Remover', link: 'https://www.nvidia.com/en-us/geforce/guides/nvidia-rtx-voice-setup-guide/' },
+        { name: 'Noise Blocker', description: 'Noise filtering for Windows', logo: 'https://noiseblocker.io/favicon.ico', category: 'Noise Remover', link: 'https://noiseblocker.io/' },
+        { name: 'Audo AI', description: 'AI-powered noise and sound effect enhancer', logo: 'https://audo.ai/favicon.ico', category: 'Noise Remover', link: 'https://audo.ai/' },
+        { name: 'LALAL.AI', description: 'AI audio stem splitter and noise remover', logo: 'https://www.lalal.ai/favicon.ico', category: 'Noise Remover', link: 'https://www.lalal.ai/' },
+        { name: 'Cleanvoice AI', description: 'Podcast noise and filler remover', logo: 'https://cleanvoice.ai/favicon.ico', category: 'Noise Remover', link: 'https://cleanvoice.ai/' },
+        { name: 'Adobe Podcast Enhance', description: 'AI-powered audio enhancement', logo: 'https://podcast.adobe.com/favicon.ico', category: 'Noise Remover', link: 'https://podcast.adobe.com/enhance' },
+        { name: 'Descript Studio Sound', description: 'AI audio cleanup and noise removal', logo: 'https://www.descript.com/favicon.ico', category: 'Noise Remover', link: 'https://www.descript.com/' },
+        { name: 'Zebracat', description: 'AI noise remover for video', logo: 'https://zebracat.com/favicon.ico', category: 'Noise Remover', link: 'https://zebracat.com/' },
+        { name: 'NoiseGator', description: 'Noise gate for voice chats', logo: 'https://sourceforge.net/p/noisegator/icon', category: 'Noise Remover', link: 'https://sourceforge.net/projects/noisegator/' },
+        { name: 'SoliCall', description: 'Noise reduction for calls', logo: 'https://www.solicall.com/favicon.ico', category: 'Noise Remover', link: 'https://www.solicall.com/' }
+    ],
+    'programming': [
+        { name: 'GitHub Copilot', description: 'AI pair programmer for code suggestions', logo: 'https://github.com/favicon.ico', category: 'Programming', link: 'https://github.com/features/copilot' },
+        { name: 'Tabnine', description: 'AI code completion for developers', logo: 'https://www.tabnine.com/favicon.ico', category: 'Programming', link: 'https://www.tabnine.com' },
+        { name: 'Replit', description: 'Collaborative online IDE with AI', logo: 'https://replit.com/favicon.ico', category: 'Programming', link: 'https://replit.com/' },
+        { name: 'Sourcegraph Cody', description: 'AI coding assistant for codebases', logo: 'https://sourcegraph.com/favicon.ico', category: 'Programming', link: 'https://sourcegraph.com/cody' },
+        { name: 'Cursor', description: 'AI-first code editor', logo: 'https://cursor.sh/favicon.ico', category: 'Programming', link: 'https://cursor.sh' },
+        { name: 'Codeium', description: 'AI-powered code acceleration toolkit', logo: 'https://codeium.com/favicon.ico', category: 'Programming', link: 'https://codeium.com' },
+        { name: 'Amazon CodeWhisperer', description: 'AI coding companion from AWS', logo: 'https://aws.amazon.com/favicon.ico', category: 'Programming', link: 'https://aws.amazon.com/codewhisperer/' },
+        { name: 'Blackbox AI', description: 'AI-powered coding assistant', logo: 'https://www.blackbox.ai/favicon.ico', category: 'Programming', link: 'https://www.blackbox.ai' },
+        { name: 'CodiumAI', description: 'AI code integrity and test generation', logo: 'https://www.codium.ai/favicon.ico', category: 'Programming', link: 'https://www.codium.ai/' },
+        { name: 'MutableAI', description: 'AI code completion and refactoring', logo: 'https://mutable.ai/favicon.ico', category: 'Programming', link: 'https://mutable.ai/' },
+        { name: 'Kite', description: 'AI-powered code completions', logo: 'https://www.kite.com/favicon.ico', category: 'Programming', link: 'https://www.kite.com/' }
+    ],
     'supply-chain-management': [
         { name: 'Llamasoft', description: 'AI-powered supply chain analytics and optimization', logo: 'https://www.llamasoft.com/favicon.ico', category: 'Supply Chain Management', link: 'https://www.llamasoft.com/' },
         { name: 'o9 Solutions', description: 'AI platform for supply chain planning', logo: 'https://o9solutions.com/favicon.ico', category: 'Supply Chain Management', link: 'https://o9solutions.com/' },
@@ -482,6 +560,19 @@ Object.assign(aiToolsData, {
         { name: 'Rainforest QA', description: 'AI crowdtesting and automation', logo: 'https://www.rainforestqa.com/favicon.ico', category: 'Quality Assurance', link: 'https://www.rainforestqa.com/' },
         { name: 'Virtuoso', description: 'AI-driven test automation', logo: 'https://www.virtuoso.qa/favicon.ico', category: 'Quality Assurance', link: 'https://www.virtuoso.qa/' },
         { name: 'TestSigma', description: 'AI-powered test automation platform', logo: 'https://testsigma.com/favicon.ico', category: 'Quality Assurance', link: 'https://testsigma.com/' }
+    ],
+      'pdf-tools': [
+        { name: 'Smallpdf', description: 'All-in-one PDF tools: compress, convert, edit, sign', logo: 'https://smallpdf.com/favicon.ico', category: 'PDF Tools', link: 'https://smallpdf.com/' },
+        { name: 'ILovePDF', description: 'Merge, split, compress, convert PDFs online', logo: 'https://www.ilovepdf.com/favicon.ico', category: 'PDF Tools', link: 'https://www.ilovepdf.com/' },
+        { name: 'PDFescape', description: 'Free online PDF editor and form filler', logo: 'https://www.pdfescape.com/favicon.ico', category: 'PDF Tools', link: 'https://www.pdfescape.com/' },
+        { name: 'Sejda', description: 'Online PDF editor, merger, and converter', logo: 'https://www.sejda.com/favicon.ico', category: 'PDF Tools', link: 'https://www.sejda.com/' },
+        { name: 'PDF24 Tools', description: 'Free PDF creator, converter, and editor', logo: 'https://tools.pdf24.org/favicon.ico', category: 'PDF Tools', link: 'https://tools.pdf24.org/' },
+        { name: 'PDF Candy', description: 'Online PDF editor, converter, and OCR', logo: 'https://pdfcandy.com/favicon.ico', category: 'PDF Tools', link: 'https://pdfcandy.com/' },
+        { name: 'DocHub', description: 'Edit, sign, and share PDFs online', logo: 'https://dochub.com/favicon.ico', category: 'PDF Tools', link: 'https://dochub.com/' },
+        { name: 'PDF-XChange Editor', description: 'Feature-rich PDF editor for Windows', logo: 'https://www.tracker-software.com/favicon.ico', category: 'PDF Tools', link: 'https://www.tracker-software.com/product/pdf-xchange-editor' },
+        { name: 'Adobe Acrobat Online', description: 'Official Adobe PDF tools online', logo: 'https://www.adobe.com/favicon.ico', category: 'PDF Tools', link: 'https://www.adobe.com/acrobat/online.html' },
+        { name: 'Soda PDF', description: 'Online PDF editor, converter, and reader', logo: 'https://www.sodapdf.com/favicon.ico', category: 'PDF Tools', link: 'https://www.sodapdf.com/' },
+        { name: 'PDFsam', description: 'Free and open source PDF splitter and merger', logo: 'https://pdfsam.org/favicon.ico', category: 'PDF Tools', link: 'https://pdfsam.org/' }
     ],
     'compliance-and-audit': [
         { name: 'LogicGate', description: 'AI-powered risk and compliance platform', logo: 'https://www.logicgate.com/favicon.ico', category: 'Compliance and Audit', link: 'https://www.logicgate.com/' },
@@ -3362,6 +3453,7 @@ const workflowData = {
         { name: 'Wave', description: 'Free agency invoicing and billing', logo: 'https://www.waveapps.com/favicon.ico', category: 'Business Operations', link: 'https://www.waveapps.com' },
         { name: 'Google Analytics', description: 'Free social media performance analytics', logo: 'https://analytics.google.com/favicon.ico', category: 'Performance Analytics', link: 'https://analytics.google.com' }
     ],
+    
     'email-marketing-services': [
         { name: 'Mailchimp', description: 'Free email marketing platform and automation', logo: 'https://mailchimp.com/favicon.ico', category: 'Email Platform', link: 'https://mailchimp.com' },
         { name: 'ConvertKit', description: 'Free email marketing for creators', logo: 'https://convertkit.com/favicon.ico', category: 'Email Platform', link: 'https://convertkit.com' },
@@ -4139,7 +4231,7 @@ function getFallbackIcon(category) {
         'Analytics': 'fa-chart-bar',
         'Automation': 'fa-cogs',
         'Translation': 'fa-language',
-        'SEO Tools': 'fa-search-plus',
+        'SEO Tools': 'fa-laptop-code',
         'Email Tools': 'fa-envelope',
         'Presentation Tools': 'fa-chalkboard-teacher',
         'Research Tools': 'fa-search',
@@ -4249,6 +4341,8 @@ function getFallbackIcon(category) {
          'Metaverse Tools': 'fa-globe',
          'Web Blockchain Integration': 'fa-link',
          'Code Debuggers': 'fa-bug',
+         'Pdf Tools': 'fa-file-pdf',
+         'Noise Remover': 'fa-volume-mute',
         
         // Workflow Categories
         'Content Planning': 'fa-calendar-alt',

@@ -230,7 +230,7 @@ body {
     cursor: pointer;
     transition: all 0.3s;
     border-bottom: 3px solid transparent;
-    margin: 0 20px;
+    margin: 0 110px;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -570,6 +570,10 @@ body {
 .virtualbookkeeping-icon {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
+.pdftools-icon { background: linear-gradient(135deg, #e11d48, #f59e42); }
+.pdtools-icon { background: linear-gradient(135deg, #6366f1, #10b981); }
+.noiseremover-icon { background: linear-gradient(135deg, #64748b, #0ea5e9); }
+.programming-icon { background: linear-gradient(135deg, #a855f7, #6366f1); }
 
 /* New icon classes for additional categories */
 .animation-icon {
