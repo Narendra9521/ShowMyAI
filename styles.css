@@ -274,6 +274,7 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    text-align: center;
 }
 
 .hero-subtitle {
@@ -1326,6 +1327,9 @@ body {
     
     .hero-title {
         font-size: 1.8rem;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
     }
     
     .hero-subtitle {
@@ -1405,7 +1409,7 @@ body {
     }
     
     .tab-btn {
-        padding: 6px 0;
+        padding: 4px 0;
         margin: 0;
         font-size: 11px;
         flex: 1;
@@ -1495,6 +1499,10 @@ body {
         justify-content: center;
         align-items: center;
         display: flex;
+    }
+    
+    .footer {
+        padding-bottom: 120px;
     }
     
     .footer-content {

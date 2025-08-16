@@ -171,6 +171,9 @@ document.addEventListener('DOMContentLoaded', function() {
         link.addEventListener('click', function(e) {
             e.preventDefault();
             const page = this.getAttribute('data-page');
+            // Scroll to top immediately for better user experience
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            
             if (page === 'home') {
                 history.replaceState({ page: 'home', section: 'ai-tools', category: null }, '', '?page=home&section=ai-tools');
                 currentState = { page: 'home', section: 'ai-tools', category: null };
