@@ -1319,13 +1319,34 @@ body {
     }
 }
 
+/* Hero section responsive behavior */
+.hero-desktop {
+    display: block;
+}
+
+.hero-mobile {
+    display: none;
+}
+
+/* Ensure desktop hero is hidden on mobile */
 @media (max-width: 768px) {
-    .hero-section {
+    .hero-desktop {
+        display: none !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-desktop {
+        display: none !important;
+    }
+    
+    .hero-mobile {
+        display: block;
         margin: 10px;
         padding: 30px 20px;
     }
     
-    .hero-title {
+    .hero-mobile .hero-title {
         font-size: 1.8rem;
         text-align: center;
         margin-left: auto;
@@ -1333,7 +1354,7 @@ body {
         transform: translateX(-1px);
     }
     
-    .hero-subtitle {
+    .hero-mobile .hero-subtitle {
         font-size: 1rem;
     }
     
