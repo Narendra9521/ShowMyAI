@@ -4114,6 +4114,10 @@ function showTools(category, updateHistory = true) {
     // Hide main content completely
     hideAllSections();
     
+    // Hide hero section
+    const heroSection = document.querySelector('.hero-section');
+    if (heroSection) heroSection.style.display = 'none';
+    
     // Show tools section
     toolsSection.style.display = 'block';
     
@@ -4165,6 +4169,10 @@ function showWorkflow(workflow, updateHistory = true) {
     
     // Hide main content completely
     hideAllSections();
+    
+    // Hide hero section
+    const heroSection = document.querySelector('.hero-section');
+    if (heroSection) heroSection.style.display = 'none';
     
     // Show tools section
     toolsSection.style.display = 'block';
