@@ -80,7 +80,6 @@ body {
     right: 0;
     width: 100%;
     z-index: 1000;
-    border-bottom: 1px solid var(--border-color);
 }
 
 .header-content {
@@ -210,8 +209,7 @@ body {
 .nav-tabs {
     display: flex;
     justify-content: center;
-    padding: 15px 0 0;
-    border-bottom: 1px solid var(--border-color);
+    padding: 5px 0 0;
 }
 
 @media (max-width: 768px) {
@@ -251,8 +249,7 @@ body {
 /* Hero Section */
 .hero-section {
     text-align: center;
-    padding: 40px 0 30px;
-    background: var(--bg-tertiary);
+    padding: 15px 0 5px;
     margin: 0;
     margin-left: calc(-50vw + 50%);
     margin-right: calc(-50vw + 50%);
@@ -260,14 +257,60 @@ body {
     border: none;
 }
 
+.hero-desktop {
+    background: white;
+}
+
+[data-theme="dark"] .hero-desktop {
+    background: var(--bg-primary);
+}
+
+[data-theme="dark"] .hero-desktop .hero-title {
+    color: white !important;
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    -webkit-text-fill-color: white !important;
+    background-clip: unset !important;
+}
+
+.hero-mobile {
+    background: var(--bg-tertiary);
+}
+
+/* Stats Section */
+.stats-section {
+    background: var(--bg-tertiary);
+    padding: 40px 0;
+    text-align: center;
+}
+
+.stats-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 30px;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.stats-section .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
 .hero-content {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
 .hero-title {
     font-size: 2.5rem;
-    font-weight: 700;
+    font-weight: 650;
     color: var(--text-primary);
     margin-bottom: 12px;
     background: var(--primary-gradient);
@@ -339,7 +382,7 @@ body {
 .search-box {
     position: relative;
     width: 100%;
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto;
 }
 
@@ -1354,6 +1397,10 @@ body {
         transform: translateX(-1px);
     }
     
+    .hero-mobile .hero-title br {
+        display: none;
+    }
+    
     .hero-mobile .hero-subtitle {
         font-size: 1rem;
     }
@@ -1385,7 +1432,7 @@ body {
     }
     
     .header-content {
-        height: 45px;
+        height: 40px;
     }
     
     .nav-desktop {
