@@ -60,6 +60,8 @@ function renderCurrentState() {
     hideAllSections();
     
     if (currentState.page === 'home') {
+        // Show hero section when on home page
+        document.querySelector('.hero-section').style.display = 'block';
         showMainContent();
         if (currentState.section) {
             switchTab(currentState.section, false);
@@ -68,6 +70,8 @@ function renderCurrentState() {
             showTools(currentState.category, false);
         }
     } else {
+        // Hide hero section on other pages
+        document.querySelector('.hero-section').style.display = 'none';
         showPage(currentState.page);
     }
 }
@@ -407,6 +411,7 @@ const aiToolsData = {
         { name: 'Fliki', description: 'AI video generator from text', logo: 'https://fliki.ai/favicon.ico', category: 'Video Generation', link: 'https://fliki.ai' },
         { name: 'Steve AI', description: 'AI video maker for animated and live videos', logo: 'https://www.steve.ai/favicon.ico', category: 'Video Generation', link: 'https://www.steve.ai' },
         { name: 'Elai', description: 'AI video generation platform', logo: 'https://elai.io/favicon.ico', category: 'Video Generation', link: 'https://elai.io' },
+        { name: 'Pandora AI', description: 'AI-powered video editing and generation', logo: 'https://pandoraai.app/favicon.ico', category: 'Video Generation', link: 'https://pandoraia.com' },
         { name: 'Hour One', description: 'AI video generation with virtual humans', logo: 'https://hourone.ai/favicon.ico', category: 'Video Generation', link: 'https://hourone.ai' },
         { name: 'Colossyan', description: 'AI video creator with synthetic actors', logo: 'https://www.colossyan.com/favicon.ico', category: 'Video Generation', link: 'https://www.colossyan.com' }
     ],
@@ -565,9 +570,10 @@ Object.assign(aiToolsData, {
         { name: 'TestSigma', description: 'AI-powered test automation platform', logo: 'https://testsigma.com/favicon.ico', category: 'Quality Assurance', link: 'https://testsigma.com/' }
     ],
       'pdf-tools': [
-        { name: 'Smallpdf', description: 'All-in-one PDF tools: compress, convert, edit, sign', logo: 'https://smallpdf.com/favicon.ico', category: 'PDF Tools', link: 'https://smallpdf.com/' },
+        { name: 'Tinywow', description: 'All-in-one PDF tools: compress, convert, edit, sign', logo: 'https://tinywow.com/favicon.ico', category: 'PDF Tools', link: 'https://tinywow.com/' },
         { name: 'ILovePDF', description: 'Merge, split, compress, convert PDFs online', logo: 'https://www.ilovepdf.com/favicon.ico', category: 'PDF Tools', link: 'https://www.ilovepdf.com/' },
         { name: 'PDFescape', description: 'Free online PDF editor and form filler', logo: 'https://www.pdfescape.com/favicon.ico', category: 'PDF Tools', link: 'https://www.pdfescape.com/' },
+        { name: 'Smallpdf', description: 'All-in-one PDF tools: compress, convert, edit, sign', logo: 'https://smallpdf.com/favicon.ico', category: 'PDF Tools', link: 'https://smallpdf.com/' },
         { name: 'Sejda', description: 'Online PDF editor, merger, and converter', logo: 'https://www.sejda.com/favicon.ico', category: 'PDF Tools', link: 'https://www.sejda.com/' },
         { name: 'PDF24 Tools', description: 'Free PDF creator, converter, and editor', logo: 'https://tools.pdf24.org/favicon.ico', category: 'PDF Tools', link: 'https://tools.pdf24.org/' },
         { name: 'PDF Candy', description: 'Online PDF editor, converter, and OCR', logo: 'https://pdfcandy.com/favicon.ico', category: 'PDF Tools', link: 'https://pdfcandy.com/' },
@@ -748,19 +754,19 @@ Object.assign(aiToolsData, {
         { name: 'ShipIn Systems', description: 'AI-powered maritime fleet management', logo: 'https://shipin.ai/favicon.ico', category: 'Maritime', link: 'https://shipin.ai/' },
         { name: 'HiLo Maritime Risk Management', description: 'AI maritime risk analytics', logo: 'https://www.hilomrm.com/favicon.ico', category: 'Maritime', link: 'https://www.hilomrm.com/' }
     ],
-    'waste-management': [
-        { name: 'Rubicon', description: 'AI-powered waste and recycling solutions', logo: 'https://www.rubicon.com/favicon.ico', category: 'Waste Management', link: 'https://www.rubicon.com/' },
-        { name: 'AMP Robotics', description: 'AI recycling robots', logo: 'https://www.amprobotics.com/favicon.ico', category: 'Waste Management', link: 'https://www.amprobotics.com/' },
-        { name: 'Waste Robotics', description: 'AI waste sorting robots', logo: 'https://wasterobotic.com/favicon.ico', category: 'Waste Management', link: 'https://wasterobotic.com/' },
-        { name: 'Enevo', description: 'AI waste analytics and logistics', logo: 'https://www.enevo.com/favicon.ico', category: 'Waste Management', link: 'https://www.enevo.com/' },
-        { name: 'Greyparrot', description: 'AI waste recognition and analytics', logo: 'https://www.greyparrot.ai/favicon.ico', category: 'Waste Management', link: 'https://www.greyparrot.ai/' },
-        { name: 'Recycleye', description: 'AI-powered waste sorting', logo: 'https://www.recycleye.com/favicon.ico', category: 'Waste Management', link: 'https://www.recycleye.com/' },
-        { name: 'Bin-e', description: 'AI smart waste bin', logo: 'https://bine.world/favicon.ico', category: 'Waste Management', link: 'https://bine.world/' },
-        { name: 'SmartBin', description: 'AI waste bin monitoring', logo: 'https://www.smartbin.com/favicon.ico', category: 'Waste Management', link: 'https://www.smartbin.com/' },
-        { name: 'Bigbelly', description: 'AI smart waste and recycling', logo: 'https://bigbelly.com/favicon.ico', category: 'Waste Management', link: 'https://bigbelly.com/' },
-        { name: 'Sensoneo', description: 'AI waste management solutions', logo: 'https://www.sensoneo.com/favicon.ico', category: 'Waste Management', link: 'https://www.sensoneo.com/' },
-        { name: 'Compology', description: 'AI waste container monitoring', logo: 'https://compology.com/favicon.ico', category: 'Waste Management', link: 'https://compology.com/' }
-    ],
+    // 'waste-management': [
+    //     { name: 'Rubicon', description: 'AI-powered waste and recycling solutions', logo: 'https://www.rubicon.com/favicon.ico', category: 'Waste Management', link: 'https://www.rubicon.com/' },
+    //     { name: 'AMP Robotics', description: 'AI recycling robots', logo: 'https://www.amprobotics.com/favicon.ico', category: 'Waste Management', link: 'https://www.amprobotics.com/' },
+    //     { name: 'Waste Robotics', description: 'AI waste sorting robots', logo: 'https://wasterobotic.com/favicon.ico', category: 'Waste Management', link: 'https://wasterobotic.com/' },
+    //     { name: 'Enevo', description: 'AI waste analytics and logistics', logo: 'https://www.enevo.com/favicon.ico', category: 'Waste Management', link: 'https://www.enevo.com/' },
+    //     { name: 'Greyparrot', description: 'AI waste recognition and analytics', logo: 'https://www.greyparrot.ai/favicon.ico', category: 'Waste Management', link: 'https://www.greyparrot.ai/' },
+    //     { name: 'Recycleye', description: 'AI-powered waste sorting', logo: 'https://www.recycleye.com/favicon.ico', category: 'Waste Management', link: 'https://www.recycleye.com/' },
+    //     { name: 'Bin-e', description: 'AI smart waste bin', logo: 'https://bine.world/favicon.ico', category: 'Waste Management', link: 'https://bine.world/' },
+    //     { name: 'SmartBin', description: 'AI waste bin monitoring', logo: 'https://www.smartbin.com/favicon.ico', category: 'Waste Management', link: 'https://www.smartbin.com/' },
+    //     { name: 'Bigbelly', description: 'AI smart waste and recycling', logo: 'https://bigbelly.com/favicon.ico', category: 'Waste Management', link: 'https://bigbelly.com/' },
+    //     { name: 'Sensoneo', description: 'AI waste management solutions', logo: 'https://www.sensoneo.com/favicon.ico', category: 'Waste Management', link: 'https://www.sensoneo.com/' },
+    //     { name: 'Compology', description: 'AI waste container monitoring', logo: 'https://compology.com/favicon.ico', category: 'Waste Management', link: 'https://compology.com/' }
+    // ],
 
     'ai-pet-care': [
         { name: 'Pawscout', description: 'AI pet tracking and safety', logo: 'https://www.pawscout.com/favicon.ico', category: 'AI Pet Care', link: 'https://www.pawscout.com/' },
@@ -810,18 +816,18 @@ Object.assign(aiToolsData, {
     ,{ name: 'Qapital', description: 'AI savings and goal planning', logo: 'https://www.qapital.com/favicon.ico', category: 'AI Personal Finance', link: 'https://www.qapital.com' }
     ,{ name: 'Digit', description: 'AI automatic savings tool', logo: 'https://digit.co/favicon.ico', category: 'AI Personal Finance', link: 'https://digit.co' }
     ],
-    'ai-gardening': [
-        { name: 'Planta', description: 'AI plant care assistant', logo: 'https://getplanta.com/favicon.ico', category: 'AI Gardening', link: 'https://getplanta.com' },
-        { name: 'Gardenize', description: 'AI garden planner', logo: 'https://gardenize.com/favicon.ico', category: 'AI Gardening', link: 'https://gardenize.com' },
-        { name: 'Blossom', description: 'AI plant identification', logo: 'https://blossomplant.com/favicon.ico', category: 'AI Gardening', link: 'https://blossomplant.com' },
-        { name: 'PictureThis', description: 'AI plant diagnosis', logo: 'https://www.picturethisai.com/favicon.ico', category: 'AI Gardening', link: 'https://www.picturethisai.com' },
-        { name: 'GrowIt!', description: 'AI gardening community', logo: 'https://www.growitmobile.com/favicon.ico', category: 'AI Gardening', link: 'https://www.growitmobile.com' }
-    ,{ name: 'SmartPlant', description: 'AI plant identification and care', logo: 'https://www.smartplantapp.com/favicon.ico', category: 'AI Gardening', link: 'https://www.smartplantapp.com' }
-    ,{ name: 'Garden Answers', description: 'AI plant identification app', logo: 'https://www.gardenanswers.com/favicon.ico', category: 'AI Gardening', link: 'https://www.gardenanswers.com' }
-    ,{ name: 'Plantix', description: 'AI plant disease diagnosis', logo: 'https://plantix.net/favicon.ico', category: 'AI Gardening', link: 'https://plantix.net' }
-    ,{ name: 'Vera', description: 'AI gardening journal and reminders', logo: 'https://www.myvera.com/favicon.ico', category: 'AI Gardening', link: 'https://www.myvera.com' }
-    ,{ name: 'Garden Planner', description: 'AI garden design and planning', logo: 'https://www.gardenplanner.com/favicon.ico', category: 'AI Gardening', link: 'https://www.gardenplanner.com' }
-    ],
+    // 'ai-gardening': [
+    //     { name: 'Planta', description: 'AI plant care assistant', logo: 'https://getplanta.com/favicon.ico', category: 'AI Gardening', link: 'https://getplanta.com' },
+    //     { name: 'Gardenize', description: 'AI garden planner', logo: 'https://gardenize.com/favicon.ico', category: 'AI Gardening', link: 'https://gardenize.com' },
+    //     { name: 'Blossom', description: 'AI plant identification', logo: 'https://blossomplant.com/favicon.ico', category: 'AI Gardening', link: 'https://blossomplant.com' },
+    //     { name: 'PictureThis', description: 'AI plant diagnosis', logo: 'https://www.picturethisai.com/favicon.ico', category: 'AI Gardening', link: 'https://www.picturethisai.com' },
+    //     { name: 'GrowIt!', description: 'AI gardening community', logo: 'https://www.growitmobile.com/favicon.ico', category: 'AI Gardening', link: 'https://www.growitmobile.com' }
+    // ,{ name: 'SmartPlant', description: 'AI plant identification and care', logo: 'https://www.smartplantapp.com/favicon.ico', category: 'AI Gardening', link: 'https://www.smartplantapp.com' }
+    // ,{ name: 'Garden Answers', description: 'AI plant identification app', logo: 'https://www.gardenanswers.com/favicon.ico', category: 'AI Gardening', link: 'https://www.gardenanswers.com' }
+    // ,{ name: 'Plantix', description: 'AI plant disease diagnosis', logo: 'https://plantix.net/favicon.ico', category: 'AI Gardening', link: 'https://plantix.net' }
+    // ,{ name: 'Vera', description: 'AI gardening journal and reminders', logo: 'https://www.myvera.com/favicon.ico', category: 'AI Gardening', link: 'https://www.myvera.com' }
+    // ,{ name: 'Garden Planner', description: 'AI garden design and planning', logo: 'https://www.gardenplanner.com/favicon.ico', category: 'AI Gardening', link: 'https://www.gardenplanner.com' }
+    // ],
     'ai-language-translation': [
         { name: 'DeepL', description: 'AI translation engine', logo: 'https://www.deepl.com/favicon.ico', category: 'AI Language Translation', link: 'https://www.deepl.com' },
         { name: 'Google Translate AI', description: 'Neural machine translation', logo: 'https://translate.google.com/favicon.ico', category: 'AI Language Translation', link: 'https://translate.google.com' },
