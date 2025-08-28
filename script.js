@@ -1510,6 +1510,19 @@ Object.assign(aiToolsData, {
         { name: 'Klaviyo', description: 'Email and SMS marketing platform', logo: 'https://www.klaviyo.com/favicon.ico', category: 'Email Tools', link: 'https://www.klaviyo.com' },
         { name: 'Drip', description: 'E-commerce CRM and email marketing', logo: 'https://www.drip.com/favicon.ico', category: 'Email Tools', link: 'https://www.drip.com' }
     ],
+       'prompt-generation': [
+        { name: 'PromptHero', description: 'Discover, share, and create AI prompts for art and text', logo: 'https://prompthero.com/favicon.ico', category: 'Prompt Generation', link: 'https://prompthero.com/' },
+        { name: 'PromptBase', description: 'Marketplace for buying and selling quality AI prompts', logo: 'https://promptbase.com/favicon.ico', category: 'Prompt Generation', link: 'https://promptbase.com/' },
+        { name: 'FlowGPT', description: 'Share and discover the best ChatGPT prompts', logo: 'https://flowgpt.com/favicon.ico', category: 'Prompt Generation', link: 'https://flowgpt.com/' },
+        { name: 'Promptist', description: 'AI prompt generator for Stable Diffusion', logo: 'https://promptist.ai/favicon.ico', category: 'Prompt Generation', link: 'https://promptist.ai/' },
+        { name: 'PromptPerfect', description: 'Optimize and generate prompts for LLMs', logo: 'https://promptperfect.jina.ai/favicon.ico', category: 'Prompt Generation', link: 'https://promptperfect.jina.ai/' },
+        { name: 'AIPRM', description: 'Prompt management and sharing for ChatGPT', logo: 'https://www.aiprm.com/favicon.ico', category: 'Prompt Generation', link: 'https://www.aiprm.com/' },
+        { name: 'PromptLayer', description: 'Track, manage, and optimize LLM prompts', logo: 'https://promptlayer.com/favicon.ico', category: 'Prompt Generation', link: 'https://promptlayer.com/' },
+        { name: 'PromptSpace', description: 'Prompt marketplace for AI models', logo: 'https://promptspace.ai/favicon.ico', category: 'Prompt Generation', link: 'https://promptspace.ai/' },
+        { name: 'PromptVibes', description: 'Curated prompt library for ChatGPT and more', logo: 'https://promptvibes.com/favicon.ico', category: 'Prompt Generation', link: 'https://promptvibes.com/' },
+        { name: 'PromptAttack', description: 'Prompt generator and sharing platform', logo: 'https://promptattack.com/favicon.ico', category: 'Prompt Generation', link: 'https://promptattack.com/' },
+        { name: 'Promptable', description: 'Prompt engineering and sharing platform', logo: 'https://promptable.ai/favicon.ico', category: 'Prompt Generation', link: 'https://promptable.ai/' }
+    ],
     'presentation-tools': [
         { name: 'Gamma', description: 'AI-powered presentation maker', logo: 'https://gamma.app/favicon.ico', category: 'Presentation Tools', link: 'https://gamma.app' },
         { name: 'Beautiful.AI', description: 'Smart presentation software', logo: 'https://www.beautiful.ai/favicon.ico', category: 'Presentation Tools', link: 'https://www.beautiful.ai' },

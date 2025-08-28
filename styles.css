@@ -1,3 +1,4 @@
+.promptgen-icon { background: linear-gradient(135deg, #fbbf24, #6366f1); }
 :root {
     --primary-color: #6366f1;
     --primary-gradient: linear-gradient(135deg, #6366f1, #8b5cf6);
@@ -465,7 +466,7 @@ body {
     cursor: pointer;
     transition: var(--transition);
     position: relative;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.12);
     overflow: hidden;
 }
 
@@ -1551,15 +1552,15 @@ body {
     }
     
     .tools-header {
-        margin: 20px 0 35px 0;
+        margin: 10px 0 15px 0;
     }
     
     .tools-page-title {
         display: block;
         text-align: center;
         background: var(--bg-tertiary);
-        padding: 7px;
-        margin: 0 auto 0px;
+        padding: 5px;
+        margin: 2px auto 2px;
         max-width: 800px;
         border-radius: 8px;
     }
