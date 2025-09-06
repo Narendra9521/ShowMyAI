@@ -117,29 +117,29 @@ function toggleDarkMode() {
 
 
 
-// Touch/swipe handling for mobile
-let touchStartX = 0;
-let touchEndX = 0;
-let touchStartY = 0;
-let touchEndY = 0;
+// // Touch/swipe handling for mobile
+// let touchStartX = 0;
+// let touchEndX = 0;
+// let touchStartY = 0;
+// let touchEndY = 0;
 
-function handleSwipe() {
-    const deltaX = touchEndX - touchStartX;
-    const deltaY = touchEndY - touchStartY;
+// function handleSwipe() {
+//     const deltaX = touchEndX - touchStartX;
+//     const deltaY = touchEndY - touchStartY;
     
-    // Only handle horizontal swipes if they're more significant than vertical
-    if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 50) {
-        const currentSection = document.querySelector('.tab-btn.active').getAttribute('data-section');
+//     // Only handle horizontal swipes if they're more significant than vertical
+//     if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 50) {
+//         const currentSection = document.querySelector('.tab-btn.active').getAttribute('data-section');
         
-        if (deltaX > 0 && currentSection === 'workflows') {
-            // Swipe right: workflows -> ai-tools
-            switchTab('ai-tools', true);
-        } else if (deltaX < 0 && currentSection === 'ai-tools') {
-            // Swipe left: ai-tools -> workflows
-            switchTab('workflows', true);
-        }
-    }
-}
+//         if (deltaX > 0 && currentSection === 'workflows') {
+//             // Swipe right: workflows -> ai-tools
+//             switchTab('ai-tools', true);
+//         } else if (deltaX < 0 && currentSection === 'ai-tools') {
+//             // Swipe left: ai-tools -> workflows
+//             switchTab('workflows', true);
+//         }
+//     }
+// }
 
 // Initialize theme on page load
 document.addEventListener('DOMContentLoaded', function() {
