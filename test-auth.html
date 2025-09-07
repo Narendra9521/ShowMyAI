@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Auth</title>
+</head>
+<body>
+    <h1>Test Authentication</h1>
+    <div>
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="testSignup()">Test Signup</button>
+        <button onclick="testLogin()">Test Login</button>
+    </div>
+    <div id="result"></div>
+
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+    <script>
+        const supabase = window.supabase.createClient(
+            'https://fgfajxlophbkqexgkzwu.supabase.co',
+            'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZnZmFqeGxvcGhia3FleGdrend1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTcyMjI2MDYsImV4cCI6MjA3Mjc5ODYwNn0.xPw6BFVK2PBbvGtRKf6wIF-lbbhUC8rTIAibY--n6Vs'
+        );
+
+        async function testSignup() {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            
+            const { data, error } = await supabase.auth.signUp({
+                email: email,
+                password: password
+            });
+            
+            document.getElementById('result').innerHTML = error ? 
+                `Error: ${error.message}` : 
+                `Success: ${JSON.stringify(data)}`;
+        }
+
+        async function testLogin() {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            
+            const { data, error } = await supabase.auth.signInWithPassword({
+                email: email,
+                password: password
+            });
+            
+            document.getElementById('result').innerHTML = error ? 
+                `Error: ${error.message}` : 
+                `Success: ${JSON.stringify(data)}`;
+        }
+    </script>
+</body>
+</html>

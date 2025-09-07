@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; img-src 'self' data: https://* http://*; font-src 'self' https://cdnjs.cloudflare.com; connect-src 'self'; frame-src 'self'; object-src 'none'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; img-src 'self' data: https://* http://*; font-src 'self' https://cdnjs.cloudflare.com; connect-src 'self' https://*.supabase.co; frame-src 'self'; object-src 'none'">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <title>ShowMyAI - Find the Best AI Tools & Workflows</title>
     <meta name="description" content="ShowMyAI is the largest AI tools directory. Access the world's best AI tools and workflows. Find perfect AI solutions for code generation, video creation, design, automation and more.Over 1500+ AI tools and workflows to boost your productivity and creativity.">
@@ -20,7 +20,9 @@
     <link rel="canonical" href="https://showmyai.com">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="auth-styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
 </head>
 <body>
     <!-- Header -->
@@ -37,6 +39,7 @@
                         <a href="#" class="nav-link" data-page="privacy" title="Privacy Policy">Privacy</a>
                         <a href="#" class="nav-link" data-page="about" title="About ShowMyAI">About</a>
                         <a href="#" class="nav-link" data-page="contact" title="Contact Us">Contact</a>
+                        <button id="authBtn" class="auth-btn" onclick="toggleAuth()" title="Login/Signup">Login</button>
                     </nav>
                     <div class="header-actions">
                         <button class="dark-mode-btn" onclick="toggleDarkMode()" title="Toggle Dark Mode">
@@ -56,6 +59,7 @@
                 <a href="#" class="nav-link" data-page="privacy">Privacy</a>
                 <a href="#" class="nav-link" data-page="about">About</a>
                 <a href="#" class="nav-link" data-page="contact">Contact</a>
+                <button id="mobileAuthBtn" class="auth-btn mobile" onclick="toggleAuth()" title="Login/Signup">Login</button>
             </nav>
         </div>
     </header>
@@ -2572,6 +2576,54 @@
 
 
 
+    <!-- Auth Modal -->
+    <div id="authModal" class="auth-modal">
+        <div class="auth-modal-content">
+            <span class="close" onclick="hideAuthModal()">&times;</span>
+            
+            <div class="auth-tabs">
+                <button id="loginTab" class="auth-tab active" onclick="switchAuthMode('login')">Login</button>
+                <button id="signupTab" class="auth-tab" onclick="switchAuthMode('signup')">Sign Up</button>
+            </div>
+            
+            <!-- Login Form -->
+            <div id="loginForm" class="auth-form">
+                <h3>Login to ShowMyAI</h3>
+                <input type="email" id="loginEmail" placeholder="Email" required>
+                <input type="password" id="loginPassword" placeholder="Password" required>
+                <button onclick="loginEmail()" class="auth-submit-btn">Login</button>
+                
+                <div class="auth-divider">or</div>
+                
+                <button onclick="loginGoogle()" class="oauth-btn google-btn">
+                    <i class="fab fa-google"></i> Continue with Google
+                </button>
+                <button onclick="loginGitHub()" class="oauth-btn github-btn">
+                    <i class="fab fa-github"></i> Continue with GitHub
+                </button>
+            </div>
+            
+            <!-- Signup Form -->
+            <div id="signupForm" class="auth-form" style="display: none;">
+                <h3>Sign Up for ShowMyAI</h3>
+                <input type="email" id="signupEmail" placeholder="Email" required>
+                <input type="password" id="signupPassword" placeholder="Password (min 6 chars)" required>
+                <button onclick="signupEmail()" class="auth-submit-btn">Sign Up</button>
+                
+                <div class="auth-divider">or</div>
+                
+                <button onclick="loginGoogle()" class="oauth-btn google-btn">
+                    <i class="fab fa-google"></i> Continue with Google
+                </button>
+                <button onclick="loginGitHub()" class="oauth-btn github-btn">
+                    <i class="fab fa-github"></i> Continue with GitHub
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="supabase.js"></script>
+    <script src="auth.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

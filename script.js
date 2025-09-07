@@ -18,14 +18,23 @@ const categoryIconMap = {
 };
 
 // Initialize page state
-function initializePage() {
+async function initializePage() {
     const urlParams = new URLSearchParams(window.location.search);
     const page = urlParams.get('page') || 'home';
     const section = urlParams.get('section') || 'ai-tools';
     const category = urlParams.get('category');
     
     currentState = { page, section, category };
+    
+    // Load tools from database
+    loadToolsFromDatabase();
+    
     renderCurrentState();
+}
+
+// Load tools from database (using static data)
+function loadToolsFromDatabase() {
+    console.log('Using static tools data');
 }
 
 // Navigation state management
@@ -151,6 +160,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initialize page state
     initializePage();
+    
+    // Initialize auth
+    initAuth();
     
     // Set default active tab
     document.getElementById('ai-tools').classList.add('active');
