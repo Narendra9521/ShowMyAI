@@ -194,10 +194,43 @@ document.addEventListener('DOMContentLoaded', function() {
                 history.replaceState({ page: 'home', section: 'ai-tools', category: null }, '', '?page=home&section=ai-tools');
                 currentState = { page: 'home', section: 'ai-tools', category: null };
                 renderCurrentState();
+            } else if (page === 'saved-tools') {
+                showSavedToolsPage();
             } else if (page) {
                 updateState({ page, section: null, category: null }, true);
                 renderCurrentState();
             }
+// Show Saved Tools Page
+function showSavedToolsPage() {
+    // Hide all main pages/sections
+    document.querySelectorAll('.page-section').forEach(el => el.style.display = 'none');
+    // Show saved tools page
+    document.getElementById('saved-tools-page').style.display = 'block';
+    // Render saved tools
+    renderSavedTools();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function renderSavedTools() {
+    const savedList = document.getElementById('saved-tools-list');
+    savedList.innerHTML = '';
+    
+    // Check if user is logged in
+    if (!currentUser) {
+        savedList.innerHTML = '<p style="grid-column: 1/-1; color: var(--text-secondary); text-align: center;">Please login to view your saved tools.</p>';
+        return;
+    }
+    
+    let saved = getSavedTools();
+    if (!saved.length) {
+        savedList.innerHTML = '<p style="grid-column: 1/-1; color: var(--text-secondary); text-align: center;">No tools saved yet.</p>';
+        return;
+    }
+    saved.forEach(tool => {
+        const card = createToolCard(tool);
+        savedList.appendChild(card);
+    });
+}
         });
     });
     
@@ -4457,14 +4490,37 @@ function getFallbackIcon(category) {
     return iconMap[category] || 'fa-laptop-code';
 }
 
+// Get user-specific saved tools key
+function getSavedToolsKey() {
+    return currentUser ? `savedTools_${currentUser.id}` : null;
+}
+
+// Get saved tools for current user
+function getSavedTools() {
+    const key = getSavedToolsKey();
+    return key ? JSON.parse(localStorage.getItem(key) || '[]') : [];
+}
+
+// Save tools for current user
+function setSavedTools(tools) {
+    const key = getSavedToolsKey();
+    if (key) {
+        localStorage.setItem(key, JSON.stringify(tools));
+    }
+}
+
 // Create tool card element with fallback for broken images
 function createToolCard(tool) {
     const card = document.createElement('div');
     card.className = 'tool-card';
     const fallbackIcon = getFallbackIcon(tool.category);
     
+    // Check if tool is saved (only if user is logged in)
+    const savedTools = getSavedTools();
+    const isSaved = currentUser && savedTools.some(t => t.name === tool.name);
+
     card.innerHTML = `
-        <div class="tool-header">
+        <div class="tool-header" style="position:relative;">
             <div class="tool-logo">
                 <img src="${tool.logo}" alt="${tool.name}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                 <i class="fas ${fallbackIcon}" style="display: none;"></i>
@@ -4473,6 +4529,9 @@ function createToolCard(tool) {
                 <h3>${tool.name}</h3>
                 <p>${tool.category}</p>
             </div>
+            <button class="bookmark-btn" title="${currentUser ? 'Save tool' : 'Login to save tools'}" style="position:absolute;top:0;right:0;background:none;border:none;outline:none;cursor:pointer;padding:8px;z-index:2;">
+                <i class="fa${isSaved ? 's' : 'r'} fa-bookmark" style="color:${isSaved ? '#6366f1' : '#b0b0b0'};font-size:22px;"></i>
+            </button>
         </div>
         <p class="tool-description">${tool.description}</p>
         <div class="tool-actions">
@@ -4489,7 +4548,28 @@ function createToolCard(tool) {
             </a>
         </div>
     `;
-    
+
+    // Bookmark button logic
+    const bookmarkBtn = card.querySelector('.bookmark-btn');
+    bookmarkBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        if (!currentUser) {
+            alert('Please login to save tools.');
+            return;
+        }
+        let saved = getSavedTools();
+        const alreadySaved = saved.some(t => t.name === tool.name);
+        if (alreadySaved) {
+            saved = saved.filter(t => t.name !== tool.name);
+        } else {
+            saved.push(tool);
+        }
+        setSavedTools(saved);
+        // Update icon
+        const icon = bookmarkBtn.querySelector('i');
+        icon.className = `fa${alreadySaved ? 'r' : 's'} fa-bookmark`;
+        icon.style.color = alreadySaved ? '#b0b0b0' : '#6366f1';
+    });
     return card;
 }
 
