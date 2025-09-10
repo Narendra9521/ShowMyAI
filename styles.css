@@ -864,7 +864,11 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
-    padding: 0 0 60px;
+    padding: 0 20px 60px 20px;
+}
+
+#saved-tools-list {
+    padding: 0 40px 60px 40px;
 }
 
 .tool-card {
@@ -1002,12 +1006,29 @@ body {
 .page-section {
     background: var(--bg-primary);
     min-height: 100vh;
-    padding: 50px 0 40px 0;
+    padding: 20px 0 40px 0;
 }
 
 .page-header {
     text-align: center;
     margin-bottom: 60px;
+}
+
+#privacy-page {
+    padding-top: 10px;
+}
+
+#privacy-page .page-header,
+#about-page .page-header,
+#contact-page .page-header,
+#saved-tools-page .page-header {
+    margin-bottom: 20px;
+}
+
+#about-page,
+#contact-page,
+#saved-tools-page {
+    padding-top: 10px;
 }
 
 .page-header h1 {
@@ -1538,7 +1559,11 @@ body {
     .tools-grid {
         grid-template-columns: 1fr;
         gap: 6px;
-        padding: 0 0 60px;
+        padding: 0 15px 60px 15px;
+    }
+    
+    #saved-tools-list {
+        padding: 0 20px 60px 20px;
     }
     
     .tool-card {

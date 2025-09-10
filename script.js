@@ -71,6 +71,7 @@ function renderCurrentState() {
     if (currentState.page === 'home') {
         // Show hero section when on home page
         document.querySelector('.hero-section').style.display = 'block';
+        document.querySelector('.stats-section').style.display = 'block';
         showMainContent();
         if (currentState.section) {
             switchTab(currentState.section, false);
@@ -78,9 +79,18 @@ function renderCurrentState() {
         if (currentState.category) {
             showTools(currentState.category, false);
         }
+    } else if (currentState.page === 'saved-tools') {
+        // Show saved tools as a separate page
+        document.querySelector('.hero-section').style.display = 'none';
+        document.querySelector('.stats-section').style.display = 'none';
+        document.querySelector('.main-content').style.display = 'none';
+        document.getElementById('tools-display').style.display = 'none';
+        document.getElementById('saved-tools-page').style.display = 'block';
+        renderSavedTools();
     } else {
         // Hide hero section on other pages
         document.querySelector('.hero-section').style.display = 'none';
+        document.querySelector('.stats-section').style.display = 'none';
         showPage(currentState.page);
     }
 }
@@ -89,6 +99,7 @@ function renderCurrentState() {
 function hideAllSections() {
     document.querySelector('.main-content').style.display = 'none';
     document.getElementById('tools-display').style.display = 'none';
+    document.querySelector('.stats-section').style.display = 'none';
     document.querySelectorAll('.page-section').forEach(section => {
         section.style.display = 'none';
     });
@@ -195,42 +206,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 currentState = { page: 'home', section: 'ai-tools', category: null };
                 renderCurrentState();
             } else if (page === 'saved-tools') {
-                showSavedToolsPage();
+                updateState({ page: 'saved-tools', section: null, category: null }, true);
+                renderCurrentState();
             } else if (page) {
                 updateState({ page, section: null, category: null }, true);
                 renderCurrentState();
             }
-// Show Saved Tools Page
-function showSavedToolsPage() {
-    // Hide all main pages/sections
-    document.querySelectorAll('.page-section').forEach(el => el.style.display = 'none');
-    // Show saved tools page
-    document.getElementById('saved-tools-page').style.display = 'block';
-    // Render saved tools
-    renderSavedTools();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-function renderSavedTools() {
-    const savedList = document.getElementById('saved-tools-list');
-    savedList.innerHTML = '';
-    
-    // Check if user is logged in
-    if (!currentUser) {
-        savedList.innerHTML = '<p style="grid-column: 1/-1; color: var(--text-secondary); text-align: center;">Please login to view your saved tools.</p>';
-        return;
-    }
-    
-    let saved = getSavedTools();
-    if (!saved.length) {
-        savedList.innerHTML = '<p style="grid-column: 1/-1; color: var(--text-secondary); text-align: center;">No tools saved yet.</p>';
-        return;
-    }
-    saved.forEach(tool => {
-        const card = createToolCard(tool);
-        savedList.appendChild(card);
-    });
-}
         });
     });
     
@@ -242,6 +223,9 @@ function renderSavedTools() {
             if (page === 'home') {
                 history.replaceState({ page: 'home', section: 'ai-tools', category: null }, '', '?page=home&section=ai-tools');
                 currentState = { page: 'home', section: 'ai-tools', category: null };
+                renderCurrentState();
+            } else if (page === 'saved-tools') {
+                updateState({ page: 'saved-tools', section: null, category: null }, true);
                 renderCurrentState();
             } else if (page) {
                 updateState({ page, section: null, category: null }, true);
@@ -311,6 +295,28 @@ function toggleMobileMenu() {
             }
         });
     }
+}
+
+// Render saved tools
+function renderSavedTools() {
+    const savedList = document.getElementById('saved-tools-list');
+    savedList.innerHTML = '';
+    
+    // Check if user is logged in
+    if (!currentUser) {
+        savedList.innerHTML = '<p style="grid-column: 1/-1; color: var(--text-secondary); text-align: center;">Please login to view your saved tools.</p>';
+        return;
+    }
+    
+    let saved = getSavedTools();
+    if (!saved.length) {
+        savedList.innerHTML = '<p style="grid-column: 1/-1; color: var(--text-secondary); text-align: center;">No tools saved yet.</p>';
+        return;
+    }
+    saved.forEach(tool => {
+        const card = createToolCard(tool);
+        savedList.appendChild(card);
+    });
 }
 
 // Tab switching with history support
@@ -4580,9 +4586,16 @@ function createWorkflowToolCard(tool) {
 
 // Go back to main view with history support
 function goBack() {
-    // Clear browser history by replacing current state
-    history.replaceState(null, '', window.location.pathname);
-    updateState({ page: 'home', section: currentState.section || 'ai-tools', category: null }, false);
+    if (currentState.page === 'saved-tools') {
+        // Go back to home page from saved tools
+        updateState({ page: 'home', section: 'ai-tools', category: null }, true);
+    } else if (currentState.category) {
+        // Go back from tools view to category view
+        updateState({ page: 'home', section: currentState.section || 'ai-tools', category: null }, true);
+    } else {
+        // Default back to home
+        updateState({ page: 'home', section: 'ai-tools', category: null }, true);
+    }
     renderCurrentState();
 }
 
