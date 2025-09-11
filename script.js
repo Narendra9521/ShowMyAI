@@ -4646,3 +4646,4 @@ function clearSearch() {
         category.style.display = 'block';
     });
 }
+// No custom JS submit handler for submit-tool-form. Let Formspree handle the form natively.

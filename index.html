@@ -45,6 +45,7 @@
                     <nav class="nav-desktop">
                         <a href="#" class="nav-link" data-page="home" title="Home - Discover AI Tools">Home</a>
                         <a href="#" class="nav-link" data-page="saved-tools" title="View Saved Tools">Saved Tools</a>
+                        <a href="#" class="nav-link" data-page="submit-tool" title="Submit AI Tool">Submit Tool</a>
                         <a href="#" class="nav-link" data-page="privacy" title="Privacy Policy">Privacy</a>
                         <a href="#" class="nav-link" data-page="about" title="About ShowMyAI">About</a>
                         <a href="#" class="nav-link" data-page="contact" title="Contact Us">Contact</a>
@@ -66,6 +67,7 @@
                 </button>
                 <a href="#" class="nav-link" data-page="home">Home</a>
                 <a href="#" class="nav-link" data-page="saved-tools">Saved Tools</a>
+                <a href="#" class="nav-link" data-page="submit-tool">Submit Tool</a>
                 <a href="#" class="nav-link" data-page="privacy">Privacy</a>
                 <a href="#" class="nav-link" data-page="about">About</a>
                 <a href="#" class="nav-link" data-page="contact">Contact</a>
@@ -122,22 +124,6 @@
                         <div class="ai-badge">AI</div>
                         <h3 class="category-title">Data Analysis</h3>
                         <p class="category-description">Analyze and visualize data with AI-powered insights</p>
-                    </div>
-                     <div class="category-card" onclick="showTools('video-generators')">
-                        <div class="category-icon video-icon">
-                            <i class="fas fa-video"></i>
-                        </div>
-                        <div class="ai-badge">AI</div>
-                        <h3 class="category-title">Video Generators</h3>
-                        <p class="category-description">Create and edit videos with AI-powered generation tools</p>
-                    </div>
-                     <div class="category-card" onclick="showTools('ats-resume-checkers')">
-                        <div class="category-icon hr-icon">
-                            <i class="fas fa-file-alt"></i>
-                        </div>
-                        <div class="ai-badge">AI</div>
-                        <h3 class="category-title">ATS Resume Checkers</h3>
-                        <p class="category-description">AI tools to optimize resumes for ATS systems</p>
                     </div>
                       <div class="category-card" onclick="showTools('design-tools')">
                         <div class="category-icon design-icon">
@@ -257,7 +243,7 @@
                             <i class="fas fa-chalkboard-teacher"></i>
                         </div>
                         <div class="ai-badge">AI</div>
-                        <h3 class="category-title">Presentation Tools</h3>
+                        <h3 class="category-title">Presentation | PPT</h3>
                         <p class="category-description">Create stunning presentations with AI design assistance</p>
                     </div>
                     <div class="category-card" onclick="showTools('ai-video-editors')">
@@ -976,6 +962,20 @@
                         <h3 class="category-title">Astronomy AI</h3>
                         <p class="category-description">AI tools for astronomical research and discovery</p>
                     </div>
+                      <div class="category-card" onclick="showTools('telecommunications')">
+                        <div class="category-icon telecommunications-icon"><i class="fas fa-broadcast-tower"></i></div>
+                        <div class="ai-badge">AI</div>
+                        <h3 class="category-title">Telecommunications</h3>
+                        <p class="category-description">Optimize telecom networks and services with AI</p>
+                    </div>
+                        <div class="category-card" onclick="showTools('ai-transportation')">
+                        <div class="category-icon transportation-icon">
+                            <i class="fas fa-bus"></i>
+                        </div>
+                        <div class="ai-badge">AI</div>
+                        <h3 class="category-title">Transportation AI</h3>
+                        <p class="category-description">AI solutions for transportation and logistics</p>
+                    </div>
                     <div class="category-card" onclick="showTools('ai-archaeology')">
                         <div class="category-icon archaeology-icon">
                             <i class="fas fa-landmark"></i>
@@ -1009,7 +1009,15 @@
                         <div class="ai-badge">AI</div>
                         <h3 class="category-title">Sports Analytics</h3>
                         <p class="category-description">Analyze sports data and performance with AI</p>
-                    </div>  
+                    </div> 
+                      <div class="category-card" onclick="showTools('ai-mental-health')">
+                        <div class="category-icon health-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="ai-badge">AI</div>
+                        <h3 class="category-title">Mental Health AI</h3>
+                        <p class="category-description">AI tools for mental health support and therapy</p>
+                    </div> 
                       <div class="category-card" onclick="showTools('ai-parenting')">
                         <div class="category-icon parenting-icon">
                             <i class="fas fa-baby"></i>
@@ -1027,7 +1035,14 @@
                         <h3 class="category-title">AI Sustainability</h3>
                         <p class="category-description">Leverage AI-powered platforms for climate analytics</p>
                      </div>
-                  
+                       <div class="category-card" onclick="showTools('ai-space')">
+                        <div class="category-icon research-icon">
+                            <i class="fas fa-satellite"></i>
+                        </div>
+                        <div class="ai-badge">AI</div>
+                        <h3 class="category-title">Space AI</h3>
+                        <p class="category-description">AI applications for space exploration and astronomy</p>
+                    </div>
                         <div class="category-card" onclick="showTools('quantum-computing')">
                             <div class="category-icon quantumcomputing-icon">
                                 <i class="fas fa-atom"></i>
@@ -1088,20 +1103,6 @@
                         <h3 class="category-title">Water Management AI</h3>
                         <p class="category-description">AI tools for water resource management</p>
                     </div> -->
-                    <div class="category-card" onclick="showTools('telecommunications')">
-                        <div class="category-icon telecommunications-icon"><i class="fas fa-broadcast-tower"></i></div>
-                        <div class="ai-badge">AI</div>
-                        <h3 class="category-title">Telecommunications</h3>
-                        <p class="category-description">Optimize telecom networks and services with AI</p>
-                    </div>
-                        <div class="category-card" onclick="showTools('ai-transportation')">
-                        <div class="category-icon transportation-icon">
-                            <i class="fas fa-bus"></i>
-                        </div>
-                        <div class="ai-badge">AI</div>
-                        <h3 class="category-title">Transportation AI</h3>
-                        <p class="category-description">AI solutions for transportation and logistics</p>
-                    </div>
                     <!-- <div class="category-card" onclick="showTools('ai-insurance')">
                         <div class="category-icon finance-icon">
                             <i class="fas fa-file-invoice-dollar"></i>
@@ -1110,14 +1111,6 @@
                         <h3 class="category-title">Insurance AI</h3>
                         <p class="category-description">AI applications for insurance industry</p>
                     </div> -->
-                    <div class="category-card" onclick="showTools('ai-mental-health')">
-                        <div class="category-icon health-icon">
-                            <i class="fas fa-brain"></i>
-                        </div>
-                        <div class="ai-badge">AI</div>
-                        <h3 class="category-title">Mental Health AI</h3>
-                        <p class="category-description">AI tools for mental health support and therapy</p>
-                    </div>
                     <div class="category-card" onclick="showTools('ai-journalism')">
                         <div class="category-icon journalism-icon">
                             <i class="fas fa-newspaper"></i>
@@ -1125,14 +1118,6 @@
                         <div class="ai-badge">AI</div>
                         <h3 class="category-title">Journalism AI</h3>
                         <p class="category-description">AI applications for news and journalism</p>
-                    </div>
-                    <div class="category-card" onclick="showTools('ai-space')">
-                        <div class="category-icon research-icon">
-                            <i class="fas fa-satellite"></i>
-                        </div>
-                        <div class="ai-badge">AI</div>
-                        <h3 class="category-title">Space AI</h3>
-                        <p class="category-description">AI applications for space exploration and astronomy</p>
                     </div>
                       <div class="category-card" onclick="showTools('productivity-tools')">
                         <div class="category-icon pdtools-icon"><i class="fas fa-user-clock"></i></div>
@@ -2330,7 +2315,7 @@
                         <p>We carefully curate and categorize hundreds of AI tools across various industries and use cases. Our team of experts tests and reviews each tool to ensure quality and relevance. We provide detailed information, user reviews, and practical workflows to help you make informed decisions about which AI tools to use.</p>
                         <p><strong>ShowMyAI features:</strong></p>
                         <ul>
-                            <li>132+ AI tool categories with over 1500+ AI tools</li>
+                            <li>128+ AI tool categories with over 1500+ AI tools</li>
                             <li>140+ workflow tasks powered by 1000+ AI tools</li>
                         </ul>
                     </div>
@@ -2393,7 +2378,7 @@
     </section>
 
     <!-- Categories Page -->
-    <section id="categories-page" class="page-section" style="display: none;">
+    <!-- <section id="categories-page" class="page-section" style="display: none;">
         <div class="container">
             <div class="page-header">
                 <h1>Categories</h1>
@@ -2463,6 +2448,79 @@
                 </div>
             </div>
         </div>
+    </section> -->
+
+    <!-- Submit Tool Page -->
+    <section id="submit-tool-page" class="page-section" style="display: none;">
+        <div class="container">
+            <div class="page-header">
+                <h1>Submit Tool</h1>
+                <p>Help us grow our AI tools directory by submitting your favorite tools</p>
+            </div>
+            <div class="page-content">
+                <div class="submit-form-container" style="max-width: 600px; margin: 0 auto;">
+                    <div class="submit-info">
+                        <h2>Share an AI Tool</h2>
+                        <p>Know an amazing AI tool that's not in our directory? We'd love to add it! Fill out the form below and our team will review your submission.</p>
+                    </div>
+                    <form id="submit-tool-form" class="submit-form" action="https://formspree.io/f/xqadnoel" method="POST">
+                        <div class="submit-field">
+                            <i class="fas fa-robot"></i>
+                            <div>
+                                <h3>Tool Name *</h3>
+                                <input type="text" id="tool-name" name="toolName" required placeholder="Enter the AI tool name">
+                            </div>
+                        </div>
+                        <div class="submit-field">
+                            <i class="fas fa-link"></i>
+                            <div>
+                                <h3>Tool URL *</h3>
+                                <input type="url" id="tool-url" name="toolUrl" required placeholder="https://example.com">
+                            </div>
+                        </div>
+                        <div class="submit-field">
+                            <i class="fas fa-tags"></i>
+                            <div>
+                                <h3>Category *</h3>
+                                <select id="tool-category" name="toolCategory" required>
+                                    <option value="">Select a category</option>
+                                    <option value="image-generators">Image Generators</option>
+                                    <option value="text-generators">Text Generators</option>
+                                    <option value="code-generators">Code Generators</option>
+                                    <option value="video-generators">Video Generators</option>
+                                    <option value="voice-generators">Voice Generators</option>
+                                    <option value="music-generators">Music Generators</option>
+                                    <option value="chatbots">Chatbots</option>
+                                    <option value="design-tools">Design Tools</option>
+                                    <option value="productivity-tools">Productivity Tools</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="submit-field">
+                            <i class="fas fa-align-left"></i>
+                            <div>
+                                <h3>Description</h3>
+                                <textarea id="tool-description" name="toolDescription" placeholder="Briefly describe what this tool does and its key features" rows="4"></textarea>
+                            </div>
+                        </div>
+                        <div class="submit-field">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h3>Your Email (optional)</h3>
+                                <input type="email" id="submitter-email" name="submitterEmail" placeholder="your@email.com">
+                            </div>
+                        </div>
+                        <input type="hidden" name="_subject" value="New AI Tool Submission">
+
+                        <button type="submit" class="submit-btn">Submit Tool</button>
+                    </form>
+                    <div id="success-message" style="display: none; background: #10b981; color: white; padding: 15px; border-radius: 8px; margin-top: 20px; text-align: center;">
+                        ✅ Thank you! Your tool submission has been sent successfully.
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Privacy Policy Page -->
@@ -2526,11 +2584,11 @@
                         <h2>Contact Us</h2>
                         <p>If you have any questions about this Privacy Policy or our data practices, please contact us:</p>
                         <ul>
-                            <li><strong>Email:</strong> showmyai999@gmail.com</li>
+                            <li><strong>Email:</strong> showmyaiofficial@gmail.com</li>
                             <!-- <li><strong>Phone:</strong> +91 8125764244</li> -->
                             <li><strong>Address:</strong> Hyderabad, India</li>
                         </ul>
-                        <p><strong>Last Updated:</strong> January 2025</p>
+                        <p><strong>Last Updated:</strong> August 2025</p>
                     </div>
                 </div>
             </div>
@@ -2547,7 +2605,7 @@
                     <div class="stat-label">AI Tools</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">132+</div>
+                    <div class="stat-number">128+</div>
                     <div class="stat-label">Categories</div>
                 </div>
                 <div class="stat-item">
@@ -2581,9 +2639,11 @@
                     <h3>Quick Links</h3>
                     <ul>
                         <li><a href="#" data-page="home" title="Homepage">Home</a></li>
-                        <li><a href="#" data-page="categories" title="Browse all AI tools and categories">All Categories</a></li>
+                        <li><a href="#" data-page="saved-tools" title="View your saved tools">Saved Tools</a></li>
+                        <li><a href="#" data-page="submit-tool" title="Submit a new AI tool">Submit Tool</a></li>
+                        <!-- <li><a href="#" data-page="categories" title="Browse all AI tools and categories">All Categories</a></li> -->
                         <li><a href="#" data-page="about" title="Learn about ShowMyAI">About Us</a></li>
-                        <li><a href="#" data-page="contact" title="Get in touch with our team">Contact</a></li>
+                        <!-- <li><a href="#" data-page="contact" title="Get in touch with our team">Contact</a></li> -->
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -2651,5 +2711,6 @@
     <script src="supabase.js"></script>
     <script src="auth.js"></script>
     <script src="script.js"></script>
+    <script src="form-handler.js"></script>
 </body>
 </html>

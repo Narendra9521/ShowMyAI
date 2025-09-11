@@ -1,0 +1,1 @@
+// Remove JavaScript form handler - let form submit normally to Formspree
