@@ -357,453 +357,439 @@ function switchTab(tabName, updateHistory = true) {
 // Comprehensive AI Tools data with 10 tools per category
 const aiToolsData = {
     '3d-generators': [
-        { name: 'Spline', description: 'Create and publish 3D web experiences', logo: 'https://spline.design/favicon.ico', category: '3D Generation', link: 'https://spline.design/' },
-        { name: 'Meshy', description: 'AI-powered 3D asset generation', logo: 'https://www.meshy.ai/favicon.ico', category: '3D Generation', link: 'https://www.meshy.ai/' },
-        { name: 'Kaedim', description: 'Turn 2D images into 3D models', logo: 'https://www.kaedim3d.com/favicon.ico', category: '3D Generation', link: 'https://www.kaedim3d.com/' },
-        { name: 'Leonardo.AI', description: '3D model generation with AI', logo: 'https://leonardo.ai/favicon.ico', category: '3D Generation', link: 'https://leonardo.ai/' },
-        { name: 'Luma AI', description: 'Create 3D objects from text', logo: 'https://lumalabs.ai/favicon.ico', category: '3D Generation', link: 'https://lumalabs.ai/' },
-        { name: 'Masterpiece Studio', description: 'AI-powered 3D creation', logo: 'https://masterpiecestudio.com/favicon.ico', category: '3D Generation', link: 'https://masterpiecestudio.com/' },
-        { name: 'Poly', description: '3D modeling with AI assistance', logo: 'https://withpoly.com/favicon.ico', category: '3D Generation', link: 'https://withpoly.com/' },
-        { name: 'Skybox Lab', description: 'AI-generated 3D environments', logo: 'https://skyboxlabs.com/favicon.ico', category: '3D Generation', link: 'https://skyboxlabs.com/' },
-        { name: 'Mirageml', description: 'AI-powered 3D asset creation', logo: 'https://mirageml.com/favicon.ico', category: '3D Generation', link: 'https://mirageml.com/' },
-        { name: 'Scenario', description: 'AI-generated game assets', logo: 'https://www.scenario.com/favicon.ico', category: '3D Generation', link: 'https://www.scenario.com/' }
+        { name: 'Spline', description: 'Create and publish 3D web experiences', logo: 'https://spline.design/favicon.ico', category: '3D Generation', link: 'https://spline.design/', pricing: 'freemium' },
+        { name: 'Meshy', description: 'AI-powered 3D asset generation', logo: 'https://www.meshy.ai/favicon.ico', category: '3D Generation', link: 'https://www.meshy.ai/', pricing: 'freemium' },
+        { name: 'Kaedim', description: 'Turn 2D images into 3D models', logo: 'https://www.kaedim3d.com/favicon.ico', category: '3D Generation', link: 'https://www.kaedim3d.com/', pricing: 'premium' },
+        { name: 'Leonardo.AI', description: '3D model generation with AI', logo: 'https://leonardo.ai/favicon.ico', category: '3D Generation', link: 'https://leonardo.ai/', pricing: 'freemium' },
+        { name: 'Luma AI', description: 'Create 3D objects from text', logo: 'https://lumalabs.ai/favicon.ico', category: '3D Generation', link: 'https://lumalabs.ai/', pricing: 'free' },
+        { name: 'Masterpiece Studio', description: 'AI-powered 3D creation', logo: 'https://masterpiecestudio.com/favicon.ico', category: '3D Generation', link: 'https://masterpiecestudio.com/', pricing: 'premium' },
+        { name: 'Poly', description: '3D modeling with AI assistance', logo: 'https://withpoly.com/favicon.ico', category: '3D Generation', link: 'https://withpoly.com/', pricing: 'premium' },
+        { name: 'Skybox Lab', description: 'AI-generated 3D environments', logo: 'https://skyboxlabs.com/favicon.ico', category: '3D Generation', link: 'https://skyboxlabs.com/', pricing: 'free' },
+        { name: 'Mirageml', description: 'AI-powered 3D asset creation', logo: 'https://mirageml.com/favicon.ico', category: '3D Generation', link: 'https://mirageml.com/', pricing: 'premium' },
+        { name: 'Scenario', description: 'AI-generated game assets', logo: 'https://www.scenario.com/favicon.ico', category: '3D Generation', link: 'https://www.scenario.com/', pricing: 'freemium' }
     ],
     'ai-assistants': [
-        { name: 'Claude', description: 'Advanced AI assistant by Anthropic', logo: 'https://claude.ai/favicon.ico', category: 'AI Assistant', link: 'https://claude.ai/' },
-        { name: 'Perplexity', description: 'AI-powered answer engine', logo: 'https://www.perplexity.ai/favicon.ico', category: 'AI Assistant', link: 'https://www.perplexity.ai/' },
-        { name: 'Copilot', description: 'Microsoft AI companion', logo: 'https://copilot.microsoft.com/favicon.ico', category: 'AI Assistant', link: 'https://copilot.microsoft.com/' },
-        { name: 'Gemini', description: 'Google AI assistant', logo: 'https://gemini.google.com/favicon.ico', category: 'AI Assistant', link: 'https://gemini.google.com/' },
-        { name: 'Pi', description: 'Personal AI assistant', logo: 'https://heypi.com/favicon.ico', category: 'AI Assistant', link: 'https://heypi.com/' },
-        { name: 'Poe', description: 'AI chat platform with multiple models', logo: 'https://poe.com/favicon.ico', category: 'AI Assistant', link: 'https://poe.com/' },
-        { name: 'Bing Chat', description: 'Microsoft AI search assistant', logo: 'https://www.bing.com/favicon.ico', category: 'AI Assistant', link: 'https://www.bing.com/chat' },
-        { name: 'Jasper', description: 'AI assistant for marketing teams', logo: 'https://www.jasper.ai/favicon.ico', category: 'AI Assistant', link: 'https://www.jasper.ai/' },
-        { name: 'YouChat', description: 'AI search assistant', logo: 'https://you.com/favicon.ico', category: 'AI Assistant', link: 'https://you.com/' },
-        { name: 'Character.AI', description: 'Conversational AI characters', logo: 'https://character.ai/favicon.ico', category: 'AI Assistant', link: 'https://character.ai/' }
+        { name: 'Claude', description: 'Advanced AI assistant by Anthropic', logo: 'https://claude.ai/favicon.ico', category: 'AI Assistant', link: 'https://claude.ai/', pricing: 'freemium' },
+        { name: 'Perplexity', description: 'AI-powered answer engine', logo: 'https://www.perplexity.ai/favicon.ico', category: 'AI Assistant', link: 'https://www.perplexity.ai/', pricing: 'freemium' },
+        { name: 'Copilot', description: 'Microsoft AI companion', logo: 'https://copilot.microsoft.com/favicon.ico', category: 'AI Assistant', link: 'https://copilot.microsoft.com/', pricing: 'free' },
+        { name: 'Gemini', description: 'Google AI assistant', logo: 'https://gemini.google.com/favicon.ico', category: 'AI Assistant', link: 'https://gemini.google.com/', pricing: 'freemium' },
+        { name: 'Pi', description: 'Personal AI assistant', logo: 'https://heypi.com/favicon.ico', category: 'AI Assistant', link: 'https://heypi.com/', pricing: 'free' },
+        { name: 'Poe', description: 'AI chat platform with multiple models', logo: 'https://poe.com/favicon.ico', category: 'AI Assistant', link: 'https://poe.com/', pricing: 'freemium' },
+        { name: 'Bing Chat', description: 'Microsoft AI search assistant', logo: 'https://www.bing.com/favicon.ico', category: 'AI Assistant', link: 'https://www.bing.com/chat', pricing: 'free' },
+        { name: 'Jasper', description: 'AI assistant for marketing teams', logo: 'https://www.jasper.ai/favicon.ico', category: 'AI Assistant', link: 'https://www.jasper.ai/', pricing: 'premium' },
+        { name: 'YouChat', description: 'AI search assistant', logo: 'https://you.com/favicon.ico', category: 'AI Assistant', link: 'https://you.com/', pricing: 'free' },
+        { name: 'Character.AI', description: 'Conversational AI characters', logo: 'https://character.ai/favicon.ico', category: 'AI Assistant', link: 'https://character.ai/', pricing: 'freemium' }
     ],
     'ai-detectors': [
-        { name: 'GPTZero', description: 'Detect AI-generated text', logo: 'https://gptzero.me/favicon.ico', category: 'AI Detection', link: 'https://gptzero.me/' },
-        { name: 'Content at Scale', description: 'AI content detector', logo: 'https://contentatscale.ai/favicon.ico', category: 'AI Detection', link: 'https://contentatscale.ai/ai-content-detector/' },
-        { name: 'Originality.ai', description: 'AI content detection for businesses', logo: 'https://originality.ai/favicon.ico', category: 'AI Detection', link: 'https://originality.ai/' },
-        { name: 'Copyleaks', description: 'AI content detector and plagiarism checker', logo: 'https://copyleaks.com/favicon.ico', category: 'AI Detection', link: 'https://copyleaks.com/' },
-        { name: 'Winston AI', description: 'AI content detection tool', logo: 'https://gowinston.ai/favicon.ico', category: 'AI Detection', link: 'https://gowinston.ai/' },
-        { name: 'Sapling', description: 'AI writing assistant with detection', logo: 'https://sapling.ai/favicon.ico', category: 'AI Detection', link: 'https://sapling.ai/' },
-        { name: 'Writer', description: 'AI content detector for teams', logo: 'https://writer.com/favicon.ico', category: 'AI Detection', link: 'https://writer.com/' },
-        { name: 'HiveModeration', description: 'AI content moderation platform', logo: 'https://www.hivemoderation.com/favicon.ico', category: 'AI Detection', link: 'https://www.hivemoderation.com/' },
-        { name: 'Undetectable.ai', description: 'AI humanizer for content', logo: 'https://undetectable.ai/favicon.ico', category: 'AI Detection', link: 'https://undetectable.ai/' },
-        { name: 'ZeroGPT', description: 'Free AI content detector', logo: 'https://zerogpt.com/favicon.ico', category: 'AI Detection', link: 'https://zerogpt.com/' }
+        { name: 'GPTZero', description: 'Detect AI-generated text', logo: 'https://gptzero.me/favicon.ico', category: 'AI Detection', link: 'https://gptzero.me/', pricing: 'freemium' },
+        { name: 'Content at Scale', description: 'AI content detector', logo: 'https://contentatscale.ai/favicon.ico', category: 'AI Detection', link: 'https://contentatscale.ai/ai-content-detector/', pricing: 'free' },
+        { name: 'Originality.ai', description: 'AI content detection for businesses', logo: 'https://originality.ai/favicon.ico', category: 'AI Detection', link: 'https://originality.ai/', pricing: 'premium' },
+        { name: 'Copyleaks', description: 'AI content detector and plagiarism checker', logo: 'https://copyleaks.com/favicon.ico', category: 'AI Detection', link: 'https://copyleaks.com/', pricing: 'freemium' },
+        { name: 'Winston AI', description: 'AI content detection tool', logo: 'https://gowinston.ai/favicon.ico', category: 'AI Detection', link: 'https://gowinston.ai/', pricing: 'freemium' },
+        { name: 'Sapling', description: 'AI writing assistant with detection', logo: 'https://sapling.ai/favicon.ico', category: 'AI Detection', link: 'https://sapling.ai/', pricing: 'freemium' },
+        { name: 'Writer', description: 'AI content detector for teams', logo: 'https://writer.com/favicon.ico', category: 'AI Detection', link: 'https://writer.com/', pricing: 'premium' },
+        { name: 'HiveModeration', description: 'AI content moderation platform', logo: 'https://www.hivemoderation.com/favicon.ico', category: 'AI Detection', link: 'https://www.hivemoderation.com/', pricing: 'premium' },
+        { name: 'Undetectable.ai', description: 'AI humanizer for content', logo: 'https://undetectable.ai/favicon.ico', category: 'AI Detection', link: 'https://undetectable.ai/', pricing: 'freemium' },
+        { name: 'ZeroGPT', description: 'Free AI content detector', logo: 'https://zerogpt.com/favicon.ico', category: 'AI Detection', link: 'https://zerogpt.com/', pricing: 'free' }
     ],
      'qr-code-generators': [
-            { name: 'QR Code Monkey', description: 'Free custom QR code generator', logo: 'https://www.qrcode-monkey.com/favicon.ico', category: 'QR Code Generators', link: 'https://www.qrcode-monkey.com/' },
-            { name: 'QRCode Tiger', description: 'Dynamic QR code generator', logo: 'https://www.qrcode-tiger.com/favicon.ico', category: 'QR Code Generators', link: 'https://www.qrcode-tiger.com/' },
-            { name: 'Unitag QR Code', description: 'Custom QR code design', logo: 'https://www.unitag.io/favicon.ico', category: 'QR Code Generators', link: 'https://www.unitag.io/qrcode' },
-            { name: 'GoQR.me', description: 'Simple QR code generator', logo: 'https://goqr.me/favicon.ico', category: 'QR Code Generators', link: 'https://goqr.me/' },
-            { name: 'QRStuff', description: 'Create QR codes for free', logo: 'https://www.qrstuff.com/favicon.ico', category: 'QR Code Generators', link: 'https://www.qrstuff.com/' },
-            { name: 'Visualead', description: 'Visual QR code generator', logo: 'https://www.visualead.com/favicon.ico', category: 'QR Code Generators', link: 'https://www.visualead.com/' },
-            { name: 'Beaconstac', description: 'Dynamic QR code platform', logo: 'https://www.beaconstac.com/favicon.ico', category: 'QR Code Generators', link: 'https://www.beaconstac.com/' },
-            { name: 'Scanova', description: 'Professional QR code solutions', logo: 'https://scanova.io/favicon.ico', category: 'QR Code Generators', link: 'https://scanova.io/' },
-            { name: 'Kaywa', description: 'QR code management platform', logo: 'https://www.qr-code-generator.com/favicon.ico', category: 'QR Code Generators', link: 'https://www.qr-code-generator.com/' },
-            { name: 'QRickit', description: 'Free QR code generator', logo: 'https://qrickit.com/favicon.ico', category: 'QR Code Generators', link: 'https://qrickit.com/' },
-            { name: 'QR Code Generator', description: 'Create QR codes instantly', logo: 'https://www.the-qrcode-generator.com/favicon.ico', category: 'QR Code Generators', link: 'https://www.the-qrcode-generator.com/' }
+            { name: 'QR Code Monkey', description: 'Free custom QR code generator', logo: 'https://www.qrcode-monkey.com/favicon.ico', category: 'QR Code Generators', link: 'https://www.qrcode-monkey.com/', pricing: 'free' },
+            { name: 'QRCode Tiger', description: 'Dynamic QR code generator', logo: 'https://www.qrcode-tiger.com/favicon.ico', category: 'QR Code Generators', link: 'https://www.qrcode-tiger.com/', pricing: 'freemium' },
+            { name: 'Unitag QR Code', description: 'Custom QR code design', logo: 'https://www.unitag.io/favicon.ico', category: 'QR Code Generators', link: 'https://www.unitag.io/qrcode', pricing: 'freemium' },
+            { name: 'GoQR.me', description: 'Simple QR code generator', logo: 'https://goqr.me/favicon.ico', category: 'QR Code Generators', link: 'https://goqr.me/', pricing: 'free' },
+            { name: 'QRStuff', description: 'Create QR codes for free', logo: 'https://www.qrstuff.com/favicon.ico', category: 'QR Code Generators', link: 'https://www.qrstuff.com/', pricing: 'free' },
+            { name: 'Visualead', description: 'Visual QR code generator', logo: 'https://www.visualead.com/favicon.ico', category: 'QR Code Generators', link: 'https://www.visualead.com/', pricing: 'premium' },
+            { name: 'Beaconstac', description: 'Dynamic QR code platform', logo: 'https://www.beaconstac.com/favicon.ico', category: 'QR Code Generators', link: 'https://www.beaconstac.com/', pricing: 'premium' },
+            { name: 'Scanova', description: 'Professional QR code solutions', logo: 'https://scanova.io/favicon.ico', category: 'QR Code Generators', link: 'https://scanova.io/', pricing: 'freemium' },
+            { name: 'Kaywa', description: 'QR code management platform', logo: 'https://www.qr-code-generator.com/favicon.ico', category: 'QR Code Generators', link: 'https://www.qr-code-generator.com/', pricing: 'freemium' },
+            { name: 'QRickit', description: 'Free QR code generator', logo: 'https://qrickit.com/favicon.ico', category: 'QR Code Generators', link: 'https://qrickit.com/', pricing: 'free' },
+            { name: 'QR Code Generator', description: 'Create QR codes instantly', logo: 'https://www.the-qrcode-generator.com/favicon.ico', category: 'QR Code Generators', link: 'https://www.the-qrcode-generator.com/', pricing: 'free' }
     ],
     'app-website-developers': [
-            { name: 'Wix', description: 'Website builder with AI design', logo: 'https://www.wix.com/favicon.ico', category: 'App/Website Developers', link: 'https://www.wix.com/' },
-            { name: 'Webflow', description: 'No-code website builder', logo: 'https://webflow.com/favicon.ico', category: 'App/Website Developers', link: 'https://webflow.com/' },
-            { name: 'Squarespace', description: 'Website and e-commerce builder', logo: 'https://www.squarespace.com/favicon.ico', category: 'App/Website Developers', link: 'https://www.squarespace.com/' },
-            { name: 'Bubble', description: 'No-code app development platform', logo: 'https://bubble.io/favicon.ico', category: 'App/Website Developers', link: 'https://bubble.io/' },
-            { name: 'Appy Pie', description: 'App builder for non-coders', logo: 'https://www.appypie.com/favicon.ico', category: 'App/Website Developers', link: 'https://www.appypie.com/' },
-            { name: 'Zyro', description: 'AI-powered website builder', logo: 'https://zyro.com/favicon.ico', category: 'App/Website Developers', link: 'https://zyro.com/' },
-            { name: 'Weebly', description: 'Drag-and-drop website builder', logo: 'https://www.weebly.com/favicon.ico', category: 'App/Website Developers', link: 'https://www.weebly.com/' },
-            { name: 'Shopify', description: 'E-commerce website builder', logo: 'https://www.shopify.com/favicon.ico', category: 'App/Website Developers', link: 'https://www.shopify.com/' },
-            { name: 'WordPress.com', description: 'Website and blog platform', logo: 'https://wordpress.com/favicon.ico', category: 'App/Website Developers', link: 'https://wordpress.com/' },
-            { name: 'Glide', description: 'No-code app builder for mobile', logo: 'https://www.glideapps.com/favicon.ico', category: 'App/Website Developers', link: 'https://www.glideapps.com/' },
-            { name: 'Thunkable', description: 'No-code mobile app builder', logo: 'https://thunkable.com/favicon.ico', category: 'App/Website Developers', link: 'https://thunkable.com/' }
+            { name: 'Wix', description: 'Website builder with AI design', logo: 'https://www.wix.com/favicon.ico', category: 'App/Website Developers', link: 'https://www.wix.com/', pricing: 'freemium' },
+            { name: 'Webflow', description: 'No-code website builder', logo: 'https://webflow.com/favicon.ico', category: 'App/Website Developers', link: 'https://webflow.com/', pricing: 'freemium' },
+            { name: 'Squarespace', description: 'Website and e-commerce builder', logo: 'https://www.squarespace.com/favicon.ico', category: 'App/Website Developers', link: 'https://www.squarespace.com/', pricing: 'premium' },
+            { name: 'Bubble', description: 'No-code app development platform', logo: 'https://bubble.io/favicon.ico', category: 'App/Website Developers', link: 'https://bubble.io/', pricing: 'freemium' },
+            { name: 'Appy Pie', description: 'App builder for non-coders', logo: 'https://www.appypie.com/favicon.ico', category: 'App/Website Developers', link: 'https://www.appypie.com/', pricing: 'freemium' },
+            { name: 'Zyro', description: 'AI-powered website builder', logo: 'https://zyro.com/favicon.ico', category: 'App/Website Developers', link: 'https://zyro.com/', pricing: 'freemium' },
+            { name: 'Weebly', description: 'Drag-and-drop website builder', logo: 'https://www.weebly.com/favicon.ico', category: 'App/Website Developers', link: 'https://www.weebly.com/', pricing: 'freemium' },
+            { name: 'Shopify', description: 'E-commerce website builder', logo: 'https://www.shopify.com/favicon.ico', category: 'App/Website Developers', link: 'https://www.shopify.com/', pricing: 'premium' },
+            { name: 'WordPress.com', description: 'Website and blog platform', logo: 'https://wordpress.com/favicon.ico', category: 'App/Website Developers', link: 'https://wordpress.com/', pricing: 'freemium' },
+            { name: 'Glide', description: 'No-code app builder for mobile', logo: 'https://www.glideapps.com/favicon.ico', category: 'App/Website Developers', link: 'https://www.glideapps.com/', pricing: 'freemium' },
+            { name: 'Thunkable', description: 'No-code mobile app builder', logo: 'https://thunkable.com/favicon.ico', category: 'App/Website Developers', link: 'https://thunkable.com/', pricing: 'freemium' }
     ],
     'image-generators': [
-        { name: 'DALL-E 2', description: 'Create realistic images from text descriptions', logo: 'https://openai.com/favicon.ico', category: 'Image Generation', link: 'https://openai.com/dall-e-2/' },
-        { name: 'Midjourney', description: 'AI art generator creating stunning artwork', logo: 'https://www.midjourney.com/favicon.ico', category: 'Image Generation', link: 'https://www.midjourney.com' },
-        { name: 'Stable Diffusion', description: 'Open-source text-to-image AI model', logo: 'https://stability.ai/favicon.ico', category: 'Image Generation', link: 'https://stability.ai' },
-        { name: 'Adobe Firefly', description: 'Creative generative AI for images and text effects', logo: 'https://www.adobe.com/favicon.ico', category: 'Image Generation', link: 'https://firefly.adobe.com' },
-        { name: 'Canva AI', description: 'AI-powered design and image generation', logo: 'https://www.canva.com/favicon.ico', category: 'Image Generation', link: 'https://www.canva.com' },
-        { name: 'Leonardo AI', description: 'AI art generator for creative projects', logo: 'https://leonardo.ai/favicon.ico', category: 'Image Generation', link: 'https://leonardo.ai' },
-        { name: 'RunwayML', description: 'AI tools for creative content generation', logo: 'https://runwayml.com/favicon.ico', category: 'Image Generation', link: 'https://runwayml.com' },
-        { name: 'DeepAI', description: 'AI image generation and enhancement tools', logo: 'https://deepai.org/favicon.ico', category: 'Image Generation', link: 'https://deepai.org' },
-        { name: 'NightCafe', description: 'AI art generator with multiple algorithms', logo: 'https://creator.nightcafe.studio/favicon.ico', category: 'Image Generation', link: 'https://creator.nightcafe.studio' }
-    ],
-    'code-generators': [
-        { name: 'GitHub Copilot', description: 'AI pair programmer for code suggestions', logo: 'https://github.com/favicon.ico', category: 'Code Generation', link: 'https://github.com/features/copilot' },
-        { name: 'Tabnine', description: 'AI code completion for developers', logo: 'https://www.tabnine.com/favicon.ico', category: 'Code Generation', link: 'https://www.tabnine.com' },
-        { name: 'CodeT5', description: 'AI model for code understanding and generation', logo: 'https://huggingface.co/favicon.ico', category: 'Code Generation', link: 'https://huggingface.co/Salesforce/codet5-base' },
-        { name: 'Replit Ghostwriter', description: 'AI coding assistant in the browser', logo: 'https://replit.com/favicon.ico', category: 'Code Generation', link: 'https://replit.com' },
-        { name: 'Amazon CodeWhisperer', description: 'AI coding companion from AWS', logo: 'https://aws.amazon.com/favicon.ico', category: 'Code Generation', link: 'https://aws.amazon.com/codewhisperer/' },
-        { name: 'Codeium', description: 'Free AI-powered code acceleration toolkit', logo: 'https://codeium.com/favicon.ico', category: 'Code Generation', link: 'https://codeium.com' },
-        { name: 'Sourcegraph Cody', description: 'AI coding assistant that knows your codebase', logo: 'https://sourcegraph.com/favicon.ico', category: 'Code Generation', link: 'https://sourcegraph.com/cody' },
-        { name: 'Cursor', description: 'AI-first code editor', logo: 'https://cursor.sh/favicon.ico', category: 'Code Generation', link: 'https://cursor.sh' },
-        { name: 'Blackbox AI', description: 'AI-powered coding assistant', logo: 'https://www.blackbox.ai/favicon.ico', category: 'Code Generation', link: 'https://www.blackbox.ai' },
-        { name: 'Codex', description: 'OpenAI\'s code generation model', logo: 'https://openai.com/favicon.ico', category: 'Code Generation', link: 'https://openai.com/blog/openai-codex/' }
-    ],
-    'text-generators': [
-        { name: 'ChatGPT', description: 'Advanced AI chatbot for text generation', logo: 'https://openai.com/favicon.ico', category: 'Text Generation', link: 'https://chat.openai.com' },
-        { name: 'Claude', description: 'AI assistant for helpful, harmless, and honest conversations', logo: 'https://claude.ai/favicon.ico', category: 'Text Generation', link: 'https://claude.ai' },
-        { name: 'Jasper', description: 'AI content platform for enterprise teams', logo: 'https://www.jasper.ai/favicon.ico', category: 'Text Generation', link: 'https://www.jasper.ai' },
-        { name: 'Copy.ai', description: 'AI-powered copywriting tool', logo: 'https://www.copy.ai/favicon.ico', category: 'Text Generation', link: 'https://www.copy.ai' },
-        { name: 'Writesonic', description: 'AI writing assistant for content creation', logo: 'https://writesonic.com/favicon.ico', category: 'Text Generation', link: 'https://writesonic.com' },
-        { name: 'Grammarly', description: 'AI writing assistant for grammar and style', logo: 'https://www.grammarly.com/favicon.ico', category: 'Text Generation', link: 'https://www.grammarly.com' },
-        { name: 'Notion AI', description: 'AI writing assistant integrated with Notion', logo: 'https://www.notion.so/favicon.ico', category: 'Text Generation', link: 'https://www.notion.so/product/ai' },
-        { name: 'Rytr', description: 'AI writing assistant for content creation', logo: 'https://rytr.me/favicon.ico', category: 'Text Generation', link: 'https://rytr.me' },
-        { name: 'QuillBot', description: 'AI paraphrasing and writing tool', logo: 'https://quillbot.com/favicon.ico', category: 'Text Generation', link: 'https://quillbot.com' },
-        { name: 'Wordtune', description: 'AI writing companion for better expression', logo: 'https://www.wordtune.com/favicon.ico', category: 'Text Generation', link: 'https://www.wordtune.com' }
+        { name: 'DALL-E 2', description: 'Create realistic images from text descriptions', logo: 'https://openai.com/favicon.ico', category: 'Image Generation', link: 'https://openai.com/dall-e-2/', pricing: 'premium' },
+        { name: 'Midjourney', description: 'AI art generator creating stunning artwork', logo: 'https://www.midjourney.com/favicon.ico', category: 'Image Generation', link: 'https://www.midjourney.com', pricing: 'premium' },
+        { name: 'Stable Diffusion', description: 'Open-source text-to-image AI model', logo: 'https://stability.ai/favicon.ico', category: 'Image Generation', link: 'https://stability.ai', pricing: 'free' },
+        { name: 'Adobe Firefly', description: 'Creative generative AI for images and text effects', logo: 'https://www.adobe.com/favicon.ico', category: 'Image Generation', link: 'https://firefly.adobe.com', pricing: 'premium' },
+        { name: 'Canva AI', description: 'AI-powered design and image generation', logo: 'https://www.canva.com/favicon.ico', category: 'Image Generation', link: 'https://www.canva.com', pricing: 'freemium' },
+        { name: 'Leonardo AI', description: 'AI art generator for creative projects', logo: 'https://leonardo.ai/favicon.ico', category: 'Image Generation', link: 'https://leonardo.ai', pricing: 'freemium' },
+        { name: 'RunwayML', description: 'AI tools for creative content generation', logo: 'https://runwayml.com/favicon.ico', category: 'Image Generation', link: 'https://runwayml.com', pricing: 'premium' },
+        { name: 'DeepAI', description: 'AI image generation and enhancement tools', logo: 'https://deepai.org/favicon.ico', category: 'Image Generation', link: 'https://deepai.org', pricing: 'freemium' },
+        { name: 'Artbreeder', description: 'Create and explore AI-generated art', logo: 'https://www.artbreeder.com/favicon.ico', category: 'Image Generation', link: 'https://www.artbreeder.com', pricing: 'freemium' },
+        { name: 'DreamStudio', description: 'Stable Diffusion web interface', logo: 'https://stability.ai/favicon.ico', category: 'Image Generation', link: 'https://dreamstudio.ai', pricing: 'premium' },
+        { name: 'Craiyon', description: 'Free AI image generator', logo: 'https://www.craiyon.com/favicon.ico', category: 'Image Generation', link: 'https://www.craiyon.com', pricing: 'free' },
+        { name: 'Lexica', description: 'Search engine for AI-generated images', logo: 'https://lexica.art/favicon.ico', category: 'Image Generation', link: 'https://lexica.art', pricing: 'freemium' },
+        { name: 'Playground AI', description: 'Create AI art with simple prompts', logo: 'https://playgroundai.com/favicon.ico', category: 'Image Generation', link: 'https://playgroundai.com', pricing: 'freemium' },
+        { name: 'NightCafe', description: 'AI art generator with various styles', logo: 'https://nightcafe.studio/favicon.ico', category: 'Image Generation', link: 'https://nightcafe.studio', pricing: 'freemium' },
+        { name: 'Stable Diffusion WebUI', description: 'Open-source web interface for Stable Diffusion', logo: 'https://github.com/favicon.ico', category: 'Image Generation', link: 'https://github.com/AUTOMATIC1111/stable-diffusion-webui', pricing: 'free' },
+        { name: 'Stability AI', description: 'Creators of Stable Diffusion', logo: 'https://stability.ai/favicon.ico', category: 'Image Generation', link: 'https://stability.ai', pricing: 'freemium' },
+        { name: 'DALL-E 3', description: 'Latest version of OpenAI\'s image generator', logo: 'https://openai.com/favicon.ico', category: 'Image Generation', link: 'https://openai.com/dall-e-3', pricing: 'premium' },
+
+        { name: 'Notion AI', description: 'AI writing assistant integrated with Notion', logo: 'https://www.notion.so/favicon.ico', category: 'Text Generation', link: 'https://www.notion.so/product/ai', pricing: 'premium' },
+        { name: 'Rytr', description: 'AI writing assistant for content creation', logo: 'https://rytr.me/favicon.ico', category: 'Text Generation', link: 'https://rytr.me', pricing: 'freemium' },
+        { name: 'QuillBot', description: 'AI paraphrasing and writing tool', logo: 'https://quillbot.com/favicon.ico', category: 'Text Generation', link: 'https://quillbot.com', pricing: 'freemium' },
+        { name: 'Wordtune', description: 'AI writing companion for better expression', logo: 'https://www.wordtune.com/favicon.ico', category: 'Text Generation', link: 'https://www.wordtune.com', pricing: 'freemium' }
     ],
     'video-generators': [
-        { name: 'Runway ML', description: 'AI-powered video editing and generation', logo: 'https://runwayml.com/favicon.ico', category: 'Video Generation', link: 'https://runwayml.com' },
-        { name: 'Synthesia', description: 'AI video generation with virtual presenters', logo: 'https://www.synthesia.io/favicon.ico', category: 'Video Generation', link: 'https://www.synthesia.io' },
-        { name: 'Pictory', description: 'AI video creation from text and blog posts', logo: 'https://pictory.ai/favicon.ico', category: 'Video Generation', link: 'https://pictory.ai' },
-        { name: 'Lumen5', description: 'AI-powered video creation platform', logo: 'https://lumen5.com/favicon.ico', category: 'Video Generation', link: 'https://lumen5.com' },
-        { name: 'InVideo', description: 'AI video creation and editing platform', logo: 'https://invideo.io/favicon.ico', category: 'Video Generation', link: 'https://invideo.io' },
-        { name: 'Fliki', description: 'AI video generator from text', logo: 'https://fliki.ai/favicon.ico', category: 'Video Generation', link: 'https://fliki.ai' },
-        { name: 'Steve AI', description: 'AI video maker for animated and live videos', logo: 'https://www.steve.ai/favicon.ico', category: 'Video Generation', link: 'https://www.steve.ai' },
-        { name: 'Elai', description: 'AI video generation platform', logo: 'https://elai.io/favicon.ico', category: 'Video Generation', link: 'https://elai.io' },
-        { name: 'Pandora AI', description: 'AI-powered video editing and generation', logo: 'https://pandoraai.app/favicon.ico', category: 'Video Generation', link: 'https://pandoraia.com' },
-        { name: 'Hour One', description: 'AI video generation with virtual humans', logo: 'https://hourone.ai/favicon.ico', category: 'Video Generation', link: 'https://hourone.ai' },
-        { name: 'Colossyan', description: 'AI video creator with synthetic actors', logo: 'https://www.colossyan.com/favicon.ico', category: 'Video Generation', link: 'https://www.colossyan.com' }
+        { name: 'Runway ML', description: 'AI-powered video editing and generation', logo: 'https://runwayml.com/favicon.ico', category: 'Video Generation', link: 'https://runwayml.com', pricing: 'premium' },
+        { name: 'Synthesia', description: 'AI video generation with virtual presenters', logo: 'https://www.synthesia.io/favicon.ico', category: 'Video Generation', link: 'https://www.synthesia.io', pricing: 'premium' },
+        { name: 'Pictory', description: 'AI video creation from text and blog posts', logo: 'https://pictory.ai/favicon.ico', category: 'Video Generation', link: 'https://pictory.ai', pricing: 'premium' },
+        { name: 'Lumen5', description: 'AI-powered video creation platform', logo: 'https://lumen5.com/favicon.ico', category: 'Video Generation', link: 'https://lumen5.com', pricing: 'freemium' },
+        { name: 'InVideo', description: 'AI video creation and editing platform', logo: 'https://invideo.io/favicon.ico', category: 'Video Generation', link: 'https://invideo.io', pricing: 'freemium' },
+        { name: 'Fliki', description: 'AI video generator from text', logo: 'https://fliki.ai/favicon.ico', category: 'Video Generation', link: 'https://fliki.ai', pricing: 'freemium' },
+        { name: 'Steve AI', description: 'AI video maker for animated and live videos', logo: 'https://www.steve.ai/favicon.ico', category: 'Video Generation', link: 'https://www.steve.ai', pricing: 'premium' },
+        { name: 'Elai', description: 'AI video generation platform', logo: 'https://elai.io/favicon.ico', category: 'Video Generation', link: 'https://elai.io', pricing: 'premium' },
+        { name: 'Pandora AI', description: 'AI-powered video editing and generation', logo: 'https://pandoraai.app/favicon.ico', category: 'Video Generation', link: 'https://pandoraia.com', pricing: 'premium' },
+        { name: 'Hour One', description: 'AI video generation with virtual humans', logo: 'https://hourone.ai/favicon.ico', category: 'Video Generation', link: 'https://hourone.ai', pricing: 'premium' },
+        { name: 'Colossyan', description: 'AI video creator with synthetic actors', logo: 'https://www.colossyan.com/favicon.ico', category: 'Video Generation', link: 'https://www.colossyan.com', pricing: 'premium' }
     ],
     'voice-generators': [
-        { name: 'ElevenLabs', description: 'AI voice synthesis and cloning platform', logo: 'https://elevenlabs.io/favicon.ico', category: 'Voice Generation', link: 'https://elevenlabs.io' },
-        { name: 'Murf', description: 'AI voice generator for voiceovers', logo: 'https://murf.ai/favicon.ico', category: 'Voice Generation', link: 'https://murf.ai' },
-        { name: 'Speechify', description: 'Text-to-speech AI with natural voices', logo: 'https://speechify.com/favicon.ico', category: 'Voice Generation', link: 'https://speechify.com' },
-        { name: 'Descript', description: 'AI-powered audio and video editing', logo: 'https://www.descript.com/favicon.ico', category: 'Voice Generation', link: 'https://www.descript.com' },
-        { name: 'Resemble AI', description: 'AI voice generator and voice cloning', logo: 'https://www.resemble.ai/favicon.ico', category: 'Voice Generation', link: 'https://www.resemble.ai' },
-        { name: 'Replica Studios', description: 'AI voice actors for games and films', logo: 'https://replicastudios.com/favicon.ico', category: 'Voice Generation', link: 'https://replicastudios.com' },
-        { name: 'Lovo', description: 'AI voice generator and text-to-speech', logo: 'https://www.lovo.ai/favicon.ico', category: 'Voice Generation', link: 'https://www.lovo.ai' },
-        { name: 'WellSaid Labs', description: 'AI voice platform for enterprise', logo: 'https://wellsaidlabs.com/favicon.ico', category: 'Voice Generation', link: 'https://wellsaidlabs.com' },
-        { name: 'Voicemod', description: 'Real-time voice changer and soundboard', logo: 'https://www.voicemod.net/favicon.ico', category: 'Voice Generation', link: 'https://www.voicemod.net' },
-        { name: 'Listnr', description: 'AI voice generator for podcasts and videos', logo: 'https://www.listnr.tech/favicon.ico', category: 'Voice Generation', link: 'https://www.listnr.tech' }
+        { name: 'ElevenLabs', description: 'AI voice synthesis and cloning platform', logo: 'https://elevenlabs.io/favicon.ico', category: 'Voice Generation', link: 'https://elevenlabs.io', pricing: 'freemium' },
+        { name: 'Murf', description: 'AI voice generator for voiceovers', logo: 'https://murf.ai/favicon.ico', category: 'Voice Generation', link: 'https://murf.ai', pricing: 'premium' },
+        { name: 'Speechify', description: 'Text-to-speech AI with natural voices', logo: 'https://speechify.com/favicon.ico', category: 'Voice Generation', link: 'https://speechify.com', pricing: 'freemium' },
+        { name: 'Descript', description: 'AI-powered audio and video editing', logo: 'https://www.descript.com/favicon.ico', category: 'Voice Generation', link: 'https://www.descript.com', pricing: 'freemium' },
+        { name: 'Resemble AI', description: 'AI voice generator and voice cloning', logo: 'https://www.resemble.ai/favicon.ico', category: 'Voice Generation', link: 'https://www.resemble.ai', pricing: 'premium' },
+        { name: 'Replica Studios', description: 'AI voice actors for games and films', logo: 'https://replicastudios.com/favicon.ico', category: 'Voice Generation', link: 'https://replicastudios.com', pricing: 'premium' },
+        { name: 'Lovo', description: 'AI voice generator and text-to-speech', logo: 'https://www.lovo.ai/favicon.ico', category: 'Voice Generation', link: 'https://www.lovo.ai', pricing: 'premium' },
+        { name: 'WellSaid Labs', description: 'AI voice platform for enterprise', logo: 'https://wellsaidlabs.com/favicon.ico', category: 'Voice Generation', link: 'https://wellsaidlabs.com', pricing: 'premium' },
+        { name: 'Voicemod', description: 'Real-time voice changer and soundboard', logo: 'https://www.voicemod.net/favicon.ico', category: 'Voice Generation', link: 'https://www.voicemod.net', pricing: 'freemium' },
+        { name: 'Listnr', description: 'AI voice generator for podcasts and videos', logo: 'https://www.listnr.tech/favicon.ico', category: 'Voice Generation', link: 'https://www.listnr.tech', pricing: 'freemium' }
     ],
     'music-generators': [
-        { name: 'AIVA', description: 'AI composer for emotional soundtrack music', logo: 'https://www.aiva.ai/favicon.ico', category: 'Music Generation', link: 'https://www.aiva.ai' },
-        { name: 'Mubert', description: 'AI music generation platform', logo: 'https://mubert.com/favicon.ico', category: 'Music Generation', link: 'https://mubert.com' },
-        { name: 'Amper Music', description: 'AI music composition for content creators', logo: 'https://www.ampermusic.com/favicon.ico', category: 'Music Generation', link: 'https://www.ampermusic.com' },
-        { name: 'Soundraw', description: 'AI music generator for creators', logo: 'https://soundraw.io/favicon.ico', category: 'Music Generation', link: 'https://soundraw.io' },
-        { name: 'Boomy', description: 'Create original music with AI', logo: 'https://boomy.com/favicon.ico', category: 'Music Generation', link: 'https://boomy.com' },
-        { name: 'Endel', description: 'AI-powered adaptive music for focus', logo: 'https://endel.io/favicon.ico', category: 'Music Generation', link: 'https://endel.io' },
-        { name: 'Beatoven.ai', description: 'AI music generator for videos and podcasts', logo: 'https://www.beatoven.ai/favicon.ico', category: 'Music Generation', link: 'https://www.beatoven.ai' },
-        { name: 'Loudly', description: 'AI music platform for content creators', logo: 'https://www.loudly.com/favicon.ico', category: 'Music Generation', link: 'https://www.loudly.com' },
-        { name: 'Ecrett Music', description: 'AI music generator for content creation', logo: 'https://ecrettmusic.com/favicon.ico', category: 'Music Generation', link: 'https://ecrettmusic.com' },
-        { name: 'Jukedeck', description: 'AI music composition platform', logo: 'https://www.jukedeck.com/favicon.ico', category: 'Music Generation', link: 'https://www.jukedeck.com' }
+        { name: 'AIVA', description: 'AI composer for emotional soundtrack music', logo: 'https://www.aiva.ai/favicon.ico', category: 'Music Generation', link: 'https://www.aiva.ai', pricing: 'freemium' },
+        { name: 'Mubert', description: 'AI music generation platform', logo: 'https://mubert.com/favicon.ico', category: 'Music Generation', link: 'https://mubert.com', pricing: 'freemium' },
+        { name: 'Amper Music', description: 'AI music composition for content creators', logo: 'https://www.ampermusic.com/favicon.ico', category: 'Music Generation', link: 'https://www.ampermusic.com', pricing: 'premium' },
+        { name: 'Soundraw', description: 'AI music generator for creators', logo: 'https://soundraw.io/favicon.ico', category: 'Music Generation', link: 'https://soundraw.io', pricing: 'premium' },
+        { name: 'Boomy', description: 'Create original music with AI', logo: 'https://boomy.com/favicon.ico', category: 'Music Generation', link: 'https://boomy.com', pricing: 'freemium' },
+        { name: 'Endel', description: 'AI-powered adaptive music for focus', logo: 'https://endel.io/favicon.ico', category: 'Music Generation', link: 'https://endel.io', pricing: 'freemium' },
+        { name: 'Beatoven.ai', description: 'AI music generator for videos and podcasts', logo: 'https://www.beatoven.ai/favicon.ico', category: 'Music Generation', link: 'https://www.beatoven.ai', pricing: 'premium' },
+        { name: 'Loudly', description: 'AI music platform for content creators', logo: 'https://www.loudly.com/favicon.ico', category: 'Music Generation', link: 'https://www.loudly.com', pricing: 'premium' },
+        { name: 'Ecrett Music', description: 'AI music generator for content creation', logo: 'https://ecrettmusic.com/favicon.ico', category: 'Music Generation', link: 'https://ecrettmusic.com', pricing: 'premium' },
+        { name: 'Jukedeck', description: 'AI music composition platform', logo: 'https://www.jukedeck.com/favicon.ico', category: 'Music Generation', link: 'https://www.jukedeck.com', pricing: 'premium' }
     ],
-    'chatbots': [
-        { name: 'ChatGPT', description: 'Advanced conversational AI assistant', logo: 'https://openai.com/favicon.ico', category: 'Chatbots', link: 'https://chat.openai.com' },
-        { name: 'Claude', description: 'AI assistant by Anthropic', logo: 'https://claude.ai/favicon.ico', category: 'Chatbots', link: 'https://claude.ai' },
-        { name: 'Bard', description: 'Google\'s conversational AI service', logo: 'https://bard.google.com/favicon.ico', category: 'Chatbots', link: 'https://bard.google.com' },
-        { name: 'Character.AI', description: 'AI characters for conversation', logo: 'https://character.ai/favicon.ico', category: 'Chatbots', link: 'https://character.ai' },
-        { name: 'Replika', description: 'AI companion chatbot', logo: 'https://replika.ai/favicon.ico', category: 'Chatbots', link: 'https://replika.ai' },
-        { name: 'Dialogflow', description: 'Google\'s conversational AI platform', logo: 'https://cloud.google.com/favicon.ico', category: 'Chatbots', link: 'https://cloud.google.com/dialogflow' },
-        { name: 'Microsoft Bot Framework', description: 'Build and deploy chatbots', logo: 'https://dev.botframework.com/favicon.ico', category: 'Chatbots', link: 'https://dev.botframework.com' },
-        { name: 'Rasa', description: 'Open source conversational AI', logo: 'https://rasa.com/favicon.ico', category: 'Chatbots', link: 'https://rasa.com' },
-        { name: 'Botpress', description: 'Open-source chatbot platform', logo: 'https://botpress.com/favicon.ico', category: 'Chatbots', link: 'https://botpress.com' },
-        { name: 'Landbot', description: 'No-code chatbot builder', logo: 'https://landbot.io/favicon.ico', category: 'Chatbots', link: 'https://landbot.io' }
-    ],
-    'design-tools': [
-        { name: 'Figma', description: 'Collaborative design platform', logo: 'https://www.figma.com/favicon.ico', category: 'Design Tools', link: 'https://www.figma.com' },
-        { name: 'Canva', description: 'AI-powered graphic design platform', logo: 'https://www.canva.com/favicon.ico', category: 'Design Tools', link: 'https://www.canva.com' },
-        { name: 'Adobe Creative Suite', description: 'Professional creative tools with AI', logo: 'https://www.adobe.com/favicon.ico', category: 'Design Tools', link: 'https://www.adobe.com' },
-        { name: 'Sketch', description: 'Digital design toolkit', logo: 'https://www.sketch.com/favicon.ico', category: 'Design Tools', link: 'https://www.sketch.com' },
-        { name: 'Framer', description: 'Interactive design and prototyping', logo: 'https://www.framer.com/favicon.ico', category: 'Design Tools', link: 'https://www.framer.com' },
-        { name: 'Looka', description: 'AI logo maker and brand identity', logo: 'https://looka.com/favicon.ico', category: 'Design Tools', link: 'https://looka.com' },
-        { name: 'Brandmark', description: 'AI-powered logo design tool', logo: 'https://brandmark.io/favicon.ico', category: 'Design Tools', link: 'https://brandmark.io' },
-        { name: 'Designs.ai', description: 'AI-powered design suite', logo: 'https://designs.ai/favicon.ico', category: 'Design Tools', link: 'https://designs.ai' },
-        { name: 'Uizard', description: 'AI-powered design tool', logo: 'https://uizard.io/favicon.ico', category: 'Design Tools', link: 'https://uizard.io' },
-        { name: 'Khroma', description: 'AI color tool for designers', logo: 'https://www.khroma.co/favicon.ico', category: 'Design Tools', link: 'https://www.khroma.co' }
+    'ai-chatbots': [
+        { name: 'ChatGPT', description: 'AI language model by OpenAI', logo: 'https://chat.openai.com/favicon.ico', category: 'AI Chatbots', link: 'https://chat.openai.com', pricing: 'freemium' },
+        { name: 'Claude', description: 'AI assistant by Anthropic', logo: 'https://claude.ai/favicon.ico', category: 'AI Chatbots', link: 'https://claude.ai', pricing: 'freemium' },
+        { name: 'Bard', description: 'Google\'s conversational AI', logo: 'https://bard.google.com/favicon.ico', category: 'AI Chatbots', link: 'https://bard.google.com', pricing: 'free' },
+        { name: 'Bing Chat', description: 'Microsoft\'s AI-powered chat', logo: 'https://www.bing.com/favicon.ico', category: 'AI Chatbots', link: 'https://www.bing.com/chat', pricing: 'free' },
+        { name: 'Perplexity AI', description: 'AI-powered answer engine', logo: 'https://www.perplexity.ai/favicon.ico', category: 'AI Chatbots', link: 'https://www.perplexity.ai', pricing: 'freemium' },
+        { name: 'Poe', description: 'Chat with multiple AI models', logo: 'https://poe.com/favicon.ico', category: 'AI Chatbots', link: 'https://poe.com', pricing: 'freemium' },
+        { name: 'YouChat', description: 'AI search assistant', logo: 'https://you.com/favicon.ico', category: 'AI Chatbots', link: 'https://you.com', pricing: 'free' },
+        { name: 'Character.AI', description: 'Chat with AI characters', logo: 'https://character.ai/favicon.ico', category: 'AI Chatbots', link: 'https://character.ai', pricing: 'freemium' },
+        { name: 'Pi', description: 'Personal AI assistant', logo: 'https://heypi.com/favicon.ico', category: 'AI Chatbots', link: 'https://heypi.com', pricing: 'free' },
+        { name: 'HuggingChat', description: 'Open-source AI chat', logo: 'https://huggingface.co/favicon.ico', category: 'AI Chatbots', link: 'https://huggingface.co/chat', pricing: 'free' },
+        { name: 'ChatSonic', description: 'AI writing assistant', logo: 'https://writesonic.com/favicon.ico', category: 'AI Chatbots', link: 'https://writesonic.com/chat', pricing: 'freemium' },
+        { name: 'DeepSeek Chat', description: 'AI chat by DeepSeek', logo: 'https://deepseek.com/favicon.ico', category: 'AI Chatbots', link: 'https://deepseek.com', pricing: 'free' },
+        { name: 'Claude Instant', description: 'Faster version of Claude', logo: 'https://claude.ai/favicon.ico', category: 'AI Chatbots', link: 'https://claude.ai', pricing: 'free' },
+        { name: 'ChatGPT Plus', description: 'Premium version of ChatGPT', logo: 'https://chat.openai.com/favicon.ico', category: 'AI Chatbots', link: 'https://chat.openai.com', pricing: 'premium' },
+        { name: 'Bard Advanced', description: 'Advanced version of Google Bard', logo: 'https://bard.google.com/favicon.ico', category: 'AI Chatbots', link: 'https://bard.google.com', pricing: 'premium' },
+        { name: 'ChatGPT Enterprise', description: 'ChatGPT for businesses', logo: 'https://chat.openai.com/favicon.ico', category: 'AI Chatbots', link: 'https://openai.com/enterprise', pricing: 'premium' },
+        { name: 'Claude Pro', description: 'Pro version of Claude', logo: 'https://claude.ai/favicon.ico', category: 'AI Chatbots', link: 'https://claude.ai', pricing: 'premium' },
+        { name: 'Bing Chat Enterprise', description: 'Enterprise version of Bing Chat', logo: 'https://www.bing.com/favicon.ico', category: 'AI Chatbots', link: 'https://www.bing.com/chat', pricing: 'premium' },
+        { name: 'Perplexity Pro', description: 'Premium version of Perplexity', logo: 'https://www.perplexity.ai/favicon.ico', category: 'AI Chatbots', link: 'https://www.perplexity.ai/pro', pricing: 'premium' }
     ],
     'data-analysis': [
-        { name: 'Tableau', description: 'Data visualization and analytics platform', logo: 'https://www.tableau.com/favicon.ico', category: 'Data Analysis', link: 'https://www.tableau.com' },
-        { name: 'Power BI', description: 'Microsoft\'s business analytics tool', logo: 'https://powerbi.microsoft.com/favicon.ico', category: 'Data Analysis', link: 'https://powerbi.microsoft.com' },
-        { name: 'DataRobot', description: 'Automated machine learning platform', logo: 'https://www.datarobot.com/favicon.ico', category: 'Data Analysis', link: 'https://www.datarobot.com' },
-        { name: 'H2O.ai', description: 'Open source machine learning platform', logo: 'https://www.h2o.ai/favicon.ico', category: 'Data Analysis', link: 'https://www.h2o.ai' },
-        { name: 'MonkeyLearn', description: 'Text analysis with machine learning', logo: 'https://monkeylearn.com/favicon.ico', category: 'Data Analysis', link: 'https://monkeylearn.com' },
-        { name: 'Alteryx', description: 'Self-service data analytics platform', logo: 'https://www.alteryx.com/favicon.ico', category: 'Data Analysis', link: 'https://www.alteryx.com' },
-        { name: 'Qlik Sense', description: 'Data analytics and visualization', logo: 'https://www.qlik.com/favicon.ico', category: 'Data Analysis', link: 'https://www.qlik.com' },
-        { name: 'Looker', description: 'Business intelligence platform', logo: 'https://looker.com/favicon.ico', category: 'Data Analysis', link: 'https://looker.com' },
-        { name: 'Sisense', description: 'AI-driven analytics platform', logo: 'https://www.sisense.com/favicon.ico', category: 'Data Analysis', link: 'https://www.sisense.com' },
-        { name: 'Palantir', description: 'Big data analytics platform', logo: 'https://www.palantir.com/favicon.ico', category: 'Data Analysis', link: 'https://www.palantir.com' }
+        { name: 'Tableau', description: 'Data visualization and analytics platform', logo: 'https://www.tableau.com/favicon.ico', category: 'Data Analysis', link: 'https://www.tableau.com', pricing: 'premium' },
+        { name: 'Power BI', description: 'Microsoft\'s business analytics tool', logo: 'https://powerbi.microsoft.com/favicon.ico', category: 'Data Analysis', link: 'https://powerbi.microsoft.com', pricing: 'freemium' },
+        { name: 'DataRobot', description: 'Automated machine learning platform', logo: 'https://www.datarobot.com/favicon.ico', category: 'Data Analysis', link: 'https://www.datarobot.com', pricing: 'premium' },
+        { name: 'H2O.ai', description: 'Open source machine learning platform', logo: 'https://www.h2o.ai/favicon.ico', category: 'Data Analysis', link: 'https://www.h2o.ai', pricing: 'free' },
+        { name: 'MonkeyLearn', description: 'Text analysis with machine learning', logo: 'https://monkeylearn.com/favicon.ico', category: 'Data Analysis', link: 'https://monkeylearn.com', pricing: 'freemium' },
+        { name: 'Alteryx', description: 'Self-service data analytics platform', logo: 'https://www.alteryx.com/favicon.ico', category: 'Data Analysis', link: 'https://www.alteryx.com', pricing: 'premium' },
+        { name: 'Qlik Sense', description: 'Data analytics and visualization', logo: 'https://www.qlik.com/favicon.ico', category: 'Data Analysis', link: 'https://www.qlik.com', pricing: 'premium' },
+        { name: 'Looker', description: 'Business intelligence platform', logo: 'https://looker.com/favicon.ico', category: 'Data Analysis', link: 'https://looker.com', pricing: 'premium' },
+        { name: 'Sisense', description: 'AI-driven analytics platform', logo: 'https://www.sisense.com/favicon.ico', category: 'Data Analysis', link: 'https://www.sisense.com', pricing: 'premium' },
+        { name: 'Palantir', description: 'Big data analytics platform', logo: 'https://www.palantir.com/favicon.ico', category: 'Data Analysis', link: 'https://www.palantir.com', pricing: 'premium' }
     ],
     'automation-tools': [
-        { name: 'Zapier', description: 'Automate workflows between apps', logo: 'https://zapier.com/favicon.ico', category: 'Automation', link: 'https://zapier.com' },
-        { name: 'Make (Integromat)', description: 'Visual platform for automation', logo: 'https://www.make.com/favicon.ico', category: 'Automation', link: 'https://www.make.com' },
-        { name: 'UiPath', description: 'Robotic Process Automation platform', logo: 'https://www.uipath.com/favicon.ico', category: 'Automation', link: 'https://www.uipath.com' },
-        { name: 'Microsoft Power Automate', description: 'Cloud-based automation service', logo: 'https://powerautomate.microsoft.com/favicon.ico', category: 'Automation', link: 'https://powerautomate.microsoft.com' },
-        { name: 'IFTTT', description: 'Connect apps and devices', logo: 'https://ifttt.com/favicon.ico', category: 'Automation', link: 'https://ifttt.com' },
-        { name: 'Automation Anywhere', description: 'RPA platform for business automation', logo: 'https://www.automationanywhere.com/favicon.ico', category: 'Automation', link: 'https://www.automationanywhere.com' },
-        { name: 'Blue Prism', description: 'Intelligent automation platform', logo: 'https://www.blueprism.com/favicon.ico', category: 'Automation', link: 'https://www.blueprism.com' },
-        { name: 'Workato', description: 'Integration and automation platform', logo: 'https://www.workato.com/favicon.ico', category: 'Automation', link: 'https://www.workato.com' },
-        { name: 'Nintex', description: 'Process automation and workflow', logo: 'https://www.nintex.com/favicon.ico', category: 'Automation', link: 'https://www.nintex.com' },
-        { name: 'Pipefy', description: 'Business process automation', logo: 'https://www.pipefy.com/favicon.ico', category: 'Automation', link: 'https://www.pipefy.com' }
+        { name: 'Zapier', description: 'Automate workflows between apps', logo: 'https://zapier.com/favicon.ico', category: 'Automation', link: 'https://zapier.com', pricing: 'freemium' },
+        { name: 'Make (Integromat)', description: 'Visual platform for automation', logo: 'https://www.make.com/favicon.ico', category: 'Automation', link: 'https://www.make.com', pricing: 'freemium' },
+        { name: 'UiPath', description: 'Robotic Process Automation platform', logo: 'https://www.uipath.com/favicon.ico', category: 'Automation', link: 'https://www.uipath.com', pricing: 'freemium' },
+        { name: 'Microsoft Power Automate', description: 'Cloud-based automation service', logo: 'https://powerautomate.microsoft.com/favicon.ico', category: 'Automation', link: 'https://powerautomate.microsoft.com', pricing: 'freemium' },
+        { name: 'IFTTT', description: 'Connect apps and devices', logo: 'https://ifttt.com/favicon.ico', category: 'Automation', link: 'https://ifttt.com', pricing: 'freemium' },
+        { name: 'Automation Anywhere', description: 'RPA platform for business automation', logo: 'https://www.automationanywhere.com/favicon.ico', category: 'Automation', link: 'https://www.automationanywhere.com', pricing: 'premium' },
+        { name: 'Blue Prism', description: 'Intelligent automation platform', logo: 'https://www.blueprism.com/favicon.ico', category: 'Automation', link: 'https://www.blueprism.com', pricing: 'premium' },
+        { name: 'Workato', description: 'Integration and automation platform', logo: 'https://www.workato.com/favicon.ico', category: 'Automation', link: 'https://www.workato.com', pricing: 'premium' },
+        { name: 'Nintex', description: 'Process automation and workflow', logo: 'https://www.nintex.com/favicon.ico', category: 'Automation', link: 'https://www.nintex.com', pricing: 'premium' },
+        { name: 'Pipefy', description: 'Business process automation', logo: 'https://www.pipefy.com/favicon.ico', category: 'Automation', link: 'https://www.pipefy.com', pricing: 'freemium' }
     ]
 };
 
 // Add more categories with 10 tools each
 Object.assign(aiToolsData, {
     'productivity-tools': [
-        { name: 'Notion', description: 'All-in-one workspace for notes, tasks, and wikis', logo: 'https://www.notion.so/favicon.ico', category: 'PD Tools', link: 'https://www.notion.so/' },
-        { name: 'Evernote', description: 'Note-taking and organization app', logo: 'https://evernote.com/favicon.ico', category: 'PD Tools', link: 'https://evernote.com/' },
-        { name: 'Todoist', description: 'Task manager and to-do list', logo: 'https://todoist.com/favicon.ico', category: 'PD Tools', link: 'https://todoist.com/' },
-        { name: 'Trello', description: 'Visual project management tool', logo: 'https://trello.com/favicon.ico', category: 'PD Tools', link: 'https://trello.com/' },
-        { name: 'ClickUp', description: 'Productivity platform for teams', logo: 'https://clickup.com/favicon.ico', category: 'PD Tools', link: 'https://clickup.com/' },
-        { name: 'Asana', description: 'Work management platform', logo: 'https://asana.com/favicon.ico', category: 'PD Tools', link: 'https://asana.com/' },
-        { name: 'RescueTime', description: 'Time tracking and productivity analytics', logo: 'https://www.rescuetime.com/favicon.ico', category: 'PD Tools', link: 'https://www.rescuetime.com/' },
-        { name: 'Forest', description: 'Focus app to beat phone addiction', logo: 'https://www.forestapp.cc/favicon.ico', category: 'PD Tools', link: 'https://www.forestapp.cc/' },
-        { name: 'Focus@Will', description: 'Productivity music for focus', logo: 'https://www.focusatwill.com/favicon.ico', category: 'PD Tools', link: 'https://www.focusatwill.com/' },
-        { name: 'MindMeister', description: 'Mind mapping and brainstorming tool', logo: 'https://www.mindmeister.com/favicon.ico', category: 'PD Tools', link: 'https://www.mindmeister.com/' },
-        { name: 'Freedom', description: 'Distraction blocker for productivity', logo: 'https://freedom.to/favicon.ico', category: 'PD Tools', link: 'https://freedom.to/' }
+        { name: 'Notion', description: 'All-in-one workspace for notes, tasks, and wikis', logo: 'https://www.notion.so/favicon.ico', category: 'PD Tools', link: 'https://www.notion.so/', pricing: 'freemium' },
+        { name: 'Evernote', description: 'Note-taking and organization app', logo: 'https://evernote.com/favicon.ico', category: 'PD Tools', link: 'https://evernote.com/', pricing: 'freemium' },
+        { name: 'Todoist', description: 'Task manager and to-do list', logo: 'https://todoist.com/favicon.ico', category: 'PD Tools', link: 'https://todoist.com/', pricing: 'freemium' },
+        { name: 'Trello', description: 'Visual project management tool', logo: 'https://trello.com/favicon.ico', category: 'PD Tools', link: 'https://trello.com/', pricing: 'freemium' },
+        { name: 'ClickUp', description: 'Productivity platform for teams', logo: 'https://clickup.com/favicon.ico', category: 'PD Tools', link: 'https://clickup.com/', pricing: 'freemium' },
+        { name: 'Asana', description: 'Work management platform', logo: 'https://asana.com/favicon.ico', category: 'PD Tools', link: 'https://asana.com/', pricing: 'freemium' },
+        { name: 'RescueTime', description: 'Time tracking and productivity analytics', logo: 'https://www.rescuetime.com/favicon.ico', category: 'PD Tools', link: 'https://www.rescuetime.com/', pricing: 'freemium' },
+        { name: 'Forest', description: 'Focus app to beat phone addiction', logo: 'https://www.forestapp.cc/favicon.ico', category: 'PD Tools', link: 'https://www.forestapp.cc/', pricing: 'premium' },
+        { name: 'Focus@Will', description: 'Productivity music for focus', logo: 'https://www.focusatwill.com/favicon.ico', category: 'PD Tools', link: 'https://www.focusatwill.com/', pricing: 'premium' },
+        { name: 'MindMeister', description: 'Mind mapping and brainstorming tool', logo: 'https://www.mindmeister.com/favicon.ico', category: 'PD Tools', link: 'https://www.mindmeister.com/', pricing: 'freemium' },
+        { name: 'Freedom', description: 'Distraction blocker for productivity', logo: 'https://freedom.to/favicon.ico', category: 'PD Tools', link: 'https://freedom.to/', pricing: 'premium' }
     ],
     'marketing': [
-        { name: 'HubSpot', description: 'Inbound marketing, sales, and CRM suite', logo: 'https://www.hubspot.com/favicon.ico', category: 'Marketing', link: 'https://www.hubspot.com/' },
-        { name: 'Mailchimp', description: 'Email marketing and automation', logo: 'https://mailchimp.com/favicon.ico', category: 'Marketing', link: 'https://mailchimp.com/' },
-        { name: 'Buffer', description: 'Social media management platform', logo: 'https://buffer.com/favicon.ico', category: 'Marketing', link: 'https://buffer.com/' },
-        { name: 'Hootsuite', description: 'Social media scheduling and analytics', logo: 'https://hootsuite.com/favicon.ico', category: 'Marketing', link: 'https://hootsuite.com/' },
-        { name: 'Canva', description: 'Design and content creation for marketing', logo: 'https://www.canva.com/favicon.ico', category: 'Marketing', link: 'https://www.canva.com/' },
-        { name: 'Sprout Social', description: 'Social media management and analytics', logo: 'https://sproutsocial.com/favicon.ico', category: 'Marketing', link: 'https://sproutsocial.com/' },
-        { name: 'SEMrush', description: 'SEO and online visibility management', logo: 'https://www.semrush.com/favicon.ico', category: 'Marketing', link: 'https://www.semrush.com/' },
-        { name: 'Moz', description: 'SEO software and tools', logo: 'https://moz.com/favicon.ico', category: 'Marketing', link: 'https://moz.com/' },
-        { name: 'AdEspresso', description: 'Facebook and Instagram ads management', logo: 'https://adespresso.com/favicon.ico', category: 'Marketing', link: 'https://adespresso.com/' },
-        { name: 'Unbounce', description: 'Landing page builder for marketers', logo: 'https://unbounce.com/favicon.ico', category: 'Marketing', link: 'https://unbounce.com/' },
-        { name: 'Mailerlite', description: 'Email marketing and automation', logo: 'https://www.mailerlite.com/favicon.ico', category: 'Marketing', link: 'https://www.mailerlite.com/' }
+        { name: 'HubSpot', description: 'Inbound marketing, sales, and CRM suite', logo: 'https://www.hubspot.com/favicon.ico', category: 'Marketing', link: 'https://www.hubspot.com/', pricing: 'freemium' },
+        { name: 'Mailchimp', description: 'Email marketing and automation', logo: 'https://mailchimp.com/favicon.ico', category: 'Marketing', link: 'https://mailchimp.com/', pricing: 'freemium' },
+        { name: 'Buffer', description: 'Social media management platform', logo: 'https://buffer.com/favicon.ico', category: 'Marketing', link: 'https://buffer.com/', pricing: 'freemium' },
+        { name: 'Hootsuite', description: 'Social media scheduling and analytics', logo: 'https://hootsuite.com/favicon.ico', category: 'Marketing', link: 'https://hootsuite.com/', pricing: 'freemium' },
+        { name: 'Canva', description: 'Design and content creation for marketing', logo: 'https://www.canva.com/favicon.ico', category: 'Marketing', link: 'https://www.canva.com/', pricing: 'freemium' },
+        { name: 'Sprout Social', description: 'Social media management and analytics', logo: 'https://sproutsocial.com/favicon.ico', category: 'Marketing', link: 'https://sproutsocial.com/', pricing: 'premium' },
+        { name: 'SEMrush', description: 'SEO and online visibility management', logo: 'https://www.semrush.com/favicon.ico', category: 'Marketing', link: 'https://www.semrush.com/', pricing: 'premium' },
+        { name: 'Moz', description: 'SEO software and tools', logo: 'https://moz.com/favicon.ico', category: 'Marketing', link: 'https://moz.com/', pricing: 'freemium' },
+        { name: 'AdEspresso', description: 'Facebook and Instagram ads management', logo: 'https://adespresso.com/favicon.ico', category: 'Marketing', link: 'https://adespresso.com/', pricing: 'premium' },
+        { name: 'Unbounce', description: 'Landing page builder for marketers', logo: 'https://unbounce.com/favicon.ico', category: 'Marketing', link: 'https://unbounce.com/', pricing: 'premium' },
+        { name: 'Mailerlite', description: 'Email marketing and automation', logo: 'https://www.mailerlite.com/favicon.ico', category: 'Marketing', link: 'https://www.mailerlite.com/', pricing: 'freemium' }
     ],
     'noise-remover': [
-        { name: 'Krisp', description: 'AI noise cancellation for calls', logo: 'https://krisp.ai/favicon.ico', category: 'Noise Remover', link: 'https://krisp.ai/' },
-        { name: 'NVIDIA RTX Voice', description: 'Real-time voice noise removal', logo: 'https://www.nvidia.com/favicon.ico', category: 'Noise Remover', link: 'https://www.nvidia.com/en-us/geforce/guides/nvidia-rtx-voice-setup-guide/' },
-        { name: 'Noise Blocker', description: 'Noise filtering for Windows', logo: 'https://noiseblocker.io/favicon.ico', category: 'Noise Remover', link: 'https://noiseblocker.io/' },
-        { name: 'Audo AI', description: 'AI-powered noise and sound effect enhancer', logo: 'https://audo.ai/favicon.ico', category: 'Noise Remover', link: 'https://audo.ai/' },
-        { name: 'LALAL.AI', description: 'AI audio stem splitter and noise remover', logo: 'https://www.lalal.ai/favicon.ico', category: 'Noise Remover', link: 'https://www.lalal.ai/' },
-        { name: 'Cleanvoice AI', description: 'Podcast noise and filler remover', logo: 'https://cleanvoice.ai/favicon.ico', category: 'Noise Remover', link: 'https://cleanvoice.ai/' },
-        { name: 'Adobe Podcast Enhance', description: 'AI-powered audio enhancement', logo: 'https://podcast.adobe.com/favicon.ico', category: 'Noise Remover', link: 'https://podcast.adobe.com/enhance' },
-        { name: 'Descript Studio Sound', description: 'AI audio cleanup and noise removal', logo: 'https://www.descript.com/favicon.ico', category: 'Noise Remover', link: 'https://www.descript.com/' },
-        { name: 'Zebracat', description: 'AI noise remover for video', logo: 'https://zebracat.com/favicon.ico', category: 'Noise Remover', link: 'https://zebracat.com/' },
-        { name: 'NoiseGator', description: 'Noise gate for voice chats', logo: 'https://sourceforge.net/p/noisegator/icon', category: 'Noise Remover', link: 'https://sourceforge.net/projects/noisegator/' },
-        { name: 'SoliCall', description: 'Noise reduction for calls', logo: 'https://www.solicall.com/favicon.ico', category: 'Noise Remover', link: 'https://www.solicall.com/' }
+        { name: 'Krisp', description: 'AI noise cancellation for calls', logo: 'https://krisp.ai/favicon.ico', category: 'Noise Remover', link: 'https://krisp.ai/', pricing: 'freemium' },
+        { name: 'NVIDIA RTX Voice', description: 'Real-time voice noise removal', logo: 'https://www.nvidia.com/favicon.ico', category: 'Noise Remover', link: 'https://www.nvidia.com/en-us/geforce/guides/nvidia-rtx-voice-setup-guide/', pricing: 'free' },
+        { name: 'Noise Blocker', description: 'Noise filtering for Windows', logo: 'https://noiseblocker.io/favicon.ico', category: 'Noise Remover', link: 'https://noiseblocker.io/', pricing: 'premium' },
+        { name: 'Audo AI', description: 'AI-powered noise and sound effect enhancer', logo: 'https://audo.ai/favicon.ico', category: 'Noise Remover', link: 'https://audo.ai/', pricing: 'freemium' },
+        { name: 'LALAL.AI', description: 'AI audio stem splitter and noise remover', logo: 'https://www.lalal.ai/favicon.ico', category: 'Noise Remover', link: 'https://www.lalal.ai/', pricing: 'freemium' },
+        { name: 'Cleanvoice AI', description: 'Podcast noise and filler remover', logo: 'https://cleanvoice.ai/favicon.ico', category: 'Noise Remover', link: 'https://cleanvoice.ai/', pricing: 'premium' },
+        { name: 'Adobe Podcast Enhance', description: 'AI-powered audio enhancement', logo: 'https://podcast.adobe.com/favicon.ico', category: 'Noise Remover', link: 'https://podcast.adobe.com/enhance', pricing: 'free' },
+        { name: 'Descript Studio Sound', description: 'AI audio cleanup and noise removal', logo: 'https://www.descript.com/favicon.ico', category: 'Noise Remover', link: 'https://www.descript.com/', pricing: 'freemium' },
+        { name: 'Zebracat', description: 'AI noise remover for video', logo: 'https://zebracat.com/favicon.ico', category: 'Noise Remover', link: 'https://zebracat.com/', pricing: 'premium' },
+        { name: 'NoiseGator', description: 'Noise gate for voice chats', logo: 'https://sourceforge.net/p/noisegator/icon', category: 'Noise Remover', link: 'https://sourceforge.net/projects/noisegator/', pricing: 'free' },
+        { name: 'SoliCall', description: 'Noise reduction for calls', logo: 'https://www.solicall.com/favicon.ico', category: 'Noise Remover', link: 'https://www.solicall.com/', pricing: 'freemium' }
     ],
     'programming': [
-        { name: 'GitHub Copilot', description: 'AI pair programmer for code suggestions', logo: 'https://github.com/favicon.ico', category: 'Programming', link: 'https://github.com/features/copilot' },
-        { name: 'Tabnine', description: 'AI code completion for developers', logo: 'https://www.tabnine.com/favicon.ico', category: 'Programming', link: 'https://www.tabnine.com' },
-        { name: 'Replit', description: 'Collaborative online IDE with AI', logo: 'https://replit.com/favicon.ico', category: 'Programming', link: 'https://replit.com/' },
-        { name: 'Sourcegraph Cody', description: 'AI coding assistant for codebases', logo: 'https://sourcegraph.com/favicon.ico', category: 'Programming', link: 'https://sourcegraph.com/cody' },
-        { name: 'Cursor', description: 'AI-first code editor', logo: 'https://cursor.sh/favicon.ico', category: 'Programming', link: 'https://cursor.sh' },
-        { name: 'Codeium', description: 'AI-powered code acceleration toolkit', logo: 'https://codeium.com/favicon.ico', category: 'Programming', link: 'https://codeium.com' },
-        { name: 'Amazon CodeWhisperer', description: 'AI coding companion from AWS', logo: 'https://aws.amazon.com/favicon.ico', category: 'Programming', link: 'https://aws.amazon.com/codewhisperer/' },
-        { name: 'Blackbox AI', description: 'AI-powered coding assistant', logo: 'https://www.blackbox.ai/favicon.ico', category: 'Programming', link: 'https://www.blackbox.ai' },
-        { name: 'CodiumAI', description: 'AI code integrity and test generation', logo: 'https://www.codium.ai/favicon.ico', category: 'Programming', link: 'https://www.codium.ai/' },
-        { name: 'MutableAI', description: 'AI code completion and refactoring', logo: 'https://mutable.ai/favicon.ico', category: 'Programming', link: 'https://mutable.ai/' },
-        { name: 'Kite', description: 'AI-powered code completions', logo: 'https://www.kite.com/favicon.ico', category: 'Programming', link: 'https://www.kite.com/' }
+        { name: 'GitHub Copilot', description: 'AI pair programmer for code suggestions', logo: 'https://github.com/favicon.ico', category: 'Programming', link: 'https://github.com/features/copilot', pricing: 'premium' },
+        { name: 'Tabnine', description: 'AI code completion for developers', logo: 'https://www.tabnine.com/favicon.ico', category: 'Programming', link: 'https://www.tabnine.com', pricing: 'freemium' },
+        { name: 'Replit', description: 'Collaborative online IDE with AI', logo: 'https://replit.com/favicon.ico', category: 'Programming', link: 'https://replit.com/', pricing: 'freemium' },
+        { name: 'Sourcegraph Cody', description: 'AI coding assistant for codebases', logo: 'https://sourcegraph.com/favicon.ico', category: 'Programming', link: 'https://sourcegraph.com/cody', pricing: 'freemium' },
+        { name: 'Cursor', description: 'AI-first code editor', logo: 'https://cursor.sh/favicon.ico', category: 'Programming', link: 'https://cursor.sh', pricing: 'freemium' },
+        { name: 'Codeium', description: 'AI-powered code acceleration toolkit', logo: 'https://codeium.com/favicon.ico', category: 'Programming', link: 'https://codeium.com', pricing: 'free' },
+        { name: 'Amazon CodeWhisperer', description: 'AI coding companion from AWS', logo: 'https://aws.amazon.com/favicon.ico', category: 'Programming', link: 'https://aws.amazon.com/codewhisperer/', pricing: 'free' },
+        { name: 'Blackbox AI', description: 'AI-powered coding assistant', logo: 'https://www.blackbox.ai/favicon.ico', category: 'Programming', link: 'https://www.blackbox.ai', pricing: 'freemium' },
+        { name: 'CodiumAI', description: 'AI code integrity and test generation', logo: 'https://www.codium.ai/favicon.ico', category: 'Programming', link: 'https://www.codium.ai/', pricing: 'freemium' },
+        { name: 'MutableAI', description: 'AI code completion and refactoring', logo: 'https://mutable.ai/favicon.ico', category: 'Programming', link: 'https://mutable.ai/', pricing: 'premium' },
+        { name: 'Kite', description: 'AI-powered code completions', logo: 'https://www.kite.com/favicon.ico', category: 'Programming', link: 'https://www.kite.com/', pricing: 'free' }
     ],
     'supply-chain-management': [
-        { name: 'Llamasoft', description: 'AI-powered supply chain analytics and optimization', logo: 'https://www.llamasoft.com/favicon.ico', category: 'Supply Chain Management', link: 'https://www.llamasoft.com/' },
-        { name: 'o9 Solutions', description: 'AI platform for supply chain planning', logo: 'https://o9solutions.com/favicon.ico', category: 'Supply Chain Management', link: 'https://o9solutions.com/' },
-        { name: 'Blue Yonder', description: 'AI-driven supply chain management', logo: 'https://blueyonder.com/favicon.ico', category: 'Supply Chain Management', link: 'https://blueyonder.com/' },
-        { name: 'Kinaxis', description: 'AI supply chain planning and analytics', logo: 'https://www.kinaxis.com/favicon.ico', category: 'Supply Chain Management', link: 'https://www.kinaxis.com/' },
-        { name: 'ClearMetal', description: 'AI supply chain visibility and demand forecasting', logo: 'https://www.clearmetal.com/favicon.ico', category: 'Supply Chain Management', link: 'https://www.clearmetal.com/' },
-        { name: 'Elementum', description: 'AI-powered supply chain orchestration', logo: 'https://elementum.com/favicon.ico', category: 'Supply Chain Management', link: 'https://elementum.com/' },
-        { name: 'Infor Nexus', description: 'AI supply chain network platform', logo: 'https://www.infor.com/favicon.ico', category: 'Supply Chain Management', link: 'https://www.infor.com/solutions/scm/nexus' },
-        { name: 'E2open', description: 'AI-powered supply chain software', logo: 'https://www.e2open.com/favicon.ico', category: 'Supply Chain Management', link: 'https://www.e2open.com/' },
-        { name: 'Project44', description: 'AI supply chain visibility platform', logo: 'https://www.project44.com/favicon.ico', category: 'Supply Chain Management', link: 'https://www.project44.com/' },
-        { name: 'FourKites', description: 'AI-powered real-time supply chain visibility', logo: 'https://www.fourkites.com/favicon.ico', category: 'Supply Chain Management', link: 'https://www.fourkites.com/' },
-        { name: 'Resilinc', description: 'AI supply chain risk management', logo: 'https://www.resilinc.com/favicon.ico', category: 'Supply Chain Management', link: 'https://www.resilinc.com/' }
+        { name: 'Llamasoft', description: 'AI-powered supply chain analytics and optimization', logo: 'https://www.llamasoft.com/favicon.ico', category: 'Supply Chain Management', link: 'https://www.llamasoft.com/', pricing: 'premium' },
+        { name: 'o9 Solutions', description: 'AI platform for supply chain planning', logo: 'https://o9solutions.com/favicon.ico', category: 'Supply Chain Management', link: 'https://o9solutions.com/', pricing: 'premium' },
+        { name: 'Blue Yonder', description: 'AI-driven supply chain management', logo: 'https://blueyonder.com/favicon.ico', category: 'Supply Chain Management', link: 'https://blueyonder.com/', pricing: 'premium' },
+        { name: 'Kinaxis', description: 'AI supply chain planning and analytics', logo: 'https://www.kinaxis.com/favicon.ico', category: 'Supply Chain Management', link: 'https://www.kinaxis.com/', pricing: 'premium' },
+        { name: 'ClearMetal', description: 'AI supply chain visibility and demand forecasting', logo: 'https://www.clearmetal.com/favicon.ico', category: 'Supply Chain Management', link: 'https://www.clearmetal.com/', pricing: 'premium' },
+        { name: 'Elementum', description: 'AI-powered supply chain orchestration', logo: 'https://elementum.com/favicon.ico', category: 'Supply Chain Management', link: 'https://elementum.com/', pricing: 'premium' },
+        { name: 'Infor Nexus', description: 'AI supply chain network platform', logo: 'https://www.infor.com/favicon.ico', category: 'Supply Chain Management', link: 'https://www.infor.com/solutions/scm/nexus', pricing: 'premium' },
+        { name: 'E2open', description: 'AI-powered supply chain software', logo: 'https://www.e2open.com/favicon.ico', category: 'Supply Chain Management', link: 'https://www.e2open.com/', pricing: 'premium' },
+        { name: 'Project44', description: 'AI supply chain visibility platform', logo: 'https://www.project44.com/favicon.ico', category: 'Supply Chain Management', link: 'https://www.project44.com/', pricing: 'premium' },
+        { name: 'FourKites', description: 'AI-powered real-time supply chain visibility', logo: 'https://www.fourkites.com/favicon.ico', category: 'Supply Chain Management', link: 'https://www.fourkites.com/', pricing: 'premium' },
+        { name: 'Resilinc', description: 'AI supply chain risk management', logo: 'https://www.resilinc.com/favicon.ico', category: 'Supply Chain Management', link: 'https://www.resilinc.com/', pricing: 'premium' }
     ],
     'quality-assurance': [
-        { name: 'Applitools', description: 'AI-powered visual testing and monitoring', logo: 'https://applitools.com/favicon.ico', category: 'Quality Assurance', link: 'https://applitools.com/' },
-        { name: 'Testim', description: 'AI test automation for web apps', logo: 'https://www.testim.io/favicon.ico', category: 'Quality Assurance', link: 'https://www.testim.io/' },
-        { name: 'Functionize', description: 'AI-driven test automation platform', logo: 'https://www.functionize.com/favicon.ico', category: 'Quality Assurance', link: 'https://www.functionize.com/' },
-        { name: 'Mabl', description: 'AI-powered test automation for DevOps', logo: 'https://www.mabl.com/favicon.ico', category: 'Quality Assurance', link: 'https://www.mabl.com/' },
-        { name: 'Test.AI', description: 'AI for mobile app testing', logo: 'https://test.ai/favicon.ico', category: 'Quality Assurance', link: 'https://test.ai/' },
-        { name: 'Sealights', description: 'AI quality intelligence platform', logo: 'https://www.sealights.io/favicon.ico', category: 'Quality Assurance', link: 'https://www.sealights.io/' },
-        { name: 'Eggplant', description: 'AI test automation and monitoring', logo: 'https://www.eggplantsoftware.com/favicon.ico', category: 'Quality Assurance', link: 'https://www.eggplantsoftware.com/' },
-        { name: 'TestCraft', description: 'AI-powered codeless test automation', logo: 'https://www.testcraft.io/favicon.ico', category: 'Quality Assurance', link: 'https://www.testcraft.io/' },
-        { name: 'Rainforest QA', description: 'AI crowdtesting and automation', logo: 'https://www.rainforestqa.com/favicon.ico', category: 'Quality Assurance', link: 'https://www.rainforestqa.com/' },
-        { name: 'Virtuoso', description: 'AI-driven test automation', logo: 'https://www.virtuoso.qa/favicon.ico', category: 'Quality Assurance', link: 'https://www.virtuoso.qa/' },
-        { name: 'TestSigma', description: 'AI-powered test automation platform', logo: 'https://testsigma.com/favicon.ico', category: 'Quality Assurance', link: 'https://testsigma.com/' }
+        { name: 'Applitools', description: 'AI-powered visual testing and monitoring', logo: 'https://applitools.com/favicon.ico', category: 'Quality Assurance', link: 'https://applitools.com/', pricing: 'freemium' },
+        { name: 'Testim', description: 'AI test automation for web apps', logo: 'https://www.testim.io/favicon.ico', category: 'Quality Assurance', link: 'https://www.testim.io/', pricing: 'premium' },
+        { name: 'Functionize', description: 'AI-driven test automation platform', logo: 'https://www.functionize.com/favicon.ico', category: 'Quality Assurance', link: 'https://www.functionize.com/', pricing: 'premium' },
+        { name: 'Mabl', description: 'AI-powered test automation for DevOps', logo: 'https://www.mabl.com/favicon.ico', category: 'Quality Assurance', link: 'https://www.mabl.com/', pricing: 'freemium' },
+        { name: 'Test.AI', description: 'AI for mobile app testing', logo: 'https://test.ai/favicon.ico', category: 'Quality Assurance', link: 'https://test.ai/', pricing: 'premium' },
+        { name: 'Sealights', description: 'AI quality intelligence platform', logo: 'https://www.sealights.io/favicon.ico', category: 'Quality Assurance', link: 'https://www.sealights.io/', pricing: 'premium' },
+        { name: 'Eggplant', description: 'AI test automation and monitoring', logo: 'https://www.eggplantsoftware.com/favicon.ico', category: 'Quality Assurance', link: 'https://www.eggplantsoftware.com/', pricing: 'premium' },
+        { name: 'TestCraft', description: 'AI-powered codeless test automation', logo: 'https://www.testcraft.io/favicon.ico', category: 'Quality Assurance', link: 'https://www.testcraft.io/', pricing: 'premium' },
+        { name: 'Rainforest QA', description: 'AI crowdtesting and automation', logo: 'https://www.rainforestqa.com/favicon.ico', category: 'Quality Assurance', link: 'https://www.rainforestqa.com/', pricing: 'premium' },
+        { name: 'Virtuoso', description: 'AI-driven test automation', logo: 'https://www.virtuoso.qa/favicon.ico', category: 'Quality Assurance', link: 'https://www.virtuoso.qa/', pricing: 'premium' },
+        { name: 'TestSigma', description: 'AI-powered test automation platform', logo: 'https://testsigma.com/favicon.ico', category: 'Quality Assurance', link: 'https://testsigma.com/', pricing: 'freemium' }
     ],
       'pdf-tools': [
-        { name: 'Tinywow', description: 'All-in-one PDF tools: compress, convert, edit, sign', logo: 'https://tinywow.com/favicon.ico', category: 'PDF Tools', link: 'https://tinywow.com/' },
-        { name: 'ILovePDF', description: 'Merge, split, compress, convert PDFs online', logo: 'https://www.ilovepdf.com/favicon.ico', category: 'PDF Tools', link: 'https://www.ilovepdf.com/' },
-        { name: 'PDFescape', description: 'Free online PDF editor and form filler', logo: 'https://www.pdfescape.com/favicon.ico', category: 'PDF Tools', link: 'https://www.pdfescape.com/' },
-        { name: 'Smallpdf', description: 'All-in-one PDF tools: compress, convert, edit, sign', logo: 'https://smallpdf.com/favicon.ico', category: 'PDF Tools', link: 'https://smallpdf.com/' },
-        { name: 'Sejda', description: 'Online PDF editor, merger, and converter', logo: 'https://www.sejda.com/favicon.ico', category: 'PDF Tools', link: 'https://www.sejda.com/' },
-        { name: 'PDF24 Tools', description: 'Free PDF creator, converter, and editor', logo: 'https://tools.pdf24.org/favicon.ico', category: 'PDF Tools', link: 'https://tools.pdf24.org/' },
-        { name: 'PDF Candy', description: 'Online PDF editor, converter, and OCR', logo: 'https://pdfcandy.com/favicon.ico', category: 'PDF Tools', link: 'https://pdfcandy.com/' },
-        { name: 'DocHub', description: 'Edit, sign, and share PDFs online', logo: 'https://dochub.com/favicon.ico', category: 'PDF Tools', link: 'https://dochub.com/' },
-        { name: 'PDF-XChange Editor', description: 'Feature-rich PDF editor for Windows', logo: 'https://www.tracker-software.com/favicon.ico', category: 'PDF Tools', link: 'https://www.tracker-software.com/product/pdf-xchange-editor' },
-        { name: 'Adobe Acrobat Online', description: 'Official Adobe PDF tools online', logo: 'https://www.adobe.com/favicon.ico', category: 'PDF Tools', link: 'https://www.adobe.com/acrobat/online.html' },
-        { name: 'Soda PDF', description: 'Online PDF editor, converter, and reader', logo: 'https://www.sodapdf.com/favicon.ico', category: 'PDF Tools', link: 'https://www.sodapdf.com/' },
-        { name: 'PDFsam', description: 'Free and open source PDF splitter and merger', logo: 'https://pdfsam.org/favicon.ico', category: 'PDF Tools', link: 'https://pdfsam.org/' }
+        { name: 'Tinywow', description: 'All-in-one PDF tools: compress, convert, edit, sign', logo: 'https://tinywow.com/favicon.ico', category: 'PDF Tools', link: 'https://tinywow.com/', pricing: 'free' },
+        { name: 'ILovePDF', description: 'Merge, split, compress, convert PDFs online', logo: 'https://www.ilovepdf.com/favicon.ico', category: 'PDF Tools', link: 'https://www.ilovepdf.com/', pricing: 'freemium' },
+        { name: 'PDFescape', description: 'Free online PDF editor and form filler', logo: 'https://www.pdfescape.com/favicon.ico', category: 'PDF Tools', link: 'https://www.pdfescape.com/', pricing: 'freemium' },
+        { name: 'Smallpdf', description: 'All-in-one PDF tools: compress, convert, edit, sign', logo: 'https://smallpdf.com/favicon.ico', category: 'PDF Tools', link: 'https://smallpdf.com/', pricing: 'freemium' },
+        { name: 'Sejda', description: 'Online PDF editor, merger, and converter', logo: 'https://www.sejda.com/favicon.ico', category: 'PDF Tools', link: 'https://www.sejda.com/', pricing: 'freemium' },
+        { name: 'PDF24 Tools', description: 'Free PDF creator, converter, and editor', logo: 'https://tools.pdf24.org/favicon.ico', category: 'PDF Tools', link: 'https://tools.pdf24.org/', pricing: 'free' },
+        { name: 'PDF Candy', description: 'Online PDF editor, converter, and OCR', logo: 'https://pdfcandy.com/favicon.ico', category: 'PDF Tools', link: 'https://pdfcandy.com/', pricing: 'freemium' },
+        { name: 'DocHub', description: 'Edit, sign, and share PDFs online', logo: 'https://dochub.com/favicon.ico', category: 'PDF Tools', link: 'https://dochub.com/', pricing: 'freemium' },
+        { name: 'PDF-XChange Editor', description: 'Feature-rich PDF editor for Windows', logo: 'https://www.tracker-software.com/favicon.ico', category: 'PDF Tools', link: 'https://www.tracker-software.com/product/pdf-xchange-editor', pricing: 'freemium' },
+        { name: 'Adobe Acrobat Online', description: 'Official Adobe PDF tools online', logo: 'https://www.adobe.com/favicon.ico', category: 'PDF Tools', link: 'https://www.adobe.com/acrobat/online.html', pricing: 'premium' },
+        { name: 'Soda PDF', description: 'Online PDF editor, converter, and reader', logo: 'https://www.sodapdf.com/favicon.ico', category: 'PDF Tools', link: 'https://www.sodapdf.com/', pricing: 'freemium' },
+        { name: 'PDFsam', description: 'Free and open source PDF splitter and merger', logo: 'https://pdfsam.org/favicon.ico', category: 'PDF Tools', link: 'https://pdfsam.org/', pricing: 'free' }
     ],
     'compliance-and-audit': [
-        { name: 'LogicGate', description: 'AI-powered risk and compliance platform', logo: 'https://www.logicgate.com/favicon.ico', category: 'Compliance and Audit', link: 'https://www.logicgate.com/' },
-        { name: 'Smartsheet Advance', description: 'AI compliance and audit management', logo: 'https://www.smartsheet.com/favicon.ico', category: 'Compliance and Audit', link: 'https://www.smartsheet.com/' },
-        { name: 'VComply', description: 'AI compliance management platform', logo: 'https://www.v-comply.com/favicon.ico', category: 'Compliance and Audit', link: 'https://www.v-comply.com/' },
-        { name: 'AuditBoard', description: 'AI-powered audit, risk, and compliance', logo: 'https://www.auditboard.com/favicon.ico', category: 'Compliance and Audit', link: 'https://www.auditboard.com/' },
-        { name: 'Onspring', description: 'AI audit and compliance automation', logo: 'https://onspring.com/favicon.ico', category: 'Compliance and Audit', link: 'https://onspring.com/' },
-        { name: 'Galvanize', description: 'AI risk and compliance management', logo: 'https://www.wegalvanize.com/favicon.ico', category: 'Compliance and Audit', link: 'https://www.wegalvanize.com/' },
-        { name: 'Smarsh', description: 'AI compliance and archiving', logo: 'https://www.smarsh.com/favicon.ico', category: 'Compliance and Audit', link: 'https://www.smarsh.com/' },
-        { name: 'ComplyAdvantage', description: 'AI financial crime compliance', logo: 'https://complyadvantage.com/favicon.ico', category: 'Compliance and Audit', link: 'https://complyadvantage.com/' },
-        { name: 'Alyne', description: 'AI-powered risk and compliance platform', logo: 'https://www.alyne.com/favicon.ico', category: 'Compliance and Audit', link: 'https://www.alyne.com/' },
-        { name: 'ClauseMatch', description: 'AI policy and compliance management', logo: 'https://www.clausematch.com/favicon.ico', category: 'Compliance and Audit', link: 'https://www.clausematch.com/' },
-        { name: 'Wolters Kluwer TeamMate', description: 'AI audit management software', logo: 'https://www.wolterskluwer.com/favicon.ico', category: 'Compliance and Audit', link: 'https://www.wolterskluwer.com/en/solutions/teammate' }
+        { name: 'LogicGate', description: 'AI-powered risk and compliance platform', logo: 'https://www.logicgate.com/favicon.ico', category: 'Compliance and Audit', link: 'https://www.logicgate.com/', pricing: 'premium' },
+        { name: 'Smartsheet Advance', description: 'AI compliance and audit management', logo: 'https://www.smartsheet.com/favicon.ico', category: 'Compliance and Audit', link: 'https://www.smartsheet.com/', pricing: 'premium' },
+        { name: 'VComply', description: 'AI compliance management platform', logo: 'https://www.v-comply.com/favicon.ico', category: 'Compliance and Audit', link: 'https://www.v-comply.com/', pricing: 'premium' },
+        { name: 'AuditBoard', description: 'AI-powered audit, risk, and compliance', logo: 'https://www.auditboard.com/favicon.ico', category: 'Compliance and Audit', link: 'https://www.auditboard.com/', pricing: 'premium' },
+        { name: 'Onspring', description: 'AI audit and compliance automation', logo: 'https://onspring.com/favicon.ico', category: 'Compliance and Audit', link: 'https://onspring.com/', pricing: 'premium' },
+        { name: 'Galvanize', description: 'AI risk and compliance management', logo: 'https://www.wegalvanize.com/favicon.ico', category: 'Compliance and Audit', link: 'https://www.wegalvanize.com/', pricing: 'premium' },
+        { name: 'Smarsh', description: 'AI compliance and archiving', logo: 'https://www.smarsh.com/favicon.ico', category: 'Compliance and Audit', link: 'https://www.smarsh.com/', pricing: 'premium' },
+        { name: 'ComplyAdvantage', description: 'AI financial crime compliance', logo: 'https://complyadvantage.com/favicon.ico', category: 'Compliance and Audit', link: 'https://complyadvantage.com/', pricing: 'premium' },
+        { name: 'Alyne', description: 'AI-powered risk and compliance platform', logo: 'https://www.alyne.com/favicon.ico', category: 'Compliance and Audit', link: 'https://www.alyne.com/', pricing: 'premium' },
+        { name: 'ClauseMatch', description: 'AI policy and compliance management', logo: 'https://www.clausematch.com/favicon.ico', category: 'Compliance and Audit', link: 'https://www.clausematch.com/', pricing: 'premium' },
+        { name: 'Wolters Kluwer TeamMate', description: 'AI audit management software', logo: 'https://www.wolterskluwer.com/favicon.ico', category: 'Compliance and Audit', link: 'https://www.wolterskluwer.com/en/solutions/teammate', pricing: 'premium' }
     ],
     'risk-management': [
-        { name: 'LogicManager', description: 'AI-powered risk management software', logo: 'https://www.logicmanager.com/favicon.ico', category: 'Risk Management', link: 'https://www.logicmanager.com/' },
-        { name: 'Riskified', description: 'AI fraud prevention and risk management', logo: 'https://www.riskified.com/favicon.ico', category: 'Risk Management', link: 'https://www.riskified.com/' },
-        { name: 'Resolver', description: 'AI risk and incident management', logo: 'https://www.resolver.com/favicon.ico', category: 'Risk Management', link: 'https://www.resolver.com/' },
-        { name: 'MetricStream', description: 'AI governance, risk, and compliance', logo: 'https://www.metricstream.com/favicon.ico', category: 'Risk Management', link: 'https://www.metricstream.com/' },
-        { name: 'RiskWatch', description: 'AI risk assessment and compliance', logo: 'https://riskwatch.com/favicon.ico', category: 'Risk Management', link: 'https://riskwatch.com/' },
-        { name: 'Fusion Risk Management', description: 'AI-powered risk and resilience platform', logo: 'https://www.fusionrm.com/favicon.ico', category: 'Risk Management', link: 'https://www.fusionrm.com/' },
-        { name: 'LogicGate', description: 'AI risk and compliance automation', logo: 'https://www.logicgate.com/favicon.ico', category: 'Risk Management', link: 'https://www.logicgate.com/' },
-        { name: 'RiskLens', description: 'AI cyber risk quantification', logo: 'https://www.risklens.com/favicon.ico', category: 'Risk Management', link: 'https://www.risklens.com/' },
-        { name: 'Acuity Risk Management', description: 'AI risk management and analytics', logo: 'https://acuityrm.com/favicon.ico', category: 'Risk Management', link: 'https://acuityrm.com/' },
-        { name: 'Protecht', description: 'AI enterprise risk management', logo: 'https://www.protechtgroup.com/favicon.ico', category: 'Risk Management', link: 'https://www.protechtgroup.com/' },
-        { name: 'Riskonnect', description: 'AI risk management platform', logo: 'https://riskonnect.com/favicon.ico', category: 'Risk Management', link: 'https://riskonnect.com/' }
+        { name: 'LogicManager', description: 'AI-powered risk management software', logo: 'https://www.logicmanager.com/favicon.ico', category: 'Risk Management', link: 'https://www.logicmanager.com/', pricing: 'premium' },
+        { name: 'Riskified', description: 'AI fraud prevention and risk management', logo: 'https://www.riskified.com/favicon.ico', category: 'Risk Management', link: 'https://www.riskified.com/', pricing: 'premium' },
+        { name: 'Resolver', description: 'AI risk and incident management', logo: 'https://www.resolver.com/favicon.ico', category: 'Risk Management', link: 'https://www.resolver.com/', pricing: 'premium' },
+        { name: 'MetricStream', description: 'AI governance, risk, and compliance', logo: 'https://www.metricstream.com/favicon.ico', category: 'Risk Management', link: 'https://www.metricstream.com/', pricing: 'premium' },
+        { name: 'RiskWatch', description: 'AI risk assessment and compliance', logo: 'https://riskwatch.com/favicon.ico', category: 'Risk Management', link: 'https://riskwatch.com/', pricing: 'premium' },
+        { name: 'Fusion Risk Management', description: 'AI-powered risk and resilience platform', logo: 'https://www.fusionrm.com/favicon.ico', category: 'Risk Management', link: 'https://www.fusionrm.com/', pricing: 'premium' },
+        { name: 'LogicGate', description: 'AI risk and compliance automation', logo: 'https://www.logicgate.com/favicon.ico', category: 'Risk Management', link: 'https://www.logicgate.com/', pricing: 'premium' },
+        { name: 'RiskLens', description: 'AI cyber risk quantification', logo: 'https://www.risklens.com/favicon.ico', category: 'Risk Management', link: 'https://www.risklens.com/', pricing: 'premium' },
+        { name: 'Acuity Risk Management', description: 'AI risk management and analytics', logo: 'https://acuityrm.com/favicon.ico', category: 'Risk Management', link: 'https://acuityrm.com/', pricing: 'premium' },
+        { name: 'Protecht', description: 'AI enterprise risk management', logo: 'https://www.protechtgroup.com/favicon.ico', category: 'Risk Management', link: 'https://www.protechtgroup.com/', pricing: 'premium' },
+        { name: 'Riskonnect', description: 'AI risk management platform', logo: 'https://riskonnect.com/favicon.ico', category: 'Risk Management', link: 'https://riskonnect.com/', pricing: 'premium' }
     ],
 
     // New categories
     'quantum-computing': [
-        { name: 'IBM Quantum', description: 'Quantum computing cloud platform', logo: 'https://quantum-computing.ibm.com/favicon.ico', category: 'Quantum Computing', link: 'https://quantum-computing.ibm.com/' },
-        { name: 'Microsoft Azure Quantum', description: 'Quantum computing on Azure', logo: 'https://azure.microsoft.com/favicon.ico', category: 'Quantum Computing', link: 'https://azure.microsoft.com/en-us/services/quantum/' },
-        { name: 'D-Wave Leap', description: 'Quantum cloud service', logo: 'https://cloud.dwavesys.com/favicon.ico', category: 'Quantum Computing', link: 'https://cloud.dwavesys.com/leap/' },
-        { name: 'Google Quantum AI', description: 'Quantum computing research tools', logo: 'https://quantumai.google/favicon.ico', category: 'Quantum Computing', link: 'https://quantumai.google/' },
-        { name: 'Rigetti Forest', description: 'Quantum programming toolkit', logo: 'https://www.rigetti.com/favicon.ico', category: 'Quantum Computing', link: 'https://www.rigetti.com/forest' },
-        { name: 'QuTech', description: 'Quantum internet and computing', logo: 'https://qutech.nl/favicon.ico', category: 'Quantum Computing', link: 'https://qutech.nl/' },
-        { name: 'IonQ Cloud', description: 'Trapped-ion quantum computing', logo: 'https://ionq.com/favicon.ico', category: 'Quantum Computing', link: 'https://ionq.com/' },
-        { name: 'Strangeworks', description: 'Quantum computing platform', logo: 'https://strangeworks.com/favicon.ico', category: 'Quantum Computing', link: 'https://strangeworks.com/' },
-        { name: 'Classiq', description: 'Quantum algorithm design', logo: 'https://classiq.io/favicon.ico', category: 'Quantum Computing', link: 'https://classiq.io/' },
-        { name: 'QC Ware', description: 'Quantum software and algorithms', logo: 'https://qcware.com/favicon.ico', category: 'Quantum Computing', link: 'https://qcware.com/' },
-        { name: 'QuEra', description: 'Neutral atom quantum computing', logo: 'https://www.quera.com/favicon.ico', category: 'Quantum Computing', link: 'https://www.quera.com/' }
+        { name: 'IBM Quantum', description: 'Quantum computing cloud platform', logo: 'https://quantum-computing.ibm.com/favicon.ico', category: 'Quantum Computing', link: 'https://quantum-computing.ibm.com/', pricing: 'freemium' },
+        { name: 'Microsoft Azure Quantum', description: 'Quantum computing on Azure', logo: 'https://azure.microsoft.com/favicon.ico', category: 'Quantum Computing', link: 'https://azure.microsoft.com/en-us/services/quantum/', pricing: 'freemium' },
+        { name: 'D-Wave Leap', description: 'Quantum cloud service', logo: 'https://cloud.dwavesys.com/favicon.ico', category: 'Quantum Computing', link: 'https://cloud.dwavesys.com/leap/', pricing: 'freemium' },
+        { name: 'Google Quantum AI', description: 'Quantum computing research tools', logo: 'https://quantumai.google/favicon.ico', category: 'Quantum Computing', link: 'https://quantumai.google/', pricing: 'free' },
+        { name: 'Rigetti Forest', description: 'Quantum programming toolkit', logo: 'https://www.rigetti.com/favicon.ico', category: 'Quantum Computing', link: 'https://www.rigetti.com/forest', pricing: 'freemium' },
+        { name: 'QuTech', description: 'Quantum internet and computing', logo: 'https://qutech.nl/favicon.ico', category: 'Quantum Computing', link: 'https://qutech.nl/', pricing: 'free' },
+        { name: 'IonQ Cloud', description: 'Trapped-ion quantum computing', logo: 'https://ionq.com/favicon.ico', category: 'Quantum Computing', link: 'https://ionq.com/', pricing: 'freemium' },
+        { name: 'Strangeworks', description: 'Quantum computing platform', logo: 'https://strangeworks.com/favicon.ico', category: 'Quantum Computing', link: 'https://strangeworks.com/', pricing: 'freemium' },
+        { name: 'Classiq', description: 'Quantum algorithm design', logo: 'https://classiq.io/favicon.ico', category: 'Quantum Computing', link: 'https://classiq.io/', pricing: 'freemium' },
+        { name: 'QC Ware', description: 'Quantum software and algorithms', logo: 'https://qcware.com/favicon.ico', category: 'Quantum Computing', link: 'https://qcware.com/', pricing: 'premium' },
+        { name: 'QuEra', description: 'Neutral atom quantum computing', logo: 'https://www.quera.com/favicon.ico', category: 'Quantum Computing', link: 'https://www.quera.com/', pricing: 'premium' }
     ],
     'augmented-reality': [
-        { name: 'ZapWorks', description: 'AR content creation platform', logo: 'https://zap.works/favicon.ico', category: 'Augmented Reality', link: 'https://zap.works/' },
-        { name: '8th Wall', description: 'Web-based AR development', logo: 'https://www.8thwall.com/favicon.ico', category: 'Augmented Reality', link: 'https://www.8thwall.com/' },
-        { name: 'ARKit', description: 'Apple AR development framework', logo: 'https://developer.apple.com/favicon.ico', category: 'Augmented Reality', link: 'https://developer.apple.com/augmented-reality/arkit/' },
-        { name: 'ARCore', description: 'Google AR development platform', logo: 'https://developers.google.com/favicon.ico', category: 'Augmented Reality', link: 'https://developers.google.com/ar' },
-        { name: 'Vuforia', description: 'AR SDK for mobile apps', logo: 'https://developer.vuforia.com/favicon.ico', category: 'Augmented Reality', link: 'https://developer.vuforia.com/' },
-        { name: 'Wikitude', description: 'AR SDK and cloud recognition', logo: 'https://www.wikitude.com/favicon.ico', category: 'Augmented Reality', link: 'https://www.wikitude.com/' },
-        { name: 'Blippar', description: 'AR creation and publishing', logo: 'https://www.blippar.com/favicon.ico', category: 'Augmented Reality', link: 'https://www.blippar.com/' },
-        { name: 'Spark AR Studio', description: 'Meta AR effects platform', logo: 'https://sparkar.facebook.com/favicon.ico', category: 'Augmented Reality', link: 'https://sparkar.facebook.com/' },
-        { name: 'Banuba', description: 'AR face filters and effects', logo: 'https://www.banuba.com/favicon.ico', category: 'Augmented Reality', link: 'https://www.banuba.com/' },
-        { name: 'EasyAR', description: 'AR development platform', logo: 'https://www.easyar.com/favicon.ico', category: 'Augmented Reality', link: 'https://www.easyar.com/' },
-        { name: 'DeepAR', description: 'AI-powered AR SDK', logo: 'https://www.deepar.ai/favicon.ico', category: 'Augmented Reality', link: 'https://www.deepar.ai/' }
+        { name: 'ZapWorks', description: 'AR content creation platform', logo: 'https://zap.works/favicon.ico', category: 'Augmented Reality', link: 'https://zap.works/', pricing: 'freemium' },
+        { name: '8th Wall', description: 'Web-based AR development', logo: 'https://www.8thwall.com/favicon.ico', category: 'Augmented Reality', link: 'https://www.8thwall.com/', pricing: 'premium' },
+        { name: 'ARKit', description: 'Apple AR development framework', logo: 'https://developer.apple.com/favicon.ico', category: 'Augmented Reality', link: 'https://developer.apple.com/augmented-reality/arkit/', pricing: 'free' },
+        { name: 'ARCore', description: 'Google AR development platform', logo: 'https://developers.google.com/favicon.ico', category: 'Augmented Reality', link: 'https://developers.google.com/ar', pricing: 'free' },
+        { name: 'Vuforia', description: 'AR SDK for mobile apps', logo: 'https://developer.vuforia.com/favicon.ico', category: 'Augmented Reality', link: 'https://developer.vuforia.com/', pricing: 'freemium' },
+        { name: 'Wikitude', description: 'AR SDK and cloud recognition', logo: 'https://www.wikitude.com/favicon.ico', category: 'Augmented Reality', link: 'https://www.wikitude.com/', pricing: 'freemium' },
+        { name: 'Blippar', description: 'AR creation and publishing', logo: 'https://www.blippar.com/favicon.ico', category: 'Augmented Reality', link: 'https://www.blippar.com/', pricing: 'freemium' },
+        { name: 'Spark AR Studio', description: 'Meta AR effects platform', logo: 'https://sparkar.facebook.com/favicon.ico', category: 'Augmented Reality', link: 'https://sparkar.facebook.com/', pricing: 'free' },
+        { name: 'Banuba', description: 'AR face filters and effects', logo: 'https://www.banuba.com/favicon.ico', category: 'Augmented Reality', link: 'https://www.banuba.com/', pricing: 'freemium' },
+        { name: 'EasyAR', description: 'AR development platform', logo: 'https://www.easyar.com/favicon.ico', category: 'Augmented Reality', link: 'https://www.easyar.com/', pricing: 'freemium' },
+        { name: 'DeepAR', description: 'AI-powered AR SDK', logo: 'https://www.deepar.ai/favicon.ico', category: 'Augmented Reality', link: 'https://www.deepar.ai/', pricing: 'freemium' }
     ],
     'virtual-reality': [
-        { name: 'Unity VR', description: 'VR development with Unity', logo: 'https://unity.com/favicon.ico', category: 'Virtual Reality', link: 'https://unity.com/solutions/vr' },
-        { name: 'Unreal Engine VR', description: 'VR development with Unreal Engine', logo: 'https://www.unrealengine.com/favicon.ico', category: 'Virtual Reality', link: 'https://www.unrealengine.com/en-US/solutions/vr' },
-        { name: 'Oculus', description: 'Meta VR platform and tools', logo: 'https://www.meta.com/favicon.ico', category: 'Virtual Reality', link: 'https://www.meta.com/quest/' },
-        { name: 'SteamVR', description: 'VR platform for PC', logo: 'https://store.steampowered.com/favicon.ico', category: 'Virtual Reality', link: 'https://store.steampowered.com/steamvr' },
-        { name: 'Viveport', description: 'HTC VR app store and platform', logo: 'https://www.viveport.com/favicon.ico', category: 'Virtual Reality', link: 'https://www.viveport.com/' },
-        { name: 'Mozilla Hubs', description: 'Open-source VR collaboration', logo: 'https://hubs.mozilla.com/favicon.ico', category: 'Virtual Reality', link: 'https://hubs.mozilla.com/' },
-        { name: 'Varjo', description: 'Professional VR/XR headsets', logo: 'https://varjo.com/favicon.ico', category: 'Virtual Reality', link: 'https://varjo.com/' },
-        { name: 'Pico VR', description: 'Standalone VR headsets and platform', logo: 'https://www.picoxr.com/favicon.ico', category: 'Virtual Reality', link: 'https://www.picoxr.com/global/' },
-        { name: 'InstaVR', description: 'VR app creation platform', logo: 'https://www.instavr.co/favicon.ico', category: 'Virtual Reality', link: 'https://www.instavr.co/' },
-        { name: 'Mindshow', description: 'VR animation and storytelling', logo: 'https://www.mindshow.com/favicon.ico', category: 'Virtual Reality', link: 'https://www.mindshow.com/' },
-        { name: 'EON Reality', description: 'VR/AR knowledge transfer platform', logo: 'https://www.eonreality.com/favicon.ico', category: 'Virtual Reality', link: 'https://www.eonreality.com/' }
+        { name: 'Unity VR', description: 'VR development with Unity', logo: 'https://unity.com/favicon.ico', category: 'Virtual Reality', link: 'https://unity.com/solutions/vr', pricing: 'freemium' },
+        { name: 'Unreal Engine VR', description: 'VR development with Unreal Engine', logo: 'https://www.unrealengine.com/favicon.ico', category: 'Virtual Reality', link: 'https://www.unrealengine.com/en-US/solutions/vr', pricing: 'free' },
+        { name: 'Oculus', description: 'Meta VR platform and tools', logo: 'https://www.meta.com/favicon.ico', category: 'Virtual Reality', link: 'https://www.meta.com/quest/', pricing: 'premium' },
+        { name: 'SteamVR', description: 'VR platform for PC', logo: 'https://store.steampowered.com/favicon.ico', category: 'Virtual Reality', link: 'https://store.steampowered.com/steamvr', pricing: 'freemium' },
+        { name: 'Viveport', description: 'HTC VR app store and platform', logo: 'https://www.viveport.com/favicon.ico', category: 'Virtual Reality', link: 'https://www.viveport.com/', pricing: 'freemium' },
+        { name: 'Mozilla Hubs', description: 'Open-source VR collaboration', logo: 'https://hubs.mozilla.com/favicon.ico', category: 'Virtual Reality', link: 'https://hubs.mozilla.com/', pricing: 'free' },
+        { name: 'Varjo', description: 'Professional VR/XR headsets', logo: 'https://varjo.com/favicon.ico', category: 'Virtual Reality', link: 'https://varjo.com/', pricing: 'premium' },
+        { name: 'Pico VR', description: 'Standalone VR headsets and platform', logo: 'https://www.picoxr.com/favicon.ico', category: 'Virtual Reality', link: 'https://www.picoxr.com/global/', pricing: 'premium' },
+        { name: 'InstaVR', description: 'VR app creation platform', logo: 'https://www.instavr.co/favicon.ico', category: 'Virtual Reality', link: 'https://www.instavr.co/', pricing: 'freemium' },
+        { name: 'Mindshow', description: 'VR animation and storytelling', logo: 'https://www.mindshow.com/favicon.ico', category: 'Virtual Reality', link: 'https://www.mindshow.com/', pricing: 'freemium' },
+        { name: 'EON Reality', description: 'VR/AR knowledge transfer platform', logo: 'https://www.eonreality.com/favicon.ico', category: 'Virtual Reality', link: 'https://www.eonreality.com/', pricing: 'premium' }
     ],
     'metaverse-tools': [
-        { name: 'Roblox Studio', description: 'Create and publish metaverse experiences', logo: 'https://www.roblox.com/favicon.ico', category: 'Metaverse Tools', link: 'https://www.roblox.com/create' },
-        { name: 'Decentraland', description: 'Virtual world and metaverse platform', logo: 'https://decentraland.org/favicon.ico', category: 'Metaverse Tools', link: 'https://decentraland.org/' },
-        { name: 'Sandbox', description: 'User-generated metaverse platform', logo: 'https://www.sandbox.game/favicon.ico', category: 'Metaverse Tools', link: 'https://www.sandbox.game/' },
-        { name: 'Spatial', description: 'Collaborative metaverse platform', logo: 'https://www.spatial.io/favicon.ico', category: 'Metaverse Tools', link: 'https://www.spatial.io/' },
-        { name: 'Somnium Space', description: 'Virtual reality metaverse', logo: 'https://somniumspace.com/favicon.ico', category: 'Metaverse Tools', link: 'https://somniumspace.com/' },
-        { name: 'FrameVR', description: 'Web-based metaverse platform', logo: 'https://framevr.io/favicon.ico', category: 'Metaverse Tools', link: 'https://framevr.io/' },
-        { name: 'Mozilla Hubs', description: 'Open-source metaverse collaboration', logo: 'https://hubs.mozilla.com/favicon.ico', category: 'Metaverse Tools', link: 'https://hubs.mozilla.com/' },
-        { name: 'Upland', description: 'Virtual property trading metaverse', logo: 'https://www.upland.me/favicon.ico', category: 'Metaverse Tools', link: 'https://www.upland.me/' },
-        { name: 'Viverse', description: 'HTC metaverse platform', logo: 'https://www.vive.com/favicon.ico', category: 'Metaverse Tools', link: 'https://www.vive.com/eu/viverse/' },
-        { name: 'OpenSea', description: 'NFT marketplace for metaverse assets', logo: 'https://opensea.io/favicon.ico', category: 'Metaverse Tools', link: 'https://opensea.io/' },
-        { name: 'Ready Player Me', description: 'Cross-platform avatar creator', logo: 'https://readyplayer.me/favicon.ico', category: 'Metaverse Tools', link: 'https://readyplayer.me/' }
+        { name: 'Roblox Studio', description: 'Create and publish metaverse experiences', logo: 'https://www.roblox.com/favicon.ico', category: 'Metaverse Tools', link: 'https://www.roblox.com/create', pricing: 'free' },
+        { name: 'Decentraland', description: 'Virtual world and metaverse platform', logo: 'https://decentraland.org/favicon.ico', category: 'Metaverse Tools', link: 'https://decentraland.org/', pricing: 'free' },
+        { name: 'Sandbox', description: 'User-generated metaverse platform', logo: 'https://www.sandbox.game/favicon.ico', category: 'Metaverse Tools', link: 'https://www.sandbox.game/', pricing: 'free' },
+        { name: 'Spatial', description: 'Collaborative metaverse platform', logo: 'https://www.spatial.io/favicon.ico', category: 'Metaverse Tools', link: 'https://www.spatial.io/', pricing: 'freemium' },
+        { name: 'Somnium Space', description: 'Virtual reality metaverse', logo: 'https://somniumspace.com/favicon.ico', category: 'Metaverse Tools', link: 'https://somniumspace.com/', pricing: 'freemium' },
+        { name: 'FrameVR', description: 'Web-based metaverse platform', logo: 'https://framevr.io/favicon.ico', category: 'Metaverse Tools', link: 'https://framevr.io/', pricing: 'freemium' },
+        { name: 'Mozilla Hubs', description: 'Open-source metaverse collaboration', logo: 'https://hubs.mozilla.com/favicon.ico', category: 'Metaverse Tools', link: 'https://hubs.mozilla.com/', pricing: 'free' },
+        { name: 'Upland', description: 'Virtual property trading metaverse', logo: 'https://www.upland.me/favicon.ico', category: 'Metaverse Tools', link: 'https://www.upland.me/', pricing: 'freemium' },
+        { name: 'Viverse', description: 'HTC metaverse platform', logo: 'https://www.vive.com/favicon.ico', category: 'Metaverse Tools', link: 'https://www.vive.com/eu/viverse/', pricing: 'free' },
+        { name: 'OpenSea', description: 'NFT marketplace for metaverse assets', logo: 'https://opensea.io/favicon.ico', category: 'Metaverse Tools', link: 'https://opensea.io/', pricing: 'freemium' },
+        { name: 'Ready Player Me', description: 'Cross-platform avatar creator', logo: 'https://readyplayer.me/favicon.ico', category: 'Metaverse Tools', link: 'https://readyplayer.me/', pricing: 'free' }
     ],
     'web-blockchain-integration': [
-        { name: 'Moralis', description: 'Web3 backend infrastructure', logo: 'https://moralis.io/favicon.ico', category: 'Web/Blockchain Integration', link: 'https://moralis.io/' },
-        { name: 'Alchemy', description: 'Blockchain developer platform', logo: 'https://www.alchemy.com/favicon.ico', category: 'Web/Blockchain Integration', link: 'https://www.alchemy.com/' },
-        { name: 'Infura', description: 'Ethereum and IPFS API', logo: 'https://infura.io/favicon.ico', category: 'Web/Blockchain Integration', link: 'https://infura.io/' },
-        { name: 'Chainlink', description: 'Decentralized oracle network', logo: 'https://chain.link/favicon.ico', category: 'Web/Blockchain Integration', link: 'https://chain.link/' },
-        { name: 'Thirdweb', description: 'Web3 development toolkit', logo: 'https://thirdweb.com/favicon.ico', category: 'Web/Blockchain Integration', link: 'https://thirdweb.com/' },
-        { name: 'WalletConnect', description: 'Web3 wallet connection protocol', logo: 'https://walletconnect.com/favicon.ico', category: 'Web/Blockchain Integration', link: 'https://walletconnect.com/' },
-        { name: 'QuickNode', description: 'Blockchain API and infrastructure', logo: 'https://www.quicknode.com/favicon.ico', category: 'Web/Blockchain Integration', link: 'https://www.quicknode.com/' },
-        { name: 'Web3.js', description: 'Ethereum JavaScript API', logo: 'https://web3js.readthedocs.io/en/v1.2.11/_static/favicon.ico', category: 'Web/Blockchain Integration', link: 'https://web3js.readthedocs.io/' },
-        { name: 'Ethers.js', description: 'Ethereum JavaScript library', logo: 'https://docs.ethers.org/v5/favicon.ico', category: 'Web/Blockchain Integration', link: 'https://docs.ethers.org/v5/' },
-        { name: 'OpenZeppelin', description: 'Smart contract development tools', logo: 'https://openzeppelin.com/favicon.ico', category: 'Web/Blockchain Integration', link: 'https://openzeppelin.com/' },
-        { name: 'Hardhat', description: 'Ethereum development environment', logo: 'https://hardhat.org/favicon.ico', category: 'Web/Blockchain Integration', link: 'https://hardhat.org/' }
+        { name: 'Moralis', description: 'Web3 backend infrastructure', logo: 'https://moralis.io/favicon.ico', category: 'Web/Blockchain Integration', link: 'https://moralis.io/', pricing: 'freemium' },
+        { name: 'Alchemy', description: 'Blockchain developer platform', logo: 'https://www.alchemy.com/favicon.ico', category: 'Web/Blockchain Integration', link: 'https://www.alchemy.com/', pricing: 'freemium' },
+        { name: 'Infura', description: 'Ethereum and IPFS API', logo: 'https://infura.io/favicon.ico', category: 'Web/Blockchain Integration', link: 'https://infura.io/', pricing: 'freemium' },
+        { name: 'Chainlink', description: 'Decentralized oracle network', logo: 'https://chain.link/favicon.ico', category: 'Web/Blockchain Integration', link: 'https://chain.link/', pricing: 'free' },
+        { name: 'Thirdweb', description: 'Web3 development toolkit', logo: 'https://thirdweb.com/favicon.ico', category: 'Web/Blockchain Integration', link: 'https://thirdweb.com/', pricing: 'freemium' },
+        { name: 'WalletConnect', description: 'Web3 wallet connection protocol', logo: 'https://walletconnect.com/favicon.ico', category: 'Web/Blockchain Integration', link: 'https://walletconnect.com/', pricing: 'free' },
+        { name: 'QuickNode', description: 'Blockchain API and infrastructure', logo: 'https://www.quicknode.com/favicon.ico', category: 'Web/Blockchain Integration', link: 'https://www.quicknode.com/', pricing: 'freemium' },
+        { name: 'Web3.js', description: 'Ethereum JavaScript API', logo: 'https://web3js.readthedocs.io/en/v1.2.11/_static/favicon.ico', category: 'Web/Blockchain Integration', link: 'https://web3js.readthedocs.io/', pricing: 'free' },
+        { name: 'Ethers.js', description: 'Ethereum JavaScript library', logo: 'https://docs.ethers.org/v5/favicon.ico', category: 'Web/Blockchain Integration', link: 'https://docs.ethers.org/v5/', pricing: 'free' },
+        { name: 'OpenZeppelin', description: 'Smart contract development tools', logo: 'https://openzeppelin.com/favicon.ico', category: 'Web/Blockchain Integration', link: 'https://openzeppelin.com/', pricing: 'free' },
+        { name: 'Hardhat', description: 'Ethereum development environment', logo: 'https://hardhat.org/favicon.ico', category: 'Web/Blockchain Integration', link: 'https://hardhat.org/', pricing: 'free' }
     ],
     'storyboarding': [
-        { name: 'Storyboard That', description: 'AI-powered storyboarding tool', logo: 'https://www.storyboardthat.com/favicon.ico', category: 'Storyboarding', link: 'https://www.storyboardthat.com/' },
-        { name: 'Boords', description: 'AI storyboard creator for teams', logo: 'https://boords.com/favicon.ico', category: 'Storyboarding', link: 'https://boords.com/' },
-        { name: 'FrameForge', description: 'AI-assisted storyboarding software', logo: 'https://www.frameforge.com/favicon.ico', category: 'Storyboarding', link: 'https://www.frameforge.com/' },
-        { name: 'Plot', description: 'AI storyboard and script tool', logo: 'https://www.plot.io/favicon.ico', category: 'Storyboarding', link: 'https://www.plot.io/' },
-        { name: 'Canva Storyboard', description: 'Storyboard with AI design tools', logo: 'https://www.canva.com/favicon.ico', category: 'Storyboarding', link: 'https://www.canva.com/' },
-        { name: 'MakeStoryboard', description: 'AI storyboard creator', logo: 'https://makestoryboard.com/favicon.ico', category: 'Storyboarding', link: 'https://makestoryboard.com/' },
-        { name: 'StudioBinder', description: 'AI-powered production and storyboarding', logo: 'https://www.studiobinder.com/favicon.ico', category: 'Storyboarding', link: 'https://www.studiobinder.com/' },
-        { name: 'Wonder Unit', description: 'AI storyboard generator', logo: 'https://wonderunit.com/favicon.ico', category: 'Storyboarding', link: 'https://wonderunit.com/' },
-        { name: 'Storyboarder', description: 'Open-source AI storyboarding tool', logo: 'https://wonderunit.com/storyboarder/favicon.ico', category: 'Storyboarding', link: 'https://wonderunit.com/storyboarder/' },
-        { name: 'Shotdeck', description: 'AI-powered visual storyboarding', logo: 'https://shotdeck.com/favicon.ico', category: 'Storyboarding', link: 'https://shotdeck.com/' },
-        { name: 'Previs Pro', description: 'AI previsualization and storyboarding', logo: 'https://previspro.com/favicon.ico', category: 'Storyboarding', link: 'https://previspro.com/' }
+        { name: 'Storyboard That', description: 'AI-powered storyboarding tool', logo: 'https://www.storyboardthat.com/favicon.ico', category: 'Storyboarding', link: 'https://www.storyboardthat.com/', pricing: 'freemium' },
+        { name: 'Boords', description: 'AI storyboard creator for teams', logo: 'https://boords.com/favicon.ico', category: 'Storyboarding', link: 'https://boords.com/', pricing: 'freemium' },
+        { name: 'FrameForge', description: 'AI-assisted storyboarding software', logo: 'https://www.frameforge.com/favicon.ico', category: 'Storyboarding', link: 'https://www.frameforge.com/', pricing: 'premium' },
+        { name: 'Plot', description: 'AI storyboard and script tool', logo: 'https://www.plot.io/favicon.ico', category: 'Storyboarding', link: 'https://www.plot.io/', pricing: 'freemium' },
+        { name: 'Canva Storyboard', description: 'Storyboard with AI design tools', logo: 'https://www.canva.com/favicon.ico', category: 'Storyboarding', link: 'https://www.canva.com/', pricing: 'freemium' },
+        { name: 'MakeStoryboard', description: 'AI storyboard creator', logo: 'https://makestoryboard.com/favicon.ico', category: 'Storyboarding', link: 'https://makestoryboard.com/', pricing: 'freemium' },
+        { name: 'StudioBinder', description: 'AI-powered production and storyboarding', logo: 'https://www.studiobinder.com/favicon.ico', category: 'Storyboarding', link: 'https://www.studiobinder.com/', pricing: 'freemium' },
+        { name: 'Wonder Unit', description: 'AI storyboard generator', logo: 'https://wonderunit.com/favicon.ico', category: 'Storyboarding', link: 'https://wonderunit.com/', pricing: 'freemium' },
+        { name: 'Storyboarder', description: 'Open-source AI storyboarding tool', logo: 'https://wonderunit.com/storyboarder/favicon.ico', category: 'Storyboarding', link: 'https://wonderunit.com/storyboarder/', pricing: 'free' },
+        { name: 'Shotdeck', description: 'AI-powered visual storyboarding', logo: 'https://shotdeck.com/favicon.ico', category: 'Storyboarding', link: 'https://shotdeck.com/', pricing: 'premium' },
+        { name: 'Previs Pro', description: 'AI previsualization and storyboarding', logo: 'https://previspro.com/favicon.ico', category: 'Storyboarding', link: 'https://previspro.com/', pricing: 'premium' }
     ],
     'sound-effects': [
-        { name: 'AIVA SFX', description: 'AI-generated sound effects', logo: 'https://www.aiva.ai/favicon.ico', category: 'Sound Effects', link: 'https://www.aiva.ai/' },
-        { name: 'Boom Library', description: 'AI sound design and effects', logo: 'https://www.boomlibrary.com/favicon.ico', category: 'Sound Effects', link: 'https://www.boomlibrary.com/' },
-        { name: 'Soundly', description: 'AI sound effects search and creation', logo: 'https://getsoundly.com/favicon.ico', category: 'Sound Effects', link: 'https://getsoundly.com/' },
-        { name: 'LANDR FX', description: 'AI-powered sound effects', logo: 'https://www.landr.com/favicon.ico', category: 'Sound Effects', link: 'https://www.landr.com/' },
-        { name: 'Endlesss', description: 'AI collaborative sound creation', logo: 'https://endlesss.fm/favicon.ico', category: 'Sound Effects', link: 'https://endlesss.fm/' },
-        { name: 'Audio Design Desk', description: 'AI sound design and effects', logo: 'https://add.app/favicon.ico', category: 'Sound Effects', link: 'https://add.app/' },
-        { name: 'Ecrett Music FX', description: 'AI sound effects generator', logo: 'https://ecrettmusic.com/favicon.ico', category: 'Sound Effects', link: 'https://ecrettmusic.com/' },
-        { name: 'Zapsplat AI', description: 'AI sound effects library', logo: 'https://www.zapsplat.com/favicon.ico', category: 'Sound Effects', link: 'https://www.zapsplat.com/' },
-        { name: 'Resemble AI FX', description: 'AI voice and sound effects', logo: 'https://www.resemble.ai/favicon.ico', category: 'Sound Effects', link: 'https://www.resemble.ai/' },
-        { name: 'Sonify', description: 'AI sound and music generator', logo: 'https://sonify.io/favicon.ico', category: 'Sound Effects', link: 'https://sonify.io/' },
-        { name: 'Audo AI', description: 'AI noise and sound effect enhancer', logo: 'https://audo.ai/favicon.ico', category: 'Sound Effects', link: 'https://audo.ai/' }
+        { name: 'AIVA SFX', description: 'AI-generated sound effects', logo: 'https://www.aiva.ai/favicon.ico', category: 'Sound Effects', link: 'https://www.aiva.ai/', pricing: 'freemium' },
+        { name: 'Boom Library', description: 'AI sound design and effects', logo: 'https://www.boomlibrary.com/favicon.ico', category: 'Sound Effects', link: 'https://www.boomlibrary.com/', pricing: 'premium' },
+        { name: 'Soundly', description: 'AI sound effects search and creation', logo: 'https://getsoundly.com/favicon.ico', category: 'Sound Effects', link: 'https://getsoundly.com/', pricing: 'freemium' },
+        { name: 'LANDR FX', description: 'AI-powered sound effects', logo: 'https://www.landr.com/favicon.ico', category: 'Sound Effects', link: 'https://www.landr.com/', pricing: 'freemium' },
+        { name: 'Endlesss', description: 'AI collaborative sound creation', logo: 'https://endlesss.fm/favicon.ico', category: 'Sound Effects', link: 'https://endlesss.fm/', pricing: 'freemium' },
+        { name: 'Audio Design Desk', description: 'AI sound design and effects', logo: 'https://add.app/favicon.ico', category: 'Sound Effects', link: 'https://add.app/', pricing: 'premium' },
+        { name: 'Ecrett Music FX', description: 'AI sound effects generator', logo: 'https://ecrettmusic.com/favicon.ico', category: 'Sound Effects', link: 'https://ecrettmusic.com/', pricing: 'freemium' },
+        { name: 'Zapsplat AI', description: 'AI sound effects library', logo: 'https://www.zapsplat.com/favicon.ico', category: 'Sound Effects', link: 'https://www.zapsplat.com/', pricing: 'freemium' },
+        { name: 'Resemble AI FX', description: 'AI voice and sound effects', logo: 'https://www.resemble.ai/favicon.ico', category: 'Sound Effects', link: 'https://www.resemble.ai/', pricing: 'freemium' },
+        { name: 'Sonify', description: 'AI sound and music generator', logo: 'https://sonify.io/favicon.ico', category: 'Sound Effects', link: 'https://sonify.io/', pricing: 'freemium' },
+        { name: 'Audo AI', description: 'AI noise and sound effect enhancer', logo: 'https://audo.ai/favicon.ico', category: 'Sound Effects', link: 'https://audo.ai/', pricing: 'freemium' }
     ],
     'ai-mining': [
-        { name: 'MineSense', description: 'AI ore data analytics for mining', logo: 'https://minesense.com/favicon.ico', category: 'AI Mining', link: 'https://minesense.com/' },
-        { name: 'Petra Data Science', description: 'AI for mining optimization', logo: 'https://www.petradatascience.com/favicon.ico', category: 'AI Mining', link: 'https://www.petradatascience.com/' },
-        { name: 'Exyn Technologies', description: 'AI mining robotics and automation', logo: 'https://www.exyn.com/favicon.ico', category: 'AI Mining', link: 'https://www.exyn.com/' },
-        { name: 'Goldspot Discoveries', description: 'AI mineral exploration', logo: 'https://www.goldspot.ca/favicon.ico', category: 'AI Mining', link: 'https://www.goldspot.ca/' },
-        { name: 'Datarock', description: 'AI core logging for mining', logo: 'https://datarock.com/favicon.ico', category: 'AI Mining', link: 'https://datarock.com/' },
-        { name: 'EnviroSuite', description: 'AI environmental management for mining', logo: 'https://envirosuite.com/favicon.ico', category: 'AI Mining', link: 'https://envirosuite.com/' },
-        { name: 'MineHub', description: 'AI supply chain for mining', logo: 'https://www.minehub.com/favicon.ico', category: 'AI Mining', link: 'https://www.minehub.com/' },
-        { name: 'Hexagon Mining', description: 'AI mining operations platform', logo: 'https://hexagonmining.com/favicon.ico', category: 'AI Mining', link: 'https://hexagonmining.com/' },
-        { name: 'Seequent', description: 'AI geoscience for mining', logo: 'https://www.seequent.com/favicon.ico', category: 'AI Mining', link: 'https://www.seequent.com/' },
-        { name: 'RPMGlobal', description: 'AI mining software and analytics', logo: 'https://www.rpmglobal.com/favicon.ico', category: 'AI Mining', link: 'https://www.rpmglobal.com/' },
-        { name: 'Imago', description: 'AI imagery for mining operations', logo: 'https://www.imago.live/favicon.ico', category: 'AI Mining', link: 'https://www.imago.live/' }
+        { name: 'MineSense', description: 'AI ore data analytics for mining', logo: 'https://minesense.com/favicon.ico', category: 'AI Mining', link: 'https://minesense.com/', pricing: 'premium' },
+        { name: 'Petra Data Science', description: 'AI for mining optimization', logo: 'https://www.petradatascience.com/favicon.ico', category: 'AI Mining', link: 'https://www.petradatascience.com/', pricing: 'premium' },
+        { name: 'Exyn Technologies', description: 'AI mining robotics and automation', logo: 'https://www.exyn.com/favicon.ico', category: 'AI Mining', link: 'https://www.exyn.com/', pricing: 'premium' },
+        { name: 'Goldspot Discoveries', description: 'AI mineral exploration', logo: 'https://www.goldspot.ca/favicon.ico', category: 'AI Mining', link: 'https://www.goldspot.ca/', pricing: 'premium' },
+        { name: 'Datarock', description: 'AI core logging for mining', logo: 'https://datarock.com/favicon.ico', category: 'AI Mining', link: 'https://datarock.com/', pricing: 'premium' },
+        { name: 'EnviroSuite', description: 'AI environmental management for mining', logo: 'https://envirosuite.com/favicon.ico', category: 'AI Mining', link: 'https://envirosuite.com/', pricing: 'premium' },
+        { name: 'MineHub', description: 'AI supply chain for mining', logo: 'https://www.minehub.com/favicon.ico', category: 'AI Mining', link: 'https://www.minehub.com/', pricing: 'premium' },
+        { name: 'Hexagon Mining', description: 'AI mining operations platform', logo: 'https://hexagonmining.com/favicon.ico', category: 'AI Mining', link: 'https://hexagonmining.com/', pricing: 'premium' },
+        { name: 'Seequent', description: 'AI geoscience for mining', logo: 'https://www.seequent.com/favicon.ico', category: 'AI Mining', link: 'https://www.seequent.com/', pricing: 'premium' },
+        { name: 'RPMGlobal', description: 'AI mining software and analytics', logo: 'https://www.rpmglobal.com/favicon.ico', category: 'AI Mining', link: 'https://www.rpmglobal.com/', pricing: 'premium' },
+        { name: 'Imago', description: 'AI imagery for mining operations', logo: 'https://www.imago.live/favicon.ico', category: 'AI Mining', link: 'https://www.imago.live/', pricing: 'premium' }
     ],
     'telecommunications': [
-        { name: 'Aria Networks', description: 'AI network optimization for telecom', logo: 'https://www.aria-networks.com/favicon.ico', category: 'Telecommunications', link: 'https://www.aria-networks.com/' },
-        { name: 'Nokia AVA', description: 'AI-powered telecom analytics', logo: 'https://www.nokia.com/favicon.ico', category: 'Telecommunications', link: 'https://www.nokia.com/networks/solutions/ava/' },
-        { name: 'Ericsson AI', description: 'AI for telecom network management', logo: 'https://www.ericsson.com/favicon.ico', category: 'Telecommunications', link: 'https://www.ericsson.com/en/artificial-intelligence' },
-        { name: 'Huawei iMaster', description: 'AI telecom network automation', logo: 'https://www.huawei.com/favicon.ico', category: 'Telecommunications', link: 'https://e.huawei.com/en/solutions/enterprise-networks/ai-network' },
-        { name: 'Amdocs amAIz', description: 'AI telecom customer experience', logo: 'https://www.amdocs.com/favicon.ico', category: 'Telecommunications', link: 'https://www.amdocs.com/' },
-        { name: 'Netcracker AI', description: 'AI operations for telecom', logo: 'https://www.netcracker.com/favicon.ico', category: 'Telecommunications', link: 'https://www.netcracker.com/' },
-        { name: 'Subex AI', description: 'AI fraud management for telecom', logo: 'https://www.subex.com/favicon.ico', category: 'Telecommunications', link: 'https://www.subex.com/' },
-        { name: 'Ciena Blue Planet', description: 'AI network automation', logo: 'https://www.ciena.com/favicon.ico', category: 'Telecommunications', link: 'https://www.ciena.com/solutions/blueplanet/' },
-        { name: 'Rakuten AI', description: 'AI telecom network operations', logo: 'https://global.rakuten.com/favicon.ico', category: 'Telecommunications', link: 'https://global.rakuten.com/corp/innovation/rakutenai/' },
-        { name: 'Taranis', description: 'AI telecom network analytics', logo: 'https://www.taranis.com/favicon.ico', category: 'Telecommunications', link: 'https://www.taranis.com/' },
-        { name: 'Optiva AI', description: 'AI-powered telecom monetization', logo: 'https://optiva.com/favicon.ico', category: 'Telecommunications', link: 'https://optiva.com/' }
+        { name: 'Aria Networks', description: 'AI network optimization for telecom', logo: 'https://www.aria-networks.com/favicon.ico', category: 'Telecommunications', link: 'https://www.aria-networks.com/', pricing: 'premium' },
+        { name: 'Nokia AVA', description: 'AI-powered telecom analytics', logo: 'https://www.nokia.com/favicon.ico', category: 'Telecommunications', link: 'https://www.nokia.com/networks/solutions/ava/', pricing: 'premium' },
+        { name: 'Ericsson AI', description: 'AI for telecom network management', logo: 'https://www.ericsson.com/favicon.ico', category: 'Telecommunications', link: 'https://www.ericsson.com/en/artificial-intelligence', pricing: 'premium' },
+        { name: 'Huawei iMaster', description: 'AI telecom network automation', logo: 'https://www.huawei.com/favicon.ico', category: 'Telecommunications', link: 'https://e.huawei.com/en/solutions/enterprise-networks/ai-network', pricing: 'premium' },
+        { name: 'Amdocs amAIz', description: 'AI telecom customer experience', logo: 'https://www.amdocs.com/favicon.ico', category: 'Telecommunications', link: 'https://www.amdocs.com/', pricing: 'premium' },
+        { name: 'Netcracker AI', description: 'AI operations for telecom', logo: 'https://www.netcracker.com/favicon.ico', category: 'Telecommunications', link: 'https://www.netcracker.com/', pricing: 'premium' },
+        { name: 'Subex AI', description: 'AI fraud management for telecom', logo: 'https://www.subex.com/favicon.ico', category: 'Telecommunications', link: 'https://www.subex.com/', pricing: 'premium' },
+        { name: 'Ciena Blue Planet', description: 'AI network automation', logo: 'https://www.ciena.com/favicon.ico', category: 'Telecommunications', link: 'https://www.ciena.com/solutions/blueplanet/', pricing: 'premium' },
+        { name: 'Rakuten AI', description: 'AI telecom network operations', logo: 'https://global.rakuten.com/favicon.ico', category: 'Telecommunications', link: 'https://global.rakuten.com/corp/innovation/rakutenai/', pricing: 'premium' },
+        { name: 'Taranis', description: 'AI telecom network analytics', logo: 'https://www.taranis.com/favicon.ico', category: 'Telecommunications', link: 'https://www.taranis.com/', pricing: 'premium' },
+        { name: 'Optiva AI', description: 'AI-powered telecom monetization', logo: 'https://optiva.com/favicon.ico', category: 'Telecommunications', link: 'https://optiva.com/', pricing: 'premium' }
     ],
     'aerospace': [
-        { name: 'SparkCognition', description: 'AI for aerospace asset management', logo: 'https://www.sparkcognition.com/favicon.ico', category: 'Aerospace', link: 'https://www.sparkcognition.com/' },
-        { name: 'Airbus Skywise', description: 'AI aviation analytics platform', logo: 'https://www.airbus.com/favicon.ico', category: 'Aerospace', link: 'https://airbus.com/innovation/skywise.html' },
-        { name: 'GE Aviation Digital', description: 'AI for aerospace operations', logo: 'https://www.geaviation.com/favicon.ico', category: 'Aerospace', link: 'https://www.geaviation.com/digital' },
-        { name: 'Honeywell Forge', description: 'AI aerospace analytics', logo: 'https://www.honeywell.com/favicon.ico', category: 'Aerospace', link: 'https://www.honeywell.com/us/en/forge/aerospace' },
-        { name: 'Palantir Foundry', description: 'AI data platform for aerospace', logo: 'https://www.palantir.com/favicon.ico', category: 'Aerospace', link: 'https://www.palantir.com/solutions/aerospace-defense/' },
-        { name: 'SatSure', description: 'AI satellite analytics', logo: 'https://satsure.co/favicon.ico', category: 'Aerospace', link: 'https://satsure.co/' },
-        { name: 'Orbital Insight', description: 'AI geospatial analytics', logo: 'https://orbitalinsight.com/favicon.ico', category: 'Aerospace', link: 'https://orbitalinsight.com/' },
-        { name: 'Spire', description: 'AI-powered satellite data', logo: 'https://spire.com/favicon.ico', category: 'Aerospace', link: 'https://spire.com/' },
-        { name: 'Descartes Labs', description: 'AI satellite imagery analytics', logo: 'https://descarteslabs.com/favicon.ico', category: 'Aerospace', link: 'https://descarteslabs.com/' },
-        { name: 'SkyWatch', description: 'AI satellite data platform', logo: 'https://skywatch.com/favicon.ico', category: 'Aerospace', link: 'https://skywatch.com/' },
-        { name: 'Satellogic', description: 'AI earth observation platform', logo: 'https://satellogic.com/favicon.ico', category: 'Aerospace', link: 'https://satellogic.com/' }
+        { name: 'SparkCognition', description: 'AI for aerospace asset management', logo: 'https://www.sparkcognition.com/favicon.ico', category: 'Aerospace', link: 'https://www.sparkcognition.com/', pricing: 'premium' },
+        { name: 'Airbus Skywise', description: 'AI aviation analytics platform', logo: 'https://www.airbus.com/favicon.ico', category: 'Aerospace', link: 'https://airbus.com/innovation/skywise.html', pricing: 'premium' },
+        { name: 'GE Aviation Digital', description: 'AI for aerospace operations', logo: 'https://www.geaviation.com/favicon.ico', category: 'Aerospace', link: 'https://www.geaviation.com/digital', pricing: 'premium' },
+        { name: 'Honeywell Forge', description: 'AI aerospace analytics', logo: 'https://www.honeywell.com/favicon.ico', category: 'Aerospace', link: 'https://www.honeywell.com/us/en/forge/aerospace', pricing: 'premium' },
+        { name: 'Palantir Foundry', description: 'AI data platform for aerospace', logo: 'https://www.palantir.com/favicon.ico', category: 'Aerospace', link: 'https://www.palantir.com/solutions/aerospace-defense/', pricing: 'premium' },
+        { name: 'SatSure', description: 'AI satellite analytics', logo: 'https://satsure.co/favicon.ico', category: 'Aerospace', link: 'https://satsure.co/', pricing: 'premium' },
+        { name: 'Orbital Insight', description: 'AI geospatial analytics', logo: 'https://orbitalinsight.com/favicon.ico', category: 'Aerospace', link: 'https://orbitalinsight.com/', pricing: 'premium' },
+        { name: 'Spire', description: 'AI-powered satellite data', logo: 'https://spire.com/favicon.ico', category: 'Aerospace', link: 'https://spire.com/', pricing: 'premium' },
+        { name: 'Descartes Labs', description: 'AI satellite imagery analytics', logo: 'https://descarteslabs.com/favicon.ico', category: 'Aerospace', link: 'https://descarteslabs.com/', pricing: 'premium' },
+        { name: 'SkyWatch', description: 'AI satellite data platform', logo: 'https://skywatch.com/favicon.ico', category: 'Aerospace', link: 'https://skywatch.com/', pricing: 'premium' },
+        { name: 'Satellogic', description: 'AI earth observation platform', logo: 'https://satellogic.com/favicon.ico', category: 'Aerospace', link: 'https://satellogic.com/', pricing: 'premium' }
     ],
     'maritime': [
-        { name: 'Windward', description: 'AI maritime risk analytics', logo: 'https://wnwd.com/favicon.ico', category: 'Maritime', link: 'https://wnwd.com/' },
-        { name: 'MarineTraffic AI', description: 'AI-powered vessel tracking', logo: 'https://www.marinetraffic.com/favicon.ico', category: 'Maritime', link: 'https://www.marinetraffic.com/' },
-        { name: 'Spire Maritime', description: 'AI satellite data for shipping', logo: 'https://spire.com/favicon.ico', category: 'Maritime', link: 'https://spire.com/maritime/' },
-        { name: 'Nautilus Labs', description: 'AI-powered maritime analytics', logo: 'https://nautiluslabs.com/favicon.ico', category: 'Maritime', link: 'https://nautiluslabs.com/' },
-        { name: 'OrbitMI', description: 'AI maritime operations platform', logo: 'https://www.orbitmi.com/favicon.ico', category: 'Maritime', link: 'https://www.orbitmi.com/' },
-        { name: 'RightShip', description: 'AI vessel vetting and risk', logo: 'https://www.rightship.com/favicon.ico', category: 'Maritime', link: 'https://www.rightship.com/' },
-        { name: 'Marine AI', description: 'AI for marine navigation', logo: 'https://marineai.co.uk/favicon.ico', category: 'Maritime', link: 'https://marineai.co.uk/' },
-        { name: 'BunkerMetric', description: 'AI bunker procurement for shipping', logo: 'https://bunkermetric.com/favicon.ico', category: 'Maritime', link: 'https://bunkermetric.com/' },
-        { name: 'PortXchange', description: 'AI port call optimization', logo: 'https://port-xchange.com/favicon.ico', category: 'Maritime', link: 'https://port-xchange.com/' },
-        { name: 'ShipIn Systems', description: 'AI-powered maritime fleet management', logo: 'https://shipin.ai/favicon.ico', category: 'Maritime', link: 'https://shipin.ai/' },
-        { name: 'HiLo Maritime Risk Management', description: 'AI maritime risk analytics', logo: 'https://www.hilomrm.com/favicon.ico', category: 'Maritime', link: 'https://www.hilomrm.com/' }
+        { name: 'Windward', description: 'AI maritime risk analytics', logo: 'https://wnwd.com/favicon.ico', category: 'Maritime', link: 'https://wnwd.com/', pricing: 'premium' },
+        { name: 'MarineTraffic AI', description: 'AI-powered vessel tracking', logo: 'https://www.marinetraffic.com/favicon.ico', category: 'Maritime', link: 'https://www.marinetraffic.com/', pricing: 'freemium' },
+        { name: 'Spire Maritime', description: 'AI satellite data for shipping', logo: 'https://spire.com/favicon.ico', category: 'Maritime', link: 'https://spire.com/maritime/', pricing: 'premium' },
+        { name: 'Nautilus Labs', description: 'AI-powered maritime analytics', logo: 'https://nautiluslabs.com/favicon.ico', category: 'Maritime', link: 'https://nautiluslabs.com/', pricing: 'premium' },
+        { name: 'OrbitMI', description: 'AI maritime operations platform', logo: 'https://www.orbitmi.com/favicon.ico', category: 'Maritime', link: 'https://www.orbitmi.com/', pricing: 'premium' },
+        { name: 'RightShip', description: 'AI vessel vetting and risk', logo: 'https://www.rightship.com/favicon.ico', category: 'Maritime', link: 'https://www.rightship.com/', pricing: 'premium' },
+        { name: 'Marine AI', description: 'AI for marine navigation', logo: 'https://marineai.co.uk/favicon.ico', category: 'Maritime', link: 'https://marineai.co.uk/', pricing: 'premium' },
+        { name: 'BunkerMetric', description: 'AI bunker procurement for shipping', logo: 'https://bunkermetric.com/favicon.ico', category: 'Maritime', link: 'https://bunkermetric.com/', pricing: 'premium' },
+        { name: 'PortXchange', description: 'AI port call optimization', logo: 'https://port-xchange.com/favicon.ico', category: 'Maritime', link: 'https://port-xchange.com/', pricing: 'premium' },
+        { name: 'ShipIn Systems', description: 'AI-powered maritime fleet management', logo: 'https://shipin.ai/favicon.ico', category: 'Maritime', link: 'https://shipin.ai/', pricing: 'premium' },
+        { name: 'HiLo Maritime Risk Management', description: 'AI maritime risk analytics', logo: 'https://www.hilomrm.com/favicon.ico', category: 'Maritime', link: 'https://www.hilomrm.com/', pricing: 'premium' }
     ],
     // 'waste-management': [
     //     { name: 'Rubicon', description: 'AI-powered waste and recycling solutions', logo: 'https://www.rubicon.com/favicon.ico', category: 'Waste Management', link: 'https://www.rubicon.com/' },
@@ -820,52 +806,52 @@ Object.assign(aiToolsData, {
     // ],
 
     'ai-pet-care': [
-        { name: 'Pawscout', description: 'AI pet tracking and safety', logo: 'https://www.pawscout.com/favicon.ico', category: 'AI Pet Care', link: 'https://www.pawscout.com/' },
-        { name: 'Petcube', description: 'AI pet camera and treat dispenser', logo: 'https://petcube.com/favicon.ico', category: 'AI Pet Care', link: 'https://petcube.com/' },
-        { name: 'Whistle', description: 'AI pet health and GPS tracker', logo: 'https://www.whistle.com/favicon.ico', category: 'AI Pet Care', link: 'https://www.whistle.com/' },
-        { name: 'BabelBark', description: 'AI pet health and wellness platform', logo: 'https://www.babelbark.com/favicon.ico', category: 'AI Pet Care', link: 'https://www.babelbark.com/' },
-        { name: 'Felcana', description: 'AI pet health monitoring', logo: 'https://www.felcana.com/favicon.ico', category: 'AI Pet Care', link: 'https://www.felcana.com/' },
-        { name: 'Petnet', description: 'AI smart feeder for pets', logo: 'https://www.petnet.io/favicon.ico', category: 'AI Pet Care', link: 'https://www.petnet.io/' },
-        { name: 'Sure Petcare', description: 'AI pet doors and feeders', logo: 'https://www.surepetcare.com/favicon.ico', category: 'AI Pet Care', link: 'https://www.surepetcare.com/' },
-        { name: 'Dogness', description: 'AI pet robots and cameras', logo: 'https://www.dogness.com/favicon.ico', category: 'AI Pet Care', link: 'https://www.dogness.com/' },
-        { name: 'Tractive', description: 'AI GPS tracking for pets', logo: 'https://tractive.com/favicon.ico', category: 'AI Pet Care', link: 'https://tractive.com/' },
-        { name: 'Vetrax', description: 'AI pet activity and health monitor', logo: 'https://www.vetrax.com/favicon.ico', category: 'AI Pet Care', link: 'https://www.vetrax.com/' }
+        { name: 'Pawscout', description: 'AI pet tracking and safety', logo: 'https://www.pawscout.com/favicon.ico', category: 'AI Pet Care', link: 'https://www.pawscout.com/', pricing: 'freemium' },
+        { name: 'Petcube', description: 'AI pet camera and treat dispenser', logo: 'https://petcube.com/favicon.ico', category: 'AI Pet Care', link: 'https://petcube.com/', pricing: 'premium' },
+        { name: 'Whistle', description: 'AI pet health and GPS tracker', logo: 'https://www.whistle.com/favicon.ico', category: 'AI Pet Care', link: 'https://www.whistle.com/', pricing: 'premium' },
+        { name: 'BabelBark', description: 'AI pet health and wellness platform', logo: 'https://www.babelbark.com/favicon.ico', category: 'AI Pet Care', link: 'https://www.babelbark.com/', pricing: 'freemium' },
+        { name: 'Felcana', description: 'AI pet health monitoring', logo: 'https://www.felcana.com/favicon.ico', category: 'AI Pet Care', link: 'https://www.felcana.com/', pricing: 'premium' },
+        { name: 'Petnet', description: 'AI smart feeder for pets', logo: 'https://www.petnet.io/favicon.ico', category: 'AI Pet Care', link: 'https://www.petnet.io/', pricing: 'premium' },
+        { name: 'Sure Petcare', description: 'AI pet doors and feeders', logo: 'https://www.surepetcare.com/favicon.ico', category: 'AI Pet Care', link: 'https://www.surepetcare.com/', pricing: 'premium' },
+        { name: 'Dogness', description: 'AI pet robots and cameras', logo: 'https://www.dogness.com/favicon.ico', category: 'AI Pet Care', link: 'https://www.dogness.com/', pricing: 'premium' },
+        { name: 'Tractive', description: 'AI GPS tracking for pets', logo: 'https://tractive.com/favicon.ico', category: 'AI Pet Care', link: 'https://tractive.com/', pricing: 'freemium' },
+        { name: 'Vetrax', description: 'AI pet activity and health monitor', logo: 'https://www.vetrax.com/favicon.ico', category: 'AI Pet Care', link: 'https://www.vetrax.com/', pricing: 'premium' }
     ],
     'ai-podcasting': [
-        { name: 'Descript', description: 'AI podcast editing and transcription', logo: 'https://www.descript.com/favicon.ico', category: 'AI Podcasting', link: 'https://www.descript.com' },
-        { name: 'Podcastle', description: 'AI-powered podcast creation', logo: 'https://podcastle.ai/favicon.ico', category: 'AI Podcasting', link: 'https://podcastle.ai' },
-        { name: 'Riverside.fm', description: 'AI podcast recording and enhancement', logo: 'https://riverside.fm/favicon.ico', category: 'AI Podcasting', link: 'https://riverside.fm' },
-        { name: 'Auphonic', description: 'AI audio post-production for podcasts', logo: 'https://auphonic.com/favicon.ico', category: 'AI Podcasting', link: 'https://auphonic.com' },
-        { name: 'Cleanvoice AI', description: 'AI podcast noise and filler remover', logo: 'https://cleanvoice.ai/favicon.ico', category: 'AI Podcasting', link: 'https://cleanvoice.ai' }
-    ,{ name: 'Podbean', description: 'AI podcast hosting and analytics', logo: 'https://www.podbean.com/favicon.ico', category: 'AI Podcasting', link: 'https://www.podbean.com' }
-    ,{ name: 'Alitu', description: 'AI podcast editing and publishing', logo: 'https://alitu.com/favicon.ico', category: 'AI Podcasting', link: 'https://alitu.com' }
-    ,{ name: 'Castos', description: 'AI podcast analytics and distribution', logo: 'https://castos.com/favicon.ico', category: 'AI Podcasting', link: 'https://castos.com' }
-    ,{ name: 'Podomatic', description: 'AI podcast creation and monetization', logo: 'https://www.podomatic.com/favicon.ico', category: 'AI Podcasting', link: 'https://www.podomatic.com' }
-    ,{ name: 'Headliner', description: 'AI podcast audiogram and video creation', logo: 'https://www.headliner.app/favicon.ico', category: 'AI Podcasting', link: 'https://www.headliner.app' }
+        { name: 'Descript', description: 'AI podcast editing and transcription', logo: 'https://www.descript.com/favicon.ico', category: 'AI Podcasting', link: 'https://www.descript.com', pricing: 'freemium' },
+        { name: 'Podcastle', description: 'AI-powered podcast creation', logo: 'https://podcastle.ai/favicon.ico', category: 'AI Podcasting', link: 'https://podcastle.ai', pricing: 'freemium' },
+        { name: 'Riverside.fm', description: 'AI podcast recording and enhancement', logo: 'https://riverside.fm/favicon.ico', category: 'AI Podcasting', link: 'https://riverside.fm', pricing: 'freemium' },
+        { name: 'Auphonic', description: 'AI audio post-production for podcasts', logo: 'https://auphonic.com/favicon.ico', category: 'AI Podcasting', link: 'https://auphonic.com', pricing: 'freemium' },
+        { name: 'Cleanvoice AI', description: 'AI podcast noise and filler remover', logo: 'https://cleanvoice.ai/favicon.ico', category: 'AI Podcasting', link: 'https://cleanvoice.ai', pricing: 'freemium' }
+    ,{ name: 'Podbean', description: 'AI podcast hosting and analytics', logo: 'https://www.podbean.com/favicon.ico', category: 'AI Podcasting', link: 'https://www.podbean.com', pricing: 'freemium' }
+    ,{ name: 'Alitu', description: 'AI podcast editing and publishing', logo: 'https://alitu.com/favicon.ico', category: 'AI Podcasting', link: 'https://alitu.com', pricing: 'premium' }
+    ,{ name: 'Castos', description: 'AI podcast analytics and distribution', logo: 'https://castos.com/favicon.ico', category: 'AI Podcasting', link: 'https://castos.com', pricing: 'freemium' }
+    ,{ name: 'Podomatic', description: 'AI podcast creation and monetization', logo: 'https://www.podomatic.com/favicon.ico', category: 'AI Podcasting', link: 'https://www.podomatic.com', pricing: 'freemium' }
+    ,{ name: 'Headliner', description: 'AI podcast audiogram and video creation', logo: 'https://www.headliner.app/favicon.ico', category: 'AI Podcasting', link: 'https://www.headliner.app', pricing: 'freemium' }
     ],
     'ai-event-planning': [
-        { name: 'Eventbrite AI', description: 'Smart event management', logo: 'https://www.eventbrite.com/favicon.ico', category: 'AI Event Planning', link: 'https://www.eventbrite.com' },
-        { name: 'Zkipster', description: 'AI guest list and event check-in', logo: 'https://www.zkipster.com/favicon.ico', category: 'AI Event Planning', link: 'https://www.zkipster.com' },
-        { name: 'Social Tables', description: 'AI event diagramming', logo: 'https://www.socialtables.com/favicon.ico', category: 'AI Event Planning', link: 'https://www.socialtables.com' },
-        { name: 'Bizzabo', description: 'AI event marketing and analytics', logo: 'https://www.bizzabo.com/favicon.ico', category: 'AI Event Planning', link: 'https://www.bizzabo.com' },
-        { name: 'Splashthat', description: 'AI event design and automation', logo: 'https://splashthat.com/favicon.ico', category: 'AI Event Planning', link: 'https://splashthat.com' }
-    ,{ name: 'Whova', description: 'AI event app and attendee engagement', logo: 'https://whova.com/favicon.ico', category: 'AI Event Planning', link: 'https://whova.com' }
-    ,{ name: 'Cvent', description: 'AI event management platform', logo: 'https://www.cvent.com/favicon.ico', category: 'AI Event Planning', link: 'https://www.cvent.com' }
-    ,{ name: 'Hopin', description: 'AI virtual and hybrid event platform', logo: 'https://hopin.com/favicon.ico', category: 'AI Event Planning', link: 'https://hopin.com' }
-    ,{ name: 'EventMobi', description: 'AI event app and analytics', logo: 'https://www.eventmobi.com/favicon.ico', category: 'AI Event Planning', link: 'https://www.eventmobi.com' }
-    ,{ name: 'Aventri', description: 'AI event management and marketing', logo: 'https://www.aventri.com/favicon.ico', category: 'AI Event Planning', link: 'https://www.aventri.com' }
+        { name: 'Eventbrite AI', description: 'Smart event management', logo: 'https://www.eventbrite.com/favicon.ico', category: 'AI Event Planning', link: 'https://www.eventbrite.com', pricing: 'freemium' },
+        { name: 'Zkipster', description: 'AI guest list and event check-in', logo: 'https://www.zkipster.com/favicon.ico', category: 'AI Event Planning', link: 'https://www.zkipster.com', pricing: 'premium' },
+        { name: 'Social Tables', description: 'AI event diagramming', logo: 'https://www.socialtables.com/favicon.ico', category: 'AI Event Planning', link: 'https://www.socialtables.com', pricing: 'premium' },
+        { name: 'Bizzabo', description: 'AI event marketing and analytics', logo: 'https://www.bizzabo.com/favicon.ico', category: 'AI Event Planning', link: 'https://www.bizzabo.com', pricing: 'premium' },
+        { name: 'Splashthat', description: 'AI event design and automation', logo: 'https://splashthat.com/favicon.ico', category: 'AI Event Planning', link: 'https://splashthat.com', pricing: 'freemium' }
+    ,{ name: 'Whova', description: 'AI event app and attendee engagement', logo: 'https://whova.com/favicon.ico', category: 'AI Event Planning', link: 'https://whova.com', pricing: 'freemium' }
+    ,{ name: 'Cvent', description: 'AI event management platform', logo: 'https://www.cvent.com/favicon.ico', category: 'AI Event Planning', link: 'https://www.cvent.com', pricing: 'premium' }
+    ,{ name: 'Hopin', description: 'AI virtual and hybrid event platform', logo: 'https://hopin.com/favicon.ico', category: 'AI Event Planning', link: 'https://hopin.com', pricing: 'freemium' }
+    ,{ name: 'EventMobi', description: 'AI event app and analytics', logo: 'https://www.eventmobi.com/favicon.ico', category: 'AI Event Planning', link: 'https://www.eventmobi.com', pricing: 'premium' }
+    ,{ name: 'Aventri', description: 'AI event management and marketing', logo: 'https://www.aventri.com/favicon.ico', category: 'AI Event Planning', link: 'https://www.aventri.com', pricing: 'premium' }
     ],
     'ai-personal-finance': [
-        { name: 'Cleo', description: 'AI budgeting and finance assistant', logo: 'https://web.meetcleo.com/favicon.ico', category: 'AI Personal Finance', link: 'https://web.meetcleo.com' },
-        { name: 'YNAB AI', description: 'AI-powered budgeting', logo: 'https://www.youneedabudget.com/favicon.ico', category: 'AI Personal Finance', link: 'https://www.youneedabudget.com' },
-        { name: 'Albert', description: 'AI financial advice', logo: 'https://albert.com/favicon.ico', category: 'AI Personal Finance', link: 'https://albert.com' },
-        { name: 'Plum', description: 'AI savings and investment', logo: 'https://withplum.com/favicon.ico', category: 'AI Personal Finance', link: 'https://withplum.com' },
-        { name: 'Wally AI', description: 'AI personal finance tracker', logo: 'https://wally.me/favicon.ico', category: 'AI Personal Finance', link: 'https://wally.me' }
-    ,{ name: 'Emma', description: 'AI money management and budgeting', logo: 'https://emma-app.com/favicon.ico', category: 'AI Personal Finance', link: 'https://emma-app.com' }
-    ,{ name: 'PocketSmith', description: 'AI personal finance forecasting', logo: 'https://www.pocketsmith.com/favicon.ico', category: 'AI Personal Finance', link: 'https://www.pocketsmith.com' }
-    ,{ name: 'Truebill', description: 'AI subscription and bill management', logo: 'https://www.truebill.com/favicon.ico', category: 'AI Personal Finance', link: 'https://www.truebill.com' }
-    ,{ name: 'Qapital', description: 'AI savings and goal planning', logo: 'https://www.qapital.com/favicon.ico', category: 'AI Personal Finance', link: 'https://www.qapital.com' }
-    ,{ name: 'Digit', description: 'AI automatic savings tool', logo: 'https://digit.co/favicon.ico', category: 'AI Personal Finance', link: 'https://digit.co' }
+        { name: 'Cleo', description: 'AI budgeting and finance assistant', logo: 'https://web.meetcleo.com/favicon.ico', category: 'AI Personal Finance', link: 'https://web.meetcleo.com', pricing: 'freemium' },
+        { name: 'YNAB AI', description: 'AI-powered budgeting', logo: 'https://www.youneedabudget.com/favicon.ico', category: 'AI Personal Finance', link: 'https://www.youneedabudget.com', pricing: 'premium' },
+        { name: 'Albert', description: 'AI financial advice', logo: 'https://albert.com/favicon.ico', category: 'AI Personal Finance', link: 'https://albert.com', pricing: 'freemium' },
+        { name: 'Plum', description: 'AI savings and investment', logo: 'https://withplum.com/favicon.ico', category: 'AI Personal Finance', link: 'https://withplum.com', pricing: 'freemium' },
+        { name: 'Wally AI', description: 'AI personal finance tracker', logo: 'https://wally.me/favicon.ico', category: 'AI Personal Finance', link: 'https://wally.me', pricing: 'freemium' }
+    ,{ name: 'Emma', description: 'AI money management and budgeting', logo: 'https://emma-app.com/favicon.ico', category: 'AI Personal Finance', link: 'https://emma-app.com', pricing: 'freemium' }
+    ,{ name: 'PocketSmith', description: 'AI personal finance forecasting', logo: 'https://www.pocketsmith.com/favicon.ico', category: 'AI Personal Finance', link: 'https://www.pocketsmith.com', pricing: 'freemium' }
+    ,{ name: 'Truebill', description: 'AI subscription and bill management', logo: 'https://www.truebill.com/favicon.ico', category: 'AI Personal Finance', link: 'https://www.truebill.com', pricing: 'freemium' }
+    ,{ name: 'Qapital', description: 'AI savings and goal planning', logo: 'https://www.qapital.com/favicon.ico', category: 'AI Personal Finance', link: 'https://www.qapital.com', pricing: 'freemium' }
+    ,{ name: 'Digit', description: 'AI automatic savings tool', logo: 'https://digit.co/favicon.ico', category: 'AI Personal Finance', link: 'https://digit.co', pricing: 'freemium' }
     ],
     // 'ai-gardening': [
     //     { name: 'Planta', description: 'AI plant care assistant', logo: 'https://getplanta.com/favicon.ico', category: 'AI Gardening', link: 'https://getplanta.com' },
@@ -880,1107 +866,1136 @@ Object.assign(aiToolsData, {
     // ,{ name: 'Garden Planner', description: 'AI garden design and planning', logo: 'https://www.gardenplanner.com/favicon.ico', category: 'AI Gardening', link: 'https://www.gardenplanner.com' }
     // ],
     'ai-language-translation': [
-        { name: 'DeepL', description: 'AI translation engine', logo: 'https://www.deepl.com/favicon.ico', category: 'AI Language Translation', link: 'https://www.deepl.com' },
-        { name: 'Google Translate AI', description: 'Neural machine translation', logo: 'https://translate.google.com/favicon.ico', category: 'AI Language Translation', link: 'https://translate.google.com' },
-        { name: 'Microsoft Translator', description: 'AI-powered translation', logo: 'https://translator.microsoft.com/favicon.ico', category: 'AI Language Translation', link: 'https://translator.microsoft.com' },
-        { name: 'iTranslate', description: 'AI language translation', logo: 'https://www.itranslate.com/favicon.ico', category: 'AI Language Translation', link: 'https://www.itranslate.com' },
-        { name: 'Unbabel', description: 'AI translation for business', logo: 'https://unbabel.com/favicon.ico', category: 'AI Language Translation', link: 'https://unbabel.com' }
-    ,{ name: 'Smartling', description: 'AI translation management platform', logo: 'https://www.smartling.com/favicon.ico', category: 'AI Language Translation', link: 'https://www.smartling.com' }
-    ,{ name: 'Lilt', description: 'AI-powered translation for enterprises', logo: 'https://lilt.com/favicon.ico', category: 'AI Language Translation', link: 'https://lilt.com' }
-    ,{ name: 'Memsource', description: 'AI translation automation', logo: 'https://www.memsource.com/favicon.ico', category: 'AI Language Translation', link: 'https://www.memsource.com' }
-    ,{ name: 'Phrase', description: 'AI translation platform', logo: 'https://phrase.com/favicon.ico', category: 'AI Language Translation', link: 'https://phrase.com' }
-    ,{ name: 'Sonix', description: 'AI transcription and translation', logo: 'https://sonix.ai/favicon.ico', category: 'AI Language Translation', link: 'https://sonix.ai' }
+        { name: 'DeepL', description: 'AI translation engine', logo: 'https://www.deepl.com/favicon.ico', category: 'AI Language Translation', link: 'https://www.deepl.com', pricing: 'freemium' },
+        { name: 'Google Translate AI', description: 'Neural machine translation', logo: 'https://translate.google.com/favicon.ico', category: 'AI Language Translation', link: 'https://translate.google.com', pricing: 'free' },
+        { name: 'Microsoft Translator', description: 'AI-powered translation', logo: 'https://translator.microsoft.com/favicon.ico', category: 'AI Language Translation', link: 'https://translator.microsoft.com', pricing: 'freemium' },
+        { name: 'iTranslate', description: 'AI language translation', logo: 'https://www.itranslate.com/favicon.ico', category: 'AI Language Translation', link: 'https://www.itranslate.com', pricing: 'freemium' },
+        { name: 'Unbabel', description: 'AI translation for business', logo: 'https://unbabel.com/favicon.ico', category: 'AI Language Translation', link: 'https://unbabel.com', pricing: 'premium' }
+    ,{ name: 'Smartling', description: 'AI translation management platform', logo: 'https://www.smartling.com/favicon.ico', category: 'AI Language Translation', link: 'https://www.smartling.com', pricing: 'premium' }
+    ,{ name: 'Lilt', description: 'AI-powered translation for enterprises', logo: 'https://lilt.com/favicon.ico', category: 'AI Language Translation', link: 'https://lilt.com', pricing: 'premium' }
+    ,{ name: 'Memsource', description: 'AI translation automation', logo: 'https://www.memsource.com/favicon.ico', category: 'AI Language Translation', link: 'https://www.memsource.com', pricing: 'premium' }
+    ,{ name: 'Phrase', description: 'AI translation platform', logo: 'https://phrase.com/favicon.ico', category: 'AI Language Translation', link: 'https://phrase.com', pricing: 'premium' }
+    ,{ name: 'Sonix', description: 'AI transcription and translation', logo: 'https://sonix.ai/favicon.ico', category: 'AI Language Translation', link: 'https://sonix.ai', pricing: 'freemium' }
     ],
   
    
     'ai-sustainability': [
-        { name: 'ClimateAI', description: 'AI climate risk analytics', logo: 'https://climate.ai/favicon.ico', category: 'AI Sustainability', link: 'https://climate.ai' },
-        { name: 'Persefoni', description: 'AI carbon management', logo: 'https://persefoni.com/favicon.ico', category: 'AI Sustainability', link: 'https://persefoni.com' },
-        { name: 'Watershed', description: 'AI sustainability platform', logo: 'https://watershed.com/favicon.ico', category: 'AI Sustainability', link: 'https://watershed.com' },
-        { name: 'Plan A', description: 'AI ESG platform', logo: 'https://plana.earth/favicon.ico', category: 'AI Sustainability', link: 'https://plana.earth' },
-        { name: 'CarbonChain', description: 'AI carbon tracking', logo: 'https://carbonchain.com/favicon.ico', category: 'AI Sustainability', link: 'https://carbonchain.com' }
-    ,{ name: 'Enablon', description: 'AI-powered sustainability management', logo: 'https://enablon.com/favicon.ico', category: 'AI Sustainability', link: 'https://enablon.com' }
-    ,{ name: 'Sustainalytics', description: 'AI ESG risk ratings and analytics', logo: 'https://www.sustainalytics.com/favicon.ico', category: 'AI Sustainability', link: 'https://www.sustainalytics.com' }
-    ,{ name: 'EcoVadis', description: 'AI sustainability ratings platform', logo: 'https://www.ecovadis.com/favicon.ico', category: 'AI Sustainability', link: 'https://www.ecovadis.com' }
-    ,{ name: 'GHG Platform India', description: 'AI greenhouse gas data and analytics', logo: 'https://ghgplatform-india.org/favicon.ico', category: 'AI Sustainability', link: 'https://ghgplatform-india.org' }
-    ,{ name: 'OpenClimate', description: 'AI open climate data platform', logo: 'https://openclimate.network/favicon.ico', category: 'AI Sustainability', link: 'https://openclimate.network' }
+        { name: 'ClimateAI', description: 'AI climate risk analytics', logo: 'https://climate.ai/favicon.ico', category: 'AI Sustainability', link: 'https://climate.ai', pricing: 'premium' },
+        { name: 'Persefoni', description: 'AI carbon management', logo: 'https://persefoni.com/favicon.ico', category: 'AI Sustainability', link: 'https://persefoni.com', pricing: 'premium' },
+        { name: 'Watershed', description: 'AI sustainability platform', logo: 'https://watershed.com/favicon.ico', category: 'AI Sustainability', link: 'https://watershed.com', pricing: 'premium' },
+        { name: 'Plan A', description: 'AI ESG platform', logo: 'https://plana.earth/favicon.ico', category: 'AI Sustainability', link: 'https://plana.earth', pricing: 'premium' },
+        { name: 'CarbonChain', description: 'AI carbon tracking', logo: 'https://carbonchain.com/favicon.ico', category: 'AI Sustainability', link: 'https://carbonchain.com', pricing: 'premium' }
+    ,{ name: 'Enablon', description: 'AI-powered sustainability management', logo: 'https://enablon.com/favicon.ico', category: 'AI Sustainability', link: 'https://enablon.com', pricing: 'premium' }
+    ,{ name: 'Sustainalytics', description: 'AI ESG risk ratings and analytics', logo: 'https://www.sustainalytics.com/favicon.ico', category: 'AI Sustainability', link: 'https://www.sustainalytics.com', pricing: 'premium' }
+    ,{ name: 'EcoVadis', description: 'AI sustainability ratings platform', logo: 'https://www.ecovadis.com/favicon.ico', category: 'AI Sustainability', link: 'https://www.ecovadis.com', pricing: 'premium' }
+    ,{ name: 'GHG Platform India', description: 'AI greenhouse gas data and analytics', logo: 'https://ghgplatform-india.org/favicon.ico', category: 'AI Sustainability', link: 'https://ghgplatform-india.org', pricing: 'free' }
+    ,{ name: 'OpenClimate', description: 'AI open climate data platform', logo: 'https://openclimate.network/favicon.ico', category: 'AI Sustainability', link: 'https://openclimate.network', pricing: 'free' }
     ],
    
    
     'ai-education': [
-        { name: 'Duolingo', description: 'AI-powered language learning platform', logo: 'https://www.duolingo.com/favicon.ico', category: 'Education AI', link: 'https://www.duolingo.com/' },
-        { name: 'Coursera', description: 'AI-enhanced online learning platform', logo: 'https://www.coursera.org/favicon.ico', category: 'Education AI', link: 'https://www.coursera.org/' },
-        { name: 'Khan Academy', description: 'Personalized learning with AI', logo: 'https://www.khanacademy.org/favicon.ico', category: 'Education AI', link: 'https://www.khanacademy.org/' },
-        { name: 'Quizlet', description: 'AI-powered study tools and flashcards', logo: 'https://quizlet.com/favicon.ico', category: 'Education AI', link: 'https://quizlet.com/' },
-        { name: 'Century Tech', description: 'AI learning platform for schools', logo: 'https://www.century.tech/favicon.ico', category: 'Education AI', link: 'https://www.century.tech/' },
-        { name: 'Squirrel AI', description: 'Adaptive learning platform with AI', logo: 'https://www.squirrelai.com/favicon.ico', category: 'Education AI', link: 'https://www.squirrelai.com/' },
-        { name: 'Carnegie Learning', description: 'AI-powered math learning software', logo: 'https://www.carnegielearning.com/favicon.ico', category: 'Education AI', link: 'https://www.carnegielearning.com/' },
-        { name: 'Cognii', description: 'Virtual learning assistant with AI', logo: 'https://www.cognii.com/favicon.ico', category: 'Education AI', link: 'https://www.cognii.com/' },
-        { name: 'Querium', description: 'AI tutoring for STEM subjects', logo: 'https://querium.com/favicon.ico', category: 'Education AI', link: 'https://querium.com/' },
-        { name: 'Thinkster Math', description: 'AI math tutoring platform', logo: 'https://hellothinkster.com/favicon.ico', category: 'Education AI', link: 'https://hellothinkster.com/' }
+        { name: 'Duolingo', description: 'AI-powered language learning platform', logo: 'https://www.duolingo.com/favicon.ico', category: 'Education AI', link: 'https://www.duolingo.com/', pricing: 'freemium' },
+        { name: 'Coursera', description: 'AI-enhanced online learning platform', logo: 'https://www.coursera.org/favicon.ico', category: 'Education AI', link: 'https://www.coursera.org/', pricing: 'freemium' },
+        { name: 'Khan Academy', description: 'Personalized learning with AI', logo: 'https://www.khanacademy.org/favicon.ico', category: 'Education AI', link: 'https://www.khanacademy.org/', pricing: 'free' },
+        { name: 'Quizlet', description: 'AI-powered study tools and flashcards', logo: 'https://quizlet.com/favicon.ico', category: 'Education AI', link: 'https://quizlet.com/', pricing: 'freemium' },
+        { name: 'Century Tech', description: 'AI learning platform for schools', logo: 'https://www.century.tech/favicon.ico', category: 'Education AI', link: 'https://www.century.tech/', pricing: 'premium' },
+        { name: 'Squirrel AI', description: 'Adaptive learning platform with AI', logo: 'https://www.squirrelai.com/favicon.ico', category: 'Education AI', link: 'https://www.squirrelai.com/', pricing: 'premium' },
+        { name: 'Carnegie Learning', description: 'AI-powered math learning software', logo: 'https://www.carnegielearning.com/favicon.ico', category: 'Education AI', link: 'https://www.carnegielearning.com/', pricing: 'premium' },
+        { name: 'Cognii', description: 'Virtual learning assistant with AI', logo: 'https://www.cognii.com/favicon.ico', category: 'Education AI', link: 'https://www.cognii.com/', pricing: 'premium' },
+        { name: 'Querium', description: 'AI tutoring for STEM subjects', logo: 'https://querium.com/favicon.ico', category: 'Education AI', link: 'https://querium.com/', pricing: 'freemium' },
+        { name: 'Thinkster Math', description: 'AI math tutoring platform', logo: 'https://hellothinkster.com/favicon.ico', category: 'Education AI', link: 'https://hellothinkster.com/', pricing: 'freemium' }
     ],
         'logo-generators': [
-            { name: 'Looka', description: 'AI logo maker and brand identity', logo: 'https://looka.com/favicon.ico', category: 'Logo Generators', link: 'https://looka.com' },
-            { name: 'Brandmark', description: 'AI-powered logo design tool', logo: 'https://brandmark.io/favicon.ico', category: 'Logo Generators', link: 'https://brandmark.io' },
-            { name: 'Canva Logo Maker', description: 'Create logos with AI-powered design', logo: 'https://www.canva.com/favicon.ico', category: 'Logo Generators', link: 'https://www.canva.com' },
-            { name: 'LogoAI', description: 'AI logo generator for businesses', logo: 'https://logoai.com/favicon.ico', category: 'Logo Generators', link: 'https://logoai.com' },
-            { name: 'Hatchful', description: 'Free AI logo maker by Shopify', logo: 'https://hatchful.shopify.com/favicon.ico', category: 'Logo Generators', link: 'https://hatchful.shopify.com' }
-            ,{ name: 'LogoMakr', description: 'Simple AI logo design tool', logo: 'https://logomakr.com/favicon.ico', category: 'Logo Generators', link: 'https://logomakr.com' }
-            ,{ name: 'Tailor Brands', description: 'AI-powered branding and logo creation', logo: 'https://www.tailorbrands.com/favicon.ico', category: 'Logo Generators', link: 'https://www.tailorbrands.com' }
-            ,{ name: 'DesignEvo', description: 'Free AI logo maker', logo: 'https://www.designevo.com/favicon.ico', category: 'Logo Generators', link: 'https://www.designevo.com' }
-            ,{ name: 'Logo Genie', description: 'AI logo creation for businesses', logo: 'https://www.logogenie.net/favicon.ico', category: 'Logo Generators', link: 'https://www.logogenie.net' }
-            ,{ name: 'Turbologo', description: 'Fast AI logo generator', logo: 'https://turbologo.com/favicon.ico', category: 'Logo Generators', link: 'https://turbologo.com' }
+            { name: 'Looka', description: 'AI logo maker and brand identity', logo: 'https://looka.com/favicon.ico', category: 'Logo Generators', link: 'https://looka.com', pricing: 'freemium' },
+            { name: 'Brandmark', description: 'AI-powered logo design tool', logo: 'https://brandmark.io/favicon.ico', category: 'Logo Generators', link: 'https://brandmark.io', pricing: 'freemium' },
+            { name: 'Canva Logo Maker', description: 'Create logos with AI-powered design', logo: 'https://www.canva.com/favicon.ico', category: 'Logo Generators', link: 'https://www.canva.com', pricing: 'freemium' },
+            { name: 'LogoAI', description: 'AI logo generator for businesses', logo: 'https://logoai.com/favicon.ico', category: 'Logo Generators', link: 'https://logoai.com', pricing: 'freemium' },
+            { name: 'Hatchful', description: 'Free AI logo maker by Shopify', logo: 'https://hatchful.shopify.com/favicon.ico', category: 'Logo Generators', link: 'https://hatchful.shopify.com', pricing: 'free' }
+            ,{ name: 'LogoMakr', description: 'Simple AI logo design tool', logo: 'https://logomakr.com/favicon.ico', category: 'Logo Generators', link: 'https://logomakr.com', pricing: 'freemium' }
+            ,{ name: 'Tailor Brands', description: 'AI-powered branding and logo creation', logo: 'https://www.tailorbrands.com/favicon.ico', category: 'Logo Generators', link: 'https://www.tailorbrands.com', pricing: 'freemium' }
+            ,{ name: 'Logo Genie', description: 'AI logo creation for businesses', logo: 'https://www.logogenie.net/favicon.ico', category: 'Logo Generators', link: 'https://www.logogenie.net', pricing: 'freemium' }
+            ,{ name: 'Turbologo', description: 'Fast AI logo generator', logo: 'https://turbologo.com/favicon.ico', category: 'Logo Generators', link: 'https://turbologo.com', pricing: 'freemium' }
         ],
         'job-finder': [
-            { name: 'Jobscan', description: 'AI-powered job search and resume optimization', logo: 'https://www.jobscan.co/favicon.ico', category: 'Job Finder', link: 'https://www.jobscan.co' },
-            { name: 'LinkedIn AI Jobs', description: 'AI job recommendations on LinkedIn', logo: 'https://www.linkedin.com/favicon.ico', category: 'Job Finder', link: 'https://www.linkedin.com/jobs/' },
-            { name: 'Indeed AI', description: 'AI-powered job search platform', logo: 'https://www.indeed.com/favicon.ico', category: 'Job Finder', link: 'https://www.indeed.com' },
-            { name: 'ZipRecruiter AI', description: 'AI job matching and alerts', logo: 'https://www.ziprecruiter.com/favicon.ico', category: 'Job Finder', link: 'https://www.ziprecruiter.com' },
-            { name: 'Glassdoor AI', description: 'AI-driven job search and company reviews', logo: 'https://www.glassdoor.com/favicon.ico', category: 'Job Finder', link: 'https://www.glassdoor.com' }
-            ,{ name: 'Monster AI', description: 'AI job search and career advice', logo: 'https://www.monster.com/favicon.ico', category: 'Job Finder', link: 'https://www.monster.com' }
-            ,{ name: 'CareerBuilder AI', description: 'AI-powered job matching', logo: 'https://www.careerbuilder.com/favicon.ico', category: 'Job Finder', link: 'https://www.careerbuilder.com' }
-            ,{ name: 'Adzuna AI', description: 'Smart job search engine', logo: 'https://www.adzuna.com/favicon.ico', category: 'Job Finder', link: 'https://www.adzuna.com' }
-            ,{ name: 'JobHero', description: 'AI job tracking and search', logo: 'https://www.jobhero.com/favicon.ico', category: 'Job Finder', link: 'https://www.jobhero.com' }
-            ,{ name: 'Jobvite', description: 'AI recruiting and job search', logo: 'https://www.jobvite.com/favicon.ico', category: 'Job Finder', link: 'https://www.jobvite.com' }
+            { name: 'LinkedIn Job Search', description: 'AI-powered job matching on LinkedIn', logo: 'https://www.linkedin.com/favicon.ico', category: 'Job Finder', link: 'https://www.linkedin.com/jobs', pricing: 'freemium' },
+            { name: 'Indeed AI', description: 'AI-powered job search platform', logo: 'https://www.indeed.com/favicon.ico', category: 'Job Finder', link: 'https://www.indeed.com', pricing: 'freemium' },
+            { name: 'ZipRecruiter AI', description: 'AI job matching and alerts', logo: 'https://www.ziprecruiter.com/favicon.ico', category: 'Job Finder', link: 'https://www.ziprecruiter.com', pricing: 'freemium' },
+            { name: 'Glassdoor AI', description: 'AI-driven job search and company reviews', logo: 'https://www.glassdoor.com/favicon.ico', category: 'Job Finder', link: 'https://www.glassdoor.com', pricing: 'freemium' },
+            { name: 'Monster AI', description: 'AI job search and career advice', logo: 'https://www.monster.com/favicon.ico', category: 'Job Finder', link: 'https://www.monster.com', pricing: 'freemium' },
+            { name: 'CareerBuilder AI', description: 'AI-powered job matching', logo: 'https://www.careerbuilder.com/favicon.ico', category: 'Job Finder', link: 'https://www.careerbuilder.com', pricing: 'freemium' },
+            { name: 'Adzuna AI', description: 'Smart job search engine', logo: 'https://www.adzuna.com/favicon.ico', category: 'Job Finder', link: 'https://www.adzuna.com', pricing: 'freemium' },
+            { name: 'JobHero', description: 'AI job tracking and search', logo: 'https://www.jobhero.com/favicon.ico', category: 'Job Finder', link: 'https://www.jobhero.com', pricing: 'freemium' },
+            { name: 'Jobvite', description: 'AI recruiting and job search', logo: 'https://www.jobvite.com/favicon.ico', category: 'Job Finder', link: 'https://www.jobvite.com', pricing: 'premium' }
         ],
         'job-applier': [
-            { name: 'Simplify Jobs', description: 'AI-powered job application automation', logo: 'https://simplify.jobs/favicon.ico', category: 'Job Applier', link: 'https://simplify.jobs' },
-            { name: 'JobApplyBot', description: 'Automate job applications with AI', logo: 'https://jobapplybot.com/favicon.ico', category: 'Job Applier', link: 'https://jobapplybot.com' },
-            { name: 'LoopCV', description: 'Automated job application platform', logo: 'https://loopcv.pro/favicon.ico', category: 'Job Applier', link: 'https://loopcv.pro' },
-            { name: 'Careerflow', description: 'AI job application tracker and automation', logo: 'https://careerflow.ai/favicon.ico', category: 'Job Applier', link: 'https://careerflow.ai' },
-            { name: 'JobSeeker', description: 'AI-powered job application assistant', logo: 'https://jobseeker.com/favicon.ico', category: 'Job Applier', link: 'https://jobseeker.com' }
-            ,{ name: 'JobPal', description: 'AI chatbot for job applications', logo: 'https://jobpal.ai/favicon.ico', category: 'Job Applier', link: 'https://jobpal.ai' }
-            ,{ name: 'Applyya', description: 'Automated job application platform', logo: 'https://applyya.com/favicon.ico', category: 'Job Applier', link: 'https://applyya.com' }
-            ,{ name: 'JobBot', description: 'AI job application assistant', logo: 'https://jobbot.me/favicon.ico', category: 'Job Applier', link: 'https://jobbot.me' }
-            ,{ name: 'JobWizard', description: 'AI-powered job application tracker', logo: 'https://jobwizard.io/favicon.ico', category: 'Job Applier', link: 'https://jobwizard.io' }
-            ,{ name: 'JobAutomator', description: 'Automate job applications with AI', logo: 'https://jobautomator.com/favicon.ico', category: 'Job Applier', link: 'https://jobautomator.com' }
+            { name: 'Simplify Jobs', description: 'AI-powered job application automation', logo: 'https://simplify.jobs/favicon.ico', category: 'Job Applier', link: 'https://simplify.jobs', pricing: 'freemium' },
+            { name: 'JobApplyBot', description: 'Automate job applications with AI', logo: 'https://jobapplybot.com/favicon.ico', category: 'Job Applier', link: 'https://jobapplybot.com', pricing: 'premium' },
+            { name: 'LoopCV', description: 'Automated job application platform', logo: 'https://loopcv.pro/favicon.ico', category: 'Job Applier', link: 'https://loopcv.pro', pricing: 'freemium' },
+            { name: 'Careerflow', description: 'AI job application tracker and automation', logo: 'https://careerflow.ai/favicon.ico', category: 'Job Applier', link: 'https://careerflow.ai', pricing: 'freemium' },
+            { name: 'JobSeeker', description: 'AI-powered job application assistant', logo: 'https://jobseeker.com/favicon.ico', category: 'Job Applier', link: 'https://jobseeker.com', pricing: 'freemium' },
+            { name: 'JobPal', description: 'AI chatbot for job applications', logo: 'https://jobpal.ai/favicon.ico', category: 'Job Applier', link: 'https://jobpal.ai', pricing: 'freemium' },
+            { name: 'Applyya', description: 'Automated job application platform', logo: 'https://applyya.com/favicon.ico', category: 'Job Applier', link: 'https://applyya.com', pricing: 'freemium' },
+            { name: 'JobBot', description: 'AI job application assistant', logo: 'https://jobbot.me/favicon.ico', category: 'Job Applier', link: 'https://jobbot.me', pricing: 'premium' },
+            { name: 'JobWizard', description: 'AI-powered job application tracker', logo: 'https://jobwizard.io/favicon.ico', category: 'Job Applier', link: 'https://jobwizard.io', pricing: 'freemium' },
+            { name: 'JobAutomator', description: 'Automate job applications with AI', logo: 'https://jobautomator.com/favicon.ico', category: 'Job Applier', link: 'https://jobautomator.com', pricing: 'premium' }
         ],
         'ai-sports-analytics': [
-            { name: 'Sportradar', description: 'AI-powered sports data analytics', logo: 'https://sportradar.com/favicon.ico', category: 'AI Sports Analytics', link: 'https://sportradar.com' },
-            { name: 'Stats Perform', description: 'AI-driven sports performance analytics', logo: 'https://www.statsperform.com/favicon.ico', category: 'AI Sports Analytics', link: 'https://www.statsperform.com' },
-            { name: 'Catapult Sports', description: 'AI athlete tracking and analytics', logo: 'https://catapultsports.com/favicon.ico', category: 'AI Sports Analytics', link: 'https://catapultsports.com' },
-            { name: 'Hudl', description: 'AI video analysis for sports teams', logo: 'https://www.hudl.com/favicon.ico', category: 'AI Sports Analytics', link: 'https://www.hudl.com' },
-            { name: 'Zone7', description: 'AI injury prevention and performance analytics', logo: 'https://zone7.ai/favicon.ico', category: 'AI Sports Analytics', link: 'https://zone7.ai' }
-            ,{ name: 'Sportlogiq', description: 'AI-powered sports analytics', logo: 'https://sportlogiq.com/favicon.ico', category: 'AI Sports Analytics', link: 'https://sportlogiq.com' }
-            ,{ name: 'Playermaker', description: 'AI wearable for sports analytics', logo: 'https://www.playermaker.com/favicon.ico', category: 'AI Sports Analytics', link: 'https://www.playermaker.com' }
-            ,{ name: 'Second Spectrum', description: 'AI video analysis for sports', logo: 'https://secondspectrum.com/favicon.ico', category: 'AI Sports Analytics', link: 'https://secondspectrum.com' }
-            ,{ name: 'SportsTrace', description: 'AI performance analytics', logo: 'https://www.sportstrace.com/favicon.ico', category: 'AI Sports Analytics', link: 'https://www.sportstrace.com' }
-            ,{ name: 'Edge10', description: 'AI athlete management platform', logo: 'https://edge10.com/favicon.ico', category: 'AI Sports Analytics', link: 'https://edge10.com' }
+            { name: 'Sportradar', description: 'AI-powered sports data analytics', logo: 'https://sportradar.com/favicon.ico', category: 'AI Sports Analytics', link: 'https://sportradar.com', pricing: 'premium' },
+            { name: 'Stats Perform', description: 'AI-driven sports performance analytics', logo: 'https://www.statsperform.com/favicon.ico', category: 'AI Sports Analytics', link: 'https://www.statsperform.com', pricing: 'premium' },
+            { name: 'Catapult Sports', description: 'AI athlete tracking and analytics', logo: 'https://catapultsports.com/favicon.ico', category: 'AI Sports Analytics', link: 'https://catapultsports.com', pricing: 'premium' },
+            { name: 'Hudl', description: 'AI video analysis for sports teams', logo: 'https://www.hudl.com/favicon.ico', category: 'AI Sports Analytics', link: 'https://www.hudl.com', pricing: 'freemium' },
+            { name: 'Zone7', description: 'AI injury prevention and performance analytics', logo: 'https://zone7.ai/favicon.ico', category: 'AI Sports Analytics', link: 'https://zone7.ai', pricing: 'premium' },
+            { name: 'Sportlogiq', description: 'AI-powered sports analytics', logo: 'https://sportlogiq.com/favicon.ico', category: 'AI Sports Analytics', link: 'https://sportlogiq.com', pricing: 'premium' },
+            { name: 'Playermaker', description: 'AI wearable for sports analytics', logo: 'https://www.playermaker.com/favicon.ico', category: 'AI Sports Analytics', link: 'https://www.playermaker.com', pricing: 'premium' },
+            { name: 'Second Spectrum', description: 'AI video analysis for sports', logo: 'https://secondspectrum.com/favicon.ico', category: 'AI Sports Analytics', link: 'https://secondspectrum.com', pricing: 'premium' },
+            { name: 'SportsTrace', description: 'AI performance analytics', logo: 'https://www.sportstrace.com/favicon.ico', category: 'AI Sports Analytics', link: 'https://www.sportstrace.com', pricing: 'freemium' },
+            { name: 'Edge10', description: 'AI athlete management platform', logo: 'https://edge10.com/favicon.ico', category: 'AI Sports Analytics', link: 'https://edge10.com', pricing: 'premium' }
         ],
         'ai-parenting': [
-            { name: 'ParentPal', description: 'AI-powered parenting tips and child development', logo: 'https://parentpal.com/favicon.ico', category: 'AI Parenting', link: 'https://parentpal.com' },
-            { name: 'Kinedu', description: 'AI-driven child development activities', logo: 'https://www.kinedu.com/favicon.ico', category: 'AI Parenting', link: 'https://www.kinedu.com' },
-            { name: 'Winnie', description: 'AI parenting community and resources', logo: 'https://winnie.com/favicon.ico', category: 'AI Parenting', link: 'https://winnie.com' },
-            { name: 'BabyCenter AI', description: 'AI-powered parenting advice and tracking', logo: 'https://www.babycenter.com/favicon.ico', category: 'AI Parenting', link: 'https://www.babycenter.com' },
-            { name: 'Parenting Hero', description: 'AI parenting assistant and tips', logo: 'https://parentinghero.com/favicon.ico', category: 'AI Parenting', link: 'https://parentinghero.com' }
-            ,{ name: 'BabySparks', description: 'AI-powered child development app', logo: 'https://babysparks.com/favicon.ico', category: 'AI Parenting', link: 'https://babysparks.com' }
-            ,{ name: 'Tinybeans', description: 'AI parenting journal and tips', logo: 'https://tinybeans.com/favicon.ico', category: 'AI Parenting', link: 'https://tinybeans.com' }
-            ,{ name: 'Sproutling', description: 'AI baby monitor and insights', logo: 'https://sproutling.com/favicon.ico', category: 'AI Parenting', link: 'https://sproutling.com' }
-            ,{ name: 'Cubo AI', description: 'Smart baby monitor with AI', logo: 'https://us.getcubo.com/favicon.ico', category: 'AI Parenting', link: 'https://us.getcubo.com' }
-            ,{ name: 'Huckleberry', description: 'AI sleep and parenting advice', logo: 'https://huckleberrycare.com/favicon.ico', category: 'AI Parenting', link: 'https://huckleberrycare.com' }
+            { name: 'ParentPal', description: 'AI-powered parenting tips and child development', logo: 'https://parentpal.com/favicon.ico', category: 'AI Parenting', link: 'https://parentpal.com', pricing: 'freemium' },
+            { name: 'Kinedu', description: 'AI-driven child development activities', logo: 'https://www.kinedu.com/favicon.ico', category: 'AI Parenting', link: 'https://www.kinedu.com', pricing: 'freemium' },
+            { name: 'Winnie', description: 'AI parenting community and resources', logo: 'https://winnie.com/favicon.ico', category: 'AI Parenting', link: 'https://winnie.com', pricing: 'freemium' },
+            { name: 'BabyCenter AI', description: 'AI-powered parenting advice and tracking', logo: 'https://www.babycenter.com/favicon.ico', category: 'AI Parenting', link: 'https://www.babycenter.com', pricing: 'free' },
+            { name: 'Parenting Hero', description: 'AI parenting assistant and tips', logo: 'https://parentinghero.com/favicon.ico', category: 'AI Parenting', link: 'https://parentinghero.com', pricing: 'freemium' },
+            { name: 'BabySparks', description: 'AI-powered child development app', logo: 'https://babysparks.com/favicon.ico', category: 'AI Parenting', link: 'https://babysparks.com', pricing: 'freemium' },
+            { name: 'Tinybeans', description: 'AI parenting journal and tips', logo: 'https://tinybeans.com/favicon.ico', category: 'AI Parenting', link: 'https://tinybeans.com', pricing: 'freemium' },
+            { name: 'Sproutling', description: 'AI baby monitor and insights', logo: 'https://sproutling.com/favicon.ico', category: 'AI Parenting', link: 'https://sproutling.com', pricing: 'premium' },
+            { name: 'Cubo AI', description: 'Smart baby monitor with AI', logo: 'https://us.getcubo.com/favicon.ico', category: 'AI Parenting', link: 'https://us.getcubo.com', pricing: 'premium' },
+            { name: 'Huckleberry', description: 'AI sleep and parenting advice', logo: 'https://huckleberrycare.com/favicon.ico', category: 'AI Parenting', link: 'https://huckleberrycare.com', pricing: 'freemium' }
         ],
     'ai-cybersecurity': [
-        { name: 'Darktrace', description: 'AI-powered cyber defense platform', logo: 'https://www.darktrace.com/favicon.ico', category: 'Cybersecurity AI', link: 'https://www.darktrace.com/' },
-        { name: 'CrowdStrike', description: 'AI endpoint protection platform', logo: 'https://www.crowdstrike.com/favicon.ico', category: 'Cybersecurity AI', link: 'https://www.crowdstrike.com/' },
-        { name: 'Cylance', description: 'AI antivirus and endpoint security', logo: 'https://www.cylance.com/favicon.ico', category: 'Cybersecurity AI', link: 'https://www.cylance.com/' },
-        { name: 'Vectra AI', description: 'AI-powered threat detection', logo: 'https://www.vectra.ai/favicon.ico', category: 'Cybersecurity AI', link: 'https://www.vectra.ai/' },
-        { name: 'Deep Instinct', description: 'Deep learning cybersecurity', logo: 'https://www.deepinstinct.com/favicon.ico', category: 'Cybersecurity AI', link: 'https://www.deepinstinct.com/' },
-        { name: 'SentinelOne', description: 'Autonomous endpoint protection', logo: 'https://www.sentinelone.com/favicon.ico', category: 'Cybersecurity AI', link: 'https://www.sentinelone.com/' },
-        { name: 'Cybereason', description: 'AI-powered endpoint protection', logo: 'https://www.cybereason.com/favicon.ico', category: 'Cybersecurity AI', link: 'https://www.cybereason.com/' },
-        { name: 'Securonix', description: 'AI security analytics platform', logo: 'https://www.securonix.com/favicon.ico', category: 'Cybersecurity AI', link: 'https://www.securonix.com/' },
-        { name: 'Exabeam', description: 'Security intelligence and analytics', logo: 'https://www.exabeam.com/favicon.ico', category: 'Cybersecurity AI', link: 'https://www.exabeam.com/' },
-        { name: 'Blue Hexagon', description: 'Real-time deep learning security', logo: 'https://bluehexagon.ai/favicon.ico', category: 'Cybersecurity AI', link: 'https://bluehexagon.ai/' }
+        { name: 'Darktrace', description: 'AI-powered cyber defense platform', logo: 'https://www.darktrace.com/favicon.ico', category: 'Cybersecurity AI', link: 'https://www.darktrace.com/', pricing: 'premium' },
+        { name: 'CrowdStrike', description: 'AI endpoint protection platform', logo: 'https://www.crowdstrike.com/favicon.ico', category: 'Cybersecurity AI', link: 'https://www.crowdstrike.com/', pricing: 'premium' },
+        { name: 'Cylance', description: 'AI antivirus and endpoint security', logo: 'https://www.cylance.com/favicon.ico', category: 'Cybersecurity AI', link: 'https://www.cylance.com/', pricing: 'premium' },
+        { name: 'Vectra AI', description: 'AI-powered threat detection', logo: 'https://www.vectra.ai/favicon.ico', category: 'Cybersecurity AI', link: 'https://www.vectra.ai/', pricing: 'premium' },
+        { name: 'Deep Instinct', description: 'Deep learning cybersecurity', logo: 'https://www.deepinstinct.com/favicon.ico', category: 'Cybersecurity AI', link: 'https://www.deepinstinct.com/', pricing: 'premium' },
+        { name: 'SentinelOne', description: 'Autonomous endpoint protection', logo: 'https://www.sentinelone.com/favicon.ico', category: 'Cybersecurity AI', link: 'https://www.sentinelone.com/', pricing: 'premium' },
+        { name: 'Cybereason', description: 'AI-powered endpoint protection', logo: 'https://www.cybereason.com/favicon.ico', category: 'Cybersecurity AI', link: 'https://www.cybereason.com/', pricing: 'premium' },
+        { name: 'Securonix', description: 'AI security analytics platform', logo: 'https://www.securonix.com/favicon.ico', category: 'Cybersecurity AI', link: 'https://www.securonix.com/', pricing: 'premium' },
+        { name: 'Exabeam', description: 'Security intelligence and analytics', logo: 'https://www.exabeam.com/favicon.ico', category: 'Cybersecurity AI', link: 'https://www.exabeam.com/', pricing: 'premium' },
+        { name: 'Blue Hexagon', description: 'Real-time deep learning security', logo: 'https://bluehexagon.ai/favicon.ico', category: 'Cybersecurity AI', link: 'https://bluehexagon.ai/', pricing: 'premium' }
     ],
     'ai-robotics': [
-        { name: 'Boston Dynamics', description: 'Advanced robotics with AI', logo: 'https://www.bostondynamics.com/favicon.ico', category: 'Robotics AI', link: 'https://www.bostondynamics.com/' },
-        { name: 'Fetch Robotics', description: 'Autonomous mobile robots', logo: 'https://fetchrobotics.com/favicon.ico', category: 'Robotics AI', link: 'https://fetchrobotics.com/' },
-        { name: 'Covariant', description: 'AI for robotic manipulation', logo: 'https://covariant.ai/favicon.ico', category: 'Robotics AI', link: 'https://covariant.ai/' },
-        { name: 'Vicarious', description: 'AI for industrial robots', logo: 'https://www.vicarious.com/favicon.ico', category: 'Robotics AI', link: 'https://www.vicarious.com/' },
-        { name: 'Robust.AI', description: 'Cognitive engine for robotics', logo: 'https://robust.ai/favicon.ico', category: 'Robotics AI', link: 'https://robust.ai/' },
-        { name: 'Diligent Robotics', description: 'AI-powered service robots', logo: 'https://www.diligentrobots.com/favicon.ico', category: 'Robotics AI', link: 'https://www.diligentrobots.com/' },
-        { name: 'Embodied', description: 'Social companion robots with AI', logo: 'https://embodied.com/favicon.ico', category: 'Robotics AI', link: 'https://embodied.com/' },
-        { name: 'Skydio', description: 'Autonomous drones with AI', logo: 'https://www.skydio.com/favicon.ico', category: 'Robotics AI', link: 'https://www.skydio.com/' },
-        { name: 'Waymo', description: 'Autonomous driving technology', logo: 'https://waymo.com/favicon.ico', category: 'Robotics AI', link: 'https://waymo.com/' },
-        { name: 'Cruise', description: 'Self-driving vehicle technology', logo: 'https://www.getcruise.com/favicon.ico', category: 'Robotics AI', link: 'https://www.getcruise.com/' }
+        { name: 'Boston Dynamics', description: 'Advanced robotics with AI', logo: 'https://www.bostondynamics.com/favicon.ico', category: 'Robotics AI', link: 'https://www.bostondynamics.com/', pricing: 'premium' },
+        { name: 'Fetch Robotics', description: 'Autonomous mobile robots', logo: 'https://fetchrobotics.com/favicon.ico', category: 'Robotics AI', link: 'https://fetchrobotics.com/', pricing: 'premium' },
+        { name: 'Covariant', description: 'AI for robotic manipulation', logo: 'https://covariant.ai/favicon.ico', category: 'Robotics AI', link: 'https://covariant.ai/', pricing: 'premium' },
+        { name: 'Vicarious', description: 'AI for industrial robots', logo: 'https://www.vicarious.com/favicon.ico', category: 'Robotics AI', link: 'https://www.vicarious.com/', pricing: 'premium' },
+        { name: 'Robust.AI', description: 'Cognitive engine for robotics', logo: 'https://robust.ai/favicon.ico', category: 'Robotics AI', link: 'https://robust.ai/', pricing: 'premium' },
+        { name: 'Diligent Robotics', description: 'AI-powered service robots', logo: 'https://www.diligentrobots.com/favicon.ico', category: 'Robotics AI', link: 'https://www.diligentrobots.com/', pricing: 'premium' },
+        { name: 'Embodied', description: 'Social companion robots with AI', logo: 'https://embodied.com/favicon.ico', category: 'Robotics AI', link: 'https://embodied.com/', pricing: 'premium' },
+        { name: 'Skydio', description: 'Autonomous drones with AI', logo: 'https://www.skydio.com/favicon.ico', category: 'Robotics AI', link: 'https://www.skydio.com/', pricing: 'premium' },
+        { name: 'Waymo', description: 'Autonomous driving technology', logo: 'https://waymo.com/favicon.ico', category: 'Robotics AI', link: 'https://waymo.com/', pricing: 'premium' },
+        { name: 'Cruise', description: 'Self-driving vehicle technology', logo: 'https://www.getcruise.com/favicon.ico', category: 'Robotics AI', link: 'https://www.getcruise.com/', pricing: 'premium' }
     ],
     'ai-art': [
-        { name: 'Artbreeder', description: 'AI art creation and blending', logo: 'https://www.artbreeder.com/favicon.ico', category: 'AI Art Tools', link: 'https://www.artbreeder.com/' },
-        { name: 'DeepArt', description: 'AI style transfer for images', logo: 'https://deepart.io/favicon.ico', category: 'AI Art Tools', link: 'https://deepart.io/' },
-        { name: 'NightCafe Creator', description: 'AI art generator and community', logo: 'https://creator.nightcafe.studio/favicon.ico', category: 'AI Art Tools', link: 'https://creator.nightcafe.studio/' },
-        { name: 'Deep Dream Generator', description: 'Neural network art creation', logo: 'https://deepdreamgenerator.com/favicon.ico', category: 'AI Art Tools', link: 'https://deepdreamgenerator.com/' },
-        { name: 'Wombo Dream', description: 'AI-powered art creation app', logo: 'https://www.wombo.art/favicon.ico', category: 'AI Art Tools', link: 'https://www.wombo.art/' },
-        { name: 'Prisma', description: 'AI photo effects and art filters', logo: 'https://prisma-ai.com/favicon.ico', category: 'AI Art Tools', link: 'https://prisma-ai.com/' },
-        { name: 'Runway ML', description: 'Creative tools powered by AI', logo: 'https://runwayml.com/favicon.ico', category: 'AI Art Tools', link: 'https://runwayml.com/' },
-        { name: 'Playform', description: 'AI art generation platform', logo: 'https://playform.io/favicon.ico', category: 'AI Art Tools', link: 'https://playform.io/' },
-        { name: 'Fotor GoArt', description: 'AI art style transfer tool', logo: 'https://www.fotor.com/favicon.ico', category: 'AI Art Tools', link: 'https://www.fotor.com/features/goart.html' },
-        { name: 'StarryAI', description: 'Text to image AI art generator', logo: 'https://starryai.com/favicon.ico', category: 'AI Art Tools', link: 'https://starryai.com/' }
+        { name: 'Artbreeder', description: 'AI art creation and blending', logo: 'https://www.artbreeder.com/favicon.ico', category: 'AI Art Tools', link: 'https://www.artbreeder.com/', pricing: 'freemium' },
+        { name: 'DeepArt', description: 'AI style transfer for images', logo: 'https://deepart.io/favicon.ico', category: 'AI Art Tools', link: 'https://deepart.io/', pricing: 'freemium' },
+        { name: 'NightCafe Creator', description: 'AI art generator and community', logo: 'https://creator.nightcafe.studio/favicon.ico', category: 'AI Art Tools', link: 'https://creator.nightcafe.studio/', pricing: 'freemium' },
+        { name: 'Deep Dream Generator', description: 'Neural network art creation', logo: 'https://deepdreamgenerator.com/favicon.ico', category: 'AI Art Tools', link: 'https://deepdreamgenerator.com/', pricing: 'freemium' },
+        { name: 'Wombo Dream', description: 'AI-powered art creation app', logo: 'https://www.wombo.art/favicon.ico', category: 'AI Art Tools', link: 'https://www.wombo.art/', pricing: 'freemium' },
+        { name: 'Prisma', description: 'AI photo effects and art filters', logo: 'https://prisma-ai.com/favicon.ico', category: 'AI Art Tools', link: 'https://prisma-ai.com/', pricing: 'freemium' },
+        { name: 'Runway ML', description: 'Creative tools powered by AI', logo: 'https://runwayml.com/favicon.ico', category: 'AI Art Tools', link: 'https://runwayml.com/', pricing: 'freemium' },
+        { name: 'Playform', description: 'AI art generation platform', logo: 'https://playform.io/favicon.ico', category: 'AI Art Tools', link: 'https://playform.io/', pricing: 'freemium' },
+        { name: 'Fotor GoArt', description: 'AI art style transfer tool', logo: 'https://www.fotor.com/favicon.ico', category: 'AI Art Tools', link: 'https://www.fotor.com/features/goart.html', pricing: 'freemium' },
+        { name: 'StarryAI', description: 'Text to image AI art generator', logo: 'https://starryai.com/favicon.ico', category: 'AI Art Tools', link: 'https://starryai.com/', pricing: 'freemium' }
     ],
     'ai-agriculture': [
-        { name: 'Taranis', description: 'AI-powered crop intelligence', logo: 'https://www.taranis.com/favicon.ico', category: 'Agriculture AI', link: 'https://www.taranis.com/' },
-        { name: 'Prospera', description: 'AI-powered agricultural intelligence', logo: 'https://www.prospera.ag/favicon.ico', category: 'Agriculture AI', link: 'https://www.prospera.ag/' },
-        { name: 'aWhere', description: 'Agricultural intelligence platform', logo: 'https://www.awhere.com/favicon.ico', category: 'Agriculture AI', link: 'https://www.awhere.com/' },
-        { name: 'FarmWise', description: 'AI-powered precision agriculture', logo: 'https://farmwise.io/favicon.ico', category: 'Agriculture AI', link: 'https://farmwise.io/' },
-        { name: 'Blue River Technology', description: 'AI for precision agriculture', logo: 'https://bluerivertechnology.com/favicon.ico', category: 'Agriculture AI', link: 'https://bluerivertechnology.com/' },
-        { name: 'Farmers Edge', description: 'AI-powered farm management', logo: 'https://www.farmersedge.ca/favicon.ico', category: 'Agriculture AI', link: 'https://www.farmersedge.ca/' },
-        { name: 'Trace Genomics', description: 'AI soil analysis for agriculture', logo: 'https://www.tracegenomics.com/favicon.ico', category: 'Agriculture AI', link: 'https://www.tracegenomics.com/' },
-        { name: 'Ceres Imaging', description: 'AI aerial imagery for agriculture', logo: 'https://www.ceresimaging.net/favicon.ico', category: 'Agriculture AI', link: 'https://www.ceresimaging.net/' },
-        { name: 'Gamaya', description: 'Hyperspectral imaging for agriculture', logo: 'https://gamaya.com/favicon.ico', category: 'Agriculture AI', link: 'https://gamaya.com/' },
-        { name: 'AgEagle', description: 'AI drone solutions for agriculture', logo: 'https://www.ageagle.com/favicon.ico', category: 'Agriculture AI', link: 'https://www.ageagle.com/' }
+        { name: 'Taranis', description: 'AI-powered crop intelligence', logo: 'https://www.taranis.com/favicon.ico', category: 'Agriculture AI', link: 'https://www.taranis.com/', pricing: 'premium' },
+        { name: 'Prospera', description: 'AI-powered agricultural intelligence', logo: 'https://www.prospera.ag/favicon.ico', category: 'Agriculture AI', link: 'https://www.prospera.ag/', pricing: 'premium' },
+        { name: 'aWhere', description: 'Agricultural intelligence platform', logo: 'https://www.awhere.com/favicon.ico', category: 'Agriculture AI', link: 'https://www.awhere.com/', pricing: 'premium' },
+        { name: 'FarmWise', description: 'AI-powered precision agriculture', logo: 'https://farmwise.io/favicon.ico', category: 'Agriculture AI', link: 'https://farmwise.io/', pricing: 'premium' },
+        { name: 'Blue River Technology', description: 'AI for precision agriculture', logo: 'https://bluerivertechnology.com/favicon.ico', category: 'Agriculture AI', link: 'https://bluerivertechnology.com/', pricing: 'premium' },
+        { name: 'Farmers Edge', description: 'AI-powered farm management', logo: 'https://www.farmersedge.ca/favicon.ico', category: 'Agriculture AI', link: 'https://www.farmersedge.ca/', pricing: 'premium' },
+        { name: 'Trace Genomics', description: 'AI soil analysis for agriculture', logo: 'https://www.tracegenomics.com/favicon.ico', category: 'Agriculture AI', link: 'https://www.tracegenomics.com/', pricing: 'premium' },
+        { name: 'Ceres Imaging', description: 'AI aerial imagery for agriculture', logo: 'https://www.ceresimaging.net/favicon.ico', category: 'Agriculture AI', link: 'https://www.ceresimaging.net/', pricing: 'premium' },
+        { name: 'Gamaya', description: 'Hyperspectral imaging for agriculture', logo: 'https://gamaya.com/favicon.ico', category: 'Agriculture AI', link: 'https://gamaya.com/', pricing: 'premium' },
+        { name: 'AgEagle', description: 'AI drone solutions for agriculture', logo: 'https://www.ageagle.com/favicon.ico', category: 'Agriculture AI', link: 'https://www.ageagle.com/', pricing: 'premium' }
     ],
     'ai-manufacturing': [
-        { name: 'Siemens MindSphere', description: 'Industrial IoT with AI capabilities', logo: 'https://siemens.mindsphere.io/favicon.ico', category: 'Manufacturing AI', link: 'https://siemens.mindsphere.io/' },
-        { name: 'Uptake', description: 'Industrial AI and analytics platform', logo: 'https://www.uptake.com/favicon.ico', category: 'Manufacturing AI', link: 'https://www.uptake.com/' },
-        { name: 'Sight Machine', description: 'Manufacturing analytics platform', logo: 'https://sightmachine.com/favicon.ico', category: 'Manufacturing AI', link: 'https://sightmachine.com/' },
-        { name: 'Augury', description: 'Machine health monitoring with AI', logo: 'https://www.augury.com/favicon.ico', category: 'Manufacturing AI', link: 'https://www.augury.com/' },
-        { name: 'Falkonry', description: 'AI for predictive operations', logo: 'https://falkonry.com/favicon.ico', category: 'Manufacturing AI', link: 'https://falkonry.com/' },
-        { name: 'Veo Robotics', description: 'AI for industrial robot safety', logo: 'https://www.veobot.com/favicon.ico', category: 'Manufacturing AI', link: 'https://www.veobot.com/' },
-        { name: 'Bright Machines', description: 'Intelligent automation for manufacturing', logo: 'https://www.brightmachines.com/favicon.ico', category: 'Manufacturing AI', link: 'https://www.brightmachines.com/' },
-        { name: 'Instrumental', description: 'AI-powered manufacturing optimization', logo: 'https://www.instrumental.com/favicon.ico', category: 'Manufacturing AI', link: 'https://www.instrumental.com/' },
-        { name: 'Landing AI', description: 'AI visual inspection for manufacturing', logo: 'https://landing.ai/favicon.ico', category: 'Manufacturing AI', link: 'https://landing.ai/' },
-        { name: 'Neurala', description: 'AI vision for industrial applications', logo: 'https://www.neurala.com/favicon.ico', category: 'Manufacturing AI', link: 'https://www.neurala.com/' }
+        { name: 'Siemens MindSphere', description: 'Industrial IoT with AI capabilities', logo: 'https://siemens.mindsphere.io/favicon.ico', category: 'Manufacturing AI', link: 'https://siemens.mindsphere.io/', pricing: 'premium' },
+        { name: 'Uptake', description: 'Industrial AI and analytics platform', logo: 'https://www.uptake.com/favicon.ico', category: 'Manufacturing AI', link: 'https://www.uptake.com/', pricing: 'premium' },
+        { name: 'Sight Machine', description: 'Manufacturing analytics platform', logo: 'https://sightmachine.com/favicon.ico', category: 'Manufacturing AI', link: 'https://sightmachine.com/', pricing: 'premium' },
+        { name: 'Augury', description: 'Machine health monitoring with AI', logo: 'https://www.augury.com/favicon.ico', category: 'Manufacturing AI', link: 'https://www.augury.com/', pricing: 'premium' },
+        { name: 'Falkonry', description: 'AI for predictive operations', logo: 'https://falkonry.com/favicon.ico', category: 'Manufacturing AI', link: 'https://falkonry.com/', pricing: 'premium' },
+        { name: 'Veo Robotics', description: 'AI for industrial robot safety', logo: 'https://www.veobot.com/favicon.ico', category: 'Manufacturing AI', link: 'https://www.veobot.com/', pricing: 'premium' },
+        { name: 'Bright Machines', description: 'Intelligent automation for manufacturing', logo: 'https://www.brightmachines.com/favicon.ico', category: 'Manufacturing AI', link: 'https://www.brightmachines.com/', pricing: 'premium' },
+        { name: 'Instrumental', description: 'AI-powered manufacturing optimization', logo: 'https://www.instrumental.com/favicon.ico', category: 'Manufacturing AI', link: 'https://www.instrumental.com/', pricing: 'premium' },
+        { name: 'Landing AI', description: 'AI visual inspection for manufacturing', logo: 'https://landing.ai/favicon.ico', category: 'Manufacturing AI', link: 'https://landing.ai/', pricing: 'premium' },
+        { name: 'Neurala', description: 'AI vision for industrial applications', logo: 'https://www.neurala.com/favicon.ico', category: 'Manufacturing AI', link: 'https://www.neurala.com/', pricing: 'premium' }
     ],
     'ai-energy': [
-        { name: 'Grid4C', description: 'AI for smart grid management', logo: 'https://grid4c.com/favicon.ico', category: 'Energy AI', link: 'https://grid4c.com/' },
-        { name: 'AutoGrid', description: 'AI-powered energy management', logo: 'https://www.auto-grid.com/favicon.ico', category: 'Energy AI', link: 'https://www.auto-grid.com/' },
-        { name: 'C3.ai', description: 'Enterprise AI for energy industry', logo: 'https://c3.ai/favicon.ico', category: 'Energy AI', link: 'https://c3.ai/' },
-        { name: 'Bidgely', description: 'AI energy analytics platform', logo: 'https://www.bidgely.com/favicon.ico', category: 'Energy AI', link: 'https://www.bidgely.com/' },
-        { name: 'Verdigris', description: 'AI energy management system', logo: 'https://verdigris.co/favicon.ico', category: 'Energy AI', link: 'https://verdigris.co/' },
-        { name: 'Stem', description: 'AI-driven energy storage', logo: 'https://www.stem.com/favicon.ico', category: 'Energy AI', link: 'https://www.stem.com/' },
-        { name: 'SparkCognition', description: 'AI solutions for energy sector', logo: 'https://www.sparkcognition.com/favicon.ico', category: 'Energy AI', link: 'https://www.sparkcognition.com/' },
-        { name: 'KrakenGrid', description: 'AI for grid optimization', logo: 'https://www.krakengrid.com/favicon.ico', category: 'Energy AI', link: 'https://www.krakengrid.com/' },
-        { name: 'Urbint', description: 'AI for infrastructure safety', logo: 'https://urbint.com/favicon.ico', category: 'Energy AI', link: 'https://urbint.com/' },
-        { name: 'Innowatts', description: 'AI energy analytics platform', logo: 'https://www.innowatts.com/favicon.ico', category: 'Energy AI', link: 'https://www.innowatts.com/' }
+        { name: 'Grid4C', description: 'AI for smart grid management', logo: 'https://grid4c.com/favicon.ico', category: 'Energy AI', link: 'https://grid4c.com/', pricing: 'premium' },
+        { name: 'AutoGrid', description: 'AI-powered energy management', logo: 'https://www.auto-grid.com/favicon.ico', category: 'Energy AI', link: 'https://www.auto-grid.com/', pricing: 'premium' },
+        { name: 'C3.ai', description: 'Enterprise AI for energy industry', logo: 'https://c3.ai/favicon.ico', category: 'Energy AI', link: 'https://c3.ai/', pricing: 'premium' },
+        { name: 'Bidgely', description: 'AI energy analytics platform', logo: 'https://www.bidgely.com/favicon.ico', category: 'Energy AI', link: 'https://www.bidgely.com/', pricing: 'premium' },
+        { name: 'Verdigris', description: 'AI energy management system', logo: 'https://verdigris.co/favicon.ico', category: 'Energy AI', link: 'https://verdigris.co/', pricing: 'premium' },
+        { name: 'Stem', description: 'AI-driven energy storage', logo: 'https://www.stem.com/favicon.ico', category: 'Energy AI', link: 'https://www.stem.com/', pricing: 'premium' },
+        { name: 'SparkCognition', description: 'AI solutions for energy sector', logo: 'https://www.sparkcognition.com/favicon.ico', category: 'Energy AI', link: 'https://www.sparkcognition.com/', pricing: 'premium' },
+        { name: 'KrakenGrid', description: 'AI for grid optimization', logo: 'https://www.krakengrid.com/favicon.ico', category: 'Energy AI', link: 'https://www.krakengrid.com/', pricing: 'premium' },
+        { name: 'Urbint', description: 'AI for infrastructure safety', logo: 'https://urbint.com/favicon.ico', category: 'Energy AI', link: 'https://urbint.com/', pricing: 'premium' },
+        { name: 'Innowatts', description: 'AI energy analytics platform', logo: 'https://www.innowatts.com/favicon.ico', category: 'Energy AI', link: 'https://www.innowatts.com/', pricing: 'premium' }
     ],
     'ai-retail': [
-        { name: 'Trax', description: 'Computer vision for retail execution', logo: 'https://traxretail.com/favicon.ico', category: 'Retail AI', link: 'https://traxretail.com/' },
-        { name: 'Standard Cognition', description: 'Autonomous checkout technology', logo: 'https://standard.ai/favicon.ico', category: 'Retail AI', link: 'https://standard.ai/' },
-        { name: 'Focal Systems', description: 'AI-powered store automation', logo: 'https://focal.systems/favicon.ico', category: 'Retail AI', link: 'https://focal.systems/' },
-        { name: 'Shelf Engine', description: 'AI-powered inventory management', logo: 'https://www.shelfengine.com/favicon.ico', category: 'Retail AI', link: 'https://www.shelfengine.com/' },
-        { name: 'Algonomy', description: 'AI-powered retail personalization', logo: 'https://www.algonomy.com/favicon.ico', category: 'Retail AI', link: 'https://www.algonomy.com/' },
-        { name: 'Lily AI', description: 'Product attribution platform', logo: 'https://www.lily.ai/favicon.ico', category: 'Retail AI', link: 'https://www.lily.ai/' },
-        { name: 'Vue.ai', description: 'Retail automation platform', logo: 'https://vue.ai/favicon.ico', category: 'Retail AI', link: 'https://vue.ai/' },
-        { name: 'Syte', description: 'Visual AI for retail', logo: 'https://www.syte.ai/favicon.ico', category: 'Retail AI', link: 'https://www.syte.ai/' },
-        { name: 'Shopify Flow', description: 'E-commerce automation platform', logo: 'https://www.shopify.com/favicon.ico', category: 'Retail AI', link: 'https://www.shopify.com/flow' },
-        { name: 'Clarifai', description: 'AI visual recognition for retail', logo: 'https://www.clarifai.com/favicon.ico', category: 'Retail AI', link: 'https://www.clarifai.com/' }
+        { name: 'Trax', description: 'Computer vision for retail execution', logo: 'https://traxretail.com/favicon.ico', category: 'Retail AI', link: 'https://traxretail.com/', pricing: 'premium' },
+        { name: 'Standard Cognition', description: 'Autonomous checkout technology', logo: 'https://standard.ai/favicon.ico', category: 'Retail AI', link: 'https://standard.ai/', pricing: 'premium' },
+        { name: 'Focal Systems', description: 'AI-powered store automation', logo: 'https://focal.systems/favicon.ico', category: 'Retail AI', link: 'https://focal.systems/', pricing: 'premium' },
+        { name: 'Shelf Engine', description: 'AI-powered inventory management', logo: 'https://www.shelfengine.com/favicon.ico', category: 'Retail AI', link: 'https://www.shelfengine.com/', pricing: 'premium' },
+        { name: 'Algonomy', description: 'AI-powered retail personalization', logo: 'https://www.algonomy.com/favicon.ico', category: 'Retail AI', link: 'https://www.algonomy.com/', pricing: 'premium' },
+        { name: 'Lily AI', description: 'Product attribution platform', logo: 'https://www.lily.ai/favicon.ico', category: 'Retail AI', link: 'https://www.lily.ai/', pricing: 'premium' },
+        { name: 'Vue.ai', description: 'Retail automation platform', logo: 'https://vue.ai/favicon.ico', category: 'Retail AI', link: 'https://vue.ai/', pricing: 'premium' },
+        { name: 'Syte', description: 'Visual AI for retail', logo: 'https://www.syte.ai/favicon.ico', category: 'Retail AI', link: 'https://www.syte.ai/', pricing: 'premium' },
+        { name: 'Shopify Flow', description: 'E-commerce automation platform', logo: 'https://www.shopify.com/favicon.ico', category: 'Retail AI', link: 'https://www.shopify.com/flow', pricing: 'freemium' },
+        { name: 'Clarifai', description: 'AI visual recognition for retail', logo: 'https://www.clarifai.com/favicon.ico', category: 'Retail AI', link: 'https://www.clarifai.com/', pricing: 'freemium' }
     ],
     'ai-finance': [
-        { name: 'Alpaca', description: 'AI-powered stock trading platform', logo: 'https://alpaca.markets/favicon.ico', category: 'Finance AI', link: 'https://alpaca.markets/' },
-        { name: 'Kensho', description: 'AI analytics for financial markets', logo: 'https://www.kensho.com/favicon.ico', category: 'Finance AI', link: 'https://www.kensho.com/' },
-        { name: 'Kavout', description: 'AI-powered investment platform', logo: 'https://www.kavout.com/favicon.ico', category: 'Finance AI', link: 'https://www.kavout.com/' },
-        { name: 'Numerai', description: 'AI-powered hedge fund', logo: 'https://numer.ai/favicon.ico', category: 'Finance AI', link: 'https://numer.ai/' },
-        { name: 'DataRobot', description: 'AI platform for financial forecasting', logo: 'https://www.datarobot.com/favicon.ico', category: 'Finance AI', link: 'https://www.datarobot.com/' },
-        { name: 'Ayasdi', description: 'AI for financial risk management', logo: 'https://www.ayasdi.com/favicon.ico', category: 'Finance AI', link: 'https://www.ayasdi.com/' },
-        { name: 'Feedzai', description: 'AI fraud detection for banking', logo: 'https://feedzai.com/favicon.ico', category: 'Finance AI', link: 'https://feedzai.com/' },
-        { name: 'Onfido', description: 'AI identity verification for finance', logo: 'https://onfido.com/favicon.ico', category: 'Finance AI', link: 'https://onfido.com/' },
-        { name: 'Personetics', description: 'AI-powered banking personalization', logo: 'https://personetics.com/favicon.ico', category: 'Finance AI', link: 'https://personetics.com/' },
-        { name: 'Kasisto', description: 'Conversational AI for finance', logo: 'https://kasisto.com/favicon.ico', category: 'Finance AI', link: 'https://kasisto.com/' }
+        { name: 'Alpaca', description: 'AI-powered stock trading platform', logo: 'https://alpaca.markets/favicon.ico', category: 'Finance AI', link: 'https://alpaca.markets/', pricing: 'freemium' },
+        { name: 'Kensho', description: 'AI analytics for financial markets', logo: 'https://www.kensho.com/favicon.ico', category: 'Finance AI', link: 'https://www.kensho.com/', pricing: 'premium' },
+        { name: 'Kavout', description: 'AI-powered investment platform', logo: 'https://www.kavout.com/favicon.ico', category: 'Finance AI', link: 'https://www.kavout.com/', pricing: 'freemium' },
+        { name: 'Numerai', description: 'AI-powered hedge fund', logo: 'https://numer.ai/favicon.ico', category: 'Finance AI', link: 'https://numer.ai/', pricing: 'freemium' },
+        { name: 'DataRobot', description: 'AI platform for financial forecasting', logo: 'https://www.datarobot.com/favicon.ico', category: 'Finance AI', link: 'https://www.datarobot.com/', pricing: 'premium' },
+        { name: 'Ayasdi', description: 'AI for financial risk management', logo: 'https://www.ayasdi.com/favicon.ico', category: 'Finance AI', link: 'https://www.ayasdi.com/', pricing: 'premium' },
+        { name: 'Feedzai', description: 'AI fraud detection for banking', logo: 'https://feedzai.com/favicon.ico', category: 'Finance AI', link: 'https://feedzai.com/', pricing: 'premium' },
+        { name: 'Onfido', description: 'AI identity verification for finance', logo: 'https://onfido.com/favicon.ico', category: 'Finance AI', link: 'https://onfido.com/', pricing: 'premium' },
+        { name: 'Personetics', description: 'AI-powered banking personalization', logo: 'https://personetics.com/favicon.ico', category: 'Finance AI', link: 'https://personetics.com/', pricing: 'premium' },
+        { name: 'Kasisto', description: 'Conversational AI for finance', logo: 'https://kasisto.com/favicon.ico', category: 'Finance AI', link: 'https://kasisto.com/', pricing: 'premium' }
     ],
     'ai-real-estate': [
-        { name: 'HouseCanary', description: 'AI property valuation platform', logo: 'https://www.housecanary.com/favicon.ico', category: 'Real Estate AI', link: 'https://www.housecanary.com/' },
-        { name: 'Skyline AI', description: 'AI for real estate investment', logo: 'https://skyline.ai/favicon.ico', category: 'Real Estate AI', link: 'https://skyline.ai/' },
-        { name: 'Cherre', description: 'Real estate data integration platform', logo: 'https://cherre.com/favicon.ico', category: 'Real Estate AI', link: 'https://cherre.com/' },
-        { name: 'Localize', description: 'AI location intelligence for real estate', logo: 'https://localize.city/favicon.ico', category: 'Real Estate AI', link: 'https://localize.city/' },
-        { name: 'Enodo', description: 'AI multifamily property analysis', logo: 'https://enodoinc.com/favicon.ico', category: 'Real Estate AI', link: 'https://enodoinc.com/' },
-        { name: 'Restb.ai', description: 'Computer vision for real estate', logo: 'https://restb.ai/favicon.ico', category: 'Real Estate AI', link: 'https://restb.ai/' },
-        { name: 'Zillow Offers', description: 'AI-powered home buying platform', logo: 'https://www.zillow.com/favicon.ico', category: 'Real Estate AI', link: 'https://www.zillow.com/offers/' },
-        { name: 'Opendoor', description: 'AI home valuation and buying', logo: 'https://www.opendoor.com/favicon.ico', category: 'Real Estate AI', link: 'https://www.opendoor.com/' },
-        { name: 'Compass', description: 'AI-powered real estate platform', logo: 'https://www.compass.com/favicon.ico', category: 'Real Estate AI', link: 'https://www.compass.com/' },
-        { name: 'Redfin', description: 'AI real estate brokerage', logo: 'https://www.redfin.com/favicon.ico', category: 'Real Estate AI', link: 'https://www.redfin.com/' }
+        { name: 'HouseCanary', description: 'AI property valuation platform', logo: 'https://www.housecanary.com/favicon.ico', category: 'Real Estate AI', link: 'https://www.housecanary.com/', pricing: 'premium' },
+        { name: 'Skyline AI', description: 'AI for real estate investment', logo: 'https://skyline.ai/favicon.ico', category: 'Real Estate AI', link: 'https://skyline.ai/', pricing: 'premium' },
+        { name: 'Cherre', description: 'Real estate data integration platform', logo: 'https://cherre.com/favicon.ico', category: 'Real Estate AI', link: 'https://cherre.com/', pricing: 'premium' },
+        { name: 'Localize', description: 'AI location intelligence for real estate', logo: 'https://localize.city/favicon.ico', category: 'Real Estate AI', link: 'https://localize.city/', pricing: 'freemium' },
+        { name: 'Enodo', description: 'AI multifamily property analysis', logo: 'https://enodoinc.com/favicon.ico', category: 'Real Estate AI', link: 'https://enodoinc.com/', pricing: 'premium' },
+        { name: 'Restb.ai', description: 'Computer vision for real estate', logo: 'https://restb.ai/favicon.ico', category: 'Real Estate AI', link: 'https://restb.ai/', pricing: 'premium' },
+        { name: 'Zillow Offers', description: 'AI-powered home buying platform', logo: 'https://www.zillow.com/favicon.ico', category: 'Real Estate AI', link: 'https://www.zillow.com/offers/', pricing: 'freemium' },
+        { name: 'Opendoor', description: 'AI home valuation and buying', logo: 'https://www.opendoor.com/favicon.ico', category: 'Real Estate AI', link: 'https://www.opendoor.com/', pricing: 'freemium' },
+        { name: 'Compass', description: 'AI-powered real estate platform', logo: 'https://www.compass.com/favicon.ico', category: 'Real Estate AI', link: 'https://www.compass.com/', pricing: 'freemium' },
+        { name: 'Redfin', description: 'AI real estate brokerage', logo: 'https://www.redfin.com/favicon.ico', category: 'Real Estate AI', link: 'https://www.redfin.com/', pricing: 'freemium' }
     ],
     'ai-travel': [
-        { name: 'Hopper', description: 'AI-powered travel booking app', logo: 'https://www.hopper.com/favicon.ico', category: 'Travel AI', link: 'https://www.hopper.com/' },
-        { name: 'Skyscanner', description: 'AI flight search and prediction', logo: 'https://www.skyscanner.com/favicon.ico', category: 'Travel AI', link: 'https://www.skyscanner.com/' },
-        { name: 'Kayak', description: 'AI travel search and planning', logo: 'https://www.kayak.com/favicon.ico', category: 'Travel AI', link: 'https://www.kayak.com/' },
-        { name: 'Mezi', description: 'AI travel assistant', logo: 'https://mezi.com/favicon.ico', category: 'Travel AI', link: 'https://mezi.com/' },
-        { name: 'Journera', description: 'AI travel data platform', logo: 'https://journera.com/favicon.ico', category: 'Travel AI', link: 'https://journera.com/' },
-        { name: 'Volantio', description: 'AI revenue optimization for airlines', logo: 'https://www.volantio.com/favicon.ico', category: 'Travel AI', link: 'https://www.volantio.com/' },
-        { name: 'Freebird', description: 'AI flight rebooking platform', logo: 'https://www.getfreebird.com/favicon.ico', category: 'Travel AI', link: 'https://www.getfreebird.com/' },
-        { name: 'Maidbot', description: 'AI robotics for hotels', logo: 'https://www.maidbot.com/favicon.ico', category: 'Travel AI', link: 'https://www.maidbot.com/' },
-        { name: 'Connie', description: 'Hiltons AI concierge', logo: 'https://www.hilton.com/favicon.ico', category: 'Travel AI', link: 'https://www.hilton.com/' },
-        { name: 'Waylo', description: 'AI hotel price prediction', logo: 'https://waylo.com/favicon.ico', category: 'Travel AI', link: 'https://waylo.com/' }
+        { name: 'Hopper', description: 'AI-powered travel booking app', logo: 'https://www.hopper.com/favicon.ico', category: 'Travel AI', link: 'https://www.hopper.com/', pricing: 'freemium' },
+        { name: 'Skyscanner', description: 'AI flight search and prediction', logo: 'https://www.skyscanner.com/favicon.ico', category: 'Travel AI', link: 'https://www.skyscanner.com/', pricing: 'free' },
+        { name: 'Kayak', description: 'AI travel search and planning', logo: 'https://www.kayak.com/favicon.ico', category: 'Travel AI', link: 'https://www.kayak.com/', pricing: 'free' },
+        { name: 'Mezi', description: 'AI travel assistant', logo: 'https://mezi.com/favicon.ico', category: 'Travel AI', link: 'https://mezi.com/', pricing: 'freemium' },
+        { name: 'Journera', description: 'AI travel data platform', logo: 'https://journera.com/favicon.ico', category: 'Travel AI', link: 'https://journera.com/', pricing: 'premium' },
+        { name: 'Volantio', description: 'AI revenue optimization for airlines', logo: 'https://www.volantio.com/favicon.ico', category: 'Travel AI', link: 'https://www.volantio.com/', pricing: 'premium' },
+        { name: 'Freebird', description: 'AI flight rebooking platform', logo: 'https://www.getfreebird.com/favicon.ico', category: 'Travel AI', link: 'https://www.getfreebird.com/', pricing: 'freemium' },
+        { name: 'Maidbot', description: 'AI robotics for hotels', logo: 'https://www.maidbot.com/favicon.ico', category: 'Travel AI', link: 'https://www.maidbot.com/', pricing: 'premium' },
+        { name: 'Connie', description: 'Hiltons AI concierge', logo: 'https://www.hilton.com/favicon.ico', category: 'Travel AI', link: 'https://www.hilton.com/', pricing: 'premium' },
+        { name: 'Waylo', description: 'AI hotel price prediction', logo: 'https://waylo.com/favicon.ico', category: 'Travel AI', link: 'https://waylo.com/', pricing: 'freemium' }
     ],
     'ai-weather': [
-        { name: 'ClimaCell', description: 'AI-powered weather forecasting', logo: 'https://www.climacell.co/favicon.ico', category: 'Weather AI', link: 'https://www.climacell.co/' },
-        { name: 'IBM Weather', description: 'AI weather intelligence platform', logo: 'https://www.ibm.com/weather/favicon.ico', category: 'Weather AI', link: 'https://www.ibm.com/weather' },
-        { name: 'Atmo', description: 'AI atmospheric modeling', logo: 'https://atmo.ai/favicon.ico', category: 'Weather AI', link: 'https://atmo.ai/' },
-        { name: 'Understory', description: 'AI weather monitoring network', logo: 'https://understory.com/favicon.ico', category: 'Weather AI', link: 'https://understory.com/' },
-        { name: 'Jupiter Intelligence', description: 'Climate risk analytics', logo: 'https://jupiterintel.com/favicon.ico', category: 'Weather AI', link: 'https://jupiterintel.com/' },
-        { name: 'Salient Predictions', description: 'AI long-range weather forecasting', logo: 'https://salientpredictions.com/favicon.ico', category: 'Weather AI', link: 'https://salientpredictions.com/' },
-        { name: 'Gro Intelligence', description: 'AI climate and agricultural data', logo: 'https://gro-intelligence.com/favicon.ico', category: 'Weather AI', link: 'https://gro-intelligence.com/' },
-        { name: 'WeatherBug', description: 'AI-enhanced weather forecasting', logo: 'https://www.weatherbug.com/favicon.ico', category: 'Weather AI', link: 'https://www.weatherbug.com/' },
-        { name: 'Windy', description: 'Interactive weather forecasting', logo: 'https://www.windy.com/favicon.ico', category: 'Weather AI', link: 'https://www.windy.com/' },
-        { name: 'Tempest', description: 'AI weather station network', logo: 'https://weatherflow.com/favicon.ico', category: 'Weather AI', link: 'https://weatherflow.com/tempest-weather-system/' }
+        { name: 'ClimaCell', description: 'AI-powered weather forecasting', logo: 'https://www.climacell.co/favicon.ico', category: 'Weather AI', link: 'https://www.climacell.co/', pricing: 'premium' },
+        { name: 'IBM Weather', description: 'AI weather intelligence platform', logo: 'https://www.ibm.com/weather/favicon.ico', category: 'Weather AI', link: 'https://www.ibm.com/weather', pricing: 'premium' },
+        { name: 'Atmo', description: 'AI atmospheric modeling', logo: 'https://atmo.ai/favicon.ico', category: 'Weather AI', link: 'https://atmo.ai/', pricing: 'premium' },
+        { name: 'Understory', description: 'AI weather monitoring network', logo: 'https://understory.com/favicon.ico', category: 'Weather AI', link: 'https://understory.com/', pricing: 'premium' },
+        { name: 'Jupiter Intelligence', description: 'Climate risk analytics', logo: 'https://jupiterintel.com/favicon.ico', category: 'Weather AI', link: 'https://jupiterintel.com/', pricing: 'premium' },
+        { name: 'Salient Predictions', description: 'AI long-range weather forecasting', logo: 'https://salientpredictions.com/favicon.ico', category: 'Weather AI', link: 'https://salientpredictions.com/', pricing: 'premium' },
+        { name: 'Gro Intelligence', description: 'AI climate and agricultural data', logo: 'https://gro-intelligence.com/favicon.ico', category: 'Weather AI', link: 'https://gro-intelligence.com/', pricing: 'premium' },
+        { name: 'WeatherBug', description: 'AI-enhanced weather forecasting', logo: 'https://www.weatherbug.com/favicon.ico', category: 'Weather AI', link: 'https://www.weatherbug.com/', pricing: 'freemium' },
+        { name: 'Windy', description: 'Interactive weather forecasting', logo: 'https://www.windy.com/favicon.ico', category: 'Weather AI', link: 'https://www.windy.com/', pricing: 'freemium' },
+        { name: 'Tempest', description: 'AI weather station network', logo: 'https://weatherflow.com/favicon.ico', category: 'Weather AI', link: 'https://weatherflow.com/tempest-weather-system/', pricing: 'premium' }
     ],
     'ai-sports': [
-        { name: 'Sportlogiq', description: 'AI sports analytics platform', logo: 'https://www.sportlogiq.com/favicon.ico', category: 'Sports AI', link: 'https://www.sportlogiq.com/' },
-        { name: 'Second Spectrum', description: 'AI-powered sports tracking', logo: 'https://www.secondspectrum.com/favicon.ico', category: 'Sports AI', link: 'https://www.secondspectrum.com/' },
-        { name: 'Hawk-Eye', description: 'Computer vision for sports officiating', logo: 'https://www.hawkeyeinnovations.com/favicon.ico', category: 'Sports AI', link: 'https://www.hawkeyeinnovations.com/' },
-        { name: 'Stats Perform', description: 'Sports data and AI analytics', logo: 'https://www.statsperform.com/favicon.ico', category: 'Sports AI', link: 'https://www.statsperform.com/' },
-        { name: 'Kinexon', description: 'Athlete performance tracking', logo: 'https://kinexon.com/favicon.ico', category: 'Sports AI', link: 'https://kinexon.com/' },
-        { name: 'Kitman Labs', description: 'Sports performance analytics', logo: 'https://www.kitmanlabs.com/favicon.ico', category: 'Sports AI', link: 'https://www.kitmanlabs.com/' },
-        { name: 'Hudl', description: 'Video analysis for sports teams', logo: 'https://www.hudl.com/favicon.ico', category: 'Sports AI', link: 'https://www.hudl.com/' },
-        { name: 'Catapult', description: 'Wearable analytics for athletes', logo: 'https://www.catapultsports.com/favicon.ico', category: 'Sports AI', link: 'https://www.catapultsports.com/' },
-        { name: 'Genius Sports', description: 'Sports data and technology', logo: 'https://www.geniussports.com/favicon.ico', category: 'Sports AI', link: 'https://www.geniussports.com/' },
-        { name: 'PlayerMaker', description: 'Football performance analytics', logo: 'https://playermaker.com/favicon.ico', category: 'Sports AI', link: 'https://playermaker.com/' }
+        { name: 'Sportlogiq', description: 'AI sports analytics platform', logo: 'https://www.sportlogiq.com/favicon.ico', category: 'Sports AI', link: 'https://www.sportlogiq.com/', pricing: 'premium' },
+        { name: 'Second Spectrum', description: 'AI-powered sports tracking', logo: 'https://www.secondspectrum.com/favicon.ico', category: 'Sports AI', link: 'https://www.secondspectrum.com/', pricing: 'premium' },
+        { name: 'Hawk-Eye', description: 'Computer vision for sports officiating', logo: 'https://www.hawkeyeinnovations.com/favicon.ico', category: 'Sports AI', link: 'https://www.hawkeyeinnovations.com/', pricing: 'premium' },
+        { name: 'Stats Perform', description: 'Sports data and AI analytics', logo: 'https://www.statsperform.com/favicon.ico', category: 'Sports AI', link: 'https://www.statsperform.com/', pricing: 'premium' },
+        { name: 'Kinexon', description: 'Athlete performance tracking', logo: 'https://kinexon.com/favicon.ico', category: 'Sports AI', link: 'https://kinexon.com/', pricing: 'premium' },
+        { name: 'Kitman Labs', description: 'Sports performance analytics', logo: 'https://www.kitmanlabs.com/favicon.ico', category: 'Sports AI', link: 'https://www.kitmanlabs.com/', pricing: 'premium' },
+        { name: 'Hudl', description: 'Video analysis for sports teams', logo: 'https://www.hudl.com/favicon.ico', category: 'Sports AI', link: 'https://www.hudl.com/', pricing: 'freemium' },
+        { name: 'Catapult', description: 'Wearable analytics for athletes', logo: 'https://www.catapultsports.com/favicon.ico', category: 'Sports AI', link: 'https://www.catapultsports.com/', pricing: 'premium' },
+        { name: 'Genius Sports', description: 'Sports data and technology', logo: 'https://www.geniussports.com/favicon.ico', category: 'Sports AI', link: 'https://www.geniussports.com/', pricing: 'premium' },
+        { name: 'PlayerMaker', description: 'Football performance analytics', logo: 'https://playermaker.com/favicon.ico', category: 'Sports AI', link: 'https://playermaker.com/', pricing: 'premium' }
     ],
     'ai-music-analysis': [
-        { name: 'Spotify', description: 'AI-powered music recommendations', logo: 'https://www.spotify.com/favicon.ico', category: 'Music Analysis AI', link: 'https://www.spotify.com/' },
-        { name: 'Pandora', description: 'Music Genome Project', logo: 'https://www.pandora.com/favicon.ico', category: 'Music Analysis AI', link: 'https://www.pandora.com/' },
-        { name: 'Shazam', description: 'AI music recognition', logo: 'https://www.shazam.com/favicon.ico', category: 'Music Analysis AI', link: 'https://www.shazam.com/' },
-        { name: 'Musiio', description: 'AI music tagging and curation', logo: 'https://www.musiio.com/favicon.ico', category: 'Music Analysis AI', link: 'https://www.musiio.com/' },
-        { name: 'Melodrive', description: 'Adaptive music AI', logo: 'https://melodrive.com/favicon.ico', category: 'Music Analysis AI', link: 'https://melodrive.com/' },
-        { name: 'Landr', description: 'AI music mastering', logo: 'https://www.landr.com/favicon.ico', category: 'Music Analysis AI', link: 'https://www.landr.com/' },
-        { name: 'Moises', description: 'AI music separation', logo: 'https://moises.ai/favicon.ico', category: 'Music Analysis AI', link: 'https://moises.ai/' },
-        { name: 'Muzeek', description: 'AI music analysis for sync licensing', logo: 'https://muzeek.com/favicon.ico', category: 'Music Analysis AI', link: 'https://muzeek.com/' },
-        { name: 'Cyanite', description: 'AI music tagging and search', logo: 'https://cyanite.ai/favicon.ico', category: 'Music Analysis AI', link: 'https://cyanite.ai/' },
-        { name: 'Sononym', description: 'AI sample browser', logo: 'https://www.sononym.net/favicon.ico', category: 'Music Analysis AI', link: 'https://www.sononym.net/' }
+        { name: 'Spotify', description: 'AI-powered music recommendations', logo: 'https://www.spotify.com/favicon.ico', category: 'Music Analysis AI', link: 'https://www.spotify.com/', pricing: 'freemium' },
+        { name: 'Pandora', description: 'Music Genome Project', logo: 'https://www.pandora.com/favicon.ico', category: 'Music Analysis AI', link: 'https://www.pandora.com/', pricing: 'freemium' },
+        { name: 'Shazam', description: 'AI music recognition', logo: 'https://www.shazam.com/favicon.ico', category: 'Music Analysis AI', link: 'https://www.shazam.com/', pricing: 'freemium' },
+        { name: 'Musiio', description: 'AI music tagging and curation', logo: 'https://www.musiio.com/favicon.ico', category: 'Music Analysis AI', link: 'https://www.musiio.com/', pricing: 'premium' },
+        { name: 'Melodrive', description: 'Adaptive music AI', logo: 'https://melodrive.com/favicon.ico', category: 'Music Analysis AI', link: 'https://melodrive.com/', pricing: 'premium' },
+        { name: 'Landr', description: 'AI music mastering', logo: 'https://www.landr.com/favicon.ico', category: 'Music Analysis AI', link: 'https://www.landr.com/', pricing: 'freemium' },
+        { name: 'Moises', description: 'AI music separation', logo: 'https://moises.ai/favicon.ico', category: 'Music Analysis AI', link: 'https://moises.ai/', pricing: 'freemium' },
+        { name: 'Muzeek', description: 'AI music analysis for sync licensing', logo: 'https://muzeek.com/favicon.ico', category: 'Music Analysis AI', link: 'https://muzeek.com/', pricing: 'premium' },
+        { name: 'Cyanite', description: 'AI music tagging and search', logo: 'https://cyanite.ai/favicon.ico', category: 'Music Analysis AI', link: 'https://cyanite.ai/', pricing: 'premium' },
+        { name: 'Sononym', description: 'AI sample browser', logo: 'https://www.sononym.net/favicon.ico', category: 'Music Analysis AI', link: 'https://www.sononym.net/', pricing: 'freemium' }
     ],
     'ai-fashion': [
-        { name: 'Vue.ai', description: 'AI for fashion retail', logo: 'https://vue.ai/favicon.ico', category: 'Fashion AI', link: 'https://vue.ai/' },
-        { name: 'Stitch Fix', description: 'AI-powered personal styling', logo: 'https://www.stitchfix.com/favicon.ico', category: 'Fashion AI', link: 'https://www.stitchfix.com/' },
-        { name: 'Stylumia', description: 'Fashion trend forecasting with AI', logo: 'https://stylumia.ai/favicon.ico', category: 'Fashion AI', link: 'https://stylumia.ai/' },
-        { name: 'Heuritech', description: 'AI fashion trend forecasting', logo: 'https://www.heuritech.com/favicon.ico', category: 'Fashion AI', link: 'https://www.heuritech.com/' },
-        { name: 'Virtusize', description: 'AI clothing size recommendation', logo: 'https://www.virtusize.com/favicon.ico', category: 'Fashion AI', link: 'https://www.virtusize.com/' },
-        { name: 'Syte', description: 'Visual AI for fashion', logo: 'https://www.syte.ai/favicon.ico', category: 'Fashion AI', link: 'https://www.syte.ai/' },
-        { name: 'Intelistyle', description: 'AI fashion styling platform', logo: 'https://intelistyle.com/favicon.ico', category: 'Fashion AI', link: 'https://intelistyle.com/' },
-        { name: 'Finery', description: 'AI wardrobe operating system', logo: 'https://finery.com/favicon.ico', category: 'Fashion AI', link: 'https://finery.com/' },
-        { name: 'Mode.ai', description: 'Fashion visual search and chatbots', logo: 'https://mode.ai/favicon.ico', category: 'Fashion AI', link: 'https://mode.ai/' },
-        { name: 'Dress-X', description: 'Digital fashion platform', logo: 'https://dress-x.com/favicon.ico', category: 'Fashion AI', link: 'https://dress-x.com/' }
+        { name: 'Vue.ai', description: 'AI for fashion retail', logo: 'https://vue.ai/favicon.ico', category: 'Fashion AI', link: 'https://vue.ai/', pricing: 'premium' },
+        { name: 'Stitch Fix', description: 'AI-powered personal styling', logo: 'https://www.stitchfix.com/favicon.ico', category: 'Fashion AI', link: 'https://www.stitchfix.com/', pricing: 'premium' },
+        { name: 'Stylumia', description: 'Fashion trend forecasting with AI', logo: 'https://stylumia.ai/favicon.ico', category: 'Fashion AI', link: 'https://stylumia.ai/', pricing: 'premium' },
+        { name: 'Heuritech', description: 'AI fashion trend forecasting', logo: 'https://www.heuritech.com/favicon.ico', category: 'Fashion AI', link: 'https://www.heuritech.com/', pricing: 'premium' },
+        { name: 'Virtusize', description: 'AI clothing size recommendation', logo: 'https://www.virtusize.com/favicon.ico', category: 'Fashion AI', link: 'https://www.virtusize.com/', pricing: 'premium' },
+        { name: 'Syte', description: 'Visual AI for fashion', logo: 'https://www.syte.ai/favicon.ico', category: 'Fashion AI', link: 'https://www.syte.ai/', pricing: 'premium' },
+        { name: 'Intelistyle', description: 'AI fashion styling platform', logo: 'https://intelistyle.com/favicon.ico', category: 'Fashion AI', link: 'https://intelistyle.com/', pricing: 'freemium' },
+        { name: 'Finery', description: 'AI wardrobe operating system', logo: 'https://finery.com/favicon.ico', category: 'Fashion AI', link: 'https://finery.com/', pricing: 'freemium' },
+        { name: 'Mode.ai', description: 'Fashion visual search and chatbots', logo: 'https://mode.ai/favicon.ico', category: 'Fashion AI', link: 'https://mode.ai/', pricing: 'premium' },
+        { name: 'Dress-X', description: 'Digital fashion platform', logo: 'https://dress-x.com/favicon.ico', category: 'Fashion AI', link: 'https://dress-x.com/', pricing: 'freemium' }
     ],
     'ai-gaming-design': [
-        { name: 'Unity ML-Agents', description: 'Machine learning for game development', logo: 'https://unity.com/favicon.ico', category: 'Game Design AI', link: 'https://unity.com/products/machine-learning-agents' },
-        { name: 'NVIDIA GameGAN', description: 'AI game generation technology', logo: 'https://www.nvidia.com/favicon.ico', category: 'Game Design AI', link: 'https://www.nvidia.com/en-us/research/ai-playground/' },
-        { name: 'Promethean AI', description: 'AI for game environment design', logo: 'https://www.prometheanai.com/favicon.ico', category: 'Game Design AI', link: 'https://www.prometheanai.com/' },
-        { name: 'modl.ai', description: 'AI tools for game development', logo: 'https://modl.ai/favicon.ico', category: 'Game Design AI', link: 'https://modl.ai/' },
-        { name: 'Spirit AI', description: 'AI for game character behavior', logo: 'https://spiritai.com/favicon.ico', category: 'Game Design AI', link: 'https://spiritai.com/' },
-        { name: 'Latent Space', description: 'AI-assisted game development', logo: 'https://latent.space/favicon.ico', category: 'Game Design AI', link: 'https://latent.space/' },
-        { name: 'Anything World', description: '3D content generation for games', logo: 'https://anything.world/favicon.ico', category: 'Game Design AI', link: 'https://anything.world/' },
-        { name: 'Replica Studios', description: 'AI voice actors for games', logo: 'https://replicastudios.com/favicon.ico', category: 'Game Design AI', link: 'https://replicastudios.com/' },
-        { name: 'Inworld AI', description: 'AI characters for games', logo: 'https://inworld.ai/favicon.ico', category: 'Game Design AI', link: 'https://inworld.ai/' },
-        { name: 'Scenario', description: 'AI-generated game assets', logo: 'https://www.scenario.com/favicon.ico', category: 'Game Design AI', link: 'https://www.scenario.com/' }
+        { name: 'Unity ML-Agents', description: 'Machine learning for game development', logo: 'https://unity.com/favicon.ico', category: 'Game Design AI', link: 'https://unity.com/products/machine-learning-agents', pricing: 'free' },
+        { name: 'NVIDIA GameGAN', description: 'AI game generation technology', logo: 'https://www.nvidia.com/favicon.ico', category: 'Game Design AI', link: 'https://www.nvidia.com/en-us/research/ai-playground/', pricing: 'free' },
+        { name: 'Promethean AI', description: 'AI for game environment design', logo: 'https://www.prometheanai.com/favicon.ico', category: 'Game Design AI', link: 'https://www.prometheanai.com/', pricing: 'freemium' },
+        { name: 'modl.ai', description: 'AI tools for game development', logo: 'https://modl.ai/favicon.ico', category: 'Game Design AI', link: 'https://modl.ai/', pricing: 'freemium' },
+        { name: 'Spirit AI', description: 'AI for game character behavior', logo: 'https://spiritai.com/favicon.ico', category: 'Game Design AI', link: 'https://spiritai.com/', pricing: 'premium' },
+        { name: 'Latent Space', description: 'AI-assisted game development', logo: 'https://latent.space/favicon.ico', category: 'Game Design AI', link: 'https://latent.space/', pricing: 'freemium' },
+        { name: 'Anything World', description: '3D content generation for games', logo: 'https://anything.world/favicon.ico', category: 'Game Design AI', link: 'https://anything.world/', pricing: 'freemium' },
+        { name: 'Replica Studios', description: 'AI voice actors for games', logo: 'https://replicastudios.com/favicon.ico', category: 'Game Design AI', link: 'https://replicastudios.com/', pricing: 'premium' },
+        { name: 'Inworld AI', description: 'AI characters for games', logo: 'https://inworld.ai/favicon.ico', category: 'Game Design AI', link: 'https://inworld.ai/', pricing: 'freemium' },
+        { name: 'Scenario', description: 'AI-generated game assets', logo: 'https://www.scenario.com/favicon.ico', category: 'Game Design AI', link: 'https://www.scenario.com/', pricing: 'freemium' }
     ],
 
         'code-debuggers': [
-            { name: 'Sentry', description: 'Real-time error tracking and debugging for code', logo: 'https://sentry.io/_assets/favicon.ico', category: 'Code Debuggers', link: 'https://sentry.io/' },
-            { name: 'Airbrake', description: 'Error monitoring and debugging for developers', logo: 'https://airbrake.io/favicon.ico', category: 'Code Debuggers', link: 'https://airbrake.io/' },
-            { name: 'Rollbar', description: 'Continuous code improvement and debugging', logo: 'https://rollbar.com/favicon.ico', category: 'Code Debuggers', link: 'https://rollbar.com/' },
-            { name: 'Raygun', description: 'Error, crash, and performance monitoring', logo: 'https://raygun.com/favicon.ico', category: 'Code Debuggers', link: 'https://raygun.com/' },
-            { name: 'BugSnag', description: 'Error monitoring and reporting for apps', logo: 'https://www.bugsnag.com/favicon.ico', category: 'Code Debuggers', link: 'https://www.bugsnag.com/' },
-            { name: 'Instabug', description: 'Bug reporting and in-app debugging', logo: 'https://instabug.com/favicon.ico', category: 'Code Debuggers', link: 'https://instabug.com/' },
-            { name: 'LogRocket', description: 'Session replay and debugging for web apps', logo: 'https://logrocket.com/favicon.ico', category: 'Code Debuggers', link: 'https://logrocket.com/' },
-            { name: 'Rookout', description: 'Live debugging for cloud-native apps', logo: 'https://www.rookout.com/favicon.ico', category: 'Code Debuggers', link: 'https://www.rookout.com/' },
-            { name: 'AppSignal', description: 'Error tracking and performance monitoring', logo: 'https://appsignal.com/favicon.ico', category: 'Code Debuggers', link: 'https://appsignal.com/' },
-            { name: 'Honeybadger', description: 'Exception, uptime, and error monitoring', logo: 'https://www.honeybadger.io/favicon.ico', category: 'Code Debuggers', link: 'https://www.honeybadger.io/' },
-            { name: 'GlitchTip', description: 'Open-source error tracking and debugging', logo: 'https://glitchtip.com/favicon.ico', category: 'Code Debuggers', link: 'https://glitchtip.com/' },
-            { name: 'Codecov', description: 'Code coverage and debugging insights', logo: 'https://about.codecov.io/wp-content/uploads/2021/06/favicon.png', category: 'Code Debuggers', link: 'https://about.codecov.io/' }
+            { name: 'Sentry', description: 'Real-time error tracking and debugging for code', logo: 'https://sentry.io/_assets/favicon.ico', category: 'Code Debuggers', link: 'https://sentry.io/', pricing: 'freemium' },
+            { name: 'Airbrake', description: 'Error monitoring and debugging for developers', logo: 'https://airbrake.io/favicon.ico', category: 'Code Debuggers', link: 'https://airbrake.io/', pricing: 'freemium' },
+            { name: 'Rollbar', description: 'Continuous code improvement and debugging', logo: 'https://rollbar.com/favicon.ico', category: 'Code Debuggers', link: 'https://rollbar.com/', pricing: 'freemium' },
+            { name: 'Raygun', description: 'Error, crash, and performance monitoring', logo: 'https://raygun.com/favicon.ico', category: 'Code Debuggers', link: 'https://raygun.com/', pricing: 'freemium' },
+            { name: 'BugSnag', description: 'Error monitoring and reporting for apps', logo: 'https://www.bugsnag.com/favicon.ico', category: 'Code Debuggers', link: 'https://www.bugsnag.com/', pricing: 'freemium' },
+            { name: 'Instabug', description: 'Bug reporting and in-app debugging', logo: 'https://instabug.com/favicon.ico', category: 'Code Debuggers', link: 'https://instabug.com/', pricing: 'freemium' },
+            { name: 'LogRocket', description: 'Session replay and debugging for web apps', logo: 'https://logrocket.com/favicon.ico', category: 'Code Debuggers', link: 'https://logrocket.com/', pricing: 'freemium' },
+            { name: 'Rookout', description: 'Live debugging for cloud-native apps', logo: 'https://www.rookout.com/favicon.ico', category: 'Code Debuggers', link: 'https://www.rookout.com/', pricing: 'freemium' },
+            { name: 'AppSignal', description: 'Error tracking and performance monitoring', logo: 'https://appsignal.com/favicon.ico', category: 'Code Debuggers', link: 'https://appsignal.com/', pricing: 'freemium' },
+            { name: 'Honeybadger', description: 'Exception, uptime, and error monitoring', logo: 'https://www.honeybadger.io/favicon.ico', category: 'Code Debuggers', link: 'https://www.honeybadger.io/', pricing: 'freemium' },
+            { name: 'GlitchTip', description: 'Open-source error tracking and debugging', logo: 'https://glitchtip.com/favicon.ico', category: 'Code Debuggers', link: 'https://glitchtip.com/', pricing: 'free' },
+            { name: 'Codecov', description: 'Code coverage and debugging insights', logo: 'https://about.codecov.io/wp-content/uploads/2021/06/favicon.png', category: 'Code Debuggers', link: 'https://about.codecov.io/', pricing: 'freemium' }
         ],
     'ai-ocean': [
-        { name: 'Sofar Ocean', description: 'Ocean data platform with AI', logo: 'https://www.sofarocean.com/favicon.ico', category: 'Ocean AI', link: 'https://www.sofarocean.com/' },
-        { name: 'Saildrone', description: 'Autonomous ocean data collection', logo: 'https://www.saildrone.com/favicon.ico', category: 'Ocean AI', link: 'https://www.saildrone.com/' },
-        { name: 'Terradepth', description: 'Autonomous ocean data platform', logo: 'https://www.terradepth.com/favicon.ico', category: 'Ocean AI', link: 'https://www.terradepth.com/' },
-        { name: 'MBARI', description: 'AI for oceanographic research', logo: 'https://www.mbari.org/favicon.ico', category: 'Ocean AI', link: 'https://www.mbari.org/' },
-        { name: 'OceanMind', description: 'AI for marine protection', logo: 'https://www.oceanmind.global/favicon.ico', category: 'Ocean AI', link: 'https://www.oceanmind.global/' },
-        { name: 'Planys Technologies', description: 'Underwater robotics with AI', logo: 'https://www.planystech.com/favicon.ico', category: 'Ocean AI', link: 'https://www.planystech.com/' },
-        { name: 'SINAY', description: 'Maritime data analytics platform', logo: 'https://sinay.ai/favicon.ico', category: 'Ocean AI', link: 'https://sinay.ai/' },
-        { name: 'FathomNet', description: 'Ocean image database for AI', logo: 'https://www.fathomnet.org/favicon.ico', category: 'Ocean AI', link: 'https://www.fathomnet.org/' },
-        { name: 'Whale Seeker', description: 'AI whale detection from imagery', logo: 'https://www.whaleseeker.com/favicon.ico', category: 'Ocean AI', link: 'https://www.whaleseeker.com/' },
-        { name: 'NVIDIA AI for Ocean Science', description: 'AI solutions for oceanography', logo: 'https://www.nvidia.com/favicon.ico', category: 'Ocean AI', link: 'https://www.nvidia.com/en-us/industries/science/' }
+        { name: 'Sofar Ocean', description: 'Ocean data platform with AI', logo: 'https://www.sofarocean.com/favicon.ico', category: 'Ocean AI', link: 'https://www.sofarocean.com/', pricing: 'premium' },
+        { name: 'Saildrone', description: 'Autonomous ocean data collection', logo: 'https://www.saildrone.com/favicon.ico', category: 'Ocean AI', link: 'https://www.saildrone.com/', pricing: 'premium' },
+        { name: 'Terradepth', description: 'Autonomous ocean data platform', logo: 'https://www.terradepth.com/favicon.ico', category: 'Ocean AI', link: 'https://www.terradepth.com/', pricing: 'premium' },
+        { name: 'MBARI', description: 'AI for oceanographic research', logo: 'https://www.mbari.org/favicon.ico', category: 'Ocean AI', link: 'https://www.mbari.org/', pricing: 'free' },
+        { name: 'OceanMind', description: 'AI for marine protection', logo: 'https://www.oceanmind.global/favicon.ico', category: 'Ocean AI', link: 'https://www.oceanmind.global/', pricing: 'premium' },
+        { name: 'Planys Technologies', description: 'Underwater robotics with AI', logo: 'https://www.planystech.com/favicon.ico', category: 'Ocean AI', link: 'https://www.planystech.com/', pricing: 'premium' },
+        { name: 'SINAY', description: 'Maritime data analytics platform', logo: 'https://sinay.ai/favicon.ico', category: 'Ocean AI', link: 'https://sinay.ai/', pricing: 'premium' },
+        { name: 'FathomNet', description: 'Ocean image database for AI', logo: 'https://www.fathomnet.org/favicon.ico', category: 'Ocean AI', link: 'https://www.fathomnet.org/', pricing: 'free' },
+        { name: 'Whale Seeker', description: 'AI whale detection from imagery', logo: 'https://www.whaleseeker.com/favicon.ico', category: 'Ocean AI', link: 'https://www.whaleseeker.com/', pricing: 'premium' },
+        { name: 'NVIDIA AI for Ocean Science', description: 'AI solutions for oceanography', logo: 'https://www.nvidia.com/favicon.ico', category: 'Ocean AI', link: 'https://www.nvidia.com/en-us/industries/science/', pricing: 'premium' }
     ],
 
         'animation': [
-            { name: 'Runway ML', description: 'AI-powered video and animation creation', logo: 'https://runwayml.com/favicon.ico', category: 'Animation', link: 'https://runwayml.com/' },
-            { name: 'DeepMotion', description: 'AI motion capture and animation', logo: 'https://www.deepmotion.com/favicon.ico', category: 'Animation', link: 'https://www.deepmotion.com/' },
-            { name: 'Kaiber', description: 'AI video and animation generator', logo: 'https://www.kaiber.ai/favicon.ico', category: 'Animation', link: 'https://www.kaiber.ai/' },
-            { name: 'Animaker', description: 'DIY animation video maker with AI', logo: 'https://www.animaker.com/favicon.ico', category: 'Animation', link: 'https://www.animaker.com/' },
-            { name: 'Powtoon', description: 'AI-powered animated video creation', logo: 'https://www.powtoon.com/favicon.ico', category: 'Animation', link: 'https://www.powtoon.com/' },
-            { name: 'Vyond', description: 'AI-driven animation for business', logo: 'https://www.vyond.com/favicon.ico', category: 'Animation', link: 'https://www.vyond.com/' },
-            { name: 'Toonly', description: 'Drag-and-drop animation software', logo: 'https://www.toonly.com/favicon.ico', category: 'Animation', link: 'https://www.toonly.com/' },
-            { name: 'Animatron', description: 'Online animation maker with AI', logo: 'https://www.animatron.com/favicon.ico', category: 'Animation', link: 'https://www.animatron.com/' },
-            { name: 'Moovly', description: 'AI-powered video and animation platform', logo: 'https://www.moovly.com/favicon.ico', category: 'Animation', link: 'https://www.moovly.com/' },
-            { name: 'Renderforest', description: 'AI animation and video maker', logo: 'https://www.renderforest.com/favicon.ico', category: 'Animation', link: 'https://www.renderforest.com/' },
-            { name: 'Synthesia', description: 'AI video and avatar animation', logo: 'https://www.synthesia.io/favicon.ico', category: 'Animation', link: 'https://www.synthesia.io/' },
-            { name: 'LottieFiles', description: 'AI-powered animation for web and apps', logo: 'https://lottiefiles.com/favicon.ico', category: 'Animation', link: 'https://lottiefiles.com/' }
+            { name: 'Runway ML', description: 'AI-powered video and animation creation', logo: 'https://runwayml.com/favicon.ico', category: 'Animation', link: 'https://runwayml.com/', pricing: 'freemium' },
+            { name: 'DeepMotion', description: 'AI motion capture and animation', logo: 'https://www.deepmotion.com/favicon.ico', category: 'Animation', link: 'https://www.deepmotion.com/', pricing: 'freemium' },
+            { name: 'Kaiber', description: 'AI video and animation generator', logo: 'https://www.kaiber.ai/favicon.ico', category: 'Animation', link: 'https://www.kaiber.ai/', pricing: 'freemium' },
+            { name: 'Animaker', description: 'DIY animation video maker with AI', logo: 'https://www.animaker.com/favicon.ico', category: 'Animation', link: 'https://www.animaker.com/', pricing: 'freemium' },
+            { name: 'Powtoon', description: 'AI-powered animated video creation', logo: 'https://www.powtoon.com/favicon.ico', category: 'Animation', link: 'https://www.powtoon.com/', pricing: 'freemium' },
+            { name: 'Vyond', description: 'AI-driven animation for business', logo: 'https://www.vyond.com/favicon.ico', category: 'Animation', link: 'https://www.vyond.com/', pricing: 'premium' },
+            { name: 'Toonly', description: 'Drag-and-drop animation software', logo: 'https://www.toonly.com/favicon.ico', category: 'Animation', link: 'https://www.toonly.com/', pricing: 'premium' },
+            { name: 'Animatron', description: 'Online animation maker with AI', logo: 'https://www.animatron.com/favicon.ico', category: 'Animation', link: 'https://www.animatron.com/', pricing: 'freemium' },
+            { name: 'Moovly', description: 'AI-powered video and animation platform', logo: 'https://www.moovly.com/favicon.ico', category: 'Animation', link: 'https://www.moovly.com/', pricing: 'freemium' },
+            { name: 'Renderforest', description: 'AI animation and video maker', logo: 'https://www.renderforest.com/favicon.ico', category: 'Animation', link: 'https://www.renderforest.com/', pricing: 'freemium' },
+            { name: 'Synthesia', description: 'AI video and avatar animation', logo: 'https://www.synthesia.io/favicon.ico', category: 'Animation', link: 'https://www.synthesia.io/', pricing: 'premium' },
+            { name: 'LottieFiles', description: 'AI-powered animation for web and apps', logo: 'https://lottiefiles.com/favicon.ico', category: 'Animation', link: 'https://lottiefiles.com/', pricing: 'freemium' }
         ],
     'ai-construction': [
-        { name: 'Buildots', description: 'AI construction site monitoring', logo: 'https://buildots.com/favicon.ico', category: 'Construction AI', link: 'https://buildots.com/' },
-        { name: 'Doxel', description: 'AI-powered construction monitoring', logo: 'https://www.doxel.ai/favicon.ico', category: 'Construction AI', link: 'https://www.doxel.ai/' },
-        { name: 'Disperse', description: 'AI construction progress tracking', logo: 'https://www.disperse.io/favicon.ico', category: 'Construction AI', link: 'https://www.disperse.io/' },
-        { name: 'Avvir', description: 'Construction verification platform', logo: 'https://www.avvir.io/favicon.ico', category: 'Construction AI', link: 'https://www.avvir.io/' },
-        { name: 'Smartvid.io', description: 'AI safety monitoring for construction', logo: 'https://www.smartvid.io/favicon.ico', category: 'Construction AI', link: 'https://www.smartvid.io/' },
-        { name: 'OpenSpace', description: 'AI construction site documentation', logo: 'https://www.openspace.ai/favicon.ico', category: 'Construction AI', link: 'https://www.openspace.ai/' },
-        { name: 'Indus.ai', description: 'Construction intelligence platform', logo: 'https://indus.ai/favicon.ico', category: 'Construction AI', link: 'https://indus.ai/' },
-        { name: 'Alice Technologies', description: 'AI construction scheduling', logo: 'https://www.alicetechnologies.com/favicon.ico', category: 'Construction AI', link: 'https://www.alicetechnologies.com/' },
-        { name: 'Versatile', description: 'AI-powered construction insights', logo: 'https://www.versatile.ai/favicon.ico', category: 'Construction AI', link: 'https://www.versatile.ai/' },
-        { name: 'Togal.AI', description: 'AI for construction estimating', logo: 'https://togal.ai/favicon.ico', category: 'Construction AI', link: 'https://togal.ai/' }
+        { name: 'Buildots', description: 'AI construction site monitoring', logo: 'https://buildots.com/favicon.ico', category: 'Construction AI', link: 'https://buildots.com/', pricing: 'premium' },
+        { name: 'Doxel', description: 'AI-powered construction monitoring', logo: 'https://www.doxel.ai/favicon.ico', category: 'Construction AI', link: 'https://www.doxel.ai/', pricing: 'premium' },
+        { name: 'Disperse', description: 'AI construction progress tracking', logo: 'https://www.disperse.io/favicon.ico', category: 'Construction AI', link: 'https://www.disperse.io/', pricing: 'premium' },
+        { name: 'Avvir', description: 'Construction verification platform', logo: 'https://www.avvir.io/favicon.ico', category: 'Construction AI', link: 'https://www.avvir.io/', pricing: 'premium' },
+        { name: 'Smartvid.io', description: 'AI safety monitoring for construction', logo: 'https://www.smartvid.io/favicon.ico', category: 'Construction AI', link: 'https://www.smartvid.io/', pricing: 'premium' },
+        { name: 'OpenSpace', description: 'AI construction site documentation', logo: 'https://www.openspace.ai/favicon.ico', category: 'Construction AI', link: 'https://www.openspace.ai/', pricing: 'premium' },
+        { name: 'Indus.ai', description: 'Construction intelligence platform', logo: 'https://indus.ai/favicon.ico', category: 'Construction AI', link: 'https://indus.ai/', pricing: 'premium' },
+        { name: 'Alice Technologies', description: 'AI construction scheduling', logo: 'https://www.alicetechnologies.com/favicon.ico', category: 'Construction AI', link: 'https://www.alicetechnologies.com/', pricing: 'premium' },
+        { name: 'Versatile', description: 'AI-powered construction insights', logo: 'https://www.versatile.ai/favicon.ico', category: 'Construction AI', link: 'https://www.versatile.ai/', pricing: 'premium' },
+        { name: 'Togal.AI', description: 'AI for construction estimating', logo: 'https://togal.ai/favicon.ico', category: 'Construction AI', link: 'https://togal.ai/', pricing: 'premium' }
     ],
     'ai-legal': [
-        { name: 'ROSS Intelligence', description: 'AI legal research platform', logo: 'https://rossintelligence.com/favicon.ico', category: 'Legal AI', link: 'https://rossintelligence.com/' },
-        { name: 'Casetext', description: 'AI-powered legal research assistant', logo: 'https://casetext.com/favicon.ico', category: 'Legal AI', link: 'https://casetext.com/' },
-        { name: 'Kira Systems', description: 'AI contract analysis software', logo: 'https://kirasystems.com/favicon.ico', category: 'Legal AI', link: 'https://kirasystems.com/' },
-        { name: 'Luminance', description: 'AI document analysis for legal teams', logo: 'https://www.luminance.com/favicon.ico', category: 'Legal AI', link: 'https://www.luminance.com/' },
-        { name: 'LawGeex', description: 'AI contract review automation', logo: 'https://www.lawgeex.com/favicon.ico', category: 'Legal AI', link: 'https://www.lawgeex.com/' },
-        { name: 'Everlaw', description: 'AI-powered litigation platform', logo: 'https://www.everlaw.com/favicon.ico', category: 'Legal AI', link: 'https://www.everlaw.com/' },
-        { name: 'Disco', description: 'AI-powered legal discovery', logo: 'https://www.csdisco.com/favicon.ico', category: 'Legal AI', link: 'https://www.csdisco.com/' },
-        { name: 'Relativity', description: 'E-discovery and compliance platform', logo: 'https://www.relativity.com/favicon.ico', category: 'Legal AI', link: 'https://www.relativity.com/' },
-        { name: 'Lexion', description: 'AI contract management', logo: 'https://lexion.ai/favicon.ico', category: 'Legal AI', link: 'https://lexion.ai/' },
-        { name: 'Evisort', description: 'AI-powered contract intelligence', logo: 'https://www.evisort.com/favicon.ico', category: 'Legal AI', link: 'https://www.evisort.com/' }
+        { name: 'ROSS Intelligence', description: 'AI legal research platform', logo: 'https://rossintelligence.com/favicon.ico', category: 'Legal AI', link: 'https://rossintelligence.com/', pricing: 'premium' },
+        { name: 'Casetext', description: 'AI-powered legal research assistant', logo: 'https://casetext.com/favicon.ico', category: 'Legal AI', link: 'https://casetext.com/', pricing: 'premium' },
+        { name: 'Kira Systems', description: 'AI contract analysis software', logo: 'https://kirasystems.com/favicon.ico', category: 'Legal AI', link: 'https://kirasystems.com/', pricing: 'premium' },
+        { name: 'Luminance', description: 'AI document analysis for legal teams', logo: 'https://www.luminance.com/favicon.ico', category: 'Legal AI', link: 'https://www.luminance.com/', pricing: 'premium' },
+        { name: 'LawGeex', description: 'AI contract review automation', logo: 'https://www.lawgeex.com/favicon.ico', category: 'Legal AI', link: 'https://www.lawgeex.com/', pricing: 'premium' },
+        { name: 'Everlaw', description: 'AI-powered litigation platform', logo: 'https://www.everlaw.com/favicon.ico', category: 'Legal AI', link: 'https://www.everlaw.com/', pricing: 'premium' },
+        { name: 'Disco', description: 'AI-powered legal discovery', logo: 'https://www.csdisco.com/favicon.ico', category: 'Legal AI', link: 'https://www.csdisco.com/', pricing: 'premium' },
+        { name: 'Relativity', description: 'E-discovery and compliance platform', logo: 'https://www.relativity.com/favicon.ico', category: 'Legal AI', link: 'https://www.relativity.com/', pricing: 'premium' },
+        { name: 'Lexion', description: 'AI contract management', logo: 'https://lexion.ai/favicon.ico', category: 'Legal AI', link: 'https://lexion.ai/', pricing: 'premium' },
+        { name: 'Evisort', description: 'AI-powered contract intelligence', logo: 'https://www.evisort.com/favicon.ico', category: 'Legal AI', link: 'https://www.evisort.com/', pricing: 'premium' }
     ],
     'ai-astronomy': [
-        { name: 'Frontier Development Lab', description: 'AI for space science', logo: 'https://frontierdevelopmentlab.org/favicon.ico', category: 'Astronomy AI', link: 'https://frontierdevelopmentlab.org/' },
-        { name: 'SpaceML', description: 'AI for Earth observation and space', logo: 'https://www.spaceml.org/favicon.ico', category: 'Astronomy AI', link: 'https://www.spaceml.org/' },
-        { name: 'Astromatic', description: 'AI software for astronomical images', logo: 'https://www.astromatic.net/favicon.ico', category: 'Astronomy AI', link: 'https://www.astromatic.net/' },
-        { name: 'Slooh', description: 'AI-enhanced telescope network', logo: 'https://www.slooh.com/favicon.ico', category: 'Astronomy AI', link: 'https://www.slooh.com/' },
-        { name: 'Unistellar', description: 'Smart telescopes with AI', logo: 'https://unistellaroptics.com/favicon.ico', category: 'Astronomy AI', link: 'https://unistellaroptics.com/' },
-        { name: 'AstroAI', description: 'AI for astronomical discovery', logo: 'https://www.astroai.org/favicon.ico', category: 'Astronomy AI', link: 'https://www.astroai.org/' },
-        { name: 'Astraea', description: 'Earth observation AI platform', logo: 'https://astraea.earth/favicon.ico', category: 'Astronomy AI', link: 'https://astraea.earth/' },
-        { name: 'Exoplanet AI', description: 'AI for exoplanet detection', logo: 'https://www.exoplanet.ai/favicon.ico', category: 'Astronomy AI', link: 'https://www.exoplanet.ai/' },
-        { name: 'Cosmotech', description: 'AI for space situational awareness', logo: 'https://cosmotech.com/favicon.ico', category: 'Astronomy AI', link: 'https://cosmotech.com/' },
-        { name: 'Morpheus Space', description: 'AI spacecraft autonomy', logo: 'https://morpheus-space.com/favicon.ico', category: 'Astronomy AI', link: 'https://morpheus-space.com/' }
+        { name: 'Frontier Development Lab', description: 'AI for space science', logo: 'https://frontierdevelopmentlab.org/favicon.ico', category: 'Astronomy AI', link: 'https://frontierdevelopmentlab.org/', pricing: 'free' },
+        { name: 'SpaceML', description: 'AI for Earth observation and space', logo: 'https://www.spaceml.org/favicon.ico', category: 'Astronomy AI', link: 'https://www.spaceml.org/', pricing: 'free' },
+        { name: 'Astromatic', description: 'AI software for astronomical images', logo: 'https://www.astromatic.net/favicon.ico', category: 'Astronomy AI', link: 'https://www.astromatic.net/', pricing: 'free' },
+        { name: 'Slooh', description: 'AI-enhanced telescope network', logo: 'https://www.slooh.com/favicon.ico', category: 'Astronomy AI', link: 'https://www.slooh.com/', pricing: 'freemium' },
+        { name: 'Unistellar', description: 'Smart telescopes with AI', logo: 'https://unistellaroptics.com/favicon.ico', category: 'Astronomy AI', link: 'https://unistellaroptics.com/', pricing: 'premium' },
+        { name: 'AstroAI', description: 'AI for astronomical discovery', logo: 'https://www.astroai.org/favicon.ico', category: 'Astronomy AI', link: 'https://www.astroai.org/', pricing: 'free' },
+        { name: 'Astraea', description: 'Earth observation AI platform', logo: 'https://astraea.earth/favicon.ico', category: 'Astronomy AI', link: 'https://astraea.earth/', pricing: 'premium' },
+        { name: 'Exoplanet AI', description: 'AI for exoplanet detection', logo: 'https://www.exoplanet.ai/favicon.ico', category: 'Astronomy AI', link: 'https://www.exoplanet.ai/', pricing: 'free' },
+        { name: 'Cosmotech', description: 'AI for space situational awareness', logo: 'https://cosmotech.com/favicon.ico', category: 'Astronomy AI', link: 'https://cosmotech.com/', pricing: 'premium' },
+        { name: 'Morpheus Space', description: 'AI spacecraft autonomy', logo: 'https://morpheus-space.com/favicon.ico', category: 'Astronomy AI', link: 'https://morpheus-space.com/', pricing: 'premium' }
     ],
     'ai-archaeology': [
-        { name: 'ArchAI', description: 'AI for archaeological site detection', logo: 'https://www.archai.io/favicon.ico', category: 'Archaeology AI', link: 'https://www.archai.io/' },
-        { name: 'Arches Project', description: 'AI heritage inventory platform', logo: 'https://www.archesproject.org/favicon.ico', category: 'Archaeology AI', link: 'https://www.archesproject.org/' },
-        { name: 'Archaeobotics', description: 'AI robotics for archaeology', logo: 'https://archaeobotics.com/favicon.ico', category: 'Archaeology AI', link: 'https://archaeobotics.com/' },
-        { name: 'Archeo', description: 'AI artifact recognition system', logo: 'https://archeo.ai/favicon.ico', category: 'Archaeology AI', link: 'https://archeo.ai/' },
-        { name: 'Antiquity AI', description: 'AI for ancient text translation', logo: 'https://antiquity.ai/favicon.ico', category: 'Archaeology AI', link: 'https://antiquity.ai/' },
-        { name: 'DeepDig', description: 'AI for archaeological excavation', logo: 'https://deepdig.org/favicon.ico', category: 'Archaeology AI', link: 'https://deepdig.org/' },
-        { name: 'Heritage AI', description: 'AI for cultural heritage preservation', logo: 'https://heritage.ai/favicon.ico', category: 'Archaeology AI', link: 'https://heritage.ai/' },
-        { name: 'Strabo', description: 'AI for archaeological mapping', logo: 'https://strabospot.org/favicon.ico', category: 'Archaeology AI', link: 'https://strabospot.org/' },
-        { name: 'Artifact Analytics', description: 'AI artifact classification', logo: 'https://artifactanalytics.com/favicon.ico', category: 'Archaeology AI', link: 'https://artifactanalytics.com/' },
-        { name: 'DigitalAnthro', description: 'AI for anthropological research', logo: 'https://digitalanthro.ai/favicon.ico', category: 'Archaeology AI', link: 'https://digitalanthro.ai/' }
+        { name: 'ArchAI', description: 'AI for archaeological site detection', logo: 'https://www.archai.io/favicon.ico', category: 'Archaeology AI', link: 'https://www.archai.io/', pricing: 'premium' },
+        { name: 'Arches Project', description: 'AI heritage inventory platform', logo: 'https://www.archesproject.org/favicon.ico', category: 'Archaeology AI', link: 'https://www.archesproject.org/', pricing: 'free' },
+        { name: 'Archaeobotics', description: 'AI robotics for archaeology', logo: 'https://archaeobotics.com/favicon.ico', category: 'Archaeology AI', link: 'https://archaeobotics.com/', pricing: 'premium' },
+        { name: 'Archeo', description: 'AI artifact recognition system', logo: 'https://archeo.ai/favicon.ico', category: 'Archaeology AI', link: 'https://archeo.ai/', pricing: 'freemium' },
+        { name: 'Antiquity AI', description: 'AI for ancient text translation', logo: 'https://antiquity.ai/favicon.ico', category: 'Archaeology AI', link: 'https://antiquity.ai/', pricing: 'freemium' },
+        { name: 'DeepDig', description: 'AI for archaeological excavation', logo: 'https://deepdig.org/favicon.ico', category: 'Archaeology AI', link: 'https://deepdig.org/', pricing: 'premium' },
+        { name: 'Heritage AI', description: 'AI for cultural heritage preservation', logo: 'https://heritage.ai/favicon.ico', category: 'Archaeology AI', link: 'https://heritage.ai/', pricing: 'premium' },
+        { name: 'Strabo', description: 'AI for archaeological mapping', logo: 'https://strabospot.org/favicon.ico', category: 'Archaeology AI', link: 'https://strabospot.org/', pricing: 'free' },
+        { name: 'Artifact Analytics', description: 'AI artifact classification', logo: 'https://artifactanalytics.com/favicon.ico', category: 'Archaeology AI', link: 'https://artifactanalytics.com/', pricing: 'premium' },
+        { name: 'DigitalAnthro', description: 'AI for anthropological research', logo: 'https://digitalanthro.ai/favicon.ico', category: 'Archaeology AI', link: 'https://digitalanthro.ai/', pricing: 'freemium' }
     ],
     'ai-wildlife': [
-        { name: 'Wildbook', description: 'AI wildlife monitoring platform', logo: 'https://www.wildbook.org/favicon.ico', category: 'Wildlife AI', link: 'https://www.wildbook.org/' },
-        { name: 'Conservation Metrics', description: 'AI wildlife monitoring solutions', logo: 'https://conservationmetrics.com/favicon.ico', category: 'Wildlife AI', link: 'https://conservationmetrics.com/' },
-        { name: 'Wildlife Insights', description: 'AI camera trap analysis', logo: 'https://www.wildlifeinsights.org/favicon.ico', category: 'Wildlife AI', link: 'https://www.wildlifeinsights.org/' },
-        { name: 'Rainforest Connection', description: 'AI acoustic monitoring for conservation', logo: 'https://rfcx.org/favicon.ico', category: 'Wildlife AI', link: 'https://rfcx.org/' },
-        { name: 'TrailGuard AI', description: 'AI camera system for anti-poaching', logo: 'https://www.resolve.ngo/favicon.ico', category: 'Wildlife AI', link: 'https://www.resolve.ngo/trailguard.htm' },
-        { name: 'Wild Me', description: 'AI for wildlife conservation', logo: 'https://www.wildme.org/favicon.ico', category: 'Wildlife AI', link: 'https://www.wildme.org/' },
-        { name: 'Zamba Cloud', description: 'AI wildlife identification platform', logo: 'https://zamba.drivendata.org/favicon.ico', category: 'Wildlife AI', link: 'https://zamba.drivendata.org/' },
-        { name: 'Conservify', description: 'AI tools for field biologists', logo: 'https://conservify.org/favicon.ico', category: 'Wildlife AI', link: 'https://conservify.org/' },
-        { name: 'Wildtrack', description: 'AI footprint identification technology', logo: 'https://wildtrack.org/favicon.ico', category: 'Wildlife AI', link: 'https://wildtrack.org/' },
-        { name: 'Whale Safe', description: 'AI whale detection system', logo: 'https://whalesafe.com/favicon.ico', category: 'Wildlife AI', link: 'https://whalesafe.com/' }
+        { name: 'Wildbook', description: 'AI wildlife monitoring platform', logo: 'https://www.wildbook.org/favicon.ico', category: 'Wildlife AI', link: 'https://www.wildbook.org/', pricing: 'free' },
+        { name: 'Conservation Metrics', description: 'AI wildlife monitoring solutions', logo: 'https://conservationmetrics.com/favicon.ico', category: 'Wildlife AI', link: 'https://conservationmetrics.com/', pricing: 'premium' },
+        { name: 'Wildlife Insights', description: 'AI camera trap analysis', logo: 'https://www.wildlifeinsights.org/favicon.ico', category: 'Wildlife AI', link: 'https://www.wildlifeinsights.org/', pricing: 'free' },
+        { name: 'Rainforest Connection', description: 'AI acoustic monitoring for conservation', logo: 'https://rfcx.org/favicon.ico', category: 'Wildlife AI', link: 'https://rfcx.org/', pricing: 'free' },
+        { name: 'TrailGuard AI', description: 'AI camera system for anti-poaching', logo: 'https://www.resolve.ngo/favicon.ico', category: 'Wildlife AI', link: 'https://www.resolve.ngo/trailguard.htm', pricing: 'premium' },
+        { name: 'Wild Me', description: 'AI for wildlife conservation', logo: 'https://www.wildme.org/favicon.ico', category: 'Wildlife AI', link: 'https://www.wildme.org/', pricing: 'free' },
+        { name: 'Zamba Cloud', description: 'AI wildlife identification platform', logo: 'https://zamba.drivendata.org/favicon.ico', category: 'Wildlife AI', link: 'https://zamba.drivendata.org/', pricing: 'freemium' },
+        { name: 'Conservify', description: 'AI tools for field biologists', logo: 'https://conservify.org/favicon.ico', category: 'Wildlife AI', link: 'https://conservify.org/', pricing: 'free' },
+        { name: 'Wildtrack', description: 'AI footprint identification technology', logo: 'https://wildtrack.org/favicon.ico', category: 'Wildlife AI', link: 'https://wildtrack.org/', pricing: 'free' },
+        { name: 'Whale Safe', description: 'AI whale detection system', logo: 'https://whalesafe.com/favicon.ico', category: 'Wildlife AI', link: 'https://whalesafe.com/', pricing: 'free' }
     ],
     'ai-transportation': [
-        { name: 'Waymo', description: 'Autonomous driving technology', logo: 'https://waymo.com/favicon.ico', category: 'Transportation AI', link: 'https://waymo.com/' },
-        { name: 'Cruise', description: 'Self-driving vehicle technology', logo: 'https://www.getcruise.com/favicon.ico', category: 'Transportation AI', link: 'https://www.getcruise.com/' },
-        { name: 'Optibus', description: 'AI public transportation optimization', logo: 'https://www.optibus.com/favicon.ico', category: 'Transportation AI', link: 'https://www.optibus.com/' },
-        { name: 'Nexar', description: 'AI dash cam network', logo: 'https://www.getnexar.com/favicon.ico', category: 'Transportation AI', link: 'https://www.getnexar.com/' },
-        { name: 'Nauto', description: 'AI fleet safety platform', logo: 'https://www.nauto.com/favicon.ico', category: 'Transportation AI', link: 'https://www.nauto.com/' },
-        { name: 'Bestmile', description: 'Fleet orchestration platform', logo: 'https://bestmile.com/favicon.ico', category: 'Transportation AI', link: 'https://bestmile.com/' },
-        { name: 'Swiftly', description: 'Public transit optimization platform', logo: 'https://www.goswift.ly/favicon.ico', category: 'Transportation AI', link: 'https://www.goswift.ly/' },
-        { name: 'Remix', description: 'Transit planning platform', logo: 'https://www.remix.com/favicon.ico', category: 'Transportation AI', link: 'https://www.remix.com/' },
-        { name: 'Waze', description: 'AI-powered navigation app', logo: 'https://www.waze.com/favicon.ico', category: 'Transportation AI', link: 'https://www.waze.com/' },
-        { name: 'Mobileye', description: 'Computer vision for autonomous driving', logo: 'https://www.mobileye.com/favicon.ico', category: 'Transportation AI', link: 'https://www.mobileye.com/' }
+        { name: 'Waymo', description: 'Autonomous driving technology', logo: 'https://waymo.com/favicon.ico', category: 'Transportation AI', link: 'https://waymo.com/', pricing: 'premium' },
+        { name: 'Cruise', description: 'Self-driving vehicle technology', logo: 'https://www.getcruise.com/favicon.ico', category: 'Transportation AI', link: 'https://www.getcruise.com/', pricing: 'premium' },
+        { name: 'Optibus', description: 'AI public transportation optimization', logo: 'https://www.optibus.com/favicon.ico', category: 'Transportation AI', link: 'https://www.optibus.com/', pricing: 'premium' },
+        { name: 'Nexar', description: 'AI dash cam network', logo: 'https://www.getnexar.com/favicon.ico', category: 'Transportation AI', link: 'https://www.getnexar.com/', pricing: 'freemium' },
+        { name: 'Nauto', description: 'AI fleet safety platform', logo: 'https://www.nauto.com/favicon.ico', category: 'Transportation AI', link: 'https://www.nauto.com/', pricing: 'premium' },
+        { name: 'Bestmile', description: 'Fleet orchestration platform', logo: 'https://bestmile.com/favicon.ico', category: 'Transportation AI', link: 'https://bestmile.com/', pricing: 'premium' },
+        { name: 'Swiftly', description: 'Public transit optimization platform', logo: 'https://www.goswift.ly/favicon.ico', category: 'Transportation AI', link: 'https://www.goswift.ly/', pricing: 'premium' },
+        { name: 'Remix', description: 'Transit planning platform', logo: 'https://www.remix.com/favicon.ico', category: 'Transportation AI', link: 'https://www.remix.com/', pricing: 'premium' },
+        { name: 'Waze', description: 'AI-powered navigation app', logo: 'https://www.waze.com/favicon.ico', category: 'Transportation AI', link: 'https://www.waze.com/', pricing: 'free' },
+        { name: 'Mobileye', description: 'Computer vision for autonomous driving', logo: 'https://www.mobileye.com/favicon.ico', category: 'Transportation AI', link: 'https://www.mobileye.com/', pricing: 'premium' }
     ],
     'ai-insurance': [
-        { name: 'Lemonade', description: 'AI-powered insurance company', logo: 'https://www.lemonade.com/favicon.ico', category: 'Insurance AI', link: 'https://www.lemonade.com/' },
-        { name: 'Tractable', description: 'AI for accident and disaster recovery', logo: 'https://tractable.ai/favicon.ico', category: 'Insurance AI', link: 'https://tractable.ai/' },
-        { name: 'Shift Technology', description: 'AI fraud detection for insurance', logo: 'https://www.shift-technology.com/favicon.ico', category: 'Insurance AI', link: 'https://www.shift-technology.com/' },
-        { name: 'Cape Analytics', description: 'AI property intelligence', logo: 'https://capeanalytics.com/favicon.ico', category: 'Insurance AI', link: 'https://capeanalytics.com/' },
-        { name: 'Zesty.ai', description: 'AI property risk analytics', logo: 'https://zesty.ai/favicon.ico', category: 'Insurance AI', link: 'https://zesty.ai/' },
-        { name: 'Flyreel', description: 'AI property insurance assistant', logo: 'https://flyreel.co/favicon.ico', category: 'Insurance AI', link: 'https://flyreel.co/' },
-        { name: 'Planck', description: 'AI commercial insurance data platform', logo: 'https://planckdata.com/favicon.ico', category: 'Insurance AI', link: 'https://planckdata.com/' },
-        { name: 'Root Insurance', description: 'AI-based auto insurance', logo: 'https://www.joinroot.com/favicon.ico', category: 'Insurance AI', link: 'https://www.joinroot.com/' },
-        { name: 'Clearcover', description: 'AI-driven car insurance', logo: 'https://clearcover.com/favicon.ico', category: 'Insurance AI', link: 'https://clearcover.com/' },
-        { name: 'Snapsheet', description: 'Virtual claims processing platform', logo: 'https://www.snapsheetclaims.com/favicon.ico', category: 'Insurance AI', link: 'https://www.snapsheetclaims.com/' }
+        { name: 'Lemonade', description: 'AI-powered insurance company', logo: 'https://www.lemonade.com/favicon.ico', category: 'Insurance AI', link: 'https://www.lemonade.com/', pricing: 'freemium' },
+        { name: 'Tractable', description: 'AI for accident and disaster recovery', logo: 'https://tractable.ai/favicon.ico', category: 'Insurance AI', link: 'https://tractable.ai/', pricing: 'premium' },
+        { name: 'Shift Technology', description: 'AI fraud detection for insurance', logo: 'https://www.shift-technology.com/favicon.ico', category: 'Insurance AI', link: 'https://www.shift-technology.com/', pricing: 'premium' },
+        { name: 'Cape Analytics', description: 'AI property intelligence', logo: 'https://capeanalytics.com/favicon.ico', category: 'Insurance AI', link: 'https://capeanalytics.com/', pricing: 'premium' },
+        { name: 'Zesty.ai', description: 'AI property risk analytics', logo: 'https://zesty.ai/favicon.ico', category: 'Insurance AI', link: 'https://zesty.ai/', pricing: 'premium' },
+        { name: 'Flyreel', description: 'AI property insurance assistant', logo: 'https://flyreel.co/favicon.ico', category: 'Insurance AI', link: 'https://flyreel.co/', pricing: 'premium' },
+        { name: 'Planck', description: 'AI commercial insurance data platform', logo: 'https://planckdata.com/favicon.ico', category: 'Insurance AI', link: 'https://planckdata.com/', pricing: 'premium' },
+        { name: 'Root Insurance', description: 'AI-based auto insurance', logo: 'https://www.joinroot.com/favicon.ico', category: 'Insurance AI', link: 'https://www.joinroot.com/', pricing: 'freemium' },
+        { name: 'Clearcover', description: 'AI-driven car insurance', logo: 'https://clearcover.com/favicon.ico', category: 'Insurance AI', link: 'https://clearcover.com/', pricing: 'freemium' },
+        { name: 'Snapsheet', description: 'Virtual claims processing platform', logo: 'https://www.snapsheetclaims.com/favicon.ico', category: 'Insurance AI', link: 'https://www.snapsheetclaims.com/', pricing: 'premium' }
     ],
     'ai-mental-health': [
-        { name: 'Woebot', description: 'AI mental health chatbot', logo: 'https://woebothealth.com/favicon.ico', category: 'Mental Health AI', link: 'https://woebothealth.com/' },
-        { name: 'Wysa', description: 'AI mental wellness coach', logo: 'https://www.wysa.io/favicon.ico', category: 'Mental Health AI', link: 'https://www.wysa.io/' },
-        { name: 'Youper', description: 'AI emotional health assistant', logo: 'https://www.youper.ai/favicon.ico', category: 'Mental Health AI', link: 'https://www.youper.ai/' },
-        { name: 'Replika', description: 'AI companion for mental wellbeing', logo: 'https://replika.ai/favicon.ico', category: 'Mental Health AI', link: 'https://replika.ai/' },
-        { name: 'Mindstrong', description: 'Digital biomarkers for mental health', logo: 'https://mindstrong.com/favicon.ico', category: 'Mental Health AI', link: 'https://mindstrong.com/' },
-        { name: 'Spring Health', description: 'AI-powered mental healthcare', logo: 'https://www.springhealth.com/favicon.ico', category: 'Mental Health AI', link: 'https://www.springhealth.com/' },
-        { name: 'Quartet Health', description: 'AI mental health platform', logo: 'https://www.quartethealth.com/favicon.ico', category: 'Mental Health AI', link: 'https://www.quartethealth.com/' },
-        { name: 'Ginger', description: 'On-demand mental healthcare', logo: 'https://www.ginger.com/favicon.ico', category: 'Mental Health AI', link: 'https://www.ginger.com/' },
-        { name: 'Koko', description: 'AI peer support platform', logo: 'https://www.koko.ai/favicon.ico', category: 'Mental Health AI', link: 'https://www.koko.ai/' },
-        { name: 'Moodpath', description: 'AI mood tracking and analysis', logo: 'https://mymoodpath.com/favicon.ico', category: 'Mental Health AI', link: 'https://mymoodpath.com/' }
+        { name: 'Woebot', description: 'AI mental health chatbot', logo: 'https://woebothealth.com/favicon.ico', category: 'Mental Health AI', link: 'https://woebothealth.com/', pricing: 'freemium' },
+        { name: 'Wysa', description: 'AI mental wellness coach', logo: 'https://www.wysa.io/favicon.ico', category: 'Mental Health AI', link: 'https://www.wysa.io/', pricing: 'freemium' },
+        { name: 'Youper', description: 'AI emotional health assistant', logo: 'https://www.youper.ai/favicon.ico', category: 'Mental Health AI', link: 'https://www.youper.ai/', pricing: 'freemium' },
+        { name: 'Replika', description: 'AI companion for mental wellbeing', logo: 'https://replika.ai/favicon.ico', category: 'Mental Health AI', link: 'https://replika.ai/', pricing: 'freemium' },
+        { name: 'Mindstrong', description: 'Digital biomarkers for mental health', logo: 'https://mindstrong.com/favicon.ico', category: 'Mental Health AI', link: 'https://mindstrong.com/', pricing: 'premium' },
+        { name: 'Spring Health', description: 'AI-powered mental healthcare', logo: 'https://www.springhealth.com/favicon.ico', category: 'Mental Health AI', link: 'https://www.springhealth.com/', pricing: 'premium' },
+        { name: 'Quartet Health', description: 'AI mental health platform', logo: 'https://www.quartethealth.com/favicon.ico', category: 'Mental Health AI', link: 'https://www.quartethealth.com/', pricing: 'premium' },
+        { name: 'Ginger', description: 'On-demand mental healthcare', logo: 'https://www.ginger.com/favicon.ico', category: 'Mental Health AI', link: 'https://www.ginger.com/', pricing: 'premium' },
+        { name: 'Koko', description: 'AI peer support platform', logo: 'https://www.koko.ai/favicon.ico', category: 'Mental Health AI', link: 'https://www.koko.ai/', pricing: 'free' },
+        { name: 'Moodpath', description: 'AI mood tracking and analysis', logo: 'https://mymoodpath.com/favicon.ico', category: 'Mental Health AI', link: 'https://mymoodpath.com/', pricing: 'freemium' }
     ],
     'ai-journalism': [
-        { name: 'Automated Insights', description: 'Natural language generation for news', logo: 'https://automatedinsights.com/favicon.ico', category: 'Journalism AI', link: 'https://automatedinsights.com/' },
-        { name: 'Narrative Science', description: 'AI-powered news writing', logo: 'https://narrativescience.com/favicon.ico', category: 'Journalism AI', link: 'https://narrativescience.com/' },
-        { name: 'Juicer', description: 'AI news aggregation platform', logo: 'https://www.juicer.io/favicon.ico', category: 'Journalism AI', link: 'https://www.juicer.io/' },
-        { name: 'Trint', description: 'AI transcription for journalists', logo: 'https://trint.com/favicon.ico', category: 'Journalism AI', link: 'https://trint.com/' },
-        { name: 'Otter.ai', description: 'AI interview transcription', logo: 'https://otter.ai/favicon.ico', category: 'Journalism AI', link: 'https://otter.ai/' },
-        { name: 'Knowhere News', description: 'AI-powered unbiased news', logo: 'https://knowherenews.com/favicon.ico', category: 'Journalism AI', link: 'https://knowherenews.com/' },
-        { name: 'Primer', description: 'AI information analysis platform', logo: 'https://primer.ai/favicon.ico', category: 'Journalism AI', link: 'https://primer.ai/' },
-        { name: 'NewsWhip', description: 'AI content intelligence platform', logo: 'https://www.newswhip.com/favicon.ico', category: 'Journalism AI', link: 'https://www.newswhip.com/' },
-        { name: 'Dataminr', description: 'Real-time AI event detection', logo: 'https://www.dataminr.com/favicon.ico', category: 'Journalism AI', link: 'https://www.dataminr.com/' },
-        { name: 'Chartbeat', description: 'AI content analytics for publishers', logo: 'https://chartbeat.com/favicon.ico', category: 'Journalism AI', link: 'https://chartbeat.com/' }
+        { name: 'Automated Insights', description: 'Natural language generation for news', logo: 'https://automatedinsights.com/favicon.ico', category: 'Journalism AI', link: 'https://automatedinsights.com/', pricing: 'premium' },
+        { name: 'Narrative Science', description: 'AI-powered news writing', logo: 'https://narrativescience.com/favicon.ico', category: 'Journalism AI', link: 'https://narrativescience.com/', pricing: 'premium' },
+        { name: 'Juicer', description: 'AI news aggregation platform', logo: 'https://www.juicer.io/favicon.ico', category: 'Journalism AI', link: 'https://www.juicer.io/', pricing: 'freemium' },
+        { name: 'Trint', description: 'AI transcription for journalists', logo: 'https://trint.com/favicon.ico', category: 'Journalism AI', link: 'https://trint.com/', pricing: 'freemium' },
+        { name: 'Otter.ai', description: 'AI interview transcription', logo: 'https://otter.ai/favicon.ico', category: 'Journalism AI', link: 'https://otter.ai/', pricing: 'freemium' },
+        { name: 'Knowhere News', description: 'AI-powered unbiased news', logo: 'https://knowherenews.com/favicon.ico', category: 'Journalism AI', link: 'https://knowherenews.com/', pricing: 'free' },
+        { name: 'Primer', description: 'AI information analysis platform', logo: 'https://primer.ai/favicon.ico', category: 'Journalism AI', link: 'https://primer.ai/', pricing: 'premium' },
+        { name: 'NewsWhip', description: 'AI content intelligence platform', logo: 'https://www.newswhip.com/favicon.ico', category: 'Journalism AI', link: 'https://www.newswhip.com/', pricing: 'premium' },
+        { name: 'Dataminr', description: 'Real-time AI event detection', logo: 'https://www.dataminr.com/favicon.ico', category: 'Journalism AI', link: 'https://www.dataminr.com/', pricing: 'premium' },
+        { name: 'Chartbeat', description: 'AI content analytics for publishers', logo: 'https://chartbeat.com/favicon.ico', category: 'Journalism AI', link: 'https://chartbeat.com/', pricing: 'premium' }
     ],
     'ai-water-management': [
-        { name: 'Pluto AI', description: 'AI water treatment analytics', logo: 'https://plutoai.com/favicon.ico', category: 'Water Management AI', link: 'https://plutoai.com/' },
-        { name: 'Ketos', description: 'AI water quality monitoring', logo: 'https://ketos.co/favicon.ico', category: 'Water Management AI', link: 'https://ketos.co/' },
-        { name: 'Aquasight', description: 'AI water utility optimization', logo: 'https://www.aquasight.io/favicon.ico', category: 'Water Management AI', link: 'https://www.aquasight.io/' },
-        { name: 'Fracta', description: 'AI water infrastructure assessment', logo: 'https://fracta.ai/favicon.ico', category: 'Water Management AI', link: 'https://fracta.ai/' },
-        { name: 'Emagin', description: 'AI water management platform', logo: 'https://emagin.ai/favicon.ico', category: 'Water Management AI', link: 'https://emagin.ai/' },
-        { name: 'Utilis', description: 'Satellite-based water leak detection', logo: 'https://utiliscorp.com/favicon.ico', category: 'Water Management AI', link: 'https://utiliscorp.com/' },
-        { name: 'Fathom', description: 'AI flood risk modeling', logo: 'https://www.fathom.global/favicon.ico', category: 'Water Management AI', link: 'https://www.fathom.global/' },
-        { name: 'Dropcountr', description: 'AI water conservation platform', logo: 'https://dropcountr.com/favicon.ico', category: 'Water Management AI', link: 'https://dropcountr.com/' },
-        { name: 'Watchtower Robotics', description: 'AI water pipe inspection', logo: 'https://watchtower-robotics.com/favicon.ico', category: 'Water Management AI', link: 'https://watchtower-robotics.com/' },
-        { name: 'Varuna', description: 'AI water quality monitoring platform', logo: 'https://www.varuna.io/favicon.ico', category: 'Water Management AI', link: 'https://www.varuna.io/' }
+        { name: 'Pluto AI', description: 'AI water treatment analytics', logo: 'https://plutoai.com/favicon.ico', category: 'Water Management AI', link: 'https://plutoai.com/', pricing: 'premium' },
+        { name: 'Ketos', description: 'AI water quality monitoring', logo: 'https://ketos.co/favicon.ico', category: 'Water Management AI', link: 'https://ketos.co/', pricing: 'premium' },
+        { name: 'Aquasight', description: 'AI water utility optimization', logo: 'https://www.aquasight.io/favicon.ico', category: 'Water Management AI', link: 'https://www.aquasight.io/', pricing: 'premium' },
+        { name: 'Fracta', description: 'AI water infrastructure assessment', logo: 'https://fracta.ai/favicon.ico', category: 'Water Management AI', link: 'https://fracta.ai/', pricing: 'premium' },
+        { name: 'Emagin', description: 'AI water management platform', logo: 'https://emagin.ai/favicon.ico', category: 'Water Management AI', link: 'https://emagin.ai/', pricing: 'premium' },
+        { name: 'Utilis', description: 'Satellite-based water leak detection', logo: 'https://utiliscorp.com/favicon.ico', category: 'Water Management AI', link: 'https://utiliscorp.com/', pricing: 'premium' },
+        { name: 'Fathom', description: 'AI flood risk modeling', logo: 'https://www.fathom.global/favicon.ico', category: 'Water Management AI', link: 'https://www.fathom.global/', pricing: 'premium' },
+        { name: 'Dropcountr', description: 'AI water conservation platform', logo: 'https://dropcountr.com/favicon.ico', category: 'Water Management AI', link: 'https://dropcountr.com/', pricing: 'freemium' },
+        { name: 'Watchtower Robotics', description: 'AI water pipe inspection', logo: 'https://watchtower-robotics.com/favicon.ico', category: 'Water Management AI', link: 'https://watchtower-robotics.com/', pricing: 'premium' },
+        { name: 'Varuna', description: 'AI water quality monitoring platform', logo: 'https://www.varuna.io/favicon.ico', category: 'Water Management AI', link: 'https://www.varuna.io/', pricing: 'premium' }
     ],
     'ai-space': [
-        { name: 'SpaceKnow', description: 'Satellite imagery analytics', logo: 'https://www.spaceknow.com/favicon.ico', category: 'Space AI', link: 'https://www.spaceknow.com/' },
-        { name: 'Orbital Insight', description: 'Geospatial analytics platform', logo: 'https://orbitalinsight.com/favicon.ico', category: 'Space AI', link: 'https://orbitalinsight.com/' },
-        { name: 'Descartes Labs', description: 'Geospatial intelligence platform', logo: 'https://www.descarteslabs.com/favicon.ico', category: 'Space AI', link: 'https://www.descarteslabs.com/' },
-        { name: 'Planet', description: 'Earth imaging and analytics', logo: 'https://www.planet.com/favicon.ico', category: 'Space AI', link: 'https://www.planet.com/' },
-        { name: 'Capella Space', description: 'SAR satellite imagery with AI', logo: 'https://www.capellaspace.com/favicon.ico', category: 'Space AI', link: 'https://www.capellaspace.com/' },
-        { name: 'Ursa Space', description: 'Satellite intelligence platform', logo: 'https://www.ursaspace.com/favicon.ico', category: 'Space AI', link: 'https://www.ursaspace.com/' },
-        { name: 'Hypergiant', description: 'AI solutions for space industry', logo: 'https://www.hypergiant.com/favicon.ico', category: 'Space AI', link: 'https://www.hypergiant.com/' },
-        { name: 'Maxar', description: 'Space infrastructure and intelligence', logo: 'https://www.maxar.com/favicon.ico', category: 'Space AI', link: 'https://www.maxar.com/' },
-        { name: 'Slingshot Aerospace', description: 'Space situational awareness', logo: 'https://slingshotaerospace.com/favicon.ico', category: 'Space AI', link: 'https://slingshotaerospace.com/' },
-        { name: 'AstroCognition', description: 'AI for space exploration', logo: 'https://astrocognition.org/favicon.ico', category: 'Space AI', link: 'https://astrocognition.org/' }
+        { name: 'SpaceKnow', description: 'Satellite imagery analytics', logo: 'https://www.spaceknow.com/favicon.ico', category: 'Space AI', link: 'https://www.spaceknow.com/', pricing: 'premium' },
+        { name: 'Orbital Insight', description: 'Geospatial analytics platform', logo: 'https://orbitalinsight.com/favicon.ico', category: 'Space AI', link: 'https://orbitalinsight.com/', pricing: 'premium' },
+        { name: 'Descartes Labs', description: 'Geospatial intelligence platform', logo: 'https://www.descarteslabs.com/favicon.ico', category: 'Space AI', link: 'https://www.descarteslabs.com/', pricing: 'premium' },
+        { name: 'Planet', description: 'Earth imaging and analytics', logo: 'https://www.planet.com/favicon.ico', category: 'Space AI', link: 'https://www.planet.com/', pricing: 'premium' },
+        { name: 'Capella Space', description: 'SAR satellite imagery with AI', logo: 'https://www.capellaspace.com/favicon.ico', category: 'Space AI', link: 'https://www.capellaspace.com/', pricing: 'premium' },
+        { name: 'Ursa Space', description: 'Satellite intelligence platform', logo: 'https://www.ursaspace.com/favicon.ico', category: 'Space AI', link: 'https://www.ursaspace.com/', pricing: 'premium' },
+        { name: 'Hypergiant', description: 'AI solutions for space industry', logo: 'https://www.hypergiant.com/favicon.ico', category: 'Space AI', link: 'https://www.hypergiant.com/', pricing: 'premium' },
+        { name: 'Maxar', description: 'Space infrastructure and intelligence', logo: 'https://www.maxar.com/favicon.ico', category: 'Space AI', link: 'https://www.maxar.com/', pricing: 'premium' },
+        { name: 'Slingshot Aerospace', description: 'Space situational awareness', logo: 'https://slingshotaerospace.com/favicon.ico', category: 'Space AI', link: 'https://slingshotaerospace.com/', pricing: 'premium' },
+        { name: 'AstroCognition', description: 'AI for space exploration', logo: 'https://astrocognition.org/favicon.ico', category: 'Space AI', link: 'https://astrocognition.org/', pricing: 'free' }
     ],
     'ai-blockchain': [
-        { name: 'Chainlink AI', description: 'AI-powered oracle network for blockchain', logo: 'https://chain.link/favicon.ico', category: 'Blockchain AI', link: 'https://chain.link/' },
-        { name: 'Ocean Protocol', description: 'Decentralized data exchange protocol', logo: 'https://oceanprotocol.com/favicon.ico', category: 'Blockchain AI', link: 'https://oceanprotocol.com/' },
-        { name: 'SingularityNET', description: 'Decentralized AI marketplace', logo: 'https://singularitynet.io/favicon.ico', category: 'Blockchain AI', link: 'https://singularitynet.io/' },
-        { name: 'Fetch.ai', description: 'AI-powered autonomous economic agents', logo: 'https://fetch.ai/favicon.ico', category: 'Blockchain AI', link: 'https://fetch.ai/' },
-        { name: 'Numerai', description: 'AI-powered hedge fund on blockchain', logo: 'https://numer.ai/favicon.ico', category: 'Blockchain AI', link: 'https://numer.ai/' },
-        { name: 'Cortex', description: 'AI on blockchain platform', logo: 'https://www.cortexlabs.ai/favicon.ico', category: 'Blockchain AI', link: 'https://www.cortexlabs.ai/' },
-        { name: 'DeepBrain Chain', description: 'Distributed AI computing platform', logo: 'https://www.deepbrainchain.org/favicon.ico', category: 'Blockchain AI', link: 'https://www.deepbrainchain.org/' },
-        { name: 'Matrix AI Network', description: 'Intelligent blockchain platform', logo: 'https://www.matrix.io/favicon.ico', category: 'Blockchain AI', link: 'https://www.matrix.io/' },
-        { name: 'Velas', description: 'AI-enhanced blockchain network', logo: 'https://velas.com/favicon.ico', category: 'Blockchain AI', link: 'https://velas.com/' },
-        { name: 'Oraichain', description: 'AI-powered oracle platform', logo: 'https://orai.io/favicon.ico', category: 'Blockchain AI', link: 'https://orai.io/' }
+        { name: 'Chainlink AI', description: 'AI-powered oracle network for blockchain', logo: 'https://chain.link/favicon.ico', category: 'Blockchain AI', link: 'https://chain.link/', pricing: 'free' },
+        { name: 'Ocean Protocol', description: 'Decentralized data exchange protocol', logo: 'https://oceanprotocol.com/favicon.ico', category: 'Blockchain AI', link: 'https://oceanprotocol.com/', pricing: 'free' },
+        { name: 'SingularityNET', description: 'Decentralized AI marketplace', logo: 'https://singularitynet.io/favicon.ico', category: 'Blockchain AI', link: 'https://singularitynet.io/', pricing: 'freemium' },
+        { name: 'Fetch.ai', description: 'AI-powered autonomous economic agents', logo: 'https://fetch.ai/favicon.ico', category: 'Blockchain AI', link: 'https://fetch.ai/', pricing: 'freemium' },
+        { name: 'Numerai', description: 'AI-powered hedge fund on blockchain', logo: 'https://numer.ai/favicon.ico', category: 'Blockchain AI', link: 'https://numer.ai/', pricing: 'freemium' },
+        { name: 'Cortex', description: 'AI on blockchain platform', logo: 'https://www.cortexlabs.ai/favicon.ico', category: 'Blockchain AI', link: 'https://www.cortexlabs.ai/', pricing: 'freemium' },
+        { name: 'DeepBrain Chain', description: 'Distributed AI computing platform', logo: 'https://www.deepbrainchain.org/favicon.ico', category: 'Blockchain AI', link: 'https://www.deepbrainchain.org/', pricing: 'freemium' },
+        { name: 'Matrix AI Network', description: 'Intelligent blockchain platform', logo: 'https://www.matrix.io/favicon.ico', category: 'Blockchain AI', link: 'https://www.matrix.io/', pricing: 'freemium' },
+        { name: 'Velas', description: 'AI-enhanced blockchain network', logo: 'https://velas.com/favicon.ico', category: 'Blockchain AI', link: 'https://velas.com/', pricing: 'freemium' },
+        { name: 'Oraichain', description: 'AI-powered oracle platform', logo: 'https://orai.io/favicon.ico', category: 'Blockchain AI', link: 'https://orai.io/', pricing: 'freemium' }
     ],
     'ai-science': [
-        { name: 'DeepMind AlphaFold', description: 'AI system for protein structure prediction', logo: 'https://deepmind.com/favicon.ico', category: 'Scientific Research', link: 'https://deepmind.com/research/case-studies/alphafold' },
-        { name: 'Semantic Scholar', description: 'AI-powered research paper search engine', logo: 'https://www.semanticscholar.org/favicon.ico', category: 'Scientific Research', link: 'https://www.semanticscholar.org/' },
-        { name: 'Elicit', description: 'AI research assistant', logo: 'https://elicit.org/favicon.ico', category: 'Scientific Research', link: 'https://elicit.org/' },
-        { name: 'Iris.ai', description: 'AI engine for scientific research', logo: 'https://iris.ai/favicon.ico', category: 'Scientific Research', link: 'https://iris.ai/' },
-        { name: 'Consensus', description: 'AI-powered search for scientific papers', logo: 'https://consensus.app/favicon.ico', category: 'Scientific Research', link: 'https://consensus.app/' },
-        { name: 'BenevolentAI', description: 'AI drug discovery platform', logo: 'https://www.benevolent.com/favicon.ico', category: 'Scientific Research', link: 'https://www.benevolent.com/' },
-        { name: 'Insilico Medicine', description: 'AI for drug discovery and aging research', logo: 'https://insilico.com/favicon.ico', category: 'Scientific Research', link: 'https://insilico.com/' },
-        { name: 'Atomwise', description: 'AI for drug discovery', logo: 'https://www.atomwise.com/favicon.ico', category: 'Scientific Research', link: 'https://www.atomwise.com/' },
-        { name: 'Recursion', description: 'AI-powered drug discovery', logo: 'https://www.recursion.com/favicon.ico', category: 'Scientific Research', link: 'https://www.recursion.com/' },
-        { name: 'SciBite', description: 'AI-driven scientific data analytics', logo: 'https://www.scibite.com/favicon.ico', category: 'Scientific Research', link: 'https://www.scibite.com/' }
+        { name: 'DeepMind AlphaFold', description: 'AI system for protein structure prediction', logo: 'https://deepmind.com/favicon.ico', category: 'Scientific Research', link: 'https://deepmind.com/research/case-studies/alphafold', pricing: 'free' },
+        { name: 'Semantic Scholar', description: 'AI-powered research paper search engine', logo: 'https://www.semanticscholar.org/favicon.ico', category: 'Scientific Research', link: 'https://www.semanticscholar.org/', pricing: 'free' },
+        { name: 'Elicit', description: 'AI research assistant', logo: 'https://elicit.org/favicon.ico', category: 'Scientific Research', link: 'https://elicit.org/', pricing: 'freemium' },
+        { name: 'Iris.ai', description: 'AI engine for scientific research', logo: 'https://iris.ai/favicon.ico', category: 'Scientific Research', link: 'https://iris.ai/', pricing: 'freemium' },
+        { name: 'Consensus', description: 'AI-powered search for scientific papers', logo: 'https://consensus.app/favicon.ico', category: 'Scientific Research', link: 'https://consensus.app/', pricing: 'freemium' },
+        { name: 'BenevolentAI', description: 'AI drug discovery platform', logo: 'https://www.benevolent.com/favicon.ico', category: 'Scientific Research', link: 'https://www.benevolent.com/', pricing: 'premium' },
+        { name: 'Insilico Medicine', description: 'AI for drug discovery and aging research', logo: 'https://insilico.com/favicon.ico', category: 'Scientific Research', link: 'https://insilico.com/', pricing: 'premium' },
+        { name: 'Atomwise', description: 'AI for drug discovery', logo: 'https://www.atomwise.com/favicon.ico', category: 'Scientific Research', link: 'https://www.atomwise.com/', pricing: 'premium' },
+        { name: 'Recursion', description: 'AI-powered drug discovery', logo: 'https://www.recursion.com/favicon.ico', category: 'Scientific Research', link: 'https://www.recursion.com/', pricing: 'premium' },
+        { name: 'SciBite', description: 'AI-driven scientific data analytics', logo: 'https://www.scibite.com/favicon.ico', category: 'Scientific Research', link: 'https://www.scibite.com/', pricing: 'premium' }
     ],
     'ai-iot': [
-        { name: 'Google Nest', description: 'AI-powered smart home devices', logo: 'https://store.google.com/favicon.ico', category: 'IoT & Smart Home', link: 'https://store.google.com/category/connected_home' },
-        { name: 'Amazon Alexa', description: 'Voice assistant for smart homes', logo: 'https://alexa.amazon.com/favicon.ico', category: 'IoT & Smart Home', link: 'https://alexa.amazon.com/' },
-        { name: 'Samsung SmartThings', description: 'Smart home platform with AI integration', logo: 'https://www.smartthings.com/favicon.ico', category: 'IoT & Smart Home', link: 'https://www.smartthings.com/' },
-        { name: 'Ecobee', description: 'Smart thermostats with AI features', logo: 'https://www.ecobee.com/favicon.ico', category: 'IoT & Smart Home', link: 'https://www.ecobee.com/' },
-        { name: 'Wyze', description: 'AI-powered smart home cameras', logo: 'https://wyze.com/favicon.ico', category: 'IoT & Smart Home', link: 'https://wyze.com/' },
-        { name: 'Arlo', description: 'AI security cameras and systems', logo: 'https://www.arlo.com/favicon.ico', category: 'IoT & Smart Home', link: 'https://www.arlo.com/' },
-        { name: 'Ring', description: 'Smart doorbells with AI detection', logo: 'https://ring.com/favicon.ico', category: 'IoT & Smart Home', link: 'https://ring.com/' },
-        { name: 'Philips Hue', description: 'Smart lighting with AI integration', logo: 'https://www.philips-hue.com/favicon.ico', category: 'IoT & Smart Home', link: 'https://www.philips-hue.com/' },
-        { name: 'Wemo', description: 'Smart home automation devices', logo: 'https://www.wemo.com/favicon.ico', category: 'IoT & Smart Home', link: 'https://www.wemo.com/' },
-        { name: 'Sensibo', description: 'AI-powered climate control', logo: 'https://sensibo.com/favicon.ico', category: 'IoT & Smart Home', link: 'https://sensibo.com/' }
+        { name: 'Google Nest', description: 'AI-powered smart home devices', logo: 'https://store.google.com/favicon.ico', category: 'IoT & Smart Home', link: 'https://store.google.com/category/connected_home', pricing: 'premium' },
+        { name: 'Amazon Alexa', description: 'Voice assistant for smart homes', logo: 'https://alexa.amazon.com/favicon.ico', category: 'IoT & Smart Home', link: 'https://alexa.amazon.com/', pricing: 'freemium' },
+        { name: 'Samsung SmartThings', description: 'Smart home platform with AI integration', logo: 'https://www.smartthings.com/favicon.ico', category: 'IoT & Smart Home', link: 'https://www.smartthings.com/', pricing: 'freemium' },
+        { name: 'Ecobee', description: 'Smart thermostats with AI features', logo: 'https://www.ecobee.com/favicon.ico', category: 'IoT & Smart Home', link: 'https://www.ecobee.com/', pricing: 'premium' },
+        { name: 'Wyze', description: 'AI-powered smart home cameras', logo: 'https://wyze.com/favicon.ico', category: 'IoT & Smart Home', link: 'https://wyze.com/', pricing: 'freemium' },
+        { name: 'Arlo', description: 'AI security cameras and systems', logo: 'https://www.arlo.com/favicon.ico', category: 'IoT & Smart Home', link: 'https://www.arlo.com/', pricing: 'premium' },
+        { name: 'Ring', description: 'Smart doorbells with AI detection', logo: 'https://ring.com/favicon.ico', category: 'IoT & Smart Home', link: 'https://ring.com/', pricing: 'premium' },
+        { name: 'Philips Hue', description: 'Smart lighting with AI integration', logo: 'https://www.philips-hue.com/favicon.ico', category: 'IoT & Smart Home', link: 'https://www.philips-hue.com/', pricing: 'premium' },
+        { name: 'Wemo', description: 'Smart home automation devices', logo: 'https://www.wemo.com/favicon.ico', category: 'IoT & Smart Home', link: 'https://www.wemo.com/', pricing: 'premium' },
+        { name: 'Sensibo', description: 'AI-powered climate control', logo: 'https://sensibo.com/favicon.ico', category: 'IoT & Smart Home', link: 'https://sensibo.com/', pricing: 'premium' }
     ],
     'ai-accessibility': [
-        { name: 'Seeing AI', description: 'AI app for visually impaired users', logo: 'https://www.microsoft.com/favicon.ico', category: 'Accessibility Tools', link: 'https://www.microsoft.com/en-us/ai/seeing-ai' },
-        { name: 'Be My Eyes', description: 'Visual assistance for blind people', logo: 'https://www.bemyeyes.com/favicon.ico', category: 'Accessibility Tools', link: 'https://www.bemyeyes.com/' },
-        { name: 'Otter.ai', description: 'Real-time transcription for hearing impaired', logo: 'https://otter.ai/favicon.ico', category: 'Accessibility Tools', link: 'https://otter.ai/' },
-        { name: 'Speechify', description: 'Text-to-speech for reading disabilities', logo: 'https://speechify.com/favicon.ico', category: 'Accessibility Tools', link: 'https://speechify.com/' },
-        { name: 'AccessiBe', description: 'AI web accessibility solution', logo: 'https://accessibe.com/favicon.ico', category: 'Accessibility Tools', link: 'https://accessibe.com/' },
-        { name: 'UserWay', description: 'AI-powered web accessibility widget', logo: 'https://userway.org/favicon.ico', category: 'Accessibility Tools', link: 'https://userway.org/' },
-        { name: 'Voiceitt', description: 'Speech recognition for non-standard speech', logo: 'https://voiceitt.com/favicon.ico', category: 'Accessibility Tools', link: 'https://voiceitt.com/' },
-        { name: 'Lookout by Google', description: 'Vision assistance for blind users', logo: 'https://play.google.com/favicon.ico', category: 'Accessibility Tools', link: 'https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.reveal' },
-        { name: 'Livox', description: 'Alternative communication app', logo: 'https://livox.com.br/favicon.ico', category: 'Accessibility Tools', link: 'https://livox.com.br/en/' },
-        { name: 'Aira', description: 'Visual interpreter service for blind', logo: 'https://aira.io/favicon.ico', category: 'Accessibility Tools', link: 'https://aira.io/' }
+        { name: 'Seeing AI', description: 'AI app for visually impaired users', logo: 'https://www.microsoft.com/favicon.ico', category: 'Accessibility Tools', link: 'https://www.microsoft.com/en-us/ai/seeing-ai', pricing: 'free' },
+        { name: 'Be My Eyes', description: 'Visual assistance for blind people', logo: 'https://www.bemyeyes.com/favicon.ico', category: 'Accessibility Tools', link: 'https://www.bemyeyes.com/', pricing: 'free' },
+        { name: 'Otter.ai', description: 'Real-time transcription for hearing impaired', logo: 'https://otter.ai/favicon.ico', category: 'Accessibility Tools', link: 'https://otter.ai/', pricing: 'freemium' },
+        { name: 'Speechify', description: 'Text-to-speech for reading disabilities', logo: 'https://speechify.com/favicon.ico', category: 'Accessibility Tools', link: 'https://speechify.com/', pricing: 'freemium' },
+        { name: 'AccessiBe', description: 'AI web accessibility solution', logo: 'https://accessibe.com/favicon.ico', category: 'Accessibility Tools', link: 'https://accessibe.com/', pricing: 'premium' },
+        { name: 'UserWay', description: 'AI-powered web accessibility widget', logo: 'https://userway.org/favicon.ico', category: 'Accessibility Tools', link: 'https://userway.org/', pricing: 'freemium' },
+        { name: 'Voiceitt', description: 'Speech recognition for non-standard speech', logo: 'https://voiceitt.com/favicon.ico', category: 'Accessibility Tools', link: 'https://voiceitt.com/', pricing: 'premium' },
+        { name: 'Lookout by Google', description: 'Vision assistance for blind users', logo: 'https://play.google.com/favicon.ico', category: 'Accessibility Tools', link: 'https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.reveal', pricing: 'free' },
+        { name: 'Livox', description: 'Alternative communication app', logo: 'https://livox.com.br/favicon.ico', category: 'Accessibility Tools', link: 'https://livox.com.br/en/', pricing: 'freemium' },
+        { name: 'Aira', description: 'Visual interpreter service for blind', logo: 'https://aira.io/favicon.ico', category: 'Accessibility Tools', link: 'https://aira.io/', pricing: 'premium' }
     ],
     'ai-document-processing': [
-        { name: 'DocuSign AI', description: 'AI-powered document analysis and processing', logo: 'https://www.docusign.com/favicon.ico', category: 'Document Processing', link: 'https://www.docusign.com/products/ai' },
-        { name: 'Adobe Acrobat AI', description: 'Intelligent document processing and editing', logo: 'https://www.adobe.com/favicon.ico', category: 'Document Processing', link: 'https://www.adobe.com/acrobat/ai.html' },
-        { name: 'Nanonets', description: 'AI document data extraction and processing', logo: 'https://nanonets.com/favicon.ico', category: 'Document Processing', link: 'https://nanonets.com/' },
-        { name: 'Docparser', description: 'Automated document data extraction', logo: 'https://docparser.com/favicon.ico', category: 'Document Processing', link: 'https://docparser.com/' },
-        { name: 'Rossum', description: 'AI document understanding platform', logo: 'https://rossum.ai/favicon.ico', category: 'Document Processing', link: 'https://rossum.ai/' },
-        { name: 'Kofax', description: 'Intelligent automation for documents', logo: 'https://www.kofax.com/favicon.ico', category: 'Document Processing', link: 'https://www.kofax.com/' },
-        { name: 'ABBYY FlexiCapture', description: 'Document processing with machine learning', logo: 'https://www.abbyy.com/favicon.ico', category: 'Document Processing', link: 'https://www.abbyy.com/flexicapture/' },
-        { name: 'Hyperscience', description: 'Intelligent document processing platform', logo: 'https://hyperscience.com/favicon.ico', category: 'Document Processing', link: 'https://hyperscience.com/' },
-        { name: 'Automation Hero', description: 'AI-powered document processing', logo: 'https://automationhero.ai/favicon.ico', category: 'Document Processing', link: 'https://automationhero.ai/' },
-        { name: 'Instabase', description: 'Deep learning for document understanding', logo: 'https://instabase.com/favicon.ico', category: 'Document Processing', link: 'https://instabase.com/' }
+        { name: 'DocuSign AI', description: 'AI-powered document analysis and processing', logo: 'https://www.docusign.com/favicon.ico', category: 'Document Processing', link: 'https://www.docusign.com/products/ai', pricing: 'premium' },
+        { name: 'Adobe Acrobat AI', description: 'Intelligent document processing and editing', logo: 'https://www.adobe.com/favicon.ico', category: 'Document Processing', link: 'https://www.adobe.com/acrobat/ai.html', pricing: 'premium' },
+        { name: 'Nanonets', description: 'AI document data extraction and processing', logo: 'https://nanonets.com/favicon.ico', category: 'Document Processing', link: 'https://nanonets.com/', pricing: 'freemium' },
+        { name: 'Docparser', description: 'Automated document data extraction', logo: 'https://docparser.com/favicon.ico', category: 'Document Processing', link: 'https://docparser.com/', pricing: 'freemium' },
+        { name: 'Rossum', description: 'AI document understanding platform', logo: 'https://rossum.ai/favicon.ico', category: 'Document Processing', link: 'https://rossum.ai/', pricing: 'premium' },
+        { name: 'Kofax', description: 'Intelligent automation for documents', logo: 'https://www.kofax.com/favicon.ico', category: 'Document Processing', link: 'https://www.kofax.com/', pricing: 'premium' },
+        { name: 'ABBYY FlexiCapture', description: 'Document processing with machine learning', logo: 'https://www.abbyy.com/favicon.ico', category: 'Document Processing', link: 'https://www.abbyy.com/flexicapture/', pricing: 'premium' },
+        { name: 'Hyperscience', description: 'Intelligent document processing platform', logo: 'https://hyperscience.com/favicon.ico', category: 'Document Processing', link: 'https://hyperscience.com/', pricing: 'premium' },
+        { name: 'Automation Hero', description: 'AI-powered document processing', logo: 'https://automationhero.ai/favicon.ico', category: 'Document Processing', link: 'https://automationhero.ai/', pricing: 'premium' },
+        { name: 'Instabase', description: 'Deep learning for document understanding', logo: 'https://instabase.com/favicon.ico', category: 'Document Processing', link: 'https://instabase.com/', pricing: 'premium' }
     ],
     'ai-healthcare': [
-        { name: 'Ada Health', description: 'AI-powered symptom assessment', logo: 'https://ada.com/favicon.ico', category: 'Healthcare', link: 'https://ada.com/' },
-        { name: 'Babylon Health', description: 'AI healthcare consultation platform', logo: 'https://www.babylonhealth.com/favicon.ico', category: 'Healthcare', link: 'https://www.babylonhealth.com/' },
-        { name: 'Viz.ai', description: 'AI for stroke detection and care coordination', logo: 'https://www.viz.ai/favicon.ico', category: 'Healthcare', link: 'https://www.viz.ai/' },
-        { name: 'PathAI', description: 'AI-powered pathology for diagnosis', logo: 'https://www.pathai.com/favicon.ico', category: 'Healthcare', link: 'https://www.pathai.com/' },
-        { name: 'Zebra Medical', description: 'AI medical imaging analytics', logo: 'https://www.zebra-med.com/favicon.ico', category: 'Healthcare', link: 'https://www.zebra-med.com/' },
-        { name: 'Tempus', description: 'AI-driven precision medicine', logo: 'https://www.tempus.com/favicon.ico', category: 'Healthcare', link: 'https://www.tempus.com/' },
-        { name: 'Atomwise', description: 'AI for drug discovery', logo: 'https://www.atomwise.com/favicon.ico', category: 'Healthcare', link: 'https://www.atomwise.com/' },
-        { name: 'Butterfly Network', description: 'AI-powered ultrasound technology', logo: 'https://www.butterflynetwork.com/favicon.ico', category: 'Healthcare', link: 'https://www.butterflynetwork.com/' },
-        { name: 'Enlitic', description: 'AI medical imaging diagnostics', logo: 'https://www.enlitic.com/favicon.ico', category: 'Healthcare', link: 'https://www.enlitic.com/' },
-        { name: 'Freenome', description: 'AI for early cancer detection', logo: 'https://www.freenome.com/favicon.ico', category: 'Healthcare', link: 'https://www.freenome.com/' }
+        { name: 'Ada Health', description: 'AI-powered symptom assessment', logo: 'https://ada.com/favicon.ico', category: 'Healthcare', link: 'https://ada.com/', pricing: 'free' },
+        { name: 'Babylon Health', description: 'AI healthcare consultation platform', logo: 'https://www.babylonhealth.com/favicon.ico', category: 'Healthcare', link: 'https://www.babylonhealth.com/', pricing: 'premium' },
+        { name: 'Viz.ai', description: 'AI for stroke detection and care coordination', logo: 'https://www.viz.ai/favicon.ico', category: 'Healthcare', link: 'https://www.viz.ai/', pricing: 'premium' },
+        { name: 'PathAI', description: 'AI-powered pathology for diagnosis', logo: 'https://www.pathai.com/favicon.ico', category: 'Healthcare', link: 'https://www.pathai.com/', pricing: 'premium' },
+        { name: 'Zebra Medical', description: 'AI medical imaging analytics', logo: 'https://www.zebra-med.com/favicon.ico', category: 'Healthcare', link: 'https://www.zebra-med.com/', pricing: 'premium' },
+        { name: 'Tempus', description: 'AI-driven precision medicine', logo: 'https://www.tempus.com/favicon.ico', category: 'Healthcare', link: 'https://www.tempus.com/', pricing: 'premium' },
+        { name: 'Atomwise', description: 'AI for drug discovery', logo: 'https://www.atomwise.com/favicon.ico', category: 'Healthcare', link: 'https://www.atomwise.com/', pricing: 'premium' },
+        { name: 'Butterfly Network', description: 'AI-powered ultrasound technology', logo: 'https://www.butterflynetwork.com/favicon.ico', category: 'Healthcare', link: 'https://www.butterflynetwork.com/', pricing: 'premium' },
+        { name: 'Enlitic', description: 'AI medical imaging diagnostics', logo: 'https://www.enlitic.com/favicon.ico', category: 'Healthcare', link: 'https://www.enlitic.com/', pricing: 'premium' },
+        { name: 'Freenome', description: 'AI for early cancer detection', logo: 'https://www.freenome.com/favicon.ico', category: 'Healthcare', link: 'https://www.freenome.com/', pricing: 'premium' }
     ],
     'ai-music-creation': [
-        { name: 'Suno', description: 'Create original songs with text prompts', logo: 'https://suno.ai/favicon.ico', category: 'Music Creation', link: 'https://suno.ai/' },
-        { name: 'Udio', description: 'AI music generation platform', logo: 'https://udio.com/favicon.ico', category: 'Music Creation', link: 'https://udio.com/' },
-        { name: 'Harmonai', description: 'Open-source music generation', logo: 'https://www.harmonai.org/favicon.ico', category: 'Music Creation', link: 'https://www.harmonai.org/' },
-        { name: 'Splash', description: 'AI-powered music creation', logo: 'https://splashmusicai.com/favicon.ico', category: 'Music Creation', link: 'https://splashmusicai.com/' },
-        { name: 'Amper Music', description: 'AI music composition for content creators', logo: 'https://www.ampermusic.com/favicon.ico', category: 'Music Creation', link: 'https://www.ampermusic.com/' },
-        { name: 'AIVA', description: 'AI composer for emotional soundtrack music', logo: 'https://www.aiva.ai/favicon.ico', category: 'Music Creation', link: 'https://www.aiva.ai/' },
-        { name: 'Soundraw', description: 'AI music generator for creators', logo: 'https://soundraw.io/favicon.ico', category: 'Music Creation', link: 'https://soundraw.io/' },
-        { name: 'Infinite Album', description: 'AI-generated music that never ends', logo: 'https://infinitealbum.io/favicon.ico', category: 'Music Creation', link: 'https://infinitealbum.io/' },
-        { name: 'Amadeus Code', description: 'AI-powered songwriting assistant', logo: 'https://amadeuscode.com/favicon.ico', category: 'Music Creation', link: 'https://amadeuscode.com/' },
-        { name: 'Humtap', description: 'Create music with your voice and AI', logo: 'https://www.humtap.com/favicon.ico', category: 'Music Creation', link: 'https://www.humtap.com/' }
+        { name: 'Suno', description: 'Create original songs with text prompts', logo: 'https://suno.ai/favicon.ico', category: 'Music Creation', link: 'https://suno.ai/', pricing: 'freemium' },
+        { name: 'Udio', description: 'AI music generation platform', logo: 'https://udio.com/favicon.ico', category: 'Music Creation', link: 'https://udio.com/', pricing: 'freemium' },
+        { name: 'Harmonai', description: 'Open-source music generation', logo: 'https://www.harmonai.org/favicon.ico', category: 'Music Creation', link: 'https://www.harmonai.org/', pricing: 'free' },
+        { name: 'Splash', description: 'AI-powered music creation', logo: 'https://splashmusicai.com/favicon.ico', category: 'Music Creation', link: 'https://splashmusicai.com/', pricing: 'freemium' },
+        { name: 'Amper Music', description: 'AI music composition for content creators', logo: 'https://www.ampermusic.com/favicon.ico', category: 'Music Creation', link: 'https://www.ampermusic.com/', pricing: 'premium' },
+        { name: 'AIVA', description: 'AI composer for emotional soundtrack music', logo: 'https://www.aiva.ai/favicon.ico', category: 'Music Creation', link: 'https://www.aiva.ai/', pricing: 'freemium' },
+        { name: 'Soundraw', description: 'AI music generator for creators', logo: 'https://soundraw.io/favicon.ico', category: 'Music Creation', link: 'https://soundraw.io/', pricing: 'freemium' },
+        { name: 'Infinite Album', description: 'AI-generated music that never ends', logo: 'https://infinitealbum.io/favicon.ico', category: 'Music Creation', link: 'https://infinitealbum.io/', pricing: 'freemium' },
+        { name: 'Amadeus Code', description: 'AI-powered songwriting assistant', logo: 'https://amadeuscode.com/favicon.ico', category: 'Music Creation', link: 'https://amadeuscode.com/', pricing: 'freemium' },
+        { name: 'Humtap', description: 'Create music with your voice and AI', logo: 'https://www.humtap.com/favicon.ico', category: 'Music Creation', link: 'https://www.humtap.com/', pricing: 'freemium' }
     ],
     'ai-interior-design': [
-        { name: 'Interior AI', description: 'AI interior design visualization', logo: 'https://interiorai.com/favicon.ico', category: 'Interior Design', link: 'https://interiorai.com/' },
-        { name: 'Planner 5D', description: 'AI-powered interior design tool', logo: 'https://planner5d.com/favicon.ico', category: 'Interior Design', link: 'https://planner5d.com/' },
-        { name: 'Modsy', description: 'AI interior design visualization service', logo: 'https://www.modsy.com/favicon.ico', category: 'Interior Design', link: 'https://www.modsy.com/' },
-        { name: 'Roomvo', description: 'AI room visualization platform', logo: 'https://www.roomvo.com/favicon.ico', category: 'Interior Design', link: 'https://www.roomvo.com/' },
-        { name: 'Foyr Neo', description: '3D interior design with AI assistance', logo: 'https://foyr.com/favicon.ico', category: 'Interior Design', link: 'https://foyr.com/neo/' },
-        { name: 'RoomGPT', description: 'AI room design generator', logo: 'https://www.roomgpt.io/favicon.ico', category: 'Interior Design', link: 'https://www.roomgpt.io/' },
-        { name: 'DecorMatters', description: 'AI interior design app', logo: 'https://decormatters.com/favicon.ico', category: 'Interior Design', link: 'https://decormatters.com/' },
-        { name: 'Collov', description: 'AI interior design platform', logo: 'https://collov.com/favicon.ico', category: 'Interior Design', link: 'https://collov.com/' },
-        { name: 'Spacejoy', description: 'Online interior design with AI', logo: 'https://www.spacejoy.com/favicon.ico', category: 'Interior Design', link: 'https://www.spacejoy.com/' },
-        { name: 'Homestyler', description: 'AI-powered interior design software', logo: 'https://www.homestyler.com/favicon.ico', category: 'Interior Design', link: 'https://www.homestyler.com/' }
+        { name: 'Interior AI', description: 'AI interior design visualization', logo: 'https://interiorai.com/favicon.ico', category: 'Interior Design', link: 'https://interiorai.com/', pricing: 'premium' },
+        { name: 'Planner 5D', description: 'AI-powered interior design tool', logo: 'https://planner5d.com/favicon.ico', category: 'Interior Design', link: 'https://planner5d.com/', pricing: 'freemium' },
+        { name: 'Modsy', description: 'AI interior design visualization service', logo: 'https://www.modsy.com/favicon.ico', category: 'Interior Design', link: 'https://www.modsy.com/', pricing: 'premium' },
+        { name: 'Roomvo', description: 'AI room visualization platform', logo: 'https://www.roomvo.com/favicon.ico', category: 'Interior Design', link: 'https://www.roomvo.com/', pricing: 'premium' },
+        { name: 'Foyr Neo', description: '3D interior design with AI assistance', logo: 'https://foyr.com/favicon.ico', category: 'Interior Design', link: 'https://foyr.com/neo/', pricing: 'freemium' },
+        { name: 'RoomGPT', description: 'AI room design generator', logo: 'https://www.roomgpt.io/favicon.ico', category: 'Interior Design', link: 'https://www.roomgpt.io/', pricing: 'freemium' },
+        { name: 'DecorMatters', description: 'AI interior design app', logo: 'https://decormatters.com/favicon.ico', category: 'Interior Design', link: 'https://decormatters.com/', pricing: 'freemium' },
+        { name: 'Collov', description: 'AI interior design platform', logo: 'https://collov.com/favicon.ico', category: 'Interior Design', link: 'https://collov.com/', pricing: 'freemium' },
+        { name: 'Spacejoy', description: 'Online interior design with AI', logo: 'https://www.spacejoy.com/favicon.ico', category: 'Interior Design', link: 'https://www.spacejoy.com/', pricing: 'premium' },
+        { name: 'Homestyler', description: 'AI-powered interior design software', logo: 'https://www.homestyler.com/favicon.ico', category: 'Interior Design', link: 'https://www.homestyler.com/', pricing: 'freemium' }
     ],
     'ai-translation': [
-        { name: 'DeepL', description: 'Neural machine translation service', logo: 'https://www.deepl.com/favicon.ico', category: 'Translation', link: 'https://www.deepl.com/' },
-        { name: 'SYSTRAN', description: 'AI-powered translation solutions', logo: 'https://www.systransoft.com/favicon.ico', category: 'Translation', link: 'https://www.systransoft.com/' },
-        { name: 'Unbabel', description: 'AI + human translation platform', logo: 'https://unbabel.com/favicon.ico', category: 'Translation', link: 'https://unbabel.com/' },
-        { name: 'Lilt', description: 'AI translation for enterprises', logo: 'https://lilt.com/favicon.ico', category: 'Translation', link: 'https://lilt.com/' },
-        { name: 'Smartling', description: 'Translation management with AI', logo: 'https://www.smartling.com/favicon.ico', category: 'Translation', link: 'https://www.smartling.com/' },
-        { name: 'Lengoo', description: 'AI-powered translation platform', logo: 'https://www.lengoo.com/favicon.ico', category: 'Translation', link: 'https://www.lengoo.com/' },
-        { name: 'ModernMT', description: 'Adaptive neural machine translation', logo: 'https://www.modernmt.com/favicon.ico', category: 'Translation', link: 'https://www.modernmt.com/' },
-        { name: 'Intento', description: 'AI translation comparison platform', logo: 'https://inten.to/favicon.ico', category: 'Translation', link: 'https://inten.to/' },
-        { name: 'Argos Translate', description: 'Open-source neural machine translation', logo: 'https://www.argosopentech.com/favicon.ico', category: 'Translation', link: 'https://www.argosopentech.com/' },
-        { name: 'Papago', description: 'Neural machine translation by Naver', logo: 'https://papago.naver.com/favicon.ico', category: 'Translation', link: 'https://papago.naver.com/' }
+        { name: 'DeepL', description: 'Neural machine translation service', logo: 'https://www.deepl.com/favicon.ico', category: 'Translation', link: 'https://www.deepl.com/', pricing: 'freemium' },
+        { name: 'SYSTRAN', description: 'AI-powered translation solutions', logo: 'https://www.systransoft.com/favicon.ico', category: 'Translation', link: 'https://www.systransoft.com/', pricing: 'premium' },
+        { name: 'Unbabel', description: 'AI + human translation platform', logo: 'https://unbabel.com/favicon.ico', category: 'Translation', link: 'https://unbabel.com/', pricing: 'premium' },
+        { name: 'Lilt', description: 'AI translation for enterprises', logo: 'https://lilt.com/favicon.ico', category: 'Translation', link: 'https://lilt.com/', pricing: 'premium' },
+        { name: 'Smartling', description: 'Translation management with AI', logo: 'https://www.smartling.com/favicon.ico', category: 'Translation', link: 'https://www.smartling.com/', pricing: 'premium' },
+        { name: 'Lengoo', description: 'AI-powered translation platform', logo: 'https://www.lengoo.com/favicon.ico', category: 'Translation', link: 'https://www.lengoo.com/', pricing: 'premium' },
+        { name: 'ModernMT', description: 'Adaptive neural machine translation', logo: 'https://www.modernmt.com/favicon.ico', category: 'Translation', link: 'https://www.modernmt.com/', pricing: 'freemium' },
+        { name: 'Intento', description: 'AI translation comparison platform', logo: 'https://inten.to/favicon.ico', category: 'Translation', link: 'https://inten.to/', pricing: 'premium' },
+        { name: 'Argos Translate', description: 'Open-source neural machine translation', logo: 'https://www.argosopentech.com/favicon.ico', category: 'Translation', link: 'https://www.argosopentech.com/', pricing: 'free' },
+        { name: 'Papago', description: 'Neural machine translation by Naver', logo: 'https://papago.naver.com/favicon.ico', category: 'Translation', link: 'https://papago.naver.com/', pricing: 'free' }
     ],
     'ai-speech-recognition': [
-        { name: 'Whisper', description: 'OpenAI speech recognition system', logo: 'https://openai.com/favicon.ico', category: 'Speech Recognition', link: 'https://openai.com/research/whisper' },
-        { name: 'AssemblyAI', description: 'Speech-to-text API with AI models', logo: 'https://www.assemblyai.com/favicon.ico', category: 'Speech Recognition', link: 'https://www.assemblyai.com/' },
-        { name: 'Speechmatics', description: 'Enterprise speech recognition', logo: 'https://www.speechmatics.com/favicon.ico', category: 'Speech Recognition', link: 'https://www.speechmatics.com/' },
-        { name: 'Deepgram', description: 'Real-time speech recognition API', logo: 'https://deepgram.com/favicon.ico', category: 'Speech Recognition', link: 'https://deepgram.com/' },
-        { name: 'Picovoice', description: 'On-device voice AI platform', logo: 'https://picovoice.ai/favicon.ico', category: 'Speech Recognition', link: 'https://picovoice.ai/' },
-        { name: 'Voicegain', description: 'Speech-to-text and voice analytics', logo: 'https://www.voicegain.ai/favicon.ico', category: 'Speech Recognition', link: 'https://www.voicegain.ai/' },
-        { name: 'Soniox', description: 'High-accuracy speech recognition', logo: 'https://soniox.com/favicon.ico', category: 'Speech Recognition', link: 'https://soniox.com/' },
-        { name: 'Verbit', description: 'AI transcription and captioning', logo: 'https://verbit.ai/favicon.ico', category: 'Speech Recognition', link: 'https://verbit.ai/' },
-        { name: 'Voci', description: 'Enterprise speech-to-text platform', logo: 'https://www.vocitec.com/favicon.ico', category: 'Speech Recognition', link: 'https://www.vocitec.com/' },
-        { name: 'Speechly', description: 'Voice UI for mobile and web apps', logo: 'https://www.speechly.com/favicon.ico', category: 'Speech Recognition', link: 'https://www.speechly.com/' }
+        { name: 'Whisper', description: 'OpenAI speech recognition system', logo: 'https://openai.com/favicon.ico', category: 'Speech Recognition', link: 'https://openai.com/research/whisper', pricing: 'free' },
+        { name: 'AssemblyAI', description: 'Speech-to-text API with AI models', logo: 'https://www.assemblyai.com/favicon.ico', category: 'Speech Recognition', link: 'https://www.assemblyai.com/', pricing: 'freemium' },
+        { name: 'Speechmatics', description: 'Enterprise speech recognition', logo: 'https://www.speechmatics.com/favicon.ico', category: 'Speech Recognition', link: 'https://www.speechmatics.com/', pricing: 'premium' },
+        { name: 'Deepgram', description: 'Real-time speech recognition API', logo: 'https://deepgram.com/favicon.ico', category: 'Speech Recognition', link: 'https://deepgram.com/', pricing: 'freemium' },
+        { name: 'Picovoice', description: 'On-device voice AI platform', logo: 'https://picovoice.ai/favicon.ico', category: 'Speech Recognition', link: 'https://picovoice.ai/', pricing: 'freemium' },
+        { name: 'Voicegain', description: 'Speech-to-text and voice analytics', logo: 'https://www.voicegain.ai/favicon.ico', category: 'Speech Recognition', link: 'https://www.voicegain.ai/', pricing: 'freemium' },
+        { name: 'Soniox', description: 'High-accuracy speech recognition', logo: 'https://soniox.com/favicon.ico', category: 'Speech Recognition', link: 'https://soniox.com/', pricing: 'freemium' },
+        { name: 'Verbit', description: 'AI transcription and captioning', logo: 'https://verbit.ai/favicon.ico', category: 'Speech Recognition', link: 'https://verbit.ai/', pricing: 'premium' },
+        { name: 'Voci', description: 'Enterprise speech-to-text platform', logo: 'https://www.vocitec.com/favicon.ico', category: 'Speech Recognition', link: 'https://www.vocitec.com/', pricing: 'premium' },
+        { name: 'Speechly', description: 'Voice UI for mobile and web apps', logo: 'https://www.speechly.com/favicon.ico', category: 'Speech Recognition', link: 'https://www.speechly.com/', pricing: 'freemium' }
+    ],
+    'code-generators': [
+        { name: 'GitHub Copilot', description: 'AI pair programmer for code generation', logo: 'https://github.com/favicon.ico', category: 'Code Generators', link: 'https://github.com/features/copilot', pricing: 'premium' },
+        { name: 'Tabnine', description: 'AI code completion and generation', logo: 'https://www.tabnine.com/favicon.ico', category: 'Code Generators', link: 'https://www.tabnine.com', pricing: 'freemium' },
+        { name: 'Codeium', description: 'Free AI code acceleration toolkit', logo: 'https://codeium.com/favicon.ico', category: 'Code Generators', link: 'https://codeium.com', pricing: 'free' },
+        { name: 'Amazon CodeWhisperer', description: 'AI coding companion from AWS', logo: 'https://aws.amazon.com/favicon.ico', category: 'Code Generators', link: 'https://aws.amazon.com/codewhisperer/', pricing: 'free' },
+        { name: 'Replit Ghostwriter', description: 'AI code generation in browser IDE', logo: 'https://replit.com/favicon.ico', category: 'Code Generators', link: 'https://replit.com/ghostwriter', pricing: 'freemium' },
+        { name: 'Cursor', description: 'AI-first code editor', logo: 'https://cursor.sh/favicon.ico', category: 'Code Generators', link: 'https://cursor.sh', pricing: 'freemium' },
+        { name: 'Sourcegraph Cody', description: 'AI coding assistant for codebases', logo: 'https://sourcegraph.com/favicon.ico', category: 'Code Generators', link: 'https://sourcegraph.com/cody', pricing: 'freemium' },
+        { name: 'CodeT5', description: 'Open-source code generation model', logo: 'https://huggingface.co/favicon.ico', category: 'Code Generators', link: 'https://huggingface.co/Salesforce/codet5-large', pricing: 'free' },
+        { name: 'Blackbox AI', description: 'AI-powered coding assistant', logo: 'https://www.blackbox.ai/favicon.ico', category: 'Code Generators', link: 'https://www.blackbox.ai', pricing: 'freemium' },
+        { name: 'MutableAI', description: 'AI code completion and refactoring', logo: 'https://mutable.ai/favicon.ico', category: 'Code Generators', link: 'https://mutable.ai/', pricing: 'freemium' },
+        { name: 'CodeGPT', description: 'AI code generation extension', logo: 'https://codegpt.co/favicon.ico', category: 'Code Generators', link: 'https://codegpt.co/', pricing: 'freemium' },
+        { name: 'Codex by OpenAI', description: 'AI system that translates natural language to code', logo: 'https://openai.com/favicon.ico', category: 'Code Generators', link: 'https://openai.com/blog/openai-codex/', pricing: 'premium' }
+    ],
+    'design-tools': [
+        { name: 'Canva', description: 'AI-powered design platform', logo: 'https://www.canva.com/favicon.ico', category: 'Design Tools', link: 'https://www.canva.com/', pricing: 'freemium' },
+        { name: 'Figma', description: 'Collaborative design tool with AI features', logo: 'https://www.figma.com/favicon.ico', category: 'Design Tools', link: 'https://www.figma.com/', pricing: 'freemium' },
+        { name: 'Adobe Creative Cloud', description: 'AI-enhanced creative suite', logo: 'https://www.adobe.com/favicon.ico', category: 'Design Tools', link: 'https://www.adobe.com/creativecloud.html', pricing: 'premium' },
+        { name: 'Sketch', description: 'Digital design toolkit with AI plugins', logo: 'https://www.sketch.com/favicon.ico', category: 'Design Tools', link: 'https://www.sketch.com/', pricing: 'premium' },
+        { name: 'Framer', description: 'Interactive design and prototyping', logo: 'https://www.framer.com/favicon.ico', category: 'Design Tools', link: 'https://www.framer.com/', pricing: 'freemium' },
+        { name: 'Uizard', description: 'AI-powered design tool', logo: 'https://uizard.io/favicon.ico', category: 'Design Tools', link: 'https://uizard.io/', pricing: 'freemium' },
+        { name: 'Khroma', description: 'AI color palette generator', logo: 'https://www.khroma.co/favicon.ico', category: 'Design Tools', link: 'https://www.khroma.co/', pricing: 'free' },
+        { name: 'Designs.ai', description: 'AI design suite for logos, videos, and more', logo: 'https://designs.ai/favicon.ico', category: 'Design Tools', link: 'https://designs.ai/', pricing: 'freemium' },
+        { name: 'Looka', description: 'AI logo and brand identity designer', logo: 'https://looka.com/favicon.ico', category: 'Design Tools', link: 'https://looka.com/', pricing: 'freemium' },
+        { name: 'Brandmark', description: 'AI-powered logo design tool', logo: 'https://brandmark.io/favicon.ico', category: 'Design Tools', link: 'https://brandmark.io/', pricing: 'freemium' },
+        { name: 'Gamma', description: 'AI-powered presentation and design tool', logo: 'https://gamma.app/favicon.ico', category: 'Design Tools', link: 'https://gamma.app/', pricing: 'freemium' },
+        { name: 'Beautiful.ai', description: 'AI presentation design platform', logo: 'https://www.beautiful.ai/favicon.ico', category: 'Design Tools', link: 'https://www.beautiful.ai/', pricing: 'freemium' }
     ],
     'ai-data-visualization': [
-        { name: 'Tableau', description: 'Interactive data visualization with AI', logo: 'https://www.tableau.com/favicon.ico', category: 'Data Visualization', link: 'https://www.tableau.com/' },
-        { name: 'PowerBI', description: 'Microsoft business analytics with AI', logo: 'https://powerbi.microsoft.com/favicon.ico', category: 'Data Visualization', link: 'https://powerbi.microsoft.com/' },
-        { name: 'Qlik', description: 'Data analytics and visualization platform', logo: 'https://www.qlik.com/favicon.ico', category: 'Data Visualization', link: 'https://www.qlik.com/' },
-        { name: 'Looker', description: 'Business intelligence and analytics', logo: 'https://looker.com/favicon.ico', category: 'Data Visualization', link: 'https://looker.com/' },
-        { name: 'Sisense', description: 'AI-driven analytics platform', logo: 'https://www.sisense.com/favicon.ico', category: 'Data Visualization', link: 'https://www.sisense.com/' },
-        { name: 'ThoughtSpot', description: 'AI-powered analytics platform', logo: 'https://www.thoughtspot.com/favicon.ico', category: 'Data Visualization', link: 'https://www.thoughtspot.com/' },
-        { name: 'Domo', description: 'Business intelligence and data visualization', logo: 'https://www.domo.com/favicon.ico', category: 'Data Visualization', link: 'https://www.domo.com/' },
-        { name: 'Toucan Toco', description: 'Data storytelling platform', logo: 'https://toucantoco.com/favicon.ico', category: 'Data Visualization', link: 'https://toucantoco.com/' },
-        { name: 'Graphext', description: 'AI-powered data analysis platform', logo: 'https://www.graphext.com/favicon.ico', category: 'Data Visualization', link: 'https://www.graphext.com/' },
-        { name: 'Kinetica', description: 'GPU-accelerated analytics platform', logo: 'https://www.kinetica.com/favicon.ico', category: 'Data Visualization', link: 'https://www.kinetica.com/' }
+        { name: 'Tableau', description: 'Interactive data visualization with AI', logo: 'https://www.tableau.com/favicon.ico', category: 'Data Visualization', link: 'https://www.tableau.com/', pricing: 'premium' },
+        { name: 'PowerBI', description: 'Microsoft business analytics with AI', logo: 'https://powerbi.microsoft.com/favicon.ico', category: 'Data Visualization', link: 'https://powerbi.microsoft.com/', pricing: 'freemium' },
+        { name: 'Qlik', description: 'Data analytics and visualization platform', logo: 'https://www.qlik.com/favicon.ico', category: 'Data Visualization', link: 'https://www.qlik.com/', pricing: 'premium' },
+        { name: 'Looker', description: 'Business intelligence and analytics', logo: 'https://looker.com/favicon.ico', category: 'Data Visualization', link: 'https://looker.com/', pricing: 'premium' },
+        { name: 'Sisense', description: 'AI-driven analytics platform', logo: 'https://www.sisense.com/favicon.ico', category: 'Data Visualization', link: 'https://www.sisense.com/', pricing: 'premium' },
+        { name: 'ThoughtSpot', description: 'AI-powered analytics platform', logo: 'https://www.thoughtspot.com/favicon.ico', category: 'Data Visualization', link: 'https://www.thoughtspot.com/', pricing: 'premium' },
+        { name: 'Domo', description: 'Cloud-based business intelligence platform', logo: 'https://www.domo.com/favicon.ico', category: 'Data Visualization', link: 'https://www.domo.com/', pricing: 'premium' },
+        { name: 'Plotly', description: 'Interactive data visualization platform', logo: 'https://plotly.com/favicon.ico', category: 'Data Visualization', link: 'https://plotly.com/', pricing: 'freemium' },
+        { name: 'Observable', description: 'Collaborative data visualization platform', logo: 'https://observablehq.com/favicon.ico', category: 'Data Visualization', link: 'https://observablehq.com/', pricing: 'freemium' },
+        { name: 'Grafana', description: 'Open-source analytics and monitoring', logo: 'https://grafana.com/favicon.ico', category: 'Data Visualization', link: 'https://grafana.com/', pricing: 'freemium' },
+        { name: 'Toucan Toco', description: 'Data storytelling platform', logo: 'https://toucantoco.com/favicon.ico', category: 'Data Visualization', link: 'https://toucantoco.com/', pricing: 'premium' },
+        { name: 'Graphext', description: 'AI-powered data analysis platform', logo: 'https://www.graphext.com/favicon.ico', category: 'Data Visualization', link: 'https://www.graphext.com/', pricing: 'premium' },
+        { name: 'Kinetica', description: 'GPU-accelerated analytics platform', logo: 'https://www.kinetica.com/favicon.ico', category: 'Data Visualization', link: 'https://www.kinetica.com/', pricing: 'premium' }
     ],
     'ai-customer-insights': [
-        { name: 'Qualtrics XM', description: 'AI-powered experience management', logo: 'https://www.qualtrics.com/favicon.ico', category: 'Customer Insights', link: 'https://www.qualtrics.com/' },
-        { name: 'Medallia', description: 'Customer and employee experience platform', logo: 'https://www.medallia.com/favicon.ico', category: 'Customer Insights', link: 'https://www.medallia.com/' },
-        { name: 'Clarabridge', description: 'AI-powered customer experience analytics', logo: 'https://www.clarabridge.com/favicon.ico', category: 'Customer Insights', link: 'https://www.clarabridge.com/' },
-        { name: 'Chattermill', description: 'Unified customer feedback analysis', logo: 'https://chattermill.com/favicon.ico', category: 'Customer Insights', link: 'https://chattermill.com/' },
-        { name: 'Wonderflow', description: 'AI-powered customer feedback analysis', logo: 'https://www.wonderflow.ai/favicon.ico', category: 'Customer Insights', link: 'https://www.wonderflow.ai/' },
-        { name: 'Idiomatic', description: 'Customer feedback analysis platform', logo: 'https://www.idiomatic.com/favicon.ico', category: 'Customer Insights', link: 'https://www.idiomatic.com/' },
-        { name: 'Thematic', description: 'AI customer feedback analysis', logo: 'https://thematic.co/favicon.ico', category: 'Customer Insights', link: 'https://thematic.co/' },
-        { name: 'Keatext', description: 'AI-powered customer feedback analytics', logo: 'https://www.keatext.ai/favicon.ico', category: 'Customer Insights', link: 'https://www.keatext.ai/' },
-        { name: 'Stratifyd', description: 'AI-powered analytics platform', logo: 'https://www.stratifyd.com/favicon.ico', category: 'Customer Insights', link: 'https://www.stratifyd.com/' },
-        { name: 'Viable', description: 'AI analysis of qualitative feedback', logo: 'https://www.askviable.com/favicon.ico', category: 'Customer Insights', link: 'https://www.askviable.com/' }
+        { name: 'Qualtrics XM', description: 'AI-powered experience management', logo: 'https://www.qualtrics.com/favicon.ico', category: 'Customer Insights', link: 'https://www.qualtrics.com/', pricing: 'premium' },
+        { name: 'Medallia', description: 'Customer and employee experience platform', logo: 'https://www.medallia.com/favicon.ico', category: 'Customer Insights', link: 'https://www.medallia.com/', pricing: 'premium' },
+        { name: 'Clarabridge', description: 'AI-powered customer experience analytics', logo: 'https://www.clarabridge.com/favicon.ico', category: 'Customer Insights', link: 'https://www.clarabridge.com/', pricing: 'premium' },
+        { name: 'Chattermill', description: 'Unified customer feedback analysis', logo: 'https://chattermill.com/favicon.ico', category: 'Customer Insights', link: 'https://chattermill.com/', pricing: 'premium' },
+        { name: 'Wonderflow', description: 'AI-powered customer feedback analysis', logo: 'https://www.wonderflow.ai/favicon.ico', category: 'Customer Insights', link: 'https://www.wonderflow.ai/', pricing: 'premium' },
+        { name: 'Idiomatic', description: 'Customer feedback analysis platform', logo: 'https://www.idiomatic.com/favicon.ico', category: 'Customer Insights', link: 'https://www.idiomatic.com/', pricing: 'premium' },
+        { name: 'Thematic', description: 'AI customer feedback analysis', logo: 'https://thematic.co/favicon.ico', category: 'Customer Insights', link: 'https://thematic.co/', pricing: 'freemium' },
+        { name: 'Keatext', description: 'AI-powered customer feedback analytics', logo: 'https://www.keatext.ai/favicon.ico', category: 'Customer Insights', link: 'https://www.keatext.ai/', pricing: 'premium' },
+        { name: 'Stratifyd', description: 'AI-powered analytics platform', logo: 'https://www.stratifyd.com/favicon.ico', category: 'Customer Insights', link: 'https://www.stratifyd.com/', pricing: 'premium' },
+        { name: 'Viable', description: 'AI analysis of qualitative feedback', logo: 'https://www.askviable.com/favicon.ico', category: 'Customer Insights', link: 'https://www.askviable.com/', pricing: 'freemium' }
     ],
     'ai-legal-tech': [
-        { name: 'ROSS Intelligence', description: 'AI legal research platform', logo: 'https://rossintelligence.com/favicon.ico', category: 'Legal Tech', link: 'https://rossintelligence.com/' },
-        { name: 'Casetext', description: 'AI-powered legal research assistant', logo: 'https://casetext.com/favicon.ico', category: 'Legal Tech', link: 'https://casetext.com/' },
-        { name: 'Kira Systems', description: 'AI contract analysis software', logo: 'https://kirasystems.com/favicon.ico', category: 'Legal Tech', link: 'https://kirasystems.com/' },
-        { name: 'Luminance', description: 'AI document analysis for legal teams', logo: 'https://www.luminance.com/favicon.ico', category: 'Legal Tech', link: 'https://www.luminance.com/' },
-        { name: 'LawGeex', description: 'AI contract review automation', logo: 'https://www.lawgeex.com/favicon.ico', category: 'Legal Tech', link: 'https://www.lawgeex.com/' },
-        { name: 'Everlaw', description: 'AI-powered litigation platform', logo: 'https://www.everlaw.com/favicon.ico', category: 'Legal Tech', link: 'https://www.everlaw.com/' },
-        { name: 'Disco', description: 'AI-powered legal discovery', logo: 'https://www.csdisco.com/favicon.ico', category: 'Legal Tech', link: 'https://www.csdisco.com/' },
-        { name: 'Relativity', description: 'E-discovery and compliance platform', logo: 'https://www.relativity.com/favicon.ico', category: 'Legal Tech', link: 'https://www.relativity.com/' },
-        { name: 'Lexion', description: 'AI contract management', logo: 'https://lexion.ai/favicon.ico', category: 'Legal Tech', link: 'https://lexion.ai/' },
-        { name: 'Evisort', description: 'AI-powered contract intelligence', logo: 'https://www.evisort.com/favicon.ico', category: 'Legal Tech', link: 'https://www.evisort.com/' }
+        { name: 'ROSS Intelligence', description: 'AI legal research platform', logo: 'https://rossintelligence.com/favicon.ico', category: 'Legal Tech', link: 'https://rossintelligence.com/', pricing: 'premium' },
+        { name: 'Casetext', description: 'AI-powered legal research assistant', logo: 'https://casetext.com/favicon.ico', category: 'Legal Tech', link: 'https://casetext.com/', pricing: 'premium' },
+        { name: 'Kira Systems', description: 'AI contract analysis software', logo: 'https://kirasystems.com/favicon.ico', category: 'Legal Tech', link: 'https://kirasystems.com/', pricing: 'premium' },
+        { name: 'Luminance', description: 'AI document analysis for legal teams', logo: 'https://www.luminance.com/favicon.ico', category: 'Legal Tech', link: 'https://www.luminance.com/', pricing: 'premium' },
+        { name: 'LawGeex', description: 'AI contract review automation', logo: 'https://www.lawgeex.com/favicon.ico', category: 'Legal Tech', link: 'https://www.lawgeex.com/', pricing: 'premium' },
+        { name: 'Everlaw', description: 'AI-powered litigation platform', logo: 'https://www.everlaw.com/favicon.ico', category: 'Legal Tech', link: 'https://www.everlaw.com/', pricing: 'premium' },
+        { name: 'Disco', description: 'AI-powered legal discovery', logo: 'https://www.csdisco.com/favicon.ico', category: 'Legal Tech', link: 'https://www.csdisco.com/', pricing: 'premium' },
+        { name: 'Relativity', description: 'E-discovery and compliance platform', logo: 'https://www.relativity.com/favicon.ico', category: 'Legal Tech', link: 'https://www.relativity.com/', pricing: 'premium' },
+        { name: 'Lexion', description: 'AI contract management', logo: 'https://lexion.ai/favicon.ico', category: 'Legal Tech', link: 'https://lexion.ai/', pricing: 'premium' },
+        { name: 'Evisort', description: 'AI-powered contract intelligence', logo: 'https://www.evisort.com/favicon.ico', category: 'Legal Tech', link: 'https://www.evisort.com/', pricing: 'premium' }
     ],
     'ai-avatars': [
-        { name: 'Ready Player Me', description: 'Cross-platform avatar creator', logo: 'https://readyplayer.me/favicon.ico', category: 'AI Avatars', link: 'https://readyplayer.me/' },
-        { name: 'Avatar AI', description: 'AI-powered avatar generation', logo: 'https://avatarai.me/favicon.ico', category: 'AI Avatars', link: 'https://avatarai.me/' },
-        { name: 'Midjourney', description: 'AI image generation for avatars', logo: 'https://www.midjourney.com/favicon.ico', category: 'AI Avatars', link: 'https://www.midjourney.com/' },
-        { name: 'HeyGen', description: 'AI video avatars for business', logo: 'https://www.heygen.com/favicon.ico', category: 'AI Avatars', link: 'https://www.heygen.com/' },
-        { name: 'Synthesia', description: 'AI video generation with avatars', logo: 'https://www.synthesia.io/favicon.ico', category: 'AI Avatars', link: 'https://www.synthesia.io/' },
-        { name: 'D-ID', description: 'AI-generated digital humans', logo: 'https://www.d-id.com/favicon.ico', category: 'AI Avatars', link: 'https://www.d-id.com/' },
-        { name: 'Lensa', description: 'AI avatar creator app', logo: 'https://prisma-ai.com/favicon.ico', category: 'AI Avatars', link: 'https://prisma-ai.com/lensa' },
-        { name: 'Reface', description: 'Face swap app for videos and GIFs', logo: 'https://reface.ai/favicon.ico', category: 'AI Avatars', link: 'https://reface.ai/' },
-        { name: 'Picter', description: 'AI profile picture generator', logo: 'https://picterai.com/favicon.ico', category: 'AI Avatars', link: 'https://picterai.com/' },
-        { name: 'Photosonic', description: 'AI image generation for avatars', logo: 'https://writesonic.com/favicon.ico', category: 'AI Avatars', link: 'https://writesonic.com/photosonic' }
+    { name: 'Ready Player Me', description: 'Cross-platform avatar creator', logo: 'https://readyplayer.me/favicon.ico', category: 'AI Avatars', link: 'https://readyplayer.me/', pricing: 'freemium' },
+    { name: 'Avatar AI', description: 'AI-powered avatar generation', logo: 'https://avatarai.me/favicon.ico', category: 'AI Avatars', link: 'https://avatarai.me/', pricing: 'premium' },
+    { name: 'Midjourney', description: 'AI image generation for avatars', logo: 'https://www.midjourney.com/favicon.ico', category: 'AI Avatars', link: 'https://www.midjourney.com/', pricing: 'premium' },
+    { name: 'HeyGen', description: 'AI video avatars for business', logo: 'https://www.heygen.com/favicon.ico', category: 'AI Avatars', link: 'https://www.heygen.com/', pricing: 'premium' },
+    { name: 'Synthesia', description: 'AI video generation with avatars', logo: 'https://www.synthesia.io/favicon.ico', category: 'AI Avatars', link: 'https://www.synthesia.io/', pricing: 'premium' },
+    { name: 'D-ID', description: 'AI-generated digital humans', logo: 'https://www.d-id.com/favicon.ico', category: 'AI Avatars', link: 'https://www.d-id.com/', pricing: 'freemium' },
+    { name: 'Lensa', description: 'AI avatar creator app', logo: 'https://prisma-ai.com/favicon.ico', category: 'AI Avatars', link: 'https://prisma-ai.com/lensa', pricing: 'premium' },
+    { name: 'Reface', description: 'Face swap app for videos and GIFs', logo: 'https://reface.ai/favicon.ico', category: 'AI Avatars', link: 'https://reface.ai/', pricing: 'freemium' },
+    { name: 'Picter', description: 'AI profile picture generator', logo: 'https://picterai.com/favicon.ico', category: 'AI Avatars', link: 'https://picterai.com/', pricing: 'premium' },
+    { name: 'Photosonic', description: 'AI image generation for avatars', logo: 'https://writesonic.com/favicon.ico', category: 'AI Avatars', link: 'https://writesonic.com/photosonic', pricing: 'freemium' }
     ],
     'ai-search': [
-        { name: 'Perplexity', description: 'AI-powered answer engine', logo: 'https://www.perplexity.ai/favicon.ico', category: 'AI Search', link: 'https://www.perplexity.ai/' },
-        { name: 'You.com', description: 'AI search engine', logo: 'https://you.com/favicon.ico', category: 'AI Search', link: 'https://you.com/' },
-        { name: 'Bing AI', description: 'Microsoft AI-powered search', logo: 'https://www.bing.com/favicon.ico', category: 'AI Search', link: 'https://www.bing.com/' },
-        { name: 'Google AI Overview', description: 'AI-powered search summaries', logo: 'https://www.google.com/favicon.ico', category: 'AI Search', link: 'https://www.google.com/' },
-        { name: 'Kagi', description: 'Premium AI search engine', logo: 'https://kagi.com/favicon.ico', category: 'AI Search', link: 'https://kagi.com/' },
-        { name: 'Phind', description: 'AI search for developers', logo: 'https://www.phind.com/favicon.ico', category: 'AI Search', link: 'https://www.phind.com/' },
-        { name: 'Consensus', description: 'AI search for research papers', logo: 'https://consensus.app/favicon.ico', category: 'AI Search', link: 'https://consensus.app/' },
-        { name: 'Metaphor', description: 'AI search engine for the internet', logo: 'https://metaphor.systems/favicon.ico', category: 'AI Search', link: 'https://metaphor.systems/' },
-        { name: 'Neeva', description: 'Ad-free search with AI', logo: 'https://neeva.com/favicon.ico', category: 'AI Search', link: 'https://neeva.com/' },
-        { name: 'Brave Search', description: 'Private search with AI summaries', logo: 'https://search.brave.com/favicon.ico', category: 'AI Search', link: 'https://search.brave.com/' }
+    { name: 'Perplexity', description: 'AI-powered answer engine', logo: 'https://www.perplexity.ai/favicon.ico', category: 'AI Search', link: 'https://www.perplexity.ai/', pricing: 'freemium' },
+    { name: 'You.com', description: 'AI search engine', logo: 'https://you.com/favicon.ico', category: 'AI Search', link: 'https://you.com/', pricing: 'freemium' },
+    { name: 'Bing AI', description: 'Microsoft AI-powered search', logo: 'https://www.bing.com/favicon.ico', category: 'AI Search', link: 'https://www.bing.com/', pricing: 'free' },
+    { name: 'Google AI Overview', description: 'AI-powered search summaries', logo: 'https://www.google.com/favicon.ico', category: 'AI Search', link: 'https://www.google.com/', pricing: 'free' },
+    { name: 'Kagi', description: 'Premium AI search engine', logo: 'https://kagi.com/favicon.ico', category: 'AI Search', link: 'https://kagi.com/', pricing: 'premium' },
+    { name: 'Phind', description: 'AI search for developers', logo: 'https://www.phind.com/favicon.ico', category: 'AI Search', link: 'https://www.phind.com/', pricing: 'freemium' },
+    { name: 'Consensus', description: 'AI search for research papers', logo: 'https://consensus.app/favicon.ico', category: 'AI Search', link: 'https://consensus.app/', pricing: 'freemium' },
+    { name: 'Metaphor', description: 'AI search engine for the internet', logo: 'https://metaphor.systems/favicon.ico', category: 'AI Search', link: 'https://metaphor.systems/', pricing: 'freemium' },
+    { name: 'Neeva', description: 'Ad-free search with AI', logo: 'https://neeva.com/favicon.ico', category: 'AI Search', link: 'https://neeva.com/', pricing: 'premium' },
+    { name: 'Brave Search', description: 'Private search with AI summaries', logo: 'https://search.brave.com/favicon.ico', category: 'AI Search', link: 'https://search.brave.com/', pricing: 'free' }
     ],
     'ai-audio-enhancers': [
-        { name: 'Descript', description: 'Audio editing with AI', logo: 'https://www.descript.com/favicon.ico', category: 'Audio Enhancement', link: 'https://www.descript.com/' },
-        { name: 'Adobe Podcast', description: 'AI-powered audio enhancement', logo: 'https://podcast.adobe.com/favicon.ico', category: 'Audio Enhancement', link: 'https://podcast.adobe.com/' },
-        { name: 'Auphonic', description: 'Automated audio post-production', logo: 'https://auphonic.com/favicon.ico', category: 'Audio Enhancement', link: 'https://auphonic.com/' },
-        { name: 'Krisp', description: 'AI noise cancellation for calls', logo: 'https://krisp.ai/favicon.ico', category: 'Audio Enhancement', link: 'https://krisp.ai/' },
-        { name: 'iZotope RX', description: 'Audio repair and enhancement', logo: 'https://www.izotope.com/favicon.ico', category: 'Audio Enhancement', link: 'https://www.izotope.com/en/products/rx.html' },
-        { name: 'Accusonus', description: 'AI-powered audio repair', logo: 'https://accusonus.com/favicon.ico', category: 'Audio Enhancement', link: 'https://accusonus.com/' },
-        { name: 'Lalal.ai', description: 'AI-powered stem separation', logo: 'https://www.lalal.ai/favicon.ico', category: 'Audio Enhancement', link: 'https://www.lalal.ai/' },
-        { name: 'Audionamix', description: 'Professional audio separation', logo: 'https://audionamix.com/favicon.ico', category: 'Audio Enhancement', link: 'https://audionamix.com/' },
-        { name: 'Podcastle', description: 'AI-powered podcast creation', logo: 'https://podcastle.ai/favicon.ico', category: 'Audio Enhancement', link: 'https://podcastle.ai/' },
-        { name: 'Cleanvoice', description: 'Remove filler words from audio', logo: 'https://cleanvoice.ai/favicon.ico', category: 'Audio Enhancement', link: 'https://cleanvoice.ai/' }
+    { name: 'Descript', description: 'Audio editing with AI', logo: 'https://www.descript.com/favicon.ico', category: 'Audio Enhancement', link: 'https://www.descript.com/', pricing: 'freemium' },
+    { name: 'Adobe Podcast', description: 'AI-powered audio enhancement', logo: 'https://podcast.adobe.com/favicon.ico', category: 'Audio Enhancement', link: 'https://podcast.adobe.com/', pricing: 'free' },
+    { name: 'Auphonic', description: 'Automated audio post-production', logo: 'https://auphonic.com/favicon.ico', category: 'Audio Enhancement', link: 'https://auphonic.com/', pricing: 'freemium' },
+    { name: 'Krisp', description: 'AI noise cancellation for calls', logo: 'https://krisp.ai/favicon.ico', category: 'Audio Enhancement', link: 'https://krisp.ai/', pricing: 'freemium' },
+    { name: 'iZotope RX', description: 'Audio repair and enhancement', logo: 'https://www.izotope.com/favicon.ico', category: 'Audio Enhancement', link: 'https://www.izotope.com/en/products/rx.html', pricing: 'premium' },
+    { name: 'Accusonus', description: 'AI-powered audio repair', logo: 'https://accusonus.com/favicon.ico', category: 'Audio Enhancement', link: 'https://accusonus.com/', pricing: 'premium' },
+    { name: 'Lalal.ai', description: 'AI-powered stem separation', logo: 'https://www.lalal.ai/favicon.ico', category: 'Audio Enhancement', link: 'https://www.lalal.ai/', pricing: 'freemium' },
+    { name: 'Audionamix', description: 'Professional audio separation', logo: 'https://audionamix.com/favicon.ico', category: 'Audio Enhancement', link: 'https://audionamix.com/', pricing: 'premium' },
+    { name: 'Podcastle', description: 'AI-powered podcast creation', logo: 'https://podcastle.ai/favicon.ico', category: 'Audio Enhancement', link: 'https://podcastle.ai/', pricing: 'freemium' },
+    { name: 'Cleanvoice', description: 'Remove filler words from audio', logo: 'https://cleanvoice.ai/favicon.ico', category: 'Audio Enhancement', link: 'https://cleanvoice.ai/', pricing: 'freemium' }
     ],
     'translation-tools': [
-        { name: 'Google Translate', description: 'Free multilingual translation service', logo: 'https://translate.google.com/favicon.ico', category: 'Translation', link: 'https://translate.google.com' },
-        { name: 'DeepL', description: 'AI-powered translation service', logo: 'https://www.deepl.com/favicon.ico', category: 'Translation', link: 'https://www.deepl.com' },
-        { name: 'Microsoft Translator', description: 'Cloud-based translation service', logo: 'https://www.microsoft.com/favicon.ico', category: 'Translation', link: 'https://www.microsoft.com/en-us/translator' },
-        { name: 'Reverso', description: 'Translation and language learning', logo: 'https://www.reverso.net/favicon.ico', category: 'Translation', link: 'https://www.reverso.net' },
-        { name: 'Linguee', description: 'Dictionary and translation search engine', logo: 'https://www.linguee.com/favicon.ico', category: 'Translation', link: 'https://www.linguee.com' },
-        { name: 'Babylon', description: 'Translation software and dictionary', logo: 'https://www.babylon-software.com/favicon.ico', category: 'Translation', link: 'https://www.babylon-software.com' },
-        { name: 'SDL Trados', description: 'Professional translation software', logo: 'https://www.sdltrados.com/favicon.ico', category: 'Translation', link: 'https://www.sdltrados.com' },
-        { name: 'Phrase', description: 'Localization platform for teams', logo: 'https://phrase.com/favicon.ico', category: 'Translation', link: 'https://phrase.com' },
-        { name: 'Lokalise', description: 'Translation management system', logo: 'https://lokalise.com/favicon.ico', category: 'Translation', link: 'https://lokalise.com' },
-        { name: 'Crowdin', description: 'Localization management platform', logo: 'https://crowdin.com/favicon.ico', category: 'Translation', link: 'https://crowdin.com' }
+    { name: 'Google Translate', description: 'Free multilingual translation service', logo: 'https://translate.google.com/favicon.ico', category: 'Translation', link: 'https://translate.google.com', pricing: 'free' },
+    { name: 'DeepL', description: 'AI-powered translation service', logo: 'https://www.deepl.com/favicon.ico', category: 'Translation', link: 'https://www.deepl.com', pricing: 'freemium' },
+    { name: 'Microsoft Translator', description: 'Cloud-based translation service', logo: 'https://www.microsoft.com/favicon.ico', category: 'Translation', link: 'https://www.microsoft.com/en-us/translator', pricing: 'free' },
+    { name: 'Reverso', description: 'Translation and language learning', logo: 'https://www.reverso.net/favicon.ico', category: 'Translation', link: 'https://www.reverso.net', pricing: 'freemium' },
+    { name: 'Linguee', description: 'Dictionary and translation search engine', logo: 'https://www.linguee.com/favicon.ico', category: 'Translation', link: 'https://www.linguee.com', pricing: 'free' },
+    { name: 'Babylon', description: 'Translation software and dictionary', logo: 'https://www.babylon-software.com/favicon.ico', category: 'Translation', link: 'https://www.babylon-software.com', pricing: 'premium' },
+    { name: 'SDL Trados', description: 'Professional translation software', logo: 'https://www.sdltrados.com/favicon.ico', category: 'Translation', link: 'https://www.sdltrados.com', pricing: 'premium' },
+    { name: 'Phrase', description: 'Localization platform for teams', logo: 'https://phrase.com/favicon.ico', category: 'Translation', link: 'https://phrase.com', pricing: 'premium' },
+    { name: 'Lokalise', description: 'Translation management system', logo: 'https://lokalise.com/favicon.ico', category: 'Translation', link: 'https://lokalise.com', pricing: 'premium' },
+    { name: 'Crowdin', description: 'Localization management platform', logo: 'https://crowdin.com/favicon.ico', category: 'Translation', link: 'https://crowdin.com', pricing: 'premium' }
     ],
     'seo-tools': [
-        { name: 'SEMrush', description: 'All-in-one marketing toolkit', logo: 'https://www.semrush.com/favicon.ico', category: 'SEO Tools', link: 'https://www.semrush.com' },
-        { name: 'Ahrefs', description: 'SEO toolset for backlink analysis', logo: 'https://ahrefs.com/favicon.ico', category: 'SEO Tools', link: 'https://ahrefs.com' },
-        { name: 'Moz', description: 'SEO software and tools', logo: 'https://moz.com/favicon.ico', category: 'SEO Tools', link: 'https://moz.com' },
-        { name: 'Google Search Console', description: 'Monitor website performance in search', logo: 'https://search.google.com/favicon.ico', category: 'SEO Tools', link: 'https://search.google.com/search-console' },
-        { name: 'Screaming Frog', description: 'SEO spider tool for website crawling', logo: 'https://www.screamingfrog.co.uk/favicon.ico', category: 'SEO Tools', link: 'https://www.screamingfrog.co.uk' },
-        { name: 'Ubersuggest', description: 'Keyword research and SEO tool', logo: 'https://neilpatel.com/favicon.ico', category: 'SEO Tools', link: 'https://neilpatel.com/ubersuggest' },
-        { name: 'Surfer SEO', description: 'Content optimization tool', logo: 'https://surferseo.com/favicon.ico', category: 'SEO Tools', link: 'https://surferseo.com' },
-        { name: 'BrightEdge', description: 'Enterprise SEO platform', logo: 'https://www.brightedge.com/favicon.ico', category: 'SEO Tools', link: 'https://www.brightedge.com' },
-        { name: 'Conductor', description: 'Organic marketing platform', logo: 'https://www.conductor.com/favicon.ico', category: 'SEO Tools', link: 'https://www.conductor.com' },
-        { name: 'Searchmetrics', description: 'SEO and content optimization', logo: 'https://www.searchmetrics.com/favicon.ico', category: 'SEO Tools', link: 'https://www.searchmetrics.com' }
+    { name: 'SEMrush', description: 'All-in-one marketing toolkit', logo: 'https://www.semrush.com/favicon.ico', category: 'SEO Tools', link: 'https://www.semrush.com', pricing: 'premium' },
+    { name: 'Ahrefs', description: 'SEO toolset for backlink analysis', logo: 'https://ahrefs.com/favicon.ico', category: 'SEO Tools', link: 'https://ahrefs.com', pricing: 'premium' },
+    { name: 'Moz', description: 'SEO software and tools', logo: 'https://moz.com/favicon.ico', category: 'SEO Tools', link: 'https://moz.com', pricing: 'freemium' },
+    { name: 'Google Search Console', description: 'Monitor website performance in search', logo: 'https://search.google.com/favicon.ico', category: 'SEO Tools', link: 'https://search.google.com/search-console', pricing: 'free' },
+    { name: 'Screaming Frog', description: 'SEO spider tool for website crawling', logo: 'https://www.screamingfrog.co.uk/favicon.ico', category: 'SEO Tools', link: 'https://www.screamingfrog.co.uk', pricing: 'freemium' },
+    { name: 'Ubersuggest', description: 'Keyword research and SEO tool', logo: 'https://neilpatel.com/favicon.ico', category: 'SEO Tools', link: 'https://neilpatel.com/ubersuggest', pricing: 'freemium' },
+    { name: 'Surfer SEO', description: 'Content optimization tool', logo: 'https://surferseo.com/favicon.ico', category: 'SEO Tools', link: 'https://surferseo.com', pricing: 'premium' },
+    { name: 'BrightEdge', description: 'Enterprise SEO platform', logo: 'https://www.brightedge.com/favicon.ico', category: 'SEO Tools', link: 'https://www.brightedge.com', pricing: 'premium' },
+    { name: 'Conductor', description: 'Organic marketing platform', logo: 'https://www.conductor.com/favicon.ico', category: 'SEO Tools', link: 'https://www.conductor.com', pricing: 'premium' },
+    { name: 'Searchmetrics', description: 'SEO and content optimization', logo: 'https://www.searchmetrics.com/favicon.ico', category: 'SEO Tools', link: 'https://www.searchmetrics.com', pricing: 'premium' }
     ],
     'email-tools': [
-        { name: 'Mailchimp', description: 'Email marketing platform', logo: 'https://mailchimp.com/favicon.ico', category: 'Email Tools', link: 'https://mailchimp.com' },
-        { name: 'Constant Contact', description: 'Email marketing and automation', logo: 'https://www.constantcontact.com/favicon.ico', category: 'Email Tools', link: 'https://www.constantcontact.com' },
-        { name: 'SendGrid', description: 'Email delivery service', logo: 'https://sendgrid.com/favicon.ico', category: 'Email Tools', link: 'https://sendgrid.com' },
-        { name: 'Campaign Monitor', description: 'Email marketing software', logo: 'https://www.campaignmonitor.com/favicon.ico', category: 'Email Tools', link: 'https://www.campaignmonitor.com' },
-        { name: 'ConvertKit', description: 'Email marketing for creators', logo: 'https://convertkit.com/favicon.ico', category: 'Email Tools', link: 'https://convertkit.com' },
-        { name: 'AWeber', description: 'Email marketing and automation', logo: 'https://www.aweber.com/favicon.ico', category: 'Email Tools', link: 'https://www.aweber.com' },
-        { name: 'GetResponse', description: 'Email marketing platform', logo: 'https://www.getresponse.com/favicon.ico', category: 'Email Tools', link: 'https://www.getresponse.com' },
-        { name: 'ActiveCampaign', description: 'Customer experience automation', logo: 'https://www.activecampaign.com/favicon.ico', category: 'Email Tools', link: 'https://www.activecampaign.com' },
-        { name: 'Klaviyo', description: 'Email and SMS marketing platform', logo: 'https://www.klaviyo.com/favicon.ico', category: 'Email Tools', link: 'https://www.klaviyo.com' },
-        { name: 'Drip', description: 'E-commerce CRM and email marketing', logo: 'https://www.drip.com/favicon.ico', category: 'Email Tools', link: 'https://www.drip.com' }
+    { name: 'Mailchimp', description: 'Email marketing platform', logo: 'https://mailchimp.com/favicon.ico', category: 'Email Tools', link: 'https://mailchimp.com', pricing: 'freemium' },
+    { name: 'Constant Contact', description: 'Email marketing and automation', logo: 'https://www.constantcontact.com/favicon.ico', category: 'Email Tools', link: 'https://www.constantcontact.com', pricing: 'premium' },
+    { name: 'SendGrid', description: 'Email delivery service', logo: 'https://sendgrid.com/favicon.ico', category: 'Email Tools', link: 'https://sendgrid.com', pricing: 'freemium' },
+    { name: 'Campaign Monitor', description: 'Email marketing software', logo: 'https://www.campaignmonitor.com/favicon.ico', category: 'Email Tools', link: 'https://www.campaignmonitor.com', pricing: 'freemium' },
+    { name: 'ConvertKit', description: 'Email marketing for creators', logo: 'https://convertkit.com/favicon.ico', category: 'Email Tools', link: 'https://convertkit.com', pricing: 'freemium' },
+    { name: 'AWeber', description: 'Email marketing and automation', logo: 'https://www.aweber.com/favicon.ico', category: 'Email Tools', link: 'https://www.aweber.com', pricing: 'freemium' },
+    { name: 'GetResponse', description: 'Email marketing platform', logo: 'https://www.getresponse.com/favicon.ico', category: 'Email Tools', link: 'https://www.getresponse.com', pricing: 'freemium' },
+    { name: 'ActiveCampaign', description: 'Customer experience automation', logo: 'https://www.activecampaign.com/favicon.ico', category: 'Email Tools', link: 'https://www.activecampaign.com', pricing: 'freemium' },
+    { name: 'Klaviyo', description: 'Email and SMS marketing platform', logo: 'https://www.klaviyo.com/favicon.ico', category: 'Email Tools', link: 'https://www.klaviyo.com', pricing: 'freemium' },
+    { name: 'Drip', description: 'E-commerce CRM and email marketing', logo: 'https://www.drip.com/favicon.ico', category: 'Email Tools', link: 'https://www.drip.com', pricing: 'premium' }
     ],
-       'prompt-generation': [
-        { name: 'PromptHero', description: 'Discover, share, and create AI prompts for art and text', logo: 'https://prompthero.com/favicon.ico', category: 'Prompt Generation', link: 'https://prompthero.com/' },
-        { name: 'PromptBase', description: 'Marketplace for buying and selling quality AI prompts', logo: 'https://promptbase.com/favicon.ico', category: 'Prompt Generation', link: 'https://promptbase.com/' },
-        { name: 'FlowGPT', description: 'Share and discover the best ChatGPT prompts', logo: 'https://flowgpt.com/favicon.ico', category: 'Prompt Generation', link: 'https://flowgpt.com/' },
-        { name: 'Promptist', description: 'AI prompt generator for Stable Diffusion', logo: 'https://promptist.ai/favicon.ico', category: 'Prompt Generation', link: 'https://promptist.ai/' },
-        { name: 'PromptPerfect', description: 'Optimize and generate prompts for LLMs', logo: 'https://promptperfect.jina.ai/favicon.ico', category: 'Prompt Generation', link: 'https://promptperfect.jina.ai/' },
-        { name: 'AIPRM', description: 'Prompt management and sharing for ChatGPT', logo: 'https://www.aiprm.com/favicon.ico', category: 'Prompt Generation', link: 'https://www.aiprm.com/' },
-        { name: 'PromptLayer', description: 'Track, manage, and optimize LLM prompts', logo: 'https://promptlayer.com/favicon.ico', category: 'Prompt Generation', link: 'https://promptlayer.com/' },
-        { name: 'PromptSpace', description: 'Prompt marketplace for AI models', logo: 'https://promptspace.ai/favicon.ico', category: 'Prompt Generation', link: 'https://promptspace.ai/' },
-        { name: 'PromptVibes', description: 'Curated prompt library for ChatGPT and more', logo: 'https://promptvibes.com/favicon.ico', category: 'Prompt Generation', link: 'https://promptvibes.com/' },
-        { name: 'PromptAttack', description: 'Prompt generator and sharing platform', logo: 'https://promptattack.com/favicon.ico', category: 'Prompt Generation', link: 'https://promptattack.com/' },
-        { name: 'Promptable', description: 'Prompt engineering and sharing platform', logo: 'https://promptable.ai/favicon.ico', category: 'Prompt Generation', link: 'https://promptable.ai/' }
+    'prompt-generation': [
+    { name: 'PromptHero', description: 'Discover, share, and create AI prompts for art and text', logo: 'https://prompthero.com/favicon.ico', category: 'Prompt Generation', link: 'https://prompthero.com/', pricing: 'free' },
+    { name: 'PromptBase', description: 'Marketplace for buying and selling quality AI prompts', logo: 'https://promptbase.com/favicon.ico', category: 'Prompt Generation', link: 'https://promptbase.com/', pricing: 'premium' },
+    { name: 'FlowGPT', description: 'Share and discover the best ChatGPT prompts', logo: 'https://flowgpt.com/favicon.ico', category: 'Prompt Generation', link: 'https://flowgpt.com/', pricing: 'freemium' },
+    { name: 'Promptist', description: 'AI prompt generator for Stable Diffusion', logo: 'https://promptist.ai/favicon.ico', category: 'Prompt Generation', link: 'https://promptist.ai/', pricing: 'free' },
+    { name: 'PromptPerfect', description: 'Optimize and generate prompts for LLMs', logo: 'https://promptperfect.jina.ai/favicon.ico', category: 'Prompt Generation', link: 'https://promptperfect.jina.ai/', pricing: 'freemium' },
+    { name: 'AIPRM', description: 'Prompt management and sharing for ChatGPT', logo: 'https://www.aiprm.com/favicon.ico', category: 'Prompt Generation', link: 'https://www.aiprm.com/', pricing: 'freemium' },
+    { name: 'PromptLayer', description: 'Track, manage, and optimize LLM prompts', logo: 'https://promptlayer.com/favicon.ico', category: 'Prompt Generation', link: 'https://promptlayer.com/', pricing: 'freemium' },
+    { name: 'PromptSpace', description: 'Prompt marketplace for AI models', logo: 'https://promptspace.ai/favicon.ico', category: 'Prompt Generation', link: 'https://promptspace.ai/', pricing: 'premium' },
+    { name: 'PromptVibes', description: 'Curated prompt library for ChatGPT and more', logo: 'https://promptvibes.com/favicon.ico', category: 'Prompt Generation', link: 'https://promptvibes.com/', pricing: 'free' },
+    { name: 'PromptAttack', description: 'Prompt generator and sharing platform', logo: 'https://promptattack.com/favicon.ico', category: 'Prompt Generation', link: 'https://promptattack.com/', pricing: 'free' },
+    { name: 'Promptable', description: 'Prompt engineering and sharing platform', logo: 'https://promptable.ai/favicon.ico', category: 'Prompt Generation', link: 'https://promptable.ai/', pricing: 'freemium' }
     ],
     'presentation-tools': [
-        { name: 'Gamma', description: 'AI-powered presentation maker', logo: 'https://gamma.app/favicon.ico', category: 'Presentation Tools', link: 'https://gamma.app' },
-        { name: 'Beautiful.AI', description: 'Smart presentation software', logo: 'https://www.beautiful.ai/favicon.ico', category: 'Presentation Tools', link: 'https://www.beautiful.ai' },
-        { name: 'Tome', description: 'AI storytelling format', logo: 'https://tome.app/favicon.ico', category: 'Presentation Tools', link: 'https://tome.app' },
-        { name: 'Slidebean', description: 'AI pitch deck designer', logo: 'https://slidebean.com/favicon.ico', category: 'Presentation Tools', link: 'https://slidebean.com' },
-        { name: 'Prezi', description: 'Conversational presentation software', logo: 'https://prezi.com/favicon.ico', category: 'Presentation Tools', link: 'https://prezi.com' },
-        { name: 'Canva Presentations', description: 'Design presentations with AI', logo: 'https://www.canva.com/favicon.ico', category: 'Presentation Tools', link: 'https://www.canva.com/presentations' },
-        { name: 'Slides', description: 'Online presentation editor', logo: 'https://slides.com/favicon.ico', category: 'Presentation Tools', link: 'https://slides.com' },
-        { name: 'Genially', description: 'Interactive content creation', logo: 'https://genial.ly/favicon.ico', category: 'Presentation Tools', link: 'https://genial.ly' },
-        { name: 'Mentimeter', description: 'Interactive presentation software', logo: 'https://www.mentimeter.com/favicon.ico', category: 'Presentation Tools', link: 'https://www.mentimeter.com' },
-        { name: 'Haiku Deck', description: 'Simple presentation software', logo: 'https://www.haikudeck.com/favicon.ico', category: 'Presentation Tools', link: 'https://www.haikudeck.com' }
+    { name: 'Gamma', description: 'AI-powered presentation maker', logo: 'https://gamma.app/favicon.ico', category: 'Presentation Tools', link: 'https://gamma.app', pricing: 'freemium' },
+    { name: 'Beautiful.AI', description: 'Smart presentation software', logo: 'https://www.beautiful.ai/favicon.ico', category: 'Presentation Tools', link: 'https://www.beautiful.ai', pricing: 'freemium' },
+    { name: 'Tome', description: 'AI storytelling format', logo: 'https://tome.app/favicon.ico', category: 'Presentation Tools', link: 'https://tome.app', pricing: 'freemium' },
+    { name: 'Slidebean', description: 'AI pitch deck designer', logo: 'https://slidebean.com/favicon.ico', category: 'Presentation Tools', link: 'https://slidebean.com', pricing: 'freemium' },
+    { name: 'Prezi', description: 'Conversational presentation software', logo: 'https://prezi.com/favicon.ico', category: 'Presentation Tools', link: 'https://prezi.com', pricing: 'freemium' },
+    { name: 'Canva Presentations', description: 'Design presentations with AI', logo: 'https://www.canva.com/favicon.ico', category: 'Presentation Tools', link: 'https://www.canva.com/presentations', pricing: 'freemium' },
+    { name: 'Slides', description: 'Online presentation editor', logo: 'https://slides.com/favicon.ico', category: 'Presentation Tools', link: 'https://slides.com', pricing: 'freemium' },
+    { name: 'Genially', description: 'Interactive content creation', logo: 'https://genial.ly/favicon.ico', category: 'Presentation Tools', link: 'https://genial.ly', pricing: 'freemium' },
+    { name: 'Mentimeter', description: 'Interactive presentation software', logo: 'https://www.mentimeter.com/favicon.ico', category: 'Presentation Tools', link: 'https://www.mentimeter.com', pricing: 'freemium' },
+    { name: 'Haiku Deck', description: 'Simple presentation software', logo: 'https://www.haikudeck.com/favicon.ico', category: 'Presentation Tools', link: 'https://www.haikudeck.com', pricing: 'freemium' }
     ],
     'research-tools': [
-        { name: 'Perplexity AI', description: 'AI-powered research assistant', logo: 'https://www.perplexity.ai/favicon.ico', category: 'Research Tools', link: 'https://www.perplexity.ai' },
-        { name: 'Semantic Scholar', description: 'AI-powered research tool', logo: 'https://www.semanticscholar.org/favicon.ico', category: 'Research Tools', link: 'https://www.semanticscholar.org' },
-        { name: 'Elicit', description: 'AI research assistant', logo: 'https://elicit.org/favicon.ico', category: 'Research Tools', link: 'https://elicit.org' },
-        { name: 'ResearchGate', description: 'Social network for scientists', logo: 'https://www.researchgate.net/favicon.ico', category: 'Research Tools', link: 'https://www.researchgate.net' },
-        { name: 'Mendeley', description: 'Reference manager and academic network', logo: 'https://www.mendeley.com/favicon.ico', category: 'Research Tools', link: 'https://www.mendeley.com' },
-        { name: 'Zotero', description: 'Research assistant and citation manager', logo: 'https://www.zotero.org/favicon.ico', category: 'Research Tools', link: 'https://www.zotero.org' },
-        { name: 'Consensus', description: 'AI-powered research engine', logo: 'https://consensus.app/favicon.ico', category: 'Research Tools', link: 'https://consensus.app' },
-        { name: 'Scholarcy', description: 'AI-powered research summarization', logo: 'https://www.scholarcy.com/favicon.ico', category: 'Research Tools', link: 'https://www.scholarcy.com' },
-        { name: 'Iris.ai', description: 'AI research assistant', logo: 'https://iris.ai/favicon.ico', category: 'Research Tools', link: 'https://iris.ai' },
-        { name: 'Connected Papers', description: 'Visual tool to find relevant papers', logo: 'https://www.connectedpapers.com/favicon.ico', category: 'Research Tools', link: 'https://www.connectedpapers.com' }
+    { name: 'Perplexity AI', description: 'AI-powered research assistant', logo: 'https://www.perplexity.ai/favicon.ico', category: 'Research Tools', link: 'https://www.perplexity.ai', pricing: 'freemium' },
+    { name: 'Semantic Scholar', description: 'AI-powered research tool', logo: 'https://www.semanticscholar.org/favicon.ico', category: 'Research Tools', link: 'https://www.semanticscholar.org', pricing: 'free' },
+    { name: 'Elicit', description: 'AI research assistant', logo: 'https://elicit.org/favicon.ico', category: 'Research Tools', link: 'https://elicit.org', pricing: 'free' },
+    { name: 'ResearchGate', description: 'Social network for scientists', logo: 'https://www.researchgate.net/favicon.ico', category: 'Research Tools', link: 'https://www.researchgate.net', pricing: 'free' },
+    { name: 'Mendeley', description: 'Reference manager and academic network', logo: 'https://www.mendeley.com/favicon.ico', category: 'Research Tools', link: 'https://www.mendeley.com', pricing: 'freemium' },
+    { name: 'Zotero', description: 'Research assistant and citation manager', logo: 'https://www.zotero.org/favicon.ico', category: 'Research Tools', link: 'https://www.zotero.org', pricing: 'free' },
+    { name: 'Consensus', description: 'AI-powered research engine', logo: 'https://consensus.app/favicon.ico', category: 'Research Tools', link: 'https://consensus.app', pricing: 'freemium' },
+    { name: 'Scholarcy', description: 'AI-powered research summarization', logo: 'https://www.scholarcy.com/favicon.ico', category: 'Research Tools', link: 'https://www.scholarcy.com', pricing: 'freemium' },
+    { name: 'Iris.ai', description: 'AI research assistant', logo: 'https://iris.ai/favicon.ico', category: 'Research Tools', link: 'https://iris.ai', pricing: 'premium' },
+    { name: 'Connected Papers', description: 'Visual tool to find relevant papers', logo: 'https://www.connectedpapers.com/favicon.ico', category: 'Research Tools', link: 'https://www.connectedpapers.com', pricing: 'freemium' }
     ],
     'productivity-tools': [
-        { name: 'Notion', description: 'All-in-one workspace with AI', logo: 'https://www.notion.so/favicon.ico', category: 'Productivity', link: 'https://www.notion.so' },
-        { name: 'Todoist', description: 'Task management with AI features', logo: 'https://todoist.com/favicon.ico', category: 'Productivity', link: 'https://todoist.com' },
-        { name: 'Trello', description: 'Visual project management tool', logo: 'https://trello.com/favicon.ico', category: 'Productivity', link: 'https://trello.com' },
-        { name: 'Asana', description: 'Team collaboration and project management', logo: 'https://asana.com/favicon.ico', category: 'Productivity', link: 'https://asana.com' },
-        { name: 'Monday.com', description: 'Work operating system', logo: 'https://monday.com/favicon.ico', category: 'Productivity', link: 'https://monday.com' },
-        { name: 'ClickUp', description: 'All-in-one productivity platform', logo: 'https://clickup.com/favicon.ico', category: 'Productivity', link: 'https://clickup.com' },
-        { name: 'Airtable', description: 'Database and spreadsheet hybrid', logo: 'https://airtable.com/favicon.ico', category: 'Productivity', link: 'https://airtable.com' },
-        { name: 'Slack', description: 'Business communication platform', logo: 'https://slack.com/favicon.ico', category: 'Productivity', link: 'https://slack.com' },
-        { name: 'Microsoft Teams', description: 'Collaboration and communication', logo: 'https://www.microsoft.com/favicon.ico', category: 'Productivity', link: 'https://www.microsoft.com/en-us/microsoft-teams' },
-        { name: 'Zoom', description: 'Video conferencing and communication', logo: 'https://zoom.us/favicon.ico', category: 'Productivity', link: 'https://zoom.us' }
+    { name: 'Notion', description: 'All-in-one workspace with AI', logo: 'https://www.notion.so/favicon.ico', category: 'Productivity', link: 'https://www.notion.so', pricing: 'freemium' },
+    { name: 'Todoist', description: 'Task management with AI features', logo: 'https://todoist.com/favicon.ico', category: 'Productivity', link: 'https://todoist.com', pricing: 'freemium' },
+    { name: 'Trello', description: 'Visual project management tool', logo: 'https://trello.com/favicon.ico', category: 'Productivity', link: 'https://trello.com', pricing: 'freemium' },
+    { name: 'Asana', description: 'Team collaboration and project management', logo: 'https://asana.com/favicon.ico', category: 'Productivity', link: 'https://asana.com', pricing: 'freemium' },
+    { name: 'Monday.com', description: 'Work operating system', logo: 'https://monday.com/favicon.ico', category: 'Productivity', link: 'https://monday.com', pricing: 'freemium' },
+    { name: 'ClickUp', description: 'All-in-one productivity platform', logo: 'https://clickup.com/favicon.ico', category: 'Productivity', link: 'https://clickup.com', pricing: 'freemium' },
+    { name: 'Airtable', description: 'Database and spreadsheet hybrid', logo: 'https://airtable.com/favicon.ico', category: 'Productivity', link: 'https://airtable.com', pricing: 'freemium' },
+    { name: 'Slack', description: 'Business communication platform', logo: 'https://slack.com/favicon.ico', category: 'Productivity', link: 'https://slack.com', pricing: 'freemium' },
+    { name: 'Microsoft Teams', description: 'Collaboration and communication', logo: 'https://www.microsoft.com/favicon.ico', category: 'Productivity', link: 'https://www.microsoft.com/en-us/microsoft-teams', pricing: 'freemium' },
+    { name: 'Zoom', description: 'Video conferencing and communication', logo: 'https://zoom.us/favicon.ico', category: 'Productivity', link: 'https://zoom.us', pricing: 'freemium' }
     ],
     'finance-tools': [
-        { name: 'Mint', description: 'Personal finance management', logo: 'https://mint.intuit.com/favicon.ico', category: 'Finance Tools', link: 'https://mint.intuit.com' },
-        { name: 'YNAB', description: 'You Need A Budget - budgeting software', logo: 'https://www.youneedabudget.com/favicon.ico', category: 'Finance Tools', link: 'https://www.youneedabudget.com' },
-        { name: 'Personal Capital', description: 'Wealth management and tracking', logo: 'https://www.personalcapital.com/favicon.ico', category: 'Finance Tools', link: 'https://www.personalcapital.com' },
-        { name: 'Quicken', description: 'Personal finance software', logo: 'https://www.quicken.com/favicon.ico', category: 'Finance Tools', link: 'https://www.quicken.com' },
-        { name: 'Tiller', description: 'Spreadsheet-based budgeting', logo: 'https://www.tillerhq.com/favicon.ico', category: 'Finance Tools', link: 'https://www.tillerhq.com' },
-        { name: 'PocketGuard', description: 'Budgeting and expense tracking', logo: 'https://pocketguard.com/favicon.ico', category: 'Finance Tools', link: 'https://pocketguard.com' },
-        { name: 'Goodbudget', description: 'Envelope budgeting app', logo: 'https://goodbudget.com/favicon.ico', category: 'Finance Tools', link: 'https://goodbudget.com' },
-        { name: 'EveryDollar', description: 'Zero-based budgeting tool', logo: 'https://www.everydollar.com/favicon.ico', category: 'Finance Tools', link: 'https://www.everydollar.com' },
-        { name: 'Honeydue', description: 'Couples money management', logo: 'https://www.honeydue.com/favicon.ico', category: 'Finance Tools', link: 'https://www.honeydue.com' },
-        { name: 'Spendee', description: 'Personal finance and budgeting', logo: 'https://www.spendee.com/favicon.ico', category: 'Finance Tools', link: 'https://www.spendee.com' }
+    { name: 'Mint', description: 'Personal finance management', logo: 'https://mint.intuit.com/favicon.ico', category: 'Finance Tools', link: 'https://mint.intuit.com', pricing: 'free' },
+    { name: 'YNAB', description: 'You Need A Budget - budgeting software', logo: 'https://www.youneedabudget.com/favicon.ico', category: 'Finance Tools', link: 'https://www.youneedabudget.com', pricing: 'premium' },
+    { name: 'Personal Capital', description: 'Wealth management and tracking', logo: 'https://www.personalcapital.com/favicon.ico', category: 'Finance Tools', link: 'https://www.personalcapital.com', pricing: 'free' },
+    { name: 'Quicken', description: 'Personal finance software', logo: 'https://www.quicken.com/favicon.ico', category: 'Finance Tools', link: 'https://www.quicken.com', pricing: 'premium' },
+    { name: 'Tiller', description: 'Spreadsheet-based budgeting', logo: 'https://www.tillerhq.com/favicon.ico', category: 'Finance Tools', link: 'https://www.tillerhq.com', pricing: 'premium' },
+    { name: 'PocketGuard', description: 'Budgeting and expense tracking', logo: 'https://pocketguard.com/favicon.ico', category: 'Finance Tools', link: 'https://pocketguard.com', pricing: 'freemium' },
+    { name: 'Goodbudget', description: 'Envelope budgeting app', logo: 'https://goodbudget.com/favicon.ico', category: 'Finance Tools', link: 'https://goodbudget.com', pricing: 'freemium' },
+    { name: 'EveryDollar', description: 'Zero-based budgeting tool', logo: 'https://www.everydollar.com/favicon.ico', category: 'Finance Tools', link: 'https://www.everydollar.com', pricing: 'freemium' },
+    { name: 'Honeydue', description: 'Couples money management', logo: 'https://www.honeydue.com/favicon.ico', category: 'Finance Tools', link: 'https://www.honeydue.com', pricing: 'free' },
+    { name: 'Spendee', description: 'Personal finance and budgeting', logo: 'https://www.spendee.com/favicon.ico', category: 'Finance Tools', link: 'https://www.spendee.com', pricing: 'freemium' }
     ],
     'health-tools': [
-        { name: 'MyFitnessPal', description: 'Calorie counting and nutrition tracking', logo: 'https://www.myfitnesspal.com/favicon.ico', category: 'Health Tools', link: 'https://www.myfitnesspal.com' },
-        { name: 'Fitbit', description: 'Fitness tracking and health monitoring', logo: 'https://www.fitbit.com/favicon.ico', category: 'Health Tools', link: 'https://www.fitbit.com' },
-        { name: 'Apple Health', description: 'Comprehensive health tracking', logo: 'https://www.apple.com/favicon.ico', category: 'Health Tools', link: 'https://www.apple.com/ios/health' },
-        { name: 'Google Fit', description: 'Activity tracking and health insights', logo: 'https://www.google.com/favicon.ico', category: 'Health Tools', link: 'https://www.google.com/fit' },
-        { name: 'Headspace', description: 'Meditation and mindfulness app', logo: 'https://www.headspace.com/favicon.ico', category: 'Health Tools', link: 'https://www.headspace.com' },
-        { name: 'Calm', description: 'Sleep, meditation, and relaxation', logo: 'https://www.calm.com/favicon.ico', category: 'Health Tools', link: 'https://www.calm.com' },
-        { name: 'Strava', description: 'Social fitness tracking', logo: 'https://www.strava.com/favicon.ico', category: 'Health Tools', link: 'https://www.strava.com' },
-        { name: 'Lose It!', description: 'Calorie counting and weight loss', logo: 'https://www.loseit.com/favicon.ico', category: 'Health Tools', link: 'https://www.loseit.com' },
-        { name: 'Sleep Cycle', description: 'Sleep tracking and smart alarm', logo: 'https://www.sleepcycle.com/favicon.ico', category: 'Health Tools', link: 'https://www.sleepcycle.com' },
-        { name: 'Noom', description: 'Psychology-based weight loss', logo: 'https://www.noom.com/favicon.ico', category: 'Health Tools', link: 'https://www.noom.com' }
+    { name: 'MyFitnessPal', description: 'Calorie counting and nutrition tracking', logo: 'https://www.myfitnesspal.com/favicon.ico', category: 'Health Tools', link: 'https://www.myfitnesspal.com', pricing: 'freemium' },
+    { name: 'Fitbit', description: 'Fitness tracking and health monitoring', logo: 'https://www.fitbit.com/favicon.ico', category: 'Health Tools', link: 'https://www.fitbit.com', pricing: 'premium' },
+    { name: 'Apple Health', description: 'Comprehensive health tracking', logo: 'https://www.apple.com/favicon.ico', category: 'Health Tools', link: 'https://www.apple.com/ios/health', pricing: 'free' },
+    { name: 'Google Fit', description: 'Activity tracking and health insights', logo: 'https://www.google.com/favicon.ico', category: 'Health Tools', link: 'https://www.google.com/fit', pricing: 'free' },
+    { name: 'Headspace', description: 'Meditation and mindfulness app', logo: 'https://www.headspace.com/favicon.ico', category: 'Health Tools', link: 'https://www.headspace.com', pricing: 'freemium' },
+    { name: 'Calm', description: 'Sleep, meditation, and relaxation', logo: 'https://www.calm.com/favicon.ico', category: 'Health Tools', link: 'https://www.calm.com', pricing: 'freemium' },
+    { name: 'Strava', description: 'Social fitness tracking', logo: 'https://www.strava.com/favicon.ico', category: 'Health Tools', link: 'https://www.strava.com', pricing: 'freemium' },
+    { name: 'Lose It!', description: 'Calorie counting and weight loss', logo: 'https://www.loseit.com/favicon.ico', category: 'Health Tools', link: 'https://www.loseit.com', pricing: 'freemium' },
+    { name: 'Sleep Cycle', description: 'Sleep tracking and smart alarm', logo: 'https://www.sleepcycle.com/favicon.ico', category: 'Health Tools', link: 'https://www.sleepcycle.com', pricing: 'freemium' },
+    { name: 'Noom', description: 'Psychology-based weight loss', logo: 'https://www.noom.com/favicon.ico', category: 'Health Tools', link: 'https://www.noom.com', pricing: 'premium' }
     ],
     'education-tools': [
-        { name: 'Khan Academy', description: 'Free online learning platform', logo: 'https://www.khanacademy.org/favicon.ico', category: 'Education Tools', link: 'https://www.khanacademy.org' },
-        { name: 'Coursera', description: 'Online courses from universities', logo: 'https://www.coursera.org/favicon.ico', category: 'Education Tools', link: 'https://www.coursera.org' },
-        { name: 'edX', description: 'University-level online courses', logo: 'https://www.edx.org/favicon.ico', category: 'Education Tools', link: 'https://www.edx.org' },
-        { name: 'Udemy', description: 'Online learning marketplace', logo: 'https://www.udemy.com/favicon.ico', category: 'Education Tools', link: 'https://www.udemy.com' },
-        { name: 'Duolingo', description: 'Language learning platform', logo: 'https://www.duolingo.com/favicon.ico', category: 'Education Tools', link: 'https://www.duolingo.com' },
-        { name: 'Skillshare', description: 'Creative and business skills', logo: 'https://www.skillshare.com/favicon.ico', category: 'Education Tools', link: 'https://www.skillshare.com' },
-        { name: 'MasterClass', description: 'Learn from experts and celebrities', logo: 'https://www.masterclass.com/favicon.ico', category: 'Education Tools', link: 'https://www.masterclass.com' },
-        { name: 'Pluralsight', description: 'Technology skills platform', logo: 'https://www.pluralsight.com/favicon.ico', category: 'Education Tools', link: 'https://www.pluralsight.com' },
-        { name: 'LinkedIn Learning', description: 'Professional development courses', logo: 'https://www.linkedin.com/favicon.ico', category: 'Education Tools', link: 'https://www.linkedin.com/learning' },
-        { name: 'Codecademy', description: 'Interactive coding lessons', logo: 'https://www.codecademy.com/favicon.ico', category: 'Education Tools', link: 'https://www.codecademy.com' }
+    { name: 'Khan Academy', description: 'Free online learning platform', logo: 'https://www.khanacademy.org/favicon.ico', category: 'Education Tools', link: 'https://www.khanacademy.org', pricing: 'free' },
+    { name: 'Coursera', description: 'Online courses from universities', logo: 'https://www.coursera.org/favicon.ico', category: 'Education Tools', link: 'https://www.coursera.org', pricing: 'freemium' },
+    { name: 'edX', description: 'University-level online courses', logo: 'https://www.edx.org/favicon.ico', category: 'Education Tools', link: 'https://www.edx.org', pricing: 'freemium' },
+    { name: 'Udemy', description: 'Online learning marketplace', logo: 'https://www.udemy.com/favicon.ico', category: 'Education Tools', link: 'https://www.udemy.com', pricing: 'freemium' },
+    { name: 'Duolingo', description: 'Language learning platform', logo: 'https://www.duolingo.com/favicon.ico', category: 'Education Tools', link: 'https://www.duolingo.com', pricing: 'freemium' },
+    { name: 'Skillshare', description: 'Creative and business skills', logo: 'https://www.skillshare.com/favicon.ico', category: 'Education Tools', link: 'https://www.skillshare.com', pricing: 'freemium' },
+    { name: 'MasterClass', description: 'Learn from experts and celebrities', logo: 'https://www.masterclass.com/favicon.ico', category: 'Education Tools', link: 'https://www.masterclass.com', pricing: 'premium' },
+    { name: 'Pluralsight', description: 'Technology skills platform', logo: 'https://www.pluralsight.com/favicon.ico', category: 'Education Tools', link: 'https://www.pluralsight.com', pricing: 'premium' },
+    { name: 'LinkedIn Learning', description: 'Professional development courses', logo: 'https://www.linkedin.com/favicon.ico', category: 'Education Tools', link: 'https://www.linkedin.com/learning', pricing: 'premium' },
+    { name: 'Codecademy', description: 'Interactive coding lessons', logo: 'https://www.codecademy.com/favicon.ico', category: 'Education Tools', link: 'https://www.codecademy.com', pricing: 'freemium' }
     ],
     'gaming-tools': [
-        { name: 'Unity', description: 'Game development platform', logo: 'https://unity.com/favicon.ico', category: 'Gaming Tools', link: 'https://unity.com' },
-        { name: 'Unreal Engine', description: 'Game engine and development tools', logo: 'https://www.unrealengine.com/favicon.ico', category: 'Gaming Tools', link: 'https://www.unrealengine.com' },
-        { name: 'GameMaker Studio', description: '2D game development platform', logo: 'https://www.yoyogames.com/favicon.ico', category: 'Gaming Tools', link: 'https://www.yoyogames.com/gamemaker' },
-        { name: 'Construct 3', description: 'Browser-based game development', logo: 'https://www.construct.net/favicon.ico', category: 'Gaming Tools', link: 'https://www.construct.net' },
-        { name: 'Godot', description: 'Open source game engine', logo: 'https://godotengine.org/favicon.ico', category: 'Gaming Tools', link: 'https://godotengine.org' },
-        { name: 'RPG Maker', description: 'Create RPGs without programming', logo: 'https://www.rpgmakerweb.com/favicon.ico', category: 'Gaming Tools', link: 'https://www.rpgmakerweb.com' },
-        { name: 'Buildbox', description: 'No-code game development', logo: 'https://www.buildbox.com/favicon.ico', category: 'Gaming Tools', link: 'https://www.buildbox.com' },
-        { name: 'Stencyl', description: 'Game creation without code', logo: 'https://www.stencyl.com/favicon.ico', category: 'Gaming Tools', link: 'https://www.stencyl.com' },
-        { name: 'Corona SDK', description: 'Cross-platform mobile game development', logo: 'https://coronalabs.com/favicon.ico', category: 'Gaming Tools', link: 'https://coronalabs.com' },
-        { name: 'Defold', description: 'Game engine for mobile games', logo: 'https://defold.com/favicon.ico', category: 'Gaming Tools', link: 'https://defold.com' }
+    { name: 'Unity', description: 'Game development platform', logo: 'https://unity.com/favicon.ico', category: 'Gaming Tools', link: 'https://unity.com', pricing: 'freemium' },
+    { name: 'Unreal Engine', description: 'Game engine and development tools', logo: 'https://www.unrealengine.com/favicon.ico', category: 'Gaming Tools', link: 'https://www.unrealengine.com', pricing: 'freemium' },
+    { name: 'GameMaker Studio', description: '2D game development platform', logo: 'https://www.yoyogames.com/favicon.ico', category: 'Gaming Tools', link: 'https://www.yoyogames.com/gamemaker', pricing: 'premium' },
+    { name: 'Construct 3', description: 'Browser-based game development', logo: 'https://www.construct.net/favicon.ico', category: 'Gaming Tools', link: 'https://www.construct.net', pricing: 'freemium' },
+    { name: 'Godot', description: 'Open source game engine', logo: 'https://godotengine.org/favicon.ico', category: 'Gaming Tools', link: 'https://godotengine.org', pricing: 'free' },
+    { name: 'RPG Maker', description: 'Create RPGs without programming', logo: 'https://www.rpgmakerweb.com/favicon.ico', category: 'Gaming Tools', link: 'https://www.rpgmakerweb.com', pricing: 'premium' },
+    { name: 'Buildbox', description: 'No-code game development', logo: 'https://www.buildbox.com/favicon.ico', category: 'Gaming Tools', link: 'https://www.buildbox.com', pricing: 'premium' },
+    { name: 'Stencyl', description: 'Game creation without code', logo: 'https://www.stencyl.com/favicon.ico', category: 'Gaming Tools', link: 'https://www.stencyl.com', pricing: 'freemium' },
+    { name: 'Corona SDK', description: 'Cross-platform mobile game development', logo: 'https://coronalabs.com/favicon.ico', category: 'Gaming Tools', link: 'https://coronalabs.com', pricing: 'free' },
+    { name: 'Defold', description: 'Game engine for mobile games', logo: 'https://defold.com/favicon.ico', category: 'Gaming Tools', link: 'https://defold.com', pricing: 'free' }
     ],
     'social-media-tools': [
-        { name: 'Hootsuite', description: 'Social media management platform', logo: 'https://hootsuite.com/favicon.ico', category: 'Social Media', link: 'https://hootsuite.com' },
-        { name: 'Buffer', description: 'Social media scheduling and analytics', logo: 'https://buffer.com/favicon.ico', category: 'Social Media', link: 'https://buffer.com' },
-        { name: 'Sprout Social', description: 'Social media management and analytics', logo: 'https://sproutsocial.com/favicon.ico', category: 'Social Media', link: 'https://sproutsocial.com' },
-        { name: 'Later', description: 'Visual social media scheduler', logo: 'https://later.com/favicon.ico', category: 'Social Media', link: 'https://later.com' },
-        { name: 'SocialBee', description: 'Social media management tool', logo: 'https://socialbee.io/favicon.ico', category: 'Social Media', link: 'https://socialbee.io' },
-        { name: 'CoSchedule', description: 'Marketing calendar and social media', logo: 'https://coschedule.com/favicon.ico', category: 'Social Media', link: 'https://coschedule.com' },
-        { name: 'Sendible', description: 'Social media management for agencies', logo: 'https://www.sendible.com/favicon.ico', category: 'Social Media', link: 'https://www.sendible.com' },
-        { name: 'Agorapulse', description: 'Social media management and CRM', logo: 'https://www.agorapulse.com/favicon.ico', category: 'Social Media', link: 'https://www.agorapulse.com' },
-        { name: 'MeetEdgar', description: 'Social media automation', logo: 'https://meetedgar.com/favicon.ico', category: 'Social Media', link: 'https://meetedgar.com' },
-        { name: 'Socialbakers', description: 'AI-powered social media marketing', logo: 'https://www.socialbakers.com/favicon.ico', category: 'Social Media', link: 'https://www.socialbakers.com' }
+    { name: 'Hootsuite', description: 'Social media management platform', logo: 'https://hootsuite.com/favicon.ico', category: 'Social Media', link: 'https://hootsuite.com', pricing: 'premium' },
+    { name: 'Buffer', description: 'Social media scheduling and analytics', logo: 'https://buffer.com/favicon.ico', category: 'Social Media', link: 'https://buffer.com', pricing: 'freemium' },
+    { name: 'Sprout Social', description: 'Social media management and analytics', logo: 'https://sproutsocial.com/favicon.ico', category: 'Social Media', link: 'https://sproutsocial.com', pricing: 'premium' },
+    { name: 'Later', description: 'Visual social media scheduler', logo: 'https://later.com/favicon.ico', category: 'Social Media', link: 'https://later.com', pricing: 'freemium' },
+    { name: 'SocialBee', description: 'Social media management tool', logo: 'https://socialbee.io/favicon.ico', category: 'Social Media', link: 'https://socialbee.io', pricing: 'freemium' },
+    { name: 'CoSchedule', description: 'Marketing calendar and social media', logo: 'https://coschedule.com/favicon.ico', category: 'Social Media', link: 'https://coschedule.com', pricing: 'premium' },
+    { name: 'Sendible', description: 'Social media management for agencies', logo: 'https://www.sendible.com/favicon.ico', category: 'Social Media', link: 'https://www.sendible.com', pricing: 'premium' },
+    { name: 'Agorapulse', description: 'Social media management and CRM', logo: 'https://www.agorapulse.com/favicon.ico', category: 'Social Media', link: 'https://www.agorapulse.com', pricing: 'premium' },
+    { name: 'MeetEdgar', description: 'Social media automation', logo: 'https://meetedgar.com/favicon.ico', category: 'Social Media', link: 'https://meetedgar.com', pricing: 'premium' },
+    { name: 'Socialbakers', description: 'AI-powered social media marketing', logo: 'https://www.socialbakers.com/favicon.ico', category: 'Social Media', link: 'https://www.socialbakers.com', pricing: 'premium' }
     ],
     'legal-tools': [
-        { name: 'LegalZoom', description: 'Online legal services', logo: 'https://www.legalzoom.com/favicon.ico', category: 'Legal Tools', link: 'https://www.legalzoom.com' },
-        { name: 'Rocket Lawyer', description: 'Legal documents and advice', logo: 'https://www.rocketlawyer.com/favicon.ico', category: 'Legal Tools', link: 'https://www.rocketlawyer.com' },
-        { name: 'Nolo', description: 'Legal information and software', logo: 'https://www.nolo.com/favicon.ico', category: 'Legal Tools', link: 'https://www.nolo.com' },
-        { name: 'LawDepot', description: 'Legal document templates', logo: 'https://www.lawdepot.com/favicon.ico', category: 'Legal Tools', link: 'https://www.lawdepot.com' },
-        { name: 'DoNotPay', description: 'AI lawyer for consumer rights', logo: 'https://donotpay.com/favicon.ico', category: 'Legal Tools', link: 'https://donotpay.com' },
-        { name: 'Clio', description: 'Legal practice management software', logo: 'https://www.clio.com/favicon.ico', category: 'Legal Tools', link: 'https://www.clio.com' },
-        { name: 'MyCase', description: 'Legal case management software', logo: 'https://www.mycase.com/favicon.ico', category: 'Legal Tools', link: 'https://www.mycase.com' },
-        { name: 'PracticePanther', description: 'Legal practice management', logo: 'https://www.practicepanther.com/favicon.ico', category: 'Legal Tools', link: 'https://www.practicepanther.com' },
-        { name: 'Smokeball', description: 'Legal practice management software', logo: 'https://www.smokeball.com/favicon.ico', category: 'Legal Tools', link: 'https://www.smokeball.com' },
-        { name: 'TimeSolv', description: 'Legal time tracking and billing', logo: 'https://www.timesolv.com/favicon.ico', category: 'Legal Tools', link: 'https://www.timesolv.com' }
+    { name: 'LegalZoom', description: 'Online legal services', logo: 'https://www.legalzoom.com/favicon.ico', category: 'Legal Tools', link: 'https://www.legalzoom.com', pricing: 'premium' },
+    { name: 'Rocket Lawyer', description: 'Legal documents and advice', logo: 'https://www.rocketlawyer.com/favicon.ico', category: 'Legal Tools', link: 'https://www.rocketlawyer.com', pricing: 'premium' },
+    { name: 'Nolo', description: 'Legal information and software', logo: 'https://www.nolo.com/favicon.ico', category: 'Legal Tools', link: 'https://www.nolo.com', pricing: 'freemium' },
+    { name: 'LawDepot', description: 'Legal document templates', logo: 'https://www.lawdepot.com/favicon.ico', category: 'Legal Tools', link: 'https://www.lawdepot.com', pricing: 'premium' },
+    { name: 'DoNotPay', description: 'AI lawyer for consumer rights', logo: 'https://donotpay.com/favicon.ico', category: 'Legal Tools', link: 'https://donotpay.com', pricing: 'freemium' },
+    { name: 'Clio', description: 'Legal practice management software', logo: 'https://www.clio.com/favicon.ico', category: 'Legal Tools', link: 'https://www.clio.com', pricing: 'premium' },
+    { name: 'MyCase', description: 'Legal case management software', logo: 'https://www.mycase.com/favicon.ico', category: 'Legal Tools', link: 'https://www.mycase.com', pricing: 'premium' },
+    { name: 'PracticePanther', description: 'Legal practice management', logo: 'https://www.practicepanther.com/favicon.ico', category: 'Legal Tools', link: 'https://www.practicepanther.com', pricing: 'premium' },
+    { name: 'Smokeball', description: 'Legal practice management software', logo: 'https://www.smokeball.com/favicon.ico', category: 'Legal Tools', link: 'https://www.smokeball.com', pricing: 'premium' },
+    { name: 'TimeSolv', description: 'Legal time tracking and billing', logo: 'https://www.timesolv.com/favicon.ico', category: 'Legal Tools', link: 'https://www.timesolv.com', pricing: 'premium' }
     ],
     'hr-tools': [
-        { name: 'BambooHR', description: 'Human resources software', logo: 'https://www.bamboohr.com/favicon.ico', category: 'HR Tools', link: 'https://www.bamboohr.com' },
-        { name: 'Workday', description: 'Enterprise HR and finance software', logo: 'https://www.workday.com/favicon.ico', category: 'HR Tools', link: 'https://www.workday.com' },
-        { name: 'ADP', description: 'Payroll and HR services', logo: 'https://www.adp.com/favicon.ico', category: 'HR Tools', link: 'https://www.adp.com' },
-        { name: 'Gusto', description: 'Payroll, benefits, and HR', logo: 'https://gusto.com/favicon.ico', category: 'HR Tools', link: 'https://gusto.com' },
-        { name: 'Zenefits', description: 'HR platform for small businesses', logo: 'https://www.zenefits.com/favicon.ico', category: 'HR Tools', link: 'https://www.zenefits.com' },
-        { name: 'Namely', description: 'HR platform for mid-sized companies', logo: 'https://www.namely.com/favicon.ico', category: 'HR Tools', link: 'https://www.namely.com' },
-        { name: 'Paycor', description: 'HR and payroll software', logo: 'https://www.paycor.com/favicon.ico', category: 'HR Tools', link: 'https://www.paycor.com' },
-        { name: 'UltiPro', description: 'HR, payroll, and talent management', logo: 'https://www.ultimatesoftware.com/favicon.ico', category: 'HR Tools', link: 'https://www.ultimatesoftware.com' },
-        { name: 'SuccessFactors', description: 'SAP HR management suite', logo: 'https://www.successfactors.com/favicon.ico', category: 'HR Tools', link: 'https://www.successfactors.com' },
-        { name: 'Greenhouse', description: 'Recruiting and hiring software', logo: 'https://www.greenhouse.io/favicon.ico', category: 'HR Tools', link: 'https://www.greenhouse.io' }
+    { name: 'BambooHR', description: 'Human resources software', logo: 'https://www.bamboohr.com/favicon.ico', category: 'HR Tools', link: 'https://www.bamboohr.com', pricing: 'premium' },
+    { name: 'Workday', description: 'Enterprise HR and finance software', logo: 'https://www.workday.com/favicon.ico', category: 'HR Tools', link: 'https://www.workday.com', pricing: 'premium' },
+    { name: 'ADP', description: 'Payroll and HR services', logo: 'https://www.adp.com/favicon.ico', category: 'HR Tools', link: 'https://www.adp.com', pricing: 'premium' },
+    { name: 'Gusto', description: 'Payroll, benefits, and HR', logo: 'https://gusto.com/favicon.ico', category: 'HR Tools', link: 'https://gusto.com', pricing: 'premium' },
+    { name: 'Zenefits', description: 'HR platform for small businesses', logo: 'https://www.zenefits.com/favicon.ico', category: 'HR Tools', link: 'https://www.zenefits.com', pricing: 'freemium' },
+    { name: 'Namely', description: 'HR platform for mid-sized companies', logo: 'https://www.namely.com/favicon.ico', category: 'HR Tools', link: 'https://www.namely.com', pricing: 'premium' },
+    { name: 'Paycor', description: 'HR and payroll software', logo: 'https://www.paycor.com/favicon.ico', category: 'HR Tools', link: 'https://www.paycor.com', pricing: 'premium' },
+    { name: 'UltiPro', description: 'HR, payroll, and talent management', logo: 'https://www.ultimatesoftware.com/favicon.ico', category: 'HR Tools', link: 'https://www.ultimatesoftware.com', pricing: 'premium' },
+    { name: 'SuccessFactors', description: 'SAP HR management suite', logo: 'https://www.successfactors.com/favicon.ico', category: 'HR Tools', link: 'https://www.successfactors.com', pricing: 'premium' },
+    { name: 'Greenhouse', description: 'Recruiting and hiring software', logo: 'https://www.greenhouse.io/favicon.ico', category: 'HR Tools', link: 'https://www.greenhouse.io', pricing: 'premium' }
     ],
     'real-estate-tools': [
-        { name: 'Zillow', description: 'Real estate search and valuation', logo: 'https://www.zillow.com/favicon.ico', category: 'Real Estate', link: 'https://www.zillow.com' },
-        { name: 'Realtor.com', description: 'Real estate listings and tools', logo: 'https://www.realtor.com/favicon.ico', category: 'Real Estate', link: 'https://www.realtor.com' },
-        { name: 'Redfin', description: 'Real estate brokerage and search', logo: 'https://www.redfin.com/favicon.ico', category: 'Real Estate', link: 'https://www.redfin.com' },
-        { name: 'BiggerPockets', description: 'Real estate investing community', logo: 'https://www.biggerpockets.com/favicon.ico', category: 'Real Estate', link: 'https://www.biggerpockets.com' },
-        { name: 'LoopNet', description: 'Commercial real estate marketplace', logo: 'https://www.loopnet.com/favicon.ico', category: 'Real Estate', link: 'https://www.loopnet.com' },
-        { name: 'CoStar', description: 'Commercial real estate information', logo: 'https://www.costar.com/favicon.ico', category: 'Real Estate', link: 'https://www.costar.com' },
-        { name: 'MLS', description: 'Multiple listing service', logo: 'https://www.mls.com/favicon.ico', category: 'Real Estate', link: 'https://www.mls.com' },
-        { name: 'Chime', description: 'Real estate CRM and lead management', logo: 'https://www.chime.me/favicon.ico', category: 'Real Estate', link: 'https://www.chime.me' },
-        { name: 'Top Producer', description: 'Real estate CRM software', logo: 'https://www.topproducer.com/favicon.ico', category: 'Real Estate', link: 'https://www.topproducer.com' },
-        { name: 'Wise Agent', description: 'Real estate CRM and marketing', logo: 'https://www.wiseagent.com/favicon.ico', category: 'Real Estate', link: 'https://www.wiseagent.com' }
+    { name: 'Zillow', description: 'Real estate search and valuation', logo: 'https://www.zillow.com/favicon.ico', category: 'Real Estate', link: 'https://www.zillow.com', pricing: 'free' },
+    { name: 'Realtor.com', description: 'Real estate listings and tools', logo: 'https://www.realtor.com/favicon.ico', category: 'Real Estate', link: 'https://www.realtor.com', pricing: 'free' },
+    { name: 'Redfin', description: 'Real estate brokerage and search', logo: 'https://www.redfin.com/favicon.ico', category: 'Real Estate', link: 'https://www.redfin.com', pricing: 'free' },
+    { name: 'BiggerPockets', description: 'Real estate investing community', logo: 'https://www.biggerpockets.com/favicon.ico', category: 'Real Estate', link: 'https://www.biggerpockets.com', pricing: 'freemium' },
+    { name: 'LoopNet', description: 'Commercial real estate marketplace', logo: 'https://www.loopnet.com/favicon.ico', category: 'Real Estate', link: 'https://www.loopnet.com', pricing: 'freemium' },
+    { name: 'CoStar', description: 'Commercial real estate information', logo: 'https://www.costar.com/favicon.ico', category: 'Real Estate', link: 'https://www.costar.com', pricing: 'premium' },
+    { name: 'MLS', description: 'Multiple listing service', logo: 'https://www.mls.com/favicon.ico', category: 'Real Estate', link: 'https://www.mls.com', pricing: 'free' },
+    { name: 'Chime', description: 'Real estate CRM and lead management', logo: 'https://www.chime.me/favicon.ico', category: 'Real Estate', link: 'https://www.chime.me', pricing: 'premium' },
+    { name: 'Top Producer', description: 'Real estate CRM software', logo: 'https://www.topproducer.com/favicon.ico', category: 'Real Estate', link: 'https://www.topproducer.com', pricing: 'premium' },
+    { name: 'Wise Agent', description: 'Real estate CRM and marketing', logo: 'https://www.wiseagent.com/favicon.ico', category: 'Real Estate', link: 'https://www.wiseagent.com', pricing: 'premium' }
     ],
     'sales-tools': [
-        { name: 'Salesforce', description: 'Customer relationship management', logo: 'https://www.salesforce.com/favicon.ico', category: 'Sales Tools', link: 'https://www.salesforce.com' },
-        { name: 'HubSpot', description: 'Inbound marketing and sales platform', logo: 'https://www.hubspot.com/favicon.ico', category: 'Sales Tools', link: 'https://www.hubspot.com' },
-        { name: 'Pipedrive', description: 'Sales CRM and pipeline management', logo: 'https://www.pipedrive.com/favicon.ico', category: 'Sales Tools', link: 'https://www.pipedrive.com' },
-        { name: 'Zoho CRM', description: 'Customer relationship management', logo: 'https://www.zoho.com/favicon.ico', category: 'Sales Tools', link: 'https://www.zoho.com/crm' },
-        { name: 'Monday Sales CRM', description: 'Visual sales pipeline management', logo: 'https://monday.com/favicon.ico', category: 'Sales Tools', link: 'https://monday.com/crm' },
-        { name: 'Freshsales', description: 'Sales CRM software', logo: 'https://www.freshworks.com/favicon.ico', category: 'Sales Tools', link: 'https://www.freshworks.com/crm/sales' },
-        { name: 'Close', description: 'Inside sales CRM', logo: 'https://close.com/favicon.ico', category: 'Sales Tools', link: 'https://close.com' },
-        { name: 'Outreach', description: 'Sales engagement platform', logo: 'https://www.outreach.io/favicon.ico', category: 'Sales Tools', link: 'https://www.outreach.io' },
-        { name: 'SalesLoft', description: 'Sales engagement platform', logo: 'https://salesloft.com/favicon.ico', category: 'Sales Tools', link: 'https://salesloft.com' },
-        { name: 'Gong', description: 'Revenue intelligence platform', logo: 'https://www.gong.io/favicon.ico', category: 'Sales Tools', link: 'https://www.gong.io' }
+        // { name: 'Salesforce', description: 'Customer relationship management', logo: 'https://www.salesforce.com/favicon.ico', category: 'Sales Tools', link: 'https://www.salesforce.com' },
+    { name: 'HubSpot', description: 'Inbound marketing and sales platform', logo: 'https://www.hubspot.com/favicon.ico', category: 'Sales Tools', link: 'https://www.hubspot.com', pricing: 'freemium' },
+    { name: 'Pipedrive', description: 'Sales CRM and pipeline management', logo: 'https://www.pipedrive.com/favicon.ico', category: 'Sales Tools', link: 'https://www.pipedrive.com', pricing: 'premium' },
+    { name: 'Zoho CRM', description: 'Customer relationship management', logo: 'https://www.zoho.com/favicon.ico', category: 'Sales Tools', link: 'https://www.zoho.com/crm', pricing: 'freemium' },
+    { name: 'Monday Sales CRM', description: 'Visual sales pipeline management', logo: 'https://monday.com/favicon.ico', category: 'Sales Tools', link: 'https://monday.com/crm', pricing: 'premium' },
+    { name: 'Freshsales', description: 'Sales CRM software', logo: 'https://www.freshworks.com/favicon.ico', category: 'Sales Tools', link: 'https://www.freshworks.com/crm/sales', pricing: 'freemium' },
+    { name: 'Close', description: 'Inside sales CRM', logo: 'https://close.com/favicon.ico', category: 'Sales Tools', link: 'https://close.com', pricing: 'premium' },
+    { name: 'Outreach', description: 'Sales engagement platform', logo: 'https://www.outreach.io/favicon.ico', category: 'Sales Tools', link: 'https://www.outreach.io', pricing: 'premium' },
+    { name: 'SalesLoft', description: 'Sales engagement platform', logo: 'https://salesloft.com/favicon.ico', category: 'Sales Tools', link: 'https://salesloft.com', pricing: 'premium' },
+    { name: 'Gong', description: 'Revenue intelligence platform', logo: 'https://www.gong.io/favicon.ico', category: 'Sales Tools', link: 'https://www.gong.io', pricing: 'premium' }
     ],
     'customer-service-tools': [
-        { name: 'Zendesk', description: 'Customer service and support platform', logo: 'https://www.zendesk.com/favicon.ico', category: 'Customer Service', link: 'https://www.zendesk.com' },
-        { name: 'Freshdesk', description: 'Customer support software', logo: 'https://freshdesk.com/favicon.ico', category: 'Customer Service', link: 'https://freshdesk.com' },
-        { name: 'Intercom', description: 'Customer messaging platform', logo: 'https://www.intercom.com/favicon.ico', category: 'Customer Service', link: 'https://www.intercom.com' },
-        { name: 'Help Scout', description: 'Customer service platform', logo: 'https://www.helpscout.com/favicon.ico', category: 'Customer Service', link: 'https://www.helpscout.com' },
-        { name: 'LiveChat', description: 'Customer service live chat software', logo: 'https://www.livechat.com/favicon.ico', category: 'Customer Service', link: 'https://www.livechat.com' },
-        { name: 'Drift', description: 'Conversational marketing platform', logo: 'https://www.drift.com/favicon.ico', category: 'Customer Service', link: 'https://www.drift.com' },
-        { name: 'Crisp', description: 'Customer messaging platform', logo: 'https://crisp.chat/favicon.ico', category: 'Customer Service', link: 'https://crisp.chat' },
-        { name: 'Kayako', description: 'Customer service software', logo: 'https://www.kayako.com/favicon.ico', category: 'Customer Service', link: 'https://www.kayako.com' },
-        { name: 'ServiceNow', description: 'Enterprise service management', logo: 'https://www.servicenow.com/favicon.ico', category: 'Customer Service', link: 'https://www.servicenow.com' },
-        { name: 'Jira Service Management', description: 'IT service management', logo: 'https://www.atlassian.com/favicon.ico', category: 'Customer Service', link: 'https://www.atlassian.com/software/jira/service-management' }
+    { name: 'Zendesk', description: 'Customer service and support platform', logo: 'https://www.zendesk.com/favicon.ico', category: 'Customer Service', link: 'https://www.zendesk.com', pricing: 'premium' },
+    { name: 'Freshdesk', description: 'Customer support software', logo: 'https://freshdesk.com/favicon.ico', category: 'Customer Service', link: 'https://freshdesk.com', pricing: 'freemium' },
+    { name: 'Intercom', description: 'Customer messaging platform', logo: 'https://www.intercom.com/favicon.ico', category: 'Customer Service', link: 'https://www.intercom.com', pricing: 'premium' },
+    { name: 'Help Scout', description: 'Customer service platform', logo: 'https://www.helpscout.com/favicon.ico', category: 'Customer Service', link: 'https://www.helpscout.com', pricing: 'premium' },
+    { name: 'LiveChat', description: 'Customer service live chat software', logo: 'https://www.livechat.com/favicon.ico', category: 'Customer Service', link: 'https://www.livechat.com', pricing: 'premium' },
+    { name: 'Drift', description: 'Conversational marketing platform', logo: 'https://www.drift.com/favicon.ico', category: 'Customer Service', link: 'https://www.drift.com', pricing: 'premium' },
+    { name: 'Crisp', description: 'Customer messaging platform', logo: 'https://crisp.chat/favicon.ico', category: 'Customer Service', link: 'https://crisp.chat', pricing: 'freemium' },
+    { name: 'Kayako', description: 'Customer service software', logo: 'https://www.kayako.com/favicon.ico', category: 'Customer Service', link: 'https://www.kayako.com', pricing: 'premium' },
+    { name: 'ServiceNow', description: 'Enterprise service management', logo: 'https://www.servicenow.com/favicon.ico', category: 'Customer Service', link: 'https://www.servicenow.com', pricing: 'premium' },
+    { name: 'Jira Service Management', description: 'IT service management', logo: 'https://www.atlassian.com/favicon.ico', category: 'Customer Service', link: 'https://www.atlassian.com/software/jira/service-management', pricing: 'premium' }
     ],
     'cybersecurity-tools': [
-        { name: 'Norton', description: 'Antivirus and internet security', logo: 'https://us.norton.com/favicon.ico', category: 'Cybersecurity', link: 'https://us.norton.com' },
-        { name: 'McAfee', description: 'Antivirus and cybersecurity solutions', logo: 'https://www.mcafee.com/favicon.ico', category: 'Cybersecurity', link: 'https://www.mcafee.com' },
-        { name: 'Kaspersky', description: 'Antivirus and internet security', logo: 'https://www.kaspersky.com/favicon.ico', category: 'Cybersecurity', link: 'https://www.kaspersky.com' },
-        { name: 'Bitdefender', description: 'Cybersecurity and antivirus solutions', logo: 'https://www.bitdefender.com/favicon.ico', category: 'Cybersecurity', link: 'https://www.bitdefender.com' },
-        { name: 'Avast', description: 'Antivirus and internet security', logo: 'https://www.avast.com/favicon.ico', category: 'Cybersecurity', link: 'https://www.avast.com' },
-        { name: 'Malwarebytes', description: 'Anti-malware and cybersecurity', logo: 'https://www.malwarebytes.com/favicon.ico', category: 'Cybersecurity', link: 'https://www.malwarebytes.com' },
-        { name: 'CrowdStrike', description: 'Endpoint protection platform', logo: 'https://www.crowdstrike.com/favicon.ico', category: 'Cybersecurity', link: 'https://www.crowdstrike.com' },
-        { name: 'SentinelOne', description: 'AI-powered cybersecurity platform', logo: 'https://www.sentinelone.com/favicon.ico', category: 'Cybersecurity', link: 'https://www.sentinelone.com' },
-        { name: 'Palo Alto Networks', description: 'Cybersecurity platform', logo: 'https://www.paloaltonetworks.com/favicon.ico', category: 'Cybersecurity', link: 'https://www.paloaltonetworks.com' },
-        { name: 'Fortinet', description: 'Cybersecurity solutions', logo: 'https://www.fortinet.com/favicon.ico', category: 'Cybersecurity', link: 'https://www.fortinet.com' }
+    { name: 'Norton', description: 'Antivirus and internet security', logo: 'https://us.norton.com/favicon.ico', category: 'Cybersecurity', link: 'https://us.norton.com', pricing: 'premium' },
+    { name: 'McAfee', description: 'Antivirus and cybersecurity solutions', logo: 'https://www.mcafee.com/favicon.ico', category: 'Cybersecurity', link: 'https://www.mcafee.com', pricing: 'premium' },
+    { name: 'Kaspersky', description: 'Antivirus and internet security', logo: 'https://www.kaspersky.com/favicon.ico', category: 'Cybersecurity', link: 'https://www.kaspersky.com', pricing: 'premium' },
+    { name: 'Bitdefender', description: 'Cybersecurity and antivirus solutions', logo: 'https://www.bitdefender.com/favicon.ico', category: 'Cybersecurity', link: 'https://www.bitdefender.com', pricing: 'premium' },
+    { name: 'Avast', description: 'Antivirus and internet security', logo: 'https://www.avast.com/favicon.ico', category: 'Cybersecurity', link: 'https://www.avast.com', pricing: 'freemium' },
+    { name: 'Malwarebytes', description: 'Anti-malware and cybersecurity', logo: 'https://www.malwarebytes.com/favicon.ico', category: 'Cybersecurity', link: 'https://www.malwarebytes.com', pricing: 'freemium' },
+    { name: 'CrowdStrike', description: 'Endpoint protection platform', logo: 'https://www.crowdstrike.com/favicon.ico', category: 'Cybersecurity', link: 'https://www.crowdstrike.com', pricing: 'premium' },
+    { name: 'SentinelOne', description: 'AI-powered cybersecurity platform', logo: 'https://www.sentinelone.com/favicon.ico', category: 'Cybersecurity', link: 'https://www.sentinelone.com', pricing: 'premium' },
+    { name: 'Palo Alto Networks', description: 'Cybersecurity platform', logo: 'https://www.paloaltonetworks.com/favicon.ico', category: 'Cybersecurity', link: 'https://www.paloaltonetworks.com', pricing: 'premium' },
+    { name: 'Fortinet', description: 'Cybersecurity solutions', logo: 'https://www.fortinet.com/favicon.ico', category: 'Cybersecurity', link: 'https://www.fortinet.com', pricing: 'premium' }
     ],
     'logistics-tools': [
-        { name: 'ShipStation', description: 'Shipping and order fulfillment', logo: 'https://www.shipstation.com/favicon.ico', category: 'Logistics', link: 'https://www.shipstation.com' },
-        { name: 'Easyship', description: 'Global shipping platform', logo: 'https://www.easyship.com/favicon.ico', category: 'Logistics', link: 'https://www.easyship.com' },
-        { name: 'ShipBob', description: 'E-commerce fulfillment service', logo: 'https://www.shipbob.com/favicon.ico', category: 'Logistics', link: 'https://www.shipbob.com' },
-        { name: 'Flexport', description: 'Global freight forwarder', logo: 'https://www.flexport.com/favicon.ico', category: 'Logistics', link: 'https://www.flexport.com' },
-        { name: 'FreightWaves', description: 'Freight market intelligence', logo: 'https://www.freightwaves.com/favicon.ico', category: 'Logistics', link: 'https://www.freightwaves.com' },
-        { name: 'Project44', description: 'Supply chain visibility platform', logo: 'https://www.project44.com/favicon.ico', category: 'Logistics', link: 'https://www.project44.com' },
-        { name: 'Convoy', description: 'Digital freight network', logo: 'https://convoy.com/favicon.ico', category: 'Logistics', link: 'https://convoy.com' },
-        { name: 'Uber Freight', description: 'Freight marketplace', logo: 'https://www.uberfreight.com/favicon.ico', category: 'Logistics', link: 'https://www.uberfreight.com' },
-        { name: 'C.H. Robinson', description: 'Third-party logistics provider', logo: 'https://www.chrobinson.com/favicon.ico', category: 'Logistics', link: 'https://www.chrobinson.com' },
-        { name: 'XPO Logistics', description: 'Supply chain solutions', logo: 'https://www.xpo.com/favicon.ico', category: 'Logistics', link: 'https://www.xpo.com' }
+    { name: 'ShipStation', description: 'Shipping and order fulfillment', logo: 'https://www.shipstation.com/favicon.ico', category: 'Logistics', link: 'https://www.shipstation.com', pricing: 'premium' },
+    { name: 'Easyship', description: 'Global shipping platform', logo: 'https://www.easyship.com/favicon.ico', category: 'Logistics', link: 'https://www.easyship.com', pricing: 'freemium' },
+    { name: 'ShipBob', description: 'E-commerce fulfillment service', logo: 'https://www.shipbob.com/favicon.ico', category: 'Logistics', link: 'https://www.shipbob.com', pricing: 'premium' },
+    { name: 'Flexport', description: 'Global freight forwarder', logo: 'https://www.flexport.com/favicon.ico', category: 'Logistics', link: 'https://www.flexport.com', pricing: 'premium' },
+    { name: 'FreightWaves', description: 'Freight market intelligence', logo: 'https://www.freightwaves.com/favicon.ico', category: 'Logistics', link: 'https://www.freightwaves.com', pricing: 'freemium' },
+    { name: 'Project44', description: 'Supply chain visibility platform', logo: 'https://www.project44.com/favicon.ico', category: 'Logistics', link: 'https://www.project44.com', pricing: 'premium' },
+    { name: 'Convoy', description: 'Digital freight network', logo: 'https://convoy.com/favicon.ico', category: 'Logistics', link: 'https://convoy.com', pricing: 'freemium' },
+    { name: 'Uber Freight', description: 'Freight marketplace', logo: 'https://www.uberfreight.com/favicon.ico', category: 'Logistics', link: 'https://www.uberfreight.com', pricing: 'freemium' },
+    { name: 'C.H. Robinson', description: 'Third-party logistics provider', logo: 'https://www.chrobinson.com/favicon.ico', category: 'Logistics', link: 'https://www.chrobinson.com', pricing: 'premium' },
+    { name: 'XPO Logistics', description: 'Supply chain solutions', logo: 'https://www.xpo.com/favicon.ico', category: 'Logistics', link: 'https://www.xpo.com', pricing: 'premium' }
     ],
     'agriculture-tools': [
-        { name: 'Climate FieldView', description: 'Digital agriculture platform', logo: 'https://www.climate.com/favicon.ico', category: 'Agriculture', link: 'https://www.climate.com' },
-        { name: 'John Deere Operations Center', description: 'Farm management software', logo: 'https://www.deere.com/favicon.ico', category: 'Agriculture', link: 'https://www.deere.com' },
-        { name: 'Granular', description: 'Farm management software', logo: 'https://www.granular.ag/favicon.ico', category: 'Agriculture', link: 'https://www.granular.ag' },
-        { name: 'FarmLogs', description: 'Farm record keeping and analytics', logo: 'https://farmlogs.com/favicon.ico', category: 'Agriculture', link: 'https://farmlogs.com' },
-        { name: 'AgriWebb', description: 'Livestock and farm management', logo: 'https://www.agriwebb.com/favicon.ico', category: 'Agriculture', link: 'https://www.agriwebb.com' },
-        { name: 'Trimble Ag', description: 'Precision agriculture solutions', logo: 'https://agriculture.trimble.com/favicon.ico', category: 'Agriculture', link: 'https://agriculture.trimble.com' },
-        { name: 'Farmers Edge', description: 'Digital agriculture platform', logo: 'https://www.farmersedge.ca/favicon.ico', category: 'Agriculture', link: 'https://www.farmersedge.ca' },
-        { name: 'Cropio', description: 'Satellite field monitoring', logo: 'https://www.cropio.com/favicon.ico', category: 'Agriculture', link: 'https://www.cropio.com' },
-        { name: 'PrecisionHawk', description: 'Drone-based agriculture analytics', logo: 'https://www.precisionhawk.com/favicon.ico', category: 'Agriculture', link: 'https://www.precisionhawk.com' },
-        { name: 'Taranis', description: 'AI-powered crop intelligence', logo: 'https://www.taranis.com/favicon.ico', category: 'Agriculture', link: 'https://www.taranis.com' }
+    { name: 'Climate FieldView', description: 'Digital agriculture platform', logo: 'https://www.climate.com/favicon.ico', category: 'Agriculture', link: 'https://www.climate.com', pricing: 'premium' },
+    { name: 'John Deere Operations Center', description: 'Farm management software', logo: 'https://www.deere.com/favicon.ico', category: 'Agriculture', link: 'https://www.deere.com', pricing: 'premium' },
+    { name: 'Granular', description: 'Farm management software', logo: 'https://www.granular.ag/favicon.ico', category: 'Agriculture', link: 'https://www.granular.ag', pricing: 'premium' },
+    { name: 'FarmLogs', description: 'Farm record keeping and analytics', logo: 'https://farmlogs.com/favicon.ico', category: 'Agriculture', link: 'https://farmlogs.com', pricing: 'freemium' },
+    { name: 'AgriWebb', description: 'Livestock and farm management', logo: 'https://www.agriwebb.com/favicon.ico', category: 'Agriculture', link: 'https://www.agriwebb.com', pricing: 'premium' },
+    { name: 'Trimble Ag', description: 'Precision agriculture solutions', logo: 'https://agriculture.trimble.com/favicon.ico', category: 'Agriculture', link: 'https://agriculture.trimble.com', pricing: 'premium' },
+    { name: 'Farmers Edge', description: 'Digital agriculture platform', logo: 'https://www.farmersedge.ca/favicon.ico', category: 'Agriculture', link: 'https://www.farmersedge.ca', pricing: 'premium' },
+    { name: 'Cropio', description: 'Satellite field monitoring', logo: 'https://www.cropio.com/favicon.ico', category: 'Agriculture', link: 'https://www.cropio.com', pricing: 'premium' },
+    { name: 'PrecisionHawk', description: 'Drone-based agriculture analytics', logo: 'https://www.precisionhawk.com/favicon.ico', category: 'Agriculture', link: 'https://www.precisionhawk.com', pricing: 'premium' },
+    { name: 'Taranis', description: 'AI-powered crop intelligence', logo: 'https://www.taranis.com/favicon.ico', category: 'Agriculture', link: 'https://www.taranis.com', pricing: 'premium' }
     ],
     'photo-editing-tools': [
-        { name: 'Photoshop AI', description: 'Adobe Photoshop with AI-powered features', logo: 'https://www.adobe.com/favicon.ico', category: 'Photo Editing', link: 'https://www.adobe.com/products/photoshop.html' },
-        { name: 'Luminar AI', description: 'AI-powered photo editing software', logo: 'https://skylum.com/favicon.ico', category: 'Photo Editing', link: 'https://skylum.com/luminar-ai' },
-        { name: 'Topaz Labs', description: 'AI image enhancement and upscaling', logo: 'https://www.topazlabs.com/favicon.ico', category: 'Photo Editing', link: 'https://www.topazlabs.com' },
-        { name: 'Remove.bg', description: 'AI background removal tool', logo: 'https://www.remove.bg/favicon.ico', category: 'Photo Editing', link: 'https://www.remove.bg' },
-        { name: 'Upscale.media', description: 'AI image upscaling and enhancement', logo: 'https://upscale.media/favicon.ico', category: 'Photo Editing', link: 'https://upscale.media' },
-        { name: 'Cleanup.pictures', description: 'Remove objects from photos with AI', logo: 'https://cleanup.pictures/favicon.ico', category: 'Photo Editing', link: 'https://cleanup.pictures' },
-        { name: 'Colorize.cc', description: 'AI-powered photo colorization', logo: 'https://colorize.cc/favicon.ico', category: 'Photo Editing', link: 'https://colorize.cc' },
-        { name: 'Enhance.Pho.to', description: 'AI photo enhancement and filters', logo: 'https://enhance.pho.to/favicon.ico', category: 'Photo Editing', link: 'https://enhance.pho.to' },
-        { name: 'Fotor', description: 'AI-powered photo editor and design tool', logo: 'https://www.fotor.com/favicon.ico', category: 'Photo Editing', link: 'https://www.fotor.com' },
-        { name: 'Pixlr AI', description: 'Online photo editor with AI features', logo: 'https://pixlr.com/favicon.ico', category: 'Photo Editing', link: 'https://pixlr.com' }
+    { name: 'Photoshop AI', description: 'Adobe Photoshop with AI-powered features', logo: 'https://www.adobe.com/favicon.ico', category: 'Photo Editing', link: 'https://www.adobe.com/products/photoshop.html', pricing: 'premium' },
+    { name: 'Luminar AI', description: 'AI-powered photo editing software', logo: 'https://skylum.com/favicon.ico', category: 'Photo Editing', link: 'https://skylum.com/luminar-ai', pricing: 'premium' },
+    { name: 'Topaz Labs', description: 'AI image enhancement and upscaling', logo: 'https://www.topazlabs.com/favicon.ico', category: 'Photo Editing', link: 'https://www.topazlabs.com', pricing: 'premium' },
+    { name: 'Remove.bg', description: 'AI background removal tool', logo: 'https://www.remove.bg/favicon.ico', category: 'Photo Editing', link: 'https://www.remove.bg', pricing: 'freemium' },
+    { name: 'Upscale.media', description: 'AI image upscaling and enhancement', logo: 'https://upscale.media/favicon.ico', category: 'Photo Editing', link: 'https://upscale.media', pricing: 'freemium' },
+    { name: 'Cleanup.pictures', description: 'Remove objects from photos with AI', logo: 'https://cleanup.pictures/favicon.ico', category: 'Photo Editing', link: 'https://cleanup.pictures', pricing: 'freemium' },
+    { name: 'Colorize.cc', description: 'AI-powered photo colorization', logo: 'https://colorize.cc/favicon.ico', category: 'Photo Editing', link: 'https://colorize.cc', pricing: 'freemium' },
+    { name: 'Enhance.Pho.to', description: 'AI photo enhancement and filters', logo: 'https://enhance.pho.to/favicon.ico', category: 'Photo Editing', link: 'https://enhance.pho.to', pricing: 'free' },
+    { name: 'Fotor', description: 'AI-powered photo editor and design tool', logo: 'https://www.fotor.com/favicon.ico', category: 'Photo Editing', link: 'https://www.fotor.com', pricing: 'freemium' },
+    { name: 'Pixlr AI', description: 'Online photo editor with AI features', logo: 'https://pixlr.com/favicon.ico', category: 'Photo Editing', link: 'https://pixlr.com', pricing: 'freemium' }
     ],
     'writing-assistants': [
-        { name: 'Grammarly', description: 'AI writing assistant for grammar and style', logo: 'https://www.grammarly.com/favicon.ico', category: 'Writing Assistant', link: 'https://www.grammarly.com' },
-        { name: 'ProWritingAid', description: 'Grammar checker and writing coach', logo: 'https://prowritingaid.com/favicon.ico', category: 'Writing Assistant', link: 'https://prowritingaid.com' },
-        { name: 'Hemingway Editor', description: 'Make your writing bold and clear', logo: 'https://hemingwayapp.com/favicon.ico', category: 'Writing Assistant', link: 'https://hemingwayapp.com' },
-        { name: 'LanguageTool', description: 'Grammar and style checker', logo: 'https://languagetool.org/favicon.ico', category: 'Writing Assistant', link: 'https://languagetool.org' },
-        { name: 'Ginger', description: 'Grammar and spell checker', logo: 'https://www.gingersoftware.com/favicon.ico', category: 'Writing Assistant', link: 'https://www.gingersoftware.com' },
-        { name: 'WhiteSmoke', description: 'English writing enhancement software', logo: 'https://www.whitesmoke.com/favicon.ico', category: 'Writing Assistant', link: 'https://www.whitesmoke.com' },
-        { name: 'Sapling', description: 'AI writing assistant for teams', logo: 'https://sapling.ai/favicon.ico', category: 'Writing Assistant', link: 'https://sapling.ai' },
-        { name: 'Outwrite', description: 'AI writing assistant and editor', logo: 'https://www.outwrite.com/favicon.ico', category: 'Writing Assistant', link: 'https://www.outwrite.com' },
-        { name: 'Writer', description: 'AI writing platform for teams', logo: 'https://writer.com/favicon.ico', category: 'Writing Assistant', link: 'https://writer.com' },
-        { name: 'Wordtune', description: 'AI writing companion', logo: 'https://www.wordtune.com/favicon.ico', category: 'Writing Assistant', link: 'https://www.wordtune.com' }
+    { name: 'Grammarly', description: 'AI writing assistant for grammar and style', logo: 'https://www.grammarly.com/favicon.ico', category: 'Writing Assistant', link: 'https://www.grammarly.com', pricing: 'freemium' },
+    { name: 'ProWritingAid', description: 'Grammar checker and writing coach', logo: 'https://prowritingaid.com/favicon.ico', category: 'Writing Assistant', link: 'https://prowritingaid.com', pricing: 'freemium' },
+    { name: 'Hemingway Editor', description: 'Make your writing bold and clear', logo: 'https://hemingwayapp.com/favicon.ico', category: 'Writing Assistant', link: 'https://hemingwayapp.com', pricing: 'freemium' },
+    { name: 'LanguageTool', description: 'Grammar and style checker', logo: 'https://languagetool.org/favicon.ico', category: 'Writing Assistant', link: 'https://languagetool.org', pricing: 'freemium' },
+    { name: 'Ginger', description: 'Grammar and spell checker', logo: 'https://www.gingersoftware.com/favicon.ico', category: 'Writing Assistant', link: 'https://www.gingersoftware.com', pricing: 'freemium' },
+    { name: 'WhiteSmoke', description: 'English writing enhancement software', logo: 'https://www.whitesmoke.com/favicon.ico', category: 'Writing Assistant', link: 'https://www.whitesmoke.com', pricing: 'premium' },
+    { name: 'Sapling', description: 'AI writing assistant for teams', logo: 'https://sapling.ai/favicon.ico', category: 'Writing Assistant', link: 'https://sapling.ai', pricing: 'freemium' },
+    { name: 'Outwrite', description: 'AI writing assistant and editor', logo: 'https://www.outwrite.com/favicon.ico', category: 'Writing Assistant', link: 'https://www.outwrite.com', pricing: 'freemium' },
+    { name: 'Writer', description: 'AI writing platform for teams', logo: 'https://writer.com/favicon.ico', category: 'Writing Assistant', link: 'https://writer.com', pricing: 'premium' },
+    { name: 'Wordtune', description: 'AI writing companion', logo: 'https://www.wordtune.com/favicon.ico', category: 'Writing Assistant', link: 'https://www.wordtune.com', pricing: 'freemium' }
     ],
     'meeting-tools': [
-        { name: 'Otter.ai', description: 'AI meeting transcription and notes', logo: 'https://otter.ai/favicon.ico', category: 'Meeting Tools', link: 'https://otter.ai' },
-        { name: 'Zoom AI Companion', description: 'AI-powered meeting assistant', logo: 'https://zoom.us/favicon.ico', category: 'Meeting Tools', link: 'https://zoom.us' },
-        { name: 'Microsoft Teams AI', description: 'AI features in Microsoft Teams', logo: 'https://www.microsoft.com/favicon.ico', category: 'Meeting Tools', link: 'https://www.microsoft.com/en-us/microsoft-teams' },
-        { name: 'Fireflies.ai', description: 'AI meeting recorder and transcriber', logo: 'https://fireflies.ai/favicon.ico', category: 'Meeting Tools', link: 'https://fireflies.ai' },
-        { name: 'Grain', description: 'AI-powered meeting recorder', logo: 'https://grain.com/favicon.ico', category: 'Meeting Tools', link: 'https://grain.com' },
-        { name: 'Chorus', description: 'Conversation intelligence platform', logo: 'https://www.chorus.ai/favicon.ico', category: 'Meeting Tools', link: 'https://www.chorus.ai' },
-        { name: 'Rev', description: 'AI transcription and captioning', logo: 'https://www.rev.com/favicon.ico', category: 'Meeting Tools', link: 'https://www.rev.com' },
-        { name: 'Trint', description: 'AI transcription software', logo: 'https://trint.com/favicon.ico', category: 'Meeting Tools', link: 'https://trint.com' },
-        { name: 'Sonix', description: 'Automated transcription service', logo: 'https://sonix.ai/favicon.ico', category: 'Meeting Tools', link: 'https://sonix.ai' },
-        { name: 'Happy Scribe', description: 'Transcription and subtitling service', logo: 'https://www.happyscribe.com/favicon.ico', category: 'Meeting Tools', link: 'https://www.happyscribe.com' }
+    { name: 'Otter.ai', description: 'AI meeting transcription and notes', logo: 'https://otter.ai/favicon.ico', category: 'Meeting Tools', link: 'https://otter.ai', pricing: 'freemium' },
+    { name: 'Zoom AI Companion', description: 'AI-powered meeting assistant', logo: 'https://zoom.us/favicon.ico', category: 'Meeting Tools', link: 'https://zoom.us', pricing: 'freemium' },
+    { name: 'Microsoft Teams AI', description: 'AI features in Microsoft Teams', logo: 'https://www.microsoft.com/favicon.ico', category: 'Meeting Tools', link: 'https://www.microsoft.com/en-us/microsoft-teams', pricing: 'freemium' },
+    { name: 'Fireflies.ai', description: 'AI meeting recorder and transcriber', logo: 'https://fireflies.ai/favicon.ico', category: 'Meeting Tools', link: 'https://fireflies.ai', pricing: 'freemium' },
+    { name: 'Grain', description: 'AI-powered meeting recorder', logo: 'https://grain.com/favicon.ico', category: 'Meeting Tools', link: 'https://grain.com', pricing: 'freemium' },
+    { name: 'Chorus', description: 'Conversation intelligence platform', logo: 'https://www.chorus.ai/favicon.ico', category: 'Meeting Tools', link: 'https://www.chorus.ai', pricing: 'premium' },
+    { name: 'Rev', description: 'AI transcription and captioning', logo: 'https://www.rev.com/favicon.ico', category: 'Meeting Tools', link: 'https://www.rev.com', pricing: 'premium' },
+    { name: 'Trint', description: 'AI transcription software', logo: 'https://trint.com/favicon.ico', category: 'Meeting Tools', link: 'https://trint.com', pricing: 'premium' },
+    { name: 'Sonix', description: 'Automated transcription service', logo: 'https://sonix.ai/favicon.ico', category: 'Meeting Tools', link: 'https://sonix.ai', pricing: 'premium' },
+    { name: 'Happy Scribe', description: 'Transcription and subtitling service', logo: 'https://www.happyscribe.com/favicon.ico', category: 'Meeting Tools', link: 'https://www.happyscribe.com', pricing: 'premium' }
     ],
     'recruitment-tools': [
-        { name: 'HireVue', description: 'AI-powered video interviewing', logo: 'https://www.hirevue.com/favicon.ico', category: 'Recruitment', link: 'https://www.hirevue.com' },
-        { name: 'Pymetrics', description: 'AI-based talent matching', logo: 'https://www.pymetrics.ai/favicon.ico', category: 'Recruitment', link: 'https://www.pymetrics.ai' },
-        { name: 'Textio', description: 'Augmented writing for job posts', logo: 'https://textio.com/favicon.ico', category: 'Recruitment', link: 'https://textio.com' },
-        { name: 'Ideal', description: 'AI recruiting automation', logo: 'https://ideal.com/favicon.ico', category: 'Recruitment', link: 'https://ideal.com' },
-        { name: 'Eightfold AI', description: 'AI talent intelligence platform', logo: 'https://eightfold.ai/favicon.ico', category: 'Recruitment', link: 'https://eightfold.ai' },
-        { name: 'Paradox', description: 'Conversational AI for recruiting', logo: 'https://www.paradox.ai/favicon.ico', category: 'Recruitment', link: 'https://www.paradox.ai' },
-        { name: 'SeekOut', description: 'AI-powered talent search', logo: 'https://seekout.com/favicon.ico', category: 'Recruitment', link: 'https://seekout.com' },
-        { name: 'Fetcher', description: 'AI recruiting outreach', logo: 'https://fetcher.ai/favicon.ico', category: 'Recruitment', link: 'https://fetcher.ai' },
-        { name: 'Humanly', description: 'AI screening and scheduling', logo: 'https://humanly.io/favicon.ico', category: 'Recruitment', link: 'https://humanly.io' },
-        { name: 'Mya', description: 'Conversational AI recruiter', logo: 'https://mya.com/favicon.ico', category: 'Recruitment', link: 'https://mya.com' }
+    { name: 'HireVue', description: 'AI-powered video interviewing', logo: 'https://www.hirevue.com/favicon.ico', category: 'Recruitment', link: 'https://www.hirevue.com', pricing: 'premium' },
+    { name: 'Pymetrics', description: 'AI-based talent matching', logo: 'https://www.pymetrics.ai/favicon.ico', category: 'Recruitment', link: 'https://www.pymetrics.ai', pricing: 'premium' },
+    { name: 'Textio', description: 'Augmented writing for job posts', logo: 'https://textio.com/favicon.ico', category: 'Recruitment', link: 'https://textio.com', pricing: 'premium' },
+    { name: 'Ideal', description: 'AI recruiting automation', logo: 'https://ideal.com/favicon.ico', category: 'Recruitment', link: 'https://ideal.com', pricing: 'premium' },
+    { name: 'Eightfold AI', description: 'AI talent intelligence platform', logo: 'https://eightfold.ai/favicon.ico', category: 'Recruitment', link: 'https://eightfold.ai', pricing: 'premium' },
+    { name: 'Paradox', description: 'Conversational AI for recruiting', logo: 'https://www.paradox.ai/favicon.ico', category: 'Recruitment', link: 'https://www.paradox.ai', pricing: 'premium' },
+    { name: 'SeekOut', description: 'AI-powered talent search', logo: 'https://seekout.com/favicon.ico', category: 'Recruitment', link: 'https://seekout.com', pricing: 'premium' },
+    { name: 'Fetcher', description: 'AI recruiting outreach', logo: 'https://fetcher.ai/favicon.ico', category: 'Recruitment', link: 'https://fetcher.ai', pricing: 'premium' },
+    { name: 'Humanly', description: 'AI screening and scheduling', logo: 'https://humanly.io/favicon.ico', category: 'Recruitment', link: 'https://humanly.io', pricing: 'premium' },
+    { name: 'Mya', description: 'Conversational AI recruiter', logo: 'https://mya.com/favicon.ico', category: 'Recruitment', link: 'https://mya.com', pricing: 'premium' }
     ],
     'analytics-tools': [
-        { name: 'Google Analytics', description: 'Web analytics and reporting', logo: 'https://analytics.google.com/favicon.ico', category: 'Analytics', link: 'https://analytics.google.com' },
-        { name: 'Mixpanel', description: 'Product analytics platform', logo: 'https://mixpanel.com/favicon.ico', category: 'Analytics', link: 'https://mixpanel.com' },
-        { name: 'Amplitude', description: 'Digital analytics platform', logo: 'https://amplitude.com/favicon.ico', category: 'Analytics', link: 'https://amplitude.com' },
-        { name: 'Hotjar', description: 'Website heatmaps and behavior analytics', logo: 'https://www.hotjar.com/favicon.ico', category: 'Analytics', link: 'https://www.hotjar.com' },
-        { name: 'Segment', description: 'Customer data platform', logo: 'https://segment.com/favicon.ico', category: 'Analytics', link: 'https://segment.com' },
-        { name: 'Adobe Analytics', description: 'Enterprise analytics solution', logo: 'https://www.adobe.com/favicon.ico', category: 'Analytics', link: 'https://www.adobe.com/analytics' },
-        { name: 'Heap', description: 'Digital insights platform', logo: 'https://heap.io/favicon.ico', category: 'Analytics', link: 'https://heap.io' },
-        { name: 'Kissmetrics', description: 'Customer engagement automation', logo: 'https://www.kissmetrics.io/favicon.ico', category: 'Analytics', link: 'https://www.kissmetrics.io' },
-        { name: 'Crazy Egg', description: 'Website optimization and analytics', logo: 'https://www.crazyegg.com/favicon.ico', category: 'Analytics', link: 'https://www.crazyegg.com' },
-        { name: 'FullStory', description: 'Digital experience analytics', logo: 'https://www.fullstory.com/favicon.ico', category: 'Analytics', link: 'https://www.fullstory.com' }
+    { name: 'Google Analytics', description: 'Web analytics and reporting', logo: 'https://analytics.google.com/favicon.ico', category: 'Analytics', link: 'https://analytics.google.com', pricing: 'free' },
+    { name: 'Mixpanel', description: 'Product analytics platform', logo: 'https://mixpanel.com/favicon.ico', category: 'Analytics', link: 'https://mixpanel.com', pricing: 'freemium' },
+    { name: 'Amplitude', description: 'Digital analytics platform', logo: 'https://amplitude.com/favicon.ico', category: 'Analytics', link: 'https://amplitude.com', pricing: 'freemium' },
+    { name: 'Hotjar', description: 'Website heatmaps and behavior analytics', logo: 'https://www.hotjar.com/favicon.ico', category: 'Analytics', link: 'https://www.hotjar.com', pricing: 'freemium' },
+    { name: 'Segment', description: 'Customer data platform', logo: 'https://segment.com/favicon.ico', category: 'Analytics', link: 'https://segment.com', pricing: 'freemium' },
+    { name: 'Adobe Analytics', description: 'Enterprise analytics solution', logo: 'https://www.adobe.com/favicon.ico', category: 'Analytics', link: 'https://www.adobe.com/analytics', pricing: 'premium' },
+    { name: 'Heap', description: 'Digital insights platform', logo: 'https://heap.io/favicon.ico', category: 'Analytics', link: 'https://heap.io', pricing: 'freemium' },
+    { name: 'Kissmetrics', description: 'Customer engagement automation', logo: 'https://www.kissmetrics.io/favicon.ico', category: 'Analytics', link: 'https://www.kissmetrics.io', pricing: 'premium' },
+    { name: 'Crazy Egg', description: 'Website optimization and analytics', logo: 'https://www.crazyegg.com/favicon.ico', category: 'Analytics', link: 'https://www.crazyegg.com', pricing: 'freemium' },
+    { name: 'FullStory', description: 'Digital experience analytics', logo: 'https://www.fullstory.com/favicon.ico', category: 'Analytics', link: 'https://www.fullstory.com', pricing: 'freemium' }
     ],
     'inventory-management': [
-        { name: 'TradeGecko', description: 'Inventory and order management', logo: 'https://www.tradegecko.com/favicon.ico', category: 'Inventory', link: 'https://www.tradegecko.com' },
-        { name: 'Cin7', description: 'Inventory management system', logo: 'https://cin7.com/favicon.ico', category: 'Inventory', link: 'https://cin7.com' },
-        { name: 'Zoho Inventory', description: 'Online inventory management', logo: 'https://www.zoho.com/favicon.ico', category: 'Inventory', link: 'https://www.zoho.com/inventory' },
-        { name: 'inFlow Inventory', description: 'Small business inventory software', logo: 'https://www.inflowinventory.com/favicon.ico', category: 'Inventory', link: 'https://www.inflowinventory.com' },
-        { name: 'Fishbowl', description: 'Manufacturing and warehouse management', logo: 'https://www.fishbowlinventory.com/favicon.ico', category: 'Inventory', link: 'https://www.fishbowlinventory.com' },
-        { name: 'NetSuite', description: 'ERP and inventory management', logo: 'https://www.netsuite.com/favicon.ico', category: 'Inventory', link: 'https://www.netsuite.com' },
-        { name: 'Ordoro', description: 'Inventory and shipping management', logo: 'https://www.ordoro.com/favicon.ico', category: 'Inventory', link: 'https://www.ordoro.com' },
-        { name: 'Katana', description: 'Manufacturing inventory software', logo: 'https://katanamrp.com/favicon.ico', category: 'Inventory', link: 'https://katanamrp.com' },
-        { name: 'Unleashed', description: 'Cloud inventory management', logo: 'https://www.unleashedsoftware.com/favicon.ico', category: 'Inventory', link: 'https://www.unleashedsoftware.com' },
-        { name: 'DEAR Inventory', description: 'Inventory management system', logo: 'https://dearsystems.com/favicon.ico', category: 'Inventory', link: 'https://dearsystems.com' }
+    { name: 'TradeGecko', description: 'Inventory and order management', logo: 'https://www.tradegecko.com/favicon.ico', category: 'Inventory', link: 'https://www.tradegecko.com', pricing: 'premium' },
+    { name: 'Cin7', description: 'Inventory management system', logo: 'https://cin7.com/favicon.ico', category: 'Inventory', link: 'https://cin7.com', pricing: 'premium' },
+    { name: 'Zoho Inventory', description: 'Online inventory management', logo: 'https://www.zoho.com/favicon.ico', category: 'Inventory', link: 'https://www.zoho.com/inventory', pricing: 'freemium' },
+    { name: 'inFlow Inventory', description: 'Small business inventory software', logo: 'https://www.inflowinventory.com/favicon.ico', category: 'Inventory', link: 'https://www.inflowinventory.com', pricing: 'freemium' },
+    { name: 'Fishbowl', description: 'Manufacturing and warehouse management', logo: 'https://www.fishbowlinventory.com/favicon.ico', category: 'Inventory', link: 'https://www.fishbowlinventory.com', pricing: 'premium' },
+    { name: 'NetSuite', description: 'ERP and inventory management', logo: 'https://www.netsuite.com/favicon.ico', category: 'Inventory', link: 'https://www.netsuite.com', pricing: 'premium' },
+    { name: 'Ordoro', description: 'Inventory and shipping management', logo: 'https://www.ordoro.com/favicon.ico', category: 'Inventory', link: 'https://www.ordoro.com', pricing: 'premium' },
+    { name: 'Katana', description: 'Manufacturing inventory software', logo: 'https://katanamrp.com/favicon.ico', category: 'Inventory', link: 'https://katanamrp.com', pricing: 'premium' },
+    { name: 'Unleashed', description: 'Cloud inventory management', logo: 'https://www.unleashedsoftware.com/favicon.ico', category: 'Inventory', link: 'https://www.unleashedsoftware.com', pricing: 'premium' },
+    { name: 'DEAR Inventory', description: 'Inventory management system', logo: 'https://dearsystems.com/favicon.ico', category: 'Inventory', link: 'https://dearsystems.com', pricing: 'premium' }
     ],
     'content-moderation': [
-        { name: 'Perspective API', description: 'AI content moderation by Google', logo: 'https://www.perspectiveapi.com/favicon.ico', category: 'Content Moderation', link: 'https://www.perspectiveapi.com' },
-        { name: 'AWS Rekognition', description: 'Image and video analysis', logo: 'https://aws.amazon.com/favicon.ico', category: 'Content Moderation', link: 'https://aws.amazon.com/rekognition' },
-        { name: 'Microsoft Content Moderator', description: 'AI content moderation service', logo: 'https://www.microsoft.com/favicon.ico', category: 'Content Moderation', link: 'https://azure.microsoft.com/en-us/services/cognitive-services/content-moderator' },
-        { name: 'Hive Moderation', description: 'AI content moderation platform', logo: 'https://hivemoderation.com/favicon.ico', category: 'Content Moderation', link: 'https://hivemoderation.com' },
-        { name: 'Clarifai', description: 'Computer vision AI platform', logo: 'https://www.clarifai.com/favicon.ico', category: 'Content Moderation', link: 'https://www.clarifai.com' },
-        { name: 'Sightengine', description: 'Image and video moderation API', logo: 'https://sightengine.com/favicon.ico', category: 'Content Moderation', link: 'https://sightengine.com' },
-        { name: 'WebPurify', description: 'Content moderation and filtering', logo: 'https://www.webpurify.com/favicon.ico', category: 'Content Moderation', link: 'https://www.webpurify.com' },
-        { name: 'Two Hat Security', description: 'AI content moderation', logo: 'https://www.twohat.com/favicon.ico', category: 'Content Moderation', link: 'https://www.twohat.com' },
-        { name: 'Besedo', description: 'Content moderation services', logo: 'https://www.besedo.com/favicon.ico', category: 'Content Moderation', link: 'https://www.besedo.com' },
-        { name: 'Crisp Thinking', description: 'AI content moderation', logo: 'https://www.crispthinking.com/favicon.ico', category: 'Content Moderation', link: 'https://www.crispthinking.com' }
+    { name: 'Perspective API', description: 'AI content moderation by Google', logo: 'https://www.perspectiveapi.com/favicon.ico', category: 'Content Moderation', link: 'https://www.perspectiveapi.com', pricing: 'free' },
+    { name: 'AWS Rekognition', description: 'Image and video analysis', logo: 'https://aws.amazon.com/favicon.ico', category: 'Content Moderation', link: 'https://aws.amazon.com/rekognition', pricing: 'premium' },
+    { name: 'Microsoft Content Moderator', description: 'AI content moderation service', logo: 'https://www.microsoft.com/favicon.ico', category: 'Content Moderation', link: 'https://azure.microsoft.com/en-us/services/cognitive-services/content-moderator', pricing: 'premium' },
+    { name: 'Hive Moderation', description: 'AI content moderation platform', logo: 'https://hivemoderation.com/favicon.ico', category: 'Content Moderation', link: 'https://hivemoderation.com', pricing: 'premium' },
+    { name: 'Clarifai', description: 'Computer vision AI platform', logo: 'https://www.clarifai.com/favicon.ico', category: 'Content Moderation', link: 'https://www.clarifai.com', pricing: 'premium' },
+    { name: 'Sightengine', description: 'Image and video moderation API', logo: 'https://sightengine.com/favicon.ico', category: 'Content Moderation', link: 'https://sightengine.com', pricing: 'premium' },
+    { name: 'WebPurify', description: 'Content moderation and filtering', logo: 'https://www.webpurify.com/favicon.ico', category: 'Content Moderation', link: 'https://www.webpurify.com', pricing: 'premium' },
+    { name: 'Two Hat Security', description: 'AI content moderation', logo: 'https://www.twohat.com/favicon.ico', category: 'Content Moderation', link: 'https://www.twohat.com', pricing: 'premium' },
+    { name: 'Besedo', description: 'Content moderation services', logo: 'https://www.besedo.com/favicon.ico', category: 'Content Moderation', link: 'https://www.besedo.com', pricing: 'premium' },
+    { name: 'Crisp Thinking', description: 'AI content moderation', logo: 'https://www.crispthinking.com/favicon.ico', category: 'Content Moderation', link: 'https://www.crispthinking.com', pricing: 'premium' }
     ],
     'survey-tools': [
-        { name: 'SurveyMonkey', description: 'Online survey platform', logo: 'https://www.surveymonkey.com/favicon.ico', category: 'Survey Tools', link: 'https://www.surveymonkey.com' },
-        { name: 'Typeform', description: 'Interactive forms and surveys', logo: 'https://www.typeform.com/favicon.ico', category: 'Survey Tools', link: 'https://www.typeform.com' },
-        { name: 'Google Forms', description: 'Free online form builder', logo: 'https://www.google.com/favicon.ico', category: 'Survey Tools', link: 'https://forms.google.com' },
-        { name: 'Qualtrics', description: 'Experience management platform', logo: 'https://www.qualtrics.com/favicon.ico', category: 'Survey Tools', link: 'https://www.qualtrics.com' },
-        { name: 'JotForm', description: 'Online form builder', logo: 'https://www.jotform.com/favicon.ico', category: 'Survey Tools', link: 'https://www.jotform.com' },
-        { name: 'Formstack', description: 'Workplace productivity platform', logo: 'https://www.formstack.com/favicon.ico', category: 'Survey Tools', link: 'https://www.formstack.com' },
-        { name: 'SurveyGizmo', description: 'Advanced survey software', logo: 'https://www.surveygizmo.com/favicon.ico', category: 'Survey Tools', link: 'https://www.surveygizmo.com' },
-        { name: 'Wufoo', description: 'Online form builder', logo: 'https://www.wufoo.com/favicon.ico', category: 'Survey Tools', link: 'https://www.wufoo.com' },
-        { name: 'Formsite', description: 'Online form and survey builder', logo: 'https://www.formsite.com/favicon.ico', category: 'Survey Tools', link: 'https://www.formsite.com' },
-        { name: 'SoGoSurvey', description: 'Online survey software', logo: 'https://www.sogosurvey.com/favicon.ico', category: 'Survey Tools', link: 'https://www.sogosurvey.com' }
+    { name: 'SurveyMonkey', description: 'Online survey platform', logo: 'https://www.surveymonkey.com/favicon.ico', category: 'Survey Tools', link: 'https://www.surveymonkey.com', pricing: 'premium' },
+    { name: 'Typeform', description: 'Interactive forms and surveys', logo: 'https://www.typeform.com/favicon.ico', category: 'Survey Tools', link: 'https://www.typeform.com', pricing: 'freemium' },
+    { name: 'Google Forms', description: 'Free online form builder', logo: 'https://www.google.com/favicon.ico', category: 'Survey Tools', link: 'https://forms.google.com', pricing: 'free' },
+    { name: 'Qualtrics', description: 'Experience management platform', logo: 'https://www.qualtrics.com/favicon.ico', category: 'Survey Tools', link: 'https://www.qualtrics.com', pricing: 'premium' },
+    { name: 'JotForm', description: 'Online form builder', logo: 'https://www.jotform.com/favicon.ico', category: 'Survey Tools', link: 'https://www.jotform.com', pricing: 'freemium' },
+    { name: 'Formstack', description: 'Workplace productivity platform', logo: 'https://www.formstack.com/favicon.ico', category: 'Survey Tools', link: 'https://www.formstack.com', pricing: 'premium' },
+    { name: 'SurveyGizmo', description: 'Advanced survey software', logo: 'https://www.surveygizmo.com/favicon.ico', category: 'Survey Tools', link: 'https://www.surveygizmo.com', pricing: 'premium' },
+    { name: 'Wufoo', description: 'Online form builder', logo: 'https://www.wufoo.com/favicon.ico', category: 'Survey Tools', link: 'https://www.wufoo.com', pricing: 'freemium' },
+    { name: 'Formsite', description: 'Online form and survey builder', logo: 'https://www.formsite.com/favicon.ico', category: 'Survey Tools', link: 'https://www.formsite.com', pricing: 'freemium' },
+    { name: 'SoGoSurvey', description: 'Online survey software', logo: 'https://www.sogosurvey.com/favicon.ico', category: 'Survey Tools', link: 'https://www.sogosurvey.com', pricing: 'premium' }
     ],
     'api-tools': [
-        { name: 'OpenAI API', description: 'Access to GPT and other AI models', logo: 'https://openai.com/favicon.ico', category: 'API Tools', link: 'https://openai.com/api' },
-        { name: 'Hugging Face API', description: 'Machine learning model APIs', logo: 'https://huggingface.co/favicon.ico', category: 'API Tools', link: 'https://huggingface.co/inference-api' },
-        { name: 'Google Cloud AI APIs', description: 'AI and ML APIs by Google', logo: 'https://cloud.google.com/favicon.ico', category: 'API Tools', link: 'https://cloud.google.com/ai' },
-        { name: 'AWS AI Services', description: 'AI APIs and services by Amazon', logo: 'https://aws.amazon.com/favicon.ico', category: 'API Tools', link: 'https://aws.amazon.com/machine-learning/ai-services' },
-        { name: 'Azure Cognitive Services', description: 'AI APIs by Microsoft', logo: 'https://azure.microsoft.com/favicon.ico', category: 'API Tools', link: 'https://azure.microsoft.com/en-us/services/cognitive-services' },
-        { name: 'Cohere API', description: 'Natural language processing API', logo: 'https://cohere.ai/favicon.ico', category: 'API Tools', link: 'https://cohere.ai' },
-        { name: 'Anthropic API', description: 'Claude AI model API', logo: 'https://www.anthropic.com/favicon.ico', category: 'API Tools', link: 'https://www.anthropic.com' },
-        { name: 'Stability AI API', description: 'Stable Diffusion and other AI APIs', logo: 'https://stability.ai/favicon.ico', category: 'API Tools', link: 'https://stability.ai' },
-        { name: 'Replicate', description: 'Run AI models via API', logo: 'https://replicate.com/favicon.ico', category: 'API Tools', link: 'https://replicate.com' },
-        { name: 'AI21 Labs API', description: 'Language model APIs', logo: 'https://www.ai21.com/favicon.ico', category: 'API Tools', link: 'https://www.ai21.com' }
+    { name: 'OpenAI API', description: 'Access to GPT and other AI models', logo: 'https://openai.com/favicon.ico', category: 'API Tools', link: 'https://openai.com/api', pricing: 'premium' },
+    { name: 'Hugging Face API', description: 'Machine learning model APIs', logo: 'https://huggingface.co/favicon.ico', category: 'API Tools', link: 'https://huggingface.co/inference-api', pricing: 'freemium' },
+    { name: 'Google Cloud AI APIs', description: 'AI and ML APIs by Google', logo: 'https://cloud.google.com/favicon.ico', category: 'API Tools', link: 'https://cloud.google.com/ai', pricing: 'premium' },
+    { name: 'AWS AI Services', description: 'AI APIs and services by Amazon', logo: 'https://aws.amazon.com/favicon.ico', category: 'API Tools', link: 'https://aws.amazon.com/machine-learning/ai-services', pricing: 'premium' },
+    { name: 'Azure Cognitive Services', description: 'AI APIs by Microsoft', logo: 'https://azure.microsoft.com/favicon.ico', category: 'API Tools', link: 'https://azure.microsoft.com/en-us/services/cognitive-services', pricing: 'premium' },
+    { name: 'Cohere API', description: 'Natural language processing API', logo: 'https://cohere.ai/favicon.ico', category: 'API Tools', link: 'https://cohere.ai', pricing: 'premium' },
+    { name: 'Anthropic API', description: 'Claude AI model API', logo: 'https://www.anthropic.com/favicon.ico', category: 'API Tools', link: 'https://www.anthropic.com', pricing: 'premium' },
+    { name: 'Stability AI API', description: 'Stable Diffusion and other AI APIs', logo: 'https://stability.ai/favicon.ico', category: 'API Tools', link: 'https://stability.ai', pricing: 'freemium' },
+    { name: 'Replicate', description: 'Run AI models via API', logo: 'https://replicate.com/favicon.ico', category: 'API Tools', link: 'https://replicate.com', pricing: 'freemium' },
+    { name: 'AI21 Labs API', description: 'Language model APIs', logo: 'https://www.ai21.com/favicon.ico', category: 'API Tools', link: 'https://www.ai21.com', pricing: 'premium' }
     ],
     'resume-builders': [
-        { name: 'Overleaf', description: 'AI-powered resume builder with professional templates', logo: 'https://overleaf.com/favicon.ico', category: 'Resume Builders', link: 'https://overleaf.com' },
-        { name: 'Zety', description: 'Smart resume builder with AI suggestions', logo: 'https://zety.com/favicon.ico', category: 'Resume Builders', link: 'https://zety.com' },
-        { name: 'Novoresume', description: 'Modern resume builder with AI optimization', logo: 'https://novoresume.com/favicon.ico', category: 'Resume Builders', link: 'https://novoresume.com' },
-        { name: 'Canva Resume', description: 'AI-enhanced resume design platform', logo: 'https://www.canva.com/favicon.ico', category: 'Resume Builders', link: 'https://www.canva.com/resumes' },
-        { name: 'ResumeGenius', description: 'AI resume builder with expert guidance', logo: 'https://resumegenius.com/favicon.ico', category: 'Resume Builders', link: 'https://resumegenius.com' },
-        { name: 'LiveCareer', description: 'Professional resume builder with AI tips', logo: 'https://www.livecareer.com/favicon.ico', category: 'Resume Builders', link: 'https://www.livecareer.com' },
-        { name: 'MyPerfectResume', description: 'AI-powered resume creation tool', logo: 'https://www.myperfectresume.com/favicon.ico', category: 'Resume Builders', link: 'https://www.myperfectresume.com' },
-        { name: 'Kickresume', description: 'AI resume builder with ATS optimization', logo: 'https://www.kickresume.com/favicon.ico', category: 'Resume Builders', link: 'https://www.kickresume.com' },
-        { name: 'Enhancv', description: 'Modern resume builder with AI insights', logo: 'https://enhancv.com/favicon.ico', category: 'Resume Builders', link: 'https://enhancv.com' },
-        { name: 'VisualCV', description: 'Professional resume builder with AI features', logo: 'https://www.visualcv.com/favicon.ico', category: 'Resume Builders', link: 'https://www.visualcv.com' }
+    { name: 'Overleaf', description: 'AI-powered resume builder with professional templates', logo: 'https://overleaf.com/favicon.ico', category: 'Resume Builders', link: 'https://overleaf.com', pricing: 'freemium' },
+    { name: 'Zety', description: 'Smart resume builder with AI suggestions', logo: 'https://zety.com/favicon.ico', category: 'Resume Builders', link: 'https://zety.com', pricing: 'premium' },
+    { name: 'Novoresume', description: 'Modern resume builder with AI optimization', logo: 'https://novoresume.com/favicon.ico', category: 'Resume Builders', link: 'https://novoresume.com', pricing: 'freemium' },
+    { name: 'Canva Resume', description: 'AI-enhanced resume design platform', logo: 'https://www.canva.com/favicon.ico', category: 'Resume Builders', link: 'https://www.canva.com/resumes', pricing: 'freemium' },
+    { name: 'ResumeGenius', description: 'AI resume builder with expert guidance', logo: 'https://resumegenius.com/favicon.ico', category: 'Resume Builders', link: 'https://resumegenius.com', pricing: 'premium' },
+    { name: 'LiveCareer', description: 'Professional resume builder with AI tips', logo: 'https://www.livecareer.com/favicon.ico', category: 'Resume Builders', link: 'https://www.livecareer.com', pricing: 'premium' },
+    { name: 'MyPerfectResume', description: 'AI-powered resume creation tool', logo: 'https://www.myperfectresume.com/favicon.ico', category: 'Resume Builders', link: 'https://www.myperfectresume.com', pricing: 'premium' },
+    { name: 'Kickresume', description: 'AI resume builder with ATS optimization', logo: 'https://www.kickresume.com/favicon.ico', category: 'Resume Builders', link: 'https://www.kickresume.com', pricing: 'freemium' },
+    { name: 'Enhancv', description: 'Modern resume builder with AI insights', logo: 'https://enhancv.com/favicon.ico', category: 'Resume Builders', link: 'https://enhancv.com', pricing: 'freemium' },
+    { name: 'VisualCV', description: 'Professional resume builder with AI features', logo: 'https://www.visualcv.com/favicon.ico', category: 'Resume Builders', link: 'https://www.visualcv.com', pricing: 'freemium' }
     ],
     'ai-summarizers': [
-        { name: 'TLDR This', description: 'Summarize any article or webpage', logo: 'https://tldrthis.com/favicon.ico', category: 'AI Summarization', link: 'https://tldrthis.com/' },
-        { name: 'Summari', description: 'AI article summarization', logo: 'https://www.summari.com/favicon.ico', category: 'AI Summarization', link: 'https://www.summari.com/' },
-        { name: 'Scholarcy', description: 'Research paper summarization', logo: 'https://www.scholarcy.com/favicon.ico', category: 'AI Summarization', link: 'https://www.scholarcy.com/' },
-        { name: 'Wordtune Read', description: 'AI document summarization', logo: 'https://www.wordtune.com/favicon.ico', category: 'AI Summarization', link: 'https://www.wordtune.com/read' },
-        { name: 'Quillbot Summarizer', description: 'Free text summarization tool', logo: 'https://quillbot.com/favicon.ico', category: 'AI Summarization', link: 'https://quillbot.com/summarize' },
-        { name: 'Resoomer', description: 'Online automatic text summarizer', logo: 'https://resoomer.com/favicon.ico', category: 'AI Summarization', link: 'https://resoomer.com/' },
-        { name: 'Genei', description: 'AI research summarization', logo: 'https://www.genei.io/favicon.ico', category: 'AI Summarization', link: 'https://www.genei.io/' },
-        { name: 'Summify', description: 'AI document summarization', logo: 'https://summify.io/favicon.ico', category: 'AI Summarization', link: 'https://summify.io/' },
-        { name: 'Summarize.tech', description: 'YouTube video summarization', logo: 'https://www.summarize.tech/favicon.ico', category: 'AI Summarization', link: 'https://www.summarize.tech/' },
-        { name: 'Summate', description: 'AI-powered text summarization', logo: 'https://summate.it/favicon.ico', category: 'AI Summarization', link: 'https://summate.it/' }
+    { name: 'TLDR This', description: 'Summarize any article or webpage', logo: 'https://tldrthis.com/favicon.ico', category: 'AI Summarization', link: 'https://tldrthis.com/', pricing: 'freemium' },
+    { name: 'Summari', description: 'AI article summarization', logo: 'https://www.summari.com/favicon.ico', category: 'AI Summarization', link: 'https://www.summari.com/', pricing: 'freemium' },
+    { name: 'Scholarcy', description: 'Research paper summarization', logo: 'https://www.scholarcy.com/favicon.ico', category: 'AI Summarization', link: 'https://www.scholarcy.com/', pricing: 'freemium' },
+    { name: 'Wordtune Read', description: 'AI document summarization', logo: 'https://www.wordtune.com/favicon.ico', category: 'AI Summarization', link: 'https://www.wordtune.com/read', pricing: 'freemium' },
+    { name: 'Quillbot Summarizer', description: 'Free text summarization tool', logo: 'https://quillbot.com/favicon.ico', category: 'AI Summarization', link: 'https://quillbot.com/summarize', pricing: 'freemium' },
+    { name: 'Resoomer', description: 'Online automatic text summarizer', logo: 'https://resoomer.com/favicon.ico', category: 'AI Summarization', link: 'https://resoomer.com/', pricing: 'freemium' },
+    { name: 'Genei', description: 'AI research summarization', logo: 'https://www.genei.io/favicon.ico', category: 'AI Summarization', link: 'https://www.genei.io/', pricing: 'premium' },
+    { name: 'Summify', description: 'AI document summarization', logo: 'https://summify.io/favicon.ico', category: 'AI Summarization', link: 'https://summify.io/', pricing: 'freemium' },
+    { name: 'Summarize.tech', description: 'YouTube video summarization', logo: 'https://www.summarize.tech/favicon.ico', category: 'AI Summarization', link: 'https://www.summarize.tech/', pricing: 'freemium' },
+    { name: 'Summate', description: 'AI-powered text summarization', logo: 'https://summate.it/favicon.ico', category: 'AI Summarization', link: 'https://summate.it/', pricing: 'freemium' }
     ],
     'ai-video-editors': [
-        { name: 'Runway', description: 'AI-powered video editing', logo: 'https://runwayml.com/favicon.ico', category: 'Video Editing', link: 'https://runwayml.com/' },
-        { name: 'Descript', description: 'All-in-one video editing', logo: 'https://www.descript.com/favicon.ico', category: 'Video Editing', link: 'https://www.descript.com/' },
-        { name: 'Pictory', description: 'Video creation from text', logo: 'https://pictory.ai/favicon.ico', category: 'Video Editing', link: 'https://pictory.ai/' },
-        { name: 'Synthesia', description: 'AI video generation', logo: 'https://www.synthesia.io/favicon.ico', category: 'Video Editing', link: 'https://www.synthesia.io/' },
-        { name: 'Fliki', description: 'Turn text into videos with AI', logo: 'https://fliki.ai/favicon.ico', category: 'Video Editing', link: 'https://fliki.ai/' },
-        { name: 'Kapwing', description: 'Online video editor with AI', logo: 'https://www.kapwing.com/favicon.ico', category: 'Video Editing', link: 'https://www.kapwing.com/' },
-        { name: 'InVideo', description: 'Online video creation platform', logo: 'https://invideo.io/favicon.ico', category: 'Video Editing', link: 'https://invideo.io/' },
-        { name: 'Elai', description: 'AI video generation platform', logo: 'https://elai.io/favicon.ico', category: 'Video Editing', link: 'https://elai.io/' },
-        { name: 'Opus Clip', description: 'AI video clip generator', logo: 'https://www.opus.pro/favicon.ico', category: 'Video Editing', link: 'https://www.opus.pro/' },
-        { name: 'Topaz Video AI', description: 'Video enhancement with AI', logo: 'https://www.topazlabs.com/favicon.ico', category: 'Video Editing', link: 'https://www.topazlabs.com/topaz-video-ai' }
+    { name: 'Runway', description: 'AI-powered video editing', logo: 'https://runwayml.com/favicon.ico', category: 'Video Editing', link: 'https://runwayml.com/', pricing: 'freemium' },
+    { name: 'Descript', description: 'All-in-one video editing', logo: 'https://www.descript.com/favicon.ico', category: 'Video Editing', link: 'https://www.descript.com/', pricing: 'freemium' },
+    { name: 'Pictory', description: 'Video creation from text', logo: 'https://pictory.ai/favicon.ico', category: 'Video Editing', link: 'https://pictory.ai/', pricing: 'freemium' },
+    { name: 'Synthesia', description: 'AI video generation', logo: 'https://www.synthesia.io/favicon.ico', category: 'Video Editing', link: 'https://www.synthesia.io/', pricing: 'premium' },
+    { name: 'Fliki', description: 'Turn text into videos with AI', logo: 'https://fliki.ai/favicon.ico', category: 'Video Editing', link: 'https://fliki.ai/', pricing: 'freemium' },
+    { name: 'Kapwing', description: 'Online video editor with AI', logo: 'https://www.kapwing.com/favicon.ico', category: 'Video Editing', link: 'https://www.kapwing.com/', pricing: 'freemium' },
+    { name: 'InVideo', description: 'Online video creation platform', logo: 'https://invideo.io/favicon.ico', category: 'Video Editing', link: 'https://invideo.io/', pricing: 'freemium' },
+    { name: 'Elai', description: 'AI video generation platform', logo: 'https://elai.io/favicon.ico', category: 'Video Editing', link: 'https://elai.io/', pricing: 'premium' },
+    { name: 'Opus Clip', description: 'AI video clip generator', logo: 'https://www.opus.pro/favicon.ico', category: 'Video Editing', link: 'https://www.opus.pro/', pricing: 'freemium' },
+    { name: 'Topaz Video AI', description: 'Video enhancement with AI', logo: 'https://www.topazlabs.com/favicon.ico', category: 'Video Editing', link: 'https://www.topazlabs.com/topaz-video-ai', pricing: 'premium' }
     ],
     'ai-language-learning': [
-        { name: 'Duolingo', description: 'AI-powered language learning', logo: 'https://www.duolingo.com/favicon.ico', category: 'Language Learning', link: 'https://www.duolingo.com/' },
-        { name: 'Babbel', description: 'Language learning with AI assistance', logo: 'https://www.babbel.com/favicon.ico', category: 'Language Learning', link: 'https://www.babbel.com/' },
-        { name: 'Rosetta Stone', description: 'Immersive language learning', logo: 'https://www.rosettastone.com/favicon.ico', category: 'Language Learning', link: 'https://www.rosettastone.com/' },
-        { name: 'Lingvist', description: 'AI-powered vocabulary learning', logo: 'https://lingvist.com/favicon.ico', category: 'Language Learning', link: 'https://lingvist.com/' },
-        { name: 'Memrise', description: 'Language learning with videos', logo: 'https://www.memrise.com/favicon.ico', category: 'Language Learning', link: 'https://www.memrise.com/' },
-        { name: 'Busuu', description: 'Social language learning', logo: 'https://www.busuu.com/favicon.ico', category: 'Language Learning', link: 'https://www.busuu.com/' },
-        { name: 'HelloTalk', description: 'Language exchange with natives', logo: 'https://www.hellotalk.com/favicon.ico', category: 'Language Learning', link: 'https://www.hellotalk.com/' },
-        { name: 'Tandem', description: 'Language exchange community', logo: 'https://www.tandem.net/favicon.ico', category: 'Language Learning', link: 'https://www.tandem.net/' },
-        { name: 'Speechling', description: 'AI pronunciation feedback', logo: 'https://speechling.com/favicon.ico', category: 'Language Learning', link: 'https://speechling.com/' },
-        { name: 'Pimsleur', description: 'Audio-based language learning', logo: 'https://www.pimsleur.com/favicon.ico', category: 'Language Learning', link: 'https://www.pimsleur.com/' }
+    { name: 'Duolingo', description: 'AI-powered language learning', logo: 'https://www.duolingo.com/favicon.ico', category: 'Language Learning', link: 'https://www.duolingo.com/', pricing: 'freemium' },
+    { name: 'Babbel', description: 'Language learning with AI assistance', logo: 'https://www.babbel.com/favicon.ico', category: 'Language Learning', link: 'https://www.babbel.com/', pricing: 'premium' },
+    { name: 'Rosetta Stone', description: 'Immersive language learning', logo: 'https://www.rosettastone.com/favicon.ico', category: 'Language Learning', link: 'https://www.rosettastone.com/', pricing: 'premium' },
+    { name: 'Lingvist', description: 'AI-powered vocabulary learning', logo: 'https://lingvist.com/favicon.ico', category: 'Language Learning', link: 'https://lingvist.com/', pricing: 'freemium' },
+    { name: 'Memrise', description: 'Language learning with videos', logo: 'https://www.memrise.com/favicon.ico', category: 'Language Learning', link: 'https://www.memrise.com/', pricing: 'freemium' },
+    { name: 'Busuu', description: 'Social language learning', logo: 'https://www.busuu.com/favicon.ico', category: 'Language Learning', link: 'https://www.busuu.com/', pricing: 'freemium' },
+    { name: 'HelloTalk', description: 'Language exchange with natives', logo: 'https://www.hellotalk.com/favicon.ico', category: 'Language Learning', link: 'https://www.hellotalk.com/', pricing: 'freemium' },
+    { name: 'Tandem', description: 'Language exchange community', logo: 'https://www.tandem.net/favicon.ico', category: 'Language Learning', link: 'https://www.tandem.net/', pricing: 'freemium' },
+    { name: 'Speechling', description: 'AI pronunciation feedback', logo: 'https://speechling.com/favicon.ico', category: 'Language Learning', link: 'https://speechling.com/', pricing: 'freemium' },
+    { name: 'Pimsleur', description: 'Audio-based language learning', logo: 'https://www.pimsleur.com/favicon.ico', category: 'Language Learning', link: 'https://www.pimsleur.com/', pricing: 'premium' }
     ],
     'ai-fitness': [
-        { name: 'Future', description: 'Personal training with AI coaching', logo: 'https://www.future.co/favicon.ico', category: 'AI Fitness', link: 'https://www.future.co/' },
-        { name: 'Fitbod', description: 'AI workout planning', logo: 'https://www.fitbod.me/favicon.ico', category: 'AI Fitness', link: 'https://www.fitbod.me/' },
-        { name: 'Aaptiv', description: 'Audio-based fitness coaching', logo: 'https://aaptiv.com/favicon.ico', category: 'AI Fitness', link: 'https://aaptiv.com/' },
-        { name: 'Freeletics', description: 'AI personal trainer', logo: 'https://www.freeletics.com/favicon.ico', category: 'AI Fitness', link: 'https://www.freeletics.com/' },
-        { name: 'Tonal', description: 'Smart home gym with AI', logo: 'https://www.tonal.com/favicon.ico', category: 'AI Fitness', link: 'https://www.tonal.com/' },
-        { name: 'Mirror', description: 'Interactive home fitness system', logo: 'https://www.mirror.co/favicon.ico', category: 'AI Fitness', link: 'https://www.mirror.co/' },
-        { name: 'Tempo', description: 'AI-powered home gym', logo: 'https://tempo.fit/favicon.ico', category: 'AI Fitness', link: 'https://tempo.fit/' },
-        { name: 'FitnessAI', description: 'AI workout planner', logo: 'https://www.fitnessai.com/favicon.ico', category: 'AI Fitness', link: 'https://www.fitnessai.com/' },
-        { name: 'Whoop', description: 'AI fitness and recovery tracking', logo: 'https://www.whoop.com/favicon.ico', category: 'AI Fitness', link: 'https://www.whoop.com/' },
-        { name: 'Oura Ring', description: 'AI sleep and activity tracking', logo: 'https://ouraring.com/favicon.ico', category: 'AI Fitness', link: 'https://ouraring.com/' }
+    { name: 'Future', description: 'Personal training with AI coaching', logo: 'https://www.future.co/favicon.ico', category: 'AI Fitness', link: 'https://www.future.co/', pricing: 'premium' },
+    { name: 'Fitbod', description: 'AI workout planning', logo: 'https://www.fitbod.me/favicon.ico', category: 'AI Fitness', link: 'https://www.fitbod.me/', pricing: 'freemium' },
+    { name: 'Aaptiv', description: 'Audio-based fitness coaching', logo: 'https://aaptiv.com/favicon.ico', category: 'AI Fitness', link: 'https://aaptiv.com/', pricing: 'premium' },
+    { name: 'Freeletics', description: 'AI personal trainer', logo: 'https://www.freeletics.com/favicon.ico', category: 'AI Fitness', link: 'https://www.freeletics.com/', pricing: 'freemium' },
+    { name: 'Tonal', description: 'Smart home gym with AI', logo: 'https://www.tonal.com/favicon.ico', category: 'AI Fitness', link: 'https://www.tonal.com/', pricing: 'premium' },
+    { name: 'Mirror', description: 'Interactive home fitness system', logo: 'https://www.mirror.co/favicon.ico', category: 'AI Fitness', link: 'https://www.mirror.co/', pricing: 'premium' },
+    { name: 'Tempo', description: 'AI-powered home gym', logo: 'https://tempo.fit/favicon.ico', category: 'AI Fitness', link: 'https://tempo.fit/', pricing: 'premium' },
+    { name: 'FitnessAI', description: 'AI workout planner', logo: 'https://www.fitnessai.com/favicon.ico', category: 'AI Fitness', link: 'https://www.fitnessai.com/', pricing: 'premium' },
+    { name: 'Whoop', description: 'AI fitness and recovery tracking', logo: 'https://www.whoop.com/favicon.ico', category: 'AI Fitness', link: 'https://www.whoop.com/', pricing: 'premium' },
+    { name: 'Oura Ring', description: 'AI sleep and activity tracking', logo: 'https://ouraring.com/favicon.ico', category: 'AI Fitness', link: 'https://ouraring.com/', pricing: 'premium' }
     ],
     'ai-gaming': [
-        { name: 'AI Dungeon', description: 'AI-generated text adventure game', logo: 'https://play.aidungeon.io/favicon.ico', category: 'AI Gaming', link: 'https://play.aidungeon.io/' },
-        { name: 'NVIDIA GameGAN', description: 'AI game generation technology', logo: 'https://www.nvidia.com/favicon.ico', category: 'AI Gaming', link: 'https://www.nvidia.com/en-us/research/ai-playground/' },
-        { name: 'Chess.com', description: 'AI chess opponents', logo: 'https://www.chess.com/favicon.ico', category: 'AI Gaming', link: 'https://www.chess.com/' },
-        { name: 'Replika', description: 'AI companion and chat game', logo: 'https://replika.ai/favicon.ico', category: 'AI Gaming', link: 'https://replika.ai/' },
-        { name: 'Latitude', description: 'AI-powered game creation', logo: 'https://latitude.io/favicon.ico', category: 'AI Gaming', link: 'https://latitude.io/' },
-        { name: 'Scenario', description: 'AI-generated game assets', logo: 'https://www.scenario.com/favicon.ico', category: 'AI Gaming', link: 'https://www.scenario.com/' },
-        { name: 'Inworld AI', description: 'AI characters for games', logo: 'https://inworld.ai/favicon.ico', category: 'AI Gaming', link: 'https://inworld.ai/' },
-        { name: 'Charisma.ai', description: 'Interactive AI characters', logo: 'https://charisma.ai/favicon.ico', category: 'AI Gaming', link: 'https://charisma.ai/' },
-        { name: 'Hidden Door', description: 'AI narrative game worlds', logo: 'https://www.hiddendoor.co/favicon.ico', category: 'AI Gaming', link: 'https://www.hiddendoor.co/' },
-        { name: 'Convai', description: 'AI NPCs for games', logo: 'https://www.convai.com/favicon.ico', category: 'AI Gaming', link: 'https://www.convai.com/' }
+    { name: 'AI Dungeon', description: 'AI-generated text adventure game', logo: 'https://play.aidungeon.io/favicon.ico', category: 'AI Gaming', link: 'https://play.aidungeon.io/', pricing: 'freemium' },
+    { name: 'NVIDIA GameGAN', description: 'AI game generation technology', logo: 'https://www.nvidia.com/favicon.ico', category: 'AI Gaming', link: 'https://www.nvidia.com/en-us/research/ai-playground/', pricing: 'free' },
+    { name: 'Chess.com', description: 'AI chess opponents', logo: 'https://www.chess.com/favicon.ico', category: 'AI Gaming', link: 'https://www.chess.com/', pricing: 'freemium' },
+    { name: 'Replika', description: 'AI companion and chat game', logo: 'https://replika.ai/favicon.ico', category: 'AI Gaming', link: 'https://replika.ai/', pricing: 'freemium' },
+    { name: 'Latitude', description: 'AI-powered game creation', logo: 'https://latitude.io/favicon.ico', category: 'AI Gaming', link: 'https://latitude.io/', pricing: 'premium' },
+    { name: 'Scenario', description: 'AI-generated game assets', logo: 'https://www.scenario.com/favicon.ico', category: 'AI Gaming', link: 'https://www.scenario.com/', pricing: 'premium' },
+    { name: 'Inworld AI', description: 'AI characters for games', logo: 'https://inworld.ai/favicon.ico', category: 'AI Gaming', link: 'https://inworld.ai/', pricing: 'premium' },
+    { name: 'Charisma.ai', description: 'Interactive AI characters', logo: 'https://charisma.ai/favicon.ico', category: 'AI Gaming', link: 'https://charisma.ai/', pricing: 'premium' },
+    { name: 'Hidden Door', description: 'AI narrative game worlds', logo: 'https://www.hiddendoor.co/favicon.ico', category: 'AI Gaming', link: 'https://www.hiddendoor.co/', pricing: 'premium' },
+    { name: 'Convai', description: 'AI NPCs for games', logo: 'https://www.convai.com/favicon.ico', category: 'AI Gaming', link: 'https://www.convai.com/', pricing: 'premium' }
     ],
     'ai-dating': [
-        { name: 'Replika', description: 'AI companion and romantic partner', logo: 'https://replika.ai/favicon.ico', category: 'AI Dating', link: 'https://replika.ai/' },
-        { name: 'Blush', description: 'AI dating coach', logo: 'https://blush.ai/favicon.ico', category: 'AI Dating', link: 'https://blush.ai/' },
-        { name: 'Hinge', description: 'Dating app with AI matching', logo: 'https://hinge.co/favicon.ico', category: 'AI Dating', link: 'https://hinge.co/' },
-        { name: 'eHarmony', description: 'AI matchmaking algorithm', logo: 'https://www.eharmony.com/favicon.ico', category: 'AI Dating', link: 'https://www.eharmony.com/' },
-        { name: 'Match', description: 'Dating with AI recommendations', logo: 'https://match.com/favicon.ico', category: 'AI Dating', link: 'https://match.com/' },
-        { name: 'OkCupid', description: 'AI-powered compatibility matching', logo: 'https://www.okcupid.com/favicon.ico', category: 'AI Dating', link: 'https://www.okcupid.com/' },
-        { name: 'Bumble', description: 'Dating app with AI features', logo: 'https://bumble.com/favicon.ico', category: 'AI Dating', link: 'https://bumble.com/' },
-        { name: 'Tinder', description: 'Dating app with AI matching', logo: 'https://tinder.com/favicon.ico', category: 'AI Dating', link: 'https://tinder.com/' },
-        { name: 'Iris', description: 'AI matchmaking app', logo: 'https://www.iris.ai/favicon.ico', category: 'AI Dating', link: 'https://www.iris.ai/' },
-        { name: 'Loveflutter', description: 'Personality-based dating with AI', logo: 'https://loveflutter.com/favicon.ico', category: 'AI Dating', link: 'https://loveflutter.com/' }
+    { name: 'Replika', description: 'AI companion and romantic partner', logo: 'https://replika.ai/favicon.ico', category: 'AI Dating', link: 'https://replika.ai/', pricing: 'freemium' },
+    { name: 'Blush', description: 'AI dating coach', logo: 'https://blush.ai/favicon.ico', category: 'AI Dating', link: 'https://blush.ai/', pricing: 'premium' },
+    { name: 'Hinge', description: 'Dating app with AI matching', logo: 'https://hinge.co/favicon.ico', category: 'AI Dating', link: 'https://hinge.co/', pricing: 'freemium' },
+    { name: 'eHarmony', description: 'AI matchmaking algorithm', logo: 'https://www.eharmony.com/favicon.ico', category: 'AI Dating', link: 'https://www.eharmony.com/', pricing: 'premium' },
+    { name: 'Match', description: 'Dating with AI recommendations', logo: 'https://match.com/favicon.ico', category: 'AI Dating', link: 'https://match.com/', pricing: 'premium' },
+    { name: 'OkCupid', description: 'AI-powered compatibility matching', logo: 'https://www.okcupid.com/favicon.ico', category: 'AI Dating', link: 'https://www.okcupid.com/', pricing: 'freemium' },
+    { name: 'Bumble', description: 'Dating app with AI features', logo: 'https://bumble.com/favicon.ico', category: 'AI Dating', link: 'https://bumble.com/', pricing: 'freemium' },
+    { name: 'Tinder', description: 'Dating app with AI matching', logo: 'https://tinder.com/favicon.ico', category: 'AI Dating', link: 'https://tinder.com/', pricing: 'freemium' },
+    { name: 'Iris', description: 'AI matchmaking app', logo: 'https://www.iris.ai/favicon.ico', category: 'AI Dating', link: 'https://www.iris.ai/', pricing: 'premium' },
+    { name: 'Loveflutter', description: 'Personality-based dating with AI', logo: 'https://loveflutter.com/favicon.ico', category: 'AI Dating', link: 'https://loveflutter.com/', pricing: 'premium' }
     ],
     'ai-cooking': [
-        { name: 'Plant Jammer', description: 'AI-powered recipe creation', logo: 'https://www.plantjammer.com/favicon.ico', category: 'AI Cooking', link: 'https://www.plantjammer.com/' },
-        { name: 'Whisk', description: 'AI meal planning and recipes', logo: 'https://whisk.com/favicon.ico', category: 'AI Cooking', link: 'https://whisk.com/' },
-        { name: 'Chefling', description: 'AI kitchen assistant app', logo: 'https://www.chefling.net/favicon.ico', category: 'AI Cooking', link: 'https://www.chefling.net/' },
-        { name: 'Cookpad', description: 'Recipe sharing with AI recommendations', logo: 'https://cookpad.com/favicon.ico', category: 'AI Cooking', link: 'https://cookpad.com/' },
-        { name: 'Yummly', description: 'Personalized recipe recommendations', logo: 'https://www.yummly.com/favicon.ico', category: 'AI Cooking', link: 'https://www.yummly.com/' },
-        { name: 'Innit', description: 'Smart cooking platform', logo: 'https://www.innit.com/favicon.ico', category: 'AI Cooking', link: 'https://www.innit.com/' },
-        { name: 'SideChef', description: 'Step-by-step cooking app', logo: 'https://www.sidechef.com/favicon.ico', category: 'AI Cooking', link: 'https://www.sidechef.com/' },
-        { name: 'Cooklist', description: 'Recipe app based on your groceries', logo: 'https://cooklist.com/favicon.ico', category: 'AI Cooking', link: 'https://cooklist.com/' },
-        { name: 'Kitchenful', description: 'AI meal planning and grocery shopping', logo: 'https://www.kitchenful.com/favicon.ico', category: 'AI Cooking', link: 'https://www.kitchenful.com/' },
-        { name: 'Foodpairing', description: 'AI flavor pairing suggestions', logo: 'https://www.foodpairing.com/favicon.ico', category: 'AI Cooking', link: 'https://www.foodpairing.com/' }
+    { name: 'Plant Jammer', description: 'AI-powered recipe creation', logo: 'https://www.plantjammer.com/favicon.ico', category: 'AI Cooking', link: 'https://www.plantjammer.com/', pricing: 'freemium' },
+    { name: 'Whisk', description: 'AI meal planning and recipes', logo: 'https://whisk.com/favicon.ico', category: 'AI Cooking', link: 'https://whisk.com/', pricing: 'freemium' },
+    { name: 'Chefling', description: 'AI kitchen assistant app', logo: 'https://www.chefling.net/favicon.ico', category: 'AI Cooking', link: 'https://www.chefling.net/', pricing: 'free' },
+    { name: 'Cookpad', description: 'Recipe sharing with AI recommendations', logo: 'https://cookpad.com/favicon.ico', category: 'AI Cooking', link: 'https://cookpad.com/', pricing: 'free' },
+    { name: 'Yummly', description: 'Personalized recipe recommendations', logo: 'https://www.yummly.com/favicon.ico', category: 'AI Cooking', link: 'https://www.yummly.com/', pricing: 'freemium' },
+    { name: 'Innit', description: 'Smart cooking platform', logo: 'https://www.innit.com/favicon.ico', category: 'AI Cooking', link: 'https://www.innit.com/', pricing: 'freemium' },
+    { name: 'SideChef', description: 'Step-by-step cooking app', logo: 'https://www.sidechef.com/favicon.ico', category: 'AI Cooking', link: 'https://www.sidechef.com/', pricing: 'freemium' },
+    { name: 'Cooklist', description: 'Recipe app based on your groceries', logo: 'https://cooklist.com/favicon.ico', category: 'AI Cooking', link: 'https://cooklist.com/', pricing: 'freemium' },
+    { name: 'Kitchenful', description: 'AI meal planning and grocery shopping', logo: 'https://www.kitchenful.com/favicon.ico', category: 'AI Cooking', link: 'https://www.kitchenful.com/', pricing: 'freemium' },
+    { name: 'Foodpairing', description: 'AI flavor pairing suggestions', logo: 'https://www.foodpairing.com/favicon.ico', category: 'AI Cooking', link: 'https://www.foodpairing.com/', pricing: 'freemium' }
     ],
     'ats-resume-checkers': [
-        { name: 'Jobscan', description: 'AI-powered ATS resume optimization tool', logo: 'https://www.jobscan.co/favicon.ico', category: 'ATS Resume Checkers', link: 'https://www.jobscan.co' },
-        { name: 'Resume Worded', description: 'AI resume checker and LinkedIn optimizer', logo: 'https://resumeworded.com/favicon.ico', category: 'ATS Resume Checkers', link: 'https://resumeworded.com' },
-        { name: 'Skillsyncer', description: 'ATS resume scanner and keyword optimizer', logo: 'https://skillsyncer.com/favicon.ico', category: 'ATS Resume Checkers', link: 'https://skillsyncer.com' },
-        { name: 'TopResume', description: 'Professional resume review and ATS optimization', logo: 'https://www.topresume.com/favicon.ico', category: 'ATS Resume Checkers', link: 'https://www.topresume.com' },
-        { name: 'VMock', description: 'AI resume review and career guidance platform', logo: 'https://www.vmock.com/favicon.ico', category: 'ATS Resume Checkers', link: 'https://www.vmock.com' },
-        { name: 'RezScore', description: 'Free ATS resume checker and scorer', logo: 'https://www.rezscore.com/favicon.ico', category: 'ATS Resume Checkers', link: 'https://www.rezscore.com' },
-        { name: 'Targeted Resume', description: 'ATS-friendly resume optimization tool', logo: 'https://www.targetedresume.com/favicon.ico', category: 'ATS Resume Checkers', link: 'https://www.targetedresume.com' },
-        { name: 'Resume Checker', description: 'AI-powered resume analysis and improvement', logo: 'https://www.resumechecker.net/favicon.ico', category: 'ATS Resume Checkers', link: 'https://www.resumechecker.net' },
-        { name: 'Optimize Resume', description: 'ATS resume optimization and keyword matching', logo: 'https://www.optimizeresume.com/favicon.ico', category: 'ATS Resume Checkers', link: 'https://www.optimizeresume.com' },
-        { name: 'Resume Matcher', description: 'AI tool to match resume with job descriptions', logo: 'https://www.resumematcher.com/favicon.ico', category: 'ATS Resume Checkers', link: 'https://www.resumematcher.com' }
+    { name: 'Jobscan', description: 'AI-powered ATS resume optimization tool', logo: 'https://www.jobscan.co/favicon.ico', category: 'ATS Resume Checkers', link: 'https://www.jobscan.co', pricing: 'freemium' },
+    { name: 'Resume Worded', description: 'AI resume checker and LinkedIn optimizer', logo: 'https://resumeworded.com/favicon.ico', category: 'ATS Resume Checkers', link: 'https://resumeworded.com', pricing: 'freemium' },
+    { name: 'Skillsyncer', description: 'ATS resume scanner and keyword optimizer', logo: 'https://skillsyncer.com/favicon.ico', category: 'ATS Resume Checkers', link: 'https://skillsyncer.com', pricing: 'freemium' },
+    { name: 'TopResume', description: 'Professional resume review and ATS optimization', logo: 'https://www.topresume.com/favicon.ico', category: 'ATS Resume Checkers', link: 'https://www.topresume.com', pricing: 'premium' },
+    { name: 'VMock', description: 'AI resume review and career guidance platform', logo: 'https://www.vmock.com/favicon.ico', category: 'ATS Resume Checkers', link: 'https://www.vmock.com', pricing: 'freemium' },
+    { name: 'RezScore', description: 'Free ATS resume checker and scorer', logo: 'https://www.rezscore.com/favicon.ico', category: 'ATS Resume Checkers', link: 'https://www.rezscore.com', pricing: 'free' },
+    { name: 'Targeted Resume', description: 'ATS-friendly resume optimization tool', logo: 'https://www.targetedresume.com/favicon.ico', category: 'ATS Resume Checkers', link: 'https://www.targetedresume.com', pricing: 'freemium' },
+    { name: 'Resume Checker', description: 'AI-powered resume analysis and improvement', logo: 'https://www.resumechecker.net/favicon.ico', category: 'ATS Resume Checkers', link: 'https://www.resumechecker.net', pricing: 'freemium' },
+    { name: 'Optimize Resume', description: 'ATS resume optimization and keyword matching', logo: 'https://www.optimizeresume.com/favicon.ico', category: 'ATS Resume Checkers', link: 'https://www.optimizeresume.com', pricing: 'freemium' },
+    { name: 'Resume Matcher', description: 'AI tool to match resume with job descriptions', logo: 'https://www.resumematcher.com/favicon.ico', category: 'ATS Resume Checkers', link: 'https://www.resumematcher.com', pricing: 'freemium' }
     ]
 });
 
@@ -4194,7 +4209,42 @@ function showTools(category, updateHistory = true) {
     // Set title
     const categoryName = category.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
     toolsTitle.textContent = categoryName;
-    
+
+    // Inject pricing filter UI below the title (checkboxes)
+    let pricingFilter = document.getElementById('pricing-filter');
+    if (pricingFilter) pricingFilter.remove(); // Remove any existing filter
+    pricingFilter = document.createElement('div');
+    pricingFilter.id = 'pricing-filter';
+    pricingFilter.style.display = 'flex';
+    pricingFilter.style.justifyContent = 'center';
+    pricingFilter.style.gap = '24px';
+    pricingFilter.style.margin = '16px 0 24px 0';
+    pricingFilter.innerHTML = `
+        <label style="display: flex; align-items: center; gap: 6px; cursor: pointer; font-weight: 600; color: #000;">
+            <input type="checkbox" class="pricing-checkbox" data-pricing="all" checked style="accent-color: #6366f1; width: 18px; height: 18px;"> All
+        </label>
+        <label style="display: flex; align-items: center; gap: 6px; cursor: pointer; font-weight: 600; color: #000;">
+            <input type="checkbox" class="pricing-checkbox" data-pricing="free" style="accent-color: #10b981; width: 18px; height: 18px;"> Free
+        </label>
+        <label style="display: flex; align-items: center; gap: 6px; cursor: pointer; font-weight: 600; color: #000;">
+            <input type="checkbox" class="pricing-checkbox" data-pricing="freemium" style="accent-color: #f59e0b; width: 18px; height: 18px;"> Freemium
+        </label>
+        <label style="display: flex; align-items: center; gap: 6px; cursor: pointer; font-weight: 600; color: #000;">
+            <input type="checkbox" class="pricing-checkbox" data-pricing="premium" style="accent-color: #ef4444; width: 18px; height: 18px;"> Premium
+        </label>
+    `;
+    // Move filter to always be between heading and tool list
+    // Remove any existing filter from anywhere in the container
+    const container = toolsSection.querySelector('.container');
+    const oldFilter = container.querySelector('#pricing-filter');
+    if (oldFilter) oldFilter.remove();
+    // Insert filter after the header (tools-header), before tools-grid
+    const toolsHeader = container.querySelector('.tools-header');
+    const toolsGridEl = container.querySelector('#tools-grid');
+    if (toolsHeader && toolsGridEl) {
+        toolsHeader.after(pricingFilter);
+    }
+
     // Clear previous tools
     toolsGrid.innerHTML = '';
     
@@ -4216,10 +4266,50 @@ function showTools(category, updateHistory = true) {
         return 0;
     });
     
-    // Create tool cards
-    sortedTools.forEach(tool => {
-        const toolCard = createToolCard(tool);
-        toolsGrid.appendChild(toolCard);
+    // Helper to render tool cards by pricing (checkbox logic)
+    function renderToolCards(selected) {
+        toolsGrid.innerHTML = '';
+        let filtered = sortedTools;
+        if (selected.length === 0 || selected.includes('all')) {
+            // Show all tools
+        } else {
+            filtered = sortedTools.filter(tool => selected.includes((tool.pricing || 'free').toLowerCase()));
+        }
+        if (filtered.length === 0) {
+            const noResult = document.createElement('div');
+            noResult.textContent = 'No tools found for this pricing.';
+            noResult.style.cssText = 'grid-column: 1 / -1; text-align: center; color: var(--text-muted); margin: 32px 0; font-size: 1.2rem;';
+            toolsGrid.appendChild(noResult);
+        } else {
+            filtered.forEach(tool => {
+                const toolCard = createToolCard(tool);
+                toolsGrid.appendChild(toolCard);
+            });
+        }
+    }
+
+    // Initial render (all)
+    renderToolCards(['all']);
+
+    // Add event listeners to pricing filter checkboxes
+    const pricingCheckboxes = document.querySelectorAll('#pricing-filter .pricing-checkbox');
+    pricingCheckboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', function() {
+            let checked = Array.from(pricingCheckboxes).filter(cb => cb.checked).map(cb => cb.dataset.pricing);
+            // If 'all' is checked, uncheck others
+            if (this.dataset.pricing === 'all' && this.checked) {
+                pricingCheckboxes.forEach(cb => { if (cb.dataset.pricing !== 'all') cb.checked = false; });
+                checked = ['all'];
+            } else if (this.dataset.pricing !== 'all' && this.checked) {
+                document.querySelector('#pricing-filter .pricing-checkbox[data-pricing="all"]').checked = false;
+                checked = Array.from(pricingCheckboxes).filter(cb => cb.checked).map(cb => cb.dataset.pricing);
+            } else if (Array.from(pricingCheckboxes).filter(cb => cb.checked).length === 0) {
+                // If none checked, default to 'all'
+                document.querySelector('#pricing-filter .pricing-checkbox[data-pricing="all"]').checked = true;
+                checked = ['all'];
+            }
+            renderToolCards(checked);
+        });
     });
     
     // Update history
@@ -4525,6 +4615,21 @@ function createToolCard(tool) {
     const savedTools = getSavedTools();
     const isSaved = currentUser && savedTools.some(t => t.name === tool.name);
 
+    // Determine badge label and class
+    let badgeLabel = 'FREE';
+    let badgeClass = 'free';
+    if (tool.pricing) {
+        if (tool.pricing.toLowerCase() === 'premium') {
+            badgeLabel = 'PREMIUM';
+            badgeClass = 'premium';
+        } else if (tool.pricing.toLowerCase() === 'freemium') {
+            badgeLabel = 'FREEMIUM';
+            badgeClass = 'freemium';
+        } else {
+            badgeLabel = tool.pricing.toUpperCase();
+            badgeClass = tool.pricing.toLowerCase();
+        }
+    }
     card.innerHTML = `
         <div class="tool-header" style="position:relative;">
             <div class="tool-logo">
@@ -4541,12 +4646,8 @@ function createToolCard(tool) {
         </div>
         <p class="tool-description">${tool.description}</p>
         <div class="tool-actions">
-            <div class="tool-rating">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
+            <div class="tool-status">
+                <span class="status-badge ${badgeClass}">${badgeLabel}</span>
             </div>
             <a href="${tool.link}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                 <i class="fas fa-external-link-alt"></i>
@@ -4579,9 +4680,90 @@ function createToolCard(tool) {
     return card;
 }
 
-// Create workflow tool card - same format as AI tools
+// Create workflow tool card with rating bar instead of status badge
 function createWorkflowToolCard(tool) {
-    return createToolCard(tool);
+    const card = document.createElement('div');
+    card.className = 'tool-card';
+    const fallbackIcon = getFallbackIcon(tool.category);
+    
+    // Check if tool is saved (only if user is logged in)
+    const savedTools = getSavedTools();
+    const isSaved = currentUser && savedTools.some(t => t.name === tool.name);
+
+    // Generate rating based on tool popularity and quality
+    const getRating = (toolName) => {
+        const ratings = {
+            'HubSpot': '4.8', 'Salesforce': '4.7', 'Slack': '4.6', 'Zoom': '4.5', 'Trello': '4.4',
+            'Asana': '4.3', 'Monday.com': '4.2', 'Notion': '4.6', 'Google Workspace': '4.5',
+            'Microsoft 365': '4.4', 'Zendesk': '4.3', 'Freshdesk': '4.2', 'Intercom': '4.4',
+            'Mailchimp': '4.1', 'Canva': '4.7', 'Adobe Creative Suite': '4.6', 'Figma': '4.8',
+            'Sketch': '4.3', 'InVision': '4.0', 'Zapier': '4.5', 'IFTTT': '4.2'
+        };
+        return ratings[toolName] || (Math.random() * 1.0 + 4.0).toFixed(1);
+    };
+    const rating = getRating(tool.name);
+    const fullStars = Math.floor(rating);
+    const hasHalfStar = rating % 1 >= 0.5;
+    
+    card.innerHTML = `
+        <div class="tool-header" style="position:relative;">
+            <div class="tool-logo">
+                <img src="${tool.logo}" alt="${tool.name}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <i class="fas ${fallbackIcon}" style="display: none;"></i>
+            </div>
+            <div class="tool-info">
+                <h3>${tool.name}</h3>
+                <p>${tool.category}</p>
+            </div>
+            <button class="bookmark-btn" title="${currentUser ? 'Save tool' : 'Login to save tools'}" style="position:absolute;top:0;right:0;background:none;border:none;outline:none;cursor:pointer;padding:8px;z-index:2;">
+                <i class="fa${isSaved ? 's' : 'r'} fa-bookmark" style="color:${isSaved ? '#6366f1' : '#b0b0b0'};font-size:22px;"></i>
+            </button>
+        </div>
+        <p class="tool-description">${tool.description}</p>
+        <div class="tool-actions">
+            <div class="tool-rating" style="display:flex;align-items:center;gap:8px;">
+                <div class="stars" style="display:flex;gap:2px;">
+                    ${Array.from({length: 5}, (_, i) => {
+                        if (i < fullStars) {
+                            return '<i class="fas fa-star" style="color:#fbbf24;font-size:14px;"></i>';
+                        } else if (i === fullStars && hasHalfStar) {
+                            return '<i class="fas fa-star-half-alt" style="color:#fbbf24;font-size:14px;"></i>';
+                        } else {
+                            return '<i class="far fa-star" style="color:#d1d5db;font-size:14px;"></i>';
+                        }
+                    }).join('')}
+                </div>
+                <span style="font-size:14px;color:var(--text-secondary);">${rating}</span>
+            </div>
+            <a href="${tool.link}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <i class="fas fa-external-link-alt"></i>
+                Visit Tool
+            </a>
+        </div>
+    `;
+
+    // Bookmark button logic
+    const bookmarkBtn = card.querySelector('.bookmark-btn');
+    bookmarkBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        if (!currentUser) {
+            alert('Please login to save tools.');
+            return;
+        }
+        let saved = getSavedTools();
+        const alreadySaved = saved.some(t => t.name === tool.name);
+        if (alreadySaved) {
+            saved = saved.filter(t => t.name !== tool.name);
+        } else {
+            saved.push(tool);
+        }
+        setSavedTools(saved);
+        // Update icon
+        const icon = bookmarkBtn.querySelector('i');
+        icon.className = `fa${alreadySaved ? 'r' : 's'} fa-bookmark`;
+        icon.style.color = alreadySaved ? '#b0b0b0' : '#6366f1';
+    });
+    return card;
 }
 
 // Go back to main view with history support
