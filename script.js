@@ -406,6 +406,7 @@ const aiToolsData = {
             { name: 'QR Code Generator', description: 'Create QR codes instantly', logo: 'https://www.the-qrcode-generator.com/favicon.ico', category: 'QR Code Generators', link: 'https://www.the-qrcode-generator.com/', pricing: 'free' }
     ],
     'app-website-developers': [
+            { name: 'TeleportHQ', description: 'Free AI-powered website builder and code generator', logo: 'https://teleporthq.io/favicon.ico', category: 'App/Website Developers', link: 'https://teleporthq.io/', pricing: 'free' },
             { name: 'Wix', description: 'Website builder with AI design', logo: 'https://www.wix.com/favicon.ico', category: 'App/Website Developers', link: 'https://www.wix.com/', pricing: 'freemium' },
             { name: 'Webflow', description: 'No-code website builder', logo: 'https://webflow.com/favicon.ico', category: 'App/Website Developers', link: 'https://webflow.com/', pricing: 'freemium' },
             { name: 'Squarespace', description: 'Website and e-commerce builder', logo: 'https://www.squarespace.com/favicon.ico', category: 'App/Website Developers', link: 'https://www.squarespace.com/', pricing: 'premium' },
@@ -437,13 +438,11 @@ const aiToolsData = {
         { name: 'Stability AI', description: 'Creators of Stable Diffusion', logo: 'https://stability.ai/favicon.ico', category: 'Image Generation', link: 'https://stability.ai', pricing: 'freemium' },
         { name: 'DALL-E 3', description: 'Latest version of OpenAI\'s image generator', logo: 'https://openai.com/favicon.ico', category: 'Image Generation', link: 'https://openai.com/dall-e-3', pricing: 'premium' },
 
-        { name: 'Notion AI', description: 'AI writing assistant integrated with Notion', logo: 'https://www.notion.so/favicon.ico', category: 'Text Generation', link: 'https://www.notion.so/product/ai', pricing: 'premium' },
-        { name: 'Rytr', description: 'AI writing assistant for content creation', logo: 'https://rytr.me/favicon.ico', category: 'Text Generation', link: 'https://rytr.me', pricing: 'freemium' },
-        { name: 'QuillBot', description: 'AI paraphrasing and writing tool', logo: 'https://quillbot.com/favicon.ico', category: 'Text Generation', link: 'https://quillbot.com', pricing: 'freemium' },
-        { name: 'Wordtune', description: 'AI writing companion for better expression', logo: 'https://www.wordtune.com/favicon.ico', category: 'Text Generation', link: 'https://www.wordtune.com', pricing: 'freemium' }
+
     ],
     'video-generators': [
-        { name: 'Runway ML', description: 'AI-powered video editing and generation', logo: 'https://runwayml.com/favicon.ico', category: 'Video Generation', link: 'https://runwayml.com', pricing: 'premium' },
+    { name: 'FlexClip', description: 'Free online AI video maker and editor', logo: 'https://www.flexclip.com/favicon.ico', category: 'Video Generation', link: 'https://www.flexclip.com', pricing: 'free' },
+    { name: 'Runway ML', description: 'AI-powered video editing and generation', logo: 'https://runwayml.com/favicon.ico', category: 'Video Generation', link: 'https://runwayml.com', pricing: 'premium' },
         { name: 'Synthesia', description: 'AI video generation with virtual presenters', logo: 'https://www.synthesia.io/favicon.ico', category: 'Video Generation', link: 'https://www.synthesia.io', pricing: 'premium' },
         { name: 'Pictory', description: 'AI video creation from text and blog posts', logo: 'https://pictory.ai/favicon.ico', category: 'Video Generation', link: 'https://pictory.ai', pricing: 'premium' },
         { name: 'Lumen5', description: 'AI-powered video creation platform', logo: 'https://lumen5.com/favicon.ico', category: 'Video Generation', link: 'https://lumen5.com', pricing: 'freemium' },
@@ -456,7 +455,8 @@ const aiToolsData = {
         { name: 'Colossyan', description: 'AI video creator with synthetic actors', logo: 'https://www.colossyan.com/favicon.ico', category: 'Video Generation', link: 'https://www.colossyan.com', pricing: 'premium' }
     ],
     'voice-generators': [
-        { name: 'ElevenLabs', description: 'AI voice synthesis and cloning platform', logo: 'https://elevenlabs.io/favicon.ico', category: 'Voice Generation', link: 'https://elevenlabs.io', pricing: 'freemium' },
+    { name: 'Uberduck', description: 'Free AI voice generator and text-to-speech', logo: 'https://uberduck.ai/favicon.ico', category: 'Voice Generation', link: 'https://uberduck.ai', pricing: 'free' },
+    { name: 'ElevenLabs', description: 'AI voice synthesis and cloning platform', logo: 'https://elevenlabs.io/favicon.ico', category: 'Voice Generation', link: 'https://elevenlabs.io', pricing: 'freemium' },
         { name: 'Murf', description: 'AI voice generator for voiceovers', logo: 'https://murf.ai/favicon.ico', category: 'Voice Generation', link: 'https://murf.ai', pricing: 'premium' },
         { name: 'Speechify', description: 'Text-to-speech AI with natural voices', logo: 'https://speechify.com/favicon.ico', category: 'Voice Generation', link: 'https://speechify.com', pricing: 'freemium' },
         { name: 'Descript', description: 'AI-powered audio and video editing', logo: 'https://www.descript.com/favicon.ico', category: 'Voice Generation', link: 'https://www.descript.com', pricing: 'freemium' },
@@ -468,7 +468,8 @@ const aiToolsData = {
         { name: 'Listnr', description: 'AI voice generator for podcasts and videos', logo: 'https://www.listnr.tech/favicon.ico', category: 'Voice Generation', link: 'https://www.listnr.tech', pricing: 'freemium' }
     ],
     'music-generators': [
-        { name: 'AIVA', description: 'AI composer for emotional soundtrack music', logo: 'https://www.aiva.ai/favicon.ico', category: 'Music Generation', link: 'https://www.aiva.ai', pricing: 'freemium' },
+    { name: 'Soundful', description: 'Free AI music generator for creators', logo: 'https://soundful.com/favicon.ico', category: 'Music Generation', link: 'https://soundful.com', pricing: 'free' },
+    { name: 'AIVA', description: 'AI composer for emotional soundtrack music', logo: 'https://www.aiva.ai/favicon.ico', category: 'Music Generation', link: 'https://www.aiva.ai', pricing: 'freemium' },
         { name: 'Mubert', description: 'AI music generation platform', logo: 'https://mubert.com/favicon.ico', category: 'Music Generation', link: 'https://mubert.com', pricing: 'freemium' },
         { name: 'Amper Music', description: 'AI music composition for content creators', logo: 'https://www.ampermusic.com/favicon.ico', category: 'Music Generation', link: 'https://www.ampermusic.com', pricing: 'premium' },
         { name: 'Soundraw', description: 'AI music generator for creators', logo: 'https://soundraw.io/favicon.ico', category: 'Music Generation', link: 'https://soundraw.io', pricing: 'premium' },
@@ -478,6 +479,18 @@ const aiToolsData = {
         { name: 'Loudly', description: 'AI music platform for content creators', logo: 'https://www.loudly.com/favicon.ico', category: 'Music Generation', link: 'https://www.loudly.com', pricing: 'premium' },
         { name: 'Ecrett Music', description: 'AI music generator for content creation', logo: 'https://ecrettmusic.com/favicon.ico', category: 'Music Generation', link: 'https://ecrettmusic.com', pricing: 'premium' },
         { name: 'Jukedeck', description: 'AI music composition platform', logo: 'https://www.jukedeck.com/favicon.ico', category: 'Music Generation', link: 'https://www.jukedeck.com', pricing: 'premium' }
+    ],
+    'chatbots': [
+        { name: 'ChatGPT', description: 'Free AI chatbot by OpenAI', logo: 'https://chat.openai.com/favicon.ico', category: 'Chatbots', link: 'https://chat.openai.com', pricing: 'free' },
+        { name: 'Google Bard', description: 'Free conversational AI by Google', logo: 'https://bard.google.com/favicon.ico', category: 'Chatbots', link: 'https://bard.google.com', pricing: 'free' },
+        { name: 'Bing Chat', description: 'Free AI chat by Microsoft', logo: 'https://www.bing.com/favicon.ico', category: 'Chatbots', link: 'https://www.bing.com/chat', pricing: 'free' },
+        { name: 'Claude', description: 'AI assistant by Anthropic', logo: 'https://claude.ai/favicon.ico', category: 'Chatbots', link: 'https://claude.ai', pricing: 'freemium' },
+        { name: 'Perplexity AI', description: 'AI-powered answer engine', logo: 'https://www.perplexity.ai/favicon.ico', category: 'Chatbots', link: 'https://www.perplexity.ai', pricing: 'freemium' },
+        { name: 'Character.AI', description: 'Chat with AI characters', logo: 'https://character.ai/favicon.ico', category: 'Chatbots', link: 'https://character.ai', pricing: 'freemium' },
+        { name: 'Pi', description: 'Personal AI assistant', logo: 'https://heypi.com/favicon.ico', category: 'Chatbots', link: 'https://heypi.com', pricing: 'free' },
+        { name: 'HuggingChat', description: 'Open-source AI chat', logo: 'https://huggingface.co/favicon.ico', category: 'Chatbots', link: 'https://huggingface.co/chat', pricing: 'free' },
+        { name: 'YouChat', description: 'AI search assistant', logo: 'https://you.com/favicon.ico', category: 'Chatbots', link: 'https://you.com', pricing: 'free' },
+        { name: 'Poe', description: 'Chat with multiple AI models', logo: 'https://poe.com/favicon.ico', category: 'Chatbots', link: 'https://poe.com', pricing: 'freemium' }
     ],
     'ai-chatbots': [
         { name: 'ChatGPT', description: 'AI language model by OpenAI', logo: 'https://chat.openai.com/favicon.ico', category: 'AI Chatbots', link: 'https://chat.openai.com', pricing: 'freemium' },
@@ -500,6 +513,45 @@ const aiToolsData = {
         { name: 'Bing Chat Enterprise', description: 'Enterprise version of Bing Chat', logo: 'https://www.bing.com/favicon.ico', category: 'AI Chatbots', link: 'https://www.bing.com/chat', pricing: 'premium' },
         { name: 'Perplexity Pro', description: 'Premium version of Perplexity', logo: 'https://www.perplexity.ai/favicon.ico', category: 'AI Chatbots', link: 'https://www.perplexity.ai/pro', pricing: 'premium' }
     ],
+    'text-generators': [
+        { name: 'ChatGPT', description: 'Free AI text generation and writing', logo: 'https://chat.openai.com/favicon.ico', category: 'Text Generators', link: 'https://chat.openai.com', pricing: 'free' },
+        { name: 'Google Bard', description: 'Free AI writing assistant by Google', logo: 'https://bard.google.com/favicon.ico', category: 'Text Generators', link: 'https://bard.google.com', pricing: 'free' },
+        { name: 'Jasper', description: 'AI content creation platform', logo: 'https://www.jasper.ai/favicon.ico', category: 'Text Generators', link: 'https://www.jasper.ai', pricing: 'premium' },
+        { name: 'Copy.ai', description: 'AI copywriting assistant', logo: 'https://www.copy.ai/favicon.ico', category: 'Text Generators', link: 'https://www.copy.ai', pricing: 'freemium' },
+        { name: 'Writesonic', description: 'AI writing and content creation', logo: 'https://writesonic.com/favicon.ico', category: 'Text Generators', link: 'https://writesonic.com', pricing: 'freemium' },
+        { name: 'Rytr', description: 'AI writing assistant for content', logo: 'https://rytr.me/favicon.ico', category: 'Text Generators', link: 'https://rytr.me', pricing: 'freemium' },
+        { name: 'QuillBot', description: 'AI paraphrasing and writing tool', logo: 'https://quillbot.com/favicon.ico', category: 'Text Generators', link: 'https://quillbot.com', pricing: 'freemium' },
+        { name: 'Grammarly', description: 'AI writing assistant and grammar checker', logo: 'https://www.grammarly.com/favicon.ico', category: 'Text Generators', link: 'https://www.grammarly.com', pricing: 'freemium' },
+        { name: 'Wordtune', description: 'AI writing companion', logo: 'https://www.wordtune.com/favicon.ico', category: 'Text Generators', link: 'https://www.wordtune.com', pricing: 'freemium' },
+        { name: 'Notion AI', description: 'AI writing assistant in Notion', logo: 'https://www.notion.so/favicon.ico', category: 'Text Generators', link: 'https://www.notion.so/product/ai', pricing: 'premium' },
+        { name: 'Anyword', description: 'AI copywriting for marketing', logo: 'https://anyword.com/favicon.ico', category: 'Text Generators', link: 'https://anyword.com', pricing: 'freemium' },
+        { name: 'Peppertype', description: 'AI content creation platform', logo: 'https://www.peppertype.ai/favicon.ico', category: 'Text Generators', link: 'https://www.peppertype.ai', pricing: 'freemium' },
+        { name: 'Copysmith', description: 'AI content generation for ecommerce', logo: 'https://copysmith.ai/favicon.ico', category: 'Text Generators', link: 'https://copysmith.ai', pricing: 'freemium' },
+        { name: 'Hypotenuse AI', description: 'AI content writing tool', logo: 'https://www.hypotenuse.ai/favicon.ico', category: 'Text Generators', link: 'https://www.hypotenuse.ai', pricing: 'freemium' },
+        { name: 'ContentBot', description: 'AI content automation', logo: 'https://contentbot.ai/favicon.ico', category: 'Text Generators', link: 'https://contentbot.ai', pricing: 'freemium' },
+        { name: 'Simplified', description: 'AI content creation and design', logo: 'https://simplified.com/favicon.ico', category: 'Text Generators', link: 'https://simplified.com', pricing: 'freemium' },
+        { name: 'Sudowrite', description: 'AI writing tool for fiction', logo: 'https://www.sudowrite.com/favicon.ico', category: 'Text Generators', link: 'https://www.sudowrite.com', pricing: 'premium' },
+        { name: 'ShortlyAI', description: 'AI writing assistant', logo: 'https://www.shortlyai.com/favicon.ico', category: 'Text Generators', link: 'https://www.shortlyai.com', pricing: 'premium' }
+    ],
+    'ai-procurement': [
+        { name: 'OpenProcure', description: 'Free open-source procurement platform', logo: 'https://openprocure.org/favicon.ico', category: 'AI Procurement', link: 'https://openprocure.org', pricing: 'free' },
+        { name: 'Procurement Express', description: 'Free procurement management tools', logo: 'https://www.procurementexpress.com/favicon.ico', category: 'AI Procurement', link: 'https://www.procurementexpress.com', pricing: 'free' },
+        { name: 'Coupa', description: 'AI-powered procurement platform', logo: 'https://www.coupa.com/favicon.ico', category: 'AI Procurement', link: 'https://www.coupa.com', pricing: 'premium' },
+        { name: 'Ariba', description: 'SAP procurement and sourcing', logo: 'https://www.ariba.com/favicon.ico', category: 'AI Procurement', link: 'https://www.ariba.com', pricing: 'premium' },
+        { name: 'Jaggaer', description: 'AI procurement and supply chain', logo: 'https://www.jaggaer.com/favicon.ico', category: 'AI Procurement', link: 'https://www.jaggaer.com', pricing: 'premium' },
+        { name: 'Ivalua', description: 'Procurement and sourcing platform', logo: 'https://www.ivalua.com/favicon.ico', category: 'AI Procurement', link: 'https://www.ivalua.com', pricing: 'premium' },
+        { name: 'Zycus', description: 'AI-powered procurement suite', logo: 'https://www.zycus.com/favicon.ico', category: 'AI Procurement', link: 'https://www.zycus.com', pricing: 'premium' },
+        { name: 'GEP SMART', description: 'AI procurement platform', logo: 'https://www.gep.com/favicon.ico', category: 'AI Procurement', link: 'https://www.gep.com', pricing: 'premium' },
+        { name: 'Basware', description: 'AI purchase-to-pay solutions', logo: 'https://www.basware.com/favicon.ico', category: 'AI Procurement', link: 'https://www.basware.com', pricing: 'premium' },
+        { name: 'Procurify', description: 'Procurement management software', logo: 'https://www.procurify.com/favicon.ico', category: 'AI Procurement', link: 'https://www.procurify.com', pricing: 'freemium' },
+        { name: 'ProcurePort', description: 'AI procurement analytics', logo: 'https://www.procureport.com/favicon.ico', category: 'AI Procurement', link: 'https://www.procureport.com', pricing: 'premium' },
+        { name: 'Sievo', description: 'AI spend analytics platform', logo: 'https://sievo.com/favicon.ico', category: 'AI Procurement', link: 'https://sievo.com', pricing: 'premium' },
+        { name: 'SpendHQ', description: 'AI spend analysis and procurement', logo: 'https://www.spendhq.com/favicon.ico', category: 'AI Procurement', link: 'https://www.spendhq.com', pricing: 'freemium' },
+        { name: 'Fairmarkit', description: 'AI autonomous sourcing', logo: 'https://www.fairmarkit.com/favicon.ico', category: 'AI Procurement', link: 'https://www.fairmarkit.com', pricing: 'premium' },
+        { name: 'Keelvar', description: 'AI sourcing optimization', logo: 'https://www.keelvar.com/favicon.ico', category: 'AI Procurement', link: 'https://www.keelvar.com', pricing: 'premium' },
+        { name: 'Scout RFP', description: 'AI-powered sourcing platform', logo: 'https://www.scoutrfp.com/favicon.ico', category: 'AI Procurement', link: 'https://www.scoutrfp.com', pricing: 'premium' },
+        { name: 'Zip', description: 'AI procurement orchestration', logo: 'https://www.zip.co/favicon.ico', category: 'AI Procurement', link: 'https://www.zip.co', pricing: 'freemium' }
+    ],
     'data-analysis': [
         { name: 'Tableau', description: 'Data visualization and analytics platform', logo: 'https://www.tableau.com/favicon.ico', category: 'Data Analysis', link: 'https://www.tableau.com', pricing: 'premium' },
         { name: 'Power BI', description: 'Microsoft\'s business analytics tool', logo: 'https://powerbi.microsoft.com/favicon.ico', category: 'Data Analysis', link: 'https://powerbi.microsoft.com', pricing: 'freemium' },
@@ -513,6 +565,8 @@ const aiToolsData = {
         { name: 'Palantir', description: 'Big data analytics platform', logo: 'https://www.palantir.com/favicon.ico', category: 'Data Analysis', link: 'https://www.palantir.com', pricing: 'premium' }
     ],
     'automation-tools': [
+        { name: 'n8n', description: 'Free open-source workflow automation', logo: 'https://n8n.io/favicon.ico', category: 'Automation', link: 'https://n8n.io', pricing: 'free' },
+        { name: 'Automate.io', description: 'Free automation for small teams', logo: 'https://automate.io/favicon.ico', category: 'Automation', link: 'https://automate.io', pricing: 'free' },
         { name: 'Zapier', description: 'Automate workflows between apps', logo: 'https://zapier.com/favicon.ico', category: 'Automation', link: 'https://zapier.com', pricing: 'freemium' },
         { name: 'Make (Integromat)', description: 'Visual platform for automation', logo: 'https://www.make.com/favicon.ico', category: 'Automation', link: 'https://www.make.com', pricing: 'freemium' },
         { name: 'UiPath', description: 'Robotic Process Automation platform', logo: 'https://www.uipath.com/favicon.ico', category: 'Automation', link: 'https://www.uipath.com', pricing: 'freemium' },
@@ -529,6 +583,8 @@ const aiToolsData = {
 // Add more categories with 10 tools each
 Object.assign(aiToolsData, {
     'productivity-tools': [
+        { name: 'Google Keep', description: 'Free note-taking and organization', logo: 'https://keep.google.com/favicon.ico', category: 'PD Tools', link: 'https://keep.google.com', pricing: 'free' },
+        { name: 'Microsoft To Do', description: 'Free task management app', logo: 'https://to-do.microsoft.com/favicon.ico', category: 'PD Tools', link: 'https://to-do.microsoft.com', pricing: 'free' },
         { name: 'Notion', description: 'All-in-one workspace for notes, tasks, and wikis', logo: 'https://www.notion.so/favicon.ico', category: 'PD Tools', link: 'https://www.notion.so/', pricing: 'freemium' },
         { name: 'Evernote', description: 'Note-taking and organization app', logo: 'https://evernote.com/favicon.ico', category: 'PD Tools', link: 'https://evernote.com/', pricing: 'freemium' },
         { name: 'Todoist', description: 'Task manager and to-do list', logo: 'https://todoist.com/favicon.ico', category: 'PD Tools', link: 'https://todoist.com/', pricing: 'freemium' },
@@ -542,6 +598,8 @@ Object.assign(aiToolsData, {
         { name: 'Freedom', description: 'Distraction blocker for productivity', logo: 'https://freedom.to/favicon.ico', category: 'PD Tools', link: 'https://freedom.to/', pricing: 'premium' }
     ],
     'marketing': [
+        { name: 'Mailchimp Free', description: 'Free email marketing for small businesses', logo: 'https://mailchimp.com/favicon.ico', category: 'Marketing', link: 'https://mailchimp.com', pricing: 'free' },
+        { name: 'Google Analytics', description: 'Free website analytics and insights', logo: 'https://analytics.google.com/favicon.ico', category: 'Marketing', link: 'https://analytics.google.com', pricing: 'free' },
         { name: 'HubSpot', description: 'Inbound marketing, sales, and CRM suite', logo: 'https://www.hubspot.com/favicon.ico', category: 'Marketing', link: 'https://www.hubspot.com/', pricing: 'freemium' },
         { name: 'Mailchimp', description: 'Email marketing and automation', logo: 'https://mailchimp.com/favicon.ico', category: 'Marketing', link: 'https://mailchimp.com/', pricing: 'freemium' },
         { name: 'Buffer', description: 'Social media management platform', logo: 'https://buffer.com/favicon.ico', category: 'Marketing', link: 'https://buffer.com/', pricing: 'freemium' },
@@ -581,7 +639,9 @@ Object.assign(aiToolsData, {
         { name: 'Kite', description: 'AI-powered code completions', logo: 'https://www.kite.com/favicon.ico', category: 'Programming', link: 'https://www.kite.com/', pricing: 'free' }
     ],
     'supply-chain-management': [
-        { name: 'Llamasoft', description: 'AI-powered supply chain analytics and optimization', logo: 'https://www.llamasoft.com/favicon.ico', category: 'Supply Chain Management', link: 'https://www.llamasoft.com/', pricing: 'premium' },
+    { name: 'OpenSC', description: 'Open-source supply chain transparency platform', logo: 'https://www.opensc.org/favicon.ico', category: 'Supply Chain Management', link: 'https://www.opensc.org/', pricing: 'free' },
+    { name: 'SupplyChainBrain Free Tools', description: 'Free supply chain analysis resources', logo: 'https://www.supplychainbrain.com/favicon.ico', category: 'Supply Chain Management', link: 'https://www.supplychainbrain.com/', pricing: 'free' },
+    { name: 'Llamasoft', description: 'AI-powered supply chain analytics and optimization', logo: 'https://www.llamasoft.com/favicon.ico', category: 'Supply Chain Management', link: 'https://www.llamasoft.com/', pricing: 'premium' },
         { name: 'o9 Solutions', description: 'AI platform for supply chain planning', logo: 'https://o9solutions.com/favicon.ico', category: 'Supply Chain Management', link: 'https://o9solutions.com/', pricing: 'premium' },
         { name: 'Blue Yonder', description: 'AI-driven supply chain management', logo: 'https://blueyonder.com/favicon.ico', category: 'Supply Chain Management', link: 'https://blueyonder.com/', pricing: 'premium' },
         { name: 'Kinaxis', description: 'AI supply chain planning and analytics', logo: 'https://www.kinaxis.com/favicon.ico', category: 'Supply Chain Management', link: 'https://www.kinaxis.com/', pricing: 'premium' },
@@ -594,7 +654,9 @@ Object.assign(aiToolsData, {
         { name: 'Resilinc', description: 'AI supply chain risk management', logo: 'https://www.resilinc.com/favicon.ico', category: 'Supply Chain Management', link: 'https://www.resilinc.com/', pricing: 'premium' }
     ],
     'quality-assurance': [
-        { name: 'Applitools', description: 'AI-powered visual testing and monitoring', logo: 'https://applitools.com/favicon.ico', category: 'Quality Assurance', link: 'https://applitools.com/', pricing: 'freemium' },
+    { name: 'Stryker', description: 'Open-source mutation testing for JavaScript', logo: 'https://stryker-mutator.io/favicon.ico', category: 'Quality Assurance', link: 'https://stryker-mutator.io/', pricing: 'free' },
+    { name: 'TestProject', description: 'Free end-to-end test automation platform', logo: 'https://testproject.io/favicon.ico', category: 'Quality Assurance', link: 'https://testproject.io/', pricing: 'free' },
+    { name: 'Applitools', description: 'AI-powered visual testing and monitoring', logo: 'https://applitools.com/favicon.ico', category: 'Quality Assurance', link: 'https://applitools.com/', pricing: 'freemium' },
         { name: 'Testim', description: 'AI test automation for web apps', logo: 'https://www.testim.io/favicon.ico', category: 'Quality Assurance', link: 'https://www.testim.io/', pricing: 'premium' },
         { name: 'Functionize', description: 'AI-driven test automation platform', logo: 'https://www.functionize.com/favicon.ico', category: 'Quality Assurance', link: 'https://www.functionize.com/', pricing: 'premium' },
         { name: 'Mabl', description: 'AI-powered test automation for DevOps', logo: 'https://www.mabl.com/favicon.ico', category: 'Quality Assurance', link: 'https://www.mabl.com/', pricing: 'freemium' },
@@ -621,6 +683,8 @@ Object.assign(aiToolsData, {
         { name: 'PDFsam', description: 'Free and open source PDF splitter and merger', logo: 'https://pdfsam.org/favicon.ico', category: 'PDF Tools', link: 'https://pdfsam.org/', pricing: 'free' }
     ],
     'compliance-and-audit': [
+    { name: 'OpenRegTech', description: 'Free regulatory technology resources', logo: 'https://openreg.tech/favicon.ico', category: 'Compliance and Audit', link: 'https://openreg.tech/', pricing: 'free' },
+    { name: 'Compliance.ai Free Tools', description: 'Free compliance monitoring tools', logo: 'https://compliance.ai/favicon.ico', category: 'Compliance and Audit', link: 'https://compliance.ai/', pricing: 'free' },
         { name: 'LogicGate', description: 'AI-powered risk and compliance platform', logo: 'https://www.logicgate.com/favicon.ico', category: 'Compliance and Audit', link: 'https://www.logicgate.com/', pricing: 'premium' },
         { name: 'Smartsheet Advance', description: 'AI compliance and audit management', logo: 'https://www.smartsheet.com/favicon.ico', category: 'Compliance and Audit', link: 'https://www.smartsheet.com/', pricing: 'premium' },
         { name: 'VComply', description: 'AI compliance management platform', logo: 'https://www.v-comply.com/favicon.ico', category: 'Compliance and Audit', link: 'https://www.v-comply.com/', pricing: 'premium' },
@@ -634,6 +698,8 @@ Object.assign(aiToolsData, {
         { name: 'Wolters Kluwer TeamMate', description: 'AI audit management software', logo: 'https://www.wolterskluwer.com/favicon.ico', category: 'Compliance and Audit', link: 'https://www.wolterskluwer.com/en/solutions/teammate', pricing: 'premium' }
     ],
     'risk-management': [
+    { name: 'OpenRisk', description: 'Open-source risk analytics platform', logo: 'https://openriskmanual.org/favicon.ico', category: 'Risk Management', link: 'https://www.openriskmanual.org/', pricing: 'free' },
+    { name: 'RiskTools', description: 'Free risk management calculators', logo: 'https://www.risktools.com/favicon.ico', category: 'Risk Management', link: 'https://www.risktools.com/', pricing: 'free' },
         { name: 'LogicManager', description: 'AI-powered risk management software', logo: 'https://www.logicmanager.com/favicon.ico', category: 'Risk Management', link: 'https://www.logicmanager.com/', pricing: 'premium' },
         { name: 'Riskified', description: 'AI fraud prevention and risk management', logo: 'https://www.riskified.com/favicon.ico', category: 'Risk Management', link: 'https://www.riskified.com/', pricing: 'premium' },
         { name: 'Resolver', description: 'AI risk and incident management', logo: 'https://www.resolver.com/favicon.ico', category: 'Risk Management', link: 'https://www.resolver.com/', pricing: 'premium' },
@@ -727,6 +793,8 @@ Object.assign(aiToolsData, {
         { name: 'Previs Pro', description: 'AI previsualization and storyboarding', logo: 'https://previspro.com/favicon.ico', category: 'Storyboarding', link: 'https://previspro.com/', pricing: 'premium' }
     ],
     'sound-effects': [
+        { name: 'Freesound', description: 'Free collaborative sound library', logo: 'https://freesound.org/favicon.ico', category: 'Sound Effects', link: 'https://freesound.org/', pricing: 'free' },
+        { name: 'BBC Sound Effects', description: 'Free sound effects library', logo: 'https://sound-effects.bbcrewind.co.uk/favicon.ico', category: 'Sound Effects', link: 'https://sound-effects.bbcrewind.co.uk/', pricing: 'free' },
         { name: 'AIVA SFX', description: 'AI-generated sound effects', logo: 'https://www.aiva.ai/favicon.ico', category: 'Sound Effects', link: 'https://www.aiva.ai/', pricing: 'freemium' },
         { name: 'Boom Library', description: 'AI sound design and effects', logo: 'https://www.boomlibrary.com/favicon.ico', category: 'Sound Effects', link: 'https://www.boomlibrary.com/', pricing: 'premium' },
         { name: 'Soundly', description: 'AI sound effects search and creation', logo: 'https://getsoundly.com/favicon.ico', category: 'Sound Effects', link: 'https://getsoundly.com/', pricing: 'freemium' },
@@ -740,6 +808,8 @@ Object.assign(aiToolsData, {
         { name: 'Audo AI', description: 'AI noise and sound effect enhancer', logo: 'https://audo.ai/favicon.ico', category: 'Sound Effects', link: 'https://audo.ai/', pricing: 'freemium' }
     ],
     'ai-mining': [
+        { name: 'OpenMining', description: 'Open-source mining analytics', logo: 'https://openmining.io/favicon.ico', category: 'AI Mining', link: 'https://openmining.io/', pricing: 'free' },
+        { name: 'Mining Toolkit', description: 'Free mining data and AI tools', logo: 'https://miningtoolkit.org/favicon.ico', category: 'AI Mining', link: 'https://miningtoolkit.org/', pricing: 'free' },
         { name: 'MineSense', description: 'AI ore data analytics for mining', logo: 'https://minesense.com/favicon.ico', category: 'AI Mining', link: 'https://minesense.com/', pricing: 'premium' },
         { name: 'Petra Data Science', description: 'AI for mining optimization', logo: 'https://www.petradatascience.com/favicon.ico', category: 'AI Mining', link: 'https://www.petradatascience.com/', pricing: 'premium' },
         { name: 'Exyn Technologies', description: 'AI mining robotics and automation', logo: 'https://www.exyn.com/favicon.ico', category: 'AI Mining', link: 'https://www.exyn.com/', pricing: 'premium' },
@@ -753,6 +823,8 @@ Object.assign(aiToolsData, {
         { name: 'Imago', description: 'AI imagery for mining operations', logo: 'https://www.imago.live/favicon.ico', category: 'AI Mining', link: 'https://www.imago.live/', pricing: 'premium' }
     ],
     'telecommunications': [
+        { name: 'OpenCellID', description: 'Open-source cell tower data', logo: 'https://www.opencellid.org/favicon.ico', category: 'Telecommunications', link: 'https://www.opencellid.org/', pricing: 'free' },
+        { name: 'OpenSignal', description: 'Free mobile network analytics', logo: 'https://www.opensignal.com/favicon.ico', category: 'Telecommunications', link: 'https://www.opensignal.com/', pricing: 'free' },
         { name: 'Aria Networks', description: 'AI network optimization for telecom', logo: 'https://www.aria-networks.com/favicon.ico', category: 'Telecommunications', link: 'https://www.aria-networks.com/', pricing: 'premium' },
         { name: 'Nokia AVA', description: 'AI-powered telecom analytics', logo: 'https://www.nokia.com/favicon.ico', category: 'Telecommunications', link: 'https://www.nokia.com/networks/solutions/ava/', pricing: 'premium' },
         { name: 'Ericsson AI', description: 'AI for telecom network management', logo: 'https://www.ericsson.com/favicon.ico', category: 'Telecommunications', link: 'https://www.ericsson.com/en/artificial-intelligence', pricing: 'premium' },
@@ -766,6 +838,8 @@ Object.assign(aiToolsData, {
         { name: 'Optiva AI', description: 'AI-powered telecom monetization', logo: 'https://optiva.com/favicon.ico', category: 'Telecommunications', link: 'https://optiva.com/', pricing: 'premium' }
     ],
     'aerospace': [
+    { name: 'NASA Open Data', description: 'Free aerospace datasets and AI models', logo: 'https://data.nasa.gov/favicon.ico', category: 'Aerospace', link: 'https://data.nasa.gov/', pricing: 'free' },
+    { name: 'OpenAeroStruct', description: 'Open-source aerospace design tool', logo: 'https://openmdao.org/favicon.ico', category: 'Aerospace', link: 'https://openmdao.org/', pricing: 'free' },
         { name: 'SparkCognition', description: 'AI for aerospace asset management', logo: 'https://www.sparkcognition.com/favicon.ico', category: 'Aerospace', link: 'https://www.sparkcognition.com/', pricing: 'premium' },
         { name: 'Airbus Skywise', description: 'AI aviation analytics platform', logo: 'https://www.airbus.com/favicon.ico', category: 'Aerospace', link: 'https://airbus.com/innovation/skywise.html', pricing: 'premium' },
         { name: 'GE Aviation Digital', description: 'AI for aerospace operations', logo: 'https://www.geaviation.com/favicon.ico', category: 'Aerospace', link: 'https://www.geaviation.com/digital', pricing: 'premium' },
@@ -779,6 +853,8 @@ Object.assign(aiToolsData, {
         { name: 'Satellogic', description: 'AI earth observation platform', logo: 'https://satellogic.com/favicon.ico', category: 'Aerospace', link: 'https://satellogic.com/', pricing: 'premium' }
     ],
     'maritime': [
+    { name: 'MarineTraffic Free', description: 'Free vessel tracking and analytics', logo: 'https://www.marinetraffic.com/favicon.ico', category: 'Maritime', link: 'https://www.marinetraffic.com/', pricing: 'free' },
+    { name: 'Global Fishing Watch', description: 'Open ocean monitoring platform', logo: 'https://globalfishingwatch.org/favicon.ico', category: 'Maritime', link: 'https://globalfishingwatch.org/', pricing: 'free' },
         { name: 'Windward', description: 'AI maritime risk analytics', logo: 'https://wnwd.com/favicon.ico', category: 'Maritime', link: 'https://wnwd.com/', pricing: 'premium' },
         { name: 'MarineTraffic AI', description: 'AI-powered vessel tracking', logo: 'https://www.marinetraffic.com/favicon.ico', category: 'Maritime', link: 'https://www.marinetraffic.com/', pricing: 'freemium' },
         { name: 'Spire Maritime', description: 'AI satellite data for shipping', logo: 'https://spire.com/favicon.ico', category: 'Maritime', link: 'https://spire.com/maritime/', pricing: 'premium' },
@@ -806,6 +882,8 @@ Object.assign(aiToolsData, {
     // ],
 
     'ai-pet-care': [
+        { name: 'PetDesk', description: 'Free pet health reminders and records', logo: 'https://www.petdesk.com/favicon.ico', category: 'AI Pet Care', link: 'https://www.petdesk.com/', pricing: 'free' },
+        { name: 'Pet First Aid', description: 'Free AI pet care guidance app', logo: 'https://www.redcross.org/favicon.ico', category: 'AI Pet Care', link: 'https://www.redcross.org/get-help/how-to-prepare-for-emergencies/mobile-apps.html', pricing: 'free' },
         { name: 'Pawscout', description: 'AI pet tracking and safety', logo: 'https://www.pawscout.com/favicon.ico', category: 'AI Pet Care', link: 'https://www.pawscout.com/', pricing: 'freemium' },
         { name: 'Petcube', description: 'AI pet camera and treat dispenser', logo: 'https://petcube.com/favicon.ico', category: 'AI Pet Care', link: 'https://petcube.com/', pricing: 'premium' },
         { name: 'Whistle', description: 'AI pet health and GPS tracker', logo: 'https://www.whistle.com/favicon.ico', category: 'AI Pet Care', link: 'https://www.whistle.com/', pricing: 'premium' },
@@ -818,6 +896,8 @@ Object.assign(aiToolsData, {
         { name: 'Vetrax', description: 'AI pet activity and health monitor', logo: 'https://www.vetrax.com/favicon.ico', category: 'AI Pet Care', link: 'https://www.vetrax.com/', pricing: 'premium' }
     ],
     'ai-podcasting': [
+        { name: 'Anchor', description: 'Free podcast hosting and distribution by Spotify', logo: 'https://anchor.fm/favicon.ico', category: 'AI Podcasting', link: 'https://anchor.fm', pricing: 'free' },
+        { name: 'Audacity', description: 'Free open-source audio editing software', logo: 'https://www.audacityteam.org/favicon.ico', category: 'AI Podcasting', link: 'https://www.audacityteam.org', pricing: 'free' },
         { name: 'Descript', description: 'AI podcast editing and transcription', logo: 'https://www.descript.com/favicon.ico', category: 'AI Podcasting', link: 'https://www.descript.com', pricing: 'freemium' },
         { name: 'Podcastle', description: 'AI-powered podcast creation', logo: 'https://podcastle.ai/favicon.ico', category: 'AI Podcasting', link: 'https://podcastle.ai', pricing: 'freemium' },
         { name: 'Riverside.fm', description: 'AI podcast recording and enhancement', logo: 'https://riverside.fm/favicon.ico', category: 'AI Podcasting', link: 'https://riverside.fm', pricing: 'freemium' },
@@ -830,6 +910,8 @@ Object.assign(aiToolsData, {
     ,{ name: 'Headliner', description: 'AI podcast audiogram and video creation', logo: 'https://www.headliner.app/favicon.ico', category: 'AI Podcasting', link: 'https://www.headliner.app', pricing: 'freemium' }
     ],
     'ai-event-planning': [
+        { name: 'Google Calendar', description: 'Free AI-powered scheduling and event planning', logo: 'https://calendar.google.com/favicon.ico', category: 'AI Event Planning', link: 'https://calendar.google.com', pricing: 'free' },
+        { name: 'Doodle', description: 'Free meeting scheduler with AI suggestions', logo: 'https://doodle.com/favicon.ico', category: 'AI Event Planning', link: 'https://doodle.com', pricing: 'free' },
         { name: 'Eventbrite AI', description: 'Smart event management', logo: 'https://www.eventbrite.com/favicon.ico', category: 'AI Event Planning', link: 'https://www.eventbrite.com', pricing: 'freemium' },
         { name: 'Zkipster', description: 'AI guest list and event check-in', logo: 'https://www.zkipster.com/favicon.ico', category: 'AI Event Planning', link: 'https://www.zkipster.com', pricing: 'premium' },
         { name: 'Social Tables', description: 'AI event diagramming', logo: 'https://www.socialtables.com/favicon.ico', category: 'AI Event Planning', link: 'https://www.socialtables.com', pricing: 'premium' },
@@ -842,6 +924,8 @@ Object.assign(aiToolsData, {
     ,{ name: 'Aventri', description: 'AI event management and marketing', logo: 'https://www.aventri.com/favicon.ico', category: 'AI Event Planning', link: 'https://www.aventri.com', pricing: 'premium' }
     ],
     'ai-personal-finance': [
+        { name: 'Mint', description: 'Free budgeting and finance tracking', logo: 'https://mint.intuit.com/favicon.ico', category: 'AI Personal Finance', link: 'https://mint.intuit.com', pricing: 'free' },
+        { name: 'Personal Capital', description: 'Free financial planning and wealth management', logo: 'https://www.personalcapital.com/favicon.ico', category: 'AI Personal Finance', link: 'https://www.personalcapital.com', pricing: 'free' },
         { name: 'Cleo', description: 'AI budgeting and finance assistant', logo: 'https://web.meetcleo.com/favicon.ico', category: 'AI Personal Finance', link: 'https://web.meetcleo.com', pricing: 'freemium' },
         { name: 'YNAB AI', description: 'AI-powered budgeting', logo: 'https://www.youneedabudget.com/favicon.ico', category: 'AI Personal Finance', link: 'https://www.youneedabudget.com', pricing: 'premium' },
         { name: 'Albert', description: 'AI financial advice', logo: 'https://albert.com/favicon.ico', category: 'AI Personal Finance', link: 'https://albert.com', pricing: 'freemium' },
@@ -880,6 +964,8 @@ Object.assign(aiToolsData, {
   
    
     'ai-sustainability': [
+        { name: 'GHG Platform India', description: 'Free greenhouse gas data and analytics', logo: 'https://ghgplatform-india.org/favicon.ico', category: 'AI Sustainability', link: 'https://ghgplatform-india.org', pricing: 'free' },
+        { name: 'OpenClimate', description: 'Free open climate data platform', logo: 'https://openclimate.network/favicon.ico', category: 'AI Sustainability', link: 'https://openclimate.network', pricing: 'free' },
         { name: 'ClimateAI', description: 'AI climate risk analytics', logo: 'https://climate.ai/favicon.ico', category: 'AI Sustainability', link: 'https://climate.ai', pricing: 'premium' },
         { name: 'Persefoni', description: 'AI carbon management', logo: 'https://persefoni.com/favicon.ico', category: 'AI Sustainability', link: 'https://persefoni.com', pricing: 'premium' },
         { name: 'Watershed', description: 'AI sustainability platform', logo: 'https://watershed.com/favicon.ico', category: 'AI Sustainability', link: 'https://watershed.com', pricing: 'premium' },
@@ -906,6 +992,8 @@ Object.assign(aiToolsData, {
         { name: 'Thinkster Math', description: 'AI math tutoring platform', logo: 'https://hellothinkster.com/favicon.ico', category: 'Education AI', link: 'https://hellothinkster.com/', pricing: 'freemium' }
     ],
         'logo-generators': [
+            { name: 'Canva Free Logo', description: 'Free logo maker with templates', logo: 'https://www.canva.com/favicon.ico', category: 'Logo Generators', link: 'https://www.canva.com/create/logos', pricing: 'free' },
+            { name: 'LogoMakr Free', description: 'Free simple logo design tool', logo: 'https://logomakr.com/favicon.ico', category: 'Logo Generators', link: 'https://logomakr.com', pricing: 'free' },
             { name: 'Looka', description: 'AI logo maker and brand identity', logo: 'https://looka.com/favicon.ico', category: 'Logo Generators', link: 'https://looka.com', pricing: 'freemium' },
             { name: 'Brandmark', description: 'AI-powered logo design tool', logo: 'https://brandmark.io/favicon.ico', category: 'Logo Generators', link: 'https://brandmark.io', pricing: 'freemium' },
             { name: 'Canva Logo Maker', description: 'Create logos with AI-powered design', logo: 'https://www.canva.com/favicon.ico', category: 'Logo Generators', link: 'https://www.canva.com', pricing: 'freemium' },
@@ -917,6 +1005,8 @@ Object.assign(aiToolsData, {
             ,{ name: 'Turbologo', description: 'Fast AI logo generator', logo: 'https://turbologo.com/favicon.ico', category: 'Logo Generators', link: 'https://turbologo.com', pricing: 'freemium' }
         ],
         'job-finder': [
+            { name: 'Google for Jobs', description: 'Free job search aggregator by Google', logo: 'https://www.google.com/favicon.ico', category: 'Job Finder', link: 'https://www.google.com/search?q=jobs', pricing: 'free' },
+            { name: 'SimplyHired', description: 'Free job search engine', logo: 'https://www.simplyhired.com/favicon.ico', category: 'Job Finder', link: 'https://www.simplyhired.com', pricing: 'free' },
             { name: 'LinkedIn Job Search', description: 'AI-powered job matching on LinkedIn', logo: 'https://www.linkedin.com/favicon.ico', category: 'Job Finder', link: 'https://www.linkedin.com/jobs', pricing: 'freemium' },
             { name: 'Indeed AI', description: 'AI-powered job search platform', logo: 'https://www.indeed.com/favicon.ico', category: 'Job Finder', link: 'https://www.indeed.com', pricing: 'freemium' },
             { name: 'ZipRecruiter AI', description: 'AI job matching and alerts', logo: 'https://www.ziprecruiter.com/favicon.ico', category: 'Job Finder', link: 'https://www.ziprecruiter.com', pricing: 'freemium' },
@@ -928,6 +1018,8 @@ Object.assign(aiToolsData, {
             { name: 'Jobvite', description: 'AI recruiting and job search', logo: 'https://www.jobvite.com/favicon.ico', category: 'Job Finder', link: 'https://www.jobvite.com', pricing: 'premium' }
         ],
         'job-applier': [
+            { name: 'Resume.io', description: 'Free resume builder and job application tool', logo: 'https://resume.io/favicon.ico', category: 'Job Applier', link: 'https://resume.io', pricing: 'free' },
+            { name: 'Canva Resume', description: 'Free resume and cover letter builder', logo: 'https://www.canva.com/favicon.ico', category: 'Job Applier', link: 'https://www.canva.com/resumes', pricing: 'free' },
             { name: 'Simplify Jobs', description: 'AI-powered job application automation', logo: 'https://simplify.jobs/favicon.ico', category: 'Job Applier', link: 'https://simplify.jobs', pricing: 'freemium' },
             { name: 'JobApplyBot', description: 'Automate job applications with AI', logo: 'https://jobapplybot.com/favicon.ico', category: 'Job Applier', link: 'https://jobapplybot.com', pricing: 'premium' },
             { name: 'LoopCV', description: 'Automated job application platform', logo: 'https://loopcv.pro/favicon.ico', category: 'Job Applier', link: 'https://loopcv.pro', pricing: 'freemium' },
@@ -940,6 +1032,8 @@ Object.assign(aiToolsData, {
             { name: 'JobAutomator', description: 'Automate job applications with AI', logo: 'https://jobautomator.com/favicon.ico', category: 'Job Applier', link: 'https://jobautomator.com', pricing: 'premium' }
         ],
         'ai-sports-analytics': [
+            { name: 'Strava', description: 'Free fitness tracking and social network for athletes', logo: 'https://www.strava.com/favicon.ico', category: 'AI Sports Analytics', link: 'https://www.strava.com', pricing: 'free' },
+            { name: 'Nike Run Club', description: 'Free running app with AI coaching', logo: 'https://www.nike.com/favicon.ico', category: 'AI Sports Analytics', link: 'https://www.nike.com/nrc-app', pricing: 'free' },
             { name: 'Sportradar', description: 'AI-powered sports data analytics', logo: 'https://sportradar.com/favicon.ico', category: 'AI Sports Analytics', link: 'https://sportradar.com', pricing: 'premium' },
             { name: 'Stats Perform', description: 'AI-driven sports performance analytics', logo: 'https://www.statsperform.com/favicon.ico', category: 'AI Sports Analytics', link: 'https://www.statsperform.com', pricing: 'premium' },
             { name: 'Catapult Sports', description: 'AI athlete tracking and analytics', logo: 'https://catapultsports.com/favicon.ico', category: 'AI Sports Analytics', link: 'https://catapultsports.com', pricing: 'premium' },
@@ -952,6 +1046,7 @@ Object.assign(aiToolsData, {
             { name: 'Edge10', description: 'AI athlete management platform', logo: 'https://edge10.com/favicon.ico', category: 'AI Sports Analytics', link: 'https://edge10.com', pricing: 'premium' }
         ],
         'ai-parenting': [
+            { name: 'WebMD Baby', description: 'Free pregnancy and parenting tracker', logo: 'https://www.webmd.com/favicon.ico', category: 'AI Parenting', link: 'https://www.webmd.com/parenting', pricing: 'free' },
             { name: 'ParentPal', description: 'AI-powered parenting tips and child development', logo: 'https://parentpal.com/favicon.ico', category: 'AI Parenting', link: 'https://parentpal.com', pricing: 'freemium' },
             { name: 'Kinedu', description: 'AI-driven child development activities', logo: 'https://www.kinedu.com/favicon.ico', category: 'AI Parenting', link: 'https://www.kinedu.com', pricing: 'freemium' },
             { name: 'Winnie', description: 'AI parenting community and resources', logo: 'https://winnie.com/favicon.ico', category: 'AI Parenting', link: 'https://winnie.com', pricing: 'freemium' },
@@ -964,6 +1059,8 @@ Object.assign(aiToolsData, {
             { name: 'Huckleberry', description: 'AI sleep and parenting advice', logo: 'https://huckleberrycare.com/favicon.ico', category: 'AI Parenting', link: 'https://huckleberrycare.com', pricing: 'freemium' }
         ],
     'ai-cybersecurity': [
+    { name: 'VirusTotal', description: 'Free malware scanning and threat intelligence', logo: 'https://www.virustotal.com/favicon.ico', category: 'Cybersecurity AI', link: 'https://www.virustotal.com/', pricing: 'free' },
+    { name: 'Cuckoo Sandbox', description: 'Open-source automated malware analysis', logo: 'https://cuckoosandbox.org/favicon.ico', category: 'Cybersecurity AI', link: 'https://cuckoosandbox.org/', pricing: 'free' },
         { name: 'Darktrace', description: 'AI-powered cyber defense platform', logo: 'https://www.darktrace.com/favicon.ico', category: 'Cybersecurity AI', link: 'https://www.darktrace.com/', pricing: 'premium' },
         { name: 'CrowdStrike', description: 'AI endpoint protection platform', logo: 'https://www.crowdstrike.com/favicon.ico', category: 'Cybersecurity AI', link: 'https://www.crowdstrike.com/', pricing: 'premium' },
         { name: 'Cylance', description: 'AI antivirus and endpoint security', logo: 'https://www.cylance.com/favicon.ico', category: 'Cybersecurity AI', link: 'https://www.cylance.com/', pricing: 'premium' },
@@ -976,6 +1073,8 @@ Object.assign(aiToolsData, {
         { name: 'Blue Hexagon', description: 'Real-time deep learning security', logo: 'https://bluehexagon.ai/favicon.ico', category: 'Cybersecurity AI', link: 'https://bluehexagon.ai/', pricing: 'premium' }
     ],
     'ai-robotics': [
+    { name: 'OpenAI Gym', description: 'Open-source toolkit for developing and comparing reinforcement learning algorithms', logo: 'https://gym.openai.com/favicon.ico', category: 'Robotics AI', link: 'https://gym.openai.com/', pricing: 'free' },
+    { name: 'ROS (Robot Operating System)', description: 'Open-source robotics middleware', logo: 'https://www.ros.org/favicon.ico', category: 'Robotics AI', link: 'https://www.ros.org/', pricing: 'free' },
         { name: 'Boston Dynamics', description: 'Advanced robotics with AI', logo: 'https://www.bostondynamics.com/favicon.ico', category: 'Robotics AI', link: 'https://www.bostondynamics.com/', pricing: 'premium' },
         { name: 'Fetch Robotics', description: 'Autonomous mobile robots', logo: 'https://fetchrobotics.com/favicon.ico', category: 'Robotics AI', link: 'https://fetchrobotics.com/', pricing: 'premium' },
         { name: 'Covariant', description: 'AI for robotic manipulation', logo: 'https://covariant.ai/favicon.ico', category: 'Robotics AI', link: 'https://covariant.ai/', pricing: 'premium' },
@@ -988,6 +1087,8 @@ Object.assign(aiToolsData, {
         { name: 'Cruise', description: 'Self-driving vehicle technology', logo: 'https://www.getcruise.com/favicon.ico', category: 'Robotics AI', link: 'https://www.getcruise.com/', pricing: 'premium' }
     ],
     'ai-art': [
+        { name: 'Craiyon', description: 'Free AI image generator (formerly DALL-E mini)', logo: 'https://www.craiyon.com/favicon.ico', category: 'AI Art Tools', link: 'https://www.craiyon.com/', pricing: 'free' },
+        { name: 'Bing Image Creator', description: 'Free AI image generation by Microsoft', logo: 'https://www.bing.com/favicon.ico', category: 'AI Art Tools', link: 'https://www.bing.com/images/create', pricing: 'free' },
         { name: 'Artbreeder', description: 'AI art creation and blending', logo: 'https://www.artbreeder.com/favicon.ico', category: 'AI Art Tools', link: 'https://www.artbreeder.com/', pricing: 'freemium' },
         { name: 'DeepArt', description: 'AI style transfer for images', logo: 'https://deepart.io/favicon.ico', category: 'AI Art Tools', link: 'https://deepart.io/', pricing: 'freemium' },
         { name: 'NightCafe Creator', description: 'AI art generator and community', logo: 'https://creator.nightcafe.studio/favicon.ico', category: 'AI Art Tools', link: 'https://creator.nightcafe.studio/', pricing: 'freemium' },
@@ -1000,6 +1101,8 @@ Object.assign(aiToolsData, {
         { name: 'StarryAI', description: 'Text to image AI art generator', logo: 'https://starryai.com/favicon.ico', category: 'AI Art Tools', link: 'https://starryai.com/', pricing: 'freemium' }
     ],
     'ai-agriculture': [
+    { name: 'OpenATK', description: 'Open-source agricultural toolkits', logo: 'https://openatk.com/favicon.ico', category: 'Agriculture AI', link: 'https://openatk.com/', pricing: 'free' },
+    { name: 'FarmBot', description: 'Open-source precision farming robot', logo: 'https://farm.bot/favicon.ico', category: 'Agriculture AI', link: 'https://farm.bot/', pricing: 'free' },
         { name: 'Taranis', description: 'AI-powered crop intelligence', logo: 'https://www.taranis.com/favicon.ico', category: 'Agriculture AI', link: 'https://www.taranis.com/', pricing: 'premium' },
         { name: 'Prospera', description: 'AI-powered agricultural intelligence', logo: 'https://www.prospera.ag/favicon.ico', category: 'Agriculture AI', link: 'https://www.prospera.ag/', pricing: 'premium' },
         { name: 'aWhere', description: 'Agricultural intelligence platform', logo: 'https://www.awhere.com/favicon.ico', category: 'Agriculture AI', link: 'https://www.awhere.com/', pricing: 'premium' },
@@ -1012,6 +1115,8 @@ Object.assign(aiToolsData, {
         { name: 'AgEagle', description: 'AI drone solutions for agriculture', logo: 'https://www.ageagle.com/favicon.ico', category: 'Agriculture AI', link: 'https://www.ageagle.com/', pricing: 'premium' }
     ],
     'ai-manufacturing': [
+    { name: 'OpenAI Manufacturing Toolkit', description: 'Free AI tools for manufacturing', logo: 'https://openai.com/favicon.ico', category: 'Manufacturing AI', link: 'https://openai.com/', pricing: 'free' },
+    { name: 'OpenMFG', description: 'Open-source manufacturing ERP', logo: 'https://openmfg.org/favicon.ico', category: 'Manufacturing AI', link: 'https://openmfg.org/', pricing: 'free' },
         { name: 'Siemens MindSphere', description: 'Industrial IoT with AI capabilities', logo: 'https://siemens.mindsphere.io/favicon.ico', category: 'Manufacturing AI', link: 'https://siemens.mindsphere.io/', pricing: 'premium' },
         { name: 'Uptake', description: 'Industrial AI and analytics platform', logo: 'https://www.uptake.com/favicon.ico', category: 'Manufacturing AI', link: 'https://www.uptake.com/', pricing: 'premium' },
         { name: 'Sight Machine', description: 'Manufacturing analytics platform', logo: 'https://sightmachine.com/favicon.ico', category: 'Manufacturing AI', link: 'https://sightmachine.com/', pricing: 'premium' },
@@ -1024,6 +1129,8 @@ Object.assign(aiToolsData, {
         { name: 'Neurala', description: 'AI vision for industrial applications', logo: 'https://www.neurala.com/favicon.ico', category: 'Manufacturing AI', link: 'https://www.neurala.com/', pricing: 'premium' }
     ],
     'ai-energy': [
+    { name: 'OpenEI', description: 'Open Energy Information platform', logo: 'https://openei.org/favicon.ico', category: 'Energy AI', link: 'https://openei.org/', pricing: 'free' },
+    { name: 'REopt Lite', description: 'Free energy optimization tool', logo: 'https://reopt.nrel.gov/favicon.ico', category: 'Energy AI', link: 'https://reopt.nrel.gov/', pricing: 'free' },
         { name: 'Grid4C', description: 'AI for smart grid management', logo: 'https://grid4c.com/favicon.ico', category: 'Energy AI', link: 'https://grid4c.com/', pricing: 'premium' },
         { name: 'AutoGrid', description: 'AI-powered energy management', logo: 'https://www.auto-grid.com/favicon.ico', category: 'Energy AI', link: 'https://www.auto-grid.com/', pricing: 'premium' },
         { name: 'C3.ai', description: 'Enterprise AI for energy industry', logo: 'https://c3.ai/favicon.ico', category: 'Energy AI', link: 'https://c3.ai/', pricing: 'premium' },
@@ -1036,6 +1143,8 @@ Object.assign(aiToolsData, {
         { name: 'Innowatts', description: 'AI energy analytics platform', logo: 'https://www.innowatts.com/favicon.ico', category: 'Energy AI', link: 'https://www.innowatts.com/', pricing: 'premium' }
     ],
     'ai-retail': [
+    { name: 'Openbravo', description: 'Open-source retail management platform', logo: 'https://www.openbravo.com/favicon.ico', category: 'Retail AI', link: 'https://www.openbravo.com/', pricing: 'free' },
+    { name: 'Odoo Community', description: 'Free open-source retail ERP', logo: 'https://www.odoo.com/favicon.ico', category: 'Retail AI', link: 'https://www.odoo.com/', pricing: 'free' },
         { name: 'Trax', description: 'Computer vision for retail execution', logo: 'https://traxretail.com/favicon.ico', category: 'Retail AI', link: 'https://traxretail.com/', pricing: 'premium' },
         { name: 'Standard Cognition', description: 'Autonomous checkout technology', logo: 'https://standard.ai/favicon.ico', category: 'Retail AI', link: 'https://standard.ai/', pricing: 'premium' },
         { name: 'Focal Systems', description: 'AI-powered store automation', logo: 'https://focal.systems/favicon.ico', category: 'Retail AI', link: 'https://focal.systems/', pricing: 'premium' },
@@ -1048,6 +1157,8 @@ Object.assign(aiToolsData, {
         { name: 'Clarifai', description: 'AI visual recognition for retail', logo: 'https://www.clarifai.com/favicon.ico', category: 'Retail AI', link: 'https://www.clarifai.com/', pricing: 'freemium' }
     ],
     'ai-finance': [
+    { name: 'QuantLib', description: 'Open-source quantitative finance library', logo: 'https://www.quantlib.org/favicon.ico', category: 'Finance AI', link: 'https://www.quantlib.org/', pricing: 'free' },
+    { name: 'OpenBB Terminal', description: 'Free investment research platform', logo: 'https://openbb.co/favicon.ico', category: 'Finance AI', link: 'https://openbb.co/', pricing: 'free' },
         { name: 'Alpaca', description: 'AI-powered stock trading platform', logo: 'https://alpaca.markets/favicon.ico', category: 'Finance AI', link: 'https://alpaca.markets/', pricing: 'freemium' },
         { name: 'Kensho', description: 'AI analytics for financial markets', logo: 'https://www.kensho.com/favicon.ico', category: 'Finance AI', link: 'https://www.kensho.com/', pricing: 'premium' },
         { name: 'Kavout', description: 'AI-powered investment platform', logo: 'https://www.kavout.com/favicon.ico', category: 'Finance AI', link: 'https://www.kavout.com/', pricing: 'freemium' },
@@ -1060,6 +1171,8 @@ Object.assign(aiToolsData, {
         { name: 'Kasisto', description: 'Conversational AI for finance', logo: 'https://kasisto.com/favicon.ico', category: 'Finance AI', link: 'https://kasisto.com/', pricing: 'premium' }
     ],
     'ai-real-estate': [
+        { name: 'Zillow', description: 'Free AI-powered home value estimates', logo: 'https://www.zillow.com/favicon.ico', category: 'Real Estate AI', link: 'https://www.zillow.com/', pricing: 'free' },
+        { name: 'Realtor.com', description: 'Free property search with AI recommendations', logo: 'https://www.realtor.com/favicon.ico', category: 'Real Estate AI', link: 'https://www.realtor.com/', pricing: 'free' },
         { name: 'HouseCanary', description: 'AI property valuation platform', logo: 'https://www.housecanary.com/favicon.ico', category: 'Real Estate AI', link: 'https://www.housecanary.com/', pricing: 'premium' },
         { name: 'Skyline AI', description: 'AI for real estate investment', logo: 'https://skyline.ai/favicon.ico', category: 'Real Estate AI', link: 'https://skyline.ai/', pricing: 'premium' },
         { name: 'Cherre', description: 'Real estate data integration platform', logo: 'https://cherre.com/favicon.ico', category: 'Real Estate AI', link: 'https://cherre.com/', pricing: 'premium' },
@@ -1084,6 +1197,8 @@ Object.assign(aiToolsData, {
         { name: 'Waylo', description: 'AI hotel price prediction', logo: 'https://waylo.com/favicon.ico', category: 'Travel AI', link: 'https://waylo.com/', pricing: 'freemium' }
     ],
     'ai-weather': [
+        { name: 'Weather.gov', description: 'Free NOAA weather forecasts and data', logo: 'https://www.weather.gov/favicon.ico', category: 'Weather AI', link: 'https://www.weather.gov/', pricing: 'free' },
+        { name: 'OpenWeatherMap', description: 'Free weather data and forecasts API', logo: 'https://openweathermap.org/favicon.ico', category: 'Weather AI', link: 'https://openweathermap.org/', pricing: 'free' },
         { name: 'ClimaCell', description: 'AI-powered weather forecasting', logo: 'https://www.climacell.co/favicon.ico', category: 'Weather AI', link: 'https://www.climacell.co/', pricing: 'premium' },
         { name: 'IBM Weather', description: 'AI weather intelligence platform', logo: 'https://www.ibm.com/weather/favicon.ico', category: 'Weather AI', link: 'https://www.ibm.com/weather', pricing: 'premium' },
         { name: 'Atmo', description: 'AI atmospheric modeling', logo: 'https://atmo.ai/favicon.ico', category: 'Weather AI', link: 'https://atmo.ai/', pricing: 'premium' },
@@ -1096,6 +1211,8 @@ Object.assign(aiToolsData, {
         { name: 'Tempest', description: 'AI weather station network', logo: 'https://weatherflow.com/favicon.ico', category: 'Weather AI', link: 'https://weatherflow.com/tempest-weather-system/', pricing: 'premium' }
     ],
     'ai-sports': [
+        { name: 'Strava Free', description: 'Free fitness tracking and social network', logo: 'https://www.strava.com/favicon.ico', category: 'Sports AI', link: 'https://www.strava.com', pricing: 'free' },
+        { name: 'Runkeeper', description: 'Free running and fitness tracker', logo: 'https://runkeeper.com/favicon.ico', category: 'Sports AI', link: 'https://runkeeper.com', pricing: 'free' },
         { name: 'Sportlogiq', description: 'AI sports analytics platform', logo: 'https://www.sportlogiq.com/favicon.ico', category: 'Sports AI', link: 'https://www.sportlogiq.com/', pricing: 'premium' },
         { name: 'Second Spectrum', description: 'AI-powered sports tracking', logo: 'https://www.secondspectrum.com/favicon.ico', category: 'Sports AI', link: 'https://www.secondspectrum.com/', pricing: 'premium' },
         { name: 'Hawk-Eye', description: 'Computer vision for sports officiating', logo: 'https://www.hawkeyeinnovations.com/favicon.ico', category: 'Sports AI', link: 'https://www.hawkeyeinnovations.com/', pricing: 'premium' },
@@ -1108,6 +1225,8 @@ Object.assign(aiToolsData, {
         { name: 'PlayerMaker', description: 'Football performance analytics', logo: 'https://playermaker.com/favicon.ico', category: 'Sports AI', link: 'https://playermaker.com/', pricing: 'premium' }
     ],
     'ai-music-analysis': [
+        { name: 'Shazam Free', description: 'Free AI music recognition app', logo: 'https://www.shazam.com/favicon.ico', category: 'Music Analysis AI', link: 'https://www.shazam.com', pricing: 'free' },
+        { name: 'SoundHound', description: 'Free music recognition and discovery', logo: 'https://www.soundhound.com/favicon.ico', category: 'Music Analysis AI', link: 'https://www.soundhound.com', pricing: 'free' },
         { name: 'Spotify', description: 'AI-powered music recommendations', logo: 'https://www.spotify.com/favicon.ico', category: 'Music Analysis AI', link: 'https://www.spotify.com/', pricing: 'freemium' },
         { name: 'Pandora', description: 'Music Genome Project', logo: 'https://www.pandora.com/favicon.ico', category: 'Music Analysis AI', link: 'https://www.pandora.com/', pricing: 'freemium' },
         { name: 'Shazam', description: 'AI music recognition', logo: 'https://www.shazam.com/favicon.ico', category: 'Music Analysis AI', link: 'https://www.shazam.com/', pricing: 'freemium' },
@@ -1120,6 +1239,8 @@ Object.assign(aiToolsData, {
         { name: 'Sononym', description: 'AI sample browser', logo: 'https://www.sononym.net/favicon.ico', category: 'Music Analysis AI', link: 'https://www.sononym.net/', pricing: 'freemium' }
     ],
     'ai-fashion': [
+        { name: 'Pinterest Lens', description: 'Free AI visual search for fashion', logo: 'https://www.pinterest.com/favicon.ico', category: 'Fashion AI', link: 'https://www.pinterest.com/', pricing: 'free' },
+        { name: 'Google Lens', description: 'Free AI fashion recognition and shopping', logo: 'https://lens.google.com/favicon.ico', category: 'Fashion AI', link: 'https://lens.google.com/', pricing: 'free' },
         { name: 'Vue.ai', description: 'AI for fashion retail', logo: 'https://vue.ai/favicon.ico', category: 'Fashion AI', link: 'https://vue.ai/', pricing: 'premium' },
         { name: 'Stitch Fix', description: 'AI-powered personal styling', logo: 'https://www.stitchfix.com/favicon.ico', category: 'Fashion AI', link: 'https://www.stitchfix.com/', pricing: 'premium' },
         { name: 'Stylumia', description: 'Fashion trend forecasting with AI', logo: 'https://stylumia.ai/favicon.ico', category: 'Fashion AI', link: 'https://stylumia.ai/', pricing: 'premium' },
@@ -1145,6 +1266,7 @@ Object.assign(aiToolsData, {
     ],
 
         'code-debuggers': [
+            { name: 'Chrome DevTools', description: 'Free built-in browser debugging tools', logo: 'https://www.google.com/chrome/static/images/favicons/favicon-96x96.png', category: 'Code Debuggers', link: 'https://developer.chrome.com/docs/devtools/', pricing: 'free' },
             { name: 'Sentry', description: 'Real-time error tracking and debugging for code', logo: 'https://sentry.io/_assets/favicon.ico', category: 'Code Debuggers', link: 'https://sentry.io/', pricing: 'freemium' },
             { name: 'Airbrake', description: 'Error monitoring and debugging for developers', logo: 'https://airbrake.io/favicon.ico', category: 'Code Debuggers', link: 'https://airbrake.io/', pricing: 'freemium' },
             { name: 'Rollbar', description: 'Continuous code improvement and debugging', logo: 'https://rollbar.com/favicon.ico', category: 'Code Debuggers', link: 'https://rollbar.com/', pricing: 'freemium' },
@@ -1172,6 +1294,12 @@ Object.assign(aiToolsData, {
     ],
 
         'animation': [
+    { name: 'OpenToonz', description: 'Open-source 2D animation software', logo: 'https://opentoonz.github.io/e/favicon.ico', category: 'Animation', link: 'https://opentoonz.github.io/e/', pricing: 'free' },
+    { name: 'Pencil2D', description: 'Free and open-source animation tool', logo: 'https://www.pencil2d.org/favicon.ico', category: 'Animation', link: 'https://www.pencil2d.org/', pricing: 'free' },
+    { name: 'Synfig Studio', description: 'Free 2D animation software', logo: 'https://www.synfig.org/favicon.ico', category: 'Animation', link: 'https://www.synfig.org/', pricing: 'free' },
+    { name: 'n8n', description: 'Free and open workflow automation', logo: 'https://n8n.io/favicon.ico', category: 'Automation', link: 'https://n8n.io/', pricing: 'free' },
+    { name: 'Node-RED', description: 'Open-source automation for IoT and more', logo: 'https://nodered.org/favicon.ico', category: 'Automation', link: 'https://nodered.org/', pricing: 'free' },
+    { name: 'Automagica', description: 'Open-source RPA for automation', logo: 'https://automagica.com/favicon.ico', category: 'Automation', link: 'https://automagica.com/', pricing: 'free' },
             { name: 'Runway ML', description: 'AI-powered video and animation creation', logo: 'https://runwayml.com/favicon.ico', category: 'Animation', link: 'https://runwayml.com/', pricing: 'freemium' },
             { name: 'DeepMotion', description: 'AI motion capture and animation', logo: 'https://www.deepmotion.com/favicon.ico', category: 'Animation', link: 'https://www.deepmotion.com/', pricing: 'freemium' },
             { name: 'Kaiber', description: 'AI video and animation generator', logo: 'https://www.kaiber.ai/favicon.ico', category: 'Animation', link: 'https://www.kaiber.ai/', pricing: 'freemium' },
@@ -1186,6 +1314,8 @@ Object.assign(aiToolsData, {
             { name: 'LottieFiles', description: 'AI-powered animation for web and apps', logo: 'https://lottiefiles.com/favicon.ico', category: 'Animation', link: 'https://lottiefiles.com/', pricing: 'freemium' }
         ],
     'ai-construction': [
+    { name: 'OpenProject', description: 'Open-source project management for construction', logo: 'https://www.openproject.org/favicon.ico', category: 'Construction AI', link: 'https://www.openproject.org/', pricing: 'free' },
+    { name: 'BIMserver', description: 'Open-source building information modeling server', logo: 'https://bimserver.org/favicon.ico', category: 'Construction AI', link: 'https://bimserver.org/', pricing: 'free' },
         { name: 'Buildots', description: 'AI construction site monitoring', logo: 'https://buildots.com/favicon.ico', category: 'Construction AI', link: 'https://buildots.com/', pricing: 'premium' },
         { name: 'Doxel', description: 'AI-powered construction monitoring', logo: 'https://www.doxel.ai/favicon.ico', category: 'Construction AI', link: 'https://www.doxel.ai/', pricing: 'premium' },
         { name: 'Disperse', description: 'AI construction progress tracking', logo: 'https://www.disperse.io/favicon.ico', category: 'Construction AI', link: 'https://www.disperse.io/', pricing: 'premium' },
@@ -1198,6 +1328,8 @@ Object.assign(aiToolsData, {
         { name: 'Togal.AI', description: 'AI for construction estimating', logo: 'https://togal.ai/favicon.ico', category: 'Construction AI', link: 'https://togal.ai/', pricing: 'premium' }
     ],
     'ai-legal': [
+    { name: 'Free Law Project', description: 'Open legal data and analytics', logo: 'https://free.law/favicon.ico', category: 'Legal AI', link: 'https://free.law/', pricing: 'free' },
+    { name: 'CourtListener', description: 'Free legal research and alerts', logo: 'https://www.courtlistener.com/favicon.ico', category: 'Legal AI', link: 'https://www.courtlistener.com/', pricing: 'free' },
         { name: 'ROSS Intelligence', description: 'AI legal research platform', logo: 'https://rossintelligence.com/favicon.ico', category: 'Legal AI', link: 'https://rossintelligence.com/', pricing: 'premium' },
         { name: 'Casetext', description: 'AI-powered legal research assistant', logo: 'https://casetext.com/favicon.ico', category: 'Legal AI', link: 'https://casetext.com/', pricing: 'premium' },
         { name: 'Kira Systems', description: 'AI contract analysis software', logo: 'https://kirasystems.com/favicon.ico', category: 'Legal AI', link: 'https://kirasystems.com/', pricing: 'premium' },
@@ -1258,6 +1390,8 @@ Object.assign(aiToolsData, {
         { name: 'Mobileye', description: 'Computer vision for autonomous driving', logo: 'https://www.mobileye.com/favicon.ico', category: 'Transportation AI', link: 'https://www.mobileye.com/', pricing: 'premium' }
     ],
     'ai-insurance': [
+    { name: 'OpenUnderwriter', description: 'Open-source insurance underwriting platform', logo: 'https://openunderwriter.com/favicon.ico', category: 'Insurance AI', link: 'https://openunderwriter.com/', pricing: 'free' },
+    { name: 'RiskGenius Free', description: 'Free insurance policy analysis tools', logo: 'https://riskgenius.com/favicon.ico', category: 'Insurance AI', link: 'https://riskgenius.com/', pricing: 'free' },
         { name: 'Lemonade', description: 'AI-powered insurance company', logo: 'https://www.lemonade.com/favicon.ico', category: 'Insurance AI', link: 'https://www.lemonade.com/', pricing: 'freemium' },
         { name: 'Tractable', description: 'AI for accident and disaster recovery', logo: 'https://tractable.ai/favicon.ico', category: 'Insurance AI', link: 'https://tractable.ai/', pricing: 'premium' },
         { name: 'Shift Technology', description: 'AI fraud detection for insurance', logo: 'https://www.shift-technology.com/favicon.ico', category: 'Insurance AI', link: 'https://www.shift-technology.com/', pricing: 'premium' },
@@ -1294,6 +1428,8 @@ Object.assign(aiToolsData, {
         { name: 'Chartbeat', description: 'AI content analytics for publishers', logo: 'https://chartbeat.com/favicon.ico', category: 'Journalism AI', link: 'https://chartbeat.com/', pricing: 'premium' }
     ],
     'ai-water-management': [
+    { name: 'Open Water Analytics', description: 'Open-source water management tools', logo: 'https://openwateranalytics.com/favicon.ico', category: 'Water Management AI', link: 'https://openwateranalytics.com/', pricing: 'free' },
+    { name: 'AQUARIUS', description: 'Free water data management platform', logo: 'https://aquaticinformatics.com/favicon.ico', category: 'Water Management AI', link: 'https://aquaticinformatics.com/solutions/aquarius/', pricing: 'free' },
         { name: 'Pluto AI', description: 'AI water treatment analytics', logo: 'https://plutoai.com/favicon.ico', category: 'Water Management AI', link: 'https://plutoai.com/', pricing: 'premium' },
         { name: 'Ketos', description: 'AI water quality monitoring', logo: 'https://ketos.co/favicon.ico', category: 'Water Management AI', link: 'https://ketos.co/', pricing: 'premium' },
         { name: 'Aquasight', description: 'AI water utility optimization', logo: 'https://www.aquasight.io/favicon.ico', category: 'Water Management AI', link: 'https://www.aquasight.io/', pricing: 'premium' },
@@ -1306,6 +1442,8 @@ Object.assign(aiToolsData, {
         { name: 'Varuna', description: 'AI water quality monitoring platform', logo: 'https://www.varuna.io/favicon.ico', category: 'Water Management AI', link: 'https://www.varuna.io/', pricing: 'premium' }
     ],
     'ai-space': [
+    { name: 'OpenSpace', description: 'Open-source space data and analytics', logo: 'https://openspaceproject.com/favicon.ico', category: 'Space AI', link: 'https://openspaceproject.com/', pricing: 'free' },
+    { name: 'ESA Open Data Portal', description: 'Free satellite and space data', logo: 'https://www.esa.int/favicon.ico', category: 'Space AI', link: 'https://www.esa.int/Applications/Observing_the_Earth/Open_data_portal', pricing: 'free' },
         { name: 'SpaceKnow', description: 'Satellite imagery analytics', logo: 'https://www.spaceknow.com/favicon.ico', category: 'Space AI', link: 'https://www.spaceknow.com/', pricing: 'premium' },
         { name: 'Orbital Insight', description: 'Geospatial analytics platform', logo: 'https://orbitalinsight.com/favicon.ico', category: 'Space AI', link: 'https://orbitalinsight.com/', pricing: 'premium' },
         { name: 'Descartes Labs', description: 'Geospatial intelligence platform', logo: 'https://www.descarteslabs.com/favicon.ico', category: 'Space AI', link: 'https://www.descarteslabs.com/', pricing: 'premium' },
@@ -1342,6 +1480,8 @@ Object.assign(aiToolsData, {
         { name: 'SciBite', description: 'AI-driven scientific data analytics', logo: 'https://www.scibite.com/favicon.ico', category: 'Scientific Research', link: 'https://www.scibite.com/', pricing: 'premium' }
     ],
     'ai-iot': [
+    { name: 'Home Assistant', description: 'Open-source smart home automation', logo: 'https://www.home-assistant.io/favicon.ico', category: 'IoT & Smart Home', link: 'https://www.home-assistant.io/', pricing: 'free' },
+    { name: 'OpenHAB', description: 'Free home automation platform', logo: 'https://www.openhab.org/favicon.ico', category: 'IoT & Smart Home', link: 'https://www.openhab.org/', pricing: 'free' },
         { name: 'Google Nest', description: 'AI-powered smart home devices', logo: 'https://store.google.com/favicon.ico', category: 'IoT & Smart Home', link: 'https://store.google.com/category/connected_home', pricing: 'premium' },
         { name: 'Amazon Alexa', description: 'Voice assistant for smart homes', logo: 'https://alexa.amazon.com/favicon.ico', category: 'IoT & Smart Home', link: 'https://alexa.amazon.com/', pricing: 'freemium' },
         { name: 'Samsung SmartThings', description: 'Smart home platform with AI integration', logo: 'https://www.smartthings.com/favicon.ico', category: 'IoT & Smart Home', link: 'https://www.smartthings.com/', pricing: 'freemium' },
@@ -1366,6 +1506,8 @@ Object.assign(aiToolsData, {
         { name: 'Aira', description: 'Visual interpreter service for blind', logo: 'https://aira.io/favicon.ico', category: 'Accessibility Tools', link: 'https://aira.io/', pricing: 'premium' }
     ],
     'ai-document-processing': [
+        { name: 'Google Docs', description: 'Free document creation and collaboration', logo: 'https://docs.google.com/favicon.ico', category: 'Document Processing', link: 'https://docs.google.com/', pricing: 'free' },
+        { name: 'PDFtk Free', description: 'Free PDF toolkit', logo: 'https://www.pdflabs.com/favicon.ico', category: 'Document Processing', link: 'https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/', pricing: 'free' },
         { name: 'DocuSign AI', description: 'AI-powered document analysis and processing', logo: 'https://www.docusign.com/favicon.ico', category: 'Document Processing', link: 'https://www.docusign.com/products/ai', pricing: 'premium' },
         { name: 'Adobe Acrobat AI', description: 'Intelligent document processing and editing', logo: 'https://www.adobe.com/favicon.ico', category: 'Document Processing', link: 'https://www.adobe.com/acrobat/ai.html', pricing: 'premium' },
         { name: 'Nanonets', description: 'AI document data extraction and processing', logo: 'https://nanonets.com/favicon.ico', category: 'Document Processing', link: 'https://nanonets.com/', pricing: 'freemium' },
@@ -1402,6 +1544,8 @@ Object.assign(aiToolsData, {
         { name: 'Humtap', description: 'Create music with your voice and AI', logo: 'https://www.humtap.com/favicon.ico', category: 'Music Creation', link: 'https://www.humtap.com/', pricing: 'freemium' }
     ],
     'ai-interior-design': [
+        { name: 'RoomSketcher Free', description: 'Free floor plan and home design', logo: 'https://www.roomsketcher.com/favicon.ico', category: 'Interior Design', link: 'https://www.roomsketcher.com/', pricing: 'free' },
+        { name: 'Sweet Home 3D', description: 'Free interior design software', logo: 'https://www.sweethome3d.com/favicon.ico', category: 'Interior Design', link: 'https://www.sweethome3d.com/', pricing: 'free' },
         { name: 'Interior AI', description: 'AI interior design visualization', logo: 'https://interiorai.com/favicon.ico', category: 'Interior Design', link: 'https://interiorai.com/', pricing: 'premium' },
         { name: 'Planner 5D', description: 'AI-powered interior design tool', logo: 'https://planner5d.com/favicon.ico', category: 'Interior Design', link: 'https://planner5d.com/', pricing: 'freemium' },
         { name: 'Modsy', description: 'AI interior design visualization service', logo: 'https://www.modsy.com/favicon.ico', category: 'Interior Design', link: 'https://www.modsy.com/', pricing: 'premium' },
@@ -1466,6 +1610,8 @@ Object.assign(aiToolsData, {
         { name: 'Beautiful.ai', description: 'AI presentation design platform', logo: 'https://www.beautiful.ai/favicon.ico', category: 'Design Tools', link: 'https://www.beautiful.ai/', pricing: 'freemium' }
     ],
     'ai-data-visualization': [
+        { name: 'Google Data Studio', description: 'Free data visualization and reporting', logo: 'https://datastudio.google.com/favicon.ico', category: 'Data Visualization', link: 'https://datastudio.google.com/', pricing: 'free' },
+        { name: 'Flourish', description: 'Free data visualization and storytelling', logo: 'https://flourish.studio/favicon.ico', category: 'Data Visualization', link: 'https://flourish.studio/', pricing: 'free' },
         { name: 'Tableau', description: 'Interactive data visualization with AI', logo: 'https://www.tableau.com/favicon.ico', category: 'Data Visualization', link: 'https://www.tableau.com/', pricing: 'premium' },
         { name: 'PowerBI', description: 'Microsoft business analytics with AI', logo: 'https://powerbi.microsoft.com/favicon.ico', category: 'Data Visualization', link: 'https://powerbi.microsoft.com/', pricing: 'freemium' },
         { name: 'Qlik', description: 'Data analytics and visualization platform', logo: 'https://www.qlik.com/favicon.ico', category: 'Data Visualization', link: 'https://www.qlik.com/', pricing: 'premium' },
@@ -1481,6 +1627,8 @@ Object.assign(aiToolsData, {
         { name: 'Kinetica', description: 'GPU-accelerated analytics platform', logo: 'https://www.kinetica.com/favicon.ico', category: 'Data Visualization', link: 'https://www.kinetica.com/', pricing: 'premium' }
     ],
     'ai-customer-insights': [
+        { name: 'Google Forms', description: 'Free survey and feedback collection', logo: 'https://www.google.com/forms/about/favicon.ico', category: 'Customer Insights', link: 'https://www.google.com/forms/about/', pricing: 'free' },
+        { name: 'SurveyMonkey Free', description: 'Free survey and feedback tool', logo: 'https://www.surveymonkey.com/favicon.ico', category: 'Customer Insights', link: 'https://www.surveymonkey.com/', pricing: 'free' },
         { name: 'Qualtrics XM', description: 'AI-powered experience management', logo: 'https://www.qualtrics.com/favicon.ico', category: 'Customer Insights', link: 'https://www.qualtrics.com/', pricing: 'premium' },
         { name: 'Medallia', description: 'Customer and employee experience platform', logo: 'https://www.medallia.com/favicon.ico', category: 'Customer Insights', link: 'https://www.medallia.com/', pricing: 'premium' },
         { name: 'Clarabridge', description: 'AI-powered customer experience analytics', logo: 'https://www.clarabridge.com/favicon.ico', category: 'Customer Insights', link: 'https://www.clarabridge.com/', pricing: 'premium' },
@@ -1493,6 +1641,8 @@ Object.assign(aiToolsData, {
         { name: 'Viable', description: 'AI analysis of qualitative feedback', logo: 'https://www.askviable.com/favicon.ico', category: 'Customer Insights', link: 'https://www.askviable.com/', pricing: 'freemium' }
     ],
     'ai-legal-tech': [
+        { name: 'Google Scholar', description: 'Free legal case and article search', logo: 'https://scholar.google.com/favicon.ico', category: 'Legal Tech', link: 'https://scholar.google.com/', pricing: 'free' },
+        { name: 'Justia', description: 'Free legal information and resources', logo: 'https://www.justia.com/favicon.ico', category: 'Legal Tech', link: 'https://www.justia.com/', pricing: 'free' },
         { name: 'ROSS Intelligence', description: 'AI legal research platform', logo: 'https://rossintelligence.com/favicon.ico', category: 'Legal Tech', link: 'https://rossintelligence.com/', pricing: 'premium' },
         { name: 'Casetext', description: 'AI-powered legal research assistant', logo: 'https://casetext.com/favicon.ico', category: 'Legal Tech', link: 'https://casetext.com/', pricing: 'premium' },
         { name: 'Kira Systems', description: 'AI contract analysis software', logo: 'https://kirasystems.com/favicon.ico', category: 'Legal Tech', link: 'https://kirasystems.com/', pricing: 'premium' },
@@ -1505,6 +1655,8 @@ Object.assign(aiToolsData, {
         { name: 'Evisort', description: 'AI-powered contract intelligence', logo: 'https://www.evisort.com/favicon.ico', category: 'Legal Tech', link: 'https://www.evisort.com/', pricing: 'premium' }
     ],
     'ai-avatars': [
+    { name: 'Avataaars Generator', description: 'Free open-source avatar generator', logo: 'https://avataaars.com/favicon.ico', category: 'AI Avatars', link: 'https://avataaars.com/', pricing: 'free' },
+    { name: 'Multiavatar', description: 'Free multicultural avatar generator', logo: 'https://multiavatar.com/favicon.ico', category: 'AI Avatars', link: 'https://multiavatar.com/', pricing: 'free' },
     { name: 'Ready Player Me', description: 'Cross-platform avatar creator', logo: 'https://readyplayer.me/favicon.ico', category: 'AI Avatars', link: 'https://readyplayer.me/', pricing: 'freemium' },
     { name: 'Avatar AI', description: 'AI-powered avatar generation', logo: 'https://avatarai.me/favicon.ico', category: 'AI Avatars', link: 'https://avatarai.me/', pricing: 'premium' },
     { name: 'Midjourney', description: 'AI image generation for avatars', logo: 'https://www.midjourney.com/favicon.ico', category: 'AI Avatars', link: 'https://www.midjourney.com/', pricing: 'premium' },
@@ -1565,6 +1717,8 @@ Object.assign(aiToolsData, {
     { name: 'Searchmetrics', description: 'SEO and content optimization', logo: 'https://www.searchmetrics.com/favicon.ico', category: 'SEO Tools', link: 'https://www.searchmetrics.com', pricing: 'premium' }
     ],
     'email-tools': [
+    { name: 'Gmail', description: 'Free email service by Google', logo: 'https://www.google.com/gmail/favicon.ico', category: 'Email Tools', link: 'https://www.google.com/gmail/', pricing: 'free' },
+    { name: 'ProtonMail', description: 'Free encrypted email service', logo: 'https://proton.me/favicon.ico', category: 'Email Tools', link: 'https://proton.me/mail', pricing: 'free' },
     { name: 'Mailchimp', description: 'Email marketing platform', logo: 'https://mailchimp.com/favicon.ico', category: 'Email Tools', link: 'https://mailchimp.com', pricing: 'freemium' },
     { name: 'Constant Contact', description: 'Email marketing and automation', logo: 'https://www.constantcontact.com/favicon.ico', category: 'Email Tools', link: 'https://www.constantcontact.com', pricing: 'premium' },
     { name: 'SendGrid', description: 'Email delivery service', logo: 'https://sendgrid.com/favicon.ico', category: 'Email Tools', link: 'https://sendgrid.com', pricing: 'freemium' },
@@ -1590,6 +1744,8 @@ Object.assign(aiToolsData, {
     { name: 'Promptable', description: 'Prompt engineering and sharing platform', logo: 'https://promptable.ai/favicon.ico', category: 'Prompt Generation', link: 'https://promptable.ai/', pricing: 'freemium' }
     ],
     'presentation-tools': [
+    { name: 'Google Slides', description: 'Free presentation software', logo: 'https://www.google.com/slides/about/favicon.ico', category: 'Presentation Tools', link: 'https://www.google.com/slides/about/', pricing: 'free' },
+    { name: 'Canva Presentations', description: 'Free presentation design tool', logo: 'https://www.canva.com/favicon.ico', category: 'Presentation Tools', link: 'https://www.canva.com/presentations/', pricing: 'free' },
     { name: 'Gamma', description: 'AI-powered presentation maker', logo: 'https://gamma.app/favicon.ico', category: 'Presentation Tools', link: 'https://gamma.app', pricing: 'freemium' },
     { name: 'Beautiful.AI', description: 'Smart presentation software', logo: 'https://www.beautiful.ai/favicon.ico', category: 'Presentation Tools', link: 'https://www.beautiful.ai', pricing: 'freemium' },
     { name: 'Tome', description: 'AI storytelling format', logo: 'https://tome.app/favicon.ico', category: 'Presentation Tools', link: 'https://tome.app', pricing: 'freemium' },
@@ -1614,6 +1770,8 @@ Object.assign(aiToolsData, {
     { name: 'Connected Papers', description: 'Visual tool to find relevant papers', logo: 'https://www.connectedpapers.com/favicon.ico', category: 'Research Tools', link: 'https://www.connectedpapers.com', pricing: 'freemium' }
     ],
     'productivity-tools': [
+    { name: 'Google Workspace', description: 'Free productivity suite (Docs, Sheets, Slides)', logo: 'https://workspace.google.com/favicon.ico', category: 'Productivity', link: 'https://workspace.google.com/', pricing: 'free' },
+    { name: 'LibreOffice', description: 'Free open-source office suite', logo: 'https://www.libreoffice.org/favicon.ico', category: 'Productivity', link: 'https://www.libreoffice.org/', pricing: 'free' },
     { name: 'Notion', description: 'All-in-one workspace with AI', logo: 'https://www.notion.so/favicon.ico', category: 'Productivity', link: 'https://www.notion.so', pricing: 'freemium' },
     { name: 'Todoist', description: 'Task management with AI features', logo: 'https://todoist.com/favicon.ico', category: 'Productivity', link: 'https://todoist.com', pricing: 'freemium' },
     { name: 'Trello', description: 'Visual project management tool', logo: 'https://trello.com/favicon.ico', category: 'Productivity', link: 'https://trello.com', pricing: 'freemium' },
@@ -1674,6 +1832,8 @@ Object.assign(aiToolsData, {
     { name: 'Defold', description: 'Game engine for mobile games', logo: 'https://defold.com/favicon.ico', category: 'Gaming Tools', link: 'https://defold.com', pricing: 'free' }
     ],
     'social-media-tools': [
+    { name: 'TweetDeck', description: 'Free Twitter management tool', logo: 'https://tweetdeck.twitter.com/favicon.ico', category: 'Social Media', link: 'https://tweetdeck.twitter.com/', pricing: 'free' },
+    { name: 'Later Free', description: 'Free social media scheduler', logo: 'https://later.com/favicon.ico', category: 'Social Media', link: 'https://later.com/', pricing: 'free' },
     { name: 'Hootsuite', description: 'Social media management platform', logo: 'https://hootsuite.com/favicon.ico', category: 'Social Media', link: 'https://hootsuite.com', pricing: 'premium' },
     { name: 'Buffer', description: 'Social media scheduling and analytics', logo: 'https://buffer.com/favicon.ico', category: 'Social Media', link: 'https://buffer.com', pricing: 'freemium' },
     { name: 'Sprout Social', description: 'Social media management and analytics', logo: 'https://sproutsocial.com/favicon.ico', category: 'Social Media', link: 'https://sproutsocial.com', pricing: 'premium' },
@@ -1686,6 +1846,8 @@ Object.assign(aiToolsData, {
     { name: 'Socialbakers', description: 'AI-powered social media marketing', logo: 'https://www.socialbakers.com/favicon.ico', category: 'Social Media', link: 'https://www.socialbakers.com', pricing: 'premium' }
     ],
     'legal-tools': [
+    { name: 'LawHelp.org', description: 'Free legal aid resources', logo: 'https://www.lawhelp.org/favicon.ico', category: 'Legal Tools', link: 'https://www.lawhelp.org/', pricing: 'free' },
+    { name: 'Legal Services Corporation', description: 'Free legal assistance finder', logo: 'https://www.lsc.gov/favicon.ico', category: 'Legal Tools', link: 'https://www.lsc.gov/', pricing: 'free' },
     { name: 'LegalZoom', description: 'Online legal services', logo: 'https://www.legalzoom.com/favicon.ico', category: 'Legal Tools', link: 'https://www.legalzoom.com', pricing: 'premium' },
     { name: 'Rocket Lawyer', description: 'Legal documents and advice', logo: 'https://www.rocketlawyer.com/favicon.ico', category: 'Legal Tools', link: 'https://www.rocketlawyer.com', pricing: 'premium' },
     { name: 'Nolo', description: 'Legal information and software', logo: 'https://www.nolo.com/favicon.ico', category: 'Legal Tools', link: 'https://www.nolo.com', pricing: 'freemium' },
@@ -1698,6 +1860,8 @@ Object.assign(aiToolsData, {
     { name: 'TimeSolv', description: 'Legal time tracking and billing', logo: 'https://www.timesolv.com/favicon.ico', category: 'Legal Tools', link: 'https://www.timesolv.com', pricing: 'premium' }
     ],
     'hr-tools': [
+    { name: 'OrangeHRM', description: 'Free open-source HR management', logo: 'https://www.orangehrm.com/favicon.ico', category: 'HR Tools', link: 'https://www.orangehrm.com/', pricing: 'free' },
+    { name: 'Bitrix24 Free', description: 'Free HR and collaboration platform', logo: 'https://www.bitrix24.com/favicon.ico', category: 'HR Tools', link: 'https://www.bitrix24.com/', pricing: 'free' },
     { name: 'BambooHR', description: 'Human resources software', logo: 'https://www.bamboohr.com/favicon.ico', category: 'HR Tools', link: 'https://www.bamboohr.com', pricing: 'premium' },
     { name: 'Workday', description: 'Enterprise HR and finance software', logo: 'https://www.workday.com/favicon.ico', category: 'HR Tools', link: 'https://www.workday.com', pricing: 'premium' },
     { name: 'ADP', description: 'Payroll and HR services', logo: 'https://www.adp.com/favicon.ico', category: 'HR Tools', link: 'https://www.adp.com', pricing: 'premium' },
@@ -1722,6 +1886,8 @@ Object.assign(aiToolsData, {
     { name: 'Wise Agent', description: 'Real estate CRM and marketing', logo: 'https://www.wiseagent.com/favicon.ico', category: 'Real Estate', link: 'https://www.wiseagent.com', pricing: 'premium' }
     ],
     'sales-tools': [
+    { name: 'HubSpot CRM Free', description: 'Free CRM and sales tools', logo: 'https://www.hubspot.com/favicon.ico', category: 'Sales Tools', link: 'https://www.hubspot.com/products/crm', pricing: 'free' },
+    { name: 'Bitrix24 CRM', description: 'Free CRM for sales teams', logo: 'https://www.bitrix24.com/favicon.ico', category: 'Sales Tools', link: 'https://www.bitrix24.com/tools/crm/', pricing: 'free' },
         // { name: 'Salesforce', description: 'Customer relationship management', logo: 'https://www.salesforce.com/favicon.ico', category: 'Sales Tools', link: 'https://www.salesforce.com' },
     { name: 'HubSpot', description: 'Inbound marketing and sales platform', logo: 'https://www.hubspot.com/favicon.ico', category: 'Sales Tools', link: 'https://www.hubspot.com', pricing: 'freemium' },
     { name: 'Pipedrive', description: 'Sales CRM and pipeline management', logo: 'https://www.pipedrive.com/favicon.ico', category: 'Sales Tools', link: 'https://www.pipedrive.com', pricing: 'premium' },
@@ -1734,6 +1900,8 @@ Object.assign(aiToolsData, {
     { name: 'Gong', description: 'Revenue intelligence platform', logo: 'https://www.gong.io/favicon.ico', category: 'Sales Tools', link: 'https://www.gong.io', pricing: 'premium' }
     ],
     'customer-service-tools': [
+    { name: 'Tidio Free', description: 'Free live chat and chatbots', logo: 'https://www.tidio.com/favicon.ico', category: 'Customer Service', link: 'https://www.tidio.com/', pricing: 'free' },
+    { name: 'Tawk.to', description: 'Free live chat software', logo: 'https://www.tawk.to/favicon.ico', category: 'Customer Service', link: 'https://www.tawk.to/', pricing: 'free' },
     { name: 'Zendesk', description: 'Customer service and support platform', logo: 'https://www.zendesk.com/favicon.ico', category: 'Customer Service', link: 'https://www.zendesk.com', pricing: 'premium' },
     { name: 'Freshdesk', description: 'Customer support software', logo: 'https://freshdesk.com/favicon.ico', category: 'Customer Service', link: 'https://freshdesk.com', pricing: 'freemium' },
     { name: 'Intercom', description: 'Customer messaging platform', logo: 'https://www.intercom.com/favicon.ico', category: 'Customer Service', link: 'https://www.intercom.com', pricing: 'premium' },
@@ -1755,7 +1923,10 @@ Object.assign(aiToolsData, {
     { name: 'CrowdStrike', description: 'Endpoint protection platform', logo: 'https://www.crowdstrike.com/favicon.ico', category: 'Cybersecurity', link: 'https://www.crowdstrike.com', pricing: 'premium' },
     { name: 'SentinelOne', description: 'AI-powered cybersecurity platform', logo: 'https://www.sentinelone.com/favicon.ico', category: 'Cybersecurity', link: 'https://www.sentinelone.com', pricing: 'premium' },
     { name: 'Palo Alto Networks', description: 'Cybersecurity platform', logo: 'https://www.paloaltonetworks.com/favicon.ico', category: 'Cybersecurity', link: 'https://www.paloaltonetworks.com', pricing: 'premium' },
-    { name: 'Fortinet', description: 'Cybersecurity solutions', logo: 'https://www.fortinet.com/favicon.ico', category: 'Cybersecurity', link: 'https://www.fortinet.com', pricing: 'premium' }
+    { name: 'Fortinet', description: 'Cybersecurity solutions', logo: 'https://www.fortinet.com/favicon.ico', category: 'Cybersecurity', link: 'https://www.fortinet.com', pricing: 'premium' },
+    { name: 'VirusTotal', description: 'Free malware scanning and threat intelligence', logo: 'https://www.virustotal.com/favicon.ico', category: 'Cybersecurity', link: 'https://www.virustotal.com/', pricing: 'free' },
+    { name: 'Cuckoo Sandbox', description: 'Open-source automated malware analysis', logo: 'https://cuckoosandbox.org/favicon.ico', category: 'Cybersecurity', link: 'https://cuckoosandbox.org/', pricing: 'free' },
+    { name: 'Metasploit Community', description: 'Free penetration testing framework', logo: 'https://www.metasploit.com/favicon.ico', category: 'Cybersecurity', link: 'https://www.metasploit.com/', pricing: 'free' }
     ],
     'logistics-tools': [
     { name: 'ShipStation', description: 'Shipping and order fulfillment', logo: 'https://www.shipstation.com/favicon.ico', category: 'Logistics', link: 'https://www.shipstation.com', pricing: 'premium' },
@@ -1767,7 +1938,10 @@ Object.assign(aiToolsData, {
     { name: 'Convoy', description: 'Digital freight network', logo: 'https://convoy.com/favicon.ico', category: 'Logistics', link: 'https://convoy.com', pricing: 'freemium' },
     { name: 'Uber Freight', description: 'Freight marketplace', logo: 'https://www.uberfreight.com/favicon.ico', category: 'Logistics', link: 'https://www.uberfreight.com', pricing: 'freemium' },
     { name: 'C.H. Robinson', description: 'Third-party logistics provider', logo: 'https://www.chrobinson.com/favicon.ico', category: 'Logistics', link: 'https://www.chrobinson.com', pricing: 'premium' },
-    { name: 'XPO Logistics', description: 'Supply chain solutions', logo: 'https://www.xpo.com/favicon.ico', category: 'Logistics', link: 'https://www.xpo.com', pricing: 'premium' }
+    { name: 'XPO Logistics', description: 'Supply chain solutions', logo: 'https://www.xpo.com/favicon.ico', category: 'Logistics', link: 'https://www.xpo.com', pricing: 'premium' },
+    { name: 'OpenLMIS', description: 'Open-source logistics management', logo: 'https://openlmis.org/favicon.ico', category: 'Logistics', link: 'https://openlmis.org/', pricing: 'free' },
+    { name: 'Logistimo', description: 'Free supply chain and logistics platform', logo: 'https://www.logistimo.com/favicon.ico', category: 'Logistics', link: 'https://www.logistimo.com/', pricing: 'free' },
+    { name: 'Transporeon Free', description: 'Free logistics management tools', logo: 'https://www.transporeon.com/favicon.ico', category: 'Logistics', link: 'https://www.transporeon.com/', pricing: 'free' }
     ],
     'agriculture-tools': [
     { name: 'Climate FieldView', description: 'Digital agriculture platform', logo: 'https://www.climate.com/favicon.ico', category: 'Agriculture', link: 'https://www.climate.com', pricing: 'premium' },
@@ -1779,7 +1953,10 @@ Object.assign(aiToolsData, {
     { name: 'Farmers Edge', description: 'Digital agriculture platform', logo: 'https://www.farmersedge.ca/favicon.ico', category: 'Agriculture', link: 'https://www.farmersedge.ca', pricing: 'premium' },
     { name: 'Cropio', description: 'Satellite field monitoring', logo: 'https://www.cropio.com/favicon.ico', category: 'Agriculture', link: 'https://www.cropio.com', pricing: 'premium' },
     { name: 'PrecisionHawk', description: 'Drone-based agriculture analytics', logo: 'https://www.precisionhawk.com/favicon.ico', category: 'Agriculture', link: 'https://www.precisionhawk.com', pricing: 'premium' },
-    { name: 'Taranis', description: 'AI-powered crop intelligence', logo: 'https://www.taranis.com/favicon.ico', category: 'Agriculture', link: 'https://www.taranis.com', pricing: 'premium' }
+    { name: 'Taranis', description: 'AI-powered crop intelligence', logo: 'https://www.taranis.com/favicon.ico', category: 'Agriculture', link: 'https://www.taranis.com', pricing: 'premium' },
+    { name: 'FarmLogs', description: 'Free farm management software', logo: 'https://farmlogs.com/favicon.ico', category: 'Agriculture', link: 'https://farmlogs.com/', pricing: 'free' },
+    { name: 'AgriWebb Free', description: 'Free digital farm management', logo: 'https://www.agriwebb.com/favicon.ico', category: 'Agriculture', link: 'https://www.agriwebb.com/', pricing: 'free' },
+    { name: 'OpenATK', description: 'Open-source agricultural toolkits', logo: 'https://openatk.com/favicon.ico', category: 'Agriculture', link: 'https://openatk.com/', pricing: 'free' }
     ],
     'photo-editing-tools': [
     { name: 'Photoshop AI', description: 'Adobe Photoshop with AI-powered features', logo: 'https://www.adobe.com/favicon.ico', category: 'Photo Editing', link: 'https://www.adobe.com/products/photoshop.html', pricing: 'premium' },
@@ -1794,6 +1971,8 @@ Object.assign(aiToolsData, {
     { name: 'Pixlr AI', description: 'Online photo editor with AI features', logo: 'https://pixlr.com/favicon.ico', category: 'Photo Editing', link: 'https://pixlr.com', pricing: 'freemium' }
     ],
     'writing-assistants': [
+    { name: 'Hemingway App Free', description: 'Free writing clarity tool', logo: 'https://hemingwayapp.com/favicon.ico', category: 'Writing Assistant', link: 'https://hemingwayapp.com/', pricing: 'free' },
+    { name: 'LanguageTool Free', description: 'Free grammar and style checker', logo: 'https://languagetool.org/favicon.ico', category: 'Writing Assistant', link: 'https://languagetool.org/', pricing: 'free' },
     { name: 'Grammarly', description: 'AI writing assistant for grammar and style', logo: 'https://www.grammarly.com/favicon.ico', category: 'Writing Assistant', link: 'https://www.grammarly.com', pricing: 'freemium' },
     { name: 'ProWritingAid', description: 'Grammar checker and writing coach', logo: 'https://prowritingaid.com/favicon.ico', category: 'Writing Assistant', link: 'https://prowritingaid.com', pricing: 'freemium' },
     { name: 'Hemingway Editor', description: 'Make your writing bold and clear', logo: 'https://hemingwayapp.com/favicon.ico', category: 'Writing Assistant', link: 'https://hemingwayapp.com', pricing: 'freemium' },
@@ -1806,6 +1985,8 @@ Object.assign(aiToolsData, {
     { name: 'Wordtune', description: 'AI writing companion', logo: 'https://www.wordtune.com/favicon.ico', category: 'Writing Assistant', link: 'https://www.wordtune.com', pricing: 'freemium' }
     ],
     'meeting-tools': [
+    { name: 'Google Meet', description: 'Free video conferencing', logo: 'https://meet.google.com/favicon.ico', category: 'Meeting Tools', link: 'https://meet.google.com/', pricing: 'free' },
+    { name: 'Jitsi Meet', description: 'Free open-source video conferencing', logo: 'https://meet.jit.si/favicon.ico', category: 'Meeting Tools', link: 'https://meet.jit.si/', pricing: 'free' },
     { name: 'Otter.ai', description: 'AI meeting transcription and notes', logo: 'https://otter.ai/favicon.ico', category: 'Meeting Tools', link: 'https://otter.ai', pricing: 'freemium' },
     { name: 'Zoom AI Companion', description: 'AI-powered meeting assistant', logo: 'https://zoom.us/favicon.ico', category: 'Meeting Tools', link: 'https://zoom.us', pricing: 'freemium' },
     { name: 'Microsoft Teams AI', description: 'AI features in Microsoft Teams', logo: 'https://www.microsoft.com/favicon.ico', category: 'Meeting Tools', link: 'https://www.microsoft.com/en-us/microsoft-teams', pricing: 'freemium' },
@@ -1827,7 +2008,10 @@ Object.assign(aiToolsData, {
     { name: 'SeekOut', description: 'AI-powered talent search', logo: 'https://seekout.com/favicon.ico', category: 'Recruitment', link: 'https://seekout.com', pricing: 'premium' },
     { name: 'Fetcher', description: 'AI recruiting outreach', logo: 'https://fetcher.ai/favicon.ico', category: 'Recruitment', link: 'https://fetcher.ai', pricing: 'premium' },
     { name: 'Humanly', description: 'AI screening and scheduling', logo: 'https://humanly.io/favicon.ico', category: 'Recruitment', link: 'https://humanly.io', pricing: 'premium' },
-    { name: 'Mya', description: 'Conversational AI recruiter', logo: 'https://mya.com/favicon.ico', category: 'Recruitment', link: 'https://mya.com', pricing: 'premium' }
+    { name: 'Mya', description: 'Conversational AI recruiter', logo: 'https://mya.com/favicon.ico', category: 'Recruitment', link: 'https://mya.com', pricing: 'premium' },
+    { name: 'Recruitee Free', description: 'Free recruitment software', logo: 'https://recruitee.com/favicon.ico', category: 'Recruitment', link: 'https://recruitee.com/', pricing: 'free' },
+    { name: 'Zoho Recruit Free', description: 'Free applicant tracking system', logo: 'https://www.zoho.com/recruit/favicon.ico', category: 'Recruitment', link: 'https://www.zoho.com/recruit/', pricing: 'free' },
+    { name: 'Workable Free', description: 'Free recruitment and hiring platform', logo: 'https://www.workable.com/favicon.ico', category: 'Recruitment', link: 'https://www.workable.com/', pricing: 'free' }
     ],
     'analytics-tools': [
     { name: 'Google Analytics', description: 'Web analytics and reporting', logo: 'https://analytics.google.com/favicon.ico', category: 'Analytics', link: 'https://analytics.google.com', pricing: 'free' },
@@ -1851,7 +2035,10 @@ Object.assign(aiToolsData, {
     { name: 'Ordoro', description: 'Inventory and shipping management', logo: 'https://www.ordoro.com/favicon.ico', category: 'Inventory', link: 'https://www.ordoro.com', pricing: 'premium' },
     { name: 'Katana', description: 'Manufacturing inventory software', logo: 'https://katanamrp.com/favicon.ico', category: 'Inventory', link: 'https://katanamrp.com', pricing: 'premium' },
     { name: 'Unleashed', description: 'Cloud inventory management', logo: 'https://www.unleashedsoftware.com/favicon.ico', category: 'Inventory', link: 'https://www.unleashedsoftware.com', pricing: 'premium' },
-    { name: 'DEAR Inventory', description: 'Inventory management system', logo: 'https://dearsystems.com/favicon.ico', category: 'Inventory', link: 'https://dearsystems.com', pricing: 'premium' }
+    { name: 'DEAR Inventory', description: 'Inventory management system', logo: 'https://dearsystems.com/favicon.ico', category: 'Inventory', link: 'https://dearsystems.com', pricing: 'premium' },
+    { name: 'inFlow Inventory Free', description: 'Free inventory management software', logo: 'https://www.inflowinventory.com/favicon.ico', category: 'Inventory', link: 'https://www.inflowinventory.com/', pricing: 'free' },
+    { name: 'Zoho Inventory Free', description: 'Free inventory management for small business', logo: 'https://www.zoho.com/inventory/favicon.ico', category: 'Inventory', link: 'https://www.zoho.com/inventory/', pricing: 'free' },
+    { name: 'Sortly Free', description: 'Free inventory tracking app', logo: 'https://www.sortly.com/favicon.ico', category: 'Inventory', link: 'https://www.sortly.com/', pricing: 'free' }
     ],
     'content-moderation': [
     { name: 'Perspective API', description: 'AI content moderation by Google', logo: 'https://www.perspectiveapi.com/favicon.ico', category: 'Content Moderation', link: 'https://www.perspectiveapi.com', pricing: 'free' },
@@ -1878,6 +2065,8 @@ Object.assign(aiToolsData, {
     { name: 'SoGoSurvey', description: 'Online survey software', logo: 'https://www.sogosurvey.com/favicon.ico', category: 'Survey Tools', link: 'https://www.sogosurvey.com', pricing: 'premium' }
     ],
     'api-tools': [
+    { name: 'Postman Free', description: 'Free API development platform', logo: 'https://www.postman.com/favicon.ico', category: 'API Tools', link: 'https://www.postman.com/', pricing: 'free' },
+    { name: 'Insomnia Free', description: 'Free API testing tool', logo: 'https://insomnia.rest/favicon.ico', category: 'API Tools', link: 'https://insomnia.rest/', pricing: 'free' },
     { name: 'OpenAI API', description: 'Access to GPT and other AI models', logo: 'https://openai.com/favicon.ico', category: 'API Tools', link: 'https://openai.com/api', pricing: 'premium' },
     { name: 'Hugging Face API', description: 'Machine learning model APIs', logo: 'https://huggingface.co/favicon.ico', category: 'API Tools', link: 'https://huggingface.co/inference-api', pricing: 'freemium' },
     { name: 'Google Cloud AI APIs', description: 'AI and ML APIs by Google', logo: 'https://cloud.google.com/favicon.ico', category: 'API Tools', link: 'https://cloud.google.com/ai', pricing: 'premium' },
@@ -1890,6 +2079,15 @@ Object.assign(aiToolsData, {
     { name: 'AI21 Labs API', description: 'Language model APIs', logo: 'https://www.ai21.com/favicon.ico', category: 'API Tools', link: 'https://www.ai21.com', pricing: 'premium' }
     ],
     'resume-builders': [
+    { name: 'Novoresume Free', description: 'Free resume builder', logo: 'https://novoresume.com/favicon.ico', category: 'Resume Builders', link: 'https://novoresume.com/', pricing: 'free' },
+    { name: 'Canva Resume', description: 'Free resume templates and builder', logo: 'https://www.canva.com/favicon.ico', category: 'Resume Builders', link: 'https://www.canva.com/', pricing: 'free' },
+    { name: 'Resume.com', description: 'Free online resume builder', logo: 'https://www.resume.com/favicon.ico', category: 'Resume Builders', link: 'https://www.resume.com/', pricing: 'free' },
+    { name: 'Ready Player Me', description: 'Free cross-platform avatar creator', logo: 'https://readyplayer.me/favicon.ico', category: 'AI Avatars', link: 'https://readyplayer.me/', pricing: 'free' },
+    { name: 'Avatarify', description: 'Open-source avatar animation', logo: 'https://avatarify.ai/favicon.ico', category: 'AI Avatars', link: 'https://avatarify.ai/', pricing: 'free' },
+    { name: 'Bitmoji', description: 'Personalized cartoon avatar creator', logo: 'https://www.bitmoji.com/favicon.ico', category: 'AI Avatars', link: 'https://www.bitmoji.com/', pricing: 'free' },
+    { name: 'Google Slides', description: 'Free online presentation editor', logo: 'https://www.google.com/slides/about/favicon.ico', category: 'Presentation Tools', link: 'https://www.google.com/slides/about/', pricing: 'free' },
+    { name: 'Canva Presentations', description: 'Free presentation templates and editor', logo: 'https://www.canva.com/favicon.ico', category: 'Presentation Tools', link: 'https://www.canva.com/', pricing: 'free' },
+    { name: 'Zoho Show', description: 'Free online presentation software', logo: 'https://www.zoho.com/show/favicon.ico', category: 'Presentation Tools', link: 'https://www.zoho.com/show/', pricing: 'free' },
     { name: 'Overleaf', description: 'AI-powered resume builder with professional templates', logo: 'https://overleaf.com/favicon.ico', category: 'Resume Builders', link: 'https://overleaf.com', pricing: 'freemium' },
     { name: 'Zety', description: 'Smart resume builder with AI suggestions', logo: 'https://zety.com/favicon.ico', category: 'Resume Builders', link: 'https://zety.com', pricing: 'premium' },
     { name: 'Novoresume', description: 'Modern resume builder with AI optimization', logo: 'https://novoresume.com/favicon.ico', category: 'Resume Builders', link: 'https://novoresume.com', pricing: 'freemium' },
@@ -1902,6 +2100,8 @@ Object.assign(aiToolsData, {
     { name: 'VisualCV', description: 'Professional resume builder with AI features', logo: 'https://www.visualcv.com/favicon.ico', category: 'Resume Builders', link: 'https://www.visualcv.com', pricing: 'freemium' }
     ],
     'ai-summarizers': [
+    { name: 'QuillBot Summarizer', description: 'Free AI text summarization tool', logo: 'https://quillbot.com/favicon.ico', category: 'AI Summarization', link: 'https://quillbot.com/summarize', pricing: 'free' },
+    { name: 'Resoomer', description: 'Free online text summarizer', logo: 'https://resoomer.com/favicon.ico', category: 'AI Summarization', link: 'https://resoomer.com/', pricing: 'free' },
     { name: 'TLDR This', description: 'Summarize any article or webpage', logo: 'https://tldrthis.com/favicon.ico', category: 'AI Summarization', link: 'https://tldrthis.com/', pricing: 'freemium' },
     { name: 'Summari', description: 'AI article summarization', logo: 'https://www.summari.com/favicon.ico', category: 'AI Summarization', link: 'https://www.summari.com/', pricing: 'freemium' },
     { name: 'Scholarcy', description: 'Research paper summarization', logo: 'https://www.scholarcy.com/favicon.ico', category: 'AI Summarization', link: 'https://www.scholarcy.com/', pricing: 'freemium' },
@@ -1914,6 +2114,9 @@ Object.assign(aiToolsData, {
     { name: 'Summate', description: 'AI-powered text summarization', logo: 'https://summate.it/favicon.ico', category: 'AI Summarization', link: 'https://summate.it/', pricing: 'freemium' }
     ],
     'ai-video-editors': [
+    { name: 'Clipchamp', description: 'Free online video editor by Microsoft', logo: 'https://clipchamp.com/favicon.ico', category: 'AI Video Editors', link: 'https://clipchamp.com/', pricing: 'free' },
+    { name: 'Kapwing', description: 'Free online video editing platform', logo: 'https://www.kapwing.com/favicon.ico', category: 'AI Video Editors', link: 'https://www.kapwing.com/', pricing: 'free' },
+    { name: 'OpenShot', description: 'Free and open-source video editor', logo: 'https://www.openshot.org/favicon.ico', category: 'AI Video Editors', link: 'https://www.openshot.org/', pricing: 'free' },
     { name: 'Runway', description: 'AI-powered video editing', logo: 'https://runwayml.com/favicon.ico', category: 'Video Editing', link: 'https://runwayml.com/', pricing: 'freemium' },
     { name: 'Descript', description: 'All-in-one video editing', logo: 'https://www.descript.com/favicon.ico', category: 'Video Editing', link: 'https://www.descript.com/', pricing: 'freemium' },
     { name: 'Pictory', description: 'Video creation from text', logo: 'https://pictory.ai/favicon.ico', category: 'Video Editing', link: 'https://pictory.ai/', pricing: 'freemium' },
@@ -1926,6 +2129,9 @@ Object.assign(aiToolsData, {
     { name: 'Topaz Video AI', description: 'Video enhancement with AI', logo: 'https://www.topazlabs.com/favicon.ico', category: 'Video Editing', link: 'https://www.topazlabs.com/topaz-video-ai', pricing: 'premium' }
     ],
     'ai-language-learning': [
+    { name: 'Duolingo', description: 'Free language learning app', logo: 'https://www.duolingo.com/favicon.ico', category: 'AI Language Learning', link: 'https://www.duolingo.com/', pricing: 'free' },
+    { name: 'Memrise', description: 'Free language learning platform', logo: 'https://www.memrise.com/favicon.ico', category: 'AI Language Learning', link: 'https://www.memrise.com/', pricing: 'free' },
+    { name: 'Busuu', description: 'Free language learning community', logo: 'https://www.busuu.com/favicon.ico', category: 'AI Language Learning', link: 'https://www.busuu.com/', pricing: 'free' },
     { name: 'Duolingo', description: 'AI-powered language learning', logo: 'https://www.duolingo.com/favicon.ico', category: 'Language Learning', link: 'https://www.duolingo.com/', pricing: 'freemium' },
     { name: 'Babbel', description: 'Language learning with AI assistance', logo: 'https://www.babbel.com/favicon.ico', category: 'Language Learning', link: 'https://www.babbel.com/', pricing: 'premium' },
     { name: 'Rosetta Stone', description: 'Immersive language learning', logo: 'https://www.rosettastone.com/favicon.ico', category: 'Language Learning', link: 'https://www.rosettastone.com/', pricing: 'premium' },
@@ -1938,6 +2144,12 @@ Object.assign(aiToolsData, {
     { name: 'Pimsleur', description: 'Audio-based language learning', logo: 'https://www.pimsleur.com/favicon.ico', category: 'Language Learning', link: 'https://www.pimsleur.com/', pricing: 'premium' }
     ],
     'ai-fitness': [
+    { name: 'Nike Training Club', description: 'Free fitness and workout app', logo: 'https://www.nike.com/favicon.ico', category: 'AI Fitness', link: 'https://www.nike.com/ntc-app', pricing: 'free' },
+    { name: 'FitOn', description: 'Free fitness and workout videos', logo: 'https://fitonapp.com/favicon.ico', category: 'AI Fitness', link: 'https://fitonapp.com/', pricing: 'free' },
+    { name: 'JEFIT', description: 'Free workout planner and tracker', logo: 'https://www.jefit.com/favicon.ico', category: 'AI Fitness', link: 'https://www.jefit.com/', pricing: 'free' },
+    { name: 'VirusTotal', description: 'Free malware scanning and threat intelligence', logo: 'https://www.virustotal.com/favicon.ico', category: 'Cybersecurity Tools', link: 'https://www.virustotal.com/', pricing: 'free' },
+    { name: 'Cuckoo Sandbox', description: 'Open-source automated malware analysis', logo: 'https://cuckoosandbox.org/favicon.ico', category: 'Cybersecurity Tools', link: 'https://cuckoosandbox.org/', pricing: 'free' },
+    { name: 'Metasploit Community', description: 'Free penetration testing framework', logo: 'https://www.metasploit.com/favicon.ico', category: 'Cybersecurity Tools', link: 'https://www.metasploit.com/', pricing: 'free' },
     { name: 'Future', description: 'Personal training with AI coaching', logo: 'https://www.future.co/favicon.ico', category: 'AI Fitness', link: 'https://www.future.co/', pricing: 'premium' },
     { name: 'Fitbod', description: 'AI workout planning', logo: 'https://www.fitbod.me/favicon.ico', category: 'AI Fitness', link: 'https://www.fitbod.me/', pricing: 'freemium' },
     { name: 'Aaptiv', description: 'Audio-based fitness coaching', logo: 'https://aaptiv.com/favicon.ico', category: 'AI Fitness', link: 'https://aaptiv.com/', pricing: 'premium' },
@@ -1950,6 +2162,21 @@ Object.assign(aiToolsData, {
     { name: 'Oura Ring', description: 'AI sleep and activity tracking', logo: 'https://ouraring.com/favicon.ico', category: 'AI Fitness', link: 'https://ouraring.com/', pricing: 'premium' }
     ],
     'ai-gaming': [
+    { name: 'Godot', description: 'Free and open-source game engine', logo: 'https://godotengine.org/favicon.ico', category: 'AI Gaming', link: 'https://godotengine.org/', pricing: 'free' },
+    { name: 'GDevelop', description: 'Free game creator for everyone', logo: 'https://gdevelop.io/favicon.ico', category: 'AI Gaming', link: 'https://gdevelop.io/', pricing: 'free' },
+    { name: 'Defold', description: 'Free game engine for indie developers', logo: 'https://defold.com/favicon.ico', category: 'AI Gaming', link: 'https://defold.com/', pricing: 'free' },
+    { name: 'Gmail', description: 'Free email by Google', logo: 'https://mail.google.com/favicon.ico', category: 'Email Tools', link: 'https://mail.google.com/', pricing: 'free' },
+    { name: 'Thunderbird', description: 'Free and open-source email client', logo: 'https://www.thunderbird.net/favicon.ico', category: 'Email Tools', link: 'https://www.thunderbird.net/', pricing: 'free' },
+    { name: 'Mailchimp Free', description: 'Free email marketing platform', logo: 'https://mailchimp.com/favicon.ico', category: 'Email Tools', link: 'https://mailchimp.com/', pricing: 'free' },
+    { name: 'SMMRY', description: 'Free online text summarizer', logo: 'https://smmry.com/favicon.ico', category: 'AI Summarizers', link: 'https://smmry.com/', pricing: 'free' },
+    { name: 'Scholarcy Free', description: 'Free research paper summarizer', logo: 'https://www.scholarcy.com/favicon.ico', category: 'AI Summarizers', link: 'https://www.scholarcy.com/', pricing: 'free' },
+    { name: 'Split and Merge PDF', description: 'Free PDF summarizer and splitter', logo: 'https://www.splitandmergepdf.com/favicon.ico', category: 'AI Summarizers', link: 'https://www.splitandmergepdf.com/', pricing: 'free' },
+    { name: 'Jobscan Free', description: 'Free resume and job match analysis', logo: 'https://www.jobscan.co/favicon.ico', category: 'Job Applier', link: 'https://www.jobscan.co/', pricing: 'free' },
+    { name: 'Indeed Apply', description: 'Free job application platform', logo: 'https://www.indeed.com/favicon.ico', category: 'Job Applier', link: 'https://www.indeed.com/', pricing: 'free' },
+    { name: 'LinkedIn Easy Apply', description: 'Free job application tool', logo: 'https://www.linkedin.com/favicon.ico', category: 'Job Applier', link: 'https://www.linkedin.com/', pricing: 'free' },
+    { name: 'Google Keep', description: 'Free note-taking and organization', logo: 'https://keep.google.com/favicon.ico', category: 'Productivity Tools', link: 'https://keep.google.com/', pricing: 'free' },
+    { name: 'Trello', description: 'Free project management boards', logo: 'https://trello.com/favicon.ico', category: 'Productivity Tools', link: 'https://trello.com/', pricing: 'free' },
+    { name: 'Todoist Free', description: 'Free task manager and to-do list', logo: 'https://todoist.com/favicon.ico', category: 'Productivity Tools', link: 'https://todoist.com/', pricing: 'free' },
     { name: 'AI Dungeon', description: 'AI-generated text adventure game', logo: 'https://play.aidungeon.io/favicon.ico', category: 'AI Gaming', link: 'https://play.aidungeon.io/', pricing: 'freemium' },
     { name: 'NVIDIA GameGAN', description: 'AI game generation technology', logo: 'https://www.nvidia.com/favicon.ico', category: 'AI Gaming', link: 'https://www.nvidia.com/en-us/research/ai-playground/', pricing: 'free' },
     { name: 'Chess.com', description: 'AI chess opponents', logo: 'https://www.chess.com/favicon.ico', category: 'AI Gaming', link: 'https://www.chess.com/', pricing: 'freemium' },
@@ -1962,6 +2189,42 @@ Object.assign(aiToolsData, {
     { name: 'Convai', description: 'AI NPCs for games', logo: 'https://www.convai.com/favicon.ico', category: 'AI Gaming', link: 'https://www.convai.com/', pricing: 'premium' }
     ],
     'ai-dating': [
+    { name: 'Tinder', description: 'Free dating app with AI features', logo: 'https://tinder.com/favicon.ico', category: 'AI Dating', link: 'https://tinder.com/', pricing: 'free' },
+    { name: 'OkCupid', description: 'Free AI-powered dating platform', logo: 'https://www.okcupid.com/favicon.ico', category: 'AI Dating', link: 'https://www.okcupid.com/', pricing: 'free' },
+    { name: 'Bumble', description: 'Free dating app with AI moderation', logo: 'https://bumble.com/favicon.ico', category: 'AI Dating', link: 'https://bumble.com/', pricing: 'free' },
+    { name: 'Buffer Free', description: 'Free social media scheduling', logo: 'https://buffer.com/favicon.ico', category: 'Social Media Tools', link: 'https://buffer.com/', pricing: 'free' },
+    { name: 'Hootsuite Free', description: 'Free social media management', logo: 'https://hootsuite.com/favicon.ico', category: 'Social Media Tools', link: 'https://hootsuite.com/', pricing: 'free' },
+    { name: 'Later Free', description: 'Free Instagram scheduling tool', logo: 'https://later.com/favicon.ico', category: 'Social Media Tools', link: 'https://later.com/', pricing: 'free' },
+    { name: 'Docassemble', description: 'Open-source legal document automation', logo: 'https://docassemble.org/favicon.ico', category: 'Legal Tools', link: 'https://docassemble.org/', pricing: 'free' },
+    { name: 'LawDepot Free', description: 'Free legal document templates', logo: 'https://www.lawdepot.com/favicon.ico', category: 'Legal Tools', link: 'https://www.lawdepot.com/', pricing: 'free' },
+    { name: 'HelloSign', description: 'Free e-signature for legal docs', logo: 'https://www.hellosign.com/favicon.ico', category: 'Legal Tools', link: 'https://www.hellosign.com/', pricing: 'free' },
+    { name: 'BambooHR Free', description: 'Free HR management platform', logo: 'https://www.bamboohr.com/favicon.ico', category: 'HR Tools', link: 'https://www.bamboohr.com/', pricing: 'free' },
+    { name: 'Zoho People Free', description: 'Free HR software', logo: 'https://www.zoho.com/people/favicon.ico', category: 'HR Tools', link: 'https://www.zoho.com/people/', pricing: 'free' },
+    { name: 'Freshteam', description: 'Free applicant tracking system', logo: 'https://freshteam.com/favicon.ico', category: 'HR Tools', link: 'https://freshteam.com/', pricing: 'free' },
+    { name: 'HubSpot CRM Free', description: 'Free sales CRM platform', logo: 'https://www.hubspot.com/favicon.ico', category: 'Sales Tools', link: 'https://www.hubspot.com/products/crm', pricing: 'free' },
+    { name: 'Zoho CRM Free', description: 'Free CRM for sales teams', logo: 'https://www.zoho.com/crm/favicon.ico', category: 'Sales Tools', link: 'https://www.zoho.com/crm/', pricing: 'free' },
+    { name: 'Bitrix24 Free', description: 'Free sales and collaboration suite', logo: 'https://www.bitrix24.com/favicon.ico', category: 'Sales Tools', link: 'https://www.bitrix24.com/', pricing: 'free' },
+    { name: 'Freshdesk Free', description: 'Free customer support software', logo: 'https://freshdesk.com/favicon.ico', category: 'Customer Service Tools', link: 'https://freshdesk.com/', pricing: 'free' },
+    { name: 'Zoho Desk Free', description: 'Free help desk software', logo: 'https://www.zoho.com/desk/favicon.ico', category: 'Customer Service Tools', link: 'https://www.zoho.com/desk/', pricing: 'free' },
+    { name: 'Tawk.to', description: 'Free live chat customer support', logo: 'https://www.tawk.to/favicon.ico', category: 'Customer Service Tools', link: 'https://www.tawk.to/', pricing: 'free' },
+    { name: 'OpenLMIS', description: 'Open-source logistics management', logo: 'https://openlmis.org/favicon.ico', category: 'Logistics Tools', link: 'https://openlmis.org/', pricing: 'free' },
+    { name: 'Logistimo', description: 'Free supply chain and logistics platform', logo: 'https://www.logistimo.com/favicon.ico', category: 'Logistics Tools', link: 'https://www.logistimo.com/', pricing: 'free' },
+    { name: 'Transporeon Free', description: 'Free logistics management tools', logo: 'https://www.transporeon.com/favicon.ico', category: 'Logistics Tools', link: 'https://www.transporeon.com/', pricing: 'free' },
+    { name: 'FarmLogs', description: 'Free farm management software', logo: 'https://farmlogs.com/favicon.ico', category: 'Agriculture Tools', link: 'https://farmlogs.com/', pricing: 'free' },
+    { name: 'AgriWebb Free', description: 'Free digital farm management', logo: 'https://www.agriwebb.com/favicon.ico', category: 'Agriculture Tools', link: 'https://www.agriwebb.com/', pricing: 'free' },
+    { name: 'OpenATK', description: 'Open-source agricultural toolkits', logo: 'https://openatk.com/favicon.ico', category: 'Agriculture Tools', link: 'https://openatk.com/', pricing: 'free' },
+    { name: 'Grammarly Free', description: 'Free grammar and writing assistant', logo: 'https://www.grammarly.com/favicon.ico', category: 'Writing Assistants', link: 'https://www.grammarly.com/', pricing: 'free' },
+    { name: 'Hemingway Editor', description: 'Free writing clarity tool', logo: 'https://hemingwayapp.com/favicon.ico', category: 'Writing Assistants', link: 'https://hemingwayapp.com/', pricing: 'free' },
+    { name: 'LanguageTool Free', description: 'Free grammar and style checker', logo: 'https://languagetool.org/favicon.ico', category: 'Writing Assistants', link: 'https://languagetool.org/', pricing: 'free' },
+    { name: 'Google Meet', description: 'Free video meetings and conferencing', logo: 'https://meet.google.com/favicon.ico', category: 'Meeting Tools', link: 'https://meet.google.com/', pricing: 'free' },
+    { name: 'Jitsi Meet', description: 'Free and open-source video meetings', logo: 'https://jitsi.org/favicon.ico', category: 'Meeting Tools', link: 'https://jitsi.org/', pricing: 'free' },
+    { name: 'Zoom Basic', description: 'Free video conferencing plan', logo: 'https://zoom.us/favicon.ico', category: 'Meeting Tools', link: 'https://zoom.us/', pricing: 'free' },
+    { name: 'Recruitee Free', description: 'Free recruitment software', logo: 'https://recruitee.com/favicon.ico', category: 'Recruitment Tools', link: 'https://recruitee.com/', pricing: 'free' },
+    { name: 'Zoho Recruit Free', description: 'Free applicant tracking system', logo: 'https://www.zoho.com/recruit/favicon.ico', category: 'Recruitment Tools', link: 'https://www.zoho.com/recruit/', pricing: 'free' },
+    { name: 'Workable Free', description: 'Free recruitment and hiring platform', logo: 'https://www.workable.com/favicon.ico', category: 'Recruitment Tools', link: 'https://www.workable.com/', pricing: 'free' },
+    { name: 'inFlow Inventory Free', description: 'Free inventory management software', logo: 'https://www.inflowinventory.com/favicon.ico', category: 'Inventory Management', link: 'https://www.inflowinventory.com/', pricing: 'free' },
+    { name: 'Zoho Inventory Free', description: 'Free inventory management for small business', logo: 'https://www.zoho.com/inventory/favicon.ico', category: 'Inventory Management', link: 'https://www.zoho.com/inventory/', pricing: 'free' },
+    { name: 'Sortly Free', description: 'Free inventory tracking app', logo: 'https://www.sortly.com/favicon.ico', category: 'Inventory Management', link: 'https://www.sortly.com/', pricing: 'free' },
     { name: 'Replika', description: 'AI companion and romantic partner', logo: 'https://replika.ai/favicon.ico', category: 'AI Dating', link: 'https://replika.ai/', pricing: 'freemium' },
     { name: 'Blush', description: 'AI dating coach', logo: 'https://blush.ai/favicon.ico', category: 'AI Dating', link: 'https://blush.ai/', pricing: 'premium' },
     { name: 'Hinge', description: 'Dating app with AI matching', logo: 'https://hinge.co/favicon.ico', category: 'AI Dating', link: 'https://hinge.co/', pricing: 'freemium' },
@@ -4829,3 +5092,30 @@ function clearSearch() {
     });
 }
 // No custom JS submit handler for submit-tool-form. Let Formspree handle the form natively.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
