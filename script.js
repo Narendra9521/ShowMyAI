@@ -4483,16 +4483,16 @@ function showTools(category, updateHistory = true) {
     pricingFilter.style.gap = '24px';
     pricingFilter.style.margin = '16px 0 24px 0';
     pricingFilter.innerHTML = `
-        <label style="display: flex; align-items: center; gap: 6px; cursor: pointer; font-weight: 600; color: #000;">
+        <label style="display: flex; align-items: center; gap: 6px; cursor: pointer; font-weight: 600; color: var(--text-primary);">
             <input type="checkbox" class="pricing-checkbox" data-pricing="all" checked style="accent-color: #6366f1; width: 18px; height: 18px;"> All
         </label>
-        <label style="display: flex; align-items: center; gap: 6px; cursor: pointer; font-weight: 600; color: #000;">
+        <label style="display: flex; align-items: center; gap: 6px; cursor: pointer; font-weight: 600; color: var(--text-primary);">
             <input type="checkbox" class="pricing-checkbox" data-pricing="free" style="accent-color: #10b981; width: 18px; height: 18px;"> Free
         </label>
-        <label style="display: flex; align-items: center; gap: 6px; cursor: pointer; font-weight: 600; color: #000;">
+        <label style="display: flex; align-items: center; gap: 6px; cursor: pointer; font-weight: 600; color: var(--text-primary);">
             <input type="checkbox" class="pricing-checkbox" data-pricing="freemium" style="accent-color: #f59e0b; width: 18px; height: 18px;"> Freemium
         </label>
-        <label style="display: flex; align-items: center; gap: 6px; cursor: pointer; font-weight: 600; color: #000;">
+        <label style="display: flex; align-items: center; gap: 6px; cursor: pointer; font-weight: 600; color: var(--text-primary);">
             <input type="checkbox" class="pricing-checkbox" data-pricing="premium" style="accent-color: #ef4444; width: 18px; height: 18px;"> Premium
         </label>
     `;

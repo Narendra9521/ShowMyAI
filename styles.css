@@ -1978,3 +1978,17 @@ body {
     outline: none;
     border-color: var(--primary-color);
 }
+
+/* Pricing Filter Responsive */
+@media (max-width: 768px) {
+    #pricing-filter {
+        gap: 12px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    #pricing-filter {
+        gap: 8px !important;
+        flex-wrap: wrap;
+    }
+}
