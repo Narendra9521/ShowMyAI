@@ -321,6 +321,9 @@ function renderSavedTools() {
 
 // Tab switching with history support
 function switchTab(tabName, updateHistory = true) {
+    // Remove pricing filter if present (prevents filter from showing in workflows)
+    const pricingFilter = document.getElementById('pricing-filter');
+    if (pricingFilter) pricingFilter.remove();
     // Remove active class from all tabs and sections
     document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
     document.querySelectorAll('.content-section').forEach(section => section.classList.remove('active'));
@@ -4586,6 +4589,9 @@ function showTools(category, updateHistory = true) {
 
 // Show workflow tools with history support
 function showWorkflow(workflow, updateHistory = true) {
+    // Remove pricing filter if present (prevents filter from showing in workflows)
+    const pricingFilter = document.getElementById('pricing-filter');
+    if (pricingFilter) pricingFilter.remove();
     const toolsSection = document.getElementById('tools-display');
     const toolsTitle = document.getElementById('tools-title');
     const toolsGrid = document.getElementById('tools-grid');

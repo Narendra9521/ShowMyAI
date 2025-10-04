@@ -1,5 +1,6 @@
 .promptgen-icon { background: linear-gradient(135deg, #fbbf24, #6366f1); }
 :root {
+    --card-hover-glow: #2563eb40; /* lighter tech blue glow for both modes */
     --primary-color: #6366f1;
     --primary-gradient: linear-gradient(135deg, #6366f1, #8b5cf6);
     --secondary-color: #3b82f6;
@@ -24,6 +25,8 @@
 }
 
 [data-theme="dark"] {
+    --card-hover-glow: #2563eb80; /* lighter tech blue glow for dark mode */
+    --card-hover-glow: #00ffd033; /* soft teal glow for dark mode */
     --text-primary: #f1f5f9;
     --text-secondary: #cbd5e1;
     --text-muted: #94a3b8;
@@ -85,15 +88,16 @@ body {
 
 .header-content {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     height: 55px;
+    justify-content: space-between;
+    gap: 0;
 }
 
 .header-right {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 40px;
 }
 
 .logo {
@@ -124,7 +128,7 @@ body {
 
 .nav-desktop {
     display: flex;
-    gap: 30px;
+    gap: 40px;
 }
 
 .nav-link {
@@ -143,7 +147,7 @@ body {
 .header-actions {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 40px;
 }
 
 .dark-mode-btn {
@@ -472,8 +476,8 @@ body {
 
 .category-card:hover {
     border-color: var(--primary-color);
-    transform: translateY(-2px);
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.18), 0 0 16px 4px var(--card-hover-glow);
 }
 
 .category-icon {
@@ -881,9 +885,9 @@ body {
 }
 
 .tool-card:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-lg);
     border-color: var(--primary-color);
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.18), 0 0 16px 4px var(--card-hover-glow);
 }
 
 .tool-header {
@@ -912,6 +916,7 @@ body {
     object-fit: cover;
     border-radius: 12px;
 }
+
 
 .tool-logo i {
     width: 100%;
