@@ -4902,7 +4902,7 @@ function createToolCard(tool) {
     card.innerHTML = `
         <div class="tool-header" style="position:relative;">
             <div class="tool-logo">
-                <img src="${tool.logo}" alt="${tool.name}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <img src="${tool.logo}" alt="${tool.name}" loading="lazy" width="48" height="48" style="min-width:48px;min-height:48px;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                 <i class="fas ${fallbackIcon}" style="display: none;"></i>
             </div>
             <div class="tool-info">
