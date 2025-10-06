@@ -43,17 +43,16 @@
 [data-theme="dark"] .header {
     background: var(--bg-primary);
 }
-
 [data-theme="dark"] .hero-desktop {
-    background: linear-gradient(180deg, #1d4ed8 0%, #2563eb 100%);
+    background: #1e293b;
 }
 
 [data-theme="dark"] .nav-tabs {
-    background: var(--bg-primary);
+    background: transparent;
 }
 
 [data-theme="dark"] .search-container {
-    background: var(--bg-primary);
+    background: #0f172a;
 }
 
 * {
@@ -219,6 +218,8 @@ body {
 
 /* Main Content */
 .main-content {
+    background: var(--bg-primary);
+    min-height: 100vh;
     padding-top: 0;
 }
 
@@ -227,7 +228,7 @@ body {
     display: flex;
     justify-content: center;
     padding: 5px 0 0;
-    background: var(--bg-primary);
+    background: linear-gradient(180deg, #f0f9ff 0%, #f8fafc 100%);
     margin-left: calc(-50vw + 50%);
     margin-right: calc(-50vw + 50%);
     width: 100vw;
@@ -258,6 +259,7 @@ body {
 .tab-btn.active {
     color: var(--primary-color);
 }
+
 .tab-btn:hover:not(.active) {
     color: var(--text-primary);
 }
@@ -397,7 +399,7 @@ body {
     display: flex;
     justify-content: center;
     padding: 10px 0 30px;
-    background: var(--bg-primary);
+    background: linear-gradient(180deg, #f8fafc 0%, rgba(248, 250, 252, 0.05) 100%);
     margin-left: calc(-50vw + 50%);
     margin-right: calc(-50vw + 50%);
     width: 100vw;
