@@ -35,10 +35,25 @@
     --bg-tertiary: #334155;
     --bg-glass: rgba(15, 23, 42, 0.8);
     --border-color: #475569;
-    --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
     --shadow-md: 0 4px 12px rgba(0,0,0,0.3);
     --shadow-lg: 0 8px 25px rgba(0,0,0,0.4);
     --shadow-glow: 0 0 20px rgba(99, 102, 241, 0.4);
+}
+
+[data-theme="dark"] .header {
+    background: var(--bg-primary);
+}
+
+[data-theme="dark"] .hero-desktop {
+    background: linear-gradient(180deg, #1d4ed8 0%, #2563eb 100%);
+}
+
+[data-theme="dark"] .nav-tabs {
+    background: var(--bg-primary);
+}
+
+[data-theme="dark"] .search-container {
+    background: var(--bg-primary);
 }
 
 * {
@@ -58,8 +73,7 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     line-height: 1.6;
     color: var(--text-primary);
-    background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
-    background-attachment: fixed;
+    background: var(--bg-primary);
     transition: var(--transition);
     overflow-x: hidden;
     position: relative;
@@ -205,8 +219,6 @@ body {
 
 /* Main Content */
 .main-content {
-    background: var(--bg-primary);
-    min-height: 100vh;
     padding-top: 0;
 }
 
@@ -215,6 +227,10 @@ body {
     display: flex;
     justify-content: center;
     padding: 5px 0 0;
+    background: var(--bg-primary);
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    width: 100vw;
 }
 
 @media (max-width: 768px) {
@@ -242,7 +258,6 @@ body {
 .tab-btn.active {
     color: var(--primary-color);
 }
-
 .tab-btn:hover:not(.active) {
     color: var(--text-primary);
 }
@@ -263,7 +278,7 @@ body {
 }
 
 .hero-desktop {
-    background: white;
+    background: linear-gradient(180deg, #e0f2fe 0%, #f0f9ff 100%);
 }
 
 [data-theme="dark"] .hero-desktop {
@@ -382,6 +397,10 @@ body {
     display: flex;
     justify-content: center;
     padding: 10px 0 30px;
+    background: var(--bg-primary);
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    width: 100vw;
 }
 
 .search-box {
