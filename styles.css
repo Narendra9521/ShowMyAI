@@ -877,9 +877,7 @@ body {
     z-index: 100;
 }
 
-#tools-display:not([style*="display: none"]) ~ .footer {
-    display: none;
-}
+
 
 #tools-display:not([style*="display: none"]) ~ .main-content .hero-section {
     text-align: center;

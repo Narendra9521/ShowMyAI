@@ -72,6 +72,7 @@ function renderCurrentState() {
         // Show hero section when on home page
         document.querySelector('.hero-section').style.display = 'block';
         document.querySelector('.stats-section').style.display = 'block';
+        document.querySelector('.footer').style.display = 'block';
         showMainContent();
         if (currentState.section) {
             switchTab(currentState.section, false);
@@ -86,11 +87,13 @@ function renderCurrentState() {
         document.querySelector('.main-content').style.display = 'none';
         document.getElementById('tools-display').style.display = 'none';
         document.getElementById('saved-tools-page').style.display = 'block';
+        document.querySelector('.footer').style.display = 'block';
         renderSavedTools();
     } else {
         // Hide hero section on other pages
         document.querySelector('.hero-section').style.display = 'none';
         document.querySelector('.stats-section').style.display = 'none';
+        document.querySelector('.footer').style.display = 'block';
         showPage(currentState.page);
     }
 }
