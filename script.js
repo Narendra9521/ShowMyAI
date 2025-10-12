@@ -4874,7 +4874,7 @@ function createToolCard(tool) {
 
     // Bookmark button logic
     const bookmarkBtn = card.querySelector('.bookmark-btn');
-    bookmarkBtn.addEventListener('click', function(e) {
+    bookmarkBtn.addEventListener('click', async function(e) {
         e.stopPropagation();
         if (!currentUser) {
             alert('Please login to save tools.');
@@ -4884,8 +4884,10 @@ function createToolCard(tool) {
         const alreadySaved = saved.some(t => t.name === tool.name);
         if (alreadySaved) {
             saved = saved.filter(t => t.name !== tool.name);
+            await removeToolFromDatabase(tool.name);
         } else {
             saved.push(tool);
+            await saveToolToDatabase(tool.name);
         }
         setSavedTools(saved);
         // Update icon
@@ -4960,7 +4962,7 @@ function createWorkflowToolCard(tool) {
 
     // Bookmark button logic
     const bookmarkBtn = card.querySelector('.bookmark-btn');
-    bookmarkBtn.addEventListener('click', function(e) {
+    bookmarkBtn.addEventListener('click', async function(e) {
         e.stopPropagation();
         if (!currentUser) {
             alert('Please login to save tools.');
@@ -4970,8 +4972,10 @@ function createWorkflowToolCard(tool) {
         const alreadySaved = saved.some(t => t.name === tool.name);
         if (alreadySaved) {
             saved = saved.filter(t => t.name !== tool.name);
+            await removeToolFromDatabase(tool.name);
         } else {
             saved.push(tool);
+            await saveToolToDatabase(tool.name);
         }
         setSavedTools(saved);
         // Update icon

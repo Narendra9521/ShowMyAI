@@ -127,7 +127,7 @@ function switchAuthMode(mode) {
     }
 }
 
-// Sync saved tools
+// Sync saved tools from database to localStorage
 async function syncSavedTools() {
     if (!currentUser) return;
     
@@ -136,7 +136,21 @@ async function syncSavedTools() {
     if (data && data.length > 0) {
         const tools = data.map(d => d.tool_data);
         localStorage.setItem('savedTools', JSON.stringify(tools));
+    } else {
+        localStorage.setItem('savedTools', JSON.stringify([]));
     }
+}
+
+// Save tool to database
+async function saveToolToDatabase(toolName) {
+    if (!currentUser) return;
+    await db.saveTool(currentUser.id, toolName);
+}
+
+// Remove tool from database
+async function removeToolFromDatabase(toolName) {
+    if (!currentUser) return;
+    await db.removeSavedTool(currentUser.id, toolName);
 }
 
 // Auth state listener
