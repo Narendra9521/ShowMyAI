@@ -4874,13 +4874,16 @@ function createToolCard(tool) {
             alert('Please login to save tools.');
             return;
         }
-        let saved = await getSavedTools();
+        let saved = getSavedTools();
         const alreadySaved = saved.some(t => t.name === tool.name);
         if (alreadySaved) {
+            saved = saved.filter(t => t.name !== tool.name);
             await removeToolFromDatabase(tool.name);
         } else {
+            saved.push(tool);
             await saveToolToDatabase(tool.name);
         }
+        setSavedTools(saved);
         // Update icon
         const icon = bookmarkBtn.querySelector('i');
         icon.className = `fa${alreadySaved ? 'r' : 's'} fa-bookmark`;
@@ -4959,13 +4962,16 @@ function createWorkflowToolCard(tool) {
             alert('Please login to save tools.');
             return;
         }
-        let saved = await getSavedTools();
+        let saved = getSavedTools();
         const alreadySaved = saved.some(t => t.name === tool.name);
         if (alreadySaved) {
+            saved = saved.filter(t => t.name !== tool.name);
             await removeToolFromDatabase(tool.name);
         } else {
+            saved.push(tool);
             await saveToolToDatabase(tool.name);
         }
+        setSavedTools(saved);
         // Update icon
         const icon = bookmarkBtn.querySelector('i');
         icon.className = `fa${alreadySaved ? 'r' : 's'} fa-bookmark`;

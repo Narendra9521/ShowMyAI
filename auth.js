@@ -127,9 +127,18 @@ function switchAuthMode(mode) {
     }
 }
 
-// Sync saved tools - no longer needed as database is direct source
+// Sync saved tools from database to localStorage
 async function syncSavedTools() {
-    // Database is now queried directly via getSavedTools()
+    if (!currentUser) return;
+    
+    const { data } = await db.getSavedTools(currentUser.id);
+    
+    if (data && data.length > 0) {
+        const tools = data.map(d => d.tool_data);
+        localStorage.setItem('savedTools', JSON.stringify(tools));
+    } else {
+        localStorage.setItem('savedTools', JSON.stringify([]));
+    }
 }
 
 // Save tool to database
