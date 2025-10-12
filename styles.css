@@ -487,7 +487,7 @@ body {
     background: var(--bg-primary);
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius-lg);
-    padding: 24px;
+    padding: 24px 24px 24.5px 24px;
     cursor: pointer;
     transition: var(--transition);
     position: relative;
@@ -540,7 +540,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
     font-size: 20px;
     color: white;
     transition: var(--transition);
@@ -860,7 +860,7 @@ body {
 .category-title {
     font-size: 1.1rem;
     font-weight: 700;
-    margin-bottom: 8px;
+    margin-bottom: 9px;
     margin-top: 8px;
     color: var(--text-primary);
 }

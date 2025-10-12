@@ -1,58 +1,50 @@
-// Authentication functions
+// Authentication
 let currentUser = null;
 
-// Initialize auth state
+// Initialize auth
 function initAuth() {
-    if (typeof supabase !== 'undefined') {
-        supabase.auth.getUser().then(({ data: { user } }) => {
-            currentUser = user;
-            updateAuthUI();
-        }).catch(error => console.error('Auth init error:', error));
-    }
+    supabase.auth.getUser().then(({ data: { user } }) => {
+        currentUser = user;
+        updateAuthUI();
+        if (user) syncSavedTools();
+    });
 }
 
-// Toggle auth (login/logout)
-function toggleAuth() {
-    console.log('Toggle auth clicked, currentUser:', currentUser);
-    if (currentUser) {
+// Toggle auth
+async function toggleAuth() {
+    const { data: { user } } = await supabase.auth.getUser();
+    if (user) {
         logout();
     } else {
         showAuthModal();
     }
 }
 
-// Show auth modal
+// Show/hide modal
 function showAuthModal() {
-    console.log('Opening auth modal');
     document.getElementById('authModal').style.display = 'flex';
 }
 
-// Hide auth modal
 function hideAuthModal() {
     document.getElementById('authModal').style.display = 'none';
 }
 
-// Login with GitHub
+// OAuth login
 function loginGitHub() {
-    if (typeof supabase !== 'undefined') {
-        supabase.auth.signInWithOAuth({ provider: 'github' })
-            .then(({ error }) => {
-                if (error) alert('GitHub login failed: ' + error.message);
-            });
-    }
+    supabase.auth.signInWithOAuth({ 
+        provider: 'github',
+        options: { redirectTo: window.location.origin }
+    });
 }
 
-// Login with Google
 function loginGoogle() {
-    if (typeof supabase !== 'undefined') {
-        supabase.auth.signInWithOAuth({ provider: 'google' })
-            .then(({ error }) => {
-                if (error) alert('Google login failed: ' + error.message);
-            });
-    }
+    supabase.auth.signInWithOAuth({ 
+        provider: 'google',
+        options: { redirectTo: window.location.origin }
+    });
 }
 
-// Login with email/password
+// Email login
 function loginEmail() {
     const email = document.getElementById('loginEmail').value;
     const password = document.getElementById('loginPassword').value;
@@ -62,19 +54,14 @@ function loginEmail() {
         return;
     }
     
-    if (typeof supabase !== 'undefined') {
-        supabase.auth.signInWithPassword({ email, password })
-            .then(({ error }) => {
-                if (error) {
-                    alert('Login failed: ' + error.message);
-                } else {
-                    hideAuthModal();
-                }
-            });
-    }
+    supabase.auth.signInWithPassword({ email, password })
+        .then(({ error }) => {
+            if (error) alert('Login failed: ' + error.message);
+            else hideAuthModal();
+        });
 }
 
-// Signup with email/password
+// Email signup
 function signupEmail() {
     const email = document.getElementById('signupEmail').value;
     const password = document.getElementById('signupPassword').value;
@@ -85,34 +72,28 @@ function signupEmail() {
     }
     
     if (password.length < 6) {
-        alert('Password must be at least 6 characters long');
+        alert('Password must be at least 6 characters');
         return;
     }
     
-    if (typeof supabase !== 'undefined') {
-        supabase.auth.signUp({ email, password })
-            .then(({ error }) => {
-                if (error) {
-                    alert('Signup failed: ' + error.message);
-                } else {
-                    alert('Check your email for verification link!');
-                    hideAuthModal();
-                }
-            });
-    }
+    supabase.auth.signUp({ email, password })
+        .then(({ error }) => {
+            if (error) alert('Signup failed: ' + error.message);
+            else {
+                alert('Check your email for verification!');
+                hideAuthModal();
+            }
+        });
 }
 
 // Logout
-function logout() {
-    if (typeof supabase !== 'undefined') {
-        supabase.auth.signOut().then(() => {
-            currentUser = null;
-            updateAuthUI();
-        });
-    }
+async function logout() {
+    await supabase.auth.signOut();
+    currentUser = null;
+    window.location.href = window.location.origin;
 }
 
-// Update UI based on auth state
+// Update UI
 function updateAuthUI() {
     const authBtn = document.getElementById('authBtn');
     const mobileAuthBtn = document.getElementById('mobileAuthBtn');
@@ -120,17 +101,13 @@ function updateAuthUI() {
     if (currentUser) {
         authBtn.textContent = 'Logout';
         mobileAuthBtn.textContent = 'Logout';
-        authBtn.title = `Logout (${currentUser.email})`;
-        mobileAuthBtn.title = `Logout (${currentUser.email})`;
     } else {
         authBtn.textContent = 'Login';
         mobileAuthBtn.textContent = 'Login';
-        authBtn.title = 'Login/Signup';
-        mobileAuthBtn.title = 'Login/Signup';
     }
 }
 
-// Switch between login/signup forms
+// Switch forms
 function switchAuthMode(mode) {
     const loginForm = document.getElementById('loginForm');
     const signupForm = document.getElementById('signupForm');
@@ -150,14 +127,27 @@ function switchAuthMode(mode) {
     }
 }
 
-// Listen for auth changes
-if (typeof supabase !== 'undefined') {
-    supabase.auth.onAuthStateChange((event, session) => {
-        currentUser = session?.user || null;
-        updateAuthUI();
-        if (session) hideAuthModal();
-    });
+// Sync saved tools
+async function syncSavedTools() {
+    if (!currentUser) return;
+    
+    const { data } = await db.getSavedTools(currentUser.id);
+    
+    if (data && data.length > 0) {
+        const tools = data.map(d => d.tool_data);
+        localStorage.setItem('savedTools', JSON.stringify(tools));
+    }
 }
 
-// Initialize auth when page loads
+// Auth state listener
+supabase.auth.onAuthStateChange(async (event, session) => {
+    currentUser = session?.user || null;
+    updateAuthUI();
+    if (session) {
+        hideAuthModal();
+        await syncSavedTools();
+    }
+});
+
+// Initialize on load
 document.addEventListener('DOMContentLoaded', initAuth);
