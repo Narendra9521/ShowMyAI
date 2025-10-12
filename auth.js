@@ -142,15 +142,15 @@ async function syncSavedTools() {
 }
 
 // Save tool to database
-async function saveToolToDatabase(toolName) {
+async function saveToolToDatabase(tool) {
     if (!currentUser) return;
-    await db.saveTool(currentUser.id, toolName);
+    await db.saveTool(currentUser.id, tool);
 }
 
 // Remove tool from database
-async function removeToolFromDatabase(toolName) {
+async function removeToolFromDatabase(tool) {
     if (!currentUser) return;
-    await db.removeSavedTool(currentUser.id, toolName);
+    await db.removeSavedTool(currentUser.id, tool);
 }
 
 // Auth state listener

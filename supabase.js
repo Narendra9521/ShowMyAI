@@ -26,11 +26,27 @@ const db = {
 
     // Remove saved tool
     async removeSavedTool(userId, toolData) {
-        const { data, error } = await supabase
+        const toolName = typeof toolData === 'string' ? toolData : toolData.name;
+        const { data: existing } = await supabase
             .from('saved_tools')
-            .delete()
-            .match({ user_id: userId, tool_data: toolData });
-        return { data, error };
+            .select('id')
+            .eq('user_id', userId);
+        
+        if (existing) {
+            const toDelete = existing.filter(item => {
+                const saved = typeof item.tool_data === 'string' ? item.tool_data : item.tool_data.name;
+                return saved === toolName;
+            });
+            
+            if (toDelete.length > 0) {
+                const { data, error } = await supabase
+                    .from('saved_tools')
+                    .delete()
+                    .in('id', toDelete.map(t => t.id));
+                return { data, error };
+            }
+        }
+        return { data: null, error: null };
     },
 
     // Sync all user tools
