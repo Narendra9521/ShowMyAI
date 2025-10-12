@@ -301,7 +301,7 @@ function toggleMobileMenu() {
 }
 
 // Render saved tools
-function renderSavedTools() {
+async function renderSavedTools() {
     const savedList = document.getElementById('saved-tools-list');
     savedList.innerHTML = '';
     
@@ -311,7 +311,7 @@ function renderSavedTools() {
         return;
     }
     
-    let saved = getSavedTools();
+    let saved = await getSavedTools();
     if (!saved.length) {
         savedList.innerHTML = '<p style="grid-column: 1/-1; color: var(--text-secondary); text-align: center;">No tools saved yet.</p>';
         return;
@@ -4803,22 +4803,16 @@ function getFallbackIcon(category) {
 }
 
 // Get user-specific saved tools key
-function getSavedToolsKey() {
-    return currentUser ? `savedTools_${currentUser.id}` : null;
+// Get saved tools from database
+async function getSavedTools() {
+    if (!currentUser) return [];
+    const { data } = await db.getSavedTools(currentUser.id);
+    return data ? data.map(d => d.tool_data) : [];
 }
 
-// Get saved tools for current user
-function getSavedTools() {
-    const key = getSavedToolsKey();
-    return key ? JSON.parse(localStorage.getItem(key) || '[]') : [];
-}
-
-// Save tools for current user
+// Not used anymore - kept for compatibility
 function setSavedTools(tools) {
-    const key = getSavedToolsKey();
-    if (key) {
-        localStorage.setItem(key, JSON.stringify(tools));
-    }
+    // No-op: database is now the source of truth
 }
 
 // Create tool card element with fallback for broken images
@@ -4880,16 +4874,13 @@ function createToolCard(tool) {
             alert('Please login to save tools.');
             return;
         }
-        let saved = getSavedTools();
+        let saved = await getSavedTools();
         const alreadySaved = saved.some(t => t.name === tool.name);
         if (alreadySaved) {
-            saved = saved.filter(t => t.name !== tool.name);
             await removeToolFromDatabase(tool.name);
         } else {
-            saved.push(tool);
             await saveToolToDatabase(tool.name);
         }
-        setSavedTools(saved);
         // Update icon
         const icon = bookmarkBtn.querySelector('i');
         icon.className = `fa${alreadySaved ? 'r' : 's'} fa-bookmark`;
@@ -4968,16 +4959,13 @@ function createWorkflowToolCard(tool) {
             alert('Please login to save tools.');
             return;
         }
-        let saved = getSavedTools();
+        let saved = await getSavedTools();
         const alreadySaved = saved.some(t => t.name === tool.name);
         if (alreadySaved) {
-            saved = saved.filter(t => t.name !== tool.name);
             await removeToolFromDatabase(tool.name);
         } else {
-            saved.push(tool);
             await saveToolToDatabase(tool.name);
         }
-        setSavedTools(saved);
         // Update icon
         const icon = bookmarkBtn.querySelector('i');
         icon.className = `fa${alreadySaved ? 'r' : 's'} fa-bookmark`;

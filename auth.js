@@ -127,18 +127,9 @@ function switchAuthMode(mode) {
     }
 }
 
-// Sync saved tools from database to localStorage
+// Sync saved tools - no longer needed as database is direct source
 async function syncSavedTools() {
-    if (!currentUser) return;
-    
-    const { data } = await db.getSavedTools(currentUser.id);
-    
-    if (data && data.length > 0) {
-        const tools = data.map(d => d.tool_data);
-        localStorage.setItem('savedTools', JSON.stringify(tools));
-    } else {
-        localStorage.setItem('savedTools', JSON.stringify([]));
-    }
+    // Database is now queried directly via getSavedTools()
 }
 
 // Save tool to database
