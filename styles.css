@@ -1641,6 +1641,7 @@ body {
     .category-title {
         font-size: 1.05rem;
         margin-bottom: 0;
+        font-weight: 700;
     }
     
     .category-description {
