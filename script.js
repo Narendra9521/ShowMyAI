@@ -5,6 +5,12 @@ let currentState = {
     category: null
 };
 
+// Scroll position tracking for each section
+const scrollPositions = {
+    'ai-tools': 0,
+    'workflows': 0
+};
+
 // Category icon mappings
 const categoryIconMap = {
     'logo-generators': 'logo-icon',
@@ -28,6 +34,9 @@ async function initializePage() {
     
     // Load tools from database
     loadToolsFromDatabase();
+    
+    // Wait for auth to initialize before rendering
+    await initAuth();
     
     renderCurrentState();
 }
@@ -172,11 +181,8 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelector('.dark-mode-btn i').className = 'fas fa-sun';
     }
     
-    // Initialize page state
+    // Initialize page state (includes auth init)
     initializePage();
-    
-    // Initialize auth
-    initAuth();
     
     // Set default active tab
     document.getElementById('ai-tools').classList.add('active');
@@ -324,6 +330,12 @@ async function renderSavedTools() {
 
 // Tab switching with history support
 function switchTab(tabName, updateHistory = true) {
+    // Save current scroll position
+    const currentSection = document.querySelector('.tab-btn.active')?.getAttribute('data-section');
+    if (currentSection) {
+        scrollPositions[currentSection] = window.pageYOffset || document.documentElement.scrollTop;
+    }
+    
     // Remove pricing filter if present (prevents filter from showing in workflows)
     const pricingFilter = document.getElementById('pricing-filter');
     if (pricingFilter) pricingFilter.remove();
@@ -353,6 +365,11 @@ function switchTab(tabName, updateHistory = true) {
     // Clear search
     searchInput.value = '';
     clearSearch();
+    
+    // Restore scroll position for the new tab
+    setTimeout(() => {
+        window.scrollTo(0, scrollPositions[tabName] || 0);
+    }, 0);
     
     // Update history
     if (updateHistory) {

@@ -836,12 +836,18 @@ body {
     position: absolute;
     top: 24px;
     right: 24px;
-    background: #e0e7ff;
+      background: #e0e7ff;
     color: var(--primary-color);
     padding: 4px 8px;
     border-radius: 6px;
     font-size: 12px;
     font-weight: 600;
+    transition: var(--transition);
+}
+
+.category-card:hover .ai-badge {
+    background: var(--primary-color);
+    color: white;
 }
 
 /* Add connecting line between icon and AI badge */

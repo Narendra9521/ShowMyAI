@@ -2,12 +2,11 @@
 let currentUser = null;
 
 // Initialize auth
-function initAuth() {
-    supabase.auth.getUser().then(({ data: { user } }) => {
-        currentUser = user;
-        updateAuthUI();
-        if (user) syncSavedTools();
-    });
+async function initAuth() {
+    const { data: { user } } = await supabase.auth.getUser();
+    currentUser = user;
+    updateAuthUI();
+    if (user) await syncSavedTools();
 }
 
 // Toggle auth
